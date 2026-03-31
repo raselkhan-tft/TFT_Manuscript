@@ -1,0 +1,11 @@
+# Ignore LaTeX auxiliary files
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out
+
+# Ignore compiled PDFs (we will move these to OneDrive manually)
+*.pdf

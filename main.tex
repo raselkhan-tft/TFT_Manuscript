@@ -1,0 +1,60 @@
+\documentclass[11pt, letterpaper]{report}
+
+% --- Core Physics & Formatting Packages ---
+\usepackage{amsmath}    % Advanced math formatting (essential for hydrodynamics)
+\usepackage{amssymb}    % Extended mathematical symbols
+
+% --- Directory Routing ---
+\usepackage{graphicx}   % Required for inserting your high-res diagrams
+\graphicspath{{figures/}} % Instructs the compiler to pull all images from the figures folder
+
+% --- Layout & Navigation ---
+\usepackage{geometry}   % Page margin control
+\geometry{margin=1in}
+\usepackage{hyperref}   % Creates clickable links in your table of contents
+
+% --- Document Metadata ---
+\title{\textbf{Tension Field Theory (TFT)}\\
+\large A Unified Framework Utilizing Continuum Mechanics and Lattice Hydrodynamics}
+\author{Rasel Khan \\ \textit{Independent Researcher, Los Angeles, California}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This manuscript establishes the mechanical constitution of spacetime, modeling fundamental particles as topological defects and deriving inertial mass strictly from the hydrodynamic drag of the vacuum condensate.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ==========================================
+% MANUSCRIPT BODY
+% ==========================================
+% Create these files in their respective folders, then remove the '%' to compile them.
+
+% --- TRILOGY: PART I ---
+\part{Deterministic Mass and The Soft Floor}
+% \include{trilogy/PartI/01_Introduction}
+% \include{trilogy/PartI/02_The_Vacuum_Condensate}
+
+% --- TRILOGY: PART II ---
+\part{Lattice Hydrodynamics}
+% \include{trilogy/PartII/03_Hydrodynamic_Drag}
+% \include{trilogy/PartII/04_Particle_Kinematics}
+
+% --- TRILOGY: PART III ---
+\part{Cosmological Implications}
+% \include{trilogy/PartIII/05_Stellar_Mechanics}
+% \include{trilogy/PartIII/06_The_Hubble_Tension}
+
+% ==========================================
+% APPENDICES
+% ==========================================
+\appendix
+% \include{appendices/Appendix_A_Derivations}
+% \include{appendices/Appendix_B_Data_Tables}
+
+\end{document}
