@@ -13,7 +13,7 @@ By modeling the observable vacuum as a Face-Centered Cubic (FCC) lattice, we dem
 \section{The Dual-Scale Architecture and Objectives}
 To support this framework, we define a strict dual-scale architecture. The foundational ``Hard Floor'' is the Tension Substrate---a Simple Cubic (SC) lattice operating at the absolute limit of vacuum strain ($\ell_S \approx 10^{-35} \text{ m}$). Emerging from this substrate at the Duality scale is the ``Soft Floor''---a Face-Centered Cubic (FCC) lattice of resonant nodes ($r_D \approx 10^{-26} \text{ m}$) that acts as the elastic carrier for transverse waves (light). 
 
-\textit{*Note: $\ell_S$ is numerically identical to the Planck Length ($\ell_P$) but derived mechanically from the limit of vacuum strain saturation ($\alpha_G = 1$). See Appendix A.}
+\textit{*Note: $\ell_S$ is numerically identical to the Planck Length ($\ell_P$) but derived mechanically from the limit of vacuum strain saturation ($\alpha_G = 1$). See Appendix \ref{app:substrate_units}.}
 
 In this first installment of the Tension Field Theory trilogy, we establish the exact mechanical constitution of this vacuum. We will derive the cosmic energy budget directly from the Kepler Conjecture, mechanize the origins of mass, light, and time, resolve the invisibility of the Dark Sector via acoustic impedance mismatch, and calculate the strict mechanical origins of the fundamental constants ($h$, $c_E$, and $\mu_D$). This structural derivation provides the necessary foundation to integrate macroscopic gravity and cosmic evolution in Part II and Part III.
 
@@ -129,7 +129,7 @@ Utilizing the standard geometric baseline for the macroscopic structural boundar
 r_D = \frac{A}{R_U} \approx 7.69 \times 10^{-27} \text{ m} \approx 10^{-26} \text{ m}
 \end{equation}
 
-\textit{(Note: While this baseline represents the absolute geometric capacity of our local cosmic domain, optical waves physically dissipate into thermal noise before ever reaching this edge due to the inherent visco-elastic impedance of the lattice. This thermodynamic friction---and its exact resolution of the cosmological Hubble Tension---is fully derived in Part III, Appendix AG).}
+\textit{(Note: While this baseline represents the absolute geometric capacity of our local cosmic domain, optical waves physically dissipate into thermal noise before ever reaching this edge due to the inherent visco-elastic impedance of the lattice. This thermodynamic friction---and its exact resolution of the cosmological Hubble Tension---is fully derived in Part III, Appendix \ref{app:hubble_tension}).}
 
 This microscopic radius provides the absolute geometric cutoff for the active Spacetime Gravitational Floor (SGF), defining the Lattice Saturation Energy ($E_D$) of a maximally coherent wave knot:
 \begin{equation}
@@ -188,7 +188,7 @@ Entropy & $S_S$ & $0$ & Perfect Geometric Order \\
 Speed & $c_S$ & $\to \infty$ & Instantaneous State Correlation \\ \hline
 \end{tabular}
 }
-\caption{\textbf{Summary of the Substrate Constants.} See Appendix A for the complete derivation of the Substrate Unit System ($\ell_S, F_S, m_S, t_S, \rho_S$).}
+\caption{\textbf{Summary of the Substrate Constants.} See Appendix \ref{app:substrate_units} for the complete derivation of the Substrate Unit System ($\ell_S, F_S, m_S, t_S, \rho_S$).}
 \label{tab:substrate_constants}
 \end{table}
 
@@ -233,22 +233,22 @@ Geometry & --- & FCC & Maximum Density Packing \\
 Lattice Radius & $r_D$ & $\approx 7.69 \times 10^{-27} \text{ m}$ & The Radius of the Active SGF Lattice \\
 Lattice Energy & $E_D$ & $hc_E/r_D$ & FCC Lattice Kinematic Saturation Energy \\
 Torsional Invariant & $J_D$ & $\rho_D r_D^4 \approx 5.27 \times 10^{-43} \text{ kg}\cdot\text{m}$ & Lattice Torsional Invariant (Source of $h$ and $G$) \\
-Bulk Modulus & $\tau_{\text{bulk}}$ & $c_E^4/(G \cdot r_D^2)$ & Lattice Yield Strength \\
+Bulk Modulus & $\tau_{D,\text{bulk}}$ & $c_E^4/(G \cdot r_D^2)$ & Lattice Yield Strength \\
 Shear Stiffness & $\tau_D$ & $c_E^4/(G \cdot r_D)$ & Lattice Surface Tension (Source of light speed) \\
 Baseline Inertia & $\mu_D$ & $c_E^2/(G \cdot r_D)$ & Emergent Inertial Density for FCC lattice \\
 Impedance Accel. & $a_D^*$ & $c_E^2/R_U = c_E \cdot \Gamma_D$ & Acceleration equivalent of vacuum impedance \\
 Damping Rate & $\Gamma_D$ & $c_E/R_U$ & Vacuum Damping Rate (Cosmological Redshift) \\
-Wave Speed & $c_P$ & $\sqrt{\tau_D/\mu_D} \cdot \cos(\Delta\phi)$ & Phase-Modulated Shear Wave Limit (Light) \\
+Wave Speed Limit & $c_E$ & $\sqrt{\tau_D/\mu_D}$ & Absolute Transverse Velocity Limit \\
 Condensate & $\rho_{IC}$ & $\mu_D/L_{\text{pivot}}$ & Interstitial Condensate Density (Holographic Drag) \\
 Quantum Mass & $M_D$ & $\rho_D \cdot r_D^3$ & 3D localized inertia of a single quantum node \\
 Fundamental Drag & $K_D$ & $\rho_{IC} \cdot (4\pi r_D^2)$ & Absolute Hydrodynamic Coupling Constant \\ \hline
 \end{tabular}
 }
-\caption{\textbf{Summary of the Active Vacuum Constants.} See Appendix B for the full derivation of lattice constants ($\rho_D, \tau_D, \mu_D, \rho_{IC}$).}
+\caption{\textbf{Summary of the Active Vacuum Constants.} See Appendix \ref{app:fcc_constants} for the full derivation of lattice constants ($\rho_D, \tau_D, \mu_D, \rho_{IC}$).}
 \label{tab:soft_floor_constants}
 \end{table}
 
-\textit{*Note: The mechanical resistance of the vacuum manifests as the Lattice Impedance Acceleration ($a_D = c_E \cdot \Gamma_D$), derived in Appendix F. This acts as the physical, structural origin of the empirical MOND constant ($a_0$), explaining the ``Dark Matter'' effect as a kinematic reality of vacuum impedance rather than an invisible particle. Here, $\Gamma_D$ is the Vacuum Lattice Damping Rate, derived in Appendix L.}
+\textit{*Note: The mechanical resistance of the vacuum manifests as the Lattice Impedance Acceleration ($a_D = c_E \cdot \Gamma_D$), derived in Appendix \ref{app:dark_matter}. This acts as the physical, structural origin of the empirical MOND constant ($a_0$), explaining the ``Dark Matter'' effect as a kinematic reality of vacuum impedance rather than an invisible particle. Here, $\Gamma_D$ is the Vacuum Lattice Damping Rate, derived in Appendix \ref{app:vacuum_damping}.}
 
 \chapter{Lattice Constraints and Quantization}
 The discrete architecture of the SGF imposes strict mechanical limits on physical action. ``Quantum Mechanics'' is defined here as the stress-strain constitutive law of the vacuum lattice.
@@ -269,7 +269,7 @@ Energy is quantized because the SGF lattice functions as a stiff resonator that 
 \begin{equation}
 h \propto \rho_D c_E r_D^4
 \end{equation}
-\textit{(See Appendix C for the full geometric derivation).}
+\textit{(See Appendix \ref{app:emergence_h_G} for the full geometric derivation).}
 
 \section{Pilot Wave Dynamics}
 The lattice architecture mechanically resolves the Wave-Particle paradox by separating the Topological Node from the Elastic Response of the Field.

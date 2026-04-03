@@ -1,0 +1,71 @@
+Part I
+
+Appendix A: \chapter{The Mechanical Derivation of the Substrate Unit System} \label{app:substrate_units}
+
+Appendix B: \chapter{Mechanical Derivation of the FCC Lattice Constants} \label{app:fcc_constants}
+
+Appendix C: \chapter{The Mechanical Emergence of [h] and [c] in the Observable Vacuum} \label{app:emergence_h_G}
+
+Appendix D: \chapter{Particle Amplitude Scales and Stability Validation} \label{app:particle_amplitude}
+
+Appendix E: \chapter{The Fractal Architecture} \label{app:fractal_architecture}
+
+Part II (Note the resolution of the 'J' conflict here)
+
+Appendix F: \chapter{Cosmic Impedance: The Mechanics of Dark Matter} \label{app:dark_matter}
+
+Appendix G: \chapter{The Radial Projection Operator} \label{app:radial_projection}
+
+Appendix H: \chapter{The Kinematic Shear Properties of the Spacetime Lattice} \label{app:kinematic_shear}
+
+Appendix J (Original): \chapter{Derivations of Optical Relativity Limits} \label{app:optical_relativity}
+
+Appendix J (New): \chapter{Derivation of Critical Collapse Densities and Radius} \label{app:critical_collapse}
+
+Appendix K: \chapter{Resolution of the Information Paradox} \label{app:information_paradox}
+
+Appendix L: \chapter{Derivation of the Vacuum Lattice Damping Rate} \label{app:vacuum_damping}
+
+Appendix M: \chapter{The Physical Wavefunction} \label{app:physical_wavefunction}
+
+Appendix N: \chapter{The Quantum Damping Rate} \label{app:quantum_damping}
+
+Appendix P: \chapter{The Mechanical Hamiltonian of the Photon Energy} \label{app:mechanical_hamiltonian}
+
+Appendix Q: \chapter{Quantum Tunneling} \label{app:quantum_tunneling}
+
+Appendix R: \chapter{The Graviton} \label{app:graviton}
+
+Appendix S: \chapter{The Topology of Entanglement} \label{app:entanglement}
+
+Appendix T: \chapter{Photonic Emission Channels} \label{app:photonic_emission}
+
+Appendix U: \chapter{The Geometric Derivation of the Absolute Lattice Shear Coupling} \label{app:shear_coupling}
+
+Appendix V: \chapter{A Leading-Order FCC Routing Ansatz} \label{app:routing_ansatz}
+
+Appendix W: \chapter{The Geometric Origin of Charge} \label{app:origin_of_charge}
+
+Appendix X: \chapter{Dimensional Validation} \label{app:unified_forces}
+
+Appendix Y: \chapter{The TFT Hydrogenic Shell Law} \label{app:hydrogenic_shell}
+
+Appendix Z: \chapter{TFT Angular Standing Modes} \label{app:angular_standing_modes}
+
+Appendix AA: \chapter{TFT Spin–Orbit Coupling} \label{app:spin_orbit}
+
+Part III
+
+Appendix AB: \chapter{Chiral Nucleation and Baryon Asymmetry} \label{app:chiral_nucleation}
+
+Appendix AC: \chapter{The Lattice Annealing Law} \label{app:lattice_annealing}
+
+Appendix AD: \chapter{The Visco-Elastic Derivation of Cosmic Redshift} \label{app:cosmic_redshift}
+
+Appendix AE: \chapter{Conservation of Topology} \label{app:conservation_topology}
+
+Appendix AF: \chapter{The Viscous Hubble Diagram} \label{app:hubble_diagram}
+
+Appendix AG: \chapter{The Viscous Sound Horizon} \label{app:hubble_tension}
+
+Appendix AH: \chapter{Geometric and Thermodynamic Derivations} \label{app:cosmic_energy_budget}
