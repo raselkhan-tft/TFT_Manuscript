@@ -4,9 +4,10 @@
 \usepackage{amsmath}    % Advanced math formatting (essential for hydrodynamics)
 \usepackage{amssymb}    % Extended mathematical symbols
 
-% --- Directory Routing ---
+% --- Directory Routing & Figures ---
 \usepackage{graphicx}   % Required for inserting your high-res diagrams
-\graphicspath{{figures/}} % Instructs the compiler to pull all images from the figures folder
+\graphicspath{{Figures/}} % Instructs the compiler to pull all images from the figures folder
+\usepackage{float}      % Allows strict [H] placement for figures
 
 % --- Layout & Navigation ---
 \usepackage{geometry}   % Page margin control
@@ -37,18 +38,18 @@ This manuscript establishes the mechanical constitution of spacetime, modeling f
 
 % --- TRILOGY: PART I ---
 \part{Deterministic Mass and The Soft Floor}
-% \include{trilogy/PartI/01_Introduction}
-% \include{trilogy/PartI/02_The_Vacuum_Condensate}
+\include{Trilogy/PartI/01_Introduction}
+% \include{Trilogy/PartI/02_The_Vacuum_Condensate}
 
 % --- TRILOGY: PART II ---
 \part{Lattice Hydrodynamics}
-% \include{trilogy/PartII/03_Hydrodynamic_Drag}
-% \include{trilogy/PartII/04_Particle_Kinematics}
+% \include{Trilogy/PartII/03_Hydrodynamic_Drag}
+% \include{Trilogy/PartII/04_Particle_Kinematics}
 
 % --- TRILOGY: PART III ---
 \part{Cosmological Implications}
-% \include{trilogy/PartIII/05_Stellar_Mechanics}
-% \include{trilogy/PartIII/06_The_Hubble_Tension}
+% \include{Trilogy/PartIII/05_Stellar_Mechanics}
+% \include{Trilogy/PartIII/06_The_Hubble_Tension}
 
 % ==========================================
 % APPENDICES
