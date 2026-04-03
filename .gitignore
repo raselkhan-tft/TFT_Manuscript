@@ -9,3 +9,4 @@
 
 # Ignore compiled PDFs (we will move these to OneDrive manually)
 *.pdf
+!Figures/*.pdf
