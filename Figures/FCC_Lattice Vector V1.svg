@@ -9,7 +9,7 @@
    viewBox="0 0 950.39996 950.39996"
    sodipodi:docname="FCC_Lattice Vector copy.svg"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
-   inkscape:export-filename="FCC_Lattice Vector1.pdf"
+   inkscape:export-filename="FCC_Lattice Vector2.pdf"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -305,7 +305,7 @@
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
      inkscape:zoom="0.84911614"
-     inkscape:cx="545.27288"
+     inkscape:cx="546.45057"
      inkscape:cy="517.59704"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
@@ -345,7 +345,7 @@
        transform="translate(532.87036,-63.654433)"><tspan
          x="264.81641"
          y="851.51721"
-         id="tspan10">a</tspan></text>
+         id="tspan2">a</tspan></text>
     <text
        xml:space="preserve"
        id="text90566-1-4"
@@ -353,7 +353,7 @@
        transform="translate(85.065156,12.944824)"><tspan
          x="264.81641"
          y="851.51721"
-         id="tspan11">a</tspan></text>
+         id="tspan3">a</tspan></text>
     <text
        xml:space="preserve"
        id="text90566-1"
@@ -361,7 +361,7 @@
        transform="translate(-211.67188,-373.02302)"><tspan
          x="264.81641"
          y="851.51721"
-         id="tspan12">a</tspan></text>
+         id="tspan4">a</tspan></text>
     <path
        id="path3"
        d="M 77.791845,153.44398 319.04212,266.6196 317.53527,637.55363 67.697071,553.18498"
@@ -453085,11 +453085,11 @@
        transform="translate(9.3310251,40.306788)"><tspan
          x="441.36081"
          y="334.76801"
-         id="tspan15"><tspan
+         id="tspan7"><tspan
            style="font-style:italic;-inkscape-font-specification:'sans-serif Italic'"
-           id="tspan13">r</tspan><tspan
-           style="font-style:italic;-inkscape-font-specification:'sans-serif Italic';baseline-shift:sub"
-           id="tspan14">D</tspan></tspan></text>
+           id="tspan5">r</tspan><tspan
+           style="font-style:italic;font-size:65%;-inkscape-font-specification:'sans-serif Italic';baseline-shift:sub"
+           id="tspan6">D</tspan></tspan></text>
     <g
        id="g2"
        transform="translate(6,-2)">
@@ -453110,7 +453110,9 @@
          transform="translate(15.383282,-1.5226341)"
          x="268.49219"
          y="533.40393"
-         id="text90582">D</text>
+         id="text90582"><tspan
+           style="font-size:65%;baseline-shift:sub"
+           id="tspan1">D</tspan></text>
       <text
          style="font-style:italic;font-size:16px;-inkscape-font-specification:'sans-serif Italic';white-space:pre;stroke:#000000;stroke-linecap:square;stroke-miterlimit:2"
          transform="translate(15.383282,-1.5226341)"
@@ -453155,9 +453157,9 @@
        transform="translate(-73.839705,9.4807437)"><tspan
          x="739.48828"
          y="880.59856"
-         id="tspan17"><tspan
+         id="tspan9"><tspan
    style="font-style:normal;font-size:16px;-inkscape-font-specification:sans-serif"
-   id="tspan16">Interstitial Condensate</tspan> </tspan></text>
+   id="tspan8">Interstitial Condensate</tspan> </tspan></text>
     <text
        xml:space="preserve"
        id="text90569"
@@ -453165,7 +453167,7 @@
        transform="translate(55.351675,21.198514)"><tspan
          x="86.607422"
          y="859.84533"
-         id="tspan18">Solid FCC Scaffold</tspan></text>
+         id="tspan10">Solid FCC Scaffold</tspan></text>
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.819137;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-opacity:1;marker-end:url(#marker90576);paint-order:normal"
        d="M 197.78184,862.25659 318.94303,705.20402"
