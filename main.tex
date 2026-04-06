@@ -14,6 +14,10 @@
 \geometry{margin=1in}
 \usepackage{hyperref}   % Creates clickable links in your table of contents
 
+% --- Table Rules ---
+\usepackage{booktabs} % Required for professional table rules
+\usepackage{array}    % Required for precise column width control
+
 % --- Document Metadata ---
 \title{\textbf{Tension Field Theory (TFT)}\\
 \large A Unified Framework Utilizing Continuum Mechanics and Lattice Hydrodynamics}
@@ -39,7 +43,7 @@ This manuscript establishes the mechanical constitution of spacetime, modeling f
 % --- TRILOGY: PART I ---
 \part{Deterministic Mass and The Soft Floor}
 \include{Trilogy/PartI/01_Introduction}
-% \include{Trilogy/PartI/02_The_Vacuum_Condensate}
+\include{Trilogy/PartI/02_PartI_Core}
 
 % --- TRILOGY: PART II ---
 \part{Lattice Hydrodynamics}
@@ -57,5 +61,6 @@ This manuscript establishes the mechanical constitution of spacetime, modeling f
 \appendix
 % \include{appendices/Appendix_A_Derivations}
 % \include{appendices/Appendix_B_Data_Tables}
+% \include{Appendices/app_kinematic_ceiling}
 
 \end{document}

@@ -9,6 +9,7 @@ Appendix C: \chapter{The Mechanical Emergence of [h] and [c] in the Observable V
 Appendix D: \chapter{Particle Amplitude Scales and Stability Validation} \label{app:particle_amplitude}
 
 Appendix E: \chapter{The Fractal Architecture} \label{app:fractal_architecture}
+Appendix F: \chapter{Derivation of the Absolute Kinematic Ceiling ($E_{max}$)} \label{app:kinematic_ceiling}
 
 Part II (Note the resolution of the 'J' conflict here)
 
