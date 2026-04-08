@@ -19,7 +19,7 @@ Appendix G: \chapter{The Radial Projection Operator} \label{app:radial_projectio
 
 Appendix H: \chapter{The Kinematic Shear Properties of the Spacetime Lattice} \label{app:kinematic_shear}
 
-Appendix J (Original): \chapter{Derivations of Optical Relativity Limits} \label{app:optical_relativity}
+Appendix J (Original): \chapter{Derivations of Optical Relativity Limits} \label{app:critical_densities}
 
 Appendix J (New): \chapter{Derivation of Critical Collapse Densities and Radius} \label{app:critical_collapse}
 

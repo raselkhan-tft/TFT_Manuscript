@@ -1,0 +1,146 @@
+\chapter{The Mechanical Derivation of the Substrate Unit System}
+\label{app:substrate_units}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\section{The Gravitational Saturation Postulate}
+We postulate that the vacuum substrate is a discrete material structure with a finite yield strength. This limit is defined by the Gravitational Saturation Coupling ($\alpha_G = 1$), where the deformation energy of a quantum node equals the structural binding energy of the lattice.
+
+Using the TFT gravitational strain definition established in \hyperref[sec:gravitational_strain]{Part II, Section \ref*{sec:gravitational_strain}}:
+\begin{equation}
+    \alpha_G = \frac{GM_{eff}}{r c_E^2}
+\end{equation}
+(Where $c_E$ is the invariant stiffness potential---the structural constant relating tension to energy).
+
+\section{Derivation of the Substrate Lattice Spacing ($\ell_S$)}
+We define the fundamental unit of length as the discrete node spacing where a minimal quantum energy packet induces maximal lattice strain ($\alpha_G = 1$).
+
+Substituting the reduced quantum mass equivalence $M_Q = \frac{\hbar}{c_E r}$ into the coupling equation:
+\begin{equation}
+    1 = \left(\frac{G}{r c_E^2}\right)\left(\frac{\hbar}{c_E r}\right) = \frac{G\hbar}{c_E^3 r^2}
+\end{equation}
+
+Solving for $r$ and replacing $r$ with $\ell_S$ yields:
+\begin{equation}
+    \ell_S = \sqrt{\frac{\hbar G}{c_E^3}}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{Physical definition:} $\ell_S$ is the fundamental node spacing of the Simple Cubic (SC) substrate grid.
+\end{itemize}
+
+\section{Derivation of the Substrate Force ($F_S$)}
+We derive the absolute tension of the lattice by defining force as the energy gradient ($E/r$) at the saturation limit.
+
+The energy of a quantum node at the saturation scale $\ell_S$ is:
+\begin{equation}
+    E_{sat} = \frac{\hbar c_E}{\ell_S}
+\end{equation}
+
+The force is the gradient of this energy across $\ell_S$:
+\begin{equation}
+    F_S = \frac{E_{sat}}{\ell_S} = \frac{\hbar c_E}{\ell_S^2}
+\end{equation}
+
+Substitute $\ell_S^2 = \frac{\hbar G}{c_E^3}$:
+\begin{equation}
+    F_S = \frac{c_E^4}{G}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{Physical definition:} $F_S$ is the ultimate yield tension of the substrate (the maximum force the vacuum can support before structural failure).
+\end{itemize}
+
+\section{Derivation of the Latent Constants ($m_S, \rho_S, t_S$)}
+Because the Substrate is a spatially contiguous, topologically locked phase, it possesses neither intrinsic inertial density ($\mu \to 0$) nor flowing time. We therefore define its fundamental units strictly as latent structural potentials.
+
+\subsection{Substrate Mass Potential ($m_S$)}
+Just as $\mu_D$ is the structural constant of the Soft Floor medium, $m_S$ is the structural constant of a single Substrate node. It represents the latent energy capacity of a single cell.
+\begin{equation}
+    m_S = \frac{E_{sat}}{c_E^2} = \frac{\hbar}{c_E \ell_S}
+\end{equation}
+
+Substituting $\ell_S$:
+\begin{equation}
+    m_S = \sqrt{\frac{\hbar c_E}{G}}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{Physical definition:} $m_S$ is a latent mass potential (structural capacity), not an inertial mass; the raw substrate has $\mu_S \to 0$.
+\end{itemize}
+
+\subsection{Substrate Density ($\rho_S$)}
+The volumetric packing density of the discrete SC Substrate:
+\begin{equation}
+    \rho_S = \frac{m_S}{\ell_S^3}
+\end{equation}
+
+Substituting $m_S$ and $\ell_S$:
+\begin{equation}
+    \rho_S = \frac{c_E^5}{\hbar G^2}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{Physical definition:} This is the structural packing density of the lattice ($\approx 5.1549 \times 10^{96} \text{ kg/m}^3$), measuring latent potential concentration rather than inertial resistance.
+\end{itemize}
+
+\subsection{Substrate Time Interval ($t_S$)}
+The dimensional scaling factor required to define action ($\hbar$) within the Substrate geometry:
+\begin{equation}
+    t_S = \frac{\ell_S}{c_E} = \sqrt{\frac{\hbar G}{c_E^5}}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{Physical definition:} Stiffness-time equivalence. In the zero inertia ($\mu_S \to 0$) substrate frame, transit time is zero; $t_S$ represents the absolute observer's quantization limit.
+\end{itemize}
+
+\subsection{Substrate Phase Transition Energy ($E_S$) \& Temperature ($T_S$)}
+The dimensional scaling factor defining the maximum kinetic energy a lattice node can sustain before structural failure. In Tension Field Theory, this energy limit is derived strictly from classical mechanics, representing the maximum structural tension ($F_S$) acting over the fundamental dimension of a single node ($\ell_S$).
+\begin{equation}
+    E_S = F_S \cdot \ell_S = \left(\frac{c_E^4}{G}\right) \sqrt{\frac{\hbar G}{c_E^3}} = \sqrt{\frac{\hbar c_E^5}{G}}
+\end{equation}
+\begin{itemize}
+    \item \textbf{Value:} $\approx 1.9561 \times 10^9 \text{ J}$
+\end{itemize}
+
+Because temperature is strictly a measure of mechanical kinetic energy, the Boltzmann constant ($k_B$) is merely an anthropogenic conversion factor. To convert this absolute mechanical yield energy into standard thermodynamic temperature, we apply the Boltzmann conversion:
+\begin{equation}
+    T_S = \frac{E_S}{k_B} = \sqrt{\frac{\hbar c_E^5}{G k_B^2}}
+\end{equation}
+\begin{itemize}
+    \item \textbf{Physical Definition:} The thermal equivalent of absolute structural tension. During Catastrophic Decompression, this represents the maximum kinetic phonon vibration (heat) released into the nascent Face-Centered Cubic lattice.
+    \item \textbf{Value:} $\approx 1.4168 \times 10^{32} \text{ K}$
+\end{itemize}
+
+\section{Unification Table: Substrate Units vs. Planck Units}
+The following table shows that the mechanical limits derived from TFT saturation ($\alpha_G = 1$) perfectly reproduce the standard Planck units.
+
+\begin{table}[H]
+\centering
+\caption{Mechanical Unification of Substrate Limits and Planck Units}
+\vspace{0.2cm} 
+\label{tab:substrate_vs_planck}
+\renewcommand{\arraystretch}{1.5} 
+\setlength{\tabcolsep}{4pt} % Tightens the horizontal padding between columns
+\small % Drops font size to a standard, readable academic table size
+\begin{tabular}{@{}llclc@{}}
+\toprule
+\textbf{Quantity} & \textbf{Symbol} & \textbf{TFT Mechanical Derivation} & \textbf{Value (SI)} & \textbf{Planck Unit Identity} \\ 
+\midrule
+Substrate Lattice Spacing & $\ell_S$ & $\sqrt{\frac{\hbar G}{c_E^3}}$ & $1.6163 \times 10^{-35} \text{ m}$ & $\ell_P$ \\ 
+Substrate Force & $F_S$ & $\frac{c_E^4}{G}$ & $1.2103 \times 10^{44} \text{ N}$ & $F_P$ \\ 
+Substrate Mass & $m_S$ & $\sqrt{\frac{\hbar c_E}{G}}$ & $2.1764 \times 10^{-8} \text{ kg}$ & $m_P$ \\ 
+Substrate Time & $t_S$ & $\sqrt{\frac{\hbar G}{c_E^5}}$ & $5.3912 \times 10^{-44} \text{ s}$ & $t_P$ \\ 
+Substrate Density & $\rho_S$ & $\frac{c_E^5}{\hbar G^2}$ & $5.1549 \times 10^{96} \text{ kg/m}^3$ & $\rho_P$ \\ 
+Substrate Transition Temp. & $T_S$ & $\sqrt{\frac{\hbar c_E^5}{G k_B^2}}$ & $1.4168 \times 10^{32} \text{ K}$ & $T_P$ \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+The identity between the Substrate units and Planck units implies that the Planck scale is not merely a mathematical boundary; it is the physical specification of the Tension substrate:
+\begin{itemize}
+    \item $\ell_S$ is the Lattice Spacing (Fundamental Grain).
+    \item $F_S$ is the Ultimate Bond Strength.
+    \item $m_S$ and $\rho_S$ are the latent potentials of the grid structure.
+\end{itemize}
+Standard physics treats these as limiting numbers; TFT identifies them as material properties of the vacuum floor.
