@@ -1,0 +1,61 @@
+\chapter{TFT Spin--Orbit Coupling and Hydrogenic Fine Structure}
+\label{app:fine_structure}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\textbf{Abstract:} In standard theory, fine-structure level splittings are attributed to relativistic corrections and spin--orbit coupling derived from probabilistic Dirac mechanics. TFT replaces this with a deterministic mechanical account: fine structure arises because the localized electron knot carries a real tethered spin, while the atomic shell carries a standing angular strain mode. Their relative alignment changes the local torsional loading of the shell. Simultaneously, the node's high-speed orbit induces a Kinematic Impedance Mismatch, forcing the shell to mechanically compress. This appendix derives the TFT spin--orbit correction, shows how the $J_{tot} = L \pm 1/2$ hierarchy emerges mechanically, and extracts the exact $\alpha^4$ hydrogenic fine-structure scaling.
+
+\section{Physical Premise}
+In TFT, the electron's spin is the literal mechanical rotation of the node's 3D inertia. A hydrogenic atomic state contains two distinct angular structures:
+\begin{itemize}
+    \item \textbf{Intrinsic knot spin ($s$):} belonging to the localized electron node.
+    \item \textbf{Orbital shell angular mode ($L$):} belonging to the time-averaged shell strain.
+\end{itemize}
+Fine structure arises when these two angular structures couple mechanically through the proton's central chiral field.
+
+\section{The Central Torsional Gradient}
+The protonic chiral field is the radial gradient of the lattice's chiral shear potential:
+\begin{equation}
+    \Phi_\chi(r) = -\frac{K_L}{r}, \quad F_\chi(r) = -\frac{K_L}{r^2} \hat{r}
+\end{equation}
+Because the electron is a finite tethered rotating knot, any motion through the central field produces a differential torsional loading across the knot. That differential loading is the origin of spin--orbit coupling.
+
+\section{Mechanical Origin of Spin--Orbit Interaction}
+Because the central protonic field is radial, the local lattice twist seen by the electron depends on whether the node's intrinsic spin is aligned or anti-aligned with the shell's orbital torsion.
+\begin{itemize}
+    \item \textbf{Parallel alignment ($L \parallel s$):} The intrinsic knot twist rolls with the orbital shell torsion, reducing torsional mismatch.
+    \item \textbf{Anti-parallel alignment ($L \uparrow\downarrow s$):} The intrinsic knot twist rolls against the orbital shell torsion, increasing torsional mismatch.
+\end{itemize}
+This mismatch changes the local strain energy required to sustain the orbital shell, splitting the same $nL$ shell into two nearby energy levels. It is the difference in torsional loading energy between co-rotating and counter-rotating shell/knot configurations.
+
+\section{The Spin--Orbit Energy Functional \& Quantized Splitting}
+The lowest-order scalar built from the shell mode and the knot spin is their dot product, $\mathbf{L} \cdot \mathbf{s}$. Driven by the radial field gradient $\left( \frac{1}{r} \frac{d\Phi_\chi}{dr} = \frac{K_L}{r^3} \right)$, the interaction scales as:
+\begin{equation}
+    \Delta E_{SO} \propto \frac{K_L}{r_n^3} (\mathbf{L} \cdot \mathbf{s})
+\end{equation}
+
+Defining the total angular index as $J_{tot} = L + s$, the dot product yields $\frac{\hbar^2}{2} [J_{tot}(J_{tot}+1) - L(L+1) - s(s+1)]$. For $s = 1/2$, the allowed values are $J_{tot} = L \pm 1/2$. Substituting the geometric TFT parameters $r_n = \frac{n^2 \hbar}{m_e \alpha c_E}$ and $K_L = \alpha\hbar c_E$, the leading spin--orbit formula resolves to:
+\begin{equation}
+    \Delta E_{SO}(n, L, J_{tot}) = \zeta_{SO} \frac{m_e \alpha^4 c_E^2}{2n^6} \left[ J_{tot}(J_{tot}+1) - L(L+1) - \frac{3}{4} \right]
+\end{equation}
+Where $\zeta_{SO}$ is an order-unity geometric factor encoding knot/shell overlap.
+
+\section{The Exact Kinematic Impedance Correction}
+As the electron node orbits at $v_n = \alpha c_E / n$, its high spatial velocity reduces its internal resonant capacity. As established in \hyperref[sec:force_transfer]{Part I, Section 7.6}, this creates a strict Kinematic Impedance Mismatch, reducing the force-coupling efficiency of the lattice by the Lorentz factor $\left( \gamma = 1/\sqrt{1 - v_n^2/c_E^2} \right)$. 
+
+To maintain the phase-locked force balance ($K_L = \gamma m_e v_n^2 r_n^*$), the shell radius must mechanically compress inward ($r_n^* = r_n / \gamma$). The total mechanical energy of this compressed orbit is the sum of the kinetic displacement energy and the deepened central potential:
+\begin{equation}
+    E_n = (\gamma - 1)m_e c_E^2 - \gamma m_e v_n^2
+\end{equation}
+
+Expanding the impedance factor via Taylor series $\left( \gamma \approx 1 + \frac{1}{2}\frac{\alpha^2}{n^2} + \frac{3}{8}\frac{\alpha^4}{n^4} \right)$ completely determines the kinematic shift without arbitrary geometric prefactors, cleanly extracting the $\alpha^4$ correction:
+\begin{equation}
+    E_n \approx \left( -\frac{m_e \alpha^2 c_E^2}{2n^2} \right) - \left( \frac{m_e \alpha^4 c_E^2}{8n^4} \right)
+\end{equation}
+
+\section{Total Leading Fine Structure}
+Combining the mathematically exact kinematic shell compression with the spin--orbit torsional splitting, the complete leading TFT fine structure becomes:
+\begin{equation}
+    E_{n, L, J_{tot}}^{TFT} = -\frac{m_e \alpha^2 c_E^2}{2n^2} - \frac{m_e \alpha^4 c_E^2}{8n^4} + \zeta_{SO} \frac{m_e \alpha^4 c_E^2}{2n^6} \left[ J_{tot}(J_{tot}+1) - L(L+1) - \frac{3}{4} \right]
+\end{equation}
+
+TFT mechanically derives the $J_{tot} = L \pm 1/2$ splitting and the $\alpha^4$-scale fine structure as deterministic consequences of lattice-dynamic impedance mismatch and topological lattice braiding.

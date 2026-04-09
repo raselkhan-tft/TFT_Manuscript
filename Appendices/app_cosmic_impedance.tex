@@ -1,0 +1,141 @@
+\chapter{Cosmic Impedance: The Mechanics of Dark Matter}
+\label{app:cosmic_impedance}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\textbf{Subject:} Deriving the ``Dark Matter'' effect from the material resistance of the Vacuum Interstitial Condensate.
+
+Standard cosmology treats the Dark Sector as invisible particles. TFT identifies it as the material resistance of the vacuum itself. Matter moving through the active FCC Soft Floor encounters a fundamental lattice-dynamic friction. This Cosmic Impedance results in a continuous energy dissipation, providing a mechanical origin for the phenomena currently attributed to Dark Matter.
+
+\section{Derivation of the Lattice Impedance Acceleration ($a_D$)}
+We posit that the ``viscosity'' of the vacuum is not an arbitrary constant, but the natural relaxation limit of the Spacetime Gravitational Floor (SGF). We define this limit using the fundamental properties established in Part I.
+
+\begin{itemize}
+    \item \textbf{FCC Lattice Tension Energy Density ($\tau$):}
+\end{itemize}
+\begin{equation}
+    \tau = \mu_D c_E^2
+\end{equation}
+\textit{(Where $\mu_D$ is the baseline surface inertia of the active lattice).}
+
+\begin{itemize}
+    \item \textbf{The Cosmic Gradient:} Unlike a point mass where force creates an inverse-square gradient ($1/r^2$), the vacuum impedance is a boundary condition of the entire cosmic field. In a flat, isotropic spacetime, the background tension spreads linearly over the Absolute Optical Horizon ($R_U$).
+    \item \textbf{Pressure Gradient:}
+\end{itemize}
+\begin{equation}
+    \nabla P \approx \frac{\tau}{R_U}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{Equation of Motion:} Applying Newton's Second Law to the lattice density (Force Density = Inertia Density $\times$ Acceleration):
+\end{itemize}
+\begin{equation}
+    \frac{\tau}{R_U} = \mu_D a_D
+\end{equation}
+
+Substituting $\tau = \mu_D c_E^2$:
+\begin{equation}
+    \frac{\mu_D c_E^2}{R_U} = \mu_D a_D
+\end{equation}
+
+Solving for the Lattice Impedance Acceleration ($a_D$):
+\begin{equation}
+    a_D = \frac{c_E^2}{R_U}
+\end{equation}
+
+\section{Connection to Vacuum Viscosity and MOND}
+In \hyperref[app:appendix_l]{Appendix \ref*{app:appendix_l}}, we derived the Vacuum Lattice Damping Rate ($\Gamma_D = c_E / R_U$), which replaces the empirical Hubble constant. We can express the Lattice Impedance directly in terms of this viscosity:
+\begin{equation}
+    a_D = c_E \cdot \Gamma_D
+\end{equation}
+
+This demonstrates that $a_D$ is the acceleration equivalent of the vacuum's kinematic drag. When evaluated using the high-precision optical horizon ($R_U \approx 1.2674 \times 10^{26} \text{ m}$), we find:
+\begin{equation}
+    a_D = \frac{(299792458)^2}{1.2674 \times 10^{26}} \approx 7.0912 \times 10^{-10} \text{ m/s}^2
+\end{equation}
+
+When geometrically adjusted for the spherical projection factor of a galactic halo ($1/2\pi$), this yields the observable galactic impedance limit:
+\begin{equation}
+    a_{obs} = \frac{a_D}{2\pi} \approx 1.1286 \times 10^{-10} \text{ m/s}^2
+\end{equation}
+
+\textbf{Conclusion:} The theoretical Lattice Impedance ($a_{obs}$) is the precise mechanical origin of the empirical MOND constant ($a_0 \approx 1.2 \times 10^{-10} \text{ m/s}^2$).
+
+\section{The Mechanism: Inductive Reactance (Virtual Mass)}
+Why does this impedance mimic invisible mass? In classical mechanics, an object accelerating through a medium carries a ``virtual mass'' of the surrounding fluid. In Tension Field Theory (TFT), this is inductive reactance.
+
+\begin{itemize}
+    \item \textbf{High acceleration ($g_b \gg a_D$):} The object moves too abruptly for the lattice to couple. The vacuum response is elastic. The added mass is zero.
+    \item \textbf{Low acceleration ($g_b \ll a_D$):} The object's motion resonates with the lattice relaxation time. The vacuum response becomes inductive.
+\end{itemize}
+
+We quantify this using the vacuum coupling coefficient $\chi_g$. Because this is a resonant coupling (impedance matching), it scales as the geometric mean of the field strengths:
+\begin{equation}
+    \chi_g = \sqrt{\frac{a_D}{g_b}}
+\end{equation}
+
+The effective mass ($M_{eff}$) sensing gravity is the baryonic mass ($M_b$) plus the reactance:
+\begin{equation}
+    M_{eff} = M_b (1 + \chi_g) = M_b \left(1 + \sqrt{\frac{a_D}{g_b}}\right)
+\end{equation}
+
+\section{The Total Acceleration Law}
+Substituting the effective mass into the standard gravitational law, $g_{obs} = \frac{G M_{eff}}{r^2}$, gives:
+\begin{equation}
+    g_{obs} = g_b (1 + \chi_g) = g_b \left(1 + \sqrt{\frac{a_D}{g_b}}\right)
+\end{equation}
+
+Distributing the $g_b$ term yields the master acceleration equation:
+\begin{equation}
+    g_{obs} = g_b + \sqrt{a_D g_b}
+\end{equation}
+
+In the deep galactic outskirts where the baryonic acceleration is weak ($g_b \ll a_D$), the first term becomes negligible, leaving the impedance floor:
+\begin{equation}
+    g_{obs} \approx \sqrt{a_D g_b}
+\end{equation}
+
+\section{Derivation of Flat Rotation Curves (Recovering Tully--Fisher)}
+Standard physics predicts that orbital velocity decays as $v \propto 1/\sqrt{r}$. However, observations show that galactic rotation curves remain flat ($v \approx \text{const}$). TFT predicts this flatness as a natural consequence of the Impedance Floor.
+
+Substituting centripetal acceleration ($g_{obs} = v^2/r$) into the Impedance Limit ($g_{obs} = \sqrt{\frac{a_D G M_b}{r^2}}$) gives:
+\begin{equation}
+    \frac{v^2}{r} = \frac{\sqrt{a_D G M_b}}{r}
+\end{equation}
+
+The radius $r$ cancels out completely, yielding the Baryonic Tully--Fisher Relation (BTFR):
+\begin{equation}
+    v^4 = a_D G M_b
+\end{equation}
+
+This confirms that the constant rotation speed of galaxies is a direct mathematical consequence of the Vacuum Impedance ($a_D$), without the need for Dark Matter halos.
+
+\section{The Unified Screening Function $\Xi(R)$}
+While the Impedance Law ($g_{obs} \approx \sqrt{a_D g_b}$) predicts flat rotation, this flatness cannot extend to infinity, as it would imply infinite total energy. TFT resolves this via Phase Coherence.
+
+The vacuum's inductive coupling (the Dark Matter halo) persists only as long as the galaxy's vibration is distinct from the cosmic background noise. We define the Screening Function to bound the interaction:
+\begin{equation}
+    \Xi(R) = \left[1 + \left(\frac{g_b}{g_*}\right)^{n_1}\right]^{-1} \cdot \left[1 + \left(\frac{R}{R_c}\right)^{n_2}\right]^{-1}
+\end{equation}
+
+\textbf{Where:}
+\begin{itemize}
+    \item $g_*$: The inner screening threshold ($\approx 50 - 100 \, a_D$), ensuring the halo effect is negligible in the Newtonian core.
+    \item $R_c$: The outer coherence radius ($\approx 200 - 500 \text{ kpc}$), the edge of the galaxy's phase influence.
+    \item $n_1, n_2$: Coherence exponents (sharpness of the transition, $\approx 2$).
+\end{itemize}
+
+With the screening function, the global acceleration law on a cosmic scale becomes:
+\begin{equation}
+    g_{obs} = g_b + \Xi(R)\sqrt{a_D g_b}
+\end{equation}
+
+\textbf{Limiting Behavior:}
+\begin{itemize}
+    \item \textbf{Inner region} ($g_b \gg g_*$) $\to \Xi \approx 0 \implies g_{obs} \approx g_b$
+    \item \textbf{Intermediate region} ($g_b \sim a_D$) $\to \Xi \approx 1 \implies g_{obs} \approx g_b + \sqrt{a_D g_b}$
+    \item \textbf{Flat outer disk} ($g_b \ll a_D, R \ll R_c$) $\to v_\infty^4 = G a_D M_b$
+    \item \textbf{Beyond coherence halo} ($R \gg R_c$) $\to \Xi \to 0 \implies g_{obs} \to g_b$
+\end{itemize}
+
+\vspace{0.5cm}
+\noindent \textbf{Future Work:} The coherence exponents ($n_1, n_2$) are currently modeled as quadratic ($n=2$) based on standard field decay rates. Future analysis of weak lensing surveys (e.g., Euclid, LSST) will allow for the precise empirical calibration of these screening functions.

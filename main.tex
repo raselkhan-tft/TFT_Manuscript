@@ -18,6 +18,9 @@
 % --- Table Rules ---
 \usepackage{booktabs} % Required for professional table rules
 \usepackage{array}    % Required for precise column width control
+\usepackage{alphalph}
+\usepackage[titles]{tocloft}
+%\setlength{\cftchapnumwidth}{3.5em}
 
 % --- Document Metadata ---
 \title{\textbf{Tension Field Theory (TFT)}\\
@@ -59,13 +62,44 @@ This manuscript establishes the mechanical constitution of spacetime, modeling f
 % ==========================================
 % APPENDICES
 % ==========================================
+\cleardoublepage
 \appendix
-
+\renewcommand{\thechapter}{\AlphAlph{\value{chapter}}}
 \include{Appendices/app_substrate_units}
 \include{Appendices/app_fcc_constants}
 \include{Appendices/app_emergence_h_G}
 \include{Appendices/app_particle_amplitude}
 \include{Appendices/app_fractal_architecture}
 \include{Appendices/app_kinematic_ceiling}
-
+\include{Appendices/app_cosmic_impedance}
+\include{Appendices/app_radial_projection}
+% Force LaTeX to skip the letter 'I'
+\stepcounter{chapter}
+\include{Appendices/app_kinematic_shear}
+\include{Appendices/app_optical_relativity}
+\include{Appendices/app_phase_transition}
+\include{Appendices/app_information_paradox}
+\include{Appendices/app_vacuum_damping}
+% Force LaTeX to skip the letter 'O'
+\stepcounter{chapter}
+\include{Appendices/app_physical_wavefunction}
+\include{Appendices/app_quantum_damping}
+\include{Appendices/app_photon_hamiltonian}
+\include{Appendices/app_quantum_tunneling}
+\include{Appendices/app_graviton}
+\include{Appendices/app_entanglement}
+\include{Appendices/app_photonic_emission}
+\include{Appendices/app_geometric_alpha}
+\include{Appendices/app_dynamic_alpha}
+\include{Appendices/app_origin_of_charge}
+\include{Appendices/app_unifiedforces_validation}
+\include{Appendices/app_hydrogenic_shell}
+\include{Appendices/app_atomic_angular_modes}
+\include{Appendices/app_fine_structure}
+\include{Appendices/app_baryon_asymmetry}
+\include{Appendices/app_lattice_annealing}
+\include{Appendices/app_cosmic_redshift}
+\include{Appendices/app_time_dilation}
+\include{Appendices/app_hubble_diagram}
+\include{Appendices/app_cosmic_energy_budget}
 \end{document}

@@ -1,0 +1,49 @@
+\chapter{The Radial Projection Operator $\Pi$}
+\label{app:radial_projection}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\textbf{Subject:} Geometric corrections for anisotropic tension fields.
+
+\section{Purpose and Motivation}
+Tension Field Theory models gravity as a physical tension gradient. While the field equation (\hyperref[sec:field_equation]{Section \ref*{sec:field_equation}} \textit{(Note: adjust this label when the main text is built)}) determines the total tension capacity via the source geometry $\kappa$, the observable acceleration depends on the transmission efficiency of the vacuum lattice.
+
+We introduce the radial projection operator $\Pi$ to quantify this transmission.
+\begin{itemize}
+    \item This operator bridges the scalar field potential with the vector acceleration, correcting for anisotropic coherence losses such as shear in galactic disks.
+    \item This serves as the TFT equivalent of the multipole expansion (quadrupole moment) in standard potential theory.
+\end{itemize}
+
+\section{Formal Definition}
+We decompose the operator into a directional tensor and a scalar amplitude.
+
+\begin{itemize}
+    \item \textbf{The Tensor Projector ($\Pi_{\mu\nu}$):} This purely geometric term selects the radial direction from the stress field using the unit vector $\hat{x}_\mu$:
+\end{itemize}
+\begin{equation}
+    \Pi_{\mu\nu} = \hat{x}_\mu \hat{x}_\nu = \frac{x_\mu x_\nu}{r^2}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{The Scalar Efficiency ($\Pi(r)$):} This dimensionless scalar represents the lattice coherence---the efficiency with which tension is transmitted radially.
+    \begin{itemize}
+        \item $\Pi \approx 1$: Corresponds to a sphere (isotropic flow, $100\%$ efficiency).
+        \item $\Pi < 1$: Describes a disk (shear or vortex decoherence, reduced efficiency).
+        \item $\Pi > 1$: Corresponds to a convergence zone (geometric focusing, amplified efficiency).
+    \end{itemize}
+\end{itemize}
+
+\section{Parametric Model}
+To model the efficiency without arbitrary constants, we parameterize it using the object's physical scale length $R_d$:
+\begin{equation}
+    \Pi(r) = 1 \pm \delta \left(\frac{R_d}{r}\right)^n
+\end{equation}
+
+\textbf{Where:}
+\begin{itemize}
+    \item $\delta$ \textbf{(Anisotropy):} The strength of the shear. For spherical bulges, $\delta = 0$. For typical spiral disks, phenomenology suggests $\delta \approx 0.05$ (about $5\%$ shear loss).
+    \item $R_d$ \textbf{(Scale):} The characteristic radius of the baryonic matter distribution.
+    \item $n$ \textbf{(Falloff):} The rate of decoherence. Typically $n \approx 1$ for dipole-like shear.
+\end{itemize}
+
+\vspace{0.5cm}
+\noindent \textbf{Validation:} Future work requires replacing this parametric approximation by calculating $\Pi$ directly from the Baryonic Mass Profile of observed galaxies using high-resolution catalogs (e.g., SPARC).

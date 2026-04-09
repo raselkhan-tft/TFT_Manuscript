@@ -1,0 +1,95 @@
+\chapter{Resolution of the Information Paradox}
+\label{app:information_paradox}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\textbf{Subject:} Reconciling unitarity and Hawking radiation via the Substrate Node Law (volumetric storage vs. surface projection).
+
+\section{The Standard Entropy Paradox}
+In standard General Relativity, the entropy of a black hole is defined by the Bekenstein--Hawking area law:
+\begin{equation}
+    S_{BH} = \frac{k_B c_E^3 A}{4G\hbar} = \frac{k_B A}{4\ell_S^2}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{The Anomaly:} Entropy ($S$) represents the count of internal microstates. For normal matter, microstates scale with volume ($V$). For black holes, they appear to scale with surface area ($A$).
+    \item \textbf{The Problem:} If information is restricted to the surface, the immense complexity of the star that formed the hole seems to be deleted (information loss), violating quantum unitarity.
+\end{itemize}
+
+\section{The TFT Solution: The Substrate Node Law}
+In Tension Field Theory (TFT), the black hole interior is not a singularity but a static substrate core (simple cubic lattice) at the Planck density. Because the core is a physical crystal, its information capacity is determined by the number of fundamental lattice nodes ($N_{core}$) filling its volume.
+
+We therefore distinguish between existent information (interior storage) and observable information (horizon projection).
+
+\subsection{Interior Information (The Volume Law)}
+The core consists of Hard Floor nodes ($\ell_S \approx 10^{-35} \text{ m}$). The number of nodes scales volumetrically with the Convergence Radius ($R_{QG}$):
+\begin{equation}
+    N_{core} = \frac{V_{core}}{\ell_S^3} = \frac{4}{3}\pi \left(\frac{R_{QG}}{\ell_S}\right)^3
+\end{equation}
+The intrinsic entropy (storage capacity) is:
+\begin{equation}
+    S_{core} = k_B N_{core} \propto R_{QG}^3
+\end{equation}
+The intrinsic entropy is not thermodynamic (heat), but configurational. Information is stored as Topological Defects within the crystal lattice.
+
+\subsection{Observable Entropy (The Holographic Law)}
+The event horizon ($R_{QG}$) acts as a phase boundary. External observers cannot probe the volumetric depth of the SC lattice; they can only interact with the surface layer. The observable entropy is limited by the surface node count:
+\begin{equation}
+    S_{holo} = \frac{k_B A}{4\ell_S^2} = \pi k_B \left(\frac{R_{QG}}{\ell_S}\right)^2
+\end{equation}
+
+\section{The Projection Principle}
+The observable entropy is defined by the limiting bottleneck of the system:
+\begin{equation}
+    S_{obs} = \min(S_{core}, S_{holo})
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{For microscopic scales ($R_{QG} \approx \ell_S$):} $S_{core} \approx S_{holo}$ (volume and area counts are comparable).
+    \item \textbf{For macroscopic black holes ($R_{QG} \gg \ell_S$):} The volume capacity ($R_{QG}^3$) vastly exceeds the surface projection ($R_{QG}^2$), implying:
+\end{itemize}
+\begin{equation}
+    N_{core} \gg \frac{S_{holo}}{k_B}
+\end{equation}
+
+\textbf{Result:} The observable entropy ($S_{BH}$) is the ``surface index'' of the data. The actual information is stored in the deep freeze of the volumetric substrate core, preserving unitarity.
+
+\section{Numerical Proof (Magnitude Check)}
+Using the high-precision TFT Hard Floor scale ($\ell_S \approx 1.6163 \times 10^{-35} \text{ m}$) and a small macroscopic black hole convergence radius of $R_{QG} = 10^4 \text{ m}$:
+
+\begin{itemize}
+    \item \textbf{Observable surface entropy:}
+\end{itemize}
+\begin{equation}
+    \frac{S_{holo}}{k_B} \approx \pi \left(\frac{10^4}{1.6163 \times 10^{-35}}\right)^2 \approx 1.2026 \times 10^{78} \text{ bits}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{Internal storage capacity:}
+\end{itemize}
+\begin{equation}
+    N_{core} \approx \frac{4}{3}\pi \left(\frac{10^4}{1.6163 \times 10^{-35}}\right)^3 \approx 9.9203 \times 10^{116} \text{ bits}
+\end{equation}
+
+\textbf{Conclusion:} The interior has $\sim 10^{38}$ times more storage capacity than the surface indicates. There is no information paradox; there is an access limitation. The information of the collapsed star is topologically locked in the static SC lattice, preserving unitarity.
+
+\section{Summary Table}
+
+\begin{table}[h!]
+\centering
+\caption{Summary of Storage vs. Projection Quantities}
+\vspace{0.2cm}
+\label{tab:information_paradox}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{4pt}
+\small
+% CORRECTED: Exactly 4 columns (Left, Left, Center, Paragraph Wrap)
+\begin{tabular}{@{}llcp{0.45\textwidth}@{}}
+\toprule
+\textbf{Quantity} & \textbf{Formula} & \textbf{Scaling} & \textbf{Physical Meaning} \\
+\midrule
+Interior Capacity & $S_{core} = k_B \left(\frac{V}{\ell_S^3}\right)$ & $\propto R_{QG}^3$ & Volumetric storage. The actual number of SC lattice nodes in the core. \\
+Observable Entropy & $S_{holo} = k_B \left(\frac{A}{4\ell_S^2}\right)$ & $\propto R_{QG}^2$ & Holographic limit. The information accessible at the phase boundary. \\
+TFT Resolution & $S_{obs} = \min(S_{core}, S_{holo})$ & N/A & Projection principle. The ``lost'' information is safely archived in the core volume. \\
+\bottomrule
+\end{tabular}
+\end{table}
