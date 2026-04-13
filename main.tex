@@ -21,9 +21,16 @@
 \usepackage{alphalph}
 \usepackage[titles]{tocloft}
 %\setlength{\cftchapnumwidth}{3.5em}
+% --- TOC Hierarchical Indentation ---
+\setlength{\cftchapindent}{1.5em}   % Indents chapters slightly
+\setlength{\cftsecindent}{3.5em}    % Indents sections further
+\setlength{\cftsubsecindent}{6.0em} % Indents subsections even further
+% --- TOC Part Formatting ---
+\renewcommand{\cftpartpresnum}{Part } % Injects the word "Part " before the numeral
+\setlength{\cftpartnumwidth}{5.0em} % Sets absolute width AND forces a hanging indent
 
 % --- Document Metadata ---
-\title{\textbf{Tension Field Theory (TFT)}\\
+\title{\textbf{Tension Field Theory}\\
 \large The Mechanical Constitution of the Spacetime Lattice from Quantum Gravity to Cosmic Kinematics}
 \author{Rasel Khan \\ \textit{Independent Researcher, Los Angeles, California}}
 \date{\today}
@@ -36,8 +43,9 @@
 This manuscript establishes the mechanical constitution of spacetime, modeling fundamental particles as topological defects and deriving inertial mass strictly from the hydrodynamic drag of the vacuum condensate.
 \end{abstract}
 
+\clearpage
 \tableofcontents
-\newpage
+\clearpage
 
 % ==========================================
 % MANUSCRIPT BODY
@@ -46,18 +54,40 @@ This manuscript establishes the mechanical constitution of spacetime, modeling f
 
 % --- TRILOGY: PART I ---
 \part{Foundations of the Dual-Phase Vacuum: The Mechanical Origin of the Dark Sector, Mass, and Light}
-\include{Trilogy/PartI/01_Introduction}
+\include{Trilogy/PartI/01_PartI_Intro}
 \include{Trilogy/PartI/02_PartI_Core}
 
 % --- TRILOGY: PART II ---
-% \part{Lattice Hydrodynamics}
-% \include{Trilogy/PartII/03_Hydrodynamic_Drag}
-% \include{Trilogy/PartII/04_Particle_Kinematics}
+\part{The Mechanics of Gravity, Black Holes, and the Quantum Structure of the Vacuum and the Atom}
+\include{Trilogy/PartII/03_PartII_Intro}
+\include{Trilogy/PartII/04_Foundations_Gravity}
+\include{Trilogy/PartII/05_GravitationalField}
+\include{Trilogy/PartII/06_Microphysics_BlackHoles}
+\include{Trilogy/PartII/07_Gravitational_Saturation}
+%\include{Trilogy/PartII/08_Quantum_Vacuum}
+%\include{Trilogy/PartII/09_Vertical_Topology}
+%\include{Trilogy/PartII/10_Grand_Unification}
+%\include{Trilogy/PartII/11_Hydrogen_Atom}
+%\include{Trilogy/PartII/12_Falsifiability}
+%\include{Trilogy/PartII/13_PartII_Conclusion}
 
 % --- TRILOGY: PART III ---
-% \part{Cosmological Implications}
-% \include{Trilogy/PartIII/05_Stellar_Mechanics}
-% \include{Trilogy/PartIII/06_The_Hubble_Tension}
+\part{Cosmic Architecture and Kinematics: The Big Rupture, the Hubble Artifact, and the Mechanical Cycle}
+% \include{Trilogy/PartIII/14_PartIII_Intro}
+% \include{Trilogy/PartIII/15_The_Big_Rupture}
+% \include{Trilogy/PartIII/16_Topological_Nucleation}
+% \include{Trilogy/PartIII/17_Cosmic_Redshift}
+% \include{Trilogy/PartIII/18_Cosmological_Anomalies}
+% \include{Trilogy/PartIII/19_Global_Kinematics}
+% \include{Trilogy/PartIII/20_Thermodynamic_Cycle}
+% \include{Trilogy/PartIII/21_PartIII_Conclusion}
+
+% ==========================================
+% BACKMATTER (Pre-Appendices)
+% ==========================================
+% \include{Trilogy/Backmatter/22_Main_Equations}
+% \include{Trilogy/Backmatter/23_Notation}
+% \include{Trilogy/Backmatter/24_Glossary}
 
 % ==========================================
 % APPENDICES
@@ -66,8 +96,8 @@ This manuscript establishes the mechanical constitution of spacetime, modeling f
 \appendix
 \renewcommand{\thechapter}{\AlphAlph{\value{chapter}}}
 \include{Appendices/app_substrate_units}
+\include{Appendices/app_conservation_action}
 \include{Appendices/app_fcc_constants}
-\include{Appendices/app_emergence_h_G}
 \include{Appendices/app_particle_amplitude}
 \include{Appendices/app_fractal_architecture}
 \include{Appendices/app_kinematic_ceiling}

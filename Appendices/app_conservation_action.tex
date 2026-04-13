@@ -1,0 +1,119 @@
+\chapter{Conservation of Action and the Master Geometric Law}
+\label{app:conservation_action}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\textbf{Subject:} Derivation of the scaling law ($\rho(r) \propto r^{-4}$) and the associated geometric form factor within the TFT framework.
+
+\section{Scale Invariance and the Conservation of Action}
+In Tension Field Theory (TFT), the characteristic densities and length scales of the vacuum are not introduced as independent phenomenological parameters. Rather, they are treated as geometrically related manifestations of a contiguous elastic substrate. Under this assumption, the transition from the Latent Substrate (State 0) to the Active Vacuum (State I) must preserve the fundamental mechanical action of the field.
+
+We therefore take the Action of Existence, denoted $h$, to be conserved across topological phase reconfiguration. The purpose of this appendix is to derive the corresponding scaling law for density under the additional assumption that the transverse propagation speed ($c_E$) remains invariant across the active phase.
+
+\section{Kinematic Definition of Action}
+For a localized mechanical excitation of the lattice, action is defined in the standard kinematic form as
+\begin{equation}
+    \text{Action} = E \cdot t
+\end{equation}
+where $E$ is the energy associated with one localized vibrational or rotational cycle, and $t$ is the corresponding cycle time.
+
+\section{Geometric Scaling of Energy and Time}
+To determine how action scales with the geometric size of a localized node, we express both $E$ and $t$ in terms of the characteristic radius $r$.
+
+The energy of a localized node is written as
+\begin{equation}
+    E = m c_E^2
+\end{equation}
+with
+\begin{equation}
+    m = \rho V
+\end{equation}
+For a three-dimensional localized state, the volume scales as
+\begin{equation}
+    V \propto r^3
+\end{equation}
+Hence,
+\begin{equation}
+    E \propto \rho \cdot r^3 \cdot c_E^2
+\end{equation}
+
+The characteristic time for one cycle is taken to be the traversal time across the node radius at speed $c_E$,
+\begin{equation}
+    t = \frac{r}{c_E}
+\end{equation}
+
+Substituting these expressions into the definition of action gives
+\begin{equation}
+    \text{Action} \equiv h \propto (\rho \cdot r^3 \cdot c_E^2)\left(\frac{r}{c_E}\right) = \rho \cdot r^4 \cdot c_E
+\end{equation}
+
+If the fundamental action ($h$) and the transverse speed ($c_E$) are both strictly invariant, then the remaining geometric factor must also be invariant. This motivates the definition
+\begin{equation}
+    J_i = \rho_i r_i^4 = \text{constant}
+\end{equation}
+which we refer to as the Universal Torsional Invariant.
+
+\section{Master Geometric Scaling Relation}
+The invariant $J_i$ implies that the rectilinear Substrate state (governed by its Simple Cubic architecture) and any localized phase state must satisfy
+\begin{equation}
+    \rho_S \ell_S^4 \propto \rho(r) r^4
+\end{equation}
+where $\rho_S$ and $\ell_S$ denote the density and characteristic scale of the Substrate.
+
+To convert this proportionality into an equality, a geometric transition factor must be introduced to account for the change from rectilinear to localized topology. Denoting this phase-dependent factor by $\mathcal{F}_i$, we write
+\begin{equation}
+    \rho_S \ell_S^4 = \frac{\rho(r) r^4}{\mathcal{F}_i}
+\end{equation}
+
+Solving for the localized density yields the master relation
+\begin{equation}
+    \rho(r) = \mathcal{F}_i \cdot \rho_S\left(\frac{\ell_S}{r}\right)^4
+\end{equation}
+This expression will be referred to as the Master Geometric Law. Within the TFT construction, it determines the projected density of a localized state as a function of scale and topology.
+
+\section{Geometric Form Factor}
+The form factor $\mathcal{F}_i$ is introduced to represent the geometric compression associated with confining a propagating linear mode into a localized bound state.
+
+We model the propagating mode as sweeping a cylindrical volume
+\begin{equation}
+    V_{\mathrm{cyl}} = \pi r^2(2r) = 2\pi r^3
+\end{equation}
+and the localized node as occupying a spherical volume
+\begin{equation}
+    V_{\mathrm{node}} = \frac{4}{3}\pi r^3
+\end{equation}
+
+The resulting compression ratio is
+\begin{equation}
+    \mathcal{F}_i = \frac{V_{\mathrm{cyl}}}{V_{\mathrm{node}}} = \frac{2\pi r^3}{\frac{4}{3}\pi r^3} = 1.5
+\end{equation}
+
+Accordingly, TFT assigns
+\begin{equation}
+    \mathcal{F}_D = 1.5
+\end{equation}
+to the spherical Soft Floor nodes, and
+\begin{equation}
+    \mathcal{F}_S = \mathcal{F}_N = 1.0
+\end{equation}
+to rectilinear or effectively linear/cylindrical configurations such as the Substrate and nucleon core.
+
+\section{Boundary Equation}
+The Master Geometric Law may be inverted to determine the characteristic boundary scale associated with a given internal density:
+\begin{equation}
+    r = \ell_S\left(\frac{\mathcal{F}_i \cdot \rho_S}{\rho(r)}\right)^{1/4}
+\end{equation}
+This relation will be used in subsequent appendices as the boundary equation for localized phase states.
+
+\section{Domain of Applicability}
+The scaling law derived here is intended to apply only to contiguous topological phase states of the vacuum, such as the Substrate cell, the Soft Floor node, and the continuous nucleon core. It is not assumed to extend directly to composite macroscopic bodies, whose quoted bulk densities represent coarse-grained averages of baryonic structure embedded within the active vacuum.
+
+\section{Conclusion}
+Within the TFT framework, the relation
+\begin{equation}
+    \rho(r) = \mathcal{F}_i \cdot \rho_S\left(\frac{\ell_S}{r}\right)^4
+\end{equation}
+provides the scale-projection rule required to preserve the invariant
+\begin{equation}
+    J_i = \rho_i r_i^4
+\end{equation}
+It follows that, as the characteristic radius increases across topological phases, the density must decrease as $r^{-4}$ up to the relevant geometric factor. In this sense, the Master Geometric Law functions as the scaling constraint that preserves action across the stratified architecture of the field.
