@@ -1,0 +1,246 @@
+import numpy as np # Selected for non-linear coordinate transformations and vector math
+import matplotlib.pyplot as plt # Selected for publication-grade 2D diagrammatic composition
+import matplotlib.patches as patches # Selected for rendering structural shells, funnels, and boxes
+import matplotlib.transforms as transforms # Selected for precise cross-axis geometric alignment
+import os # Selected for robust local directory management and path-specific file saving
+
+def create_photonic_extrusion_blueprint():
+    # Enforce strict serif typography (Computer Modern) for PRL-style aesthetics
+    plt.rcParams.update({
+        'savefig.pad_inches': 0.1,
+        'font.family': 'serif',
+        'font.serif': ['Computer Modern Roman', 'DejaVu Serif'],
+        'mathtext.fontset': 'cm', 
+        'font.size': 11
+    })
+    
+    # Initialize a two-panel side-by-side figure with expanded gap (wspace = 0.18)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 8.5), dpi=150, gridspec_kw={'wspace': 0.18})
+    fig.patch.set_facecolor('white')
+
+    # Masking properties for legibility
+    mask_props = dict(facecolor='white', edgecolor='none', alpha=0.9, boxstyle='round,pad=0.4')
+    
+    # =======================================================
+    # PANEL A: THE MACROSCOPIC COLLAPSE (Atomic Scale)
+    # =======================================================
+    ax1.set_aspect('equal')
+    ax1.set_xlim(0, 100)
+    ax1.set_ylim(0, 100)
+    ax1.axis('off')
+    
+    # Panel Label
+    # Use a blended transform to lock the Y-coordinate to ax2's height while keeping X anchored to ax1
+    trans_a = transforms.blended_transform_factory(ax1.transAxes, ax2.transAxes)
+    ax1.text(0.0, 1.02, r"$\mathbf{(a)}$", transform=trans_a, fontsize=15, color='black', ha='left', va='bottom')
+    
+    center = np.array([50, 50])
+    rn = 38 # Outer boundary (previous state)
+    rm = 26 # Inner boundary (collapsed state)
+    n_rad = 3.5 # Nucleus radius
+    
+    # 1. The Boundaries
+    circle_n = patches.Circle(center, rn, fill=False, edgecolor='#00AACC', ls='--', lw=1.5, alpha=0.5, zorder=1)
+    ax1.add_patch(circle_n)
+    
+    circle_m = patches.Circle(center, rm, fill=False, edgecolor='#0055AA', ls='-', lw=3.0, zorder=2)
+    ax1.add_patch(circle_m)
+
+    # Label rn and rm vertically at the bottom (6 o'clock)
+    ax1.text(center[0], center[1] - rn - 1.5, r"$\mathbf{r_n}$", ha='center', va='top', fontsize=12, fontweight='bold', bbox=mask_props, zorder=35)
+    ax1.text(center[0], center[1] - rm - 1.5, r"$\mathbf{r_m}$", ha='center', va='top', fontsize=12, fontweight='bold', bbox=mask_props, zorder=35)
+    
+    # 2. INTERNAL FIELD (Core to rm)
+    for angle_start in np.linspace(0, 2*np.pi, 12, endpoint=False):
+        r_inner = np.linspace(n_rad, rm, 120)
+        twist = 0.5
+        ax1.plot(center[0] + r_inner*np.cos(angle_start + twist*np.log(r_inner)), 
+                 center[1] + r_inner*np.sin(angle_start + twist*np.log(r_inner)), 
+                 color='#CC0000', alpha=0.6, lw=1.2, zorder=1)
+    
+    for angle_start in np.linspace(np.pi/12, 2*np.pi + np.pi/12, 8, endpoint=False):
+        r_in = np.linspace(rm, n_rad + 2, 100)
+        twist_in = -0.4 
+        ax1.plot(center[0] + r_in*np.cos(angle_start + twist_in*np.log(r_in)), 
+                 center[1] + r_in*np.sin(angle_start + twist_in*np.log(r_in)), 
+                 color='#0055AA', alpha=0.25, lw=1.0, zorder=1)
+
+    # 3. NEUTRALIZATION GAP (rm to rn)
+    for angle in np.linspace(0, 2*np.pi, 12, endpoint=False):
+        r_gap = np.linspace(rm, rn, 50)
+        twist_red = 0.5
+        jitter_x = (np.random.rand(len(r_gap)) - 0.5) * 1.5
+        jitter_y = (np.random.rand(len(r_gap)) - 0.5) * 1.5
+        ax1.plot(center[0] + r_gap*np.cos(angle + twist_red*np.log(r_gap)) + jitter_x, 
+                 center[1] + r_gap*np.sin(angle + twist_red*np.log(r_gap)) + jitter_y, 
+                 color='#CC0000', alpha=0.25, lw=1.0, zorder=1)
+        
+        twist_blue = -0.5
+        ax1.plot(center[0] + r_gap*np.cos(angle + twist_blue*np.log(r_gap)) + jitter_y, 
+                 center[1] + r_gap*np.sin(angle + twist_blue*np.log(r_gap)) + jitter_x, 
+                 color='#0055AA', alpha=0.25, lw=1.0, zorder=1)
+
+    # 4. The Drop Vector and Electron States (3 O'CLOCK SIDE)
+    ax1.annotate("", xy=(center[0]+rm, center[1]), xytext=(center[0]+rn, center[1]), arrowprops=dict(arrowstyle="->", color="black", lw=2.5), zorder=10)
+    ax1.text(center[0]+(rn+rm)/2, center[1]+3.5, r"$\Delta \ell = r_n - r_m$", ha='center', va='bottom', fontweight='bold', bbox=mask_props, zorder=25)
+
+    e_radius = 0.9
+    e_start = patches.Circle((center[0]+rn, center[1]), e_radius, fill=False, edgecolor='#00AACC', ls=':', lw=1.5, zorder=15)
+    ax1.add_patch(e_start)
+    
+    t_wake = np.linspace(np.radians(-90), np.radians(90), 100)
+    for i in range(len(t_wake) - 1):
+        alpha_val = (1 - (i / len(t_wake)))**2.5 
+        ax1.plot(center[0] + rm * np.cos(t_wake[i]), center[1] + rm * np.sin(t_wake[i]), color='#00AACC', lw=3.0, alpha=alpha_val * 0.5, zorder=28)
+    
+    e_end = patches.Circle((center[0]+rm, center[1]), e_radius, facecolor='#00AACC', edgecolor='black', lw=0.8, zorder=30)
+    ax1.add_patch(e_end)
+
+    # 5. Nucleus
+    ax1.add_patch(patches.Circle(center, n_rad, facecolor='#CC0000', zorder=5))
+    
+    # 6. Component Level Labels
+    ax1.text(center[0], center[1] - n_rad - 2.5, "Nucleon", ha='center', va='top', fontsize=10, fontweight='normal', bbox=mask_props, zorder=40)
+    
+    elec_angle = np.radians(330)
+    elec_label_r = 52
+    elec_xytext = center + elec_label_r * np.array([np.cos(elec_angle), np.sin(elec_angle)])
+    ax1.annotate("Electron", xy=(center[0]+rm, center[1]), xytext=elec_xytext,
+                 arrowprops=dict(arrowstyle="->", color="black", lw=0.8),
+                 fontsize=10, fontweight='normal', ha='left', va='top', bbox=mask_props, zorder=40)
+
+    # 7. Pinch Point
+    ext_pt = np.array([center[0] + rn, center[1]])
+    zoom_w = 16
+    rect_zoom = patches.Rectangle((ext_pt[0]-zoom_w*0.8, ext_pt[1]-zoom_w/2), zoom_w, zoom_w, fill=False, edgecolor='black', ls='--', lw=1.5, zorder=20)
+    ax1.add_patch(rect_zoom)
+
+    # =======================================================
+    # PANEL B: THE MICRO-CAVITATION CHANNEL (Zoom)
+    # =======================================================
+    ax2.set_xlim(0, 100)
+    ax2.set_ylim(0, 100)
+    ax2.axis('off')
+    
+    # Panel Label
+    ax2.text(0.0, 1.02, r"$\mathbf{(b)}$", transform=ax2.transAxes, fontsize=15, color='black', ha='left', va='bottom')
+    
+    wall_x_end = 35
+    funnel_y_center = 50
+    gap_h = 10
+    
+    # 1. THE RIGID LATTICE WALL (Outside the Funnel)
+    ax2.add_patch(patches.Rectangle((0, 0), wall_x_end, 90, facecolor='#EAEAEA', alpha=1.0, zorder=1))
+    
+    grid_spacing = 3.5
+    for gx in np.arange(0, wall_x_end + 1, grid_spacing):
+        ax2.axvline(gx, color='#CCCCCC', lw=0.5, alpha=0.5, ymin=0.0, ymax=0.9, zorder=2)
+    for gy in np.arange(0, 91, grid_spacing):
+        ax2.plot([0, wall_x_end], [gy, gy], color='#CCCCCC', lw=0.5, alpha=0.5, zorder=2)
+
+    # 2. THE CHANNEL VOID (White "Hole" carving through the lattice)
+    funnel_pts = np.array([[0, 80], [wall_x_end, 55], [wall_x_end, 45], [0, 20]])
+    ax2.add_patch(patches.Polygon(funnel_pts, facecolor='white', alpha=1.0, zorder=3))
+    
+    ax2.plot([0, wall_x_end], [80, 55], color='black', lw=1.5, zorder=4)
+    ax2.plot([0, wall_x_end], [20, 45], color='black', lw=1.5, zorder=4)
+    
+    # 3. ANNOTATIONS & LABELS
+    # Bipolar Squeeze / Turbulent Flow
+    for i, y_start in enumerate(np.linspace(15, 85, 14)):
+        color = '#0055AA' if i % 2 == 0 else '#CC0000'
+        rad = 0.3 if i % 2 == 0 else -0.3
+        ax2.annotate("", xy=(wall_x_end-1, 50 + (y_start-50)*0.1), xytext=(2, y_start),
+                     arrowprops=dict(arrowstyle="->", color=color, lw=1.8, alpha=0.6, connectionstyle=f"arc3,rad={rad}"), zorder=5)
+    
+    # Energy Integral Label
+    ax2.text(8, 50, r"$E_\gamma = \int \delta\tau \, dV$", color='black', fontsize=12, fontweight='bold', ha='center', bbox=mask_props, zorder=10)
+
+    # FCC Lattice (cE^2) Level - Centered in middle of gray lattice (50% of wall width)
+    ax2.text(wall_x_end / 2, 12, r"$\mathbf{FCC\ Lattice\ (c_E^2)}$", ha='center', va='top', fontsize=10, fontweight='bold', color='black', zorder=20)
+
+    # Neutralization Funnel Identifier - Placed at bottom white area with thin arrow
+    ax2.annotate(r"$\mathbf{Neutralization\ Funnel}$", xy=(22, 44), xytext=(65, 20),
+                 arrowprops=dict(arrowstyle="->", color="black", lw=0.8),
+                 fontsize=10, fontweight='bold', ha='center', va='top', zorder=20)
+
+    # 4. EXTRUSION ELEMENTS
+    # Slit Width Indicator
+    ax2.annotate('', xy=(wall_x_end, 55), xytext=(wall_x_end, 45), arrowprops=dict(arrowstyle='<->', color='black', lw=0.75), zorder=25)
+    ax2.text(wall_x_end + 1.5, 50, r"$A_{chan}$", va='center', ha='left', fontweight='bold', fontsize=12, zorder=25)
+
+    # THE EXTRUDED PHOTON (3D Double Helix Perception)
+    photon_x = np.linspace(wall_x_end, 95, 400)
+    helix_amp = 7
+    helix_freq = 0.28
+    
+    # Base Lines (Drawn behind masks)
+    # Red (+1 Twist)
+    ax2.plot(photon_x, funnel_y_center + helix_amp * np.sin(helix_freq * (photon_x - wall_x_end)), color='#CC0000', lw=2.8, zorder=10, alpha=0.9)
+    # Blue (-1 Twist)
+    ax2.plot(photon_x, funnel_y_center - helix_amp * np.sin(helix_freq * (photon_x - wall_x_end)), color='#0055AA', lw=2.8, zorder=10, alpha=0.9, ls=(0, (5, 1)))
+    
+    # Visual 3D "Over/Under" Cues at the intersection points on the central axis
+    # Crossing points occur at multiples of pi/frequency
+    crossing_pts = wall_x_end + np.arange(6) * (np.pi / helix_freq)
+    
+    for i, cx in enumerate(crossing_pts):
+        if cx > 95: continue
+        
+        # Determine the "front" string based on alternating helix projection
+        # Even i: Red is Over. Odd i: Blue is Over.
+        is_red_over = (i % 2 == 0)
+        over_color = '#CC0000' if is_red_over else '#0055AA'
+        over_ls = 'solid' if is_red_over else (0, (5, 1))
+        
+        # 1. Draw a small white occlusion circle at the crossing point to break the "under" line
+        ax2.scatter([cx], [funnel_y_center], color='white', s=60, zorder=11, edgecolors='none')
+        
+        # 2. Redraw a small segment of the "front" line to maintain continuity
+        seg_x = np.linspace(cx - 1.2, cx + 1.2, 10)
+        if is_red_over:
+            seg_y = funnel_y_center + helix_amp * np.sin(helix_freq * (seg_x - wall_x_end))
+        else:
+            seg_y = funnel_y_center - helix_amp * np.sin(helix_freq * (seg_x - wall_x_end))
+            
+        ax2.plot(seg_x, seg_y, color=over_color, lw=2.8, ls=over_ls, zorder=12, alpha=0.9)
+
+    # Propagation identification
+    ax2.annotate("", xy=(100, 50), xytext=(88, 50), arrowprops=dict(arrowstyle="-|>", color="black", lw=2.5), zorder=15)
+    ax2.text(94, 58, r"$\mathrm{Extruded\ Photon}\ (c_P \approx c_E)$", fontweight='bold', fontsize=12, ha='center')
+    
+    # Bracketed math on top of the lattice column (elevated slightly since title is removed)
+    ax2.text(17.5, 96, r"$[E_\gamma \approx \tau_{bulk} \cdot A_{chan} \cdot \Delta \ell]$", ha='center', va='top', fontsize=11, fontweight='bold', color='black')
+
+    # =======================================================
+    # LEADER LINES
+    # =======================================================
+    con = patches.ConnectionPatch(xyA=(ext_pt[0], ext_pt[1]), xyB=(0, 50), 
+                                  coordsA="data", coordsB="data", 
+                                  axesA=ax1, axesB=ax2, color="gray", lw=1.2, ls=':', alpha=0.5)
+    ax2.add_artist(con)
+
+    # =======================================================
+    # FINAL RENDER & PDF EXPORT
+    # =======================================================
+    plt.tight_layout(rect=[0, 0.03, 1, 0.98])
+    
+    output_dir = "Figures"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        
+    pdf_filename = os.path.join(output_dir, "Fig19_PartII_PhotonicExtrusion.pdf")
+    
+    try:
+        # Saving as high-fidelity vector PDF for publication
+        plt.savefig(pdf_filename, format='pdf', bbox_inches='tight')
+        print(f"High-fidelity vector PDF saved to: {pdf_filename}")
+    except PermissionError:
+        print(f"CRITICAL ERROR: Permission denied. Please close {pdf_filename} before re-running.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+    plt.show()
+
+if __name__ == "__main__":
+    create_photonic_extrusion_blueprint()
