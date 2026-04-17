@@ -21,7 +21,7 @@ As a Black Hole grows, it obeys a strict inverse scaling law. While its total ma
 \vspace{0.3cm}
 \noindent \textbf{Derivation of the Saturation Mass ($M_{\text{Sat}}$):} We derive the universal mass limit by equating the Black Hole's causal radius with the Universe's causal radius.
 \begin{itemize}
-    \item \textit{Black Hole Radius (Lattice Yield Limit):} $R_{QG} = \frac{GM}{c_E^2}$
+    \item \textit{Black Hole Radius (Lattice Convergence Limit):} $R_{QG} = \frac{GM}{c_E^2}$
     \item \textit{Cosmic Causal Radius (Lattice Drag Limit):} $R_U = \frac{c_E}{\Gamma_D}$
 \end{itemize}
 
@@ -39,30 +39,6 @@ The Universal Closure Mass:
     \item \textbf{If $M < M_{\text{Sat}}$:} The object is a local Black Hole (Type I) with a distinct horizon and a strong stabilizing pressure gradient.
     \item \textbf{If $M = M_{\text{Sat}}$:} The object's boundary expands to encompass the entire causal volume ($\propto R_U^3$). The localized topological defect dissolves into the contiguous global continuum, mechanically eliminating the ``Inside/Outside'' boundary.
 \end{itemize}
-
-\section{The End of Gravity (Surface Acceleration)}
-Standard physics assumes larger mass means stronger surface gravity. TFT reveals the opposite at the Event Horizon due to the linear scaling of the radius ($R \propto M$).
-
-Standard Formula: Surface Gravity is $g = \frac{GM}{R^2}$. \\
-TFT Substitution: Substituting the scale-invariant linear radius $R = \frac{GM}{c_E^2}$:
-\begin{equation}
-    g = \frac{GM}{\left(\frac{GM}{c_E^2}\right)^2} = \frac{GM \cdot c_E^4}{G^2 M^2} = \frac{c_E^4}{GM}
-\end{equation}
-
-\textbf{The Result:}
-\begin{equation}
-    g \propto \frac{1}{M}
-\end{equation}
-
-\textbf{Implication:} As a Black Hole grows, the gravitational acceleration at its surface inversely decreases. The system is bounded by two strict mechanical limits:
-
-\begin{itemize}
-    \item \textbf{The Minimum Limit (The Micro-Black Hole):} At the fundamental node saturation limit ($M_{D,G} \approx 10.625 \text{ kg}$), the surface gravity reaches its absolute theoretical maximum ($g_{\text{max}}$). The tension is perfectly concentrated on a single fundamental cell.
-    \item \textbf{The Macroscopic State:} A Supermassive Black Hole has vastly weaker surface gravity because the holding tension is distributed over an immense, macroscopic surface area.
-    \item \textbf{The Maximum Limit (Saturation):} When the Black Hole expands to the universal closure boundary ($R_{QG} = R_U$), the mass reaches $M_{\text{Sat}}$. At this extreme, the surface gravity $g$ approaches zero.
-\end{itemize}
-
-\textbf{The Consequence:} At the cosmic scale, the Black Hole possesses no holding gradient left to maintain its boundary. The structural ``skin'' of the event horizon becomes too weak to contain the static, pressurized Substrate Core.
 
 \section{Black Hole Growth Mechanism (Vacuum Phase Conversion)}
 
@@ -84,7 +60,7 @@ The Black Hole grows by propagating a phase transition into the surrounding medi
     \end{itemize}
 \end{enumerate}
 
-\textbf{Derivation of the Reservoir Radius ($R_{\text{Res}}$)}
+\subsection{Derivation of the Reservoir Radius ($R_{\text{Res}}$)}
 
 To build a solid SC core the size of the Cosmic Horizon ($R_U \approx 10^{26} \text{ m}$), the Black Hole must harvest a specific volume of vacuum nodes. Applying the conservation of mass ($V_{\text{FCC}} \cdot \rho_{QG} = V_{\text{SC}} \cdot \rho_S$):
 \begin{equation}
@@ -101,6 +77,60 @@ Since radius scales with the cube root of volume ($R \propto V^{1/3}$):
 \end{equation}
 
 This mathematically confirms that the Cosmological Cycle operates perfectly between the fundamental limits of the Substrate: the Micro-Limit ($\ell_S$) defines the texture, and the Macro-Limit ($1/\ell_S$) defines the reservoir.
+
+\section{The Kinematics of Vacuum Consumption}
+To formalize this phase conversion, we define the growth of the Black Hole not as standard mass-accretion, but as the strict rate of topological node creation ($N$) and mechanical horizon displacement ($R_{QG}$).
+
+\subsection{The Interior Growth Law (Node Multiplication)}
+The rate at which the active Face-Centered Cubic (FCC) vacuum is structurally crystallized into static Simple Cubic (SC) Substrate nodes is governed by the net kinetic power injected into the system:
+\begin{equation}
+    \frac{dN}{dt} = \frac{\eta_N P_{\text{in}} - L_{\text{out}}}{E_S}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $P_{\text{in}}$: The injected kinematic power (from consumed matter and active vacuum).
+    \item $L_{\text{out}}$: The mechanical leakage (e.g., gravitational radiation or stress shedding during topological mismatch).
+    \item $\eta_N$: The nucleation efficiency (the geometric probability of an active FCC node snapping into the static SC configuration upon contact with the core).
+    \item $E_S$: The absolute structural energy capacity of a single SC Substrate node ($\approx 1.956 \times 10^9 \text{ J}$).
+\end{itemize}
+
+This establishes that interior growth is strictly node-driven; the core expands only when the incoming kinetic energy exceeds the threshold required to forge new substrate geometry.
+
+\subsection{The Kinematics of Event Horizon Phase Expansion}
+Because the Event Horizon is a physical phase boundary, its macroscopic expansion requires mechanical work. The internal mechanical work exerted by the outward crystallization pressure of these newly formed SC nodes must equal the gravitational work required to expand the mass-energy of the exterior surface.
+
+As fully derived in \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} (Section 9), equating the differential expansion power of the horizon's mass-energy ($E = M c_E^2$) to the internal mechanical work rate (Force $\times$ Velocity) yields a strict static identity for the Horizon Surface Tension ($\tau_{QG}$):
+\begin{equation}
+    \tau_{QG} = \left(\frac{c_E^2}{4\pi G R_{QG}}\right) g_{QG}
+\end{equation}
+
+This derivation proves from first principles that macroscopic horizon expansion is not a kinematic stretch of empty mathematical space, but a strict mechanical displacement. It is driven purely by the crystallization pressure of the growing SC core pressing outward against the elastic FCC vacuum.
+
+\section{The End of Gravity (Surface Acceleration)}
+Standard physics assumes larger mass means stronger surface gravity. TFT reveals the opposite at the Event Horizon due to the linear scaling of the radius ($R_{QG} \propto M$).
+
+Standard Formula: Surface Gravity at the horizon is $g_{QG} = \frac{GM}{R_{QG}^2}$.
+
+TFT Substitution: Substituting the scale-invariant event horizon radius $R_{QG} = \frac{GM}{c_E^2}$:
+\begin{equation}
+    g_{QG} = \frac{GM}{\left(\frac{GM}{c_E^2}\right)^2} = \frac{GM \cdot c_E^4}{G^2 M^2} = \frac{c_E^4}{GM}
+\end{equation}
+
+\textbf{The Result:}
+\begin{equation}
+    g_{QG} \propto \frac{1}{M}
+\end{equation}
+
+\textbf{Implication:} As a Black Hole grows, the gravitational acceleration at its surface inversely decreases. The system is bounded by two strict mechanical limits:
+
+\begin{itemize}
+    \item \textbf{The Minimum Limit (The Micro-Black Hole):} At the fundamental node saturation limit ($M_{D,G} \approx 10.625 \text{ kg}$), the surface gravity reaches its absolute theoretical maximum ($g_{QG,\text{max}}$). The tension is perfectly concentrated on a single fundamental cell.
+    \item \textbf{The Macroscopic State:} A Supermassive Black Hole has vastly weaker surface gravity because the holding tension is distributed over an immense, macroscopic surface area.
+    \item \textbf{The Maximum Limit (Saturation):} When the Black Hole expands to the universal closure boundary ($R_{QG} = R_U$), the mass reaches $M_{\text{Sat}}$. At this extreme, the surface gravity $g_{QG}$ approaches zero.
+\end{itemize}
+
+\textbf{The Consequence:} At the cosmic scale, the Black Hole possesses no holding gradient left to maintain its boundary. The structural ``skin'' of the event horizon becomes too weak to contain the static, pressurized Substrate Core.
 
 \section{Mechanism of Failure}
 The ultimate rupture of this cosmic-scale Black Hole is inevitable due to the convergence of two fatal instabilities:

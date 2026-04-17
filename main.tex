@@ -20,14 +20,20 @@
 \usepackage{array}    % Required for precise column width control
 \usepackage{alphalph}
 \usepackage[titles]{tocloft}
-%\setlength{\cftchapnumwidth}{3.5em}
-% --- TOC Hierarchical Indentation ---
+
+% --- TOC Hierarchical Indentation (The Cascade) ---
 \setlength{\cftchapindent}{1.5em}   % Indents chapters slightly
-\setlength{\cftsecindent}{3.5em}    % Indents sections further
-\setlength{\cftsubsecindent}{6.0em} % Indents subsections even further
+\setlength{\cftsecindent}{3.3em}    % Aligns perfectly under chapter text
+\setlength{\cftsubsecindent}{6.1em} % Aligns perfectly under section text
+
+% --- TOC Number Box Widths (The Tight Fit Fix) ---
+\setlength{\cftchapnumwidth}{1.8em}   % Exact space for 2-digit chapters (e.g., "18")
+\setlength{\cftsecnumwidth}{2.8em}    % Exact space for wide sections (e.g., "18.10")
+\setlength{\cftsubsecnumwidth}{3.6em} % Exact space for subsections (e.g., "18.10.1")
+
 % --- TOC Part Formatting ---
 \renewcommand{\cftpartpresnum}{Part } % Injects the word "Part " before the numeral
-\setlength{\cftpartnumwidth}{5.0em} % Sets absolute width AND forces a hanging indent
+\setlength{\cftpartnumwidth}{5.0em}   % Sets absolute width AND forces a hanging indent
 
 % --- Document Metadata ---
 \title{\textbf{Tension Field Theory}\\
@@ -66,10 +72,10 @@ This manuscript establishes the mechanical constitution of spacetime, modeling f
 \include{Trilogy/PartII/07_Gravitational_Saturation}
 \include{Trilogy/PartII/08_Quantum_Vacuum}
 \include{Trilogy/PartII/09_Vertical_Topology}
-%\include{Trilogy/PartII/10_Grand_Unification}
-%\include{Trilogy/PartII/11_Hydrogen_Atom}
-%\include{Trilogy/PartII/12_Falsifiability}
-%\include{Trilogy/PartII/13_PartII_Conclusion}
+\include{Trilogy/PartII/10_Grand_Unification}
+\include{Trilogy/PartII/11_Hydrogen_Atom}
+\include{Trilogy/PartII/12_Falsifiability}
+\include{Trilogy/PartII/13_PartII_Conclusion}
 
 % --- TRILOGY: PART III ---
 \part{Cosmic Architecture and Kinematics: The Big Rupture, the Hubble Artifact, and the Mechanical Cycle}

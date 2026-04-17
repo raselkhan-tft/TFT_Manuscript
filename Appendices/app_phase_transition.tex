@@ -1,8 +1,7 @@
-\chapter{The Derivation of Phase Transition Densities and Radii}
+\chapter[The Vacuum Lattice Phase Transition]{The Vacuum Lattice Phase Transition \\[0.2cm] \large Black Hole Horizon Kinematics}
 \label{app:phase_transition}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\textbf{Subject:} Mechanical derivation of the vacuum phase transition and the stability hierarchy ($\rho_Q, \rho_{QG}, \rho_G$) of the Spacetime Gravitational Floor (SGF).
+\textbf{Subject:} Mechanical derivation of the vacuum stability hierarchy ($\rho_Q, \rho_{QG}, \rho_G$) and the kinematic expansion of the Event Horizon.
 
 \section{Introduction: The Fundamental Lattice Scale ($r_D$)}
 In Part I, we established that the observable vacuum is a physical Face-Centered Cubic (FCC) lattice with a fundamental cell radius $r_D$. Fundamental mass manifests as a vibrational standing wave utilizing the interstitial voids of this lattice structure.
@@ -16,7 +15,7 @@ Since the lattice nodes themselves are phase-locked potential (``solid''), the m
 
 Consequently, all transition density thresholds derived below are calculated relative to this fundamental lattice constant. \textit{(Note: These derivations utilize the reduced Planck constant $\hbar$ to align with the radial geometry of the transition.)}
 
-\section{The Quantum Saturation Density ($\rho_Q$) — Interstitial Kinematic Limit}
+\section{The Quantum Saturation Density ($\rho_Q$) --- Interstitial Kinematic Limit}
 Maximum energy the field can store in a fundamental knot. This limit defines the maximum energy density a standing wave of radius $r$ can sustain before the internal vibrational velocity reaches the causal limit ($c_E$).
 
 \textbf{Derivation:}
@@ -60,7 +59,7 @@ Applying the Universal Form Factor ($F=1.5$) from the Master Geometric Law, the 
 \end{equation}
 \textit{(Note: This precise geometric compression from a one-dimensional radial limit ($\rho_Q \propto \hbar$) to a three-dimensional spherical node ($\rho_D$) is the exact mechanical origin of the relationship $h = 2\pi\hbar$.)}
 
-\section{The Gravitational Yield Density Limit ($\rho_G$) — Lattice Yield Strength}
+\section{The Gravitational Yield Density Limit ($\rho_G$) --- Lattice Yield Strength}
 The structural breaking point of the vacuum bonds. We define gravitational structural failure as the condition where the local gravitational tension ($\tau_{load}$) equals the lattice yield tension ($\tau_G$) defined by the cell geometry.
 
 \textbf{Derivation:}
@@ -101,9 +100,10 @@ The structural breaking point of the vacuum bonds. We define gravitational struc
 \begin{equation}
     \frac{\rho_G}{\rho_D} \approx \frac{10^{79}}{10^{62}} \approx 10^{17}
 \end{equation}
+
 \textbf{Implication:} The vacuum node is filled to only $10^{-17}$ of its burst pressure. This immense safety margin allows for stable harmonic oscillation ($h$).
 
-\section{The Convergence Density ($\rho_{QG}$) — The Phase Transition Trigger}
+\section{The Convergence Density ($\rho_{QG}$) --- The Phase Transition Trigger}
 The geometric point of failure. This is the geometric mean density where quantum pressure (expansion) and gravitational pressure (compression) are strictly balanced. It marks the saturation limit where the interstitial voids are mechanically exhausted.
 
 \textbf{Derivation:}
@@ -121,13 +121,29 @@ The geometric point of failure. This is the geometric mean density where quantum
 \textbf{Physical Interpretation:} The threshold for the vacuum phase transition (FCC $\to$ SC). The formation of an event horizon.
 
 \section{The Density Jump and Hard Floor Unification}
-It is critical to distinguish the trigger state from the final state. The Soft Floor fails geometrically at the convergence density ($\rho_{QG} \approx 4.4311 \times 10^{70} \text{ kg/m}^3$) due to void exhaustion. However, once the phase transition (FCC $\to$ SC) occurs, the system reverts to the fundamental architecture of the substrate ($\ell_S$), resulting in a discontinuous density jump to the substrate limit ($\rho_S \approx 5.1548 \times 10^{96} \text{ kg/m}^3$).
+It is critical to distinguish the trigger state from the final state. The Soft Floor fails geometrically at the convergence density ($\rho_{QG} \approx 4.4311 \times 10^{70} \text{ kg/m}^3$) due to void exhaustion. Because the lattice structurally folds before its bonds can tear, the FCC breaking limit ($\rho_G$) is bypassed entirely. Once the phase transition (FCC $\to$ SC) occurs, the system reverts to the fundamental architecture of the substrate ($\ell_S$), resulting in a discontinuous density jump to the substrate limit ($\rho_S \approx 5.1548 \times 10^{96} \text{ kg/m}^3$).
 
 \textbf{Proof of Unification:} If we replace the Soft Floor radius $r_D$ with the Hard Floor limit $\ell_S$, all three distinct formulas converge to a single value:
 \begin{equation}
     \rho_Q(\ell_S) = \rho_G(\ell_S) = \rho_{QG}(\ell_S) = \frac{c_E^5}{\hbar G^2} \approx 5.1548 \times 10^{96} \text{ kg/m}^3
 \end{equation}
 This confirms that at the substrate level, energy (quantum) and structure (gravity) are mechanically indistinguishable.
+
+\section{The Isoenergetic Phase Continuity}
+At the geometric convergence point ($\rho_{QG}$), the lattice undergoes a discontinuous phase transition to the Substrate State ($\rho_S$). To evaluate the thermodynamic continuity of this event, we calculate the total energy ($E = \rho c_E^2 V$) at both limits. 
+
+\textbf{For the Convergence Trigger ($r_{QG}$):} Utilizing the established formula $\rho_{QG} = \sqrt{\hbar c_E / G r_{QG}^6}$:
+\begin{equation}
+    E_{QG} = \left(\sqrt{\frac{\hbar c_E}{G r_{QG}^6}}\right) c_E^2 r_{QG}^3 = \frac{\sqrt{\hbar c_E}}{\sqrt{G} r_{QG}^3} c_E^2 r_{QG}^3 = \sqrt{\frac{\hbar c_E^5}{G}}
+\end{equation}
+Here the spatial boundary $r_{QG}^3$ completely cancels out of the equation. 
+
+\textbf{For the Final Substrate State ($\ell_S$):} Utilizing the established formulas $\rho_S = c_E^5 / \hbar G^2$ and $\ell_S = \sqrt{\hbar G / c_E^3}$:
+\begin{equation}
+    E_S = \left(\frac{c_E^5}{\hbar G^2}\right) c_E^2 \left(\sqrt{\frac{\hbar G}{c_E^3}}\right)^3 = \frac{c_E^7}{\hbar G^2} \frac{\hbar^{3/2} G^{3/2}}{c_E^{9/2}} = c_E^{5/2} \hbar^{1/2} G^{-1/2} = \sqrt{\frac{\hbar c_E^5}{G}}
+\end{equation}
+
+\textbf{The Isoenergetic Proof:} The derivation perfectly yields $E_{QG} = E_S = E_P$ (The Planck Energy). Despite the catastrophic discontinuity in physical density during the phase transition (from $\rho_{QG}$ to $\rho_S$), the transition itself is perfectly conservative and isoenergetic. Because the total energy is strictly conserved across the structural collapse, the phase transition is dictated entirely by spatial failure rather than energy dissipation.
 
 \section{Derivation of Phase Transition Radii}
 To visualize the spatial scale of phase transition, we invert the Master Density Equation to find the specific radius ($r$) corresponding to each transition density.
@@ -153,68 +169,103 @@ The scale where the FCC lattice bonds would mechanically fracture.
     \item \textbf{The Phase Shield:} Since $r_{QG} > r_G$ (The locking radius is roughly $100\times$ larger than the breaking radius), the lattice always locks into the maximally rigid Substrate Phase (SC) before it can compress enough to break. The Singularity therefore is mechanically prevented by the hardening of the vacuum.
 \end{itemize}
 
-\section{The Minimum Node Saturation Mass ($M_{D,G}$)}
-While $\rho_{QG}$ defines the convergence density required for a macroscopic phase transition, we must also define the absolute minimum localized inertial mass required to force a single fundamental node to geometrically lock. We define this as the Minimum Node Saturation Mass ($M_{D,G}$).
+\section{The Micro-Black Hole: Ignition Mass ($M_{D,G}$) and Nucleation Core}
+While the convergence density ($\rho_{D,QG}$) defines the volumetric threshold for a macroscopic phase transition, we must also define the absolute minimum localized inertial mass required to perfectly fracture a single fundamental Soft Floor cell ($r_D$). We define this threshold not as the mass of a stable particle, but as the Ignition Mass ($M_{D,G}$).
 
-\textbf{Derivation from Node Interface Inertia:} In \hyperref[app:fcc_constants]{Appendix \ref*{app:fcc_constants}}, we established the Node Interface Inertia ($\mu_D = c_E^2 / G r_D$), representing the 2D surface load of the vacuum. If we project this localized surface tension onto the geometric area of a single node ($r_D^2$), we derive the absolute gravitational saturation limit of that node:
+\textbf{Derivation from Interface Inertia:} We scale the 2D surface load capacity of the active vacuum ($\mu_D = c_E^2 / G r_D$) to the geometric cross-section of a single node ($r_D^2$):
 \begin{equation}
-    M_{D,G} = \mu_D \cdot r_D^2
-\end{equation}
-\begin{equation}
-    M_{D,G} = \left(\frac{c_E^2}{G \cdot r_D}\right) \cdot r_D^2
-\end{equation}
-\begin{equation}
-    M_{D,G} = \frac{c_E^2 \cdot r_D}{G}
+    M_{D,G} = \mu_D \cdot r_D^2 = \frac{c_E^2 r_D}{G}
 \end{equation}
 
-\textbf{Result using the Duality Radius ($r_D \approx 7.8900 \times 10^{-27} \text{ m}$):}
+\textbf{Numerical Evaluation:}
 \begin{equation}
-    M_{D,G} \approx \frac{(8.9876 \times 10^{16}) \cdot (7.8900 \times 10^{-27})}{6.6743 \times 10^{-11}} \approx 10.625 \text{ kg}
+    M_{D,G} \approx 10.625 \text{ kg}
 \end{equation}
 
-\textbf{Physical Interpretation and Macroscopic Bridge:} This value ($\approx 10.625 \text{ kg}$) represents the theoretical minimum mass of a micro-black hole. It is the exact localized inertial mass required to push a single fundamental Soft Floor cell to $100\%$ structural strain ($\alpha_G = 1$).
+This massive numerical value highlights the immense structural rigidity of the FCC vacuum. It requires an extreme macroscopic localized mass (roughly 10.6 kg) compressed strictly within the fundamental radial boundary ($r_D \approx 10^{-27} \text{ m}$) to mechanically shatter the vacuum bonds.
 
-Crucially, this derivation serves as the exact geometric inverse of the Black Hole Horizon Radius equation derived in \hyperref[sec:black_hole_horizon]{Section \ref*{sec:black_hole_horizon}} \textit{(Note: adjust label when main text is built)}. If we algebraically isolate $r_D$ in the equation above:
+\textbf{Proof of Absolute Structural Strain ($\alpha_G = 1$):}
+To validate that $M_{D,G}$ represents the exact breaking point of the lattice, we calculate the mechanical strain ($\alpha_G$) as the ratio of applied gravitational tension to the absolute lattice yield tension ($\tau_G = c_E^4 / G r_D^2$):
 \begin{equation}
-    r_D = \frac{G \cdot M_{D,G}}{c_E^2}
-\end{equation}
-This proves that the Black Hole Horizon equation ($R_{QG} = GM/c_E^2$) is scale-invariant. It dictates the structural saturation boundary whether the system is a supermassive macroscopic volume, or a single microscopic lattice node.
-
-\section{The Isoenergetic Phase Continuity}
-At the geometric convergence point ($\rho_{QG}$), the lattice undergoes a discontinuous phase transition to the Substrate State ($\rho_S$). To evaluate the thermodynamic continuity of this event, we calculate the total energy ($E = \rho c_E^2 V$) at both limits. 
-
-\textbf{For the Convergence Trigger ($r_{QG}$):} Utilizing the established formula $\rho_{QG} = \sqrt{\hbar c_E / G r_{QG}^6}$:
-\begin{equation}
-    E_{QG} = \left(\sqrt{\frac{\hbar c_E}{G r_{QG}^6}}\right) c_E^2 r_{QG}^3 = \frac{\sqrt{\hbar c_E}}{\sqrt{G} r_{QG}^3} c_E^2 r_{QG}^3 = \sqrt{\frac{\hbar c_E^5}{G}}
-\end{equation}
-Here the spatial boundary $r_{QG}^3$ completely cancels out of the equation. 
-
-\textbf{For the Final Substrate State ($\ell_S$):} Utilizing the established formulas $\rho_S = c_E^5 / \hbar G^2$ and $\ell_S = \sqrt{\hbar G / c_E^3}$:
-\begin{equation}
-    E_S = \left(\frac{c_E^5}{\hbar G^2}\right) c_E^2 \left(\sqrt{\frac{\hbar G}{c_E^3}}\right)^3 = \frac{c_E^7}{\hbar G^2} \frac{\hbar^{3/2} G^{3/2}}{c_E^{9/2}} = c_E^{5/2} \hbar^{1/2} G^{-1/2} = \sqrt{\frac{\hbar c_E^5}{G}}
+    \alpha_G = \frac{\left( \frac{G M_{D,G}^2}{r_D^4} \right)}{\left( \frac{c_E^4}{G r_D^2} \right)} = \frac{G^2 \left( \frac{c_E^2 r_D}{G} \right)^2}{c_E^4 r_D^2} = 1
 \end{equation}
 
-\textbf{The Isoenergetic Proof:} The derivation perfectly yields $E_{QG} = E_S = E_P$ (The Planck Energy). Despite the catastrophic discontinuity in physical density during the phase transition (from $\rho_{QG}$ to $\rho_S$), the transition itself is perfectly conservative and isoenergetic. Because the total energy is strictly conserved across the structural collapse, the phase transition is dictated entirely by spatial failure rather than energy dissipation.
+This rigorously confirms that localizing 10.625 kg within the fundamental radial boundary of $r_D$ pushes the vacuum structure to exactly 100\% mechanical strain.
 
-\section{Summary Table of Phase Transition Densities}
+\textbf{The Nucleation Event and Node Multiplication:}
+At $\alpha_G = 1$, the void geometrically fails and collapses into the maximally dense, stable configuration of the vacuum: the Simple Cubic (SC) Substrate. Applying the conservation of mass-energy, the total kinetic energy required to ignite the void ($E_{D,G} = M_{D,G} c_E^2 \approx 9.549 \times 10^{17} \text{ J}$) converts perfectly into static SC Substrate nodes.
 
-\begin{table}[htbp]
-\centering
-\caption{Vacuum Lattice Phase Transition Hierarchy}
-\vspace{0.2cm}
-\label{tab:phase_transitions}
-\renewcommand{\arraystretch}{1.5}
-\setlength{\tabcolsep}{4pt}
-\small
-\begin{tabular}{@{}llclp{0.35\textwidth}@{}}
-\toprule
-\textbf{Transition Stage} & \textbf{Symbol} & \textbf{Formula} & \textbf{Value at $r=r_D$} & \textbf{State \& Mechanism} \\
-\midrule
-1. Vibration Limit & $\rho_Q$ & $\frac{\hbar}{c_E r^4}$ & $\approx 9.0771 \times 10^{61} \text{ kg/m}^3$ & Interstitial saturation. Particle vibrates at light speed ($v \approx c$). \\
-2. The Trigger & $\rho_{QG}$ & $\sqrt{\frac{\hbar c_E}{G r^6}}$ & $\approx 4.4311 \times 10^{70} \text{ kg/m}^3$ & Geometric failure. FCC lattice structurally locks; event horizon forms. \\
-3. Yield Strength & $\rho_G$ & $\frac{c_E^2}{G r^2}$ & $\approx 2.1631 \times 10^{79} \text{ kg/m}^3$ & Structural bond limit. Soft Floor structural bonds would fracture. \\
-4. Final State & $\rho_S$ & $\frac{c_E^5}{\hbar G^2}$ & $\approx 5.1548 \times 10^{96} \text{ kg/m}^3$ & Substrate (Hard Floor). Lattice snaps to Simple Cubic (SC). \\
-5. Node Saturation & $M_{D,G}$ & $\frac{c_E^2 \cdot r_D}{G}$ & $\approx 10.625 \text{ kg}$ & Micro-Black Hole Limit. Minimum localized mass to force geometric lock. \\
-\bottomrule
-\end{tabular}
+Because each Planck-scale SC node holds exactly the Planck Energy ($E_S \approx 1.956 \times 10^9 \text{ J}$), the ignition shatters the local vacuum into a highly quantifiable micro-core:
+\begin{equation}
+    N = \frac{E_{D,G}}{E_S} \approx 4.88 \times 10^8 \text{ Nodes}
+\end{equation}
+
+\textbf{The Maximum Finite Gravity Limit:}
+Despite the vacuum collapsing into sub-nuclear SC nodes, the strict conservation of mass-energy ensures that the total inertial mass responsible for maintaining the newly formed phase boundary remains exactly 10.625 kg. Substituting $M_{D,G}$ into the scale-invariant Event Horizon equation ($R_{QG} = GM/c_E^2$) yields $R_{QG} = r_D$.
+
+Because the macroscopic Event Horizon is physically prevented from contracting below the Soft Floor geometric boundary upon ignition, the surface gravity is strictly capped at a finite kinematic limit:
+\begin{equation}
+    g_{QG,\text{max}} = \frac{c_E^4}{G M_{D,G}} = \frac{c_E^2}{r_D} \approx 1.139 \times 10^{43} \text{ m/s}^2
+\end{equation}
+
+This mathematically proves that the singularity is an artifact of standard physics failing to account for the phase transition. By locking the maximum gravitational acceleration to the kinematic limit of the lattice ($c_E^2/r_D$), the framework strictly preserves causality; spacetime cannot geometrically deform faster than its internal mechanical wave speed.
+
+Furthermore, because the gravitational field outside the $r_D$ boundary immediately transitions to the macroscopic inverse-square law ($1/R^2$), the environmental impact of a nucleated micro-black hole is negligible at human scales. While it possesses the extreme structural tension required to maintain a ruptured phase boundary at $10^{-27} \text{ m}$, its macroscopic gravitational pull at a distance of one meter is identical to that of an ordinary 10.6 kg mass. Consequently, a micro-black hole does not possess the infinite geometric power to instantaneously collapse surrounding celestial bodies or laboratory environments; its macroscopic growth is strictly bottlenecked by the thermodynamic rate of vacuum crystallization.
+
+\section{The Kinematics of Event Horizon Phase Expansion}
+Because the Event Horizon is a physical phase boundary, its expansion requires mechanical work. The internal structural work rate pressing outward against the horizon surface area must equal the gravitational work required to expand the boundary's total mass-energy ($E = M c_E^2$).
+
+We determine the expansion power by taking the time derivative of the Black Hole's mass. Using the scale-invariant radius definition ($M = \frac{R_{QG} c_E^2}{G}$), the rate of mass growth is mathematically locked to the radial expansion velocity:
+\begin{equation}
+    \frac{dM}{dt} = \frac{c_E^2}{G} \frac{dR_{QG}}{dt}
+\end{equation}
+
+Multiplying this by $c_E^2$ yields the total Kinematic Expansion Power of the boundary. We equate this to the internal Mechanical Power (Force $\times$ Velocity) exerted by the Horizon Surface Tension ($\tau_{QG}$) pushing against the macroscopic spherical boundary ($4\pi R_{QG}^2$):
+\begin{equation}
+    (4\pi R_{QG}^2) \tau_{QG} \frac{dR_{QG}}{dt} = \frac{c_E^4}{G} \frac{dR_{QG}}{dt}
+\end{equation}
+
+By canceling the differential expansion rate ($\frac{dR_{QG}}{dt}$) from both sides, we isolate the fundamental lattice force acting across the horizon area:
+\begin{equation}
+    (4\pi R_{QG}^2) \tau_{QG} = \frac{c_E^4}{G}
+\end{equation}
+
+Dividing by the surface area yields the macroscopic boundary tension:
+\begin{equation}
+    \tau_{QG} = \frac{c_E^4}{4\pi G R_{QG}^2}
+\end{equation}
+
+To express this in terms of macroscopic observables, we substitute the TFT definition of convergence surface gravity ($g_{QG} = \frac{c_E^2}{R_{QG}}$) into the expression:
+\begin{equation}
+    \tau_{QG} = \left(\frac{c_E^2}{4\pi G R_{QG}}\right) g_{QG}
+\end{equation}
+
+Because the differential velocity ($\frac{dR_{QG}}{dt}$) cancels out, this derivation proves that this structural identity is a mandatory boundary condition. Regardless of the rate of kinetic expansion, the macroscopic horizon is not a kinematic stretch of empty space, but a physical phase boundary maintained by the strict equilibrium between the crystallization pressure of the SC core and the gravitational load of the elastic FCC vacuum.
+
+\textit{(Note: The $4\pi$ geometric factor physically maps the isotropic spherical area of the macroscopic horizon to the fundamental square face of the Simple Cubic lattice node ($A = \ell_S^2$). At the absolute microscopic limit where $R_{QG} \to \ell_S$, the spherical geometry resolves into the cubic lattice, the $4\pi$ form factor vanishes, and $\tau_{QG}$ collapses perfectly into the absolute Substrate Tension limit: $\tau_S = \frac{c_E^4}{G\ell_S^2}$.)}
+
+\begin{table}[H]
+    \centering
+    \caption{Vacuum Lattice Phase Transition Hierarchy and Boundary Parameters}
+    \label{tab:phase_transitions}
+    \vspace{0.2cm}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{4pt}
+    \small
+    \begin{tabular}{@{}llclp{0.35\textwidth}@{}}
+        \toprule
+        \textbf{Parameter} & \textbf{Symbol} & \textbf{Formula} & \textbf{Evaluated Limit} & \textbf{Physical Meaning} \\
+        \midrule
+        Vibration Limit & $\rho_Q$ & $\frac{\hbar}{c_E r_D^4}$ & $\approx 9.0771 \times 10^{61} \text{ kg/m}^3$ & Interstitial saturation. Particle vibrates at light speed ($v \approx c_E$). \\
+        The Trigger & $\rho_{QG}$ & $\sqrt{\frac{\hbar c_E}{G r_D^6}}$ & $\approx 4.4311 \times 10^{70} \text{ kg/m}^3$ & Geometric failure. FCC lattice structurally locks; event horizon forms. \\
+        Yield Strength & $\rho_G$ & $\frac{c_E^2}{G r_D^2}$ & $\approx 2.1631 \times 10^{79} \text{ kg/m}^3$ & Structural bond limit. Soft Floor structural bonds would fracture. \\
+        Final State & $\rho_S$ & $\frac{c_E^5}{\hbar G^2}$ & $\approx 5.1548 \times 10^{96} \text{ kg/m}^3$ & Substrate (Hard Floor). Lattice snaps to Simple Cubic (SC). \\
+        Node Saturation & $M_{D,G}$ & $\frac{c_E^2 \cdot r_D}{G}$ & $\approx 10.625 \text{ kg}$ & Micro-Black Hole Limit. Minimum localized mass to force geometric lock. \\
+        \midrule
+        Convergence Radius & $r_{QG}$ & $\ell_S \cdot \left(1.5 \frac{\rho_S}{\rho_{QG}}\right)^{1/4}$ & $\approx 5.8744 \times 10^{-29} \text{ m}$ & Trigger scale. Microscopic phase transition radius. \\
+        Yield Radius & $r_G$ & $\ell_S \cdot \left(1.5 \frac{\rho_S}{\rho_G}\right)^{1/4}$ & $\approx 3.9520 \times 10^{-31} \text{ m}$ & Fracture scale. Prevented by prior phase locking. \\
+        Boundary Tension & $\tau_{QG}$ & $\frac{c_E^4}{4\pi G R_{QG}^2}$ & Scale Dependent & Surface tension of the macroscopic event horizon. \\
+        Max Gravity Limit & $g_{QG,\text{max}}$ & $\frac{c_E^2}{r_D}$ & $\approx 1.139 \times 10^{43} \text{ m/s}^2$ & Absolute upper limit of acceleration. Precludes the singularity. \\
+        \bottomrule
+    \end{tabular}
 \end{table}
