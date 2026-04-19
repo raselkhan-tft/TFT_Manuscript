@@ -8,7 +8,7 @@ Standard Quantum Mechanics treats particles as dimensionless points governed by 
 To translate these abstract probabilities into physical lattice hydrodynamics, we rely on the mechanical properties of the contiguous active Face-Centered Cubic (FCC) vacuum. We derive the motion of a particle---mechanically defined as a localized topological knot---as the result of a physical pilot wave propagating through the interstitial condensate of the active vacuum ($r_D \approx 10^{-26} \text{ m}$). Building on the resolution of wave-particle duality established in Part I (Chapter 5), we do not treat the wave and particle as separate entities. Rather, the extended topological phase-twist (the pilot wave) physically steers its own localized hydrodynamic drag footprint (the particle mass).
 
 \subsection{The Physical Fluid (The Madelung Transformation)}
-
+\label{sec:quantum_action}
 To translate abstract quantum mechanics into physical condensate dynamics, TFT utilizes the Madelung transformation. By establishing the SGF Soft Floor, TFT provides the physical medium required to map the abstract wavefunction ($\Psi$) directly to the mechanical properties of the lattice. Rather than a probability amplitude, $\Psi$ functions as the macroscopic physical order parameter of the SGF, analogous to a Ginzburg-Landau superfluid \textit{(The strict boundary conditions for $\Psi$ across both the Hard and Soft Floors are defined in \hyperref[app:physical_wavefunction]{Appendix \ref*{app:physical_wavefunction}})}.
 \begin{equation}
     \Psi = \sqrt{\rho} \cdot \exp\left(\frac{i S}{\hbar}\right)
@@ -104,29 +104,34 @@ The tethered electron requires exactly $720^\circ$ ($4\pi$) to deliver $1h$ of w
 Therefore, standard observable angular momentum is halved ($\hbar/2$). The 1/2 is not a statistical probability; it is a strict topological winding number required to sustain a localized knot in a contiguous elastic medium. This topological constraint provides the formal geometric proof for the constant mass frequency ($f_{\text{mass}} = f_{\text{light}} / 2$) established in \hyperref[app:particle_amplitude]{Part I, Appendix \ref*{app:particle_amplitude}}, defining the deterministic origin of the ``slow clock'' experienced by all matter.
 
 \subsection{Mechanical Resolution of the Electron Speed Limit Paradox}
+
 Standard physics famously abandoned the mechanical model of spin because of a kinematic paradox: to generate an angular momentum of $\hbar/2$, an object with the mass and radius of an electron would have to spin vastly faster than the speed of light ($v \gg c$).
 
-TFT mathematically and mechanically resolves this paradox by enforcing the strict separation between Hydrodynamic Drag Mass ($m_e$) and Quantum Node Mass ($M_D$). By setting the equatorial velocity of the physical gear to exactly the speed of light ($v = c_E$), we can solve for the required mass ($M_{\text{spin}}$) necessary to carry Spin 1/2:
+TFT mathematically and mechanically resolves this paradox by enforcing the strict separation between Hydrodynamic Drag Mass ($m_e$) and the intrinsic mass-energy of the Quantum Node. By setting the equatorial velocity of the physical gear to exactly the speed of light ($v=c_E$), we can solve for the required mass ($M_{\text{spin}}$) necessary to carry Spin $1/2$:
+
 \begin{equation}
     v = \frac{L}{M_{\text{spin}} \cdot r}
 \end{equation}
+
 \begin{equation}
     c_E = \frac{\hbar/2}{M_{\text{spin}} \cdot r_D}
 \end{equation}
 
 Solving for the required node mass:
+
 \begin{equation}
     M_{\text{spin}} = \frac{\hbar}{2 \cdot c_E \cdot r_D}
 \end{equation}
 
-Using the standard constants and the TFT lattice radius ($r_D \approx 7.69 \times 10^{-27} \text{ m}$):
+Using the standard constants and the updated TFT lattice radius ($r_D \approx 7.89 \times 10^{-27} \text{ m}$):
+
 \begin{equation}
-    M_{\text{spin}} \approx \frac{1.05 \times 10^{-34}}{2 \cdot (3 \times 10^8) \cdot (7.69 \times 10^{-27})} \approx 2.2 \times 10^{-17} \text{ kg}
+    M_{\text{spin}} = \frac{1.05457 \times 10^{-34}}{2 \cdot (299792458) \cdot (7.89 \times 10^{-27})} \approx 2.229 \times 10^{-17} \text{ kg}
 \end{equation}
 
-This required rotational mass ($2.2 \times 10^{-17} \text{ kg}$) is exactly half the total volumetric inertia of the FCC lattice node ($M_D \approx 4.5 \times 10^{-17} \text{ kg}$) derived in \hyperref[app:conservation_action]{Appendix \ref*{app:conservation_action}}, perfectly mirroring the 1/2 geometric factor of the tethered topology.
+This required rotational mass ($2.229 \times 10^{-17} \text{ kg}$) is exactly half the equatorial kinematic mass limit of the FCC lattice node ($m_{\text{eq}} = \hbar / c_E r_D \approx 4.458 \times 10^{-17} \text{ kg}$), perfectly mirroring the $1/2$ geometric factor of the tethered topology.
 
-\textbf{Conclusion:} The paradox is an illusion caused by conflating two different mechanical properties. As established in \hyperref[chap:black_holes]{Chapter 14}, all fundamental particles reside on lattice nodes of the exact same physical radius ($r_D$). The observable electron mass ($\approx 10^{-31} \text{ kg}$) is merely the macroscopic hydrodynamic drag generated by its tiny vibrational amplitude (the ``whisper''). The physical object spinning to generate the angular momentum is the discrete lattice node itself ($M_D \approx 10^{-17} \text{ kg}$). Because this microscopic ``gear'' is a physical structure of the vacuum, its equatorial rotation is governed by the elastic shear limit of the contiguous lattice ($\sqrt{\tau_D/\mu_D}$). Therefore, it operates perfectly at, and physically cannot exceed, the speed of light ($c_E$).
+\textbf{Conclusion:} The paradox is an illusion caused by conflating two different mechanical properties. As established in \hyperref[sec:fundamentalmass_radius]{Section \ref*{sec:fundamentalmass_radius}}, all fundamental particles reside on lattice nodes of the exact same physical radius ($r_D$). The observable electron mass ($\approx 10^{-31} \text{ kg}$) is merely the macroscopic hydrodynamic drag generated by its tiny vibrational amplitude (the ``whisper''). The physical object spinning to generate the angular momentum is the discrete lattice node itself, operating at the equatorial kinematic mass limit ($m_{\text{eq}} \approx 10^{-17} \text{ kg}$). Because this microscopic ``gear'' is a physical structure of the vacuum, its equatorial rotation is governed by the elastic shear limit of the contiguous lattice ($\sqrt{\tau_D/\mu_D}$). Therefore, it operates perfectly at, and physically cannot exceed, the speed of light ($c_E$).
 
 \section{The Mechanics of Measurement and Wave Arrest}
 Rather than an abstract or observer-driven event, Tension Field Theory (TFT) provides a deterministic, mechanical explanation for absolute kinematic localization: measurement is a physical, topological interaction driven by visco-elastic boundary friction.
@@ -170,6 +175,7 @@ In a non-linear visco-elastic medium like the FCC Soft Floor under stress, dampi
 \textbf{The Stasis of Certainty:} As derived in Part I, the topological knot generates mass via hydrodynamic drag but possesses no intrinsic propulsion; it requires the pilot wave to move. Once the detector's boundary friction fully dissipates the wave's kinetic energy, the driving force is eliminated. The particle becomes stranded on the specific lattice cell where the wave died. This results in a perfectly defined position ($\Delta x \to 0$) and zero momentum fluctuation ($\Delta p \to 0$). Certainty, therefore, is mechanically defined as the absence of a driving wave.
 
 \section{The Unified Law of Certainty}
+\label{sec:unified_uncertainty}
 The Heisenberg Uncertainty Principle is interpreted by standard quantum mechanics as a fundamental, unbreakable limit of reality. Tension Field Theory (TFT) reinterprets this not as a universal law, but as a structural bandwidth limit of the vibrating Soft Floor ($r_D \approx 10^{-26} \text{ m}$). Uncertainty is not a constant; it is a strict function of lattice mobility.
 
 \subsection{The Mechanical Origin of Baseline Uncertainty}
@@ -221,6 +227,7 @@ While linear translation requires full $h$ wave cycles, the localized angular ro
 In TFT, the 1/2 is not a statistical artifact; it is a strict Topological Winding Number. Because an electron is a tethered 3D phase-knot, it must physically rotate $720^\circ$ ($4\pi$ radians) to untangle its surrounding lattice bonds and deliver one full quantum of action ($1h$). However, our macroscopic laboratory frame can only measure a standard $360^\circ$ ($2\pi$ radians) spatial sweep. Therefore, in one standard observable rotation, the tethered node physically completes exactly half of its required mechanical cycle.
 
 \subsection{The Generalized Commutator and the Mechanical Origin of $i$}
+\label{sec:imaginary_operator}
 In standard quantum mechanics, the uncertainty principle is mathematically derived from the commutator of position and momentum ($[x,p] = i\hbar$). Because standard physics assumes this commutator is an eternal constant, it concludes that uncertainty can never reach zero.
 
 In TFT, the commutator is directly dependent on the physical elasticity of the lattice. We introduce the Generalized TFT Commutator:
@@ -258,7 +265,7 @@ Here $\tau_D$ is the baseline shear stiffness of the Soft Floor, acting locally 
     \mu_{\text{eff}} = \frac{\mu_D r_D^2}{1 - \alpha_G}
 \end{equation}
 
-The term $\Delta x$ represents the transverse physical displacement of the node, and $v$ represents its transverse oscillation velocity. (The strict dimensional consistency of mapping fundamental SGF parameters to a microscopic harmonic oscillator is proven in \hyperref[app:physical_wavefunction]{Appendix \ref*{app:physical_wavefunction}}).
+The term $\Delta x$ represents the transverse physical displacement of the node, and $v$ represents its transverse oscillation velocity. (The strict dimensional consistency of mapping fundamental SGF parameters to a microscopic harmonic oscillator is proven in \hyperref[app:photon_hamiltonian]{Appendix \ref*{app:photon_hamiltonian}}).
 
 \begin{itemize}
     \item \textbf{Mechanical Cancellation (The Dark Spot):} When two waves meet out of phase, their kinetic motions perfectly cancel. Wave A pulls the lattice link in one direction, while Wave B pulls it in the exact opposite direction. This results in zero net velocity ($v = 0$). Because standard electromagnetic detectors only measure kinetic momentum (power), the detector registers a ``dark spot.''
