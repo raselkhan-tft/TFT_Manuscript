@@ -1,0 +1,103 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: Trilogy/PartI/01_PartI_Intro.aux
+A level-1 auxiliary file: Trilogy/PartI/02_PartI_Core.aux
+A level-1 auxiliary file: Trilogy/PartII/03_PartII_Intro.aux
+A level-1 auxiliary file: Trilogy/PartII/04_Foundations_Gravity.aux
+A level-1 auxiliary file: Trilogy/PartII/05_GravitationalField.aux
+A level-1 auxiliary file: Trilogy/PartII/06_Microphysics_BlackHoles.aux
+A level-1 auxiliary file: Trilogy/PartII/07_Gravitational_Saturation.aux
+A level-1 auxiliary file: Trilogy/PartII/08_Quantum_Vacuum.aux
+A level-1 auxiliary file: Trilogy/PartII/09_Vertical_Topology.aux
+A level-1 auxiliary file: Trilogy/PartII/10_Grand_Unification.aux
+A level-1 auxiliary file: Trilogy/PartII/11_Hydrogen_Atom.aux
+A level-1 auxiliary file: Trilogy/PartII/12_Falsifiability.aux
+A level-1 auxiliary file: Trilogy/PartII/13_PartII_Conclusion.aux
+A level-1 auxiliary file: Trilogy/PartIII/14_PartIII_Intro.aux
+A level-1 auxiliary file: Trilogy/PartIII/15_The_Big_Rupture.aux
+A level-1 auxiliary file: Trilogy/PartIII/16_Nucleation_Annealing.aux
+A level-1 auxiliary file: Trilogy/PartIII/17_Cosmic_Redshift.aux
+A level-1 auxiliary file: Trilogy/PartIII/18_Cosmological_Anomalies.aux
+A level-1 auxiliary file: Trilogy/PartIII/19_Global_Kinematics.aux
+A level-1 auxiliary file: Trilogy/PartIII/20_Thermodynamic_Cycle.aux
+A level-1 auxiliary file: Trilogy/PartIII/21_PartIII_Conclusion.aux
+A level-1 auxiliary file: Appendices/app_master_equations.aux
+A level-1 auxiliary file: Appendices/app_notation.aux
+A level-1 auxiliary file: Appendices/app_glossary.aux
+A level-1 auxiliary file: Appendices/app_substrate_units.aux
+A level-1 auxiliary file: Appendices/app_conservation_action.aux
+A level-1 auxiliary file: Appendices/app_fcc_constants.aux
+A level-1 auxiliary file: Appendices/app_particle_amplitude.aux
+A level-1 auxiliary file: Appendices/app_fractal_architecture.aux
+A level-1 auxiliary file: Appendices/app_kinematic_ceiling.aux
+A level-1 auxiliary file: Appendices/app_cosmic_impedance.aux
+A level-1 auxiliary file: Appendices/app_radial_projection.aux
+A level-1 auxiliary file: Appendices/app_kinematic_shear.aux
+A level-1 auxiliary file: Appendices/app_optical_relativity.aux
+A level-1 auxiliary file: Appendices/app_phase_transition.aux
+A level-1 auxiliary file: Appendices/app_information_paradox.aux
+A level-1 auxiliary file: Appendices/app_vacuum_damping.aux
+A level-1 auxiliary file: Appendices/app_physical_wavefunction.aux
+A level-1 auxiliary file: Appendices/app_quantum_damping.aux
+A level-1 auxiliary file: Appendices/app_photon_hamiltonian.aux
+A level-1 auxiliary file: Appendices/app_quantum_tunneling.aux
+A level-1 auxiliary file: Appendices/app_graviton.aux
+A level-1 auxiliary file: Appendices/app_entanglement.aux
+A level-1 auxiliary file: Appendices/app_photonic_emission.aux
+A level-1 auxiliary file: Appendices/app_geometric_alpha.aux
+A level-1 auxiliary file: Appendices/app_dynamic_alpha.aux
+A level-1 auxiliary file: Appendices/app_origin_of_charge.aux
+A level-1 auxiliary file: Appendices/app_unifiedforces_validation.aux
+A level-1 auxiliary file: Appendices/app_hydrogenic_shell.aux
+A level-1 auxiliary file: Appendices/app_atomic_angular_modes.aux
+A level-1 auxiliary file: Appendices/app_fine_structure.aux
+A level-1 auxiliary file: Appendices/app_baryon_asymmetry.aux
+A level-1 auxiliary file: Appendices/app_lattice_annealing.aux
+A level-1 auxiliary file: Appendices/app_cosmic_redshift.aux
+A level-1 auxiliary file: Appendices/app_time_dilation.aux
+A level-1 auxiliary file: Appendices/app_hubble_diagram.aux
+A level-1 auxiliary file: Appendices/app_cosmic_energy_budget.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+You've used 9 entries,
+            1791 wiz_defined-function locations,
+            572 strings with 6931 characters,
+and the built_in function-call counts, 1982 in all, are:
+= -- 194
+> -- 52
+< -- 0
++ -- 22
+- -- 13
+* -- 139
+:= -- 319
+add.period$ -- 27
+call.type$ -- 9
+change.case$ -- 9
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 81
+empty$ -- 208
+format.name$ -- 13
+if$ -- 429
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 9
+newline$ -- 48
+num.names$ -- 9
+pop$ -- 9
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 31
+stack$ -- 0
+substring$ -- 198
+swap$ -- 9
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 24
+width$ -- 10
+write$ -- 101

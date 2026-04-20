@@ -1,0 +1,131 @@
+\chapter*{Table of Notation and Constants}
+\addcontentsline{toc}{chapter}{Table of Notation and Constants}
+\label{app:notation}
+
+This appendix details the fundamental constants, geometric boundaries, and mathematical notation utilized throughout Tension Field Theory (TFT). 
+
+\section*{I. Geometric Boundaries and Dimensional Limits}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{} c p{5.5cm} p{4cm} p{3.5cm} @{}}
+\toprule
+\textbf{Symbol} & \textbf{Mechanical Definition} & \textbf{TFT Mathematical Relation} & \textbf{Numerical Value} \\
+\midrule
+
+$\ell_S$ & Substrate Lattice Spacing (Hard Floor 1D Limit) & $\sqrt{\hbar G / c_E^3}$ & $\approx 1.6162 \times 10^{-35} \text{ m}$ \\
+
+$r_D$ & Duality Radius (Active FCC Soft Floor Node) & $h c_E / E_D$ & $\approx 7.89 \times 10^{-27} \text{ m}$ \\
+
+$r_N$ & Nucleon Mechanical Radius (Torsional Anchor) & Derived geometric limit & $\approx 0.88 \times 10^{-15} \text{ m}$ \\
+
+$A$ & Unit Area Constant (Logarithmic Pivot) & $r_D \cdot R_U$ & $1.00 \text{ m}^2$ \\
+
+$R_{\text{QG}}$ & Event Horizon Radius (Gravitational Saturation) & $GM / c_E^2$ & Variable \\
+
+$R_U$ & Macroscopic Cosmic Horizon (Viscous Limit) & $c_E / \Gamma_D \quad (A/r_D)$ & $\approx 1.2674 \times 10^{26} \text{ m}$ \\
+
+$R_{\text{Res}}$ & Total Cosmic Reservoir Radius & $\approx 1/\ell_S$ & $\approx 10^{35} \text{ m}$ \\
+
+\bottomrule
+\end{tabular}
+
+\vspace{1cm} % Adds spacing between the tables
+
+\section*{II. Vacuum Mechanics, Density, and Inertia}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{} c p{5.5cm} p{4cm} p{3.5cm} @{}}
+\toprule
+\textbf{Symbol} & \textbf{Mechanical Definition} & \textbf{TFT Mathematical Relation} & \textbf{Numerical Value} \\
+\midrule
+
+$\rho_S$ & Substrate Density (Absolute Lattice Capacity) & Mass / Volume at $\ell_S$ & $\approx 5.155 \times 10^{96} \text{ kg/m}^3$ \\
+
+$\rho_{\text{QG}}$ & Convergence Density (Void Exhaustion Limit) & Derived phase trigger & $\approx 4.43 \times 10^{70} \text{ kg/m}^3$ \\
+
+$\rho_D$ & Operational Node Density (Soft Floor Baseline) & Derived mass / volume & $\approx 9.07 \times 10^{61} \text{ kg/m}^3$ \\
+
+$\rho_c$ & Cosmic Critical Density & $\frac{3\Gamma_D^2}{4\pi G}$ & $\approx 10^{-26} \text{ kg/m}^3$ \\
+
+$\beta_{\text{geo}}$ & Vacuum Geometric Packing Fraction (Dark Energy) & $\frac{\pi}{\sqrt{18}}$ & $\approx 0.74048$ \\
+
+$\beta_{\text{IC}}$ & Interstitial Condensate Fraction (Dark Matter) & $1 - \beta_{\text{geo}}$ & $\approx 0.25952$ \\
+
+$\beta_{\text{oct}}$ & Octahedral Void Limit (Baryonic Mass Limit) & $\frac{\pi(\sqrt{2}-1)^3}{3\sqrt{2}}$ & $\approx 0.0526$ \\
+
+$\mu_D$ & Baseline Lattice Interface Inertia & $\frac{c_E^2}{G \cdot r_D}$ & Variable ($\text{kg/m}^2$) \\
+
+$\tau_S$ & Max Substrate Tension (Hard Floor Yield Limit) & $\frac{F_S}{\ell_S^2}$ & $\approx 10^{113} \text{ Pa}$ \\
+
+$\tau_D$ & Lattice Shear Stiffness (Soft Floor Tension) & $\frac{c_E^4}{G \cdot r_D^2}$ & $\approx 10^{94} \text{ Pa}$ \\
+
+\bottomrule
+\end{tabular}
+
+\vspace{1cm} % Adds spacing between the tables
+
+\section*{III. Kinematics, Energy, and Coupling Constants}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{} c p{5.5cm} p{4cm} p{3.5cm} @{}}
+\toprule
+\textbf{Symbol} & \textbf{Mechanical Definition} & \textbf{TFT Mathematical Relation} & \textbf{Numerical Value} \\
+\midrule
+
+$c_E$ & Invariant Energy Constant (Absolute Shear Limit) & $\sqrt{\frac{\tau_D}{\mu_D}}$ & $299,792,458 \text{ m/s}$ \\
+
+$c_P$ & Dynamic Wave Propagation Speed & $c_E \sqrt{\frac{\mu_D}{\mu_{\text{eff}}}} \cos(\Delta\phi)$ & $\le c_E$ \\
+
+$c_S$ & Substrate Longitudinal Speed (Entanglement) & $\sqrt{\frac{\tau_S}{\mu_S}}$ & $\to \infty$ \\
+
+$J_i$ & Universal Torsional Invariant & $\rho_i r_i^4$ & Scale-dependent \\
+
+$h$ & Quantum of Action (Lattice Rotational Momentum) & $2\pi \cdot J_D \cdot c_E$ & $\approx 6.626 \times 10^{-34} \text{ J}\cdot\text{s}$ \\
+
+$G$ & Gravitational Coupling Efficiency & $\mathcal{F}_i \cdot \left(\frac{c_E^2 A_S}{J_i}\right)$ & $\approx 6.674 \times 10^{-11} \text{ m}^3/(\text{kg}\cdot\text{s}^2)$ \\
+
+$K_L$ & Absolute Lattice Shear Coupling ($k_e e^2$) & Derived geometric limit & $\approx 2.307 \times 10^{-28} \text{ N}\cdot\text{m}^2$ \\
+
+$\alpha$ & Fine-Structure Constant (Transverse Survival Ratio) & $\frac{K_L}{\hbar c_E}$ & $\approx 1/137.036$ \\
+
+$\alpha_G$ & Structural Gravitational Strain & $\frac{GM}{r c_E^2}$ & Dimensionless \\
+
+$\alpha_Q$ & Topological Quantum Coupling Budget & $1 - \alpha_G$ & Dimensionless \\
+
+\bottomrule
+\end{tabular}
+
+\vspace{1cm} % Adds spacing between the tables
+
+\section*{IV. Mass Limits and Dissipation Rates}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{} c p{5.5cm} p{4cm} p{3.5cm} @{}}
+\toprule
+\textbf{Symbol} & \textbf{Mechanical Definition} & \textbf{TFT Mathematical Relation} & \textbf{Numerical Value} \\
+\midrule
+
+$E_{\text{max}}$ & Absolute Max Coherent Energy (Nyquist Limit) & $\frac{h c_E}{r_D}$ & $\approx 1.5714 \times 10^{11} \text{ GeV}$ \\
+
+$M_{D,G}$ & Soft Floor Ignition Mass (Micro-BH Limit) & $\frac{c_E^2 \cdot r_D}{G}$ & $\approx 10.625 \text{ kg}$ \\
+
+$M_U$ & Universal Saturation Mass (Observable Cosmic Mass) & $\frac{c_E^3}{G \Gamma_D}$ & $\approx 10^{53} \text{ kg}$ \\
+
+$M_{\text{Res}}$ & Total Cosmic Reservoir Mass & $M_U \times 10^{27}$ & $\approx 10^{80} \text{ kg}$ \\
+
+$\Gamma_D$ & Vacuum Lattice Damping Rate (Hubble Constant) & $\frac{c_E}{R_U} \equiv H_0$ & $\approx 2.3 \times 10^{-18} \text{ s}^{-1}$ \\
+
+$\Gamma$ & Quantum Damping Rate (Measurement / Wave Arrest) & $\sigma \cdot c_P \cdot n_K(x)$ & Variable ($\text{s}^{-1}$) \\
+
+$a_D$ & Lattice Impedance Acceleration (Dark Matter Effect) & $c_E \cdot \Gamma_D$ & $\approx 6.5 \times 10^{-10} \text{ m/s}^2$ \\
+
+\bottomrule
+\end{tabular}

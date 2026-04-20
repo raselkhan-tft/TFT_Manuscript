@@ -7,12 +7,12 @@
 \section{Introduction: The Kinematic Shear Model}
 To determine the physical state of the spacetime medium, we treat the vacuum as a transmissive medium capable of supporting transverse shear waves. Because macroscopic gravitational waves propagate through a 3D volume, their propagation speed is governed by the 3D volumetric shear wave equation:
 \begin{equation}
-    c_E = \sqrt{\frac{K_{shear}}{\rho_C}}
+    c_E = \sqrt{\frac{K_{\text{shear}}}{\rho_C}}
 \end{equation}
-Where $\rho_C$ represents the 3D volumetric structural yield density of the lattice (established in the subsequent Phase Transition appendix). Our objective is to calculate the empirical volumetric shear modulus ($K_{shear}$) from observational data and compare it to the theoretical TFT lattice stiffness ($\tau_G$).
+Where $\rho_C$ represents the 3D volumetric structural yield density of the lattice (established in the subsequent Phase Transition appendix). Our objective is to calculate the empirical volumetric shear modulus ($K_{\text{shear}}$) from observational data and compare it to the theoretical TFT lattice stiffness ($\tau_G$).
 
 \section{Observational Data (GW150914)}
-We utilize the signal data from the first direct detection of gravitational waves (Abbott et al., 2016).
+We utilize the signal data from the first direct detection of gravitational waves \cite{LIGO_2016}.
 \begin{itemize}
     \item \textbf{Total energy radiated ($E$):} $5.36 \times 10^{47} \text{ J}$
     \item \textbf{Energy Flux ($I$):} $1.41 \times 10^{-3} \text{ W/m}^2$
@@ -22,25 +22,25 @@ We utilize the signal data from the first direct detection of gravitational wave
 \end{itemize}
 
 \section{Unit Lattice Normalization ($r_D$)}
-Standard physics normalizes strain to the macroscopic detector length. In TFT, the wave propagates through the discrete FCC lattice. We normalize the displacement amplitude ($A$) to the FCC Duality Radius ($r_D$) derived in Part I:
+Standard physics normalizes strain to the macroscopic detector length. In TFT, the wave propagates through the discrete FCC lattice. We normalize the displacement amplitude ($\epsilon_{\text{GW}}$) to the FCC Duality Radius ($r_D$) derived in Part I:
 \begin{equation}
     r_D \approx 7.8900 \times 10^{-27} \text{ m}
 \end{equation}
 \begin{equation}
-    A = h \cdot r_D \approx 7.8900 \times 10^{-48} \text{ m}
+    \epsilon_{\text{GW}} = h \cdot r_D \approx 7.8900 \times 10^{-48} \text{ m}
 \end{equation}
-This displacement ($A$) represents the physical strain of a single lattice unit required to transmit macroscopic gravitational energy.
+This displacement ($\epsilon_{\text{GW}}$) represents the physical strain of a single lattice unit required to transmit macroscopic gravitational energy.
 
 \section{Calculating Transverse Mechanical Impedance ($Z$)}
-We apply the wave intensity equation, $I = \frac{1}{2} Z \omega^2 A^2$, to solve for the medium's shear impedance ($Z$):
+We apply the wave intensity equation, $I = \frac{1}{2} Z \omega^2 \epsilon_{\text{GW}}^2$, to solve for the medium's shear impedance ($Z$):
 \begin{equation}
-    Z = \frac{2I}{\omega^2 A^2} \approx \frac{2.82 \times 10^{-3}}{(942.48)^2 \cdot (7.8900 \times 10^{-48})^2} \approx 5.0998 \times 10^{85} \text{ kg/(m}^2\cdot\text{s)}
+    Z = \frac{2I}{\omega^2 \epsilon_{\text{GW}}^2} \approx \frac{2.82 \times 10^{-3}}{(942.48)^2 \cdot (7.8900 \times 10^{-48})^2} \approx 5.0998 \times 10^{85} \text{ kg/(m}^2\cdot\text{s)}
 \end{equation}
 
-\section{Deriving the Empirical Stiffness ($K_{LIGO} \equiv K_{shear}$)}
+\section{Deriving the Empirical Stiffness ($K_{\text{LIGO}} \equiv K_{\text{shear}}$)}
 From the impedance, we derive the empirical stiffness using the wave speed, $K = Z \cdot c_E$:
 \begin{equation}
-    K_{LIGO} = (5.0998 \times 10^{85}) \cdot (299792458) \approx 1.5289 \times 10^{94} \text{ Pa}
+    K_{\text{LIGO}} = (5.0998 \times 10^{85}) \cdot (299792458) \approx 1.5289 \times 10^{94} \text{ Pa}
 \end{equation}
 
 \section{Theoretical Validation ($\tau_G$)}
@@ -52,21 +52,21 @@ We compare this empirical value with the theoretical FCC Gravitational Yield Ten
 \section{The Stability Check (Stress vs. Yield)}
 A critical test of the TFT model is whether the vacuum can support these loads without collapsing.
 \begin{itemize}
-    \item \textbf{Lattice stiffness ($K_{LIGO}$):} $\approx 10^{94} \text{ Pa}$
+    \item \textbf{Lattice stiffness ($K_{\text{LIGO}}$):} $\approx 10^{94} \text{ Pa}$
     \item \textbf{Lattice yield limit ($\tau_G$):} $\approx 10^{96} \text{ Pa}$
 \end{itemize}
 
-Wave stress ($\sigma_{wave}$) is given by Hooke's Law, $\sigma = K \cdot h$:
+Wave stress ($\sigma_{\text{wave}}$) is given by Hooke's Law, $\sigma = K \cdot h$:
 \begin{equation}
-    \sigma_{wave} = K_{LIGO} \cdot h \approx (1.5289 \times 10^{94}) \cdot (10^{-21}) \approx 1.5289 \times 10^{73} \text{ Pa}
+    \sigma_{\text{wave}} = K_{\text{LIGO}} \cdot h \approx (1.5289 \times 10^{94}) \cdot (10^{-21}) \approx 1.5289 \times 10^{73} \text{ Pa}
 \end{equation}
 
-Since $\sigma_{wave} \ll \text{yield limit}$ ($10^{73} \ll 10^{96}$), the wave propagates elastically. The vacuum is stiff enough to transmit the wave, but the amplitude is low enough to avoid triggering a phase transition (geometric lock) in open space.
+Since $\sigma_{\text{wave}} \ll \text{yield limit}$ ($10^{73} \ll 10^{96}$), the wave propagates elastically. The vacuum is stiff enough to transmit the wave, but the amplitude is low enough to avoid triggering a phase transition (geometric lock) in open space.
 
 \section{The Source Volume (The 3-Solar-Mass Paradox)}
 GW150914 radiated $5.36 \times 10^{47} \text{ Joules}$, which is a mass-equivalent of $\approx 5.96 \times 10^{30} \text{ kg}$ ($\approx 3 M_\odot$). In TFT, this energy arises from the relaxation of extreme lattice strain. Using the FCC lattice operational density derived in \hyperref[app:fcc_constants]{Appendix \ref*{app:fcc_constants}}, $\rho_D \approx 1.3615 \times 10^{62} \text{ kg/m}^3$:
 \begin{equation}
-    V_{source} = \frac{M_{eq}}{\rho_D} \approx \frac{5.9638 \times 10^{30}}{1.3615 \times 10^{62}} \approx 4.3803 \times 10^{-32} \text{ m}^3
+    V_{\text{source}} = \frac{M_{\text{eq}}}{\rho_D} \approx \frac{5.9638 \times 10^{30}}{1.3615 \times 10^{62}} \approx 4.3803 \times 10^{-32} \text{ m}^3
 \end{equation}
 
 \begin{itemize}

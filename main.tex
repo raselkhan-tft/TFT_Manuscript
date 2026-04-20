@@ -41,6 +41,9 @@
 \author{Rasel Khan \\ \textit{Independent Researcher, Los Angeles, California}}
 \date{\today}
 
+\usepackage{makeidx}
+\makeindex
+
 \begin{document}
 
 \maketitle
@@ -116,12 +119,19 @@ Because this framework requires a foundational rebuild of physical law from the 
 % \include{Trilogy/Backmatter/23_Notation}
 % \include{Trilogy/Backmatter/24_Glossary}
 
+% --- Core Reference Appendices (Unnumbered) ---
+\include{Appendices/app_master_equations}
+\include{Appendices/app_notation}
+\include{Appendices/app_glossary}
+
 % ==========================================
 % APPENDICES
 % ==========================================
 \cleardoublepage
 \appendix
 \renewcommand{\thechapter}{\AlphAlph{\value{chapter}}}
+
+% --- Theoretical Derivation Appendices (Starts at A) ---
 \include{Appendices/app_substrate_units}
 \include{Appendices/app_conservation_action}
 \include{Appendices/app_fcc_constants}
@@ -159,4 +169,22 @@ Because this framework requires a foundational rebuild of physical law from the 
 \include{Appendices/app_time_dilation}
 \include{Appendices/app_hubble_diagram}
 \include{Appendices/app_cosmic_energy_budget}
+
+% ==========================================
+% BIBLIOGRAPHY
+% ==========================================
+\cleardoublepage
+\phantomsection % <--- THE MAGIC FIX
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{unsrt} 
+\bibliography{references}
+
+% ==========================================
+% INDEX
+% ==========================================
+%\cleardoublepage
+%\phantomsection % <--- THE MAGIC FIX
+%\addcontentsline{toc}{chapter}{Index}
+%\printindex
+
 \end{document}
