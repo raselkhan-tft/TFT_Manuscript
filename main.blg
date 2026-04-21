@@ -60,44 +60,44 @@ A level-1 auxiliary file: Appendices/app_hubble_diagram.aux
 A level-1 auxiliary file: Appendices/app_cosmic_energy_budget.aux
 The style file: unsrt.bst
 Database file #1: references.bib
-You've used 9 entries,
+You've used 8 entries,
             1791 wiz_defined-function locations,
-            572 strings with 6931 characters,
-and the built_in function-call counts, 1982 in all, are:
-= -- 194
-> -- 52
+            564 strings with 6805 characters,
+and the built_in function-call counts, 1806 in all, are:
+= -- 179
+> -- 44
 < -- 0
-+ -- 22
-- -- 13
-* -- 139
-:= -- 319
-add.period$ -- 27
-call.type$ -- 9
-change.case$ -- 9
++ -- 19
+- -- 11
+* -- 130
+:= -- 288
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 81
-empty$ -- 208
-format.name$ -- 13
-if$ -- 429
+cite$ -- 8
+duplicate$ -- 72
+empty$ -- 190
+format.name$ -- 11
+if$ -- 390
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 9
-newline$ -- 48
-num.names$ -- 9
-pop$ -- 9
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 43
+num.names$ -- 8
+pop$ -- 8
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 31
+skip$ -- 27
 stack$ -- 0
-substring$ -- 198
-swap$ -- 9
+substring$ -- 192
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 24
-width$ -- 10
-write$ -- 101
+while$ -- 22
+width$ -- 9
+write$ -- 90

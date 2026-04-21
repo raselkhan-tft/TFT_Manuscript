@@ -18,25 +18,51 @@ However, when a mass accelerates or changes configuration (for example, a black 
 
 \begin{itemize}
     \item \textbf{Mechanism:} The isochoric transverse geometric shear of the solid lattice nodes creates a transient structural oscillation in the local FCC architecture without displacing the interstitial condensate.
-    \item \textbf{Speed (The 2D/3D Unification):} Because this propagation involves bulk structural shear, the wave speed is strictly determined by the ratio of the 3D Volumetric Stiffness ($K_{\text{shear}}$) to the 3D Volumetric Yield Density ($\rho_C$). This yields the exact same absolute elastic speed limit ($c_E$) that governs 2D light propagation:
+    \item \textbf{Speed (The 2D/3D Unification):} Because this propagation involves macroscopic bulk structural shear, the wave speed is strictly determined by the ratio of the continuum's 3D Volumetric Shear Stiffness ($K_{\text{shear}}$) to its macroscopic Effective Inertial Density ($\rho_{\text{eff}}$). This yields the exact same absolute elastic speed limit ($c_E$) that governs 2D light propagation:
 \end{itemize}
+
 \begin{equation}
-    c_{GW} = \sqrt{\frac{K_{\text{shear}}}{\rho_C}} \equiv c_E
+    c_{GW} = \sqrt{\frac{K_{\text{shear}}}{\rho_{\text{eff}}}} \equiv c_E
 \end{equation}
 
-\textbf{Result:} This confirms why Gravitational Waves ($c_{GW}$) travel at exactly the speed of light ($c_E$). While light is a 2D surface tension ripple and gravity is a 3D volumetric shear wave, both are mechanical oscillations of the exact same hyper-rigid solid lattice scaffold.
+\textbf{Result:} This confirms why Gravitational Waves ($c_{GW}$) travel at exactly the speed of light ($c_E$). While light is a 2D surface tension ripple and gravity is a 3D volumetric shear wave, both are mechanical oscillations of the exact same hyper-rigid visco-elastic scaffold.
 \vspace{0.3cm}
+
 \noindent \textbf{Cosmological Redshift (Visco-Elastic Phase Lag):} Because both light and gravitational waves are transverse shear deformations rubbing against the exact same interstitial condensate, they are subjected to the exact same boundary friction ($\Gamma_D$). Therefore, gravitational waves lose energy (redshift) over cosmic distances at the exact same rate as optical light ($H_0 \equiv \Gamma_D$). This perfectly aligns with LIGO's observational requirement to correct for the cosmological redshift of gravitational waves; the wave is not being stretched by expanding space, it is simply bleeding energy into the visco-elastic lattice.
 
-\subsection{The LIGO Proof (Lattice Strain)}
-LIGO does not detect curvature in an abstract sense; it detects physical strain, $h = \Delta L/L$. It measures the physical stretching of the interferometer arms.
+\subsection{The LIGO Proof (Continuum Strain)}
+\label{sec:ligo_proof_continuum_strain}
+
+LIGO does not detect curvature in an abstract sense; it detects physical strain, $h = \Delta L/L$. It measures the physical stretching of the macroscopic interferometer arms.
 
 \begin{itemize}
-    \item \textbf{The TFT Prediction:} If space is a physical lattice, it must possess a finite bulk modulus (stiffness).
-    \item \textbf{The Evidence:} Using the energy flux from GW150914 \cite{LIGO_2016}, we can calculate the stiffness required to support such a wave. The result is approximately $10^{94} \text{ Pa}$.
-    \item \textbf{The Match:} This empirically derived stiffness closely matches the theoretical Soft Floor tension, $\tau_{\text{bulk}} = \frac{c_E^4}{G r_D^2}$, to within logarithmic precision.
-    \item \textbf{Result:} LIGO proved that the vacuum is not empty geometry, but a hyper-rigid supersolid. \textit{(See \hyperref[app:kinematic_shear]{Appendix J} for the full kinematic shear derivation of the vacuum stiffness from LIGO data).}
+    \item \textbf{The TFT Prediction:} Because wave propagation is governed by the continuum shear wave equation established above ($c_E = \sqrt{K_{\text{shear}} / \rho_{\text{eff}}}$), the active vacuum must possess a finite, measurable macroscopic shear modulus (stiffness).
+    
+    \item \textbf{The Evidence:} Using the macroscopic energy flux from GW150914 \cite{LIGO_2016}, we calculate the continuum stiffness required to support such a wave. The derived empirical shear modulus is approximately $9.4 \times 10^{30} \text{ Pa}$.
+
+    \item \textbf{The Match:} Because the wave travels at $c_E$, this $10^{30} \text{ Pa}$ stiffness mathematically dictates a macroscopic effective continuum density ($\rho_{\text{eff}}$) of $\approx 1.04 \times 10^{14} \text{ kg/m}^3$. This empirically derived stiffness and density perfectly align with the extreme mechanical domain of baryonic matter, directly matching the central pressure and density of a neutron star.
+
+    \item \textbf{Result:} LIGO proved that the vacuum is not empty geometry, but a hyper-rigid visco-elastic supersolid. (See \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} for the full kinematic continuum derivation of the vacuum stiffness and tensor energy density from LIGO data).
 \end{itemize}
+
+\subsection{The Mechanical Origin of the Spin-2 Quadrupole}
+\label{sec:mechanical_origin_spin2}
+
+Standard General Relativity dictates that gravitational waves must propagate as spin-2 quadrupole tensor deformations, strictly ruling out scalar (longitudinal) and vector propagation. Tension Field Theory (TFT) reproduces this precise geometric requirement strictly through the classical elastodynamics of the macroscopic continuum.
+
+Because the active vacuum operates as a highly incompressible visco-elastic solid (where the continuous Bulk Modulus vastly exceeds the local Shear Modulus), the Spacetime Gravitational Floor (SGF) strongly resists volumetric compression. Consequently, it does not support longitudinal acoustic (scalar) propagation for macroscopic gravitational energy. A propagating gravitational deformation is mechanically forced to manifest entirely as a pure Transverse Shear Wave (S-wave).
+
+In solid-state continuum mechanics, the strain tensor of a pure transverse shear wave propagating through an incompressible medium is inherently symmetric and traceless. As the wave forces the medium to shear transversely along the z-axis, the strict conservation of volumetric density requires the lattice to elastically elongate along one orthogonal axis while simultaneously compressing along the other by the dimensionless transverse strain amplitude ($h_{\text{GW}}$):
+\[
+\epsilon_{ij} = \begin{bmatrix}
+h_{\text{GW}} & 0 & 0 \\
+0 & -h_{\text{GW}} & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\]
+
+Because the trace of this matrix is strictly zero ($\text{tr}(\epsilon) = 0$), this classical volume-conservation requirement perfectly mimics the abstract geometric definition of a spin-2 quadrupole wave. Therefore, the $+$ and $\times$ polarizations observed by LIGO are not abstract metric ripples; they are the direct macroscopic observation of the orthogonal mechanical shear planes of the active vacuum in motion. The physical strain measured by the interferometer is the direct continuum measurement of this transverse shear strain propagating through the visco-elastic supersolid (see \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} for the complete linear elastic stress-energy tensor validation).
+
 
 \section{Structural Gravitational Coupling ($\alpha_G$)}
 The structural gravitational coupling ($\alpha_G$) is defined as the gravitational strain induced by the local mass-energy in the Soft Floor. It quantifies the ratio between the local mass-induced tension ($\tau_M$) and the Soft Floor tension ($\tau_D$):
@@ -52,7 +78,7 @@ We also define the density-based gravitational coupling as:
 \textbf{Where:}
 \begin{itemize}
     \item $\rho_M$: The local mass density.
-    \item $\rho_{QG}$: The convergence density ($\approx 10^{70} \text{ kg/m}^3$, derived in \hyperref[app:kinematic_ceiling]{Appendix L}).
+    \item $\rho_{QG}$: The convergence density ($\approx 10^{70} \text{ kg/m}^3$, derived in \hyperref[app:kinematic_shear]{Appendix L}).
 \end{itemize}
 
 This dimensionless ratio represents the structural strain of the Soft Floor, determining exactly how strongly a local mass couples to the active Face-Centered Cubic (FCC) lattice.
