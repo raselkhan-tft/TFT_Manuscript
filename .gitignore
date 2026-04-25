@@ -1,12 +1,14 @@
-# Ignore LaTeX auxiliary files
+# LaTeX Auxiliary Files
 *.aux
+*.bbl
+*.blg
+*.idx
+*.ind
+*.lof
+*.lot
+*.out
+*.toc
 *.log
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-*.toc
-*.out
-
-# Ignore compiled PDFs (we will move these to OneDrive manually)
-*.pdf
-!Figures/*.pdf
