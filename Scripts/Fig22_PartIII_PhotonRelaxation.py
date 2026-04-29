@@ -59,13 +59,17 @@ def create_volumetric_relaxation_visual():
 
     # Pushed back to the left (x=0) and upwards (z=7.5) to clear the newly raised top grid line
     ax.text(0.0, 3.0, 7.5, "Static SGF Lattice\n(Grid coordinates do not expand)", 
-            color='black', fontsize=9, fontweight='bold', ha='center', va='bottom')
+            color='black', fontsize=9, ha='center', va='bottom')
 
     # -------------------------------------------------------
     # 2. WAVE PACKET MODELING (The Solitons)
     # -------------------------------------------------------
-    def draw_soliton(ax, center_x, L, R, freq, color, top_label, bottom_label=None, y_shift=0, z_shift=0, top_x_offset=0.0, bottom_x_offset=0.0, bottom_z_drop=0.0, bottom_ha='center'):
+    def draw_soliton(ax, center_x, L, R, freq, color, top_label, bottom_label=None, y_shift=0, z_shift=0, top_x_offset=0.0, bottom_x_offset=0.0, bottom_z_drop=0.0, bottom_ha='center', wave_amp=None):
         """Draws a 3D wave packet: a translucent envelope and a solid internal carrier wave."""
+        # Decouple the envelope radius (R) from the internal wave amplitude (wave_amp)
+        if wave_amp is None:
+            wave_amp = R
+            
         # 1. The 3D Translucent Envelope (Ellipsoid)
         u = np.linspace(0, 2 * np.pi, 60)
         v = np.linspace(0, np.pi, 30)
@@ -76,20 +80,22 @@ def create_volumetric_relaxation_visual():
         Y = y_shift + R * np.sin(U) * np.sin(V)
         Z = z_shift + R * np.cos(V)
         
-        ax.plot_surface(X, Y, Z, color=color, alpha=0.15, edgecolor=color, linewidth=0.2, zorder=3)
+        # Explicit rstride and cstride added to prevent NumPy/OpenBLAS allocation spikes during rendering
+        ax.plot_surface(X, Y, Z, color=color, alpha=0.15, edgecolor=color, linewidth=0.2, zorder=3, rstride=2, cstride=2)
         
         # 2. The Internal Carrier Wave (Longitudinal Kinematic Dimension)
         x_wave = np.linspace(center_x - L, center_x + L, 200)
         # Gaussian envelope multiplied by a cosine carrier
         envelope = np.exp(-((x_wave - center_x)**2) / (2 * (L/2.5)**2))
-        z_wave = z_shift + R * envelope * np.cos(freq * np.pi * (x_wave - center_x))
+        # Amplitude uses wave_amp, allowing visual separation from the outer envelope boundary
+        z_wave = z_shift + wave_amp * envelope * np.cos(freq * np.pi * (x_wave - center_x))
         y_wave = np.full_like(x_wave, y_shift)
         
         ax.plot(x_wave, y_wave, z_wave, color=color, lw=2.5, zorder=4)
         
         # Top Annotation (Forced to black)
         ax.text(center_x + top_x_offset, y_shift, z_shift + R + 0.5, top_label, color='black', 
-                fontsize=10, fontweight='bold', ha='center', zorder=5)
+                fontsize=10, ha='center', zorder=5)
                 
         # Bottom Annotation (Decoupled to allow independent pushing/pulling, forced to black)
         if bottom_label:
@@ -109,23 +115,24 @@ def create_volumetric_relaxation_visual():
                       r"Temporal Stretch: $(1+z)$" + "\n" + 
                       r"Total Dimming: $(1+z)^{-4}$")
     
-    # Adjusted bottom_x_offset to -4.0 to perfectly center the left-aligned text block under the soliton
-    # while keeping it strictly within the right boundary line.
+    # Envelope (R) maintained at 1.6 to show transverse spread.
+    # Wave amplitude (wave_amp) compressed to 0.4 to represent energy dissipation (amplitude loss).
     draw_soliton(ax, center_x=16.0, L=2.0, R=1.6, freq=2.0, 
                  color='#FF00FF', top_label="Observation\n(Relaxed Soliton)",
                  bottom_label=bottom_txt_obs,
-                 y_shift=2.0, z_shift=-2.0, top_x_offset=-1.5, bottom_x_offset=-4.8, bottom_z_drop=5.0, bottom_ha='left')
+                 y_shift=2.0, z_shift=-2.0, top_x_offset=-1.5, bottom_x_offset=-4.8, bottom_z_drop=5.0, bottom_ha='left',
+                 wave_amp=0.4)
 
     # -------------------------------------------------------
     # 3. PROPAGATION VECTOR & MECHANISM
     # -------------------------------------------------------
     # Diagonal Propagation Arrow
-    ax.quiver(4.0, -1.5, 1.5, 10.0, 3.0, -3.0, color='black', lw=1.5, arrow_length_ratio=0.08)
+    ax.quiver(4.0, -1.5, 1.5, 10.0, 3.0, -3.0, color='black', lw=0.75, arrow_length_ratio=0.08)
     
     # Elevated Z to 0.5 to prevent physical collision, and forced high zorder
     vector_direction = (10.0, 3.0, -3.0)
     ax.text(9.0, -0.5, 0.5, r"Propagation & Dissipation", color='black', 
-            fontsize=10, fontweight='bold', ha='center', va='bottom', zdir=vector_direction, zorder=10)
+            fontsize=10, ha='center', va='bottom', zdir=vector_direction, zorder=10)
 
     # -------------------------------------------------------
     # 4. FINAL LAYOUT & RENDERING
@@ -141,7 +148,9 @@ def create_volumetric_relaxation_visual():
     # =======================================================
     # FINAL RENDER & PDF EXPORT
     # =======================================================
-    plt.tight_layout()
+    
+    # Explicit manual bounds replace plt.tight_layout() to bypass the MemoryError bug
+    fig.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
     
     output_dir = "Figures"
     if not os.path.exists(output_dir):
@@ -151,7 +160,8 @@ def create_volumetric_relaxation_visual():
     
     try:
         # Saving as high-fidelity vector PDF for publication
-        plt.savefig(pdf_filename, format='pdf', bbox_inches='tight')
+        # bbox_inches='tight' removed to prevent secondary recursive bounding box calculations
+        plt.savefig(pdf_filename, format='pdf')
         print(f"High-fidelity vector PDF saved to: {pdf_filename}")
     except PermissionError:
         print(f"CRITICAL ERROR: Permission denied. Please close {pdf_filename} before re-running.")
