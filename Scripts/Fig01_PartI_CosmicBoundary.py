@@ -28,18 +28,22 @@ def create_scale_hierarchy_visual():
     # -----------------------------------------
     # Blue dotted line exactly up to the origin point of the wave (y=1.0)
     ax.plot([rD_log, rD_log], [0, 1.0], linestyle="--", linewidth=1.8, color="blue", zorder=2)
-    # Red dotted line up to the dimension bracket (y=1.08)
-    ax.plot([Ru_log, Ru_log], [0, 1.08], linestyle="--", linewidth=1.8, color="red", zorder=2)
+    # Gray dotted line up to the dimension bracket (y=1.08)
+    ax.plot([Ru_log, Ru_log], [0, 1.08], linestyle="--", linewidth=1.8, color="gray", zorder=2)
 
     # -----------------------------------------
     # 3. The Main Wave Curve (Uniform Line: Redshift + Decay)
     # -----------------------------------------
-    # The mathematical energy envelope drops from 1.0 to 1/e exactly over the 52 orders of magnitude
-    decay_constant = 52.0
+    # The true mathematical energy envelope drops exponentially based on actual spatial distance
+    R_U_actual = 10**26.0
     
     # Create unified domain for continuous phase generation (Truncated at 28)
     x_all = np.linspace(rD_log, 28, 2800)
-    envelope_all = np.exp(-(x_all - rD_log) / decay_constant)
+    x_actual = 10**x_all
+    
+    # Exact Equation: True exponential decay mapped over a logarithmic spatial axis
+    # Stays perfectly flat at 1.0 until approaching 10^26, then plunges
+    envelope_all = np.exp(-x_actual / R_U_actual)
     
     # KINEMATIC COMPONENT 1: Horizontal Elongation (Redshift)
     # Dynamically integrating a decreasing wavenumber to precisely simulate cosmological redshift.
@@ -80,7 +84,7 @@ def create_scale_hierarchy_visual():
     # 4. The Mathematical Equation
     # -----------------------------------------
     # Placed centrally above the decay curve. 
-    decay_eq = r"$E_{obs} = E_{emit} e^{-\Gamma_D x / c_E}$"
+    decay_eq = r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_D x / c_E}$"
     ax.text(0, 0.73, decay_eq, ha='center', va='bottom', fontsize=15, fontweight='bold', color='black', zorder=10)
 
     # -----------------------------------------
@@ -99,8 +103,8 @@ def create_scale_hierarchy_visual():
     ax.annotate('', xy=(rD_log, bracket_y), xytext=(Ru_log, bracket_y),
                 arrowprops=dict(arrowstyle='<->', color='black', lw=1.5), zorder=10)
                 
-    ax.text(0, bracket_y + 0.02, r"Lattice Scale Ratio ($N_D \approx 10^{52}$)",
-            ha='center', va='bottom', fontsize=11, fontweight='bold', color='black', zorder=10)
+    ax.text(0, bracket_y + 0.02, r"Kinematic Lattice Index ($N_D \approx 10^{52}$)",
+            ha='center', va='bottom', fontsize=11, color='black', zorder=10)
 
     # -----------------------------------------
     # 7. Axes, Limits, and Labels
@@ -118,15 +122,15 @@ def create_scale_hierarchy_visual():
     ticks_y = [0.0, 0.2, y_e, 0.6, 0.8, 1.0]
     ax.set_yticks(ticks_y)
     ax.set_yticklabels(["0.0", "0.2", r"$1/e \approx 0.37$", "0.6", "0.8", "1.0"])
-    ax.set_ylabel(r"Kinematic Coherence ($E_{obs} / E_{emit}$)", fontsize=11, labelpad=0)
+    ax.set_ylabel(r"Kinematic Coherence ($E_{\mathrm{obs}} / E_{\mathrm{emit}}$)", fontsize=11, labelpad=0)
     
     # Bottom anchor labels (Mathematically forced to the exact same Y-coordinate for perfect alignment)
     y_align = -0.09
     ax.text(rD_log, y_align, r"$r_D \approx 10^{-26}\ \mathrm{m}$", ha="center", va="top", 
-            fontsize=11, fontweight='bold', color="blue", clip_on=False)
+            fontsize=11, fontweight='bold', color="black", clip_on=False)
     ax.text(Ru_log, y_align, r"$R_U \approx 10^{26}\ \mathrm{m}$", ha="center", va="top", 
-            fontsize=11, fontweight='bold', color="red", clip_on=False)
-    ax.text(0, y_align, r"$\log_{10}(\ell\ \text{in meters})$", ha="center", va="top", 
+            fontsize=11, fontweight='bold', color="black", clip_on=False)
+    ax.text(0, y_align, r"Coordinate Distance, $\log_{10}(x / \mathrm{m})$", ha="center", va="top", 
             fontsize=11, color="black", clip_on=False)
 
     # Spine adjustments: Clean academic aesthetic with solid black Y-axis
