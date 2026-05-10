@@ -84,7 +84,7 @@ def create_scale_hierarchy_visual():
     # 4. The Mathematical Equation
     # -----------------------------------------
     # Placed centrally above the decay curve. 
-    decay_eq = r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_D x / c_E}$"
+    decay_eq = r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$"
     ax.text(0, 0.73, decay_eq, ha='center', va='bottom', fontsize=15, fontweight='bold', color='black', zorder=10)
 
     # -----------------------------------------
@@ -103,7 +103,7 @@ def create_scale_hierarchy_visual():
     ax.annotate('', xy=(rD_log, bracket_y), xytext=(Ru_log, bracket_y),
                 arrowprops=dict(arrowstyle='<->', color='black', lw=1.5), zorder=10)
                 
-    ax.text(0, bracket_y + 0.02, r"Kinematic Lattice Index ($N_D \approx 10^{52}$)",
+    ax.text(0, bracket_y + 0.02, r"Kinematic Lattice Index ($N_{\mathrm{D}} \approx 10^{52}$)",
             ha='center', va='bottom', fontsize=11, color='black', zorder=10)
 
     # -----------------------------------------
@@ -126,9 +126,9 @@ def create_scale_hierarchy_visual():
     
     # Bottom anchor labels (Mathematically forced to the exact same Y-coordinate for perfect alignment)
     y_align = -0.09
-    ax.text(rD_log, y_align, r"$r_D \approx 10^{-26}\ \mathrm{m}$", ha="center", va="top", 
+    ax.text(rD_log, y_align, r"$r_{\mathrm{D}} \approx 10^{-26}\ \mathrm{m}$", ha="center", va="top", 
             fontsize=11, fontweight='bold', color="black", clip_on=False)
-    ax.text(Ru_log, y_align, r"$R_U \approx 10^{26}\ \mathrm{m}$", ha="center", va="top", 
+    ax.text(Ru_log, y_align, r"$R_{\mathrm{U}} \approx 10^{26}\ \mathrm{m}$", ha="center", va="top", 
             fontsize=11, fontweight='bold', color="black", clip_on=False)
     ax.text(0, y_align, r"Coordinate Distance, $\log_{10}(x / \mathrm{m})$", ha="center", va="top", 
             fontsize=11, color="black", clip_on=False)
@@ -150,7 +150,7 @@ def create_scale_hierarchy_visual():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-    pdf_filename = os.path.join(output_dir, "Fig01_PartI_CosmicBoundary.pdf")
+    pdf_filename = os.path.join(output_dir, "Fig01_PartI_ViscousCosmicHorizon.pdf")
     
     try:
         plt.savefig(pdf_filename, format='pdf', bbox_inches='tight')

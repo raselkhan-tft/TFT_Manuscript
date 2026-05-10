@@ -328,7 +328,7 @@ ax.text(
 # ----------------------------------------
 # Source
 # ----------------------------------------
-ax.add_patch(Circle(source, 0.12, facecolor="black", edgecolor="black", zorder=7))
+ax.add_patch(Circle(source, 0.085, facecolor="none", edgecolor="#8B0000", lw=2.0, zorder=7))
 ax.text(
     source[0] - 0.02, source[1] + 0.38, "Source",
     ha="center", va="bottom", fontsize=11,
@@ -338,16 +338,18 @@ ax.text(
 # ----------------------------------------
 # Deterministic particle path and collapse
 # ----------------------------------------
+# Changed the source-to-collapse path to navy blue
 ax.plot(
     particle_x, particle_y,
-    color="black",
+    color="#000080",
     lw=2.0,
     zorder=8
 )
 
+# Changed the matter design to a maroon ring (hollow circle)
 ax.add_patch(Circle(
     particle_marker, 0.085,
-    facecolor="black", edgecolor="black",
+    facecolor="none", edgecolor="#8B0000", lw=2.0,
     zorder=9
 ))
 
@@ -356,9 +358,9 @@ for th in np.linspace(0, 2 * np.pi, 14, endpoint=False):
     x1, y1 = impact
     x2 = x1 + burst_r * np.cos(th)
     y2 = y1 + burst_r * np.sin(th)
-    ax.plot([x1, x2], [y1, y2], color="black", lw=1.0, zorder=9)
+    ax.plot([x1, x2], [y1, y2], color="#8B0000", lw=1.0, zorder=9)
 
-ax.add_patch(Circle(impact, 0.055, facecolor="black", edgecolor="black", zorder=10))
+ax.add_patch(Circle(impact, 0.085, facecolor="none", edgecolor="#8B0000", lw=2.0, zorder=10))
 
 # ----------------------------------------
 # Tiny chaotic heat vibrations inside the wall
@@ -410,8 +412,9 @@ ax.annotate(
     bbox=LABEL_BOX, zorder=20
 )
 
+# Changed the friction annotation text
 ax.annotate(
-    r"Viscous Collapse ($-F_{\mathrm{friction}}$)",
+    r"Viscous Collapse ($-F_{\mathrm{fr}}$)",
     xy=(impact[0], impact[1]), xytext=(5.15, 1.75),
     arrowprops=dict(arrowstyle="->", lw=0.6, color="#444444", shrinkB=12),
     fontsize=11, ha="left",

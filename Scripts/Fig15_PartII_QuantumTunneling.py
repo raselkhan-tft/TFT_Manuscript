@@ -28,16 +28,14 @@ def create_acoustic_tunneling_visual():
     # -------------------------------------------------------
     # PARAMETERS
     # -------------------------------------------------------
-    x = np.linspace(0, 11, 1000)
+    x_max = 11.5
+    x = np.linspace(0, x_max, 1000)
     
     # Wave parameters (Impedance Matched Resonance)
-    # Wavelength = 4, meaning the barrier (width 4) fits exactly two full wave loops
     k = np.pi / 2  
     amplitude = 1.5
     
     # The Pilot Wave (Continuous standing wave through the entire domain)
-    # Cosine shifted to place a peak exactly at x=3 (the incoming particle)
-    # This precisely forces a zero-displacement node at x=4 (the barrier face)
     y_wave = amplitude * np.cos(k * (x - 3.0))
 
     # Barrier Boundaries
@@ -45,121 +43,130 @@ def create_acoustic_tunneling_visual():
     barrier_end = 8.0
 
     # -------------------------------------------------------
-    # 1. THE DENSE BARRIER (Central Region)
+    # 0. THE UNIFIED MEDIUM (Implicit Continuum Grid)
     # -------------------------------------------------------
-    # Background shading for the barrier
-    ax.axvspan(barrier_start, barrier_end, color='#E8ECEF', alpha=0.6, zorder=0)
-    
-    # Draw oscillating lattice links inside the barrier
+    # Establishing the omnipresent SGF lattice to prevent the "void" paradox
     num_h_lines = 13
     y_base_levels = np.linspace(-3.5, 3.5, num_h_lines)
+    
+    # Extend faint unwarped grid outside the barrier (Alpha reduced to 0.4)
+    for yb in y_base_levels:
+        ax.plot([0, barrier_start], [yb, yb], color='#B0C4DE', lw=1.0, alpha=0.4, zorder=0)
+        ax.plot([barrier_end, x_max], [yb, yb], color='#B0C4DE', lw=1.0, alpha=0.4, zorder=0)
+
+    for x_v in np.arange(0, x_max, 0.5):
+        if x_v <= barrier_start or x_v >= barrier_end:
+            ax.plot([x_v, x_v], [-3.5, 3.5], color='#B0C4DE', lw=1.0, alpha=0.4, zorder=0)
+
+    # -------------------------------------------------------
+    # 1. THE DENSE BARRIER (Central Region)
+    # -------------------------------------------------------
+    # Background shading for the barrier density (Alpha reduced to 0.5)
+    ax.axvspan(barrier_start, barrier_end, color='#E8ECEF', alpha=0.5, zorder=0)
     
     x_barrier = np.linspace(barrier_start, barrier_end, 300)
     y_wave_barrier = amplitude * np.cos(k * (x_barrier - 3.0))
 
-    # Vertical stiff lattice pillars
+    # Vertical stiff lattice pillars (Alpha set to 0.8 to soften infrastructure)
     for x_v in np.linspace(barrier_start, barrier_end, 15):
-        ax.plot([x_v, x_v], [-3.5, 3.5], color='#B0C4DE', lw=1.5, zorder=1)
+        ax.plot([x_v, x_v], [-3.5, 3.5], color='#B0C4DE', lw=1.5, alpha=0.8, zorder=1)
 
-    # Horizontal lattice links (Visibly oscillating in phase with the standing wave)
+    # Horizontal lattice links (Oscillating in phase with the standing wave - Alpha reduced to 0.4)
     for yb in y_base_levels:
-        # Taper the oscillation amplitude so the center vibrates most
         osc_factor = np.exp(-(yb / 3.0)**2) 
         y_lattice = yb + (y_wave_barrier * osc_factor * 0.3)
-        
-        # Glowing inner resonance lines
-        ax.plot(x_barrier, y_lattice, color='#4682B4', lw=2.0, alpha=0.8, zorder=2)
+        # Standardized to Deep Navy Blue
+        ax.plot(x_barrier, y_lattice, color='#000080', lw=2.0, alpha=0.4, zorder=2)
 
     # --- Standing Wave Envelope & Superposition Components ---
-    
-    # Ghost envelope for standing wave resonance (Figure-8 shape)
+    # Ghost envelope for standing wave resonance
     y_ghost = -y_wave_barrier
-    ax.plot(x_barrier, y_ghost, color='#00AACC', lw=2, linestyle=':', alpha=0.5, zorder=3)
+    ax.plot(x_barrier, y_ghost, color='#000080', lw=2, linestyle=':', alpha=0.4, zorder=3)
     
-    # Superposition: Suction Wave (Right to Left)
+    # Superposition: Suction Wave (Driver) - Standardized to Deep Bronze/Ocher
     y_bw = -amplitude * 0.6 * np.sin(k * (x_barrier - barrier_start))
-    ax.plot(x_barrier, y_bw, color='#FF8800', lw=1.5, linestyle='--', alpha=0.8, zorder=4)
+    ax.plot(x_barrier, y_bw, color='#8B4513', lw=1.5, linestyle='--', alpha=0.8, zorder=4)
     
-    # Pushed label up, and added a pointing arrow to touch the wave
-    # FIXED: Applied raw string (r"...") to safely escape \leftarrow
     ax.annotate(r"$\leftarrow$ Suction Wave (Driver)", 
                 xy=(5.0, -0.9), xytext=(5.0, -0.3),
-                arrowprops=dict(arrowstyle="->", color="#FF8800", lw=1.5),
-                color='#FF8800', fontsize=9, ha='center', va='bottom', zorder=12)
+                arrowprops=dict(arrowstyle="->", color="#8B4513", lw=1.5),
+                color='black', fontsize=9, ha='center', va='bottom', zorder=12)
 
     # --- Pinned Boundary Nodes ---
-    ax.scatter([barrier_start, barrier_end], [0.0, 0.0], color='red', s=80, zorder=10)
+    # Standardized to Muted Maroon
+    ax.scatter([barrier_start, barrier_end], [0.0, 0.0], color='#8B0000', s=80, zorder=10)
     
-    ax.annotate("Zero-Displacement Node\n($Z_{wall}$ Canceled)", 
+    # Typographic fix applied to descriptive subscript (Z_wall -> Z_{\mathrm{wall}})
+    ax.annotate(r"Zero-Displacement Node" + "\n" + r"($Z_{\mathrm{wall}}$ Canceled)", 
                 xy=(barrier_start, 0.0), xytext=(3.0, -2.5),
-                arrowprops=dict(arrowstyle="->", color="red", lw=1.5),
-                color='red', fontsize=10, fontweight='bold', ha='center',
+                arrowprops=dict(arrowstyle="->", color="#8B0000", lw=1.5),
+                color='black', fontsize=10, fontweight='bold', ha='center',
                 bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=3), zorder=11)
 
     # Annotations for Barrier
-    ax.text(6, 3.8, "Dense Geometric Lattice Barrier", color='#2F4F4F', 
+    ax.text(6, 3.8, "Dense Geometric Lattice Barrier", color='black', 
             fontsize=12, fontweight='bold', ha='center', va='bottom')
     ax.text(6, -3.8, "Standing Wave Bridge\n(Mechanically Transparent / Impedance Matched)", 
-            color='#006699', fontsize=11, fontweight='bold', ha='center', va='top')
+            color='black', fontsize=11, fontweight='bold', ha='center', va='top')
 
     # -------------------------------------------------------
     # 2. THE PILOT WAVE & TOPOLOGICAL KNOT (Left Side)
     # -------------------------------------------------------
-    # Plot the continuous pilot wave across the entire domain (Resultant wave inside barrier)
-    ax.plot(x, y_wave, color='#00AACC', lw=3, alpha=0.85, zorder=5)
+    # Continuous pilot wave (Standardized to Deep Navy Blue)
+    ax.plot(x, y_wave, color='#000080', lw=3, alpha=0.85, zorder=5)
     
-    # Topological Knot Parameters (Moved to x=3.0 to perfectly align the node at the barrier)
+    # Topological Knot
     knot_x_center = 3.0
-    knot_y_center = amplitude  # y = 1.5
+    knot_y_center = amplitude 
     
-    # Parametric Lissajous curve for the knot
     t = np.linspace(0, 2 * np.pi, 300)
     knot_x = knot_x_center + 0.35 * np.sin(3 * t + np.pi/4)
     knot_y = knot_y_center + 0.35 * np.sin(2 * t)
     
-    # Draw the localized particle (knot)
-    ax.plot(knot_x, knot_y, color='#003366', lw=2, zorder=6)
-    ax.fill(knot_x, knot_y, color='#005599', alpha=0.4, zorder=6)
+    # Mass knot updated to Muted Maroon to standardize matter representation
+    ax.plot(knot_x, knot_y, color='#8B0000', lw=2, zorder=6)
+    ax.fill(knot_x, knot_y, color='#8B0000', alpha=0.4, zorder=6)
     
-    # Labels for Incoming Elements
+    # Add central mass anchor dot to unify matter representation
+    ax.scatter([knot_x_center], [knot_y_center], color='#8B0000', s=50, zorder=7)
+    
+    # Labels and Vectors
     ax.text(knot_x_center, knot_y_center + 0.6, "Topological Knot\n(Particle)", 
-            color='#003366', fontsize=11, fontweight='bold', ha='center', va='bottom')
+            color='black', fontsize=11, fontweight='bold', ha='center', va='bottom')
             
-    # Mathematically align the arrow tip strictly to the edge of the sine wave (y = -1.1 at x = 1.5)
     ax.annotate("Incoming Pilot Wave", 
                 xy=(1.5, -1.1), xytext=(1.5, -2.5),
-                arrowprops=dict(arrowstyle="->", color="#00AACC", lw=2),
-                color='#0088AA', fontsize=11, fontweight='bold', ha='center')
+                arrowprops=dict(arrowstyle="->", color="#000080", lw=2),
+                color='black', fontsize=11, fontweight='bold', ha='center')
 
-    # Motion Vector
-    ax.arrow(knot_x_center + 0.5, knot_y_center, 0.8, 0, 
-             head_width=0.2, head_length=0.25, fc='#003366', ec='#003366', zorder=7)
+    # Motion Vector (Replaced clunky arrow with standard LaTeX kinematic stealth vector)
+    ax.annotate("", xy=(knot_x_center + 1.2, knot_y_center), xytext=(knot_x_center + 0.5, knot_y_center),
+                arrowprops=dict(arrowstyle="-|>", color="#000080", lw=2), zorder=7)
 
     # -------------------------------------------------------
     # 3. THE EXTERNAL DRIVER (Right Side)
     # -------------------------------------------------------
     driver_x = 10.5
     
-    # Draw the active mechanism (Transmitter/Driver)
     ax.plot([driver_x, driver_x], [-2.5, 2.5], color='#2F4F4F', lw=6, zorder=4)
-    ax.scatter([driver_x], [0], color='#FFAA00', s=100, zorder=5) # Active source node
+    ax.scatter([driver_x], [0], color='#8B4513', s=100, zorder=5) # Standardized Bronze source node
     
-    # Draw radiating resonance arcs pointing backwards (left)
+    # Radiating resonance arcs
     for radius in [0.5, 1.0, 1.5]:
         arc = Arc((driver_x, 0), radius*2, radius*2, angle=180, theta1=-45, theta2=45, 
-                  color='#FFAA00', lw=2, alpha=0.7 - (radius*0.1))
+                  color='#8B4513', lw=2, alpha=0.7 - (radius*0.1))
         ax.add_patch(arc)
 
-    # Labels for the Driver
-    ax.text(driver_x, 2.8, r"External Driver ($Z_{drive}$)", 
-            color='#2F4F4F', fontsize=12, fontweight='bold', ha='center', va='bottom')
+    # Labels for the Driver (Typographic fix applied: Z_drive -> Z_{\mathrm{drive}})
+    ax.text(driver_x, 2.8, r"External Driver ($Z_{\mathrm{drive}}$)", 
+            color='black', fontsize=12, fontweight='bold', ha='center', va='bottom')
     ax.text(driver_x, -2.8, r"Stabilizing Frequency ($\omega_0$)", 
-            color='#D07000', fontsize=11, fontweight='bold', ha='center', va='top')
+            color='black', fontsize=11, fontweight='bold', ha='center', va='top')
 
     # -------------------------------------------------------
     # STYLING & FORMATTING
     # -------------------------------------------------------
-    ax.set_xlim(0, 11.5)
+    ax.set_xlim(0, x_max)
     ax.set_ylim(-4.5, 4.5)
 
     # =======================================================

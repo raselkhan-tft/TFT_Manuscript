@@ -109,6 +109,19 @@ def create_causal_hierarchy_visual():
         draw_light_cone(ax1, x, 5, scale=1.6, width_scale=w, angle_deg=ang, 
                         facecolor='#4682B4', alpha=p_alpha, arrow_color='black', arrow_alpha=1.0)
 
+    # Effective Inertia Equation (Upper)
+    ax1.text(5.5, 7.6, r"$\mu_{\mathrm{eff}} = \frac{\mu_D}{(1 - \alpha_G)^4}$", 
+             fontsize=16, color='black', ha='center', va='center', zorder=10)
+
+    # Kinematic Speed Equation & Condition (Lower)
+    # Pure mathematical implication removes English text strings to eliminate CM Roman/Italic font weight mismatch
+    # Replaced '\implies' with '\Rightarrow' to prevent compilation errors in Matplotlib's native mathtext parser
+    cp_text = r"$c_P = c_E \sqrt{\mu_D / \mu_{\mathrm{eff}}}$" + "\n" + r"$(\alpha_G \rightarrow 1 \Rightarrow \mu_{\mathrm{eff}} \rightarrow \infty \Rightarrow c_P = 0)$"
+    ax1.text(5.5, 2.67, cp_text, fontsize=14, fontweight='normal', color='black', ha='center', va='center', 
+             bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=1.5), zorder=10)
+             
+    ax1.annotate("", xy=(2.0, 4.65), xytext=(4.1, 2.95),
+                 arrowprops=dict(arrowstyle="->", color="black", lw=1.5, connectionstyle="arc3,rad=-0.15"), zorder=9)
 
     # =========================================================================
     # RIGHT PANEL: (b) Type II Causal Saturation
@@ -119,9 +132,9 @@ def create_causal_hierarchy_visual():
     ax2.arrow(0.5, 1.0, 0, 7.5, head_width=0.2, head_length=0.3, fc='black', ec='black', alpha=0.4, zorder=1)
     ax2.text(0.8, 8.5, r'Time ($t$)', color='black', fontsize=11, rotation=90, alpha=0.7)
 
-    # 1. Cosmic Horizon Line (R_U)
-    ax2.plot([9.0, 9.0], [1.0, 10.8], color='black', linestyle='--', linewidth=2, zorder=5)
-    ax2.text(8.75, 8.5, r'$\mathbf{Cosmic\ Horizon}$ ($R_U$)', color='black', rotation=90, ha='center', va='center', fontsize=12, zorder=10)
+    # 1. Viscous Cosmic Horizon Line (R_U)
+    ax2.plot([9.0, 9.0], [1.0, 10.8], color='gray', linestyle='--', linewidth=2, zorder=5)
+    ax2.text(8.75, 8.5, r'$\mathbf{Viscous\ Cosmic\ Horizon}$ ($R_U$)', color='black', rotation=90, ha='center', va='center', fontsize=12, zorder=10)
 
     # 2. Fading Light Cones (Left to Right - 4 Cones)
     positions_B = [2.0, 4.3, 6.6, 8.8]
@@ -132,6 +145,13 @@ def create_causal_hierarchy_visual():
         draw_light_cone(ax2, x, 5, scale=1.6, width_scale=1.0, angle_deg=0, 
                         facecolor='#4682B4', alpha=alp, arrow_color='black', arrow_alpha=1.0)
 
+    # Energy Decay Equation (Upper)
+    ax2.text(5.5, 7.6, r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_D x / c_E}$", 
+             fontsize=16, color='black', ha='center', va='center', zorder=10)
+
+    # Universal Potential Equation (Lower)
+    ax2.text(5.5, 2.4, r"$\phi_{G,U} = \int_{0}^{R_U} \frac{G \cdot dm}{r} = c_E^2$", 
+             fontsize=16, color='black', ha='center', va='center', zorder=10)
 
     # =======================================================
     # FINAL RENDER & PDF EXPORT

@@ -28,12 +28,13 @@ def create_phase_transition_figure():
     for spine in ax.spines.values():
         spine.set_visible(False)
     
-    # Clip patch for Left Side (Active Vacuum)
-    left_clip = patches.Rectangle((0, 0), 10, 12, transform=ax.transData)
-    
     # ==========================================
-    # 1. THE LEFT PANEL: (a) Active Vacuum
+    # 1. THE LEFT PANEL: (a) State I Active Vacuum
     # ==========================================
+    # Left Panel Background (Matched to FLUID_FILL from mass mechanism)
+    left_bg = patches.Rectangle((0, 0), 10, 10.3, facecolor='#b2bfc9', edgecolor='none', zorder=0)
+    ax.add_patch(left_bg)
+
     # Geometry: Spheres crowded and touching (FCC close packing)
     sphere_radius = 0.85
     spacing_x = 1.7
@@ -77,30 +78,30 @@ def create_phase_transition_figure():
         for rw in radii:
             wave = patches.Circle((vx, vy), rw, fill=False, edgecolor='#00AACC', 
                                   alpha=0.45, lw=0.8, zorder=1)
-            wave.set_clip_path(left_clip)
             ax.add_patch(wave)
 
     # --- Draw the Cyan FCC Spheres ---
     for cx, cy in sphere_centers:
+        # Reduced linewidth to 0.3 for a very thin boundary ring
         circle = patches.Circle((cx, cy), sphere_radius, 
-                                edgecolor='#0055AA', facecolor='#00E0FF', 
-                                alpha=1.0, linewidth=1.5, zorder=2)
-        circle.set_clip_path(left_clip)
+                                edgecolor='#0055AA', facecolor='#00CCFF', 
+                                alpha=1.0, linewidth=0.3, zorder=2)
         ax.add_patch(circle)
 
     # ==========================================
     # 2. THE TRANSITION: Event Horizon
     # ==========================================
     # Dashed line at x=10 (Neutral gray to contrast against both white and black fields)
-    ax.axvline(x=10, color='#888888', linestyle='--', linewidth=2.0, zorder=5)
+    # ymax naturally caps at 10.3 / 12.0
+    ax.axvline(x=10, ymin=0, ymax=(10.3/12.0), color='#888888', linestyle='--', linewidth=2.0, zorder=5)
     
     # Vertical Label strictly formatted per specification
-    ax.text(9.7, 5.0, r'Event Horizon ($R_{QG}$)', color='black', fontsize=14, 
+    ax.text(9.7, 5.0, r'Event Horizon ($R_{\mathrm{QG}}$)', color='black', fontsize=14, 
             ha='right', va='center', rotation=90,
             bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=3), zorder=6)
 
     # ==========================================
-    # 3. THE RIGHT PANEL: (b) Saturated Core
+    # 3. THE RIGHT PANEL: (b) State II Saturated Core
     # ==========================================
     # Geometry: Cubes packed shoulder-to-shoulder (Brick Wall)
     cube_size = 1.8 
@@ -123,14 +124,18 @@ def create_phase_transition_figure():
             ax.add_patch(rect)
 
     # ==========================================
-    # TOP CANVAS AREA LABELS
+    # TOP CANVAS AREA MASK & LABELS
     # ==========================================
+    # Absolute geometric mask to ensure no rendering bleed occurs above the strict 10.3 cutoff
+    top_mask = patches.Rectangle((0, 10.3), 20, 2.0, facecolor='white', edgecolor='none', zorder=8)
+    ax.add_patch(top_mask)
+
     # Left Header - Top Left of Panel (a)
-    ax.text(0.2, 11.2, r"$\mathbf{(a)\ Active\ Vacuum}$", 
+    ax.text(0.2, 11.2, r"$\mathbf{(a)\ State\ I\ Active\ Vacuum}$", 
             color='black', fontsize=16, ha='left', va='bottom', zorder=10)
 
     # Right Header - Top Left of Panel (b)
-    ax.text(10.2, 11.2, r"$\mathbf{(b)\ Saturated\ Core}$", 
+    ax.text(10.2, 11.2, r"$\mathbf{(b)\ State\ II\ Saturated\ Core}$", 
             color='black', fontsize=16, ha='left', va='bottom', zorder=10)
 
     # ==========================================

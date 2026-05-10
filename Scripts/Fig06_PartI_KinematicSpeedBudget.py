@@ -40,19 +40,19 @@ def create_kinematic_triangle():
     
     # A rotation of -45 degrees perfectly matches the tangent of the circle at 45 degrees
     ax.text(label_arc_x, label_arc_y, 
-            r"Kinematic Boundary ($c_E$)", color='#999999', 
+            r"Kinematic Boundary ($c_{\mathrm{E}}$)", color='#999999', 
             fontsize=11, rotation=-45, ha='center', va='center')
 
     # -------------------------------------------------------
     # SECONDARY OVERLAY (Approaching the Limit)
     # -------------------------------------------------------
     # Drawn first so it sits behind the primary triangle
-    # Hypotenuse
-    ax.plot([0, x_2], [0, y_2], color='#AAAAAA', linestyle='--', linewidth=2, zorder=2)
-    # Vertical Leg
-    ax.plot([x_2, x_2], [0, y_2], color='#FF9999', linestyle='--', linewidth=2, zorder=2)
-    # Horizontal Base
-    ax.plot([0, x_2], [0, 0], color='#9999FF', linestyle='--', linewidth=2, zorder=2)
+    # Hypotenuse (Matched to Black, alpha-faded)
+    ax.plot([0, x_2], [0, y_2], color='black', linestyle='--', linewidth=2, alpha=0.5, zorder=2)
+    # Vertical Leg (Matched to Maroon, alpha-faded)
+    ax.plot([x_2, x_2], [0, y_2], color='#800000', linestyle='--', linewidth=2, alpha=0.5, zorder=2)
+    # Horizontal Base (Matched to Deep Navy Blue, alpha-faded)
+    ax.plot([0, x_2], [0, 0], color='#000080', linestyle='--', linewidth=2, alpha=0.5, zorder=2)
     
     # Transition Arrow (Pulled toward origin and shortened to fit cleanly between hypotenuses)
     R_arc = 0.45  
@@ -77,18 +77,18 @@ def create_kinematic_triangle():
             fontsize=10, rotation=tangent_angle, ha='center', va='center')
 
     # -------------------------------------------------------
-    # PRIMARY TRIANGLE (The Kinematic Action Budget)
+    # PRIMARY TRIANGLE (The Kinematic Speed Budget)
     # -------------------------------------------------------
-    # 1. Horizontal Base (External Velocity)
-    ax.plot([0, x_1], [0, 0], color='#0033CC', linestyle='-', linewidth=3.5, zorder=3)
+    # 1. Horizontal Base (External Velocity) - Deep Navy Blue
+    ax.plot([0, x_1], [0, 0], color='#000080', linestyle='-', linewidth=3.5, zorder=3)
     # Label Base
-    ax.text(x_1 / 2, -0.02, r"$v_{ext} = c_E \cos(\Delta\phi)$", color='#0033CC', 
+    ax.text(x_1 / 2, -0.02, r"$v_{\mathrm{ext}} = c_{\mathrm{E}} \cos(\Delta\phi)$", color='#000080', 
             fontsize=14, fontweight='bold', ha='center', va='top')
 
-    # 2. Vertical Leg (Internal Vibration/Time)
-    ax.plot([x_1, x_1], [0, y_1], color='#CC0000', linestyle='-', linewidth=3.5, zorder=3)
+    # 2. Vertical Leg (Internal Vibration/Time) - Maroon
+    ax.plot([x_1, x_1], [0, y_1], color='#800000', linestyle='-', linewidth=3.5, zorder=3)
     # Label Vertical
-    ax.text(x_1 + 0.045, y_1 / 2, r"$v_{int} = c_E \sin(\Delta\phi)$", color='#CC0000', 
+    ax.text(x_1 + 0.045, y_1 / 2, r"$v_{\mathrm{int}} = c_{\mathrm{E}} \sin(\Delta\phi)$", color='#800000', 
             fontsize=14, fontweight='bold', ha='center', va='bottom', rotation=90)
 
     # 3. The Hypotenuse (Total Budget)
@@ -101,7 +101,7 @@ def create_kinematic_triangle():
     hyp_label_y = mid_y + perp_offset * np.cos(phi_1)
     
     # Placed precisely at 50% length
-    ax.text(hyp_label_x, hyp_label_y, r"$c_E$ (Total Action Budget)", color='black', 
+    ax.text(hyp_label_x, hyp_label_y, r"$c_{\mathrm{E}}$ (Kinematic Speed Budget)", color='black', 
             fontsize=14, fontweight='bold', ha='center', va='center', rotation=np.degrees(phi_1))
 
     # 4. The Angle (Phase Slip)
@@ -139,7 +139,7 @@ def create_kinematic_triangle():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-    pdf_filename = os.path.join(output_dir, "Fig04_PartI_Massmechanism.pdf")
+    pdf_filename = os.path.join(output_dir, "Fig06_PartI_KinematicSpeedBudget.pdf")
     
     try:
         # Saving as high-fidelity vector PDF for publication

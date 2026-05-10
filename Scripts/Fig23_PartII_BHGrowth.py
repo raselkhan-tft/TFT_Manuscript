@@ -40,9 +40,10 @@ def create_black_hole_rupture_visual():
         ax.axhline(t, color='#E8E8E8', lw=0.35, alpha=0.6, zorder=0)
         ax.axvline(t, color='#E8E8E8', lw=0.35, alpha=0.6, zorder=0)
 
-    # State 0 Anchor Label (Standard capitalization, anchored to bottom-left corner)
-    ax.text(-limit + 0.3, -limit + 0.3, "State 0 Substrate\n(Omnipresent)", 
-            color='#777777', fontsize=12, fontweight='bold', ha='left', va='bottom', zorder=10)
+    # State 0 Anchor Label
+    # ha='left' anchors the box inside the grid, multialignment='center' centers the lines internally
+    ax.text(-limit + 0.3, -limit + 0.3, "State 0 Substrate\n(Invariant Continuum)", 
+            color='#777777', fontsize=12, fontweight='bold', ha='left', va='bottom', multialignment='center', zorder=10)
 
     # -------------------------------------------------------
     # LAYER 4: THE SATURATED CORE (State II / SC Geometry)
@@ -60,10 +61,10 @@ def create_black_hole_rupture_visual():
         h_line.set_clip_path(core_circle)
         v_line.set_clip_path(core_circle)
 
-    # Saturated Core Finite Mechanical Limits (Stacked in dead center)
+    # Saturated Core Finite Mechanical Limits (Stacked in dead center, upright Roman subscripts)
     core_text = (r"State II Saturated Core" + "\n" + 
-                 r"$\rho_S \approx 10^{96} \text{ kg/m}^3$" + "\n" + 
-                 r"$\tau_S \approx 10^{112} \text{ N/m}^2$")
+                 r"$\rho_{\mathrm{S}} \approx 10^{96} \text{ kg/m}^3$" + "\n" + 
+                 r"$\tau_{\mathrm{S}} \approx 10^{112} \text{ N/m}^2$")
     ax.text(0, 0, core_text, color='white', fontsize=11, fontweight='bold', ha='center', va='center', zorder=10)
 
     # -------------------------------------------------------
@@ -78,8 +79,10 @@ def create_black_hole_rupture_visual():
     fcc_radius = R_core * np.sin(angle_step / 2) / (1 - np.sin(angle_step / 2))
     R1 = R_core + fcc_radius
 
-    # Matter color updated to red for high visibility
-    matter_color = '#CC0000' 
+    # Flagship colors
+    matter_color = '#800000'      # Maroon
+    condensate_color = '#b2bfc9'  # Interstitial condensate gray
+    fcc_node_color = '#00CCFF'    # Electric Blue
 
     for idx, angle in enumerate(angles):
         dx = np.cos(angle)
@@ -88,19 +91,23 @@ def create_black_hole_rupture_visual():
         # 1. PRIMARY ADVANCING FCC NODE (Active Vacuum Layer)
         # alpha=1.0 ensures absolute occlusion, preventing underlying polygons from bleeding through
         ax.add_patch(patches.Circle((R1 * dx, R1 * dy), fcc_radius, 
-                                    facecolor='#00E0FF', edgecolor='#0055AA', lw=0.8, alpha=1.0, zorder=6))
+                                    facecolor=fcc_node_color, edgecolor='#0055AA', lw=0.8, alpha=1.0, zorder=6))
 
-        # 2. ALTERNATING MATTER NUCLEATION (50% Void Fill)
+        # 2. VOID FILL: ALTERNATING MATTER NUCLEATION AND INTERSTITIAL CONDENSATE
         # Drawn directly from the origin to ensure a 100% solid color fill with no gaps.
         # The Core and FCC nodes sit on top of this polygon, punching out the perfect curved negative space.
-        if idx % 2 == 0:
-            next_angle = angles[(idx + 1) % num_elements]
-            v1 = (0, 0)
-            v2 = (R1 * np.cos(angle), R1 * np.sin(angle))
-            v3 = (R1 * np.cos(next_angle), R1 * np.sin(next_angle))
+        next_angle = angles[(idx + 1) % num_elements]
+        v1 = (0, 0)
+        v2 = (R1 * np.cos(angle), R1 * np.sin(angle))
+        v3 = (R1 * np.cos(next_angle), R1 * np.sin(next_angle))
 
-            void_poly = patches.Polygon([v1, v2, v3], closed=True, facecolor=matter_color, edgecolor='none', zorder=1.5)
-            ax.add_patch(void_poly)
+        if idx % 2 == 0:
+            fill_color = matter_color
+        else:
+            fill_color = condensate_color
+
+        void_poly = patches.Polygon([v1, v2, v3], closed=True, facecolor=fill_color, edgecolor='none', zorder=1.5)
+        ax.add_patch(void_poly)
 
         # 3. AMBIENT CONFINEMENT PRESSURE (Inward-Pointing Arrows)
         # Drawn every 4th element to prevent visual crowding of the scaled-down nodes
@@ -133,8 +140,8 @@ def create_black_hole_rupture_visual():
     ax.annotate("", xy=(target_x, target_y), xytext=(start_x, start_y),
                 arrowprops=dict(arrowstyle="->", color="black", lw=1.5, connectionstyle="arc3,rad=0.2"), zorder=11)
 
-    eq_text = (r"$R_{QG} \approx 10^{26}\ \mathrm{m}$" + "\n" + 
-               r"$g \approx a_D$" + "\n" + 
+    eq_text = (r"$R_{\mathrm{QG}} \approx 10^{26}\ \mathrm{m}$" + "\n" + 
+               r"$g \approx a_{\mathrm{D}}$" + "\n" + 
                r"$\Delta P \approx 0$")
                
     ax.text(start_x + 0.2, start_y + 0.3, eq_text,
@@ -174,7 +181,7 @@ def create_black_hole_rupture_visual():
     target_x_vac = R1 * np.cos(angle_vac_target)
     target_y_vac = R1 * np.sin(angle_vac_target)
     
-    ax.annotate(r"State I Active Vacuum" + "\n" + r"FCC Node ($r_D \approx 10^{-26}\ \mathrm{m}$)",
+    ax.annotate(r"State I Active Vacuum" + "\n" + r"FCC Node ($r_{\mathrm{D}} \approx 10^{-26}\ \mathrm{m}$)",
                 xy=(target_x_vac, target_y_vac), 
                 xytext=(lbl_x_vac, lbl_y_vac),
                 arrowprops=dict(arrowstyle="->", color="#333333", lw=1.2, connectionstyle="arc3,rad=-0.15"),
@@ -193,7 +200,7 @@ def create_black_hole_rupture_visual():
     target_fill_y = (R1 * np.sin(angle_mat) + R1 * np.sin(next_angle_mat) + R_core * np.sin(mid_angle_mat)) / 3
 
     # Modified ha='center' for precision alignment, adjusted x-shift to +4.0
-    ax.annotate(r"Phase Segregated Matter" + "\n" + r"($M \propto R_{QG}$)",
+    ax.annotate(r"Phase Segregated Matter" + "\n" + r"($M \propto R_{\mathrm{QG}}$)",
                 xy=(target_fill_x, target_fill_y),
                 xytext=(target_fill_x + 4.0, target_fill_y - 1.2),
                 arrowprops=dict(arrowstyle="->", color="#333333", lw=1.2, connectionstyle="arc3,rad=-0.15"),

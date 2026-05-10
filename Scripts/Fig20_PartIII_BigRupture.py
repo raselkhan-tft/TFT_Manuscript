@@ -139,8 +139,8 @@ def create_deflation_rupture_baseline():
     # RENDER PANELS
     # -------------------------------------------------------
     panels = [
-        (ax1, r"$\mathbf{(a)}$", True),
-        (ax2, r"$\mathbf{(b)}$", False)
+        (ax1, r"$\mathbf{(a)\ At\ Rupture}$", True),
+        (ax2, r"$\mathbf{(b)\ Post\ Rupture}$", False)
     ]
 
     for ax, panel_title, is_left in panels:
@@ -153,9 +153,9 @@ def create_deflation_rupture_baseline():
             ax.axhline(t, color='#E8E8E8', lw=0.5, alpha=0.8, zorder=0)
             ax.axvline(t, color='#E8E8E8', lw=0.5, alpha=0.8, zorder=0)
 
-        # State 0 Anchor Label
-        ax.text(-limit + 0.5, -limit + 0.5, "State 0 Substrate\n(Omnipresent)", 
-                color='#777777', fontsize=12, fontweight='bold', ha='left', va='bottom', zorder=10,
+        # State 0 Anchor Label (Updated to Invariant Continuum with internal center alignment)
+        ax.text(-limit + 0.5, -limit + 0.5, "State 0 Substrate\n(Invariant Continuum)", 
+                color='#777777', fontsize=12, fontweight='bold', ha='left', va='bottom', multialignment='center', zorder=10,
                 bbox=dict(facecolor='white', edgecolor='none', alpha=0.8, pad=2))
 
         # =======================================================
@@ -175,7 +175,7 @@ def create_deflation_rupture_baseline():
                         arrowprops=dict(arrowstyle="->", color="#888888", lw=1.2),
                         color='#555555', fontsize=10, ha='center', va='bottom', bbox=text_bbox, zorder=10)
 
-            rup_text = r"$\mathbf{Deflated\ Rupture\ Radius}$" + "\n" + r"($R_{rup} \approx 6.077 \times 10^{34}\ \mathrm{m}$)"
+            rup_text = r"$\mathbf{Deflated\ Rupture\ Radius}$" + "\n" + r"($R_{\mathrm{rup}} \approx 6.077 \times 10^{34}\ \mathrm{m}$)"
             ax.annotate(rup_text, xy=(0, -R_rup), xytext=(0, -R_rup - 1.5),
                         arrowprops=dict(arrowstyle="->", color="black", lw=1.5),
                         color='black', fontsize=11, ha='center', va='top', bbox=text_bbox, zorder=10)
@@ -302,7 +302,7 @@ def create_deflation_rupture_baseline():
             
             ax.add_patch(patches.Circle((0, 0), R_rup, fill=False, edgecolor='#FFFFFF', linestyle=':', lw=1.5, alpha=0.6, zorder=2.5))
 
-            restored_text = r"$\mathbf{Restored\ Geometric\ Cosmic\ Horizon}$" + "\n" + r"($R_{Res} \approx 10^{35}\ \mathrm{m}$)"
+            restored_text = r"$\mathbf{Restored\ Geometric\ Cosmic\ Horizon}$" + "\n" + r"($R_{\mathrm{Res}} \approx 10^{35}\ \mathrm{m}$)"
             ax.annotate(restored_text, xy=(0, R_orig), xytext=(0, R_orig + 1.5),
                         arrowprops=dict(arrowstyle="->", color="black", lw=1.2),
                         color='black', fontsize=10, ha='center', va='bottom', bbox=text_bbox, zorder=10)

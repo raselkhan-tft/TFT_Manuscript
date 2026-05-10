@@ -31,6 +31,11 @@ def create_substrate_ghost_canvas():
     ax3d.voxels(x, y, z, filled, facecolors=colors, 
                 edgecolor=ghost_edge, linewidth=0.5)
 
+    # Add topological lock definition near the geometric center of the grid
+    ax3d.text(1.5, 1.5, 1.5, r"$\phi_{\mathrm{S}} = 0$", 
+              ha='center', va='center', color=label_color, 
+              fontsize=12, fontweight='bold')
+
     # Clean 3D axes
     for axis in [ax3d.xaxis, ax3d.yaxis, ax3d.zaxis]:
         axis.line.set_linewidth(0)
@@ -39,14 +44,10 @@ def create_substrate_ghost_canvas():
     ax3d.set_facecolor("white")
     ax3d.set_box_aspect((1, 1, 1))
 
-    # Updated nomenclature: l_G -> l_S
-    ax3d.set_xlabel(r"$x$ ($\ell_S$ units)", labelpad=-6, color=label_color)
-    ax3d.set_ylabel(r"$y$ ($\ell_S$ units)", labelpad=-6, color=label_color)
-    ax3d.set_zlabel(r"$z$ ($\ell_S$ units)", labelpad=-6, color=label_color)
-
-    # Academic Label (a) - Positioned top-left in axis coordinates
-    ax3d.text2D(0.05, 0.95, r"$\mathbf{(a)}$", transform=ax3d.transAxes, 
-                fontsize=14, fontweight='bold', ha='left', va='top')
+    # Updated nomenclature to use upright \mathrm{S}
+    ax3d.set_xlabel(r"$x$ ($\ell_{\mathrm{S}}$ units)", labelpad=-6, color=label_color)
+    ax3d.set_ylabel(r"$y$ ($\ell_{\mathrm{S}}$ units)", labelpad=-6, color=label_color)
+    ax3d.set_zlabel(r"$z$ ($\ell_{\mathrm{S}}$ units)", labelpad=-6, color=label_color)
 
     # ---------------- 2D panel ----------------
     ax2d = fig.add_subplot(1, 2, 2)
@@ -70,8 +71,8 @@ def create_substrate_ghost_canvas():
     for spine in ax2d.spines.values():
         spine.set_visible(False)
 
-    # Mu annotation - Updated to muS and set to gray for depth consistency
-    ax2d.text(5.5, 0.5, r"$\mu_S \rightarrow 0$",
+    # Zero-inertia and infinite-rigidity annotation block
+    ax2d.text(5.5, 0.5, r"$\mu_{\mathrm{S}} \to 0$" + "\n" + r"$K_{\mathrm{S}} \to \infty$",
               ha="center", va="center", color=label_color, 
               fontsize=10, fontweight='bold')
 
@@ -81,17 +82,19 @@ def create_substrate_ghost_canvas():
     ax2d.annotate("", xy=(x2, y_arrow), xytext=(x1, y_arrow),
                   arrowprops=dict(arrowstyle="<->", color=label_color, linewidth=1.2))
     
-    ax2d.text((x1 + x2) / 2.0, y_arrow - 0.20, r"$\ell_S \approx 10^{-35}\ \mathrm{m}$",
+    ax2d.text((x1 + x2) / 2.0, y_arrow - 0.20, r"$\ell_{\mathrm{S}} \approx 10^{-35}\ \mathrm{m}$",
               ha="center", va="top", fontsize=9, color=label_color)
 
-    # Academic Label (b) - Repositioned horizontally to -0.15 to sit outside the diagram frame
-    ax2d.text(-0.15, 0.95, r"$\mathbf{(b)}$", transform=ax2d.transAxes, 
-              fontsize=14, fontweight='bold', ha='left', va='top')
+    # ---------------- Layout & Absolute Labels ----------------
+    # Allocate explicit top margin (top=0.88) to clear space for decoupled panel headers
+    fig.subplots_adjust(left=0.06, right=0.98, bottom=0.1, top=0.88, wspace=0.15)
 
-    # ---------------- Layout ----------------
-    # Titles removed to adhere to the Strict Academic Standard.
-    # Defining descriptions entirely in the LaTeX figure caption.
-    fig.subplots_adjust(left=0.06, right=0.98, bottom=0.1, top=0.95, wspace=0.15)
+    # Decoupled absolute positioning guarantees identical horizontal alignment and prevents geometric collision
+    fig.text(0.06, 0.94, r"$\mathbf{(a)\ The\ Volumetric\ Core}$", 
+             fontsize=14, fontweight='bold', ha='left', va='top')
+    
+    fig.text(0.55, 0.94, r"$\mathbf{(b)\ The\ Lattice\ Projection}$", 
+             fontsize=14, fontweight='bold', ha='left', va='top')
 
     # ---------------- PDF Export Logic ----------------
     output_dir = "Figures"

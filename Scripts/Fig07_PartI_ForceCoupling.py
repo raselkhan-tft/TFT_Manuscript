@@ -36,17 +36,17 @@ def create_doppler_coupling_visual():
         y_distorted = y_verts + shear_distortion(x_v)
         ax.plot(x_line, y_distorted, color='#E0E0E0', lw=1.2, zorder=1)
 
-    # Highlight the primary Force Carrier Waveform
+    # Highlight the primary Force Carrier Waveform (Flagship Electric Blue)
     ax.plot(x_grid, shear_distortion(x_grid), color='#00CCFF', lw=4, alpha=0.8, zorder=2)
     
-    # Source Carrier Vector (c_E)
+    # Source Carrier Vector (c_E) - Updated to Black
     ax.annotate("", xy=(5.5, 2.5), xytext=(2.5, 2.5),
-                arrowprops=dict(arrowstyle="-|>", color="#0088CC", lw=3))
-    ax.text(4.0, 2.7, r"$c_E$ (Wave Speed)", color='#0088CC', 
+                arrowprops=dict(arrowstyle="-|>", color="black", lw=3))
+    ax.text(4.0, 2.7, r"$c_{\mathrm{E}}$ (Wave Speed)", color='black', 
             fontsize=12, fontweight='bold', ha='center', va='bottom')
             
     # Updated Force Carrier Label
-    ax.text(4.0, -2.5, "Force Carrier\n(Transverse Shear Wave)", color='#0088CC', 
+    ax.text(4.0, -2.5, "Force Carrier\n(Transverse Shear Wave)", color='black', 
             fontsize=11, fontweight='bold', ha='center', va='top')
 
     # -------------------------------------------------------
@@ -59,16 +59,17 @@ def create_doppler_coupling_visual():
     knot_x = particle_center + 0.8 * np.sin(3 * t + np.pi/4)
     knot_y = 0.8 * np.sin(2 * t)
     
-    ax.plot(knot_x, knot_y, color='#333333', lw=2, zorder=3)
-    ax.fill(knot_x, knot_y, color='#333333', alpha=0.2, zorder=3)
-    ax.scatter([particle_center], [0], color='#111111', s=50, zorder=4)
+    # Matter representation synced to flagship Maroon
+    ax.plot(knot_x, knot_y, color='#800000', lw=2, zorder=3)
+    ax.fill(knot_x, knot_y, color='#800000', alpha=0.2, zorder=3)
+    ax.scatter([particle_center], [0], color='#800000', s=50, zorder=4)
 
-    # Target Particle Vector (v_ext -> c_E)
+    # Target Particle Vector (v_ext -> c_E) - Updated to Navy Blue
     ax.annotate("", xy=(14.0, 2.5), xytext=(11.5, 2.5),
-                arrowprops=dict(arrowstyle="-|>", color="#CC0000", lw=3))
-    ax.text(12.75, 2.7, r"$v_{ext} \to c_E$", color='#CC0000', 
+                arrowprops=dict(arrowstyle="-|>", color="#000080", lw=3))
+    ax.text(12.75, 2.7, r"$v_{\mathrm{ext}} \to c_{\mathrm{E}}$", color='black', 
             fontsize=12, fontweight='bold', ha='center', va='bottom')
-    ax.text(particle_center, -2.5, "Target Mass (Matter)\nTopological Structural Knot", color='#333333', 
+    ax.text(particle_center, -2.5, "Target Mass (Matter)\nTopological Structural Knot", color='black', 
             fontsize=11, fontweight='bold', ha='center', va='top')
 
     # -------------------------------------------------------
@@ -77,16 +78,16 @@ def create_doppler_coupling_visual():
     wave_leading_edge = 5.5
     particle_trailing_edge = 10.5
     
-    # Draw the compressed relative vector (Right-pointing arrow only)
+    # Draw the compressed relative vector (Right-pointing arrow only) - Updated to Navy Blue
     ax.annotate("", xy=(particle_trailing_edge, 0), xytext=(wave_leading_edge, 0),
-                arrowprops=dict(arrowstyle="-|>", color="#FF8800", lw=2, linestyle='--'))
+                arrowprops=dict(arrowstyle="-|>", color="#000080", lw=2, linestyle='--'))
     
     # Relative Impact Velocity Label
     ax.text((wave_leading_edge + particle_trailing_edge) / 2, 0.2, 
-            r"Relative Impact Velocity $\approx 0$", color='#FF8800', 
+            r"Relative Impact Velocity $\approx 0$", color='black', 
             fontsize=11, fontweight='bold', ha='center', va='bottom')
     ax.text((wave_leading_edge + particle_trailing_edge) / 2, -0.2, 
-            r"($c_E - v_{ext}$)", color='#FF8800', 
+            r"($c_{\mathrm{E}} - v_{\mathrm{ext}}$)", color='black', 
             fontsize=12, fontweight='bold', ha='center', va='top')
 
     # -------------------------------------------------------

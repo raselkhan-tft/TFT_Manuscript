@@ -9,7 +9,7 @@ Standard physics models photon emission as a probabilistic point-particle creati
 
 The energy of the emitted photon is the volume integral of the released tension over the geometric bounds of the emission channel:
 \begin{equation}
-    E_\gamma = \int \delta\tau \, dV \approx \tau_{bulk} \cdot A_{chan} \cdot \Delta l
+    E_\gamma = \int \delta\tau \, dV \approx \tau_{bulk} \cdot A_{chan} \cdot \Delta r
 \end{equation}
 
 \textbf{Where:}
@@ -19,19 +19,19 @@ The energy of the emitted photon is the volume integral of the released tension 
         \tau_{bulk} = \frac{\hbar c_E}{r_{eff}^4}
     \end{equation}
     \item $A_{chan}$: The cross-sectional area of the micro-emission channel.
-    \item $\Delta l$: The physical drop length through the lattice, defined by the absolute spatial difference between the starting shell $r_n$ and ending shell $r_m$: $\Delta l = |r_n - r_m|$.
+    \item $\Delta r$: The physical drop length through the lattice, defined by the absolute spatial difference between the starting shell $r_n$ and ending shell $r_m$: $\Delta r = |r_n - r_m|$.
     \item $r_{eff}$: The operative geometric mean radius of the atomic drop: $r_{eff} = \sqrt{r_n r_m}$.
 \end{itemize}
 
 \subsection{Worked Hydrogen Examples}
-By tracing the exact geometric path of the electron drop, we can calculate the true cross-section of the emission channel ($A_{chan} = \frac{|\Delta E|}{\tau_{bulk} \Delta l}$).
+By tracing the exact geometric path of the electron drop, we can calculate the true cross-section of the emission channel ($A_{chan} = \frac{|\Delta E|}{\tau_{bulk} \Delta r}$).
 
 \vspace{0.2cm}
 \noindent \textbf{1. Lyman-$\alpha$ ($2 \to 1$):}
 \begin{itemize}
     \item \textbf{$\Delta E$:} $\approx 10.204 \text{ eV} \quad (1.6349 \times 10^{-18} \text{ J})$
     \item \textbf{Geometry:} $r_2 = 2.1167 \times 10^{-10} \text{ m}, \quad r_1 = 5.2918 \times 10^{-11} \text{ m}$
-    \item \textbf{Drop Parameters:} $\Delta l = 1.5875 \times 10^{-10} \text{ m}, \quad r_{eff} = 1.0584 \times 10^{-10} \text{ m}$
+    \item \textbf{Drop Parameters:} $\Delta r = 1.5875 \times 10^{-10} \text{ m}, \quad r_{eff} = 1.0584 \times 10^{-10} \text{ m}$
     \item \textbf{Local Tension:} $\tau_{bulk} \approx 2.5220 \times 10^{14} \text{ N/m}^2$
     \item \textbf{Channel Area:} $A_{chan} \approx 4.0835 \times 10^{-23} \text{ m}^2$
     \item \textbf{Resulting Radius:} $r_{chan} \approx 3.6057 \text{ pm} \quad (3.6057 \times 10^{-12} \text{ m})$
@@ -42,7 +42,7 @@ By tracing the exact geometric path of the electron drop, we can calculate the t
 \begin{itemize}
     \item \textbf{$\Delta E$:} $\approx 1.8897 \text{ eV} \quad (3.0276 \times 10^{-19} \text{ J})$
     \item \textbf{Geometry:} $r_3 = 4.7626 \times 10^{-10} \text{ m}, \quad r_2 = 2.1167 \times 10^{-10} \text{ m}$
-    \item \textbf{Drop Parameters:} $\Delta l = 2.6459 \times 10^{-10} \text{ m}, \quad r_{eff} = 3.1751 \times 10^{-10} \text{ m}$
+    \item \textbf{Drop Parameters:} $\Delta r = 2.6459 \times 10^{-10} \text{ m}, \quad r_{eff} = 3.1751 \times 10^{-10} \text{ m}$
     \item \textbf{Local Tension:} $\tau_{bulk} \approx 3.1112 \times 10^{12} \text{ N/m}^2$
     \item \textbf{Channel Area:} $A_{chan} \approx 3.6779 \times 10^{-22} \text{ m}^2$
     \item \textbf{Resulting Radius:} $r_{chan} \approx 10.820 \text{ pm} \quad (1.0820 \times 10^{-11} \text{ m})$

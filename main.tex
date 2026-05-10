@@ -69,7 +69,7 @@ In Part III, we project these solid-state mechanics to global cosmology, formall
 
 % --- OPTIONAL OVERALL ROADMAP ---
 \chapter*{Prologue: The Architecture of the Theory}
-\addcontentsline{toc}{chapter}{Prologue: The Architecture of the Theory}
+\addcontentsline{toc}{chapter}{\protect\numberline{}Prologue: The Architecture of the Theory}
 
 Physics currently suffers from a fundamental schism: the macroscopic universe is governed by the continuous geometry of General Relativity, while the microscopic universe is governed by the probabilistic mathematics of Quantum Mechanics. Tension Field Theory (TFT) resolves this schism by abandoning abstract geometry and probabilistic nature entirely in favor of strict continuum mechanics.
 
@@ -100,7 +100,6 @@ Because this framework requires a foundational rebuild of physical law from the 
 \include{Trilogy/PartII/10_Grand_Unification}
 \include{Trilogy/PartII/11_Hydrogen_Atom}
 \include{Trilogy/PartII/12_Falsifiability}
-%\include{Trilogy/PartII/13_PartII_Conclusion}
 
 % --- TRILOGY: PART III ---
 \part{Cosmic Architecture and Kinematics: The Big Rupture, the Hubble Artifact, and the Mechanical Cycle}
@@ -116,12 +115,9 @@ Because this framework requires a foundational rebuild of physical law from the 
 % ==========================================
 % BACKMATTER (Pre-Appendices)
 % ==========================================
-% \include{Trilogy/Backmatter/22_Main_Equations}
-% \include{Trilogy/Backmatter/23_Notation}
-% \include{Trilogy/Backmatter/24_Glossary}
 
 % --- Core Reference Appendices (Unnumbered) ---
-\include{Appendices/app_master_equations}
+\include{Appendices/app_consolidated_equations}
 \include{Appendices/app_notation}
 \include{Appendices/app_glossary}
 
@@ -129,6 +125,12 @@ Because this framework requires a foundational rebuild of physical law from the 
 % APPENDICES
 % ==========================================
 \cleardoublepage
+
+% --- The TOC Divider ---
+\chapter*{Appendices}
+\addcontentsline{toc}{chapter}{\protect\numberline{}Appendices}
+
+% --- Switch to Lettered Appendix Mode ---
 \appendix
 \renewcommand{\thechapter}{\AlphAlph{\value{chapter}}}
 
@@ -147,10 +149,9 @@ Because this framework requires a foundational rebuild of physical law from the 
 \include{Appendices/app_optical_relativity}
 \include{Appendices/app_phase_transition}
 \include{Appendices/app_information_paradox}
-\include{Appendices/app_vacuum_damping}
+\include{Appendices/app_physical_wavefunction}
 % Force LaTeX to skip the letter 'O'
 \stepcounter{chapter}
-\include{Appendices/app_physical_wavefunction}
 \include{Appendices/app_quantum_damping}
 \include{Appendices/app_photon_hamiltonian}
 \include{Appendices/app_quantum_tunneling}
@@ -166,6 +167,7 @@ Because this framework requires a foundational rebuild of physical law from the 
 \include{Appendices/app_fine_structure}
 \include{Appendices/app_baryon_asymmetry}
 \include{Appendices/app_lattice_annealing}
+\include{Appendices/app_vacuum_damping}
 \include{Appendices/app_cosmic_redshift}
 \include{Appendices/app_time_dilation}
 \include{Appendices/app_hubble_diagram}
@@ -174,11 +176,23 @@ Because this framework requires a foundational rebuild of physical law from the 
 \include{Appendices/app_cosmic_energy_budget}
 
 % ==========================================
+% ACKNOWLEDGEMENTS & AI DISCLOSURE
+% ==========================================
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\protect\numberline{}Acknowledgements and AI Disclosure}
+\chapter*{Acknowledgements and AI Disclosure}
+
+I acknowledge the use of Chat GPT and Google Gemini to expedite the latter stages of this manuscript's development (2023--2026). The AI functioned strictly as a computational and typesetting assistant, utilized to generate Python scripts for Figures, execute complex formatting, and serve as a conversational tool to explore and validate mathematical derivations. All foundational postulates, physical interpretations, and final mathematical proofs of Tension Field Theory are my sole original work, and I take full responsibility for the accuracy and integrity of this publication.
+
+Furthermore, Tension Field Theory represents the culmination of a three-decade conceptual incubation originating in my childhood, followed by seven years of intensive, rigorous mathematical formalization. This critical final phase of development would have been entirely impossible without the profound patience, sacrifice, and unwavering support of my wife and of our children. I extend my deepest gratitude to my family for affording me the time, space, and quiet necessary to bring this lifelong endeavor to its conclusion.
+
+% ==========================================
 % BIBLIOGRAPHY
 % ==========================================
 \cleardoublepage
-\phantomsection % <--- THE MAGIC FIX
-\addcontentsline{toc}{chapter}{Bibliography}
+\phantomsection
+\addcontentsline{toc}{chapter}{\protect\numberline{}Bibliography}
 \bibliographystyle{unsrt} 
 \bibliography{references}
 
@@ -186,8 +200,8 @@ Because this framework requires a foundational rebuild of physical law from the 
 % INDEX
 % ==========================================
 %\cleardoublepage
-%\phantomsection % <--- THE MAGIC FIX
-%\addcontentsline{toc}{chapter}{Index}
+%\phantomsection
+%\addcontentsline{toc}{chapter}{\protect\numberline{}Index}
 %\printindex
 
 \end{document}

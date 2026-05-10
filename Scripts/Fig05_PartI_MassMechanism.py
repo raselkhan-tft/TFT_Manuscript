@@ -33,7 +33,8 @@ amp_electron = 7.0e-33 # m
 # -----------------------
 # Colors
 # -----------------------
-NODE_FILL = "#7f95a5"          # blue-grey (Solid sphere color)
+NODE_FACE = "#F5F5F5"          # Light gray (Solid sphere face)
+NODE_EDGE = "#00CCFF"          # Electric Blue (Matching FCC flagship geometry)
 FLUID_FILL = "#b2bfc9"         # Swept volume ring
 WIRE = "#c9c9c9"               # Light grey dashed lattice
 SHELL = "black"
@@ -76,7 +77,8 @@ def oscillation_arrow(ax, start, end, lw=1.2, ms=8):
 # Figure / axes
 # -----------------------
 fig, axes = plt.subplots(1, 2, figsize=(13, 6))
-fig.subplots_adjust(top=0.92, bottom=0.08, left=0.05, right=0.95, wspace=0.2)
+# Adjusted top margin to 0.85 to provide ample clearance for the extended labels
+fig.subplots_adjust(top=0.85, bottom=0.08, left=0.05, right=0.95, wspace=0.2)
 
 # ============================================================
 # PANEL (a) — "SHOUT" (Top Quark)
@@ -93,8 +95,8 @@ outer_r, inner_r = node_r + r_amp_val, node_r - r_amp_val
 
 # Swept Volume
 ax.add_patch(Circle(center_left, outer_r, facecolor=FLUID_FILL, edgecolor='none', zorder=2.5))
-# Core Node
-ax.add_patch(Circle(center_left, node_r, facecolor=NODE_FILL, edgecolor='black', lw=1.5, zorder=3))
+# Core Node (Reduced lw from 2.5 to 1.2 for thinner cyan ring)
+ax.add_patch(Circle(center_left, node_r, facecolor=NODE_FACE, edgecolor=NODE_EDGE, lw=1.2, zorder=3))
 # Boundaries
 ax.add_patch(Circle(center_left, outer_r, fill=False, edgecolor=SHELL, lw=1.0, ls=':', zorder=4))
 ax.add_patch(Circle(center_left, inner_r, fill=False, edgecolor=SHELL, lw=1.0, ls=':', zorder=4))
@@ -106,8 +108,9 @@ for th in angles:
     end   = center_left + outer_r * np.array([np.cos(th), np.sin(th)])
     oscillation_arrow(ax, start, end, lw=1.2, ms=8)
 
-# Academic Label (a)
-ax.text(0.0, 3.6, r"$\mathbf{(a)}$", fontsize=16, fontweight='bold', ha='left', va='top')
+# Academic Label (a) - Decoupled using transAxes to strictly pin it above the rendering geometry
+ax.text(0.0, 1.02, r"$\mathbf{(a)\ The\ Top\ Quark\ (Vibrational\ Limit\ Regime)}$", 
+        transform=ax.transAxes, fontsize=14, fontweight='bold', ha='left', va='bottom', color='black')
 
 # Geometric Labels (Clean Tier 2)
 # Adjusted V_eff target radius to terminates the arrow tip inside the shadow zone (swept volume ring)
@@ -147,17 +150,21 @@ tiny_amp = 0.04
 outer_r_tiny, inner_r_tiny = node_r + tiny_amp, node_r - tiny_amp
 
 ax.add_patch(Circle(center_right, outer_r_tiny, facecolor=FLUID_FILL, edgecolor='none', zorder=2.5))
-ax.add_patch(Circle(center_right, node_r, facecolor=NODE_FILL, edgecolor='black', lw=1.5, zorder=3))
+# Core Node (Reduced lw from 2.5 to 1.2 for thinner cyan ring)
+ax.add_patch(Circle(center_right, node_r, facecolor=NODE_FACE, edgecolor=NODE_EDGE, lw=1.2, zorder=3))
 ax.add_patch(Circle(center_right, outer_r_tiny, fill=False, edgecolor=SHELL, lw=1.0, ls=':', zorder=4))
 ax.add_patch(Circle(center_right, inner_r_tiny, fill=False, edgecolor=SHELL, lw=1.0, ls=':', zorder=4))
 
-# Academic Label (b)
-ax.text(0.0, 3.6, r"$\mathbf{(b)}$", fontsize=16, fontweight='bold', ha='left', va='top')
+# Academic Label (b) - Decoupled using transAxes to strictly pin it above the rendering geometry
+ax.text(0.0, 1.02, r"$\mathbf{(b)\ The\ Electron\ (High-Resolution\ Linear\ Regime)}$", 
+        transform=ax.transAxes, fontsize=14, fontweight='bold', ha='left', va='bottom', color='black')
 
 # Internal Signal Visuals
 ax.plot([center_right[0] - node_r, center_right[0] + node_r], [center_right[1], center_right[1]], color='black', lw=1.2, ls='--', zorder=5)
-ax.text(center_right[0], center_right[1] - 0.12, r"$2r_D$", fontsize=12, fontweight='bold', ha='center', va='top')
-ax.text(center_right[0], center_right[1] + 0.12, r"$f_{\mathrm{mass}} = c_E / 2r_D$", fontsize=11, fontweight='bold', ha='center', va='bottom')
+
+# Subscripts strictly formatted for upright Roman standards
+ax.text(center_right[0], center_right[1] - 0.12, r"$2r_{\mathrm{D}}$", fontsize=12, fontweight='bold', ha='center', va='top')
+ax.text(center_right[0], center_right[1] + 0.12, r"$f_{\mathrm{m}} = c_{\mathrm{E}} / 2r_{\mathrm{D}}$", fontsize=11, fontweight='bold', ha='center', va='bottom')
 
 # Tier 2 Labels
 ax.annotate("Internal Wave Signal", 
@@ -180,7 +187,7 @@ ax.set_xlim(-0.1, 3.8); ax.set_ylim(-0.5, 3.8)
 output_dir = "Figures"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
-pdf_filename = os.path.join(output_dir, "Fig04_PartI_Massmechanism.pdf")
+pdf_filename = os.path.join(output_dir, "Fig05_PartI_Massmechanism.pdf")
 
 try:
     plt.savefig(pdf_filename, format='pdf', bbox_inches='tight')
