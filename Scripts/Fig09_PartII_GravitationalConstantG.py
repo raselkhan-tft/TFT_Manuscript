@@ -53,12 +53,25 @@ def create_publication_schematic():
             ax.plot([x_segs[i], x_segs[i+1]], [y, y], color='black', lw=1.0, alpha=alpha_v, zorder=2)
             
     # Substrate Labels
-    ax.text(50, 17.5, r"$\mathbf{A_S}$", ha='center', va='center', fontsize=14, zorder=4)
-    ax.text(50, 5, r"$\mathbf{Latent\ Substrate}$", ha='center', va='center', fontsize=20, zorder=4)
+    ax.text(50, 17.5, r"$\mathbf{A_{\mathrm{S}}}$", ha='center', va='center', fontsize=14, zorder=4)
+    ax.text(50, 3, r"$\mathbf{Latent\ Substrate}$", ha='center', va='center', fontsize=20, zorder=4)
+    ax.annotate("", xy=(50, 9.5), xytext=(50, 4.5), 
+                arrowprops=dict(arrowstyle="-|>", lw=1.5, color="black", mutation_scale=15), zorder=4)
     
-    # Length scale annotation
-    ax.annotate(r"$\ell_S \approx 10^{-35}\ \mathrm{m}$", xy=(grid_end_x - 5, 15), xytext=(85, 15),
-                arrowprops=dict(arrowstyle="->", lw=1.5, color='black'), va='center', fontsize=16)
+    # Formal Scale Indicator (Dimension Line)
+    # Moved to the third square from the right, safely below the grid geometry
+    # Grid limits: 87.5 (Right). Square 1: 82.5-87.5 | Square 2: 77.5-82.5 | Square 3: 72.5-77.5
+    sq3_left = 72.5
+    sq3_right = 77.5
+    sq3_center = 75.0
+    y_arrow = 8.0
+    
+    ax.plot([sq3_left, sq3_left], [y_arrow - 0.5, y_arrow + 0.5], color='black', lw=1.0, zorder=4)
+    ax.plot([sq3_right, sq3_right], [y_arrow - 0.5, y_arrow + 0.5], color='black', lw=1.0, zorder=4)
+    ax.annotate("", xy=(sq3_left, y_arrow), xytext=(sq3_right, y_arrow),
+                arrowprops=dict(arrowstyle="<|-|>", lw=1.0, color='black', mutation_scale=10), zorder=4)
+    ax.text(sq3_center, y_arrow - 0.8, r"$\ell_{\mathrm{S}} \approx 10^{-35}\ \mathrm{m}$", 
+            ha='center', va='top', fontsize=12, color='black', zorder=4)
 
     # =======================================================
     # 2. PROJECTION FUNNEL (Middle)
@@ -77,50 +90,56 @@ def create_publication_schematic():
     ax.add_patch(funnel)
     
     # Funnel boundary lines (DOTTED starting from two sides/corners of the AS square)
-    ax.plot([47.5, funnel_left_x], [20, ellipse_y], color='black', lw=1.5, linestyle=':', zorder=2)
-    ax.plot([52.5, funnel_right_x], [20, ellipse_y], color='black', lw=1.5, linestyle=':', zorder=2)
+    ax.plot([47.5, funnel_left_x], [20, ellipse_y], color='black', lw=1.8, linestyle=':', zorder=2)
+    ax.plot([52.5, funnel_right_x], [20, ellipse_y], color='black', lw=1.8, linestyle=':', zorder=2)
     
-    # Central kinematic flow vector (Shifted up to make room for G equation below)
-    ax.annotate("", xy=(50, 55), xytext=(50, 32), 
-                arrowprops=dict(arrowstyle="->", lw=2.5, color="black"), zorder=3)
-        
-    # Label for cE^2 positioned centrally on the vector
-    ce_label = r"$\text{Kinematic Energy Budget}$" + "\n" + r"$(c_E^2)$"
-    ax.text(50, 43.5, ce_label, fontsize=14, fontweight='bold', color="black", ha='center', va='center', zorder=4,
-            bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=3))
+    # Central kinematic flow vector & Label
+    # Shifted downward to increase nucleon gap by 30%
+    ce_label = r"$\text{Kinematic Energy Budget}$" + "\n" + r"$(c_{\mathrm{E}}^2)$"
+    ax.text(50, 55.7, ce_label, fontsize=14, fontweight='bold', color="black", ha='center', va='center', zorder=4)
+    
+    # Bottom segment of broken vector (perfectly symmetric around label)
+    ax.plot([50, 50], [43.7, 50.7], color="black", lw=2.5, zorder=3)
+    # Top segment of broken vector with stealth arrowhead
+    ax.annotate("", xy=(50, 67.7), xytext=(50, 60.7), 
+                arrowprops=dict(arrowstyle="-|>", lw=2.5, color="black", mutation_scale=15), zorder=3)
 
-    # Emergence of Gravity Equation (Centered directly on top of Substrate)
-    g_eq = r"$G = \dfrac{c_E^2 A_S}{J_N}$"
-    ax.text(50, 22.0, g_eq, ha='center', va='bottom', fontsize=22, color='black',
-            bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=3), zorder=10)
+    # Emergence of Gravity Equation
+    # Shifted upward to reduce gap to leader tail by 50%
+    g_eq = r"$G = \dfrac{c_{\mathrm{E}}^2 A_{\mathrm{S}}}{J_{\mathrm{N}}}$"
+    ax.text(50, 34.7, g_eq, ha='center', va='bottom', fontsize=22, color='black', zorder=10)
 
     # =======================================================
     # 3. Inertial MASS (NUCLEON TORSION) ELLIPSE (Top)
     # =======================================================
-    # Simple hollow ellipse (No shading)
+    # Toroidal Projection (Filled Annulus)
+    # Facecolor uses RGBA (0.545, 0.0, 0.0, 0.15) for a light, semi-transparent maroon
     ax.add_patch(patches.Ellipse((50, ellipse_y), ellipse_w, ellipse_h, 
-                                 facecolor='white', edgecolor='black', lw=2.5, zorder=3))
+                                 facecolor=(0.545, 0.0, 0.0, 0.15), edgecolor='#8B0000', lw=1.8, zorder=3))
     
-    # Center dot
-    ax.plot(50, ellipse_y, 'ko', markersize=5, zorder=5)
+    # Central white hole (Singular Core)
+    hole_w = ellipse_w * 0.25
+    hole_h = ellipse_h * 0.25
+    ax.add_patch(patches.Ellipse((50, ellipse_y), hole_w, hole_h, 
+                                 facecolor='white', edgecolor='#8B0000', lw=1.2, zorder=4))
     
-    # Torsional Shear Vector (Curved arrow sweeping along outer perimeter)
+    # Torsional Shear Vector (Curved stealth arrow sweeping along outer perimeter)
     ax.annotate("", xy=(65, 81.5), xytext=(35, 81.5),
-                arrowprops=dict(arrowstyle="->", color="black", lw=2.0, connectionstyle="arc3,rad=-0.3"), zorder=6)
+                arrowprops=dict(arrowstyle="-|>", color="#8B0000", lw=2.0, connectionstyle="arc3,rad=-0.3", mutation_scale=15), zorder=6)
     
     # Updated Nucleon Title
     ax.text(50, 87, r"$\mathbf{Inertial\ Mass\ (Nucleon\ Torsion)}$", ha='center', va='bottom', fontsize=18)
     
-    # Radius dimension line (Internal)
+    # Radius dimension line (Internal stealth arrow)
     ax.annotate("", xy=(50 + ellipse_w/2, ellipse_y), xytext=(50, ellipse_y), 
-                arrowprops=dict(arrowstyle="->", lw=1.5, color='black'), zorder=5)
-    ax.text(50 + ellipse_w/4, ellipse_y + 1, r"$r_N$", fontsize=16, ha='center', va='bottom')
+                arrowprops=dict(arrowstyle="-|>", lw=1.5, color='black', mutation_scale=12), zorder=6)
+    ax.text(50 + ellipse_w/4, ellipse_y + 1, r"$r_{\mathrm{N}}$", fontsize=16, ha='center', va='bottom', zorder=6)
     
-    # rho N placed inside the circle
-    ax.text(42, ellipse_y - 2.5, r"$\rho_N$", color="black", fontsize=16, fontweight='bold', zorder=6)
+    # rho N placed inside the circle (Legible over semi-transparent fill)
+    ax.text(42, ellipse_y - 2.5, r"$\rho_{\mathrm{N}}$", color="black", fontsize=16, fontweight='bold', zorder=6)
 
-    # Torsion Equation (Moved slightly left to reduce gap to arrow tip by 20%)
-    jn_eq = r"$J_N = \rho_N r_N^4$"
+    # Torsion Equation
+    jn_eq = r"$J_{\mathrm{N}} = \rho_{\mathrm{N}} r_{\mathrm{N}}^4$"
     ax.text(66.6, 81.5, jn_eq, ha='left', va='center', fontsize=22, color='black', zorder=10)
 
     # =======================================================
@@ -135,7 +154,7 @@ def create_publication_schematic():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-    pdf_filename = os.path.join(output_dir, "Fig08_PartII_GravitationalConstantG.pdf")
+    pdf_filename = os.path.join(output_dir, "Fig09_PartII_GravitationalConstantG.pdf")
     
     try:
         # Saving as high-fidelity vector PDF for publication

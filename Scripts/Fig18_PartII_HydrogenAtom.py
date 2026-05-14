@@ -307,7 +307,7 @@ def create_tft_atom_blueprint_final():
     # =======================================================
     # ZONE 4: EXTERNAL NEUTRALITY
     # =======================================================
-    neutrality_text = "External Neutrality\n" + r"$\Sigma\chi = 0$"
+    neutrality_text = "External Neutrality\n" + r"$\sum\chi = 0$"
     ax.text(82, 15, neutrality_text, ha='center', va='center', color='black', 
             fontsize=10, family='serif', fontweight='bold', bbox=mask_props)
 

@@ -228,7 +228,7 @@ def create_black_hole_rupture_visual():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-    pdf_filename = os.path.join(output_dir, "Fig23_PartII_BHGrowth.pdf")
+    pdf_filename = os.path.join(output_dir, "Fig12_PartII_BHGrowth.pdf")
     
     try:
         plt.savefig(pdf_filename, format='pdf', bbox_inches='tight')

@@ -13,7 +13,7 @@ To derive the governing equation, we begin with the standard time-dependent Schr
 \end{equation}
 
 \subsection{Kinetic Derivation of the Constitutive Law ($\Gamma$)}
-Before defining $W$, we must derive the physical damping rate ($\Gamma$) from fundamental kinetic collision theory. As the pilot wave propagates, it sweeps through a geometric volume of space containing localized structural defects (the atomic lattice of the dense matter sink).
+To define the non-Hermitian potential $W$, the physical damping rate ($\Gamma$) is first derived from fundamental kinetic collision theory. As the pilot wave propagates, it sweeps through a geometric volume of space containing localized structural defects (the atomic lattice of the dense matter sink).
 
 The differential volume ($dV$) swept by a wave interface of interaction area $\sigma$ moving at local kinematic velocity $c_{\mathrm{P}}$ in time $dt$ is:
 \begin{equation}
@@ -31,9 +31,9 @@ The local Quantum Damping Rate ($\Gamma$) is defined as the collision frequency 
 \end{equation}
 
 \subsection{The Madelung Form and the Topological Sink}
-To translate this friction into the quantum potential $W$, we apply the Madelung transformation, defining the wavefunction by its physical amplitude ($\sqrt{\rho}$) and its mechanical phase action ($S$):
+To translate this friction into the quantum potential $W$, we utilize the macroscopic physical order parameter of the SGF established in \hyperref[app:physical_wavefunction]{Appendix \ref*{app:physical_wavefunction}}. Defining the wavefunction by its physical amplitude ($\sqrt{\rho}$) and its mechanical phase action ($S$):
 \begin{equation}
-    \Psi = \sqrt{\rho} e^{iS/\hbar}
+\Psi = \sqrt{\rho} e^{iS/\hbar}
 \end{equation}
 
 Taking the natural logarithm of both sides isolates the real amplitude from the imaginary phase:
@@ -66,15 +66,15 @@ Substituting this derived potential $W$ back into the master equation yields the
 Unlike Fermions, the photon is an untethered transverse shear wave possessing zero rest mass ($m = 0$). It does not drag a topological core through the bulk volume; it strictly shears the 2D surface interface of the FCC nodes. We derive its propagation directly from the classical continuum mechanics of the TFT substrate.
 
 \subsection{The Newtonian Continuum}
-For the continuous 2D surface interface of the SGF, we apply Newton's second law ($F = ma$) to a differential lattice element undergoing transverse phase displacement $\mathbf{A}$.
+For the continuous 2D surface interface of the SGF, we apply Newton's second law to a differential lattice element undergoing transverse phase displacement $\mathbf{A}$.
 
-Natively employing $\mu_{\mathrm{D}}$ (the effective 2D interface inertia) and $\tau_{\mathrm{D}}$ (the baseline shear stiffness), the local acceleration is:
+Natively employing $\mu_{\mathrm{D}}$ (the effective 2D interface inertia) and $\tau_{\mathrm{D}}$ (the baseline lattice surface tension), the local equation of motion per unit area is:
 \begin{equation}
     \mu_{\mathrm{D}} \frac{\partial^2 \mathbf{A}}{\partial t^2} = \tau_{\mathrm{D}} \frac{\partial^2 \mathbf{A}}{\partial x^2} + F_{\mathrm{fr}}
 \end{equation}
 
 \subsection{The Visco-Elastic Drag Force ($F_{\mathrm{fr}}$)}
-As the solid FCC nodes oscillate transversely, they experience visco-elastic friction ($F_{\mathrm{fr}}$) against the interstitial condensate. In fluid dynamics, this shear friction is proportional to the transverse velocity of the node ($\frac{\partial \mathbf{A}}{\partial t}$). We define the kinematic frictional force per unit inertia strictly using the generalized local damping rate ($\Gamma$):
+As the solid FCC nodes oscillate transversely, they experience visco-elastic friction ($F_{\mathrm{fr}}$) against the interstitial condensate. In fluid dynamics, this shear friction is proportional to the transverse velocity of the node ($\frac{\partial \mathbf{A}}{\partial t}$). The kinematic frictional force per unit interface area is defined strictly using the generalized local damping rate ($\Gamma$):
 \begin{equation}
     F_{\mathrm{fr}} = -\mu_{\mathrm{D}} \Gamma \frac{\partial \mathbf{A}}{\partial t}
 \end{equation}
@@ -90,13 +90,13 @@ Dividing the entire equation by the interface inertia $\mu_{\mathrm{D}}$ gives:
     \frac{\partial^2 \mathbf{A}}{\partial t^2} = \left(\frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}}\right) \frac{\partial^2 \mathbf{A}}{\partial x^2} - \Gamma \frac{\partial \mathbf{A}}{\partial t}
 \end{equation}
 
-We recognize the TFT identity for the squared elastic wave speed ($c_{\mathrm{E}}^2 = \tau_{\mathrm{D}} / \mu_{\mathrm{D}}$). Generalizing the 1D spatial derivative ($\frac{\partial^2}{\partial x^2}$) to the 3D Laplacian operator ($\nabla^2$), we establish the general damped wave equation for the vacuum continuum:
+Recognizing the TFT identity for the squared elastic wave speed ($c_{\mathrm{E}}^2 = \tau_{\mathrm{D}} / \mu_{\mathrm{D}}$) and generalizing the 1D spatial derivative ($\frac{\partial^2}{\partial x^2}$) to the 3D Laplacian operator ($\nabla^2$), the general damped wave equation for the vacuum continuum is established as:
 \begin{equation}
     \frac{\partial^2 \mathbf{A}}{\partial t^2} = c_{\mathrm{E}}^2 \nabla^2 \mathbf{A} - \Gamma \frac{\partial \mathbf{A}}{\partial t}
 \end{equation}
 
 \subsection{Analytical Solution for Temporal Amplitude Decay}
-To mathematically prove how this generalized visco-elastic differential equation governs the wave's amplitude over time, we apply the standard separation of variables, assuming the plane wave solution can be factored into independent spatial and temporal components:
+The temporal amplitude evolution governed by the visco-elastic differential equation is isolated via the standard separation of variables, assuming the plane wave solution can be factored into independent spatial and temporal components:
 \begin{equation}
     \mathbf{A}(\mathbf{x}, t) = X(\mathbf{x}) T(t)
 \end{equation}
@@ -158,4 +158,4 @@ Because the total mechanical energy of any classical wave is directly proportion
     E(t) \propto \left( \mathbf{A}_0 e^{-\frac{\Gamma_{\mathrm{D}}}{2} t} \right)^2 = E_0 e^{-\Gamma_{\mathrm{D}} t}
 \end{equation}
 
-This explicit derivation validates that substituting microscopic visco-elastic amplitude attenuation intrinsically generates the exact, non-circular mathematical foundation required for the macroscopic cosmological energy decay ($\frac{dE}{dt} = -\Gamma_{\mathrm{D}} E$) derived in Part III.
+This explicit derivation establishes the physical mechanism for continuous amplitude attenuation, providing the mathematical foundation for the macroscopic cosmological energy decay ($\frac{dE}{dt} = -\Gamma_{\mathrm{D}} E$) derived in Part III.

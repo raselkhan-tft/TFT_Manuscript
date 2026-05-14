@@ -53,29 +53,31 @@ def create_gravitational_saturation_plot():
     log_rho_slope = slope_m * log_r + intercept_b
     rho_slope = 10**log_rho_slope
     
-    plt.plot(r_slope, rho_slope, 'b-', linewidth=2, label=r'Elastic Compression ($\rho \propto r^{-4}$)')
+    # Updated to deep authoritative ocean blue (#0072B2)
+    plt.plot(r_slope, rho_slope, color='#0072B2', linestyle='-', linewidth=2, label=r'Elastic Compression ($\rho \propto r^{-4}$)')
     
     # 2. The Phase Jump (Vertical at r_QG)
-    plt.plot([r_QG, r_QG], [rho_QG, rho_S], 'r-', linewidth=3, label='Phase Transition Jump')
+    # Updated to rich vermillion/rust (#D55E00)
+    plt.plot([r_QG, r_QG], [rho_QG, rho_S], color='#D55E00', linestyle='-', linewidth=3, label='Phase Transition Jump')
     
     # 3. The Hard Floor (Horizontal from r_QG to r_end)
-    plt.plot([r_QG, r_end], [rho_S, rho_S], 'k-', linewidth=3, label=r'Substrate Limit ($\rho_S$)')
+    plt.plot([r_QG, r_end], [rho_S, rho_S], 'k-', linewidth=3, label=r'Substrate Limit ($\rho_{\mathrm{S}}$)')
     
     # 4. The Ghost Line (Yield Limit)
     r_ghost = np.logspace(np.log10(r_QG), np.log10(r_G), 10)
     rho_ghost = rho_QG * (r_QG / r_ghost)**4
     plt.plot(r_ghost, rho_ghost, 'k--', alpha=0.5)
     
-    # Mark the Theoretical Yield Point
-    plt.scatter([r_G], [rho_G], color='red', marker='x', s=100, zorder=5)
+    # Mark the Theoretical Yield Point (Updated to Vermillion/Rust)
+    plt.scatter([r_G], [rho_G], color='#D55E00', marker='x', s=100, zorder=5)
     
-    # Labels for Yield Limit
-    plt.text(r_G * 0.3, rho_G, r'$(r_G, \rho_G)$', color='red', fontsize=10, va='bottom', ha='left')
-    plt.text(r_G * 0.3, rho_G / 50, 'Yield Limit', color='red', fontsize=10, va='top', ha='left')
+    # Labels for Yield Limit (Updated to Vermillion/Rust)
+    plt.text(r_G * 0.3, rho_G, r'$(r_{\mathrm{G}}, \rho_{\mathrm{G}})$', color='#D55E00', fontsize=10, va='bottom', ha='left')
+    plt.text(r_G * 0.3, rho_G / 50, 'Yield Limit', color='#D55E00', fontsize=10, va='top', ha='left')
     
     # Axis Projections
     points_x_only = [
-        (r_N, rho_N, r'$r_N$') # Using actual rho_N
+        (r_N, rho_N, r'$r_{\mathrm{N}}$') # Using actual rho_N
     ]
     
     for r_val, rho_val, label_r in points_x_only:
@@ -94,7 +96,7 @@ def create_gravitational_saturation_plot():
     label_y_position = -0.02 
     
     plt.text(r_QG * label_x_multiplier, label_y_position, 
-             r'$r_{QG} \approx$', color='black', ha='center', va='top', 
+             r'$r_{\mathrm{QG}} \approx$', color='black', ha='center', va='top', 
              transform=ax.get_xaxis_transform())
     # ---------------------------------------------------------
     
@@ -102,7 +104,7 @@ def create_gravitational_saturation_plot():
     
     # Move rho_QG label slightly ABOVE the line (va='bottom')
     # Applied a larger vertical multiplier (5.0x) on the log scale to create a visible upward nudge
-    plt.text(xmin_visual_limit * 1.5, rho_QG * 5.0, r'$\rho_{QG}$', color='black', ha='right', va='bottom')
+    plt.text(xmin_visual_limit * 1.5, rho_QG * 5.0, r'$\rho_{\mathrm{QG}}$', color='black', ha='right', va='bottom')
     
     # Slope annotation
     r_text = 1e-22
@@ -110,7 +112,9 @@ def create_gravitational_saturation_plot():
     log_r_text = np.log10(r_text)
     log_rho_text_actual = slope_m * log_r_text + intercept_b
     rho_text = 10**log_rho_text_actual
-    plt.text(r_text, rho_text * 10, r'$\rho \propto r^{-4}$', color='blue', fontsize=12, rotation=30, ha='center', va='bottom')
+    
+    # Updated text color to Ocean Blue
+    plt.text(r_text, rho_text * 10, r'$\rho \propto r^{-4}$', color='#0072B2', fontsize=12, rotation=30, ha='center', va='bottom')
     
     # Limits
     plt.ylim(ymin_limit, ymax_limit)

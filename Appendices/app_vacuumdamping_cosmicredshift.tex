@@ -37,19 +37,19 @@ To map this to astronomical observations, we substitute the spatial propagation 
 
 Integrating this over propagation distance yields the compounding spatial decay function:
 \begin{equation}
-    E_{\text{obs}} = E_{\text{em}} e^{-\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
+    E_{\text{obs}} = E_{\text{emit}} e^{-\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
 \end{equation}
 
 \section{Deriving the Redshift Factor ($1+z$)}
 Because the energy of a photon is inversely proportional to its wavelength ($E \propto 1/\lambda$), we substitute wavelength into the spatial decay function:
 \begin{equation}
-    \frac{1}{\lambda_{\text{obs}}} = \frac{1}{\lambda_{\text{em}}} e^{-\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
+    \frac{1}{\lambda_{\text{obs}}} = \frac{1}{\lambda_{\text{emit}}} e^{-\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
 \end{equation}
 \begin{equation}
-    \lambda_{\text{obs}} = \lambda_{\text{em}} e^{\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
+    \lambda_{\text{obs}} = \lambda_{\text{emit}} e^{\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
 \end{equation}
 
-The standard astronomical definition of redshift is $1+z = \lambda_{\text{obs}}/\lambda_{\text{em}}$. Substituting our derived wavelength yields the absolute Visco-Elastic Drag Equation:
+The standard astronomical definition of redshift is $1+z = \lambda_{\text{obs}}/\lambda_{\text{emit}}$. Substituting our derived wavelength yields the absolute Visco-Elastic Drag Equation:
 \begin{equation}
     1+z = e^{\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
 \end{equation}

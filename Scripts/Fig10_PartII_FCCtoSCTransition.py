@@ -88,16 +88,38 @@ def create_phase_transition_figure():
                                 alpha=1.0, linewidth=0.3, zorder=2)
         ax.add_patch(circle)
 
+    # --- SEGREGATED MATTER (Maroon Gaps) ---
+    # Width reduced by 50% (to 0.25) so it explicitly ends where the adjacent FCC nodes touch
+    matter_fill = patches.Rectangle((9.75, 0.5), 0.25, 9.0, facecolor='#8B0000', edgecolor='none', zorder=1.5)
+    ax.add_patch(matter_fill)
+
+    # Precise geometrical target for the gap midpoint between the topmost intersecting FCC nodes
+    # Node A (row=5, col=5): cx=10.15, cy=8.0 | Node B (row=6, col=5): cx=9.30, cy=9.5
+    # Midpoint x = 9.725, y = 8.75. Pushed slightly right into the maroon fill block (x=9.80).
+    gap_x = 9.80  
+    gap_y = 8.75  
+
+    # Annotation pointing to the precisely derived segregated matter crevice
+    ax.annotate("Segregated\nMatter", xy=(gap_x, gap_y), xytext=(7.5, gap_y),
+                arrowprops=dict(arrowstyle="-|>", color="black", lw=1.5, mutation_scale=12),
+                color='black', fontsize=11, fontweight='bold', ha='right', va='center',
+                bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=2), zorder=10)
+
+    # Specific scale dimension label for the FCC Node (Lower Left)
+    ax.text(0.5, 0.5, r"$\mathbf{FCC\ Node}$" + "\n" + r"($r_{\mathrm{D}} \approx 10^{-26}\ \mathrm{m}$)", 
+            color='black', fontsize=11, ha='left', va='bottom',
+            bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=2), zorder=10)
+
     # ==========================================
     # 2. THE TRANSITION: Event Horizon
     # ==========================================
-    # Dashed line at x=10 (Neutral gray to contrast against both white and black fields)
+    # Dashed line at x=10 (Maroon core linkage)
     # ymax naturally caps at 10.3 / 12.0
-    ax.axvline(x=10, ymin=0, ymax=(10.3/12.0), color='#888888', linestyle='--', linewidth=2.0, zorder=5)
+    ax.axvline(x=10, ymin=0, ymax=(10.3/12.0), color='#8B0000', linestyle='--', linewidth=2.0, zorder=5)
     
-    # Vertical Label strictly formatted per specification
+    # Vertical Label formatted strictly for IUPAP mathematical compliance (Color updated to black)
     ax.text(9.7, 5.0, r'Event Horizon ($R_{\mathrm{QG}}$)', color='black', fontsize=14, 
-            ha='right', va='center', rotation=90,
+            ha='right', va='center', rotation=90, fontweight='bold',
             bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=3), zorder=6)
 
     # ==========================================
@@ -122,6 +144,11 @@ def create_phase_transition_figure():
                                      edgecolor='#333333', facecolor='black', 
                                      linewidth=1.5, alpha=1.0, zorder=2)
             ax.add_patch(rect)
+
+    # Specific scale dimension label for the SC Node (Lower Right)
+    ax.text(19.5, 0.5, r"$\mathbf{SC\ Node}$" + "\n" + r"($\ell_{\mathrm{S}} \approx 10^{-35}\ \mathrm{m}$)", 
+            color='black', fontsize=11, ha='right', va='bottom',
+            bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=2), zorder=10)
 
     # ==========================================
     # TOP CANVAS AREA MASK & LABELS

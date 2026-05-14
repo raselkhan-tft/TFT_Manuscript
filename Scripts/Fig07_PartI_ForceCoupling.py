@@ -111,7 +111,7 @@ def create_doppler_coupling_visual():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-    pdf_filename = os.path.join(output_dir, "Fig06_PartI_ForceCoupling.pdf")
+    pdf_filename = os.path.join(output_dir, "Fig07_PartI_ForceCoupling.pdf")
     
     try:
         # Saving as high-fidelity vector PDF for publication

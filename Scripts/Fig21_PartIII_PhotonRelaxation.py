@@ -163,11 +163,13 @@ def create_volumetric_relaxation_visual():
             fontsize=10, fontweight='normal', ha='left', va='bottom', zdir=vector_direction, zorder=10, bbox=eq_mask)
             
     # Top Equation (Energy Decay): Original gap 0.4 * 0.60 (40% reduction) = 0.24 gap (Z = 1.0 + 0.24 = 1.24)
-    ax.text(5.5, -1.0, 0.7, r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_D x / c_E}$", color='black', 
+    # Applied \mathrm to descriptive subscripts \mathrm{D} and \mathrm{E}
+    ax.text(5.5, -1.0, 0.7, r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$", color='black', 
             fontsize=11, fontweight='normal', ha='left', va='bottom', zdir=vector_direction, zorder=10, bbox=eq_mask)
             
     # Bottom Equation (Redshift Factor): Maintained original -0.4 gap below the line (Z = 1.0 - 0.4 = 0.60)
-    ax.text(5.5, -1.0, 0.60, r"$(1+z) = e^{\Gamma_D x / c_E}$", color='black', 
+    # Applied \mathrm to descriptive subscripts \mathrm{D} and \mathrm{E}
+    ax.text(5.5, -1.0, 0.60, r"$(1+z) = e^{\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$", color='black', 
             fontsize=11, fontweight='normal', ha='left', va='top', zdir=vector_direction, zorder=10, bbox=eq_mask)
 
     # -------------------------------------------------------
@@ -187,7 +189,7 @@ def create_volumetric_relaxation_visual():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-    pdf_filename = os.path.join(output_dir, "Fig22_PartIII_PhotonRelaxation.pdf")
+    pdf_filename = os.path.join(output_dir, "Fig21_PartIII_PhotonRelaxation.pdf")
     
     try:
         plt.savefig(pdf_filename, format='pdf')

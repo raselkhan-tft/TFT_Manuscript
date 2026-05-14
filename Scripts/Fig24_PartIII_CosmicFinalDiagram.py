@@ -96,7 +96,7 @@ def create_scale_hierarchy_visual():
     # 4. The Mathematical Equation
     # -----------------------------------------
     # Placed centrally above the decay curve. 
-    decay_eq = r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_D x / c_E}$"
+    decay_eq = r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$"
     # Gap increased by 25% (Y shifted from 0.865 to 0.831)
     ax.text(0, 0.831, decay_eq, ha='center', va='bottom', fontsize=15, fontweight='bold', color='black', zorder=10)
 
@@ -129,11 +129,12 @@ def create_scale_hierarchy_visual():
     log10_M_p = np.log10(M_DG) + (x_mass_actual / R_U_actual) * np.log10(np.e)
     y_mass = log10_M_p / 78.0
     
-    ax.plot(x_mass_log, y_mass, color='red', lw=2.5, linestyle='-', zorder=5)
+    # Updated curve to Muted Maroon to map to the established Matter legend
+    ax.plot(x_mass_log, y_mass, color='#8B0000', lw=2.5, linestyle='-', zorder=5)
     
     # Label placed exactly near x=0, above the mass curve
     # Gap increased by 25% (Y shifted from 0.07 to 0.088)
-    ax.text(0, 0.088, r"$M_p(x) = M_{D,G} \cdot e^{\Gamma_D x / c_E}$", 
+    ax.text(0, 0.088, r"$M_p(x) = M_{\mathrm{D,G}} \cdot e^{\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$", 
             color='black', fontsize=15, fontweight='bold', ha='center', va='center', zorder=10)
 
     # -----------------------------------------
@@ -145,7 +146,7 @@ def create_scale_hierarchy_visual():
                 arrowprops=dict(arrowstyle='<->', color='black', lw=1.5), zorder=10)
                 
     # Font matches Kinematic Coherence Label
-    ax.text(0, bracket_y + 0.02, r"Kinematic Lattice Index ($N_D \approx 10^{52}$)",
+    ax.text(0, bracket_y + 0.02, r"Kinematic Lattice Index ($N_{\mathrm{D}} \approx 10^{52}$)",
             ha='center', va='bottom', fontsize=11, color='black', zorder=10)
 
     # L_max Bracket (Maximum Cycle Distance)
@@ -155,7 +156,7 @@ def create_scale_hierarchy_visual():
                 arrowprops=dict(arrowstyle='<->', color='black', lw=1.5), zorder=10)
                 
     # Flipped equation to rest below the annotation line
-    ax.text(0, y_lmax - 0.02, r"$L_{\mathrm{max}} = T_{\mathrm{cyc}} \cdot c_E \approx 2.24 \times 10^{28}\ \mathrm{m}$",
+    ax.text(0, y_lmax - 0.02, r"$L_{\mathrm{max}} = T_{\mathrm{cyc}} \cdot c_{\mathrm{E}} \approx 2.24 \times 10^{28}\ \mathrm{m}$",
             ha='center', va='top', fontsize=11, color='black', zorder=10,
             bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=3))
 
@@ -195,7 +196,7 @@ def create_scale_hierarchy_visual():
                 arrowprops=dict(arrowstyle='<->', color='black', lw=1.5), zorder=10, annotation_clip=False)
                 
     # Font matches Kinematic Coherence Label
-    ax.text(0, bracket_y2 + 0.02, r"Absolute Substrate Index ($N_S \approx 10^{70}$)",
+    ax.text(0, bracket_y2 + 0.02, r"Absolute Substrate Index ($N_{\mathrm{S}} \approx 10^{70}$)",
             ha='center', va='bottom', fontsize=11, color='black', zorder=10)
 
     # Rupture Radius Label 
@@ -253,11 +254,11 @@ def create_scale_hierarchy_visual():
     
     # Bottom anchor labels
     y_align = -0.11 
-    ax.text(lS_log, y_align, r"$\ell_S \approx 10^{-35}\ \mathrm{m}$", ha="center", va="top", 
+    ax.text(lS_log, y_align, r"$\ell_{\mathrm{S}} \approx 10^{-35}\ \mathrm{m}$", ha="center", va="top", 
             fontsize=11, fontweight='bold', color="black", clip_on=False)
-    ax.text(rD_log, y_align, r"$r_D \approx 10^{-26}\ \mathrm{m}$", ha="center", va="top", 
+    ax.text(rD_log, y_align, r"$r_{\mathrm{D}} \approx 10^{-26}\ \mathrm{m}$", ha="center", va="top", 
             fontsize=11, fontweight='bold', color="black", clip_on=False)
-    ax.text(Ru_log, y_align, r"$R_U \approx 10^{26}\ \mathrm{m}$", ha="center", va="top", 
+    ax.text(Ru_log, y_align, r"$R_{\mathrm{U}} \approx 10^{26}\ \mathrm{m}$", ha="center", va="top", 
             fontsize=11, fontweight='bold', color="black", clip_on=False)
     ax.text(Rres_log, y_align, r"$R_{\mathrm{Res}} \approx 10^{35}\ \mathrm{m}$", ha="center", va="top", 
             fontsize=11, fontweight='bold', color="black", clip_on=False)

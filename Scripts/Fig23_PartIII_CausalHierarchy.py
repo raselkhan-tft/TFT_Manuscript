@@ -84,7 +84,7 @@ def create_causal_hierarchy_visual():
     ax1.add_patch(rect)
 
     # Core Labels
-    core_text = r"State II Saturated Core" + "\n" + r"($\boldsymbol{\alpha_G = 1}$)"
+    core_text = r"State II Saturated Core" + "\n" + r"($\boldsymbol{\alpha_{\mathrm{G}} = 1}$)"
     ax1.text(1, 6.0, core_text, color='white', rotation=90, ha='center', va='center', fontweight='bold', fontsize=12, zorder=10)
     
     ax1.plot(1, 2.5, marker='s', markersize=8, color='white', zorder=10)
@@ -93,10 +93,12 @@ def create_causal_hierarchy_visual():
 
     # 2. Event Horizon Line (R_QG)
     # Cropped strictly at y=1.0 to remain flush with the spatial baseline
-    ax1.plot([2.0, 2.0], [1.0, 10.8], color='black', linestyle='--', linewidth=2, zorder=5)
+    # Updated to Maroon color
+    ax1.plot([2.0, 2.0], [1.0, 10.8], color='#8B0000', linestyle='--', linewidth=2, zorder=5)
     
     # Increased gap to 2.35 to geometrically balance the visual clearance from the solid black core
-    ax1.text(2.35, 8.5, r'$\mathbf{Black\ Hole\ Horizon}$ ($R_{QG}$)', color='black', rotation=90, ha='center', va='center', fontsize=12, zorder=10)
+    # Label color restored to black
+    ax1.text(2.35, 8.5, r'$\mathbf{Black\ Hole\ Horizon}$ ($R_{\mathrm{QG}}$)', color='black', rotation=90, ha='center', va='center', fontsize=12, zorder=10)
 
     # 3. Tipping and Squeezing Light Cones (Right to Left - 5 Cones)
     positions_A = [8.5, 6.8, 5.1, 3.8, 3.024] 
@@ -110,13 +112,13 @@ def create_causal_hierarchy_visual():
                         facecolor='#4682B4', alpha=p_alpha, arrow_color='black', arrow_alpha=1.0)
 
     # Effective Inertia Equation (Upper)
-    ax1.text(5.5, 7.6, r"$\mu_{\mathrm{eff}} = \frac{\mu_D}{(1 - \alpha_G)^4}$", 
+    ax1.text(5.5, 7.6, r"$\mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{(1 - \alpha_{\mathrm{G}})^4}$", 
              fontsize=16, color='black', ha='center', va='center', zorder=10)
 
     # Kinematic Speed Equation & Condition (Lower)
     # Pure mathematical implication removes English text strings to eliminate CM Roman/Italic font weight mismatch
     # Replaced '\implies' with '\Rightarrow' to prevent compilation errors in Matplotlib's native mathtext parser
-    cp_text = r"$c_P = c_E \sqrt{\mu_D / \mu_{\mathrm{eff}}}$" + "\n" + r"$(\alpha_G \rightarrow 1 \Rightarrow \mu_{\mathrm{eff}} \rightarrow \infty \Rightarrow c_P = 0)$"
+    cp_text = r"$c_{\mathrm{P}} = c_{\mathrm{E}} \sqrt{\mu_{\mathrm{D}} / \mu_{\mathrm{eff}}}$" + "\n" + r"$(\alpha_{\mathrm{G}} \rightarrow 1 \Rightarrow \mu_{\mathrm{eff}} \rightarrow \infty \Rightarrow c_{\mathrm{P}} = 0)$"
     ax1.text(5.5, 2.67, cp_text, fontsize=14, fontweight='normal', color='black', ha='center', va='center', 
              bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=1.5), zorder=10)
              
@@ -134,7 +136,7 @@ def create_causal_hierarchy_visual():
 
     # 1. Viscous Cosmic Horizon Line (R_U)
     ax2.plot([9.0, 9.0], [1.0, 10.8], color='gray', linestyle='--', linewidth=2, zorder=5)
-    ax2.text(8.75, 8.5, r'$\mathbf{Viscous\ Cosmic\ Horizon}$ ($R_U$)', color='black', rotation=90, ha='center', va='center', fontsize=12, zorder=10)
+    ax2.text(8.75, 8.5, r'$\mathbf{Viscous\ Cosmic\ Horizon}$ ($R_{\mathrm{U}}$)', color='black', rotation=90, ha='center', va='center', fontsize=12, zorder=10)
 
     # 2. Fading Light Cones (Left to Right - 4 Cones)
     positions_B = [2.0, 4.3, 6.6, 8.8]
@@ -146,11 +148,11 @@ def create_causal_hierarchy_visual():
                         facecolor='#4682B4', alpha=alp, arrow_color='black', arrow_alpha=1.0)
 
     # Energy Decay Equation (Upper)
-    ax2.text(5.5, 7.6, r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_D x / c_E}$", 
+    ax2.text(5.5, 7.6, r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$", 
              fontsize=16, color='black', ha='center', va='center', zorder=10)
 
     # Universal Potential Equation (Lower)
-    ax2.text(5.5, 2.4, r"$\phi_{G,U} = \int_{0}^{R_U} \frac{G \cdot dm}{r} = c_E^2$", 
+    ax2.text(5.5, 2.4, r"$\phi_{\mathrm{G,U}} = \int_{0}^{R_{\mathrm{U}}} \frac{G \cdot dm}{r} = c_{\mathrm{E}}^2$", 
              fontsize=16, color='black', ha='center', va='center', zorder=10)
 
     # =======================================================
@@ -162,7 +164,7 @@ def create_causal_hierarchy_visual():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-    pdf_filename = os.path.join(output_dir, "Fig12_PartII_CausalHierarchy.pdf")
+    pdf_filename = os.path.join(output_dir, "Fig23_PartIII_CausalHierarchy.pdf")
     
     try:
         plt.savefig(pdf_filename, format='pdf', bbox_inches='tight')
