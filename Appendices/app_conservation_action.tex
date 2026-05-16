@@ -2,12 +2,12 @@
 \label{app:conservation_action}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\textbf{Subject:} Derivation of the scaling law ($\rho(r) \propto r^{-4}$) and the associated geometric form factor within the TFT framework.
+\noindent\textbf{Subject:} Derivation of the scaling law ($\rho(r) \propto r^{-4}$) and the associated geometric form factor within the TFT framework.
 
 \section{Scale Invariance and the Conservation of Action}
 In Tension Field Theory (TFT), the characteristic densities and length scales of the vacuum are not introduced as independent phenomenological parameters. Rather, they are treated as geometrically related manifestations of a contiguous elastic substrate. Under this assumption, the transition from the Latent Substrate (State 0) to the Active Vacuum (State I) must preserve the fundamental mechanical action of the field.
 
-We therefore take the Action of Existence, denoted $h$, to be conserved across topological phase reconfiguration. The purpose of this appendix is to derive the corresponding scaling law for density under the additional assumption that the transverse propagation speed ($c_E$) remains invariant across the active phase.
+We therefore take the Action of Existence, denoted $h$, to be conserved across topological phase reconfiguration. The purpose of this appendix is to derive the corresponding scaling law for density under the additional assumption that the transverse propagation speed ($c_{\mathrm{E}}$) remains invariant across the active phase.
 
 \section{Kinematic Definition of Action}
 For a localized mechanical excitation of the lattice, action is defined in the standard kinematic form as
@@ -21,7 +21,7 @@ To determine how action scales with the geometric size of a localized node, we e
 
 The energy of a localized node is written as
 \begin{equation}
-    E = m c_E^2
+    E = m c_{\mathrm{E}}^2
 \end{equation}
 with
 \begin{equation}
@@ -33,20 +33,20 @@ For a three-dimensional localized state, the volume scales as
 \end{equation}
 Hence,
 \begin{equation}
-    E \propto \rho \cdot r^3 \cdot c_E^2
+    E \propto \rho \cdot r^3 \cdot c_{\mathrm{E}}^2
 \end{equation}
 
-The characteristic time for one cycle is taken to be the traversal time across the node radius at speed $c_E$,
+The characteristic time for one cycle is taken to be the traversal time across the node radius at speed $c_{\mathrm{E}}$,
 \begin{equation}
-    t = \frac{r}{c_E}
+    t = \frac{r}{c_{\mathrm{E}}}
 \end{equation}
 
 Substituting these expressions into the definition of action gives
 \begin{equation}
-    \text{Action} \equiv h \propto (\rho \cdot r^3 \cdot c_E^2)\left(\frac{r}{c_E}\right) = \rho \cdot r^4 \cdot c_E
+    \text{Action} \equiv h \propto (\rho \cdot r^3 \cdot c_{\mathrm{E}}^2)\left(\frac{r}{c_{\mathrm{E}}}\right) = \rho \cdot r^4 \cdot c_{\mathrm{E}}
 \end{equation}
 
-If the fundamental action ($h$) and the transverse speed ($c_E$) are both strictly invariant, then the remaining geometric factor must also be invariant. This motivates the definition
+If the fundamental action ($h$) and the transverse speed ($c_{\mathrm{E}}$) are both strictly invariant, then the remaining geometric factor must also be invariant. This motivates the definition
 \begin{equation}
     J_i = \rho_i r_i^4 = \text{constant}
 \end{equation}
@@ -55,18 +55,18 @@ which we refer to as the Universal Torsional Invariant.
 \section{Master Geometric Scaling Relation}
 The invariant $J_i$ implies that the rectilinear Substrate state (governed by its Simple Cubic architecture) and any localized phase state must satisfy
 \begin{equation}
-    \rho_S \ell_S^4 \propto \rho(r) r^4
+    \rho_{\mathrm{S}} \ell_{\mathrm{S}}^4 \propto \rho(r) r^4
 \end{equation}
-where $\rho_S$ and $\ell_S$ denote the density and characteristic scale of the Substrate.
+where $\rho_{\mathrm{S}}$ and $\ell_{\mathrm{S}}$ denote the density and characteristic scale of the Substrate.
 
 To convert this proportionality into an equality, a geometric transition factor must be introduced to account for the change from rectilinear to localized topology. Denoting this phase-dependent factor by $\mathcal{F}_i$, we write
 \begin{equation}
-    \rho_S \ell_S^4 = \frac{\rho(r) r^4}{\mathcal{F}_i}
+    \rho_{\mathrm{S}} \ell_{\mathrm{S}}^4 = \frac{\rho(r) r^4}{\mathcal{F}_i}
 \end{equation}
 
 Solving for the localized density yields the master relation
 \begin{equation}
-    \rho(r) = \mathcal{F}_i \cdot \rho_S\left(\frac{\ell_S}{r}\right)^4
+    \rho(r) = \mathcal{F}_i \cdot \rho_{\mathrm{S}}\left(\frac{\ell_{\mathrm{S}}}{r}\right)^4
 \end{equation}
 This expression will be referred to as the Master Geometric Law. Within the TFT construction, it determines the projected density of a localized state as a function of scale and topology.
 
@@ -89,18 +89,18 @@ The resulting compression ratio is
 
 Accordingly, TFT assigns
 \begin{equation}
-    \mathcal{F}_D = 1.5
+    \mathcal{F}_{\mathrm{D}} = 1.5
 \end{equation}
 to the spherical Soft Floor nodes, and
 \begin{equation}
-    \mathcal{F}_S = \mathcal{F}_N = 1.0
+    \mathcal{F}_{\mathrm{S}} = \mathcal{F}_{\mathrm{N}} = 1.0
 \end{equation}
 to rectilinear or effectively linear/cylindrical configurations such as the Substrate and nucleon core.
 
 \section{Boundary Equation}
 The Master Geometric Law may be inverted to determine the characteristic boundary scale associated with a given internal density:
 \begin{equation}
-    r = \ell_S\left(\frac{\mathcal{F}_i \cdot \rho_S}{\rho(r)}\right)^{1/4}
+    r = \ell_{\mathrm{S}}\left(\frac{\mathcal{F}_i \cdot \rho_{\mathrm{S}}}{\rho(r)}\right)^{1/4}
 \end{equation}
 This relation will be used in subsequent appendices as the boundary equation for localized phase states.
 
@@ -110,7 +110,7 @@ The scaling law derived here is intended to apply only to contiguous topological
 \section{Conclusion}
 Within the TFT framework, the relation
 \begin{equation}
-    \rho(r) = \mathcal{F}_i \cdot \rho_S\left(\frac{\ell_S}{r}\right)^4
+    \rho(r) = \mathcal{F}_i \cdot \rho_{\mathrm{S}}\left(\frac{\ell_{\mathrm{S}}}{r}\right)^4
 \end{equation}
 provides the scale-projection rule required to preserve the invariant
 \begin{equation}

@@ -134,7 +134,8 @@ def create_scale_hierarchy_visual():
     
     # Label placed exactly near x=0, above the mass curve
     # Gap increased by 25% (Y shifted from 0.07 to 0.088)
-    ax.text(0, 0.088, r"$M_p(x) = M_{\mathrm{D,G}} \cdot e^{\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$", 
+    # UPDATED: Subscript 'p' changed to upright Roman
+    ax.text(0, 0.088, r"$M_{\mathrm{p}}(x) = M_{\mathrm{D,G}} \cdot e^{\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$", 
             color='black', fontsize=15, fontweight='bold', ha='center', va='center', zorder=10)
 
     # -----------------------------------------
@@ -185,6 +186,7 @@ def create_scale_hierarchy_visual():
     # Filled strictly between the mass curve terminus and R_rup, up to height 1.22
     ax.fill_between([x_end_log, Rrup_log], 0, 1.22, facecolor='none', edgecolor='#999999', hatch='//', alpha=0.4, zorder=0)
     
+    # Label height adjusted for alignment
     y_opaque = 50.0 / 78.0 
     ax.text((x_end_log + Rrup_log) / 2.0, y_opaque, "Opaque\nCausality\nDomain", 
             ha='center', va='center', fontsize=10, color='black',
@@ -284,7 +286,8 @@ def create_scale_hierarchy_visual():
     # Set ticks so 80 is just above the curve (at y=1.025) and 100 is at the top (y=1.28)
     ax2.set_yticks([0, 20, 40, 60, 80, 100])
     ax2.set_yticklabels(["0", "20", "40", "60", "80", "100"], fontsize=11, color='black')
-    ax2.set_ylabel(r"Aggregate Percolating Mass, $\log_{10}(M_p/\mathrm{kg})$", fontsize=11, color='black', labelpad=10)
+    # UPDATED: Subscript 'p' changed to upright Roman
+    ax2.set_ylabel(r"Aggregate Percolating Mass, $\log_{10}(M_{\mathrm{p}}/\mathrm{kg})$", fontsize=11, color='black', labelpad=10)
     
     ax2.spines['top'].set_visible(False)
     ax2.spines['left'].set_visible(False)
@@ -304,6 +307,7 @@ def create_scale_hierarchy_visual():
     pdf_filename = os.path.join(output_dir, "Fig24_PartIII_CosmicFinalDiagram.pdf")
     
     try:
+        # Saving as high-fidelity vector PDF for publication
         plt.savefig(pdf_filename, format='pdf', bbox_inches='tight')
         print(f"High-fidelity vector PDF saved to: {pdf_filename}")
     except PermissionError:

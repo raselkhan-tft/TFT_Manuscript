@@ -5,7 +5,7 @@
 \noindent\textbf{Abstract:} Tension Field Theory (TFT) treats the Spacetime Gravitational Floor (SGF) as a physical, dual-phase continuum. Consequently, quantum interactions are strictly subject to the fluid-dynamic laws of visco-elastic friction. This appendix provides the mechanical derivations from first principles for the two fundamental damping operators in TFT: the non-linear logarithmic term governing the wave arrest of topological knots (matter), and the linear viscous term governing the attenuation of untethered shear waves (light).
 
 \section{Derivation of Non-Linear Damping for Matter (The VNLW Term)}
-When a localized topological knot (a Fermion) moves through the active vacuum, it physically displaces the Face-Centered Cubic (FCC) lattice. In the presence of dense macroscopic matter (a detector), the lattice behaves as an open quantum system, draining kinetic energy from the wave into the matter sink as thermal exhaust.
+When a localized topological knot (a Fermion) moves through the active vacuum, it physically displaces the Face--Centered Cubic (FCC) lattice. In the presence of dense macroscopic matter (a detector), the lattice behaves as an open quantum system, draining kinetic energy from the wave into the matter sink as thermal exhaust.
 
 To derive the governing equation, we begin with the standard time-dependent Schr\"{o}dinger equation and introduce an unknown non-Hermitian dissipative potential $W(\mathbf{x},t)$ to mathematically model this thermodynamic sink:
 \begin{equation}
@@ -15,17 +15,17 @@ To derive the governing equation, we begin with the standard time-dependent Schr
 \subsection{Kinetic Derivation of the Constitutive Law ($\Gamma$)}
 To define the non-Hermitian potential $W$, the physical damping rate ($\Gamma$) is first derived from fundamental kinetic collision theory. As the pilot wave propagates, it sweeps through a geometric volume of space containing localized structural defects (the atomic lattice of the dense matter sink).
 
-The differential volume ($dV$) swept by a wave interface of interaction area $\sigma$ moving at local kinematic velocity $c_{\mathrm{P}}$ in time $dt$ is:
+The differential volume ($\mathrm{d}V$) swept by a wave interface of interaction area $\sigma$ moving at local kinematic velocity $c_{\mathrm{P}}$ in time $\mathrm{d}t$ is:
 \begin{equation}
-    dV = \sigma \cdot c_{\mathrm{P}} \cdot dt
+    \mathrm{d}V = \sigma \cdot c_{\mathrm{P}} \cdot \mathrm{d}t
 \end{equation}
 
-If the local medium possesses a topological knot density $n_K(x)$ (number of defects per unit volume), the number of physical lattice collisions ($dN$) occurring in that timeframe is:
+If the local medium possesses a topological knot density $n_K(x)$ (number of defects per unit volume), the number of physical lattice collisions ($\mathrm{d}N$) occurring in that timeframe is:
 \begin{equation}
-    dN = n_K(x) \cdot dV = n_K(x) \cdot \sigma \cdot c_{\mathrm{P}} \cdot dt
+    \mathrm{d}N = n_K(x) \cdot \mathrm{d}V = n_K(x) \cdot \sigma \cdot c_{\mathrm{P}} \cdot \mathrm{d}t
 \end{equation}
 
-The local Quantum Damping Rate ($\Gamma$) is defined as the collision frequency (fractional energy loss events per unit time, $dN/dt$). Rearranging the kinetic equation yields the constitutive law for localized vacuum friction:
+The local Quantum Damping Rate ($\Gamma$) is defined as the collision frequency (fractional energy loss events per unit time, $\mathrm{d}N/\mathrm{d}t$). Rearranging the kinetic equation yields the constitutive law for localized vacuum friction:
 \begin{equation}
     \Gamma(x) = \sigma \cdot c_{\mathrm{P}} \cdot n_K(x)
 \end{equation}
@@ -33,7 +33,7 @@ The local Quantum Damping Rate ($\Gamma$) is defined as the collision frequency 
 \subsection{The Madelung Form and the Topological Sink}
 To translate this friction into the quantum potential $W$, we utilize the macroscopic physical order parameter of the SGF established in \hyperref[app:physical_wavefunction]{Appendix \ref*{app:physical_wavefunction}}. Defining the wavefunction by its physical amplitude ($\sqrt{\rho}$) and its mechanical phase action ($S$):
 \begin{equation}
-\Psi = \sqrt{\rho} e^{iS/\hbar}
+    \Psi = \sqrt{\rho} e^{iS/\hbar}
 \end{equation}
 
 Taking the natural logarithm of both sides isolates the real amplitude from the imaginary phase:
@@ -103,12 +103,12 @@ The temporal amplitude evolution governed by the visco-elastic differential equa
 
 Substituting this into the generalized damped wave equation and dividing through by $c_{\mathrm{E}}^2 X(\mathbf{x}) T(t)$ yields:
 \begin{equation}
-    \frac{\nabla^2 X}{X} = \frac{1}{c_{\mathrm{E}}^2 T} \frac{d^2 T}{dt^2} + \frac{\Gamma}{c_{\mathrm{E}}^2 T} \frac{dT}{dt}
+    \frac{\nabla^2 X}{X} = \frac{1}{c_{\mathrm{E}}^2 T} \frac{\mathrm{d}^2 T}{\mathrm{d}t^2} + \frac{\Gamma}{c_{\mathrm{E}}^2 T} \frac{\mathrm{d}T}{\mathrm{d}t}
 \end{equation}
 
 Setting both sides to the spatial separation constant ($-k^2$) and substituting the standard continuum dispersion relation ($\omega = k c_{\mathrm{E}}$) reduces the temporal system to a standard second-order linear differential equation:
 \begin{equation}
-    \frac{d^2 T}{dt^2} + \Gamma \frac{dT}{dt} + \omega^2 T = 0
+    \frac{\mathrm{d}^2 T}{\mathrm{d}t^2} + \Gamma \frac{\mathrm{d}T}{\mathrm{d}t} + \omega^2 T = 0
 \end{equation}
 
 Assuming an ansatz of the form $T(t) = e^{rt}$ yields the characteristic polynomial:
@@ -158,4 +158,4 @@ Because the total mechanical energy of any classical wave is directly proportion
     E(t) \propto \left( \mathbf{A}_0 e^{-\frac{\Gamma_{\mathrm{D}}}{2} t} \right)^2 = E_0 e^{-\Gamma_{\mathrm{D}} t}
 \end{equation}
 
-This explicit derivation establishes the physical mechanism for continuous amplitude attenuation, providing the mathematical foundation for the macroscopic cosmological energy decay ($\frac{dE}{dt} = -\Gamma_{\mathrm{D}} E$) derived in Part III.
+This explicit derivation establishes the physical mechanism for continuous amplitude attenuation, providing the mathematical foundation for the macroscopic cosmological energy decay ($\frac{\mathrm{d}E}{\mathrm{d}t} = -\Gamma_{\mathrm{D}} E$) derived in Part III.

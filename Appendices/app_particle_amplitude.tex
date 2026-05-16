@@ -2,76 +2,76 @@
 \label{app:particle_amplitude}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\textbf{Subject:} Verification of the Hydrodynamic Mass Model via Amplitude Calculation.
+\noindent\textbf{Subject:} Verification of the Hydrodynamic Mass Model via Amplitude Calculation.
 
 \section{The Objective}
-In \hyperref[app:fcc_constants]{Appendix \ref*{app:fcc_constants}}, we derived the holographic vacuum condensate density ($\rho_{IC} \approx 1.7095 \times 10^{53} \text{ kg/m}^3$) of the vacuum. In \hyperref[sec:inertial_mass]{Section \ref*{sec:inertial_mass}}, we defined Inertial Mass ($m$) as the hydrodynamic drag of this condensate.
+In \hyperref[app:fcc_constants]{Appendix \ref*{app:fcc_constants}}, we derived the holographic vacuum condensate density ($\rho_{\mathrm{IC}} \approx 1.7095 \times 10^{53}$ kg/m$^3$) of the vacuum. In \hyperref[sec:inertial_mass]{Section \ref*{sec:inertial_mass}}, we defined Inertial Mass ($m$) as the hydrodynamic drag of this condensate.
 
-\textbf{Objective:} To validate this model, we must calculate the physical vibration amplitude ($r_{amp}$) of known particles. If the theory is consistent:
+\noindent\textbf{Objective:} To validate this model, we must calculate the physical vibration amplitude ($r_{\mathrm{amp}}$) of known particles. If the theory is consistent:
 \begin{itemize}
-    \item \textbf{The Heaviest Particle (Top Quark):} Must fit within the lattice node ($r_{amp} < r_D$).
-    \item \textbf{The Lightest Particle (Electron):} Must be physically resolvable above the substrate lattice size ($r_{amp} > \ell_S$).
+    \item \textbf{The Heaviest Particle (Top Quark):} Must fit within the lattice node ($r_{\mathrm{amp}} < r_{\mathrm{D}}$).
+    \item \textbf{The Lightest Particle (Electron):} Must be physically resolvable above the substrate lattice size ($r_{\mathrm{amp}} > \ell_{\mathrm{S}}$).
 \end{itemize}
 
 \section{The Mass-Amplitude Relation}
-We model a fundamental particle as a spherical lattice node of radius $r_D$ undergoing radial pulsation (``Breathing Mode'') within the vacuum condensate defined in \hyperref[app:fcc_constants]{Appendix \ref*{app:fcc_constants}}.
+We model a fundamental particle as a spherical lattice node of radius $r_{\mathrm{D}}$ undergoing radial pulsation (``Breathing Mode'') within the vacuum condensate defined in \hyperref[app:fcc_constants]{Appendix \ref*{app:fcc_constants}}.
 
 \subsection{The Drag Equation}
-From \hyperref[sec:inertial_mass]{Section \ref*{sec:inertial_mass}}, assuming phase resonance ($\sin(\Delta\phi)=1$) and unity drag efficiency ($C_d=1$):
+From \hyperref[sec:inertial_mass]{Section \ref*{sec:inertial_mass}}, assuming phase resonance ($\sin(\Delta\phi)=1$) and unity drag efficiency ($C_{\mathrm{d}}=1$):
 \begin{equation}
-    m = \rho_{IC} \cdot V_{eff}
+    m = \rho_{\mathrm{IC}} \cdot V_{\mathrm{eff}}
 \end{equation}
 
-\subsection{The Effective Volume ($V_{eff}$)}
-For a sphere pulsating with radial amplitude $r_{amp}$, the swept volume is the Surface Area times the Amplitude:
+\subsection{The Effective Volume ($V_{\mathrm{eff}}$)}
+For a sphere pulsating with radial amplitude $r_{\mathrm{amp}}$, the swept volume is the Surface Area times the Amplitude:
 \begin{equation}
-    V_{eff} \approx A_{surf} \cdot r_{amp} = (4\pi r_D^2) \cdot r_{amp}
+    V_{\mathrm{eff}} \approx A_{\mathrm{surf}} \cdot r_{\mathrm{amp}} = (4\pi r_{\mathrm{D}}^2) \cdot r_{\mathrm{amp}}
 \end{equation}
 
 \subsection{The Solution for Amplitude}
-By substituting the Fundamental Drag Constant ($K_D = \rho_{IC} \cdot 4\pi r_D^2 \approx 133.77 \text{ kg/m}$) derived in \hyperref[app:fcc_constants]{Appendix \ref*{app:fcc_constants}}, we simplify the relation and solve directly for the unknown vibration scale:
+By substituting the Fundamental Drag Constant ($K_{\mathrm{D}} = \rho_{\mathrm{IC}} \cdot 4\pi r_{\mathrm{D}}^2 \approx 133.77$ kg/m) derived in \hyperref[app:fcc_constants]{Appendix \ref*{app:fcc_constants}}, we simplify the relation and solve directly for the unknown vibration scale:
 \begin{equation}
-    r_{amp} = \frac{m}{K_D}
+    r_{\mathrm{amp}} = \frac{m}{K_{\mathrm{D}}}
 \end{equation}
 
 \section{Validation Case A: The Top Quark (Upper Limit)}
-The Top Quark ($m_t \approx 173 \text{ GeV/c}^2$) is the heaviest known fundamental particle. It tests the structural capacity of the lattice.
+The Top Quark ($m_{\mathrm{t}} \approx 173$ GeV/$c^2$) is the heaviest known fundamental particle. It tests the structural capacity of the lattice.
 
 \begin{itemize}
-    \item \textbf{Mass:} $m_t \approx 3.0838 \times 10^{-25} \text{ kg}$
+    \item \textbf{Mass:} $m_{\mathrm{t}} \approx 3.0838 \times 10^{-25}$ kg
 \end{itemize}
 
-\textbf{Calculation:}
+\noindent\textbf{Calculation:}
 \begin{equation}
-    r_{amp} = \frac{3.0838 \times 10^{-25}}{133.77} \approx 2.3053 \times 10^{-27} \text{ m}
+    r_{\mathrm{amp}} = \frac{3.0838 \times 10^{-25}}{133.77} \approx 2.3053 \times 10^{-27} \text{ m}
 \end{equation}
 
-\textbf{Stability Check (Occupancy Ratio):}
+\noindent\textbf{Stability Check (Occupancy Ratio):}
 \begin{equation}
     \text{Ratio} = \frac{2.3053 \times 10^{-27}}{7.8900 \times 10^{-27}} \approx 0.2922 \quad (29.22\%)
 \end{equation}
 
-\textbf{Conclusion:} The Top Quark utilizes $29.22\%$ of the available lattice space. This confirms stability ($<100\%$). It physically explains the ``Generation Limit'' of the Standard Model. A particle approximately three and a half times heavier would reach $100\%$ occupancy, resulting in Geometric Saturation of the FCC lattice framework.
+\noindent\textbf{Conclusion:} The Top Quark utilizes $29.22\%$ of the available lattice space. This confirms stability ($<100\%$). It physically explains the ``Generation Limit'' of the Standard Model. A particle approximately three and a half times heavier would reach $100\%$ occupancy, resulting in Geometric Saturation of the FCC lattice framework.
 
 \section{Validation Case B: The Electron (Lower Limit)}
-The Electron ($m_e \approx 0.511 \text{ MeV/c}^2$) is the lightest charged lepton. It tests the resolution limit of the substrate.
+The Electron ($m_{\mathrm{e}} \approx 0.511$ MeV/$c^2$) is the lightest charged lepton. It tests the resolution limit of the substrate.
 
 \begin{itemize}
-    \item \textbf{Mass:} $m_e \approx 9.1094 \times 10^{-31} \text{ kg}$
+    \item \textbf{Mass:} $m_{\mathrm{e}} \approx 9.1094 \times 10^{-31}$ kg
 \end{itemize}
 
-\textbf{Calculation:}
+\noindent\textbf{Calculation:}
 \begin{equation}
-    r_{amp} = \frac{9.1094 \times 10^{-31}}{133.77} \approx 6.8097 \times 10^{-33} \text{ m}
+    r_{\mathrm{amp}} = \frac{9.1094 \times 10^{-31}}{133.77} \approx 6.8097 \times 10^{-33} \text{ m}
 \end{equation}
 
-\textbf{Resolution Check (Substrate Resolution Ratio):}
-Using the fundamental pixel size ($\ell_S \approx 1.6162 \times 10^{-35} \text{ m}$):
+\noindent\textbf{Resolution Check (Substrate Resolution Ratio):}
+Using the fundamental pixel size ($\ell_{\mathrm{S}} \approx 1.6162 \times 10^{-35}$ m):
 \begin{equation}
     \text{Ratio} = \frac{6.8097 \times 10^{-33}}{1.6162 \times 10^{-35}} \approx 421.3
 \end{equation}
 
-\textbf{Conclusion:} The Electron vibrates with an amplitude over 421 times larger than the fundamental substrate lattice ($\ell_S$). This confirms the electron is physically ``real'' and resolvable (it is not a sub-pixel ghost). It explains why the electron appears dimensionless to our instruments ($10^{-33} \text{ m}$ is well below the LHC resolution limit of $10^{-20} \text{ m}$), yet mechanically generates finite mass.
+\noindent\textbf{Conclusion:} The Electron vibrates with an amplitude over 421 times larger than the fundamental substrate lattice ($\ell_{\mathrm{S}}$). This confirms the electron is physically ``real'' and resolvable (it is not a sub-pixel ghost). It explains why the electron appears dimensionless to our instruments ($10^{-33}$ m is well below the LHC resolution limit of $10^{-20}$ m), yet mechanically generates finite mass.
 
 \section{Summary}
 The mass hierarchy is a direct consequence of the Vibrational Amplitude allowed by the Soft Floor geometry.
@@ -86,14 +86,19 @@ The mass hierarchy is a direct consequence of the Vibrational Amplitude allowed 
 \small
 \begin{tabular}{@{}llclp{0.35\textwidth}@{}}
 \toprule
-\textbf{Particle} & \textbf{Mass (kg)} & \textbf{Vibration ($r_{amp}$)} & \textbf{Lattice Occupancy} & \textbf{Status} \\
+\textbf{Particle} & \textbf{Mass (kg)} & \textbf{Vibration ($r_{\mathrm{amp}}$)} & \textbf{Lattice Occupancy} & \textbf{Status} \\
 \midrule
-Top Quark & $3.0838 \times 10^{-25}$ & $2.3053 \times 10^{-27} \text{ m}$ & $29.22\%$ ($0.29 r_D$) & Structural Limit (High Stress). \\
-Electron & $9.1094 \times 10^{-31}$ & $6.8097 \times 10^{-33} \text{ m}$ & $\ll 0.001\%$ ($421 \ell_S$) & Linear Regime (High Resolution). \\
+Top Quark & $3.0838 \times 10^{-25}$ & $2.3053 \times 10^{-27}$ m & $29.22\%$ ($0.29 r_{\mathrm{D}}$) & Structural Limit (High Stress). \\
+Electron & $9.1094 \times 10^{-31}$ & $6.8097 \times 10^{-33}$ m & $\ll 0.001\%$ ($421 \ell_{\mathrm{S}}$) & Linear Regime (High Resolution). \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 This validates that the TFT vacuum parameters derived in \hyperref[app:fcc_constants]{Appendix \ref*{app:fcc_constants}} provide a mechanically consistent habitat for the Standard Model particles.
 
-\textbf{Note on Constant Mass Frequency:} Inertial mass is strictly generated by an FCC node radially squeezing and expanding (``Breathing Mode'') against the interstitial condensate. While the displacement amplitude ($r_{amp}$) dictates the specific hydrodynamic drag (mass) of a particle, the physical resonator is always the fixed node of radius $r_D$. Because this radial cycle requires the internal mechanical phase-twist to traverse the full diameter of the node ($2r_D$) at the lattice shear limit ($c_E$), all fundamental particles---regardless of their inertial mass---share an identical, constant baseline resonant frequency of $f_{mass} = \frac{c_E}{2r_D} = \frac{f_{light}}{2}$.
+\vspace{0.5em}
+\noindent\textbf{Note on Constant Topological Resonance vs. Emergent Mass:} Inertial mass is strictly generated by an FCC node radially squeezing and expanding (``Breathing Mode'') against the interstitial condensate. While the displacement amplitude ($r_{\mathrm{amp}}$) dictates the specific hydrodynamic drag (and therefore the macroscopic rest energy $E_0$ and emergent Proper Time clock $t_{\mathrm{p}}$) of a specific particle, the physical resonator is always the fixed node of radius $r_{\mathrm{D}}$. Because this radial cycle requires the internal mechanical phase-twist to traverse the full diameter of the node ($2r_{\mathrm{D}}$) at the lattice shear limit ($c_{\mathrm{E}}$), all fundamental matter---regardless of its external inertial mass---shares an identical, constant internal topological resonance of:
+\begin{equation}
+    f_{\mathrm{m}} = \frac{c_{\mathrm{E}}}{2r_{\mathrm{D}}} = \frac{f_{\mathrm{D}}}{2}
+\end{equation}
+This $2r_{\mathrm{D}}$ transit perfectly supplies the mechanical origin for the 720$^{\circ}$ (Spin--1/2) phase requirement of all fermions (Explained in \hyperref[sec:quantum_spin]{Section \ref*{sec:quantum_spin}}), while the macroscopic Proper Time clock ($t_{\mathrm{p}}$) remains strictly governed by the specific amplitude's interaction with the vacuum condensate.

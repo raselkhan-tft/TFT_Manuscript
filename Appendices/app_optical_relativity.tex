@@ -2,29 +2,29 @@
 \label{app:optical_relativity}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-This appendix provides the explicit mathematical evaluations for the macroscopic integrations of the vacuum refractive index, $n(r) \approx 1 + 2\alpha_G$, derived in \hyperref[sec:refractive_index]{Section \ref*{sec:refractive_index}}.
+This appendix provides the explicit mathematical evaluations for the macroscopic integrations of the vacuum refractive index, $n(r) \approx 1 + 2\alpha_{\mathrm{G}}$, derived in \hyperref[sec:refractive_index]{Section \ref*{sec:refractive_index}}.
 
 \section{Evaluation of the Gravitational Lensing Deflection Integral}
 As established in Tension Field Theory, the total deflection angle $\theta$ of a photon wave packet is the integral of the transverse refractive gradient along the unperturbed line of sight ($z$-axis).
 
 Given the impact parameter $b$, the radial distance is $r = \sqrt{b^2 + z^2}$. The deflection is governed by:
 \begin{equation}
-    \theta = \int_{-\infty}^{+\infty} \nabla_\perp n \, dz = \int_{-\infty}^{+\infty} \frac{\partial}{\partial b} \left( 1 + \frac{2GM}{c_E^2 \sqrt{b^2 + z^2}} \right) dz
+    \theta = \int_{-\infty}^{+\infty} \nabla_{\perp} n \, \mathrm{d}z = \int_{-\infty}^{+\infty} \frac{\partial}{\partial b} \left( 1 + \frac{2GM}{c_{\mathrm{E}}^2 \sqrt{b^2 + z^2}} \right) \mathrm{d}z
 \end{equation}
 
 \subsection{Step 1: Compute the Partial Derivative}
 Differentiating the refractive index with respect to the impact parameter $b$ yields the transverse gradient:
 \begin{equation}
-    \frac{\partial n}{\partial b} = -\frac{2GMb}{c_E^2 (b^2 + z^2)^{3/2}}
+    \frac{\partial n}{\partial b} = -\frac{2GMb}{c_{\mathrm{E}}^2 (b^2 + z^2)^{3/2}}
 \end{equation}
 
 Taking the magnitude to find the total inward deflection angle:
 \begin{equation}
-    \theta = \frac{2GMb}{c_E^2} \int_{-\infty}^{+\infty} \frac{dz}{(b^2 + z^2)^{3/2}}
+    \theta = \frac{2GMb}{c_{\mathrm{E}}^2} \int_{-\infty}^{+\infty} \frac{\mathrm{d}z}{(b^2 + z^2)^{3/2}}
 \end{equation}
 
 \subsection{Step 2: Trigonometric Substitution}
-To evaluate the integral over the entire path, we apply the substitution $z = b \tan\phi$, which implies $dz = b \sec^2\phi \, d\phi$. The integration limits change from $z \in (-\infty, +\infty)$ to $\phi \in (-\pi/2, +\pi/2)$.
+To evaluate the integral over the entire path, we apply the substitution $z = b \tan\phi$, which implies $\mathrm{d}z = b \sec^2\phi \, \mathrm{d}\phi$. The integration limits change from $z \in (-\infty, +\infty)$ to $\phi \in (-\pi/2, +\pi/2)$.
 
 The denominator becomes:
 \begin{equation}
@@ -33,7 +33,7 @@ The denominator becomes:
 
 Substituting these into the integral:
 \begin{equation}
-    \int_{-\pi/2}^{+\pi/2} \frac{b \sec^2\phi \, d\phi}{b^3 \sec^3\phi} = \frac{1}{b^2} \int_{-\pi/2}^{+\pi/2} \cos\phi \, d\phi
+    \int_{-\pi/2}^{+\pi/2} \frac{b \sec^2\phi \, \mathrm{d}\phi}{b^3 \sec^3\phi} = \frac{1}{b^2} \int_{-\pi/2}^{+\pi/2} \cos\phi \, \mathrm{d}\phi
 \end{equation}
 
 \subsection{Step 3: Final Integration}
@@ -44,44 +44,44 @@ Evaluating the cosine integral:
 
 Substituting this result back into the deflection equation:
 \begin{equation}
-    \theta_{total} = \frac{2GMb}{c_E^2} \left(\frac{2}{b^2}\right) = \frac{4GM}{bc_E^2}
+    \theta_{\mathrm{total}} = \frac{2GMb}{c_{\mathrm{E}}^2} \left(\frac{2}{b^2}\right) = \frac{4GM}{b c_{\mathrm{E}}^2}
 \end{equation}
 
-Because the local lattice strain at the impact parameter is defined as $\alpha_G(b) = \frac{GM}{bc_E^2}$, the total macroscopic deflection is precisely:
+Because the local lattice strain at the impact parameter is defined as $\alpha_{\mathrm{G}}(b) = \frac{GM}{b c_{\mathrm{E}}^2}$, the total macroscopic deflection is precisely:
 \begin{equation}
-    \theta_{total} = 4\alpha_G(b)
+    \theta_{\mathrm{total}} = 4\alpha_{\mathrm{G}}(b)
 \end{equation}
 
 \section{Evaluation of the Shapiro Time Delay Integral}
-The local propagation speed of a signal is inversely proportional to the refractive index, $c_P(r) \approx c_E(1 - 2\alpha_G)$. The total flight time $\Delta t$ for a signal traveling from an emitter at $-z_1$ to a receiver at $+z_2$ is the integral of the inverse velocity along the geometric path.
+The local propagation speed of a signal is inversely proportional to the refractive index, $c_{\mathrm{P}}(r) \approx c_{\mathrm{E}}(1 - 2\alpha_{\mathrm{G}})$. The total flight time $\Delta t$ for a signal traveling from an emitter at $-z_1$ to a receiver at $+z_2$ is the integral of the inverse velocity along the geometric path.
 \begin{equation}
-    \Delta t = \int_{-z_1}^{+z_2} \frac{1}{c_P} \, dz \approx \frac{1}{c_E} \int_{-z_1}^{+z_2} \left( 1 + \frac{2GM}{c_E^2 \sqrt{b^2 + z^2}} \right) dz
+    \Delta t = \int_{-z_1}^{+z_2} \frac{1}{c_{\mathrm{P}}} \, \mathrm{d}z \approx \frac{1}{c_{\mathrm{E}}} \int_{-z_1}^{+z_2} \left( 1 + \frac{2GM}{c_{\mathrm{E}}^2 \sqrt{b^2 + z^2}} \right) \mathrm{d}z
 \end{equation}
 
 \subsection{Step 1: Isolate the Delay Component}
-The integral separates into the Newtonian baseline time ($t_{vac}$) and the optical delay induced by the refractive vacuum ($\Delta t_{delay}$):
+The integral separates into the Newtonian baseline time ($t_{\mathrm{vac}}$) and the optical delay induced by the refractive vacuum ($\Delta t_{\mathrm{delay}}$):
 \begin{equation}
-    \Delta t = \frac{z_1 + z_2}{c_E} + \Delta t_{delay}
+    \Delta t = \frac{z_1 + z_2}{c_{\mathrm{E}}} + \Delta t_{\mathrm{delay}}
 \end{equation}
 
 Where the delay component is:
 \begin{equation}
-    \Delta t_{delay} = \frac{2GM}{c_E^3} \int_{-z_1}^{+z_2} \frac{dz}{\sqrt{b^2 + z^2}}
+    \Delta t_{\mathrm{delay}} = \frac{2GM}{c_{\mathrm{E}}^3} \int_{-z_1}^{+z_2} \frac{\mathrm{d}z}{\sqrt{b^2 + z^2}}
 \end{equation}
 
 \subsection{Step 2: Integration of the Delay Function}
 The standard integral of $(b^2 + z^2)^{-1/2}$ results in a natural logarithm. Evaluating this from the emitter to the receiver yields:
 \begin{equation}
-    \Delta t_{delay} = \frac{2GM}{c_E^3} \left[ \ln\left(z + \sqrt{b^2 + z^2}\right) \right]_{-z_1}^{+z_2}
+    \Delta t_{\mathrm{delay}} = \frac{2GM}{c_{\mathrm{E}}^3} \left[ \ln\left(z + \sqrt{b^2 + z^2}\right) \right]_{-z_1}^{+z_2}
 \end{equation}
 \begin{equation}
-    \Delta t_{delay} = \frac{2GM}{c_E^3} \ln\left( \frac{z_2 + \sqrt{b^2 + z_2^2}}{-z_1 + \sqrt{b^2 + z_1^2}} \right)
+    \Delta t_{\mathrm{delay}} = \frac{2GM}{c_{\mathrm{E}}^3} \ln\left( \frac{z_2 + \sqrt{b^2 + z_2^2}}{-z_1 + \sqrt{b^2 + z_1^2}} \right)
 \end{equation}
 
 \subsection{Step 3: Macroscopic Approximation}
 For planetary and solar radar measurements, the coordinate distances are vastly larger than the impact parameter ($z_1, z_2 \gg b$). In this limit, the logarithmic term simplifies algebraically to align with the standard relativistic Shapiro observation:
 \begin{equation}
-    \Delta t_{delay} \approx \frac{2GM}{c_E^3} \ln\left( \frac{4z_1 z_2}{b^2} \right)
+    \Delta t_{\mathrm{delay}} \approx \frac{2GM}{c_{\mathrm{E}}^3} \ln\left( \frac{4z_1 z_2}{b^2} \right)
 \end{equation}
 
-This confirms that the localized temporal and spatial impedances ($2\alpha_G$) integrate macroscopically to reproduce the exact observed signal delay.
+This confirms that the localized temporal and spatial impedances ($2\alpha_{\mathrm{G}}$) integrate macroscopically to reproduce the exact observed signal delay.

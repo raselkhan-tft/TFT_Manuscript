@@ -2,13 +2,13 @@
 \label{app:quantum_tunneling}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\textbf{Abstract:} Standard Quantum Mechanics (SQM) describes tunneling as a probabilistic event where a particle briefly violates energy conservation to leak through a potential barrier ($V>E$). Tension Field Theory (TFT) rejects this violation, redefining tunneling as a deterministic mechanical resonance phenomenon. We demonstrate that a high-impedance barrier can be rendered transparent naturally via geometric resonance, or artificially if an active driver creates a standing wave bridge, dropping the barrier's effective impedance to zero. This formulation converts tunneling from a stochastic quantum anomaly into a tunable engineering parameter.
+\noindent\textbf{Abstract:} Standard Quantum Mechanics (SQM) describes tunneling as a probabilistic event where a particle briefly violates energy conservation to leak through a potential barrier ($V>E$). Tension Field Theory (TFT) rejects this violation, redefining tunneling as a deterministic mechanical resonance phenomenon. We demonstrate that a high-impedance barrier can be rendered transparent naturally via geometric resonance, or artificially if an active driver creates a standing wave bridge, dropping the barrier's effective impedance to zero. This formulation converts tunneling from a stochastic quantum anomaly into a tunable engineering parameter.
 
 \section{The Definition Shift: SQM vs. TFT}
 
 \begin{itemize}
     \item \textbf{The SQM View (Probabilistic Leakage):} The wavefunction decays exponentially inside a static barrier. The particle ``tunnels'' by briefly borrowing energy via the Heisenberg uncertainty principle, appearing on the other side without physically traversing the intervening space.
-    \item \textbf{The TFT View (Resonant Transparency):} The barrier is a physical region of high gravitational strain and effective inertia (high mechanical impedance, $Z_{wall}$). In nature, tunneling occurs when a particle's pilot wave geometrically resonates with the barrier's internal boundaries, temporarily dropping its effective impedance. The particle does not teleport; it slides through the intervening space because the lattice links are mechanically forced to open and close in perfect synchronization with the topology's arrival.
+    \item \textbf{The TFT View (Resonant Transparency):} The barrier is a physical region of high gravitational strain and effective inertia (high mechanical impedance, $Z_{\mathrm{wall}}$). In nature, tunneling occurs when a particle's pilot wave geometrically resonates with the barrier's internal boundaries, temporarily dropping its effective impedance. The particle does not teleport; it slides through the intervening space because the lattice links are mechanically forced to open and close in perfect synchronization with the topology's arrival.
 \end{itemize}
 
 \section{The Core Concept: Passive vs. Active Standing Wave Bridges}
@@ -32,35 +32,35 @@ We present the evolution from the natural (passive) state to the engineered (act
 \subsection{The Passive Law (Natural Attenuation)}
 If there is no active downstream driver and the geometry does not naturally resonate, the pilot wave simply pushes against the internal friction of the barrier, resulting in standard exponential decay:
 \begin{equation}
-    T_{passive} \approx \exp(-2\Gamma_{wall} L)
+    T_{\mathrm{passive}} \approx \exp(-2\Gamma_{\mathrm{wall}} L)
 \end{equation}
-Where $\Gamma_{wall}$ is the strict Quantum Damping Rate of the barrier lattice (Derived in \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix \ref*{app:matter_vnlw_photon_linear_waveequation}}), and $L$ is the physical thickness of the barrier. Under natural conditions, thick walls or highly damped lattices remain thoroughly opaque to the stress wave.
+Where $\Gamma_{\mathrm{wall}}$ is the strict Quantum Damping Rate of the barrier lattice (Derived in \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix \ref*{app:matter_vnlw_photon_linear_waveequation}}), and $L$ is the physical thickness of the barrier. Under natural conditions, thick walls or highly damped lattices remain thoroughly opaque to the stress wave.
 
 \subsection{The Active Physics Law (Resonant Transmission)}
 When an active driver is introduced, transmission is governed by the mechanical cancellation of impedance:
 \begin{equation}
-    T_{active} = \frac{\exp(-2\Gamma_D L)}{1 + \left(\frac{Z_{wall}}{Z_{drive}}\right)^2 \cdot \left[ \sin^2(kL + \phi) + \left(\frac{\omega - \omega_0}{\omega_0}\right)^2 \right]}
+    T_{\mathrm{active}} = \frac{\exp(-2\Gamma_{\mathrm{D}} L)}{1 + \left(\frac{Z_{\mathrm{wall}}}{Z_{\mathrm{drive}}}\right)^2 \cdot \left[ \sin^2(kL + \phi) + \left(\frac{\omega - \omega_0}{\omega_0}\right)^2 \right]}
 \end{equation}
 
-\textbf{Term Analysis:}
+\noindent\textbf{Term Analysis:}
 \begin{itemize}
-    \item $\exp(-2\Gamma_D L)$ \textbf{(The Range Limit):} Ensures tunneling cannot occur across infinite distances. The vacuum cosmological drag ($\Gamma_D$) eventually attenuates the standing wave bridge over extreme barrier thicknesses. \textit{(Note: Updated from $D$ to $\Gamma_D$ for absolute consistency with Appendix \ref*{app:vacuumdamping_cosmicredshift}).}
-    \item $\left(Z_{wall}/Z_{drive}\right)^2$ \textbf{(The Sensitivity):} The ratio of the barrier's static mechanical impedance to the active drive impedance of the receiver. If the active drive ($Z_{drive}$) vastly exceeds the wall impedance ($Z_{wall}$), this dimensionless term shrinks, forcing the gate open even if phase tuning is imperfect.
+    \item $\exp(-2\Gamma_{\mathrm{D}} L)$ \textbf{(The Range Limit):} Ensures tunneling cannot occur across infinite distances. The vacuum cosmological drag ($\Gamma_{\mathrm{D}}$) eventually attenuates the standing wave bridge over extreme barrier thicknesses. \textit{(Note: Updated from $D$ to $\Gamma_{\mathrm{D}}$ for absolute consistency with Appendix \ref*{app:vacuumdamping_cosmicredshift}).}
+    \item $\left(Z_{\mathrm{wall}}/Z_{\mathrm{drive}}\right)^2$ \textbf{(The Sensitivity):} The ratio of the barrier's static mechanical impedance to the active drive impedance of the receiver. If the active drive ($Z_{\mathrm{drive}}$) vastly exceeds the wall impedance ($Z_{\mathrm{wall}}$), this dimensionless term shrinks, forcing the gate open even if phase tuning is imperfect.
     \item $\sin^2(kL + \phi)$ \textbf{(The Geometric Lock):} Checks if the standing wave geometrically fits inside the barrier, where $k$ is the standard angular wavenumber ($2\pi/\lambda$). Transmission maximizes when the node condition is met ($kL + \phi = n\pi$).
     \item $\left(\frac{\omega - \omega_0}{\omega_0}\right)^2$ \textbf{(The Frequency Key):} Ensures the active receiver ($\omega_0$) is strictly tuned to the specific frequency ($\omega$) of the incoming wave.
 \end{itemize}
 
 \section{Engineering Control Parameters}
-For practical macroscopic engineering applications across short gaps, the baseline cosmological drag becomes negligible ($\exp(-2\Gamma_D L) \approx 1$), and the complex visco-elastic physics reduces to three primary macroscopic control parameters:
+For practical macroscopic engineering applications across short gaps, the baseline cosmological drag becomes negligible ($\exp(-2\Gamma_{\mathrm{D}} L) \approx 1$), and the complex visco-elastic physics reduces to three primary macroscopic control parameters:
 \begin{equation}
-    T_{device} \approx \frac{1}{1 + \left(\frac{Z_{wall}}{Z_{drive}}\right)^2 (\Delta\phi^2 + \Delta f^2)}
+    T_{\mathrm{device}} \approx \frac{1}{1 + \left(\frac{Z_{\mathrm{wall}}}{Z_{\mathrm{drive}}}\right)^2 (\Delta\phi^2 + \Delta f^2)}
 \end{equation}
 
 \begin{itemize}
-    \item \textbf{Active Drive Impedance ($Z_{drive}$):} The active coupling power of the receiver. Maximizing this overpowers the static mechanical impedance of the wall.
+    \item \textbf{Active Drive Impedance ($Z_{\mathrm{drive}}$):} The active coupling power of the receiver. Maximizing this overpowers the static mechanical impedance of the wall.
     \item \textbf{Frequency Detuning ($\Delta f$):} The normalized difference between the source and receiver frequencies. Tuning must minimize this to zero.
     \item \textbf{Phase Offset ($\Delta\phi$):} The timing delay of the receiver. This is adjusted until the standing wave geometrically locks into the gap.
 \end{itemize}
 
 \vspace{0.4cm}
-\noindent \textbf{Final Result:} When the active drive impedance is extremely high and tuning errors are zero, the denominator reduces to 1. The barrier becomes $100\%$ transparent, and the particle tunnels deterministically.
+\noindent \textbf{Final Result:} When the active drive impedance is extremely high and tuning errors are zero, the denominator reduces to 1. The barrier becomes 100\% transparent, and the particle tunnels deterministically.

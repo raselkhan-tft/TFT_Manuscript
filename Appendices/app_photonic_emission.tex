@@ -2,80 +2,80 @@
 \label{app:photonic_emission}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\textbf{Abstract:} In Tension Field Theory (TFT), a photon is defined as a coherent release of substrate tension along a discrete electromagnetic channel. This appendix formalizes the mechanics of photon emission from atomic orbital drops, proving the existence of picometer-scale emission bottlenecks. Furthermore, it defines the phase exchange budget for independent photons crossing paths via temporary strain-field overlap on the SC Substrate.
+\noindent\textbf{Abstract:} In Tension Field Theory (TFT), a photon is defined as a coherent release of substrate tension along a discrete electromagnetic channel. This appendix formalizes the mechanics of photon emission from atomic orbital drops, proving the existence of picometer-scale emission bottlenecks. Furthermore, it defines the phase exchange budget for independent photons crossing paths via temporary strain-field overlap on the SC Substrate.
 
 \section{The Mechanics of Photon Emission}
 Standard physics models photon emission as a probabilistic point-particle creation. TFT models it as a visco-elastic extrusion. Photon emission is the release of structural tension through a highly localized micro-bottleneck in the FCC Soft Floor.
 
 The energy of the emitted photon is the volume integral of the released tension over the geometric bounds of the emission channel:
 \begin{equation}
-    E_\gamma = \int \delta\tau \, dV \approx \tau_{bulk} \cdot A_{chan} \cdot \Delta r
+    E_{\gamma} = \int \delta\tau \, \mathrm{d}V \approx \tau_{\mathrm{bulk}} \cdot A_{\mathrm{chan}} \cdot \Delta r
 \end{equation}
 
-\textbf{Where:}
+\noindent\textbf{Where:}
 \begin{itemize}
-    \item $\tau_{bulk}$: The three-dimensional tension density of the local field ($\text{N/m}^2$). The fundamental macroscopic tension is defined by the lattice density $\tau_{bulk} = \rho c_E^2$. Substituting the geometric definition of the quantum action lever ($\hbar = \rho c_E r^4$), the operative tension density at a given effective radius $r_{eff}$ scales strictly as:
+    \item $\tau_{\mathrm{bulk}}$: The three-dimensional tension density of the local field (N/m$^2$). The fundamental macroscopic tension is defined by the lattice density $\tau_{\mathrm{bulk}} = \rho c_{\mathrm{E}}^2$. Substituting the geometric definition of the quantum action lever ($\hbar = \rho c_{\mathrm{E}} r^4$), the operative tension density at a given effective radius $r_{\mathrm{eff}}$ scales strictly as:
     \begin{equation}
-        \tau_{bulk} = \frac{\hbar c_E}{r_{eff}^4}
+        \tau_{\mathrm{bulk}} = \frac{\hbar c_{\mathrm{E}}}{r_{\mathrm{eff}}^4}
     \end{equation}
-    \item $A_{chan}$: The cross-sectional area of the micro-emission channel.
+    \item $A_{\mathrm{chan}}$: The cross-sectional area of the micro-emission channel.
     \item $\Delta r$: The physical drop length through the lattice, defined by the absolute spatial difference between the starting shell $r_n$ and ending shell $r_m$: $\Delta r = |r_n - r_m|$.
-    \item $r_{eff}$: The operative geometric mean radius of the atomic drop: $r_{eff} = \sqrt{r_n r_m}$.
+    \item $r_{\mathrm{eff}}$: The operative geometric mean radius of the atomic drop: $r_{\mathrm{eff}} = \sqrt{r_n r_m}$.
 \end{itemize}
 
 \subsection{Worked Hydrogen Examples}
-By tracing the exact geometric path of the electron drop, we can calculate the true cross-section of the emission channel ($A_{chan} = \frac{|\Delta E|}{\tau_{bulk} \Delta r}$).
+By tracing the exact geometric path of the electron drop, we can calculate the true cross-section of the emission channel ($A_{\mathrm{chan}} = \frac{|\Delta E|}{\tau_{\mathrm{bulk}} \Delta r}$).
 
 \vspace{0.2cm}
-\noindent \textbf{1. Lyman-$\alpha$ ($2 \to 1$):}
+\noindent \textbf{1. Lyman--$\alpha$ ($2 \to 1$):}
 \begin{itemize}
-    \item \textbf{$\Delta E$:} $\approx 10.204 \text{ eV} \quad (1.6349 \times 10^{-18} \text{ J})$
-    \item \textbf{Geometry:} $r_2 = 2.1167 \times 10^{-10} \text{ m}, \quad r_1 = 5.2918 \times 10^{-11} \text{ m}$
-    \item \textbf{Drop Parameters:} $\Delta r = 1.5875 \times 10^{-10} \text{ m}, \quad r_{eff} = 1.0584 \times 10^{-10} \text{ m}$
-    \item \textbf{Local Tension:} $\tau_{bulk} \approx 2.5220 \times 10^{14} \text{ N/m}^2$
-    \item \textbf{Channel Area:} $A_{chan} \approx 4.0835 \times 10^{-23} \text{ m}^2$
-    \item \textbf{Resulting Radius:} $r_{chan} \approx 3.6057 \text{ pm} \quad (3.6057 \times 10^{-12} \text{ m})$
+    \item \textbf{$\Delta E$:} $\approx 10.204$ eV \quad ($1.6349 \times 10^{-18}$ J)
+    \item \textbf{Geometry:} $r_2 = 2.1167 \times 10^{-10}$ m, \quad $r_1 = 5.2918 \times 10^{-11}$ m
+    \item \textbf{Drop Parameters:} $\Delta r = 1.5875 \times 10^{-10}$ m, \quad $r_{\mathrm{eff}} = 1.0584 \times 10^{-10}$ m
+    \item \textbf{Local Tension:} $\tau_{\mathrm{bulk}} \approx 2.5220 \times 10^{14}$ N/m$^2$
+    \item \textbf{Channel Area:} $A_{\mathrm{chan}} \approx 4.0835 \times 10^{-23}$ m$^2$
+    \item \textbf{Resulting Radius:} $r_{\mathrm{chan}} \approx 3.6057$ pm \quad ($3.6057 \times 10^{-12}$ m)
 \end{itemize}
 
 \vspace{0.2cm}
-\noindent \textbf{2. Balmer-$\alpha$ ($3 \to 2$):}
+\noindent \textbf{2. Balmer--$\alpha$ ($3 \to 2$):}
 \begin{itemize}
-    \item \textbf{$\Delta E$:} $\approx 1.8897 \text{ eV} \quad (3.0276 \times 10^{-19} \text{ J})$
-    \item \textbf{Geometry:} $r_3 = 4.7626 \times 10^{-10} \text{ m}, \quad r_2 = 2.1167 \times 10^{-10} \text{ m}$
-    \item \textbf{Drop Parameters:} $\Delta r = 2.6459 \times 10^{-10} \text{ m}, \quad r_{eff} = 3.1751 \times 10^{-10} \text{ m}$
-    \item \textbf{Local Tension:} $\tau_{bulk} \approx 3.1112 \times 10^{12} \text{ N/m}^2$
-    \item \textbf{Channel Area:} $A_{chan} \approx 3.6779 \times 10^{-22} \text{ m}^2$
-    \item \textbf{Resulting Radius:} $r_{chan} \approx 10.820 \text{ pm} \quad (1.0820 \times 10^{-11} \text{ m})$
+    \item \textbf{$\Delta E$:} $\approx 1.8897$ eV \quad ($3.0276 \times 10^{-19}$ J)
+    \item \textbf{Geometry:} $r_3 = 4.7626 \times 10^{-10}$ m, \quad $r_2 = 2.1167 \times 10^{-10}$ m
+    \item \textbf{Drop Parameters:} $\Delta r = 2.6459 \times 10^{-10}$ m, \quad $r_{\mathrm{eff}} = 3.1751 \times 10^{-10}$ m
+    \item \textbf{Local Tension:} $\tau_{\mathrm{bulk}} \approx 3.1112 \times 10^{12}$ N/m$^2$
+    \item \textbf{Channel Area:} $A_{\mathrm{chan}} \approx 3.6779 \times 10^{-22}$ m$^2$
+    \item \textbf{Resulting Radius:} $r_{\mathrm{chan}} \approx 10.820$ pm \quad ($1.0820 \times 10^{-11}$ m)
 \end{itemize}
 
-\textbf{Conclusion:} Both atomic transitions prove mathematically that photons are extruded through localized, picometer-scale channels ($\approx 10^{-12} \text{ m}$), which are vastly smaller than the macroscopic atomic orbital radii ($\approx 10^{-10} \text{ m}$). The released energy does not occupy the full orbital shell; it is squeezed out through a highly pressurized micro-fracture.
+\noindent\textbf{Conclusion:} Both atomic transitions prove mathematically that photons are extruded through localized, picometer-scale channels ($\approx 10^{-12}$ m), which are vastly smaller than the macroscopic atomic orbital radii ($\approx 10^{-10}$ m). The released energy does not occupy the full orbital shell; it is squeezed out through a highly pressurized micro-fracture.
 
 \section{The Phase Crosstalk Budget (Shared Strain Bottleneck)}
 When two independent photons cross paths in free space at distances vastly greater than their channel radii, they exchange nothing.
 
-However, if their trajectories are engineered to overlap tightly (such as in an evanescent fiber coupler), their vertical Tension Columns pass close enough that their respective strain fields on the SC Hard Floor temporarily overlap. This creates a Shared Strain Bottleneck, $A_{overlap}$.
+However, if their trajectories are engineered to overlap tightly (such as in an evanescent fiber coupler), their vertical Tension Columns pass close enough that their respective strain fields on the SC Hard Floor temporarily overlap. This creates a Shared Strain Bottleneck, $A_{\mathrm{overlap}}$.
 
 Because they temporarily share a localized patch of the phase-locked SC substrate, the torsion of Column A mechanically interacts with the torsion of Column B. They do not exchange transverse kinetic energy (which requires field fracture); they strictly exchange Phase Holonomy, $\Delta\phi$.
 
 This mechanical phase exchange is governed by the total volumetric action of the overlapping strain fields, bounded by:
 \begin{equation}
-    \Delta\phi \leq \eta_\phi \cdot \left(\frac{c_E}{r^3}\right) \cdot A_{overlap} \cdot T
+    \Delta\phi \leq \eta_{\phi} \cdot \left(\frac{c_{\mathrm{E}}}{r^3}\right) \cdot A_{\mathrm{overlap}} \cdot T
 \end{equation}
 
-\textbf{Where:}
+\noindent\textbf{Where:}
 \begin{itemize}
     \item $r$ is the mode radius.
-    \item $A_{overlap}$ is the transient bottleneck area of the crossing Hard Floor strain fields.
+    \item $A_{\mathrm{overlap}}$ is the transient bottleneck area of the crossing Hard Floor strain fields.
     \item $T$ is the operational dwell time.
-    \item $\eta_\phi$ is the dimensionless Geometric Coupling Efficiency ($0 < \eta_\phi \ll 1$). It is an empirically calibrated constant that accounts for spatial mismatch, scattering losses, and the imperfect alignment of the transient strain fields during the crossing event.
+    \item $\eta_{\phi}$ is the dimensionless Geometric Coupling Efficiency ($0 < \eta_{\phi} \ll 1$). It is an empirically calibrated constant that accounts for spatial mismatch, scattering losses, and the imperfect alignment of the transient strain fields during the crossing event.
 \end{itemize}
 
 \section{Scaling and Falsifiability}
 This mechanical framework provides direct scaling laws for experimental verification. Phase crosstalk between independent photons can be empirically enhanced by shrinking the mode radius, physically enlarging the bottleneck area, or increasing the propagation dwell time.
 
-\textbf{Falsification Criteria:} The TFT optical model is strictly falsifiable. The framework is disproven if:
+\noindent\textbf{Falsification Criteria:} The TFT optical model is strictly falsifiable. The framework is disproven if:
 \begin{itemize}
-    \item Photonic phase correlations exhibit standard inverse-square distance-law decay while the minimal bottleneck area $A_{overlap}$ remains rigidly fixed.
-    \item A measured phase correlation exceeds the hard geometric budget cap calculated from independently measured system parameters $r$, $A_{overlap}$, and $T$.
-    \item Significant kinetic energy (a measurable change in frequency or color) is exchanged between crossing photons at small $A_{overlap}$ without reaching the extreme energy thresholds required to physically disrupt the vacuum medium.
+    \item Photonic phase correlations exhibit standard inverse-square distance-law decay while the minimal bottleneck area $A_{\mathrm{overlap}}$ remains rigidly fixed.
+    \item A measured phase correlation exceeds the hard geometric budget cap calculated from independently measured system parameters $r$, $A_{\mathrm{overlap}}$, and $T$.
+    \item Significant kinetic energy (a measurable change in frequency or color) is exchanged between crossing photons at small $A_{\mathrm{overlap}}$ without reaching the extreme energy thresholds required to physically disrupt the vacuum medium.
 \end{itemize}

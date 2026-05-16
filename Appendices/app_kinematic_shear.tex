@@ -2,64 +2,90 @@
 \label{app:kinematic_shear}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\textbf{Abstract:} Deriving the macroscopic shear stiffness of the vacuum from GW150914 and validating the continuum against General Relativity tensors and static Newtonian gravity.
+\noindent\textbf{Abstract:} Deriving the macroscopic shear stiffness of the vacuum from GW150914 and validating the continuum against General Relativity tensors and static Newtonian gravity.
 
 \section{Introduction: The Kinematic Shear Model}
 To determine the physical state of the spacetime medium, we treat the vacuum as a transmissive continuum capable of supporting transverse shear waves. Because macroscopic gravitational waves propagate through a 3D volume, their propagation speed is governed by the 3D volumetric shear wave equation:
-$$c_E = \sqrt{\frac{K_{\text{shear}}}{\rho_{\text{eff}}}}$$
-Where $\rho_{\text{eff}}$ represents the effective macroscopic inertial density of the continuum. Our objective is to calculate the empirical volumetric shear modulus ($K_{\text{shear}}$) of the local active vacuum from observational data.
+\begin{equation}
+    c_{\mathrm{E}} = \sqrt{\frac{K_{\mathrm{shear}}}{\rho_{\mathrm{eff}}}}
+\end{equation}
+Where $\rho_{\mathrm{eff}}$ represents the effective macroscopic inertial density of the continuum. Our objective is to calculate the empirical volumetric shear modulus ($K_{\mathrm{shear}}$) of the local active vacuum from observational data.
 
 \section{Observational Data (GW150914)}
 We utilize the signal data from the first direct detection of gravitational waves \cite{LIGO_2016}.
 \begin{itemize}
-    \item \textbf{Energy Flux ($I$):} $1.41 \times 10^{-3}\text{ W/m}^2$
-    \item \textbf{Strain amplitude ($h_{\text{GW}}$):} $1.0 \times 10^{-21}$ (dimensionless)
-    \item \textbf{Frequency ($f$):} $150\text{ Hz}$ ($\omega \approx 942.48\text{ rad/s}$)
+    \item \textbf{Energy Flux ($I$):} $1.41 \times 10^{-3}$ W/m$^2$
+    \item \textbf{Strain amplitude ($h_{\mathrm{GW}}$):} $1.0 \times 10^{-21}$ (dimensionless)
+    \item \textbf{Frequency ($f$):} 150 Hz ($\omega \approx 942.48$ rad/s)
 \end{itemize}
 
 \section{The Continuum Strain-Displacement Relation}
-To calculate the impedance of the continuum, we must relate the dimensionless gravitational strain ($h_{\text{GW}}$) to the macroscopic continuum displacement amplitude ($\epsilon_{\text{GW}}$). In continuum wave mechanics, strain is the spatial derivative of displacement:
-$$h_{\text{GW}} = \epsilon_{\text{GW}} \left( \frac{\omega}{c_E} \right) \implies \epsilon_{\text{GW}} = \frac{h_{\text{GW}} c_E}{\omega}$$
+To calculate the impedance of the continuum, we must relate the dimensionless gravitational strain ($h_{\mathrm{GW}}$) to the macroscopic continuum displacement amplitude ($\epsilon_{\mathrm{GW}}$). In continuum wave mechanics, strain is the spatial derivative of displacement:
+\begin{equation}
+    h_{\mathrm{GW}} = \epsilon_{\mathrm{GW}} \left( \frac{\omega}{c_{\mathrm{E}}} \right) \implies \epsilon_{\mathrm{GW}} = \frac{h_{\mathrm{GW}} c_{\mathrm{E}}}{\omega}
+\end{equation}
 
-\section{Transverse Impedance and Empirical Stiffness ($K_{\text{shear}}$)}
-We substitute this continuum displacement ($\epsilon_{\text{GW}}$) into the classical wave intensity equation, $I = \frac{1}{2} Z \omega^2 \epsilon_{\text{GW}}^2$, to solve for the medium's transverse shear impedance ($Z$):
-$$I = \frac{1}{2} Z \omega^2 \left( \frac{h_{\text{GW}} c_E}{\omega} \right)^2 = \frac{1}{2} Z h_{\text{GW}}^2 c_E^2$$
+\section{Transverse Impedance and Empirical Stiffness ($K_{\mathrm{shear}}$)}
+We substitute this continuum displacement ($\epsilon_{\mathrm{GW}}$) into the classical wave intensity equation, $I = \frac{1}{2} Z \omega^2 \epsilon_{\mathrm{GW}}^2$, to solve for the medium's transverse shear impedance ($Z$):
+\begin{equation}
+    I = \frac{1}{2} Z \omega^2 \left( \frac{h_{\mathrm{GW}} c_{\mathrm{E}}}{\omega} \right)^2 = \frac{1}{2} Z h_{\mathrm{GW}}^2 c_{\mathrm{E}}^2
+\end{equation}
 Solving for $Z$:
-$$Z = \frac{2I}{h_{\text{GW}}^2 c_E^2} \approx \frac{2(1.41 \times 10^{-3})}{(1.0 \times 10^{-21})^2 \cdot (299792458)^2} \approx 3.137 \times 10^{22}\text{ kg/(m}^2\cdot\text{s)}$$
-In continuum mechanics, the Shear Modulus ($K_{\text{shear}}$) is the product of the mechanical impedance and the wave speed ($K = Z \cdot c_E$):
-$$K_{\text{shear}} = (3.137 \times 10^{22}) \cdot (299792458) \approx 9.406 \times 10^{30}\text{ Pa}$$
+\begin{equation}
+    Z = \frac{2I}{h_{\mathrm{GW}}^2 c_{\mathrm{E}}^2} \approx \frac{2(1.41 \times 10^{-3})}{(1.0 \times 10^{-21})^2 \cdot (299792458)^2} \approx 3.137 \times 10^{22} \text{ kg/(m}^2\cdot\text{s)}
+\end{equation}
+In continuum mechanics, the Shear Modulus ($K_{\mathrm{shear}}$) is the product of the mechanical impedance and the wave speed ($K = Z \cdot c_{\mathrm{E}}$):
+\begin{equation}
+    K_{\mathrm{shear}} = (3.137 \times 10^{22}) \cdot (299792458) \approx 9.406 \times 10^{30} \text{ Pa}
+\end{equation}
 
-\section{The Neutron Star Alignment ($\rho_{\text{eff}}$)}
-Because $c_E = \sqrt{K_{\text{shear}}/\rho_{\text{eff}}}$, this $10^{30}\text{ Pa}$ macroscopic stiffness mathematically dictates the macroscopic effective inertial density ($\rho_{\text{eff}}$) of the active vacuum:
-$$\rho_{\text{eff}} = \frac{K_{\text{shear}}}{c_E^2} \approx \frac{9.406 \times 10^{30}}{(299792458)^2} \approx 1.04 \times 10^{14}\text{ kg/m}^3$$
+\section{The Neutron Star Alignment ($\rho_{\mathrm{eff}}$)}
+Because $c_{\mathrm{E}} = \sqrt{K_{\mathrm{shear}}/\rho_{\mathrm{eff}}}$, this $10^{30}$ Pa macroscopic stiffness mathematically dictates the macroscopic effective inertial density ($\rho_{\mathrm{eff}}$) of the active vacuum:
+\begin{equation}
+    \rho_{\mathrm{eff}} = \frac{K_{\mathrm{shear}}}{c_{\mathrm{E}}^2} \approx \frac{9.406 \times 10^{30}}{(299792458)^2} \approx 1.04 \times 10^{14} \text{ kg/m}^3
+\end{equation}
 This establishes a profound mechanical continuity: it exactly aligns the local rigidity and effective inertial density of the active vacuum with the physical properties of a neutron star.
 
 \section{Continuum Stability vs. Microscopic Yield}
-While the macroscopic stiffness of the visco-elastic continuum is $K_{\text{shear}} \approx 10^{30}\text{ Pa}$, the theoretical yield limit of a single microscopic FCC node derived previously is vastly higher ($\tau_G \approx 10^{96}\text{ Pa}$). The macroscopic wave stress exerted by GW150914 is only $\sigma_{\text{wave}} = K_{\text{shear}} \cdot h_{\text{GW}} \approx 9.4 \times 10^9\text{ Pa}$. Because the wave stress is nearly 86 orders of magnitude below the structural failure limit ($\sigma_{\text{wave}} \ll \tau_G$), the gravitational wave propagates smoothly and entirely within the elastic limits of the medium, far below the threshold required to trigger a localized phase transition or geometric lock.
+While the macroscopic stiffness of the visco-elastic continuum is $K_{\mathrm{shear}} \approx 10^{30}$ Pa, the theoretical yield limit of a single microscopic FCC node derived previously is vastly higher ($\tau_{\mathrm{G}} \approx 10^{96}$ Pa). The macroscopic wave stress exerted by GW150914 is only $\sigma_{\mathrm{wave}} = K_{\mathrm{shear}} \cdot h_{\mathrm{GW}} \approx 9.4 \times 10^9$ Pa. Because the wave stress is nearly 86 orders of magnitude below the structural failure limit ($\sigma_{\mathrm{wave}} \ll \tau_{\mathrm{G}}$), the gravitational wave propagates smoothly and entirely within the elastic limits of the medium, far below the threshold required to trigger a localized phase transition or geometric lock.
 
 \section{The Spin-2 Strain Tensor (Linear Elasticity)}
 In Tension Field Theory (TFT), the local active vacuum is an isotropic, visco-elastic continuum. For a '+' polarized transverse shear wave propagating along the z-axis, the strain tensor $\epsilon_{ij}$ observed at Earth is:
-$$\epsilon_{ij} = \begin{bmatrix}
-h_{\text{GW}} & 0 & 0 \\
-0 & -h_{\text{GW}} & 0 \\
-0 & 0 & 0
-\end{bmatrix}$$
-Because the medium strongly resists volumetric compression (isochoric shear), the trace of the strain tensor is zero ($\text{tr}(\epsilon) = h_{\text{GW}} - h_{\text{GW}} = 0$). This volume-conservation requirement perfectly mimics the geometric definition of the spin-2 quadrupole tensor required by General Relativity, generated entirely through classical solid-state mechanics.
+\begin{equation}
+    \epsilon_{ij} = \begin{bmatrix}
+    h_{\mathrm{GW}} & 0 & 0 \\
+    0 & -h_{\mathrm{GW}} & 0 \\
+    0 & 0 & 0
+    \end{bmatrix}
+\end{equation}
+Because the medium strongly resists volumetric compression (isochoric shear), the trace of the strain tensor is zero ($\text{tr}(\epsilon) = h_{\mathrm{GW}} - h_{\mathrm{GW}} = 0$). This volume-conservation requirement perfectly mimics the geometric definition of the spin-2 quadrupole tensor required by General Relativity, generated entirely through classical solid-state mechanics.
 
 \section{Stress-Energy Tensor Validation}
 For linear elasticity, the stress tensor $\sigma_{ij}$ relates to strain by $\sigma_{ij} = \lambda \delta_{ij} \text{tr}(\epsilon) + 2\mu \epsilon_{ij}$.
-Because $\text{tr}(\epsilon) = 0$, the first term vanishes. In pure transverse shear, the Lamé parameter $\mu$ is exactly equal to the Shear Modulus ($K_{\text{shear}}$).
-Therefore, $\sigma_{ij} = 2K_{\text{shear}} \epsilon_{ij}$. The local gravitational energy density ($u$) is given by:
-$$u_{\text{TFT}} = \frac{1}{2} \sum \sigma_{ij} \epsilon_{ij} = 2K_{\text{shear}} h_{\text{GW}}^2$$
-$$u_{\text{TFT}} = 2(9.406 \times 10^{30}) \cdot (1.0 \times 10^{-21})^2 \approx 1.88 \times 10^{-11}\text{ J/m}^3$$
-Standard General Relativity (using the weak-field metric approximation for GW150914) calculates this energy density as $\approx 5.0 \times 10^{-11}\text{ J/m}^3$. The TFT classical solid-state tensor calculation directly matches the GR metric equation to within a single order of magnitude, proving the mechanical formulation is observationally equivalent to the geometric one.
+Because $\text{tr}(\epsilon) = 0$, the first term vanishes. In pure transverse shear, the Lam\'e parameter $\mu$ is exactly equal to the Shear Modulus ($K_{\mathrm{shear}}$).
+Therefore, $\sigma_{ij} = 2K_{\mathrm{shear}} \epsilon_{ij}$. The local gravitational energy density ($u$) is given by:
+\begin{equation}
+    u_{\mathrm{TFT}} = \frac{1}{2} \sum \sigma_{ij} \epsilon_{ij} = 2K_{\mathrm{shear}} h_{\mathrm{GW}}^2
+\end{equation}
+\begin{equation}
+    u_{\mathrm{TFT}} = 2(9.406 \times 10^{30}) \cdot (1.0 \times 10^{-21})^2 \approx 1.88 \times 10^{-11} \text{ J/m}^3
+\end{equation}
+Standard General Relativity (using the weak-field metric approximation for GW150914) calculates this energy density as $\approx 5.0 \times 10^{-11}$ J/m$^3$. The TFT classical solid-state tensor calculation directly matches the GR metric equation to within a single order of magnitude, proving the mechanical formulation is observationally equivalent to the geometric one.
 
 \section{Dynamic-Static Field Unification}
-In earlier chapters, static acceleration was derived from the tension gradient of the SGF ($g = -\frac{1}{\mu_D} \frac{d\tau_M}{dr}$), and structural strain was established as $\alpha_G = \frac{GM}{c_E^2 r}$.
-Applying classical Hooke’s Law to the macroscopic continuum, the static radial stress ($\sigma(r)$) is the product of the continuum shear stiffness and the localized spatial strain ($\alpha_G$):
-$$\sigma(r) = K_{\text{shear}} \cdot \alpha_G(r) = \frac{K_{\text{shear}} GM}{c_E^2 r}$$
-The macroscopic acceleration ($g$) induced by this stress gradient is equal to its magnitude divided by the effective inertial density ($\rho_{\text{eff}}$):
-$$g(r) = \frac{1}{\rho_{\text{eff}}} \left| \frac{d\sigma}{dr} \right| = \frac{K_{\text{shear}} GM}{\rho_{\text{eff}} c_E^2 r^2}$$
-Because the visco-elastic wave relation guarantees that $K_{\text{shear}} / \rho_{\text{eff}} = c_E^2$, substituting this into the equation yields:
-$$g(r) = \frac{c_E^2 \cdot GM}{c_E^2 r^2} = \frac{GM}{r^2}$$
-\textbf{Conclusion:} The exact empirical stiffness ($10^{30}\text{ Pa}$) and density ($10^{14}\text{ kg/m}^3$) that transmit dynamic gravitational waves natively recover the static Newtonian acceleration. The dynamic wave and the static field are unified mechanical expressions of the exact same visco-elastic continuum.
+In earlier chapters, static acceleration was derived from the tension gradient of the SGF ($g = -\frac{1}{\mu_{\mathrm{D}}} \frac{\mathrm{d}\tau_{\mathrm{M}}}{\mathrm{d}r}$), and structural strain was established as $\alpha_{\mathrm{G}} = \frac{GM}{c_{\mathrm{E}}^2 r}$.
+Applying classical Hooke's Law to the macroscopic continuum, the static radial stress ($\sigma(r)$) is the product of the continuum shear stiffness and the localized spatial strain ($\alpha_{\mathrm{G}}$):
+\begin{equation}
+    \sigma(r) = K_{\mathrm{shear}} \cdot \alpha_{\mathrm{G}}(r) = \frac{K_{\mathrm{shear}} GM}{c_{\mathrm{E}}^2 r}
+\end{equation}
+The macroscopic acceleration ($g$) induced by this stress gradient is equal to its magnitude divided by the effective inertial density ($\rho_{\mathrm{eff}}$):
+\begin{equation}
+    g(r) = \frac{1}{\rho_{\mathrm{eff}}} \left| \frac{\mathrm{d}\sigma}{\mathrm{d}r} \right| = \frac{K_{\mathrm{shear}} GM}{\rho_{\mathrm{eff}} c_{\mathrm{E}}^2 r^2}
+\end{equation}
+Because the visco-elastic wave relation guarantees that $K_{\mathrm{shear}} / \rho_{\mathrm{eff}} = c_{\mathrm{E}}^2$, substituting this into the equation yields:
+\begin{equation}
+    g(r) = \frac{c_{\mathrm{E}}^2 \cdot GM}{c_{\mathrm{E}}^2 r^2} = \frac{GM}{r^2}
+\end{equation}
+
+\vspace{0.5em}
+\noindent\textbf{Conclusion:} The exact empirical stiffness ($10^{30}$ Pa) and density ($10^{14}$ kg/m$^3$) that transmit dynamic gravitational waves natively recover the static Newtonian acceleration. The dynamic wave and the static field are unified mechanical expressions of the exact same visco-elastic continuum.

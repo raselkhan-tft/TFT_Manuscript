@@ -2,36 +2,37 @@
 \label{app:hubble_diagram}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\textbf{Abstract:} Standard cosmology evaluates the dimming of distant supernovae using a complex integral of the expansion history containing the Dark Energy density parameter ($\Omega_\Lambda$). Tension Field Theory derives a mathematically degenerate curve strictly from the mechanics of visco-elastic damping, without invoking negative pressure.
+\noindent\textbf{Abstract:} Standard cosmology evaluates the dimming of distant supernovae using a complex integral of the expansion history containing the Dark Energy density parameter ($\Omega_{\Lambda}$). Tension Field Theory derives a mathematically degenerate curve strictly from the mechanics of visco-elastic damping, without invoking negative pressure.
 
-\section{The Two Factors of Viscous Luminosity Distance ($d_L$)}
+\section{The Two Factors of Viscous Luminosity Distance ($d_{\mathrm{L}}$)}
 While \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}} derives the raw kinematic coordinate distance, the observational Distance Modulus requires integrating the temporal broadening factor. The luminosity distance in TFT is therefore governed by two mechanical phenomena:
 
 \begin{itemize}
-    \item \textbf{Factor A (Spatial Damping):} As established, the coordinate distance of a wave propagating through a medium with Lattice Drag ($\Gamma_D \equiv H_0$) follows a logarithmic decay law: 
+    \item \textbf{Factor A (Spatial Damping):} As established, the coordinate distance of a wave propagating through a medium with Lattice Drag ($\Gamma_{\mathrm{D}} \equiv H_0$) follows a logarithmic decay law: 
     \begin{equation}
-        d_{coord} = \frac{c_E}{H_0} \ln(1+z)
+        d_{\mathrm{coord}} = \frac{c_{\mathrm{E}}}{H_0} \ln(1+z)
     \end{equation}
-\item \textbf{Factor B (Kinematic Power Drop):} The observed flux of the wave packet is diminished by two compounding visco-elastic factors: the fractional energy loss of the wave $(1+z)$ derived in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}}, and the temporal dilation of the wave's arrival rate $(1+z)$ derived in \hyperref[app:time_dilation]{Appendix \ref*{app:time_dilation}}. Together, the observed instantaneous power drops by exactly $(1+z)^2$. Because luminosity distance operates on an inverse-square relation ($F \propto 1/d_L^2$), this $(1+z)^2$ kinematic power drop scales the base coordinate distance by a multiplicative factor of $(1+z)$.
+    \item \textbf{Factor B (Kinematic Power Drop):} The observed flux of the wave packet is diminished by two compounding visco-elastic factors: the fractional energy loss of the wave $(1+z)$ derived in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}}, and the temporal dilation of the wave's arrival rate $(1+z)$ derived in \hyperref[app:time_dilation]{Appendix \ref*{app:time_dilation}}. Together, the observed instantaneous power drops by exactly $(1+z)^2$. Because luminosity distance operates on an inverse-square relation ($F \propto 1/d_{\mathrm{L}}^2$), this $(1+z)^2$ kinematic power drop scales the base coordinate distance by a multiplicative factor of $(1+z)$.
 \end{itemize}
 
 Combining spatial damping and temporal broadening yields the exact TFT Luminosity Distance:
 \begin{equation}
-    d_{L(TFT)} = \frac{c_E}{H_0} (1+z)\ln(1+z)
+    d_{\mathrm{L(TFT)}} = \frac{c_{\mathrm{E}}}{H_0} (1+z)\ln(1+z)
 \end{equation}
 
 \section{The Distance Modulus}
-Astronomers measure the distance modulus ($\mu$), relating apparent brightness ($m$) to absolute magnitude ($M$) via the formula $\mu = 5\log_{10}(d_L) + 25$. Substituting the TFT luminosity distance provides the precise, testable alternative to the $\Lambda$CDM model:
+Astronomers measure the distance modulus ($\mu$), relating apparent brightness ($m$) to absolute magnitude ($M$) via the formula $\mu = 5\log_{10}(d_{\mathrm{L}}) + 25$. Substituting the TFT luminosity distance provides the precise, testable alternative to the $\Lambda$CDM model:
 \begin{equation}
-    \mu_{TFT} = 5\log_{10} \left[ \frac{c_E}{H_0} (1+z)\ln(1+z) \right] + 25
+    \mu_{\mathrm{TFT}} = 5\log_{10} \left[ \frac{c_{\mathrm{E}}}{H_0} (1+z)\ln(1+z) \right] + 25
 \end{equation}
 
 \section{Taylor Expansion and the Illusion of Acceleration}
 To demonstrate why this logarithmic friction mimics Dark Energy at moderate redshifts ($z < 1$), we apply the Taylor series expansion to the natural logarithm ($\ln(1+z) \approx z - \frac{z^2}{2}$):
 \begin{equation}
-    d_{L(TFT)} \approx \frac{c_E}{H_0} (1+z)\left( z - \frac{z^2}{2} \right) \approx \frac{c_E}{H_0} \left( z + \frac{z^2}{2} \right)
+    d_{\mathrm{L(TFT)}} \approx \frac{c_{\mathrm{E}}}{H_0} (1+z)\left( z - \frac{z^2}{2} \right) \approx \frac{c_{\mathrm{E}}}{H_0} \left( z + \frac{z^2}{2} \right)
 \end{equation}
 
-\textit{(Note: Higher-order terms are truncated for approximation).}
+\vspace{0.5em}
+\noindent\textit{(Note: Higher-order terms are truncated for approximation).}
 
 In standard cosmology, a positive second-order term ($+\frac{z^2}{2}$) in the luminosity distance is strictly interpreted as kinematic acceleration. In TFT, this positive term emerges naturally and inevitably from the algebraic expansion of $(1+z)\ln(1+z)$. The universe is not accelerating; the mathematical signature of Dark Energy is fully explained by the geometry of logarithmic attenuation.
