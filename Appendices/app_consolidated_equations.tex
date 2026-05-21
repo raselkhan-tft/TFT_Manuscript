@@ -47,6 +47,12 @@ Master Geometric \newline \textit{Scaling Law} & $\rho(r) = \mathcal{F}_i \cdot 
 
 Vacuum Geometric \newline \textit{Packing Fraction} & $\beta_{\mathrm{geo}} = \frac{\pi}{3\sqrt{2}} \approx 0.74048$ & \hyperref[sec:6.3]{6.3} & Kepler Conjecture \\
 
+Vibration Amplitude \newline \textit{($r_{\mathrm{amp}}$)} & $r_{\mathrm{amp}} = \frac{m}{K_{\mathrm{D}}}$ & - & \hyperref[app:particle_amplitude]{Appendix \ref*{app:particle_amplitude}} \\
+
+Fundamental Drag \newline \textit{Constant ($K_{\mathrm{D}}$)} & $K_{\mathrm{D}} = \rho_{\mathrm{IC}} \cdot 4\pi r_{\mathrm{D}}^2$ & - & \hyperref[app:particle_amplitude]{Appendix \ref*{app:particle_amplitude}} \\
+
+Topological Resonance \newline \textit{Frequency ($f_{\mathrm{m}}$)} & $f_{\mathrm{m}} = \frac{c_{\mathrm{E}}}{2r_{\mathrm{D}}} = \frac{f_{\mathrm{D}}}{2}$ & - & \hyperref[app:particle_amplitude]{Appendix \ref*{app:particle_amplitude}} \\
+
 Interstitial Condensate \newline \textit{Fraction} & $\beta_{\mathrm{IC}} = 1 - \beta_{\mathrm{geo}} \approx 0.25952$ & \hyperref[sec:6.4]{6.4} & Geometric Postulate \\
 
 Microscopic \newline \textit{Velocity Budget} & $c_{\mathrm{E}}^2 = v_{\mathrm{ext}}^2 + v_{\mathrm{int}}^2$ & \hyperref[sec:7.4]{7.4} & Geometric Partition \\
@@ -86,6 +92,8 @@ Gravitational \newline \textit{Tension} & $\tau_{\mathrm{M}} = \frac{G \cdot M \
 Gravitational \newline \textit{Acceleration} & $g = - \left(\frac{1}{\mu_{\mathrm{D}}}\right) \frac{\mathrm{d}\tau_{\mathrm{M}}}{\mathrm{d}R} = -\frac{G \cdot M}{R^2}$ & \hyperref[sec:12.3]{12.3} & Field Mechanics \\
 
 Total Acceleration \newline \textit{Law} & $g_{\mathrm{obs}} = g_{\mathrm{b}} + \sqrt{a_{\mathrm{D}} \cdot g_{\mathrm{b}}}$ & \hyperref[sec:12.5]{12.5} & \hyperref[app:cosmic_impedance]{Appendix \ref*{app:cosmic_impedance}} \\
+
+Radial Projection \newline \textit{Operator ($\Pi$)} & $\Pi(r) = 1 \pm \delta \left(\frac{R_{\mathrm{d}}}{r}\right)^n$ & - & \hyperref[app:radial_projection]{Appendix \ref*{app:radial_projection}} \\
 
 Master Acceleration \newline \textit{Equation} & $g_{\mathrm{obs}}(R) = \Pi(r) \cdot \left[ g_{\mathrm{b}}(R) + \Xi(R) \sqrt{a_{\mathrm{D}} \cdot g_{\mathrm{b}}(R)} \right]$ & \hyperref[sec:12.6]{12.6} & \hyperref[app:cosmic_impedance]{App. \ref*{app:cosmic_impedance}} \& \hyperref[app:radial_projection]{\ref*{app:radial_projection}} \\
 
@@ -163,6 +171,14 @@ Horizon Surface \newline \textit{Tension} & $\tau_{\mathrm{QG}} = \left(\frac{c_
 
 Event Horizon \newline \textit{Surface Gravity} & $g_{\mathrm{QG}} = \frac{c_{\mathrm{E}}^4}{GM}$ & \hyperref[sec:15.5]{15.5} & Macroscopic Limit \\
 
+Quantum Saturation \newline \textit{Density ($\rho_{\mathrm{Q}}$)} & $\rho_{\mathrm{Q}} = \frac{\hbar}{c_{\mathrm{E}} r^4}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+
+Gravitational Yield \newline \textit{Density ($\rho_{\mathrm{G}}$)} & $\rho_{\mathrm{G}} = \frac{c_{\mathrm{E}}^2}{G r^2}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+
+Convergence Phase \newline \textit{Density ($\rho_{\mathrm{QG}}$)} & $\rho_{\mathrm{QG}} = \sqrt{\rho_{\mathrm{Q}} \cdot \rho_{\mathrm{G}}}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+
+Master Phase Radius \newline \textit{Equation} & $r(\rho) = \ell_{\mathrm{S}} \cdot \left(1.5 \frac{\rho_{\mathrm{S}}}{\rho}\right)^{1/4}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+
 \bottomrule
 \end{longtable}
 
@@ -232,13 +248,11 @@ Electron Rotational \newline \textit{Mass Limit} & $M_{\mathrm{spin}} = \frac{\h
 
 Localized Viscous \newline \textit{Boundary Friction} & $\Gamma(x) = \sigma \cdot c_{\mathrm{P}} \cdot n_K(x)$ & \hyperref[sec:16.3.2]{16.3.2} & Node Topology \\
 
-Certainty Parameter \newline \textit{($\zeta$)} & $\zeta = \frac{\tau_{\mathrm{local}}}{\tau_{\mathrm{S}}}$ & \hyperref[sec:16.4.2]{16.4.2} & State Mechanics \\
-
-Generalized Linear \newline \textit{Uncertainty} & $\Delta x \cdot \Delta p \geq h \cdot (1 - \zeta) \cdot e^{-\Gamma t}$ & \hyperref[sec:16.4.3]{16.4.3} & Generalized Law \\
+Generalized Linear \newline \textit{Uncertainty} & $\Delta x \cdot \Delta p \geq h \cdot (1 - \alpha_{\mathrm{G}}) \cdot e^{-\Gamma t}$ & \hyperref[sec:16.4.3]{16.4.3} & Generalized Law \\
 
 Generalized Angular \newline \textit{Uncertainty} & $\Delta \theta \cdot \Delta L \geq \frac{\hbar}{2}$ & \hyperref[sec:16.4.3]{16.4.3} & Generalized Law \\
 
-Generalized \newline \textit{Commutator} & $[x,p] = i\hbar \cdot (1 - \zeta) \cdot e^{-\Gamma t}$ & \hyperref[sec:16.4.4]{16.4.4} & Generalized Law \\
+Generalized \newline \textit{Commutator} & $[x,p] = i\hbar \cdot (1 - \alpha_{\mathrm{G}}) \cdot e^{-\Gamma t}$ & \hyperref[sec:16.4.4]{16.4.4} & Generalized Law \\
 
 Node Cell Hamiltonian \newline \textit{Energy} & $E_{\mathrm{total}} = \frac{1}{2} \tau_{\mathrm{D}} (\Delta x)^2 + \frac{1}{2} \mu_{\mathrm{eff}} v^2$ & \hyperref[sec:16.5.1]{16.5.1} & \hyperref[app:photon_hamiltonian]{Appendix \ref*{app:photon_hamiltonian}} \\
 
@@ -251,6 +265,16 @@ Graviton Energy \newline \textit{Strain Shadow} & $E_{\mathrm{g}} = \frac{h^2 G}
 Speed of Substrate \newline \textit{Transmission} & $c_{\mathrm{S}} = \sqrt{\frac{\tau_{\mathrm{S}}}{\mu_{\mathrm{S}}}}$ & \hyperref[sec:17.4]{17.4} & Hard Floor Physics \\
 
 Topological Budget \newline \textit{Identity} & $\alpha_{\mathrm{Q}} = 1 - \alpha_{\mathrm{G}}$ & \hyperref[sec:17.5]{17.5} & \hyperref[app:entanglement]{Appendix \ref*{app:entanglement}} \\
+
+Operative Local \newline \textit{Tension ($\tau_{\mathrm{local}}$)} & $\tau_{\mathrm{local}} = \frac{h c_{\mathrm{E}}}{r_{\mathrm{D}}^3}$ & - & \hyperref[app:photon_hamiltonian]{Appendix \ref*{app:photon_hamiltonian}} \\
+
+Quantum Displacement \newline \textit{Limit ($\Delta x$)} & $\Delta x = r_{\mathrm{D}} \sqrt{\frac{2r_{\mathrm{D}}}{\lambda}}$ & - & \hyperref[app:photon_hamiltonian]{Appendix \ref*{app:photon_hamiltonian}} \\
+
+Phase Crosstalk \newline \textit{Budget Limit} & $\Delta\phi \leq \eta_{\phi} \left(\frac{c_{\mathrm{E}}}{r^3}\right) A_{\mathrm{overlap}} T$ & - & \hyperref[app:photonic_emission]{Appendix \ref*{app:photonic_emission}} \\
+
+Macroscopic Tunneling \newline \textit{($T_{\mathrm{device}}$)} & $T_{\mathrm{device}} \approx \frac{1}{1 + \left(\frac{Z_{\mathrm{wall}}}{Z_{\mathrm{drive}}}\right)^2 (\Delta\phi^2 + \Delta f^2)}$ & - & \hyperref[app:quantum_tunneling]{Appendix \ref*{app:quantum_tunneling}} \\
+
+Topological Winding \newline \textit{Condition} & $\oint \nabla \phi \cdot \mathrm{d}\ell = 2\pi n$ & - & \hyperref[app:physical_wavefunction]{Appendix \ref*{app:physical_wavefunction}} \\
 
 \bottomrule
 \end{longtable}
@@ -419,6 +443,10 @@ Current Aggregate \newline \textit{State II Mass ($M_{\text{cur}}$)} & $M_{\math
 Current Cosmic \newline \textit{Epoch ($t_{\text{cur}}$)} & $t_{\mathrm{cur}} = 172.88 \cdot \Gamma_{\mathrm{D}}^{-1} \approx 2.315 \text{ Trillion yrs}$ & \hyperref[app:energy_and_chronology]{App. \ref*{app:energy_and_chronology}} & Phase Chronology \\
 
 Remaining Cosmic \newline \textit{Lifespan ($\Delta t$)} & $\Delta t = \frac{1}{\Gamma_{\mathrm{D}}} \ln\left(\frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}}\right) \approx 59.96 \text{ Billion yrs}$ & \hyperref[app:energy_and_chronology]{App. \ref*{app:energy_and_chronology}} & Expiration Timer \\
+
+Cosmological Drag \newline \textit{Specific Work Extract} & $W_{\mathrm{total}} = a_{\mathrm{D}} \cdot R_{\mathrm{U}} = c_{\mathrm{E}}^2$ & - & \hyperref[app:strain_unification]{Appendix \ref*{app:strain_unification}} \\
+
+Non-Linear Redshift \newline \textit{Expansion} & $z \approx \Gamma_{\mathrm{D}} t + \frac{(\Gamma_{\mathrm{D}} t)^2}{2}$ & - & \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}} \\
 
 \bottomrule
 \end{longtable}
