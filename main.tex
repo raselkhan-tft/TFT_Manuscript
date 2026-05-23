@@ -24,11 +24,11 @@
 
 % --- TOC Hierarchical Indentation (The Cascade) ---
 \setlength{\cftchapindent}{1.5em}   % Indents chapters slightly
-\setlength{\cftsecindent}{3.3em}    % Aligns perfectly under chapter text
-\setlength{\cftsubsecindent}{6.1em} % Aligns perfectly under section text
+\setlength{\cftsecindent}{4.0em}    % Aligns perfectly under chapter text (1.5 + 2.5)
+\setlength{\cftsubsecindent}{6.8em} % Aligns perfectly under section text (4.0 + 2.8)
 
 % --- TOC Number Box Widths (The Tight Fit Fix) ---
-\setlength{\cftchapnumwidth}{1.8em}   % Exact space for 2-digit chapters (e.g., "18")
+\setlength{\cftchapnumwidth}{2.5em}   % Widened from 1.8em to fit double-letter Appendices ("AA")
 \setlength{\cftsecnumwidth}{2.8em}    % Exact space for wide sections (e.g., "18.10")
 \setlength{\cftsubsecnumwidth}{3.6em} % Exact space for subsections (e.g., "18.10.1")
 
@@ -129,9 +129,16 @@ Because this framework requires a foundational rebuild of physical law from the 
 % ==========================================
 \cleardoublepage
 
-% --- The TOC Divider ---
-\chapter*{Appendices}
+% --- The TOC Divider (Title Card) ---
+\cleardoublepage
+\phantomsection % <--- THIS FIXES THE LINK
+\vspace*{\fill}
+\begin{center}
+    \Huge \textbf{Appendices}
+\end{center}
+\vspace*{\fill}
 \addcontentsline{toc}{chapter}{\protect\numberline{}Appendices}
+\clearpage
 
 % --- Switch to Lettered Appendix Mode ---
 \appendix
@@ -186,9 +193,9 @@ Because this framework requires a foundational rebuild of physical law from the 
 \addcontentsline{toc}{chapter}{\protect\numberline{}Acknowledgements and AI Disclosure}
 \chapter*{Acknowledgements and AI Disclosure}
 
-I acknowledge the use of Chat GPT and Google Gemini to expedite the latter stages of this manuscript's development (2023--2026). The AI functioned strictly as a computational and typesetting assistant, utilized to generate Python scripts for Figures, execute complex formatting, and serve as a conversational tool to explore and validate mathematical derivations. All foundational postulates, physical interpretations, and final mathematical proofs of Tension Field Theory are my sole original work, and I take full responsibility for the accuracy and integrity of this publication.
+I acknowledge the use of ChatGPT and Google Gemini to expedite the latter stages of this manuscript's development (2023--2026). The AI functioned strictly as a computational and typesetting assistant, utilized to generate Python scripts for Figures, execute complex formatting, and serve as a conversational tool to explore and validate mathematical derivations. All foundational postulates, physical interpretations, and final mathematical proofs of Tension Field Theory are my sole original work, and I take full responsibility for the accuracy and integrity of this publication.
 
-Furthermore, Tension Field Theory represents the culmination of a three-decade conceptual incubation originating in my childhood, followed by seven years of intensive, rigorous mathematical formalization. This critical final phase of development would have been entirely impossible without the profound patience, sacrifice, and unwavering support of my wife and of our children. I extend my deepest gratitude to my family for affording me the time, space, and quiet necessary to bring this lifelong endeavor to its conclusion.
+Furthermore, Tension Field Theory represents the culmination of a three-decade conceptual incubation originating in my childhood, followed by seven years of intensive, rigorous mathematical formalization. This critical final phase of development would have been entirely impossible without the profound patience, sacrifice, and unwavering support of my wife, Shamima Khan, and our daughters, Najwa Khan and Raya Khan. I extend my deepest gratitude to my family for affording me the time, space, and quiet necessary to bring this lifelong endeavor to its conclusion.
 
 % ==========================================
 % BIBLIOGRAPHY

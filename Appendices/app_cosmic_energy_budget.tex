@@ -11,27 +11,27 @@ To determine the absolute maximum mass the universe can locally sustain before t
 
 \begin{itemize}
     \item \textbf{Deriving the Octahedral Void Radius ($r_{\mathrm{O}}$):} 
-    In an FCC lattice formed by nodes of radius $R$, the nodes touch along the face diagonal. The face diagonal is therefore $4R$. By the Pythagorean theorem, the edge length of the unit cell ($a$) is:
+    In an FCC lattice formed by nodes of radius $r_{\mathrm{D}}$, the nodes touch along the face diagonal. The face diagonal is therefore $4r_{\mathrm{D}}$. By the Pythagorean theorem, the edge length of the unit cell ($a$) is:
     \begin{equation}
-        a = \sqrt{\frac{(4R)^2}{2}} = 2\sqrt{2} R
+        a = \sqrt{\frac{(4r_{\mathrm{D}})^2}{2}} = 2\sqrt{2} r_{\mathrm{D}}
     \end{equation}
-    An Octahedral void is located perfectly at the midpoint of each edge of the unit cell. Looking along this edge, the distance from the center of a corner node to the center of the edge void is exactly half the edge length ($a/2$). Therefore, the radius of the node ($R$) plus the inscribed radius of the void ($r_{\mathrm{O}}$) must equal $a/2$:
+    An Octahedral void is located perfectly at the midpoint of each edge of the unit cell. Looking along this edge, the distance from the center of a corner node to the center of the edge void is exactly half the edge length ($a/2$). Therefore, the radius of the node ($r_{\mathrm{D}}$) plus the inscribed radius of the void ($r_{\mathrm{O}}$) must equal $a/2$:
     \begin{equation}
-        R + r_{\mathrm{O}} = \frac{a}{2} = \frac{2\sqrt{2} R}{2} = \sqrt{2} R
+        r_{\mathrm{D}} + r_{\mathrm{O}} = \frac{a}{2} = \frac{2\sqrt{2} r_{\mathrm{D}}}{2} = \sqrt{2} r_{\mathrm{D}}
     \end{equation}
     Isolating the void radius yields:
     \begin{equation}
-        r_{\mathrm{O}} = \sqrt{2} R - R = (\sqrt{2}-1)R
+        r_{\mathrm{O}} = \sqrt{2} r_{\mathrm{D}} - r_{\mathrm{D}} = (\sqrt{2}-1)r_{\mathrm{D}}
     \end{equation}
 
     \item \textbf{Deriving the Volumetric Fraction:} 
-    The total volume of the unit cell is $V_{\mathrm{cell}} = a^3 = 16\sqrt{2} R^3$. Because there are exactly 4 total Octahedral voids per FCC unit cell (1 in the center, plus 12 shared quarter-voids on the edges), the maximum available void volume ($V_{\mathrm{oct}}$) is:
+    The total volume of the unit cell is $V_{\mathrm{cell}} = a^3 = 16\sqrt{2} r_{\mathrm{D}}^3$. Because there are exactly 4 total Octahedral voids per FCC unit cell (1 in the center, plus 12 shared quarter-voids on the edges), the maximum available void volume ($V_{\mathrm{oct}}$) is:
     \begin{equation}
-        V_{\mathrm{oct}} = 4 \left( \frac{4}{3} \pi r_{\mathrm{O}}^3 \right) = \frac{16\pi}{3}(\sqrt{2}-1)^3 R^3
+        V_{\mathrm{oct}} = 4 \left( \frac{4}{3} \pi r_{\mathrm{O}}^3 \right) = \frac{16\pi}{3}(\sqrt{2}-1)^3 r_{\mathrm{D}}^3
     \end{equation}
     Dividing this specific void volume by the total cell volume yields the Octahedral Volumetric Fraction ($\beta_{\mathrm{oct}}$):
     \begin{equation}
-        \beta_{\mathrm{oct}} = \frac{V_{\mathrm{oct}}}{V_{\mathrm{cell}}} = \frac{\frac{16\pi}{3}(\sqrt{2}-1)^3 R^3}{16\sqrt{2} R^3} = \frac{\pi(\sqrt{2}-1)^3}{3\sqrt{2}} \approx 0.0526
+        \beta_{\mathrm{oct}} = \frac{V_{\mathrm{oct}}}{V_{\mathrm{cell}}} = \frac{\frac{16\pi}{3}(\sqrt{2}-1)^3 r_{\mathrm{D}}^3}{16\sqrt{2} r_{\mathrm{D}}^3} = \frac{\pi(\sqrt{2}-1)^3}{3\sqrt{2}} \approx 0.0526
     \end{equation}
 \end{itemize}
 
@@ -80,21 +80,21 @@ The boundary of the Geometric Cosmic Horizon physically shrinks inward by $\appr
 
 \subsection{The Spanning Cluster and Topological Continuity}
 
-In statistical mechanics, the percolation threshold ($p_{\mathrm{c}}$) marks the geometric phase transition from isolated local clusters to a single macroscopic ``Spanning Cluster.'' It may seem counterintuitive that a volumetric fill of only $5.16\%$ is mathematically sufficient to form a continuous physical chain stretching across the entire deflated diameter of $6.077 \times 10^{34}$ m. To prove this geometric capacity, we analyze the available linear span of the defect network.
+In statistical mechanics, the percolation threshold ($p_{\mathrm{c}}$) marks the geometric phase transition from isolated local clusters to a single macroscopic ``Spanning Cluster.'' It may seem counterintuitive that a volumetric fill of only $5.16\%$ is mathematically sufficient to form a continuous physical chain stretching across the entire deflated diameter of $6.077 \times 10^{34}$ m. To prove this geometric capacity, we analyze the available linear span of the saturated phase network.
 
-Let the total rupture volume of the universe be $V_{\mathrm{rup}} = \frac{4}{3}\pi R_{\mathrm{rup}}^3$. The total volume of all SC defects is exactly $V_{\mathrm{def}} = 0.0516 \cdot V_{\mathrm{rup}}$.
+Let the total rupture volume of the universe be $V_{\mathrm{rup}} = \frac{4}{3}\pi R_{\mathrm{rup}}^3$. The total volume of all State II Saturated Cores (Black Holes) is exactly $V_{\mathrm{BH}} = 0.0516 \cdot V_{\mathrm{rup}}$.
 
-Assuming this defect volume is distributed into $N$ identical macroscopic Black Holes, each with a localized radius $r$, the total number of Black Holes is the total defect volume divided by the individual volume:
+Assuming this saturated volume is distributed into $N$ identical macroscopic Black Holes, each bounded by the phase transition radius ($R_{\mathrm{QG}}$), the total number of Black Holes is the total State II volume divided by the individual boundary volume:
 \begin{equation}
-    N = \frac{V_{\mathrm{def}}}{\frac{4}{3}\pi r^3}
+    N = \frac{V_{\mathrm{BH}}}{\frac{4}{3}\pi R_{\mathrm{QG}}^3}
 \end{equation}
 
-The total maximum linear length ($L_{\mathrm{tot}}$) available to construct the fault line, if these $N$ SC cores were aligned shoulder-to-shoulder, is their total count multiplied by their diameter ($2r$):
+The total maximum linear length ($L_{\mathrm{tot}}$) available to construct the fault line, if these $N$ saturated cores were aligned shoulder-to-shoulder, is their total count multiplied by their diameter ($2R_{\mathrm{QG}}$):
 \begin{equation}
-    L_{\mathrm{tot}} = N(2r) = \left( \frac{V_{\mathrm{def}}}{\frac{4}{3}\pi r^3} \right)(2r) = \frac{3 V_{\mathrm{def}}}{2\pi r^2}
+    L_{\mathrm{tot}} = N(2R_{\mathrm{QG}}) = \left( \frac{V_{\mathrm{BH}}}{\frac{4}{3}\pi R_{\mathrm{QG}}^3} \right)(2R_{\mathrm{QG}}) = \frac{3 V_{\mathrm{BH}}}{2\pi R_{\mathrm{QG}}^2}
 \end{equation}
 
-\textbf{Geometric Proof:} Because the individual defect radius ($r$) is squared in the denominator, the total linear length of the spanning material scales inversely with the square of the defect size ($L_{\mathrm{tot}} \propto r^{-2}$). By distributing $5.16\%$ of the universe's volume into stellar-mass SC cores, the resulting linear geometry is immensely vast. It provides orders of magnitude more physical length than is required to span the reservoir. Consequently, the distributed cores possess more than enough structural material to form a highly tortuous, unbroken fractal web.
+\textbf{Geometric Proof:} Because the individual phase boundary radius ($R_{\mathrm{QG}}$) is squared in the denominator, the total linear length of the spanning material scales inversely with the square of the macroscopic black hole size ($L_{\mathrm{tot}} \propto R_{\mathrm{QG}}^{-2}$). By distributing $5.16\%$ of the universe's volume into stellar-mass State II cores, the resulting linear geometry is immensely vast. It provides orders of magnitude more physical length than is required to span the reservoir. Consequently, the distributed black holes possess more than enough structural material to form a highly tortuous, unbroken fractal web.
 
 \subsection{The Phase Trigger Unification}
 
