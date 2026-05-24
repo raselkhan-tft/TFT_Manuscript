@@ -405,7 +405,7 @@ ax.annotate(
 )
 
 ax.annotate(
-    "Localized particle\n(Drag Artifact $m$)",
+    "Localized particle\n(Impedance Artifact $m$)",
     xy=(particle_marker[0], particle_marker[1]), xytext=(2.9, -2.7),
     arrowprops=arrow_style,
     fontsize=11, ha="left",

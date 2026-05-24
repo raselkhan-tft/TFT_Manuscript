@@ -4,7 +4,7 @@ import matplotlib.patches as patches # Selected for rendering pure geometric pri
 import os # Selected for robust directory management
 
 # =============================================================================
-# Figure 4.4: The Macroscopic Thermal Projection & Viscous Acoustic Drag
+# Figure 4.4: The Macroscopic Thermal Projection & Viscous Acoustic Impedance
 # Updated for Euclidean consistency: Single Horizon & Radius-based Ruler
 # =============================================================================
 
