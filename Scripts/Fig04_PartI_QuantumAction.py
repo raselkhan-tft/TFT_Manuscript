@@ -86,7 +86,7 @@ def create_quantum_of_action_schematic():
     ax.text(inv_x, inv_y, jd_eq, ha='center', va='top', fontsize=18, color='black', zorder=5)
 
     # Secondary action label placed strictly below the equation
-    ax.text(inv_x, inv_y - 4.0, "(Soft Floor Torsion)", ha='center', va='top', fontsize=12, color='black', zorder=5)
+    ax.text(inv_x, inv_y - 4.0, "(Structural Mass Moment)", ha='center', va='top', fontsize=12, color='black', zorder=5)
 
     # =======================================================
     # 4. THE MASTER EQUATION (Bottom Center)

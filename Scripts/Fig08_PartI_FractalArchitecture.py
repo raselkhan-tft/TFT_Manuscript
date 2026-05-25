@@ -35,7 +35,7 @@ def create_fractal_column_visual():
         spine.set_visible(False)
 
     # =======================================================
-    # CENTRAL ENGINE: The Torsional Invariant Shaft
+    # CENTRAL ENGINE: The Structural Mass Moment Shaft
     # =======================================================
     # The physical connection bridging the tiers
     # Spans from x=46 to x=54 (width 8, center 50)
@@ -53,7 +53,7 @@ def create_fractal_column_visual():
     # FUNDAMENTAL DEFINITIONS (Bottom Center)
     # =======================================================
     def_text = (r"$\mathbf{Fundamental\ Definitions}$" + "\n" + 
-                r"Torsional Invariant: $J_i = \rho_i r_i^4$" + "\n" + 
+                r"Scale-Invariant Mass Moment: $J_i = \rho_i r_i^4$" + "\n" + 
                 r"Absolute Substrate Area: $A_{\mathrm{S}} = \ell_{\mathrm{S}}^2$" + "\n" +
                 r"Invariant Elastic Capacity: $c_{\mathrm{E}}$")
     
@@ -190,7 +190,7 @@ def create_fractal_column_visual():
     # Thread A Conclusion
     h_text = (r"$\mathbf{Conservation\ of\ h:}$" + "\n\n" + 
               r"$h_{\mathrm{S}} \rightarrow h_{\mathrm{D}} \rightarrow h_{\mathrm{N}} \rightarrow h_{\mathrm{obs}}$" + "\n\n" + 
-              "Geometric factor increases\nprecisely as Torsional Invariant\n($J_i$) decreases, perfectly\nconserving absolute Action.")
+              "Geometric factor increases\nprecisely as the Structural Mass Moment\n($J_i$) decreases, perfectly\nconserving absolute Action.")
     ax.text(13, 59, h_text, ha='center', va='center', fontsize=11, color='black',
             bbox=dict(facecolor='#E8F4F8', edgecolor='#AABBDD', lw=1, boxstyle='round,pad=0.5'))
 
@@ -202,7 +202,7 @@ def create_fractal_column_visual():
     ax.text(87, 88, r"$\mathbf{Thread\ B:\ Projection\ of\ Gravity\ (G)}$", ha='center', va='top', fontsize=13, color='black')
 
     # Tier 3 (Right)
-    ax.text(87, y_N, r"Coupling: $\mathbf{Toroidal\ (Vortex)}$" + "\n" + r"Form Factor = $1.0$" + "\n" + r"Torsion: $J_{\mathrm{N}} = J_{\mathrm{D}} / 1.5$", 
+    ax.text(87, y_N, r"Coupling: $\mathbf{Toroidal\ (Vortex)}$" + "\n" + r"Form Factor = $1.0$" + "\n" + r"Moment: $J_{\mathrm{N}} = J_{\mathrm{D}} / 1.5$", 
             ha='center', va='center', fontsize=11, color='black', bbox=node_props)
 
     # Tier 2 (Right)

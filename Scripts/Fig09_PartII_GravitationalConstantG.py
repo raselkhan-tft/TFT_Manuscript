@@ -128,7 +128,7 @@ def create_publication_schematic():
                 arrowprops=dict(arrowstyle="-|>", color="#8B0000", lw=2.0, connectionstyle="arc3,rad=-0.3", mutation_scale=15), zorder=6)
     
     # Updated Nucleon Title
-    ax.text(50, 87, r"$\mathbf{Inertial\ Mass\ (Nucleon\ Torsion)}$", ha='center', va='bottom', fontsize=18)
+    ax.text(50, 87, r"$\mathbf{Nucleon\ (Structural\ Mass\ Moment)}$", ha='center', va='bottom', fontsize=18)
     
     # Radius dimension line (Internal stealth arrow)
     ax.annotate("", xy=(50 + ellipse_w/2, ellipse_y), xytext=(50, ellipse_y), 
