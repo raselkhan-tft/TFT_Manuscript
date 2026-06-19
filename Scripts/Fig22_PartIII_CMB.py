@@ -88,7 +88,7 @@ def create_cosmic_horizon_visual():
     ax.plot([0, R_U], [0, 0], color='black', linestyle=':', lw=1.5, zorder=3)
 
     # Foundational Anchor (Positioned right-shifted under the line of sight)
-    anchor_text = r"$\mathbf{Vacuum\ Damping\ Rate}$ ($\Gamma_{\mathrm{D}} \equiv H_0 = 73.0\ \mathrm{km/s/Mpc}$)"
+    anchor_text = r"$\mathbf{Vacuum\ Damping\ Rate}$ ($\Gamma_{\mathrm{D}} \equiv H_0 = 73.04\ \mathrm{km/s/Mpc}$)"
     ax.text(R_U * 0.65, -0.25, anchor_text, ha='center', va='top', fontsize=11, 
             bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=3), zorder=10)
 
@@ -114,8 +114,8 @@ def create_cosmic_horizon_visual():
     ax.annotate('', xy=(R_U, R_S_VISUAL + 0.05), xytext=(R_U, 0.0),
                 arrowprops=dict(arrowstyle='-|>', color='black', lw=3.5, mutation_scale=20), zorder=8)
     
-    # Label restored to formal Black, value corrected to 42.75 Mpc
-    ax.text(R_U - 0.2, R_S_VISUAL / 2, r"$\mathbf{True\ Acoustic\ Ruler}$" + "\n" + r"($r_{\mathrm{s}} \approx 42.75\ \mathrm{Mpc}$)", 
+    # Label restored to formal Black, value corrected to 42.73 Mpc
+    ax.text(R_U - 0.2, R_S_VISUAL / 2, r"$\mathbf{True\ Acoustic\ Ruler}$" + "\n" + r"($r_{\mathrm{s}} \approx 42.73\ \mathrm{Mpc}$)", 
             ha='right', va='center', fontsize=11, color='black', fontweight='bold',
             bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=3), zorder=10)
 

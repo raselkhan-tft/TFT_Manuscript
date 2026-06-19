@@ -164,7 +164,7 @@ ax.plot([center_right[0] - node_r, center_right[0] + node_r], [center_right[1], 
 
 # Subscripts strictly formatted for upright Roman standards
 ax.text(center_right[0], center_right[1] - 0.12, r"$2r_{\mathrm{D}}$", fontsize=12, fontweight='bold', ha='center', va='top')
-ax.text(center_right[0], center_right[1] + 0.12, r"$f_{\mathrm{m}} = c_{\mathrm{E}} / 2r_{\mathrm{D}}$", fontsize=11, fontweight='bold', ha='center', va='bottom')
+ax.text(center_right[0], center_right[1] + 0.12, r"$f_{\mathrm{m}} = c_{\mathrm{E}} / 4r_{\mathrm{D}}$", fontsize=11, fontweight='bold', ha='center', va='bottom')
 
 # Tier 2 Labels
 ax.annotate("Internal Wave Signal", 

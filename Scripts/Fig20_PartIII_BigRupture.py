@@ -175,7 +175,7 @@ def create_deflation_rupture_baseline():
                         arrowprops=dict(arrowstyle="->", color="#888888", lw=1.2),
                         color='#555555', fontsize=10, ha='center', va='bottom', bbox=text_bbox, zorder=10)
 
-            rup_text = r"$\mathbf{Deflated\ Rupture\ Radius}$" + "\n" + r"($R_{\mathrm{rup}} \approx 6.077 \times 10^{34}\ \mathrm{m}$)"
+            rup_text = r"$\mathbf{Deflated\ Rupture\ Radius}$" + "\n" + r"($R_{\mathrm{rup}} \approx 10^{34}\ \mathrm{m}$)"
             ax.annotate(rup_text, xy=(0, -R_rup), xytext=(0, -R_rup - 1.5),
                         arrowprops=dict(arrowstyle="->", color="black", lw=1.5),
                         color='black', fontsize=11, ha='center', va='top', bbox=text_bbox, zorder=10)

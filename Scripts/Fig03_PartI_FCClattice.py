@@ -4,7 +4,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import os # Selected for directory management and file system robust execution
 
 # =============================================================================
-# FCC UNIT CELL (Electric Blue / Slate Gray) - CLEAN BASE FOR VECTOR EXPORT
+# FCC UNIT CELL - WITH CORRECTED CORNER EDGE IDENTIFICATION
 # =============================================================================
 
 # -------------------- Parameters --------------------
@@ -12,33 +12,25 @@ a = 1.0
 r = a / (2.0 * np.sqrt(2.0)) # FCC: a*sqrt(2) = 4r
 
 # -------------------- COLORS --------------------
-# Sphere surface: Electric Blue
 sphere_color = (0.0, 0.8, 1.0) # Hex #00CCFF
 sphere_alpha = 1.0
-
-# Interstitial: derived from sphere color but lighter/transparent
 void_color = tuple(min(1.0, 0.60 + 0.40*c) for c in sphere_color)
 void_alpha = 0.13
-
-# Cut-face color: Slate Gray
 cut_face_color = (0.44, 0.50, 0.56) # Hex #708090
 
 # -------------------- Rendering controls --------------------
-grid_n = 46          # interstitial voxel resolution
-n_theta = 170        # sphere surface resolution
+grid_n = 46
+n_theta = 170
 n_phi = 130
-cap_res = 150        # cap surface resolution
+cap_res = 150
 
 ELEV = 18
 AZIM = -55
 
-# Tiny offset to prevent z-fighting on cut faces
-EPS = 1e-4 * a
-
-# Pull back sphere surface from cube boundary so caps define the cut plane
+# EPS: Microscopic offset to prevent z-fighting between different surfaces
+EPS = 1e-5 * a
+# CLIP: Slight pullback for the sphere caps
 CLIP = 2.0 * EPS
-
-CROSS_CENTER = (0.0, a/2, a/2)
 
 # -------------------- Helpers --------------------
 def draw_cube_wireframe(ax, x0=0, y0=0, z0=0, size=1.0, lw=2.2, color="0.0"):
@@ -114,7 +106,6 @@ def plot_cap_surface(ax, center, r, axis, plane_val, a=1.0,
         Z = np.full_like(X, pv)
         mask = ((X - cx)**2 + (Y - cy)**2) <= rho*rho
     
-    # FIXED: Masking each coordinate array individually to avoid ValueError
     X = np.where(mask, X, np.nan)
     Y = np.where(mask, Y, np.nan)
     Z = np.where(mask, Z, np.nan)
@@ -150,8 +141,35 @@ planes = [("x", 0.0), ("x", a), ("y", 0.0), ("y", a), ("z", 0.0), ("z", a)]
 for c in centers:
     plot_clipped_sphere(ax, c, r, a=a, color=sphere_color, alpha=sphere_alpha, n_theta=n_theta, n_phi=n_phi, clip=CLIP)
     for axis, p in planes:
+        # Apply a tiny offset to the cut planes to help with z-sorting
         offset = +EPS if p == 0.0 else -EPS
         plot_cap_surface(ax, c, r, axis=axis, plane_val=p, a=a, color=cut_face_color, alpha=0.95, cap_res=cap_res, plane_offset=offset, zsort="max", shade=False)
+
+# ---- NEW: Corner Cut Edge Identification (Fixed) ----
+# The target corner is at (a, 0, a), where the x=a, y=0, and z=a cut planes intersect.
+# We draw three lines from this corner along the edges of the cuts to visually restore the 3D corner.
+# CRITICAL FIX: To prevent Matplotlib's 3D engine from occluding lines that lie exactly on surfaces,
+# we apply a macroscopic offset (0.025 * a) to pull the lines strictly towards the camera.
+
+OFF = 0.025 * a
+line_props = dict(color='black', linestyle=':', lw=2.0, zorder=1000)
+
+# Center vertex of the cut, pulled towards the camera (+x, -y, +z)
+cx = a + OFF
+cy = -OFF
+cz = a + OFF
+
+# Line 1: Along the top-front edge (Intersection of y=0 and z=a cuts).
+# Moves from x=a down to x=a-r
+ax.plot([cx, a - r + OFF], [cy, cy], [cz, cz], **line_props)
+
+# Line 2: Along the front-right vertical edge (Intersection of x=a and y=0 cuts).
+# Moves from z=a down to z=a-r
+ax.plot([cx, cx], [cy, cy], [cz, a - r + OFF], **line_props)
+
+# Line 3: Along the top-right edge (Intersection of x=a and z=a cuts).
+# Moves from y=0 back to y=r
+ax.plot([cx, cx], [cy, r - OFF], [cz, cz], **line_props)
 
 # ---- Cube wireframe ----
 draw_cube_wireframe(ax, 0, 0, 0, size=a, lw=2.4, color="0.0")
@@ -173,7 +191,7 @@ plt.tight_layout()
 output_dir = "Figures"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
-pdf_filename = os.path.join(output_dir, "Fig03_PartI_FCClatticeSimple.pdf")
+pdf_filename = os.path.join(output_dir, "Fig03_PartI_FCClattice_FinalEdges.pdf")
 
 try:
     # Save as vector PDF for Adobe Acrobat post-processing
