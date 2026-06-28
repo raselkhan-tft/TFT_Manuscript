@@ -70,20 +70,28 @@ Light is a transverse shear wave surfing the 2D interface of the contiguous node
 
 \subsection{The Volumetric Projection (Holographic Impedance)}
 \label{subsec:volumetric_projection}
+Matter is modeled in TFT as a volumetric displacement of the interstitial phase. A particle vibrating in the lattice displaces the interstitial condensate through an effective 3D volume. Therefore, although transverse waves couple to the 2D surface inertia of the active vacuum ($\mu_{\mathrm{D}}$), localized mass defects require an effective 3D impedance density.
 
-Matter is a volumetric displacement. A particle vibrating in the lattice displaces the interstitial condensate in 3D volume. Therefore, it encounters the lattice surface inertia ($\mu_{\mathrm{D}}$) projected into 3D space.
-
-To calculate macroscopic mass, we must mathematically map this 2D planar impedance into a 3D volumetric density. We define the effective interstitial vacuum condensate ($\rho_{\mathrm{IC}}$) by projecting the surface inertia via the Dimensional Projection Constant ($\iota_{\mathrm{V}} \equiv 1 \text{ m}^{-1}$):
+Because the active-vacuum inertia $\mu_{\mathrm{D}}$ is defined as a surface inertia with units ($\mathrm{kg/m^2}$), while inertial mass generation requires a volumetric impedance with units ($\mathrm{kg/m^3}$), TFT introduces a projection scale $\iota_{\mathrm{V}}$ to define the effective interstitial density:
 \begin{equation}
-    \rho_{\mathrm{IC}} = \mu_{\mathrm{D}} \cdot \iota_{\mathrm{V}} \approx 1.8074 \times 10^{53} \text{ kg/m}^3
+    \rho_{\mathrm{IC}} = \mu_{\mathrm{D}} \cdot \iota_{\mathrm{V}}.
 \end{equation}
 
-\noindent\textbf{Mechanism:} Mass ($m$) is strictly the hydrodynamic impedance of this projected condensate:
+In the present formulation, $\iota_{\mathrm{V}} \equiv 1~\mathrm{m}^{-1}$ is not derived from microscopic symmetry; it is a macroscopic SI calibration convention used to anchor the 2D-to-3D impedance projection. Consequently, the active-vacuum node radius $r_{\mathrm{D}}$ obtained in \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}} should be interpreted as an empirically calibrated scale, not as a parameter-free derivation.
+
+The physical meaning of this projection is that transverse waves couple to the 2D surface inertia $\mu_{\mathrm{D}}$, whereas localized mass defects displace the 3D interstitial phase and therefore couple to the effective density $\rho_{\mathrm{IC}}$. A future dimensionless formulation must replace $\iota_{\mathrm{V}}$ with a microscopic phase-ratio, thermodynamic projection factor, or explicit field-coupling derivation. Under the present macroscopic SI calibration convention, the effective interstitial density becomes:
 \begin{equation}
-    m = \rho_{\mathrm{IC}} \cdot V_{\mathrm{eff}} \cdot \sin(\Delta\phi)
+    \rho_{\mathrm{IC}} \approx 1.8074 \times 10^{53}~\mathrm{kg/m^3}.
 \end{equation}
 
-\noindent\textbf{Conclusion:} Light propagates transversely and feels the 2D skin ($\mu_{\mathrm{D}}$). Mass displaces volumetrically and feels the 3D bulk ($\rho_{\mathrm{IC}}$). They are the exact same physical entity, separated strictly by dimensional projection.
+\vspace{0.5em}
+\noindent\textbf{Mechanism:} Inertial mass $m$ is the hydrodynamic impedance generated when a localized topological defect displaces this projected interstitial density:
+\begin{equation}
+    m = \rho_{\mathrm{IC}} \cdot V_{\mathrm{eff}} \cdot \sin(\Delta\phi).
+\end{equation}
+
+\vspace{0.5em}
+\noindent\textbf{Conclusion:} Light propagates transversely and couples to the 2D surface inertia $\mu_{\mathrm{D}}$. Mass displaces the interstitial phase volumetrically and couples to the effective 3D density $\rho_{\mathrm{IC}}$. These are not separate substances, but two dimensional projections of the same active-vacuum impedance structure.
 
 \subsection{The Quantum Mass ($M_{\mathrm{D}}$) --- The Node Gear}
 While $\mu_{\mathrm{D}}$ defines the 2D surface load of the vacuum interface, we must define the absolute localized 3D mass ($M_{\mathrm{D}}$) of a single Soft Floor node.

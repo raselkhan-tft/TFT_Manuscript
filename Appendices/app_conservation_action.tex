@@ -1,18 +1,37 @@
 \chapter{Conservation of Action and the Master Geometric Law}
 \label{app:conservation_action}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Subject:} Derivation of the scaling law ($\rho(r) \propto r^{-4}$) and the associated geometric form factor within the TFT framework.
+\noindent\textbf{Subject:} Conditional derivation of the scaling law 
+\begin{equation}
+    \rho(r) \propto r^{-4}
+\end{equation}
+and the associated geometric form factor within the TFT framework.
 
 \section{Scale Invariance and the Conservation of Action}
-In Tension Field Theory (TFT), the characteristic densities and length scales of the vacuum are not introduced as independent phenomenological parameters. Rather, they are treated as geometrically related manifestations of a contiguous elastic substrate. Under this assumption, the transition from the Latent Substrate (State 0) to the Active Vacuum (State I) must preserve the fundamental mechanical action of the field.
+In Tension Field Theory, the characteristic densities and length scales of the vacuum are not treated as unrelated phenomenological parameters. Rather, they are treated as geometrically related manifestations of a contiguous elastic substrate.
 
-We therefore take the Action of Existence, denoted $h$, to be conserved across topological phase reconfiguration. The purpose of this appendix is to derive the corresponding scaling law for density under the additional assumption that the transverse propagation speed ($c_{\mathrm{E}}$) remains invariant across the active phase.
+Under this assumption, the transition from the Latent Substrate, State 0, to the Active Vacuum, State I, must preserve the fundamental mechanical action of the field under the appropriate topological projection.
+
+We therefore take the Action of Existence, denoted $h$, to be conserved across topological phase reconfiguration. The purpose of this appendix is to derive the corresponding scaling law for density under two assumptions:
+\begin{equation}
+    h = \text{invariant}
+\end{equation}
+and
+\begin{equation}
+    c_{\mathrm{E}} = \text{invariant}.
+\end{equation}
+
+Topology-dependent geometric compression is encoded by the form factor
+\begin{equation}
+    \mathcal{F}_i.
+\end{equation}
+
+This appendix does not independently derive the numerical value of $h$. Rather, it derives the density-scaling constraint required if the action scale is preserved across the stratified TFT architecture.
 
 \section{Kinematic Definition of Action}
 For a localized mechanical excitation of the lattice, action is defined in the standard kinematic form as
 \begin{equation}
-    \text{Action} = E \cdot t
+    \text{Action} = E \cdot t,
 \end{equation}
 where $E$ is the energy associated with one localized vibrational or rotational cycle, and $t$ is the corresponding cycle time.
 
@@ -21,99 +40,179 @@ To determine how action scales with the geometric size of a localized node, we e
 
 The energy of a localized node is written as
 \begin{equation}
-    E = m c_{\mathrm{E}}^2
+    E = m c_{\mathrm{E}}^2,
 \end{equation}
 with
 \begin{equation}
-    m = \rho V
+    m = \rho V.
 \end{equation}
 For a three-dimensional localized state, the volume scales as
 \begin{equation}
-    V \propto r^3
+    V \propto r^3.
 \end{equation}
-Hence,
+Therefore,
 \begin{equation}
-    E \propto \rho \cdot r^3 \cdot c_{\mathrm{E}}^2
+    E \propto \rho r^3 c_{\mathrm{E}}^2.
 \end{equation}
-
-The characteristic time for one cycle is taken to be the traversal time across the node radius at speed $c_{\mathrm{E}}$,
+The characteristic time for one cycle is taken to be the traversal time across the node radius at speed $c_{\mathrm{E}}$:
 \begin{equation}
-    t = \frac{r}{c_{\mathrm{E}}}
+    t = \frac{r}{c_{\mathrm{E}}}.
 \end{equation}
-
 Substituting these expressions into the definition of action gives
 \begin{equation}
-    \text{Action} \equiv h \propto (\rho \cdot r^3 \cdot c_{\mathrm{E}}^2)\left(\frac{r}{c_{\mathrm{E}}}\right) = \rho \cdot r^4 \cdot c_{\mathrm{E}}
+    \text{Action} \equiv h \propto \left(\rho r^3 c_{\mathrm{E}}^2\right) \left(\frac{r}{c_{\mathrm{E}}}\right).
+\end{equation}
+Thus,
+\begin{equation}
+    h \propto \rho r^4 c_{\mathrm{E}}.
 \end{equation}
 
-If the fundamental action ($h$) and the transverse speed ($c_{\mathrm{E}}$) are both strictly invariant, then the remaining geometric factor must also be invariant. This motivates the definition
-\begin{equation}
-    J_i = \rho_i r_i^4 = \text{constant}
-\end{equation}
-which we identify as the Scale-Invariant Mass Moment.
+If $h$ and $c_{\mathrm{E}}$ are both invariant, then the density-radius structure must preserve a common mass-moment scale after topology-dependent projection is accounted for.
 
-\section{Master Geometric Scaling Relation}
-This structural mass moment ($J_i$) implies that the rectilinear Substrate state (governed by its Simple Cubic architecture) and any localized phase state must satisfy
+This motivates the raw structural mass moment:
 \begin{equation}
-    \rho_{\mathrm{S}} \ell_{\mathrm{S}}^4 \propto \rho(r) r^4
+    J_i \equiv \rho_i r_i^4.
 \end{equation}
-where $\rho_{\mathrm{S}}$ and $\ell_{\mathrm{S}}$ denote the density and characteristic scale of the Substrate.
-
-To convert this proportionality into an equality, a geometric transition factor must be introduced to account for the change from rectilinear to localized topology. Denoting this phase-dependent factor by $\mathcal{F}_i$, we write
-\begin{equation}
-    \rho_{\mathrm{S}} \ell_{\mathrm{S}}^4 = \frac{\rho(r) r^4}{\mathcal{F}_i}
-\end{equation}
-
-Solving for the localized density yields the master relation
-\begin{equation}
-    \rho(r) = \mathcal{F}_i \cdot \rho_{\mathrm{S}}\left(\frac{\ell_{\mathrm{S}}}{r}\right)^4
-\end{equation}
-This expression will be referred to as the Master Geometric Law. Within the TFT construction, it determines the projected density of a localized state as a function of scale and topology.
+The quantity $J_i$ captures the density-radius content of a phase state before topology-normalization is applied.
 
 \section{Geometric Form Factor}
-The form factor $\mathcal{F}_i$ is introduced to represent the geometric compression associated with confining a propagating linear mode into a localized bound state.
+The form factor $\mathcal{F}_i$ represents the geometric compression associated with confining a propagating linear mode into a localized bound state.
 
-We model the propagating mode as sweeping a cylindrical volume
+For the spherical Soft Floor node, the propagating mode is modeled as sweeping a cylindrical volume:
 \begin{equation}
-    V_{\mathrm{cyl}} = \pi r^2(2r) = 2\pi r^3
+    V_{\mathrm{cyl}} = \pi r^2(2r) = 2\pi r^3.
 \end{equation}
-and the localized node as occupying a spherical volume
+The localized node occupies a spherical volume:
 \begin{equation}
-    V_{\mathrm{node}} = \frac{4}{3}\pi r^3
+    V_{\mathrm{node}} = \frac{4}{3}\pi r^3.
 \end{equation}
-
 The resulting compression ratio is
 \begin{equation}
-    \mathcal{F}_i = \frac{V_{\mathrm{cyl}}}{V_{\mathrm{node}}} = \frac{2\pi r^3}{\frac{4}{3}\pi r^3} = 1.5
+    \mathcal{F}_{\mathrm{D}} = \frac{V_{\mathrm{cyl}}}{V_{\mathrm{node}}} = \frac{2\pi r^3}{\frac{4}{3}\pi r^3}.
 \end{equation}
-
+Therefore,
+\begin{equation}
+    \mathcal{F}_{\mathrm{D}} = 1.5.
+\end{equation}
 Accordingly, TFT assigns
 \begin{equation}
     \mathcal{F}_{\mathrm{D}} = 1.5
 \end{equation}
-to the spherical Soft Floor nodes, and
+to spherical Soft Floor nodes.
+
+For the rectilinear Substrate state, no spherical localization factor is applied:
 \begin{equation}
-    \mathcal{F}_{\mathrm{S}} = \mathcal{F}_{\mathrm{N}} = 1.0
+    \mathcal{F}_{\mathrm{S}} = 1.0.
 \end{equation}
-to rectilinear or effectively linear/cylindrical configurations such as the Substrate and nucleon core.
+
+For the nucleon core, TFT treats the relevant coupling geometry as effectively vortical or cylindrical rather than spherical-node compression. Therefore,
+\begin{equation}
+    \mathcal{F}_{\mathrm{N}} = 1.0.
+\end{equation}
+
+These assignments are topology-specific projection factors within TFT. They are not universal geometric constants for arbitrary matter distributions.
+
+\section{Topology-Normalized Conservation Law}
+The raw structural mass moment is
+\begin{equation}
+    J_i \equiv \rho_i r_i^4.
+\end{equation}
+However, $J_i$ alone is not required to be numerically identical across all phase topologies. Different topological configurations carry different projection factors.
+
+The conserved quantity is therefore the topology-normalized combination:
+\begin{equation}
+    \frac{J_i}{\mathcal{F}_i}.
+\end{equation}
+
+For the rectilinear Substrate state,
+\begin{equation}
+    \mathcal{F}_{\mathrm{S}} = 1.0,
+\end{equation}
+so the substrate-normalized invariant becomes
+\begin{equation}
+    \frac{J_{\mathrm{S}}}{\mathcal{F}_{\mathrm{S}}} = J_{\mathrm{S}} = \rho_{\mathrm{S}}\ell_{\mathrm{S}}^4.
+\end{equation}
+Therefore, topological phase reconfiguration preserves
+\begin{equation}
+    \frac{J_i}{\mathcal{F}_i} = \rho_{\mathrm{S}}\ell_{\mathrm{S}}^4.
+\end{equation}
+
+Using
+\begin{equation}
+    J_i = \rho_i r_i^4,
+\end{equation}
+the conserved projection law becomes
+\begin{equation}
+    \rho_{\mathrm{S}}\ell_{\mathrm{S}}^4 = \frac{\rho_i r_i^4}{\mathcal{F}_i}.
+\end{equation}
+This is the topology-normalized conservation law underlying the Master Geometric Law.
+
+\section{Master Geometric Scaling Relation}
+Starting from
+\begin{equation}
+    \rho_{\mathrm{S}}\ell_{\mathrm{S}}^4 = \frac{\rho_i r_i^4}{\mathcal{F}_i},
+\end{equation}
+we solve for the localized density:
+\begin{equation}
+    \rho_i r_i^4 = \mathcal{F}_i\rho_{\mathrm{S}}\ell_{\mathrm{S}}^4.
+\end{equation}
+Therefore,
+\begin{equation}
+    \rho_i(r_i) = \mathcal{F}_i\rho_{\mathrm{S}} \left( \frac{\ell_{\mathrm{S}}}{r_i} \right)^4.
+\end{equation}
+This expression is the Master Geometric Law of TFT.
+
+It states that, for contiguous topological phase states, density decreases as
+\begin{equation}
+    r^{-4},
+\end{equation}
+modified by the relevant topology-dependent projection factor
+\begin{equation}
+    \mathcal{F}_i.
+\end{equation}
+Within the TFT construction, this law determines the projected density of a contiguous localized phase state as a function of scale and topology.
 
 \section{Boundary Equation}
-The Master Geometric Law may be inverted to determine the characteristic boundary scale associated with a given internal density:
+The Master Geometric Law may be inverted to determine the characteristic boundary scale associated with a given internal density.
+
+Starting from
 \begin{equation}
-    r = \ell_{\mathrm{S}}\left(\frac{\mathcal{F}_i \cdot \rho_{\mathrm{S}}}{\rho(r)}\right)^{1/4}
+    \rho_i(r_i) = \mathcal{F}_i\rho_{\mathrm{S}} \left( \frac{\ell_{\mathrm{S}}}{r_i} \right)^4,
 \end{equation}
-This relation will be used in subsequent appendices as the boundary equation for localized phase states.
+we obtain
+\begin{equation}
+    r_i = \ell_{\mathrm{S}} \left( \frac{\mathcal{F}_i\rho_{\mathrm{S}}}{\rho_i} \right)^{1/4}.
+\end{equation}
+This relation is used in subsequent appendices as the boundary equation for localized contiguous phase states.
 
 \section{Domain of Applicability}
-The scaling law derived here is intended to apply only to contiguous topological phase states of the vacuum, such as the Substrate cell, the Soft Floor node, and the continuous nucleon core. It is not assumed to extend directly to composite macroscopic bodies, whose quoted bulk densities represent coarse-grained averages of baryonic structure embedded within the active vacuum.
+The scaling law derived here applies only to contiguous topological phase states of the TFT vacuum architecture, such as the Substrate cell, the spherical Soft Floor node, and the continuous nucleon core.
+
+It is not assumed to extend directly to composite macroscopic bodies. The quoted bulk densities of planets, stars, ordinary condensed matter, or composite baryonic systems are coarse-grained averages of many internal structures embedded within the active vacuum.
+
+The Master Geometric Law should therefore be interpreted as a microscopic phase-projection rule, not as a general-purpose density law for arbitrary matter distributions.
 
 \section{Conclusion}
 Within the TFT framework, the relation
 \begin{equation}
-    \rho(r) = \mathcal{F}_i \cdot \rho_{\mathrm{S}}\left(\frac{\ell_{\mathrm{S}}}{r}\right)^4
+    \rho_i(r_i) = \mathcal{F}_i\rho_{\mathrm{S}} \left( \frac{\ell_{\mathrm{S}}}{r_i} \right)^4
 \end{equation}
-provides the scale-projection rule required to preserve the invariant
+provides the scale-projection rule required to preserve the topology-normalized invariant
 \begin{equation}
-    J_i = \rho_i r_i^4
+    \frac{J_i}{\mathcal{F}_i} = \rho_{\mathrm{S}}\ell_{\mathrm{S}}^4.
 \end{equation}
-It follows that, as the characteristic radius increases across topological phases, the density must decrease as $r^{-4}$ up to the relevant geometric factor. In this sense, the Master Geometric Law functions as the scaling constraint that preserves action across the stratified architecture of the field.
+The raw structural mass moment is
+\begin{equation}
+    J_i = \rho_i r_i^4.
+\end{equation}
+Therefore, $J_i$ is topology-weighted rather than strictly identical across all phase states.
+
+As the characteristic radius increases across topological phases, the density decreases as
+\begin{equation}
+    r^{-4},
+\end{equation}
+modified by the relevant geometric projection factor
+\begin{equation}
+    \mathcal{F}_i.
+\end{equation}
+In this sense, the Master Geometric Law functions as the conditional scaling constraint that preserves action across the stratified architecture of the field.

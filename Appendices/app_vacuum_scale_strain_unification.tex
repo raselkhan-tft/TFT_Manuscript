@@ -1,75 +1,97 @@
 \chapter{Global Calibration of the Active Vacuum Scale and Strain Unification}
 \label{app:vacuum_scale_strain_unification}
 
-\noindent\textbf{Abstract:} In Tension Field Theory (TFT), the microscopic Coherence Boundary ($2r_{\mathrm{D}}$) cannot be dimensionlessly derived; it must be globally calibrated against the physical extremes of the observable universe. This appendix provides the strict mathematical proof that derives the fundamental geometry of the Face-Centered Cubic (FCC) vacuum directly from Macroscopic Gravity ($G$) and the $246.22$ GeV Vacuum Expectation Value (VEV). Furthermore, it proves that this microscopic structural limit ($E_{\mathrm{max}}$) is perfectly mathematically symmetric with the macroscopic cosmological damping rate ($\Gamma_{\mathrm{D}}$) and the dimensionless Kinematic Lattice Index ($N_{\mathrm{D}}$).
+\noindent\textbf{Abstract:} In Tension Field Theory (TFT), the microscopic Coherence Boundary ($2r_{\mathrm{D}}$) is not derived dimensionlessly in the present formulation. It is empirically calibrated against the electroweak symmetry-breaking scale through a TFT matching ansatz between the mass-equivalent VEV scale and the hydrodynamic capacity of the interstitial phase. This appendix makes that calibration explicit, including the dependence of $r_{\mathrm{D}}$ on the macroscopic SI projection convention $\iota_{\mathrm{V}}$. It then evaluates the resulting kinematic ceiling $E_{\mathrm{max}}$ and shows that the calibrated scale is algebraically consistent with the macroscopic damping relation $E_{\mathrm{max}} \equiv h\Gamma_{\mathrm{D}}N_{\mathrm{D}}$. This identity is a post-calibration consistency relation, not an independent derivation of the active-vacuum scale.
 
-\section{Derivation of the Node Radius from the VEV}
+\section{Empirical Calibration of the Active-Vacuum Node Radius from the VEV}
 \label{sec:vev_calibration}
-The framework must physically accommodate the baseline resting tension of the Standard Model---the Vacuum Expectation Value (VEV)---without localized lattice fracture. We calibrate the fundamental node radius ($r_{\mathrm{D}}$) by equating the empirical VEV resting mass to the physical hydrodynamic capacity of the Interstitial Condensate ($\rho_{\mathrm{IC}}$). 
+The framework must physically accommodate the baseline electroweak symmetry-breaking scale without localized lattice fracture. In the present formulation, we calibrate the fundamental active-vacuum node radius $r_{\mathrm{D}}$ by equating the mass-equivalent electroweak VEV scale to the hydrodynamic capacity of the Interstitial Condensate $\rho_{\mathrm{IC}}$.
 
-Crucially, in standard physics, the VEV is treated as a continuous field permeating $100\%$ of space. In TFT, the VEV represents the specific visco-elastic resistance of the fluid "Dark Matter" matrix, which only exists in the interstitial voids between the solid FCC nodes. We therefore map the VEV to the total interstitial volume of a single FCC unit cell ($\approx 25.95\%$ of the total lattice volume).
+This is a TFT calibration ansatz, not a Standard Model derivation. In standard field theory, the VEV is a continuous scalar-field scale permeating space; it is not a localized mass packet occupying a finite geometric void. In the present TFT calibration, the electroweak VEV scale is interpreted as a mass-equivalent baseline resistance scale of the interstitial phase. This empirical matching condition anchors the active-vacuum node radius until a future field-coupling derivation replaces the calibration convention.
 
-First, we convert the empirical $246.22$ GeV energy into its standard SI mass equivalent ($m_{\mathrm{VEV}}$) utilizing the mass-energy equivalence principle ($m = E/c_{\mathrm{E}}^2$) and the high-precision elementary charge constant ($1 \text{ eV} \approx 1.60218 \times 10^{-19} \text{ J}$):
+First, we convert the empirical $246.22~\mathrm{GeV}$ scale into its SI mass equivalent $m_{\mathrm{VEV}}$, using $m = E/c_{\mathrm{E}}^2$ and $1~\mathrm{eV} \approx 1.60218 \times 10^{-19}~\mathrm{J}$:
 \begin{equation}
-    E = 246.22 \times 10^9 \text{ eV} \times (1.60218 \times 10^{-19} \text{ J/eV}) \approx 3.9449 \times 10^{-8} \text{ J}
+    E = 246.22 \times 10^9~\mathrm{eV} \cdot (1.60218 \times 10^{-19}~\mathrm{J/eV}) \approx 3.9449 \times 10^{-8}~\mathrm{J},
 \end{equation}
 \begin{equation}
-    m_{\mathrm{VEV}} = \frac{3.9449 \times 10^{-8} \text{ J}}{(2.99792 \times 10^8 \text{ m/s})^2} \approx 4.3893 \times 10^{-25} \text{ kg}
-\end{equation}
-\textit{(Note: This mass equivalent represents the fundamental hydrodynamic resting tension capacity of the active vacuum fluid, not a literal baryonic or fermionic rest mass.)}
-
-Next, we define the 3D vacuum fluid density directly from the linear macroscopic gravitational tension of the lattice ($c_{\mathrm{E}}^2/G$), projected volumetrically via the Dimensional Projection Constant ($\iota_{\mathrm{V}} \equiv 1 \text{ m}^{-1}$), as formally established in \hyperref[app:fcc_constants]{Appendix~\ref*{app:fcc_constants}}:
-\begin{equation}
-    \rho_{\mathrm{IC}} = \left( \frac{c_{\mathrm{E}}^2}{G \cdot r_{\mathrm{D}}} \right) \cdot \iota_{\mathrm{V}}
+    m_{\mathrm{VEV}} = \frac{3.9449 \times 10^{-8}~\mathrm{J}}{(2.99792 \times 10^8~\mathrm{m/s})^2} \approx 4.3893 \times 10^{-25}~\mathrm{kg}.
 \end{equation}
 
-We then determine the total available Interstitial Volume ($V_{\mathrm{IC}}$) within a single FCC unit cell. The total volume of an FCC unit cell with edge length $a = 2\sqrt{2}r_{\mathrm{D}}$ is $V_{\mathrm{cell}} = 16\sqrt{2} r_{\mathrm{D}}^3 \approx 22.6274 r_{\mathrm{D}}^3$. The unit cell contains exactly 4 solid nodes, occupying $V_{\mathrm{nodes}} = \frac{16\pi}{3} r_{\mathrm{D}}^3 \approx 16.7552 r_{\mathrm{D}}^3$. The total Interstitial Volume is the difference:
+\textit{Note: This mass equivalent represents the calibration scale assigned to the hydrodynamic resting capacity of the active interstitial phase. It is not a literal baryonic, fermionic, or localized Higgs rest mass.}
+
+Next, we define the 3D vacuum fluid density $\rho_{\mathrm{IC}}$. Because the baseline inertia of the active vacuum,
 \begin{equation}
-    V_{\mathrm{IC}} = V_{\mathrm{cell}} - V_{\mathrm{nodes}} \approx 22.6274 r_{\mathrm{D}}^3 - 16.7552 r_{\mathrm{D}}^3 = 5.8722 r_{\mathrm{D}}^3
+    \mu_{\mathrm{D}} = \frac{c_{\mathrm{E}}^2}{G r_{\mathrm{D}}},
+\end{equation}
+acts as a 2D surface inertia distributed across the node boundary, calculating the volumetric fluid capacity requires translating this surface inertia into an effective 3D interstitial density. To bridge this microscopic impedance structure to the macroscopic SI units used in $G$, we employ the macroscopic SI calibration convention $\iota_{\mathrm{V}} \equiv 1~\mathrm{m}^{-1}$. Thus,
+\begin{equation}
+    \rho_{\mathrm{IC}} = \left( \frac{c_{\mathrm{E}}^2}{G r_{\mathrm{D}}} \right) \iota_{\mathrm{V}}.
 \end{equation}
 
-We equate the physical mass equivalent of the VEV to the fluid capacity of this total interstitial volume:
+We then determine the total available Interstitial Volume $V_{\mathrm{IC}}$ within a single FCC unit cell. The total volume of an FCC unit cell with edge length $a = 2\sqrt{2}r_{\mathrm{D}}$ is
 \begin{equation}
-    m_{\mathrm{VEV}} = \rho_{\mathrm{IC}} \cdot V_{\mathrm{IC}}
+    V_{\mathrm{cell}} = 16\sqrt{2} r_{\mathrm{D}}^3 \approx 22.6274 r_{\mathrm{D}}^3.
 \end{equation}
+The unit cell contains exactly four solid nodes, occupying
 \begin{equation}
-    4.3893 \times 10^{-25} \text{ kg} = \left( \frac{c_{\mathrm{E}}^2}{G \cdot r_{\mathrm{D}}} \right) \cdot (5.8722 r_{\mathrm{D}}^3)
+    V_{\mathrm{nodes}} = \frac{16\pi}{3} r_{\mathrm{D}}^3 \approx 16.7552 r_{\mathrm{D}}^3.
 \end{equation}
-
-By simplifying the equation and isolating $r_{\mathrm{D}}$, we utilize the absolute physical constant for linear tension ($\frac{c_{\mathrm{E}}^2}{G} \approx 1.3466 \times 10^{27} \text{ kg/m}$):
+The total interstitial volume is therefore
 \begin{equation}
-    4.3893 \times 10^{-25} = 5.8722 \cdot (1.3466 \times 10^{27}) \cdot r_{\mathrm{D}}^2
-\end{equation}
-\begin{equation}
-    4.3893 \times 10^{-25} = 7.9075 \times 10^{27} \cdot r_{\mathrm{D}}^2
-\end{equation}
-\begin{equation}
-    r_{\mathrm{D}}^2 \approx 5.5508 \times 10^{-53} \text{ m}^2
+    V_{\mathrm{IC}} = V_{\mathrm{cell}} - V_{\mathrm{nodes}} \approx 22.6274 r_{\mathrm{D}}^3 - 16.7552 r_{\mathrm{D}}^3 = 5.8722 r_{\mathrm{D}}^3.
 \end{equation}
 
-Solving for the fundamental node radius yields a strict, causal solid-state geometric calibration:
+We now impose the calibrated matching condition:
 \begin{equation}
-    r_{\mathrm{D}} \approx 7.4504 \times 10^{-27} \text{ m}
+    m_{\mathrm{VEV}} = \rho_{\mathrm{IC}} V_{\mathrm{IC}}.
+\end{equation}
+Substituting the projected interstitial density and FCC interstitial volume gives
+\begin{equation}
+    m_{\mathrm{VEV}} = \left( \frac{c_{\mathrm{E}}^2}{G r_{\mathrm{D}}} \right) \iota_{\mathrm{V}} (5.8722 r_{\mathrm{D}}^3),
+\end{equation}
+or
+\begin{equation}
+    m_{\mathrm{VEV}} = 5.8722 \left( \frac{c_{\mathrm{E}}^2}{G} \right) \iota_{\mathrm{V}} r_{\mathrm{D}}^2.
 \end{equation}
 
-\section{Validation Against the Kinematic Ceiling ($E_{\mathrm{max}}$)}
-To confirm this geometric calibration is physically valid, we subject the derived node radius to the absolute Kinematic Ceiling ($E_{\mathrm{max}}$). Because a transverse wave knot cannot physically propagate through a lattice node smaller than its own physical diameter ($\lambda_{\mathrm{min}} = 2r_{\mathrm{D}}$), this limit represents the energy required to compress a singular photon's spatial wavelength to the physical diameter of the node, triggering structural lattice fracture.
-
-Utilizing the invariant kinematic equation for a localized photon-like excitation ($E = hc_{\mathrm{E}}/\lambda$), we evaluate the fracture limit of the calibrated SGF:
+For a general projection scale $\iota_{\mathrm{V}}$, the active-vacuum node radius is therefore
 \begin{equation}
-    E_{\mathrm{max}} = \frac{hc_{\mathrm{E}}}{2r_{\mathrm{D}}}
+    r_{\mathrm{D}}(\iota_{\mathrm{V}}) = \sqrt{\frac{G m_{\mathrm{VEV}}}{5.8722 c_{\mathrm{E}}^2 \iota_{\mathrm{V}}}}.
+\end{equation}
+This makes explicit that $r_{\mathrm{D}} \propto \iota_{\mathrm{V}}^{-1/2}$. Under the present macroscopic SI calibration convention $\iota_{\mathrm{V}} \equiv 1~\mathrm{m}^{-1}$, and using $c_{\mathrm{E}}^2/G \approx 1.3466 \times 10^{27}~\mathrm{kg/m}$, the calibration condition becomes
+\begin{equation}
+    4.3893 \times 10^{-25} = 5.8722 \cdot (1.3466 \times 10^{27}) \cdot r_{\mathrm{D}}^2,
+\end{equation}
+\begin{equation}
+    4.3893 \times 10^{-25} = 7.9075 \times 10^{27} \cdot r_{\mathrm{D}}^2,
+\end{equation}
+\begin{equation}
+    r_{\mathrm{D}}^2 \approx 5.5508 \times 10^{-53}~\mathrm{m^2}.
 \end{equation}
 
-Using the invariant constant $hc_{\mathrm{E}} \approx 1.2398 \times 10^{-15} \text{ GeV}\cdot\text{m}$:
+Solving for the fundamental active-vacuum node radius yields the empirical FCC Soft Floor calibration scale:
 \begin{equation}
-    E_{\mathrm{max}} = \frac{1.2398 \times 10^{-15} \text{ GeV}\cdot\text{m}}{2(7.4504 \times 10^{-27} \text{ m})} \approx 8.3203 \times 10^{10} \text{ GeV}
+    r_{\mathrm{D}} \approx 7.4504 \times 10^{-27}~\mathrm{m}.
+\end{equation}
+This value should therefore be read as the TFT baseline calibration of the active vacuum, not as a parameter-free derivation from the Standard Model.
+
+\section{Post-Calibration Consistency Check Against the Kinematic Ceiling ($E_{\mathrm{max}}$)}
+To test the calibrated node radius against the microscopic kinematic ceiling, we evaluate the energy required to compress a photon-like transverse excitation to the physical diameter of one active-vacuum node, $\lambda_{\mathrm{min}} = 2r_{\mathrm{D}}$. This is a consistency check performed after the empirical calibration of $r_{\mathrm{D}}$, not an independent derivation of the lattice scale.
+
+Using
+\begin{equation}
+    E_{\mathrm{max}} = \frac{hc_{\mathrm{E}}}{2r_{\mathrm{D}}},
+\end{equation}
+and $hc_{\mathrm{E}} \approx 1.2398 \times 10^{-15}~\mathrm{GeV \cdot m}$, the calibrated value $r_{\mathrm{D}} \approx 7.4504 \times 10^{-27}~\mathrm{m}$ gives
+\begin{equation}
+    E_{\mathrm{max}} \approx 8.3203 \times 10^{10}~\mathrm{GeV}.
 \end{equation}
 
-This confirms that deriving the vacuum geometry from the macroscopic interstitial Dark Matter fraction organically predicts an absolute structural breaking limit ($8.3203 \times 10^{10}$ GeV) that falls flawlessly within the Standard Model empirical Higgs Instability Band ($10^{10}$ to $10^{12}$ GeV).
+This value lies within the broad electroweak vacuum-instability range often quoted for Standard Model extrapolations. Because $r_{\mathrm{D}}$ has already been calibrated using the VEV scale, this agreement should be interpreted only as a post-calibration consistency check, not as an independent prediction.
 
 \section{The Macroscopic Strain Limit ($c_{\mathrm{E}}^2$)}
 \label{sec:macroscopic_strain_limit}
-With the microscopic boundary established, we evaluate the macroscopic boundary. As derived in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}, the visco-elastic damping rate of the active Spacetime Gravitational Floor ($\Gamma_{\mathrm{D}} \approx 2.3671 \times 10^{-18}$ s$^{-1}$) imposes a constant kinematic impedance acceleration ($a_{\mathrm{D}}$) on any propagating transverse wave. As established in \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}, this fundamental cosmic impedance is defined as:
+With the calibrated microscopic boundary fixed, we evaluate the corresponding macroscopic boundary. As derived in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}, the visco-elastic damping rate of the active Spacetime Gravitational Floor ($\Gamma_{\mathrm{D}} \approx 2.3671 \times 10^{-18}$ s$^{-1}$) imposes a constant kinematic impedance acceleration ($a_{\mathrm{D}}$) on any propagating transverse wave. As established in \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}, this fundamental cosmic impedance is defined as:
 \begin{equation}
     a_{\mathrm{D}} = c_{\mathrm{E}} \Gamma_{\mathrm{D}}
 \end{equation}
@@ -82,7 +104,7 @@ To find the total specific work ($W_{\mathrm{total}}$) extracted from a wave as 
 This mathematically establishes that $R_{\mathrm{U}}$ is exactly the spatial distance required for the SGF to absorb $c_{\mathrm{E}}^2$ of kinematic energy, confirming the invariant strain capacity of the visco-elastic medium.
 
 \section{The Unified Equation: The Scale-Invariant Identity}
-We can demonstrate the perfect geometric symmetry between the macroscopic strain limit ($R_{\mathrm{U}}$) and the microscopic quantum node ($2r_{\mathrm{D}}$) using the fundamental Kinematic Lattice Index ($N_{\mathrm{D}} = R_{\mathrm{U}}/2r_{\mathrm{D}}$).
+We can demonstrate the algebraic consistency relation between the macroscopic strain limit ($R_{\mathrm{U}}$) and the microscopic quantum node ($2r_{\mathrm{D}}$) using the fundamental Kinematic Lattice Index ($N_{\mathrm{D}} = R_{\mathrm{U}}/2r_{\mathrm{D}}$).
 
 By isolating the microscopic geometry ($2r_{\mathrm{D}} = R_{\mathrm{U}} / N_{\mathrm{D}}$) and substituting it into the quantum vibrational capacity definition ($E_{\mathrm{max}} = h c_{\mathrm{E}}/2r_{\mathrm{D}}$), we express the Kinematic Ceiling as:
 \begin{equation}
@@ -100,4 +122,10 @@ Simplifying this yields the Scale-Invariant Identity of the active vacuum:
 \end{equation}
 
 \section{Conclusion}
-This identity confirms that the structural parameters of the quantum vacuum ($E_{\mathrm{max}}$) are perfectly mathematically symmetric with the macroscopic cosmological damping rate ($\Gamma_{\mathrm{D}}$) and the dimensionless lattice count ($N_{\mathrm{D}}$). While not an independent derivation, this tautology is a physical requirement for a unified continuum: it proves that the total observable action budget is dimensionally locked. The energetic ceiling of a single node is strictly proportional to the mechanical damping energy of a single temporal oscillation ($h \Gamma_{\mathrm{D}}$) projected across the entire geometric radial depth of the observable cosmos ($N_{\mathrm{D}}$).
+This appendix establishes the empirical calibration procedure for the active-vacuum node radius $r_{\mathrm{D}}$ under the macroscopic SI projection convention $\iota_{\mathrm{V}} \equiv 1~\mathrm{m}^{-1}$. The calculation explicitly shows that $r_{\mathrm{D}} \propto \iota_{\mathrm{V}}^{-1/2}$, so the calibrated scale is not parameter-free in the present formulation.
+
+The identity
+\begin{equation}
+    E_{\mathrm{max}} \equiv h \Gamma_{\mathrm{D}} N_{\mathrm{D}}
+\end{equation}
+is an algebraic consistency relation among the calibrated microscopic cutoff, the macroscopic damping scale, and the dimensionless lattice index. It confirms that the definitions commute across the microscopic and macroscopic limits of the TFT active vacuum. It should not be interpreted as an independent derivation of $E_{\mathrm{max}}$, $r_{\mathrm{D}}$, or the electroweak scale.
