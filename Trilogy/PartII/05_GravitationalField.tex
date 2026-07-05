@@ -161,19 +161,24 @@ This equation formalizes the First Law of Restorative Tension, providing a stric
 \label{fig:arrest_kinematic_curvature}
 \end{figure}
 
-\subsection{The Tensor Formulation (Geometric Projection)}
-While the scalar equation governs the magnitude of the interaction (the mechanical limit), the directionality is recovered by projecting this active balance onto the coordinate metric. To recover the full directional curvature compatible with General Relativity, we promote the scalar densities to tensors:
+\subsection{The Tensor Projection of the Active Tension Balance}
+
+While the scalar equation governs the magnitude of the interaction, it does not by itself encode directional stress structure. To compare the TFT strain law with standard four-dimensional gravitational bookkeeping, the scalar active-balance relation is projected into an effective tensor-valued form.
+
+In this projection, the isotropic capacity of the active vacuum supplies the background floor, while localized matter-energy supplies the load:
 \begin{itemize}
-    \item \textbf{The floor:} $\tau_{\mathrm{QG}} \to \tau_{\mathrm{QG}} \eta_{\mu\nu}$ (The active isotropic background capacity).
-    \item \textbf{The load:} $\tau_{\mathrm{L}} \to T_{\mu\nu}$ (The scalar Matter-Energy Load ($\tau_{\mathrm{L}}$) expands into the standard matter stress-energy tensor ($T_{\mu\nu}$)).
+    \item \textbf{The floor:} $\tau_{\mathrm{QG}} \to \tau_{\mathrm{QG}}\eta_{\mu\nu}$, representing the isotropic active background capacity of the unbroken Soft Floor.
+    \item \textbf{The load:} $\tau_{\mathrm{L}} \to T_{\mu\nu}$, where the scalar matter-energy load expands into the standard stress-energy tensor of localized mass-energy and radiation.
 \end{itemize}
 
-The tensor field equation becomes:
+The effective tension-curvature projection is therefore written as:
 \begin{equation}
-    G_{\mu\nu} = \frac{\kappa G}{c_{\mathrm{E}}^4}(\tau_{\mathrm{QG}} \eta_{\mu\nu} - T_{\mu\nu})
+    G_{\mu\nu}^{(\tau)} = \frac{\kappa G}{c_{\mathrm{E}}^4} \left( \tau_{\mathrm{QG}}\eta_{\mu\nu} - T_{\mu\nu} \right).
 \end{equation}
 
-This formulation preserves the directional information required by standard four-dimensional geometry while imposing the finite mechanical limits of the active scalar law.
+Here, $G_{\mu\nu}^{(\tau)}$ should not be interpreted as fundamental curvature of an empty spacetime manifold. It is the effective tensor representation of active lattice strain produced by the difference between the available vacuum tension capacity and the local matter-energy load.
+
+This formulation preserves the directional information needed for comparison with relativistic gravitational phenomenology while maintaining the TFT ontology: gravity is fundamentally a restorative strain and refractive response of the active vacuum, with metric-like curvature appearing only as an effective observational projection.
 
 \subsection{Cosmological Integration: The \texorpdfstring{$\beta \to T_{\mu\nu}$}{beta to T\_mu nu} Mapping}
 \label{sec:cosmological_integration}
@@ -218,22 +223,57 @@ Furthermore, to address the relationship between the mechanical vacuum and relat
 
 \subsection{The Vacuum as a Variable Dielectric}
 \label{sec:refractive_index}
-In previous sections, we established that gravity is not a geometric curvature of empty space, but a physical variation in the density of the vacuum lattice, whereas light is a minimum tension ripple in the vacuum field. We now demonstrate that the metric tensor of General Relativity operates identically to the refractive index $n$ of a dielectric medium.
 
-We define the vacuum refractive index $n(r)$ as the ratio of the invariant lattice kinematic budget $c_{\mathrm{E}}$ to the local propagation speed of a causal signal $c_{\mathrm{P}}$. Using the effective optical inertia derived in \hyperref[sec:blackhole_horizon]{Section \ref*{sec:blackhole_horizon}}, where $\mu_{\mathrm{eff}} \propto (1 - \alpha_{\mathrm{G}})^{-4}$, the propagation speed is:
+In previous sections, we established that gravity is not a geometric curvature of empty space, but a physical variation in the strain state of the active vacuum lattice. Light, in this framework, is a minimum transverse tension ripple propagating through that strained medium. We now show that the weak-field metric behavior normally attributed to spacetime curvature can be represented mechanically as the refractive index of the active vacuum.
+
+We define the general strain-induced vacuum refractive index $n_\tau(\mathbf{x})$ as the ratio of the invariant lattice kinematic budget $c_{\mathrm{E}}$ to the local propagation speed $c_{\mathrm{P}}$ of a causal signal:
 \begin{equation}
-    c_{\mathrm{P}} = c_{\mathrm{E}} (1 - \alpha_{\mathrm{G}})^2
-\end{equation}
-Therefore, the refractive index is:
-\begin{equation}
-    n(r) = \frac{c_{\mathrm{E}}}{c_{\mathrm{P}}(r)} = \frac{1}{(1 - \alpha_{\mathrm{G}})^2}
+    n_\tau(\mathbf{x}) = \frac{c_{\mathrm{E}}}{c_{\mathrm{P}}}.
 \end{equation}
 
-In the weak-field limit where $\alpha_{\mathrm{G}} \ll 1$ and the gravitational potential is small (e.g., within the solar system), we apply the binomial approximation $(1 - x)^{-2} \approx 1 + 2x$:
+Here the spatial argument $\mathbf{x}$ is attached to $n_\tau$, because the refractive index is the field quantity that varies across the strained Soft Floor. The propagation speed $c_{\mathrm{P}}$ is understood as the corresponding local signal speed at the point being considered.
+
+Using the effective optical inertia derived in \hyperref[sec:blackhole_horizon]{Section~\ref*{sec:blackhole_horizon}}, where
 \begin{equation}
-    n(r) \approx 1 + 2\alpha_{\mathrm{G}} = 1 + \frac{2GM}{r c_{\mathrm{E}}^2}
+    \mu_{\mathrm{eff}} \propto (1-\alpha_{\mathrm{G}})^{-4},
 \end{equation}
-This derivation reveals that the spatial curvature component of General Relativity, $\frac{2\Phi_{\mathrm{G}}}{c^2}$, is physically equivalent to the refractive index of the vacuum lattice.
+the local propagation speed of a transverse signal through the strained Soft Floor is
+\begin{equation}
+    c_{\mathrm{P}} = c_{\mathrm{E}} (1-\alpha_{\mathrm{G}})^2.
+\end{equation}
+
+Therefore, the general strain-induced refractive index is
+\begin{equation}
+    n_\tau(\mathbf{x}) = \frac{1}{(1-\alpha_{\mathrm{G}})^2}.
+\end{equation}
+
+In this expression, $\alpha_{\mathrm{G}}$ denotes the local value of the gravitational strain variable at the point $\mathbf{x}$. When no ambiguity arises, its spatial argument is suppressed for compactness.
+
+For a static, spherically symmetric source of mass $M$, the local strain variable reduces to
+\begin{equation}
+    \alpha_{\mathrm{G}} = \frac{GM}{rc_{\mathrm{E}}^2}.
+\end{equation}
+
+In that special spherical case, the refractive index becomes
+\begin{equation}
+    n_\tau(r) = \frac{c_{\mathrm{E}}}{c_{\mathrm{P}}} = \frac{1}{(1-\alpha_{\mathrm{G}})^2}.
+\end{equation}
+
+In the weak-field limit, where
+\begin{equation}
+    \alpha_{\mathrm{G}} \ll 1,
+\end{equation}
+we apply the binomial approximation
+\begin{equation}
+    (1-x)^{-2} \approx 1+2x.
+\end{equation}
+
+Thus,
+\begin{equation}
+    n_\tau(r) \approx 1+2\alpha_{\mathrm{G}} = 1+\frac{2GM}{rc_{\mathrm{E}}^2}.
+\end{equation}
+
+This result shows that the weak-field optical correction normally encoded by the spatial part of the General Relativistic metric can be reinterpreted mechanically as the refractive response of the active vacuum lattice. In TFT, the apparent curvature experienced by light is therefore not fundamental curvature of empty spacetime, but the optical consequence of strain-induced propagation through the Soft Floor.
 
 \subsection*{The Mechanics of Time Dilation ($1\alpha_{\mathrm{G}}$)}
 
@@ -263,69 +303,189 @@ The apparent slowing of time is not a geometric curvature of a background tempor
 \noindent\textbf{Corollary: Gravitational Length Contraction (Structural Sag)}\\
 Just as Phase Damping slows the internal clock of a localized mass, it also physically deforms its spatial footprint. A macroscopic object is held together by internal structural bonds (transverse shear waves). Because the local elastic capacity is pre-emptively consumed by gravitational tension ($\alpha_{\mathrm{G}}$), the available energy to maintain these bonds drops to $E_{\alpha} = E_0(1 - \alpha_{\mathrm{G}})$. Lacking the full baseline energy to hold the constituent atoms apart, the object's structural bonds physically compress to reach mechanical equilibrium with the surrounding vacuum. Therefore, while the underlying geometric lattice ($r_{\mathrm{D}}$) remains invariant, the macroscopic object itself physically shrinks in the direction of the tension gradient by the exact ratio of the strain deficit: $L_{\alpha} = L_0 (1 - \alpha_{\mathrm{G}})$.
 
+\subsection{From Strain-Weighted Paths to the Effective Optical Metric}
+The strain-weighted path functional introduced in Part I defines the accumulated spatial penalty experienced by a propagating excitation moving through a nonuniform tension field. At the postulate level, this object is written compactly as
+\begin{equation}
+    D_\tau = \int \left( 1 + \frac{r_{\mathrm{D}}}{\tau_{\mathrm{S}}} |\nabla\tau(\mathbf{x})| \right) \mathrm{d}\ell .
+\end{equation}
+This expression is not a spacetime metric tensor. It is a scalar path functional: it measures the accumulated spatial cost of propagation through the active vacuum. When the path dependence must be made explicit, we write
+\begin{equation}
+    D_\tau[\mathcal{P}] = \int_{\mathcal{P}} n_\tau(\mathbf{x}) \, \mathrm{d}\ell ,
+\end{equation}
+where $\mathcal{P}$ denotes the chosen propagation path and $n_\tau(\mathbf{x})$ is the local strain-induced optical index of the active vacuum.
+
+In the gravitational optical limit developed above, this strain index is governed by the local gravitational coupling
+\begin{equation}
+    \alpha_{\mathrm{G}} = \frac{GM}{rc_{\mathrm{E}}^2}.
+\end{equation}
+Since the dynamic propagation speed of a transverse signal through the strained Soft Floor is
+\begin{equation}
+    c_{\mathrm{P}} = c_{\mathrm{E}}(1-\alpha_{\mathrm{G}})^2,
+\end{equation}
+the corresponding effective refractive index is
+\begin{equation}
+    n_\tau(r) = \frac{c_{\mathrm{E}}}{c_{\mathrm{P}}(r)} = \frac{1}{(1-\alpha_{\mathrm{G}})^2}.
+\end{equation}
+Thus, in the gravitational propagation regime, the path functional becomes
+\begin{equation}
+    D_\tau[\mathcal{P}] = \int_{\mathcal{P}} \frac{1}{(1-\alpha_{\mathrm{G}})^2} \, \mathrm{d}\ell .
+\end{equation}
+The corresponding optical travel time is
+\begin{equation}
+    \Delta t = \frac{1}{c_{\mathrm{E}}} \int_{\mathcal{P}} n_\tau(\mathbf{x}) \, \mathrm{d}\ell = \frac{1}{c_{\mathrm{E}}} \int_{\mathcal{P}} \frac{1}{(1-\alpha_{\mathrm{G}})^2} \, \mathrm{d}\ell .
+\end{equation}
+The physical path followed by a freely propagating light signal is therefore obtained by the least-time condition
+\begin{equation}
+    \delta \int_{\mathcal{P}} n_\tau(\mathbf{x}) \, \mathrm{d}\ell = 0.
+\end{equation}
+This is the TFT refractive form of the null-path condition. It does not require fundamental curvature of an empty manifold. Instead, the apparent bending of light arises because the wave follows the path of stationary optical time through the strain-index field of the active vacuum.
+
+To compare this refractive mechanics with the standard language of General Relativity, we may package the same propagation law into an effective Soft Floor measurement tensor. For a static, isotropic gravitational strain field, the minimal operational line element is
+\begin{equation}
+    \mathrm{d}s_\tau^2 = -(1-\alpha_{\mathrm{G}})^2 c_{\mathrm{E}}^2 \mathrm{d}t^2 + (1-\alpha_{\mathrm{G}})^{-2} \delta_{ij} \mathrm{d}x^i \mathrm{d}x^j .
+\end{equation}
+This defines the effective metric tensor
+\begin{equation}
+    g_{\mu\nu}^{(\tau)} = \mathrm{diag} \left[ -(1-\alpha_{\mathrm{G}})^2 c_{\mathrm{E}}^2, (1-\alpha_{\mathrm{G}})^{-2}, (1-\alpha_{\mathrm{G}})^{-2}, (1-\alpha_{\mathrm{G}})^{-2} \right]
+\end{equation}
+in locally isotropic spatial coordinates.
+
+For a null path,
+\begin{equation}
+    \mathrm{d}s_\tau^2 = 0.
+\end{equation}
+Therefore,
+\begin{equation}
+    (1-\alpha_{\mathrm{G}})^2 c_{\mathrm{E}}^2 \mathrm{d}t^2 = (1-\alpha_{\mathrm{G}})^{-2} \mathrm{d}\ell^2,
+\end{equation}
+which gives
+\begin{equation}
+    \frac{\mathrm{d}\ell}{\mathrm{d}t} = c_{\mathrm{E}}(1-\alpha_{\mathrm{G}})^2 = c_{\mathrm{P}}.
+\end{equation}
+Thus the effective metric reproduces exactly the TFT propagation law for light through the strained Soft Floor.
+
+In the weak-field limit, where
+\begin{equation}
+    \alpha_{\mathrm{G}} \ll 1,
+\end{equation}
+we have
+\begin{equation}
+    (1-\alpha_{\mathrm{G}})^2 \approx 1-2\alpha_{\mathrm{G}},
+\end{equation}
+and
+\begin{equation}
+    (1-\alpha_{\mathrm{G}})^{-2} \approx 1+2\alpha_{\mathrm{G}}.
+\end{equation}
+The effective line element therefore becomes
+\begin{equation}
+    \mathrm{d}s_\tau^2 \approx -(1-2\alpha_{\mathrm{G}}) c_{\mathrm{E}}^2 \mathrm{d}t^2 + (1+2\alpha_{\mathrm{G}}) \mathrm{d}\ell^2 .
+\end{equation}
+Using the Newtonian potential
+\begin{equation}
+    \Phi = -\frac{GM}{r},
+\end{equation}
+so that
+\begin{equation}
+    \alpha_{\mathrm{G}} = -\frac{\Phi}{c_{\mathrm{E}}^2},
+\end{equation}
+the weak-field expression becomes
+\begin{equation}
+    \mathrm{d}s_\tau^2 \approx -\left( 1+\frac{2\Phi}{c_{\mathrm{E}}^2} \right) c_{\mathrm{E}}^2 \mathrm{d}t^2 + \left( 1-\frac{2\Phi}{c_{\mathrm{E}}^2} \right) \mathrm{d}\ell^2 .
+\end{equation}
+This is the standard weak-field relativistic form, recovered here as an effective optical geometry of the active vacuum. In this limit, TFT reproduces the operational metric behavior associated with gravitational redshift, Shapiro delay, and weak-field light deflection (Note: Massive bound orbits probe a different channel of the same strained Soft Floor: the conservative coupling between radial strain potential and tangential topological transport. The corresponding perihelion precession mechanism is introduced in \hyperref[sec:perihelion_strain_coupling]{Section~\ref*{sec:perihelion_strain_coupling}} and derived fully in \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}).
+
+The tensor $g_{\mu\nu}^{(\tau)}$ should therefore be read as an effective Soft Floor measurement tensor. Under coordinate relabeling, it transforms as a tensor,
+\begin{equation}
+    g_{\alpha\beta}^{(\tau)\prime} = \frac{\partial x^\mu}{\partial x^{\prime\alpha}} \frac{\partial x^\nu}{\partial x^{\prime\beta}} g_{\mu\nu}^{(\tau)}.
+\end{equation}
+If desired, one may construct the corresponding connection and curvature objects from $g_{\mu\nu}^{(\tau)}$ using the standard differential-geometric machinery. However, in TFT these objects are not fundamental causes of gravity. They are the observational bookkeeping of a deeper mechanical process: localized matter-energy changes the strain state of the active vacuum, the strain field changes the local refractive index, and the refractive index determines the effective paths of waves, rods, and clocks.
+
+Therefore, TFT does not treat spacetime curvature as the fundamental origin of gravity. Rather, curvature appears as the effective geometric representation of strain-induced refractive propagation through the Soft Floor.
+The same strain variable $\alpha_{\mathrm{G}}$ that generates the weak-field optical metric also defines the nonlinear failure boundary of the active vacuum. In the weak-field regime ($\alpha_{\mathrm{G}} \ll 1$), TFT reproduces the operational metric behavior of General Relativity. In the saturation regime ($\alpha_{\mathrm{G}} \to 1$), however, TFT does not extend the effective metric to a geometric singularity. Instead, the active FCC Soft Floor reaches its finite mechanical yield limit and undergoes a phase transition into the phase-locked SC Substrate. Thus, the GR singularity is replaced by a physical lattice-saturation boundary.
+
 \subsection{The Mechanics of Light Propagation ($2\alpha_{\mathrm{G}}$)}
 \label{sec:lightspeed_mechanics}
 While a stationary clock only suffers from the localized energy deficit ($1\alpha_{\mathrm{G}}$), a propagating signal such as a radar ping interacts dynamically with the strained vacuum medium across space.
-
 \vspace{0.5em}
+
 \noindent \textbf{The Variable Speed of Light ($c_{\mathrm{P}}$):} Due to the transverse nature of electromagnetic waves, the optical inertia scales quadratically with the lattice strain, $\mu_{\mathrm{eff}} \propto (1 - \alpha_{\mathrm{G}})^{-4}$. This imposes a double penalty on the traversing wave derived from the medium itself:
 \begin{itemize}
     \item \textbf{Temporal Impedance ($1\alpha_{\mathrm{G}}$):} Caused by the reduced vibrational rate of the local vacuum nodes. Because the strained medium oscillates more slowly under the local energy deficit, the sequential transmission of the wave is mechanically delayed.
     \item \textbf{Spatial Impedance ($1\alpha_{\mathrm{G}}$):} Caused by the physical deformation of the lattice, requiring the wave to traverse spatially stretched node geometries.
 \end{itemize}
 
-As derived earlier, the effective refractive index is $n \approx 1 + 2\alpha_{\mathrm{G}}$. Consequently, the local speed of light is not a universal constant, but a variable determined by the local vacuum density:
+As derived earlier, the effective strain-induced refractive index is
 \begin{equation}
-    c_{\mathrm{P}}(r) = \frac{c_{\mathrm{E}}}{n(r)} \approx c_{\mathrm{E}} (1 - 2\alpha_{\mathrm{G}})
+    n_\tau(r) \approx 1 + 2\alpha_{\mathrm{G}}.
+\end{equation}
+Consequently, the local propagation speed of light is not a fixed coordinate speed, but a variable determined by the local strain state of the active vacuum:
+\begin{equation}
+    c_{\mathrm{P}}(r) = \frac{c_{\mathrm{E}}}{n_\tau(r)} \approx c_{\mathrm{E}}(1 - 2\alpha_{\mathrm{G}}).
 \end{equation}
 
-Because the signal travels more slowly than the vacuum baseline ($c_{\mathrm{P}} < c_{\mathrm{E}}$), it accumulates a time delay when traversing a gravitational potential. The total flight time $\Delta t$ is obtained by integrating this inverse velocity along the geometric path $l$:
+Because the signal travels more slowly than the unstrained vacuum baseline ($c_{\mathrm{P}} < c_{\mathrm{E}}$), it accumulates a time delay when traversing a gravitational potential. The total flight time $\Delta t$ is obtained by integrating the inverse propagation speed along the geometric path:
 \begin{equation}
-    \Delta t = \int \frac{1}{c_{\mathrm{P}}} \mathrm{d}l = \int \frac{n(r)}{c_{\mathrm{E}}} \mathrm{d}l \approx \frac{1}{c_{\mathrm{E}}} \int (1 + 2\alpha_{\mathrm{G}}) \mathrm{d}l
+    \Delta t = \int \frac{1}{c_{\mathrm{P}}} \, \mathrm{d}\ell = \int \frac{n_\tau(r)}{c_{\mathrm{E}}} \, \mathrm{d}\ell \approx \frac{1}{c_{\mathrm{E}}} \int (1 + 2\alpha_{\mathrm{G}}) \, \mathrm{d}\ell .
 \end{equation}
-\noindent\textbf{Conclusion:} The factor of $2\alpha_{\mathrm{G}}$ perfectly accounts for the Shapiro delay \cite{Shapiro_1964}. \textit{(The full step-by-step macroscopic integration recovering the exact logarithmic delay is provided in \hyperref[app:optical_relativity]{Appendix \ref*{app:optical_relativity}})}. It confirms that the mechanics of light propagation rely on a variable local speed, and the observed time delay is simply the integral of this reduced velocity through a refractive medium.
 
+\noindent\textbf{Conclusion:} The factor of $2\alpha_{\mathrm{G}}$ accounts for the Shapiro delay \cite{Shapiro_1964}. \textit{(The full step-by-step macroscopic integration recovering the logarithmic delay is provided in \hyperref[app:optical_relativity]{Appendix~\ref*{app:optical_relativity}})}. This confirms that the mechanics of light propagation rely on a variable local propagation speed, and that the observed time delay is the integral of this reduced velocity through a strain-induced refractive medium.
 \vspace{0.5em}
+
 \noindent \textbf{The Artifact of Local Invariance:}
 While $c_{\mathrm{P}}$ objectively decelerates relative to the absolute vacuum baseline ($c_{\mathrm{E}}$) by a factor of $2\alpha_{\mathrm{G}}$, a local observer situated within the gravitational potential cannot detect this deceleration. This is governed by strict kinematic coupling:
 \begin{itemize}
-\item Both the propagating signal (light) and the physical tools measuring it (matter) are mechanical excitations of the exact same FCC lattice nodes.
-\item Consequently, the observer's measurement tools suffer the exact same refractive strain ($\alpha_{\mathrm{G}}$) as the light wave itself.
-\item \textbf{The Covariant Cancellation:} The local atomic clock is damped by the $1\alpha_{\mathrm{G}}$ energy deficit, causing it to tick slower (Time Dilation). Simultaneously, the structural bonds of the observer's ruler are weakened by the same $1\alpha_{\mathrm{G}}$ deficit, causing the physical object to compress (Length Contraction).
+    \item Both the propagating signal (light) and the physical tools measuring it (matter) are mechanical excitations of the exact same FCC lattice nodes.
+    \item Consequently, the observer's measurement tools suffer the exact same refractive strain ($\alpha_{\mathrm{G}}$) as the light wave itself.
+    \item \textbf{The Covariant Cancellation:} The local atomic clock is damped by the $1\alpha_{\mathrm{G}}$ energy deficit, causing it to tick slower (Time Dilation). Simultaneously, the structural bonds of the observer's ruler are weakened by the same $1\alpha_{\mathrm{G}}$ deficit, causing the physical object to compress (Length Contraction).
 \end{itemize}
-When an observer uses a proportionally shrunken ruler to measure distance ($D_{\mathrm{obs}} = D_{\mathrm{true}} / (1 - \alpha_{\mathrm{G}})$) and a proportionally slowed clock to measure time ($T_{\mathrm{obs}} = T_{\mathrm{true}} \cdot (1 - \alpha_{\mathrm{G}})$), dividing distance by time ($D/T$) yields a combined measurement handicap of $\frac{1}{(1-\alpha_{\mathrm{G}})^2} \approx 1 + 2\alpha_{\mathrm{G}}$. This handicap mathematically cancels the signal's $2\alpha_{\mathrm{G}}$ deceleration perfectly. Therefore, the ``universal invariance'' of $c$ postulated by General Relativity is not a fundamental geometric law, but a localized measurement artifact---the inevitable mathematical consequence of conducting kinematics inside a covariant refractive medium using tools made of that same medium.
+
+When an observer uses a proportionally shrunken ruler to measure distance ($D_{\mathrm{obs}} = D_{\mathrm{true}}/(1 - \alpha_{\mathrm{G}})$) and a proportionally slowed clock to measure time ($T_{\mathrm{obs}} = T_{\mathrm{true}}\cdot(1 - \alpha_{\mathrm{G}})$), dividing distance by time ($D/T$) yields a combined measurement handicap of
+\begin{equation}
+    \frac{1}{(1-\alpha_{\mathrm{G}})^2} \approx 1 + 2\alpha_{\mathrm{G}}.
+\end{equation}
+
+This handicap mathematically cancels the signal's $2\alpha_{\mathrm{G}}$ deceleration. Therefore, the locally measured invariance of $c$ in General Relativity is reinterpreted in TFT as a localized measurement artifact---the inevitable mathematical consequence of conducting kinematics inside a covariant refractive medium using tools made of that same medium.
 
 \subsection{Gravitational Lensing ($4\alpha_{\mathrm{G}}$)}
-The most famous prediction of relativity---the bending of starlight---is a direct consequence of the refractive gradient. Light follows Snell's law in a spherical medium. The explicit evaluation of the transverse refractive gradient, yielding the total deflection angle of $4\alpha_{\mathrm{G}}(b)$, is detailed in \hyperref[app:optical_relativity]{Appendix \ref*{app:optical_relativity}}.
+The most famous prediction of relativity---the bending of starlight---is a direct consequence of the refractive gradient. Light follows the stationary optical-time path through a spherical strain-index field. The explicit evaluation of the transverse refractive gradient, yielding the total deflection angle of $4\alpha_{\mathrm{G}}(b)$, is detailed in \hyperref[app:optical_relativity]{Appendix~\ref*{app:optical_relativity}}.
 
-Consider a wavefront passing a massive object at an impact parameter $b$. The inner part of the wavefront, closer to the mass, travels through a region of higher refractive index ($n_{\mathrm{high}}$) and thus moves more slowly than the outer part ($n_{\mathrm{low}}$). This velocity differential causes the wavefront to steer toward the mass.
+Consider a wavefront passing a massive object at an impact parameter $b$. The inner part of the wavefront, closer to the mass, travels through a region of higher refractive index ($n_{\tau, \mathrm{high}}$) and thus moves more slowly than the outer part ($n_{\tau, \mathrm{low}}$). This velocity differential causes the wavefront to steer toward the mass.
 
-The total deflection angle $\theta$ is the integral of the transverse refractive gradient, $\nabla_{\perp} n$, along the entire line of sight $z$. Let $b$ be the impact parameter---the perpendicular distance from the center of mass to the unperturbed photon path---such that the radial distance is $r = \sqrt{b^2 + z^2}$. The deflection is therefore:
+The total deflection angle $\theta$ is the magnitude of the accumulated transverse refractive-gradient steering along the full line-of-sight path $z$. Let $b$ be the impact parameter---the perpendicular distance from the center of mass to the unperturbed photon path---such that the radial distance is
 \begin{equation}
-    \theta = \int_{-\infty}^{+\infty} \nabla_{\perp} n \, \mathrm{d}z = \int_{-\infty}^{+\infty} \frac{\partial}{\partial b} \left(1 + \frac{2GM}{c_{\mathrm{E}}^2 \sqrt{b^2 + z^2}}\right) \mathrm{d}z
+    r = \sqrt{b^2 + z^2}.
 \end{equation}
 
-The integration accumulates the local refractive strength along the geometric path, yielding a total deflection of:
+The deflection magnitude is therefore
 \begin{equation}
-    \theta_{\mathrm{total}} = \frac{4GM}{b c_{\mathrm{E}}^2} = 4\alpha_{\mathrm{G}}(b)
+    \theta = \left| \int_{-\infty}^{+\infty} \nabla_{\perp} n_\tau \, \mathrm{d}z \right| = \left| \int_{-\infty}^{+\infty} \frac{\partial}{\partial b} \left( 1+ \frac{2GM}{c_{\mathrm{E}}^2\sqrt{b^2 + z^2}} \right) \mathrm{d}z \right|.
 \end{equation}
 
-\noindent\textbf{Conclusion:} Tension Field Theory recovers the precise Einstein deflection angle (approximately 1.75 arcseconds for the Sun) purely through wave optics.
+The integration accumulates the transverse refractive steering along the geometric path, yielding
+\begin{equation}
+    \theta_{\mathrm{total}} = \frac{4GM}{b c_{\mathrm{E}}^2} = 4\alpha_{\mathrm{G}}(b).
+\end{equation}
 
-The factor of 4 arises from the integration of the refractive index over the path geometry. Furthermore, this macroscopic factor of 4 is the strict geometric signature of the photon wave packet being compressed across the four degrees of freedom (longitudinal, temporal, and two transverse) of the FCC lattice. As demonstrated in \hyperref[part:three]{Part III} (\hyperref[sec:photonic_relaxation]{Section \ref*{sec:photonic_relaxation}}), this exact 4-dimensional optical impedance acts as the mechanical mirror to the Tolman surface brightness drop \cite{Tolman_1930}, where the wave packet isotropically relaxes across those same four dimensions to yield a $(1+z)^{-4}$ reduction in apparent optical power.
+\noindent\textbf{Conclusion:} Tension Field Theory recovers the precise Einstein deflection angle, approximately $1.75$ arcseconds for the Sun, purely through wave optics.
+
+The factor of $4$ arises from integrating the transverse gradient of the weak-field refractive index
+\begin{equation}
+    n_\tau(r) \approx 1 + 2\alpha_{\mathrm{G}}(r)
+\end{equation}
+along the full line-of-sight path. Furthermore, this macroscopic factor of $4$ is interpreted in TFT as the geometric signature of the photon wave packet being compressed across the four degrees of freedom of the FCC lattice: longitudinal, temporal, and two transverse. As demonstrated in \hyperref[part:three]{Part III} (\hyperref[sec:photonic_relaxation]{Section~\ref*{sec:photonic_relaxation}}), this exact four-dimensional optical impedance acts as the mechanical mirror to the Tolman surface brightness drop \cite{Tolman_1930}, where the wave packet isotropically relaxes across those same four dimensions to yield a $(1+z)^{-4}$ reduction in apparent optical power.
 
 \begin{table}[H]
-    \centering
-    \caption{\textbf{Summary of Relativistic Coefficients}}
-    \label{tab:relativistic_coefficients}
-    \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{@{}llc@{}}
-    \toprule
-    \textbf{Phenomenon} & \textbf{TFT Mechanism} & \textbf{Coefficient} \\
-    \midrule
-    Gravitational redshift & Mechanical damping (source energy deficit) & $1\alpha_{\mathrm{G}}$ \\
-    Shapiro delay & Optical refraction (path impedance) & $2\alpha_{\mathrm{G}}$ \\
-    Light deflection & Gradient steering (integrated refraction) & $4\alpha_{\mathrm{G}}(b)$ \\
-    \bottomrule
-    \end{tabular}
+\centering
+\caption{\textbf{Summary of Relativistic Coefficients}}
+\label{tab:relativistic_coefficients}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}llc@{}}
+\toprule
+\textbf{Phenomenon} & \textbf{TFT Mechanism} & \textbf{Coefficient} \\
+\midrule
+Gravitational redshift & Mechanical damping (source energy deficit) & $1\alpha_{\mathrm{G}}$ \\
+Shapiro delay & Optical refraction (path impedance) & $2\alpha_{\mathrm{G}}$ \\
+Light deflection & Gradient steering (integrated refraction) & $4\alpha_{\mathrm{G}}(b)$ \\
+\bottomrule
+\end{tabular}
 \end{table}
