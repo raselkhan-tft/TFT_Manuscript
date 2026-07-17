@@ -211,7 +211,7 @@ $\eta_{\phi}$ & Geometric Coupling Efficiency & Empirical calibration & Dimensio
 
 $G_{\mathrm{F}}$ & Weak Force 3D Gear Slip (Fermi Limit) & $(\tau V)^{-2}$ & $\approx 1.6 \times 10^{-5} \text{ GeV}^{-2}$ \\
 
-$\sigma_{\mathrm{s}}$ & Strong Force 1D Bond Pull (QCD Tension) & $\tau A_{\mathrm{chan}}$ & $\approx 1.6 \text{ GeV/fm}$ \\
+$T_{\mathrm{s}}$ & Strong Force 1D Bond Pull (QCD Tension) & $\tau A_{\mathrm{chan}}$ & $\approx 1.6 \text{ GeV/fm}$ \\
 
 $k_{\mathrm{e}}$ & Electrostatic Constant (SI Normalized) & $10^{-7} \cdot c_{\mathrm{E}}^2$ & $\approx 8.987 \times 10^9 \text{ N}\cdot\text{m}^2/\text{C}^2$ \\
 
@@ -275,6 +275,67 @@ $\Xi(R)$ & Structural Shielding Operator & Acoustic boundary & Dimensionless \\
 $g_{\mathrm{QG,max}}$ & Maximum Finite Gravity Limit & $\frac{c_{\mathrm{E}}^2}{r_{\mathrm{D}}}$ & $\approx 1.2063 \times 10^{43} \text{ m/s}^2$ \\
 
 $T_{\mathrm{nuc}}$ & Nucleation Temperature (Hydrogen Limit) & Topological stability limit & $\approx 3.0 \times 10^3 \text{ K}$ \\
+
+\bottomrule
+\end{longtable}
+
+\newpage % Forces the section and table to start cleanly on the next page
+
+\section*{V. Rotating Black Hole \& Live Boundary Dynamics}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{longtable}{@{} c p{5.5cm} p{4cm} p{3.5cm} @{}}
+\toprule
+\textbf{Symbol} & \textbf{Mechanical Definition} & \textbf{TFT Mathematical Relation} & \textbf{Numerical Value} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Symbol} & \textbf{Mechanical Definition} & \textbf{TFT Mathematical Relation} & \textbf{Numerical Value} \\
+\midrule
+\endhead
+
+$\mathcal{J}_{\mathrm{BH}}$ & Total Axial Angular Momentum & $I_{\mathrm{surf}} \frac{v_{\mathrm{tor}}}{R_{\mathrm{QG}}}$ & Variable (kg$\cdot$m$^2$/s) \\
+
+$a_\ast$ & Dimensionless Spin Parameter & $\frac{c_{\mathrm{E}}\mathcal{J}_{\mathrm{BH}}}{GM^2}$ & $\le 1$ \\
+
+$I_{\mathrm{surf}}$ & Effective Surface Moment of Inertia & $\int_{\partial} r_\perp^2 \, \mathrm{d}M_{\partial}$ & Variable (kg$\cdot$m$^2$) \\
+
+$v_{\mathrm{tor}}$ & Effective Torsional Boundary Speed & $a_\ast c_{\mathrm{E}} \left(\frac{M R_{\mathrm{QG}}^2}{I_{\mathrm{surf}}}\right)$ & $\le c_{\mathrm{E}}$ \\
+
+$\omega_{\mathrm{drag}}$ & Torsional Soft-Floor Dragging Rate & $\frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3}$ (Weak Field) & Variable (rad/s) \\
+
+$v_{\phi}^{(\mathrm{SF})}$ & Tangential Soft-Floor Shear Speed & $r\sin\theta \, \omega_{\mathrm{drag}}(r)$ & Variable (m/s) \\
+
+$\tau_{\mathrm{tor}}$ & 3D Torsional Stiffness Density & $\tau_{D,\mathrm{bulk}} = \frac{c_{\mathrm{E}}^4}{G r_{\mathrm{D}}^2}$ & $\approx 2.18 \times 10^{96}$ Pa \\
+
+$r_\perp$ & Cylindrical Distance from Spin Axis & $r\sin\theta$ & Variable (m) \\
+
+$r_{\mathrm{sat}}$ & Spin-Deformed Phase Boundary & $R_{\mathrm{QG}} \left[ 1 - a_\ast^2P_2(\cos\theta) \right]$ & Variable (m) \\
+
+$r_{\mathrm{cap}}$ & Torsional Capacity Surface & $\left| v_{\phi}^{(\mathrm{SF})} \right| = c_P(r)$ & Variable (m) \\
+
+$Q_{\mathrm{TFT}}$ & Spin-Induced Mass Quadrupole & $-\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2}$ & Variable (kg$\cdot$m$^2$) \\
+
+$R_{\mathrm{obs}}$ & Observational Surface Map & Derived optical/orbital bounds & Variable (m) \\
+
+$d$ & Binary Center-to-Center Separation & Geometric distance & Variable (m) \\
+
+$v_{\mathrm{rel}}$ & Binary Relative Orbital Velocity & $c_{\mathrm{E}}\sqrt{\frac{R_1+R_2}{d}}$ & $\le c_{\mathrm{E}}$ \\
+
+$\alpha_{\mathrm{bridge}}$ & Bridge Saturation Condition (Merger) & $\alpha_{\mathrm{G},1} + \alpha_{\mathrm{G},2} + \alpha_{\mathrm{dyn}}$ & $\ge 1$ (at merger) \\
+
+$\Sigma_{\partial}$ & Live Boundary Surface Mass Density & $\frac{\mathrm{d}M_{\partial}}{\mathrm{d}A}$ & Variable (kg/m$^2$) \\
+
+$\mathcal{E}_{\mathrm{stored}}$ & Stored Boundary/Exterior Strain Energy & $\mathcal{E}_{\mathrm{radial}} + \mathcal{E}_{\mathrm{tor}} + \mathcal{E}_{\partial}$ & Variable (J) \\
+
+$\mathcal{P}_{\mathrm{shed}}$ & Stress Shedding Power (Gravitational Waves) & $-\frac{\mathrm{d}\mathcal{E}_{\mathrm{stored}}}{\mathrm{d}t}$ & Variable (W) \\
+
+$\omega_{\ell m}$ & Ringdown Normal Mode Frequency & Derived eigenvalue & Variable (rad/s) \\
+
+$\Gamma_{\ell m}^{(\mathrm{rd})}$ & Ringdown Normal Mode Damping Rate & Derived eigenvalue & Variable (s$^{-1}$) \\
 
 \bottomrule
 \end{longtable}

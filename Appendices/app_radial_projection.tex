@@ -1,49 +1,161 @@
-\chapter{The Radial Projection Operator ($\Pi$) and Geometric Scaling}
+\chapter{The Radial Projection Tensor and Geometric Transmission Factor}
 \label{app:radial_projection}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Subject:} Geometric corrections for anisotropic tension fields.
+\noindent\textbf{Subject:} Radial decomposition and geometric transmission of anisotropic restorative tension fields.
 
-\section{Purpose and Motivation}
-Tension Field Theory models gravity as a physical tension gradient. While the field equation (\hyperref[sec:field_equation]{Section \ref*{sec:field_equation}}) determines the total tension capacity via the source geometry $\kappa$, the observable acceleration depends on the transmission efficiency of the vacuum lattice.
+\section{Purpose and Scope}
 
-We introduce the radial projection operator $\Pi$ to quantify this transmission.
-\begin{itemize}
-    \item This operator bridges the scalar field potential with the vector acceleration, correcting for anisotropic coherence losses such as shear in galactic disks.
-    \item This serves as the TFT equivalent of the multipole expansion (quadrupole moment) in standard potential theory.
-\end{itemize}
+In Tension Field Theory, gravitational acceleration arises from the restorative tension gradient of the active vacuum. For a spherically symmetric source, the exterior field is purely radial, and conservation of radial tension flux yields the inverse-square acceleration law without an additional geometric correction.
 
-\section{Formal Definition}
-We decompose the operator into a directional tensor and a scalar amplitude.
+Flattened, rotating, or otherwise anisotropic sources generate a directional tension field containing radial, tangential, and shear components. The radially transmitted component must therefore be distinguished from the total local tension state.
 
-\begin{itemize}
-    \item \textbf{The Tensor Projector ($\Pi_{\mu\nu}$):} This purely geometric term selects the radial direction from the stress field using the unit vector $\hat{x}_\mu$:
-\end{itemize}
+Two related quantities are introduced for this purpose. The radial tensor projector,
 \begin{equation}
-    \Pi_{\mu\nu} = \hat{x}_\mu \hat{x}_\nu = \frac{x_\mu x_\nu}{r^2}
+    \Pi_{\mu\nu},
+\end{equation}
+extracts the radial component of a complete tension-stress field. The scalar geometric transmission factor,
+\begin{equation}
+    \Pi(R),
+\end{equation}
+represents the corresponding radial transmission efficiency in a reduced one-dimensional acceleration model.
+
+The tensor projector is a geometric operation applied to the directional field. The scalar factor is an effective representation of source anisotropy when the full tensor field is not calculated explicitly.
+
+\section{Radial Tensor Projector}
+
+Let $\hat{r}_{\mu}$ denote the radial unit vector in the spatial sector,
+\begin{equation}
+    \hat{r}_{\mu} = \frac{x_{\mu}}{R},
+\end{equation}
+with
+\begin{equation}
+    R^2 = x_{\alpha}x^{\alpha},
+\end{equation}
+where the index contraction is restricted to the spatial coordinates.
+
+The radial tensor projector is defined as
+\begin{equation}
+    \Pi_{\mu\nu} = \hat{r}_{\mu}\hat{r}_{\nu} = \frac{x_{\mu}x_{\nu}}{R^2}.
 \end{equation}
 
-\begin{itemize}
-    \item \textbf{The Scalar Efficiency ($\Pi(r)$):} This dimensionless scalar represents the lattice coherence---the efficiency with which tension is transmitted radially.
-    \begin{itemize}
-        \item $\Pi \approx 1$: Corresponds to a sphere (isotropic flow, 100\% efficiency).
-        \item $\Pi < 1$: Describes a disk (shear or vortex decoherence, reduced efficiency).
-        \item $\Pi > 1$: Corresponds to a convergence zone (geometric focusing, amplified efficiency).
-    \end{itemize}
-\end{itemize}
-
-\section{Parametric Model}
-To model the efficiency without arbitrary constants, we parameterize it using the object's physical scale length $R_{\mathrm{d}}$:
+It satisfies the idempotent relation
 \begin{equation}
-    \Pi(r) = 1 \pm \delta \left(\frac{R_{\mathrm{d}}}{r}\right)^n
+    \Pi_{\mu}^{\ \alpha} \Pi_{\alpha\nu} = \Pi_{\mu\nu},
+\end{equation}
+so repeated application leaves an already radial field unchanged.
+
+Let $\tau_{\mu\nu}$ denote the directional tension-stress tensor of the active vacuum. The tensor contains the radial, tangential, and shear components of the local restorative stress state. Its radial normal component is
+\begin{equation}
+    \tau_{rr} = \hat{r}_{\mu}\tau^{\mu\nu}\hat{r}_{\nu} = \Pi_{\mu\nu}\tau^{\mu\nu}.
 \end{equation}
 
-\noindent\textbf{Where:}
-\begin{itemize}
-    \item $\delta$ \textbf{(Anisotropy):} The strength of the shear. For spherical bulges, $\delta = 0$. For typical spiral disks, phenomenology suggests $\delta \approx 0.05$ (about 5\% shear loss).
-    \item $R_{\mathrm{d}}$ \textbf{(Scale):} The characteristic radius of the baryonic matter distribution.
-    \item $n$ \textbf{(Falloff):} The rate of decoherence. Typically $n \approx 1$ for dipole-like shear.
-\end{itemize}
+The tension-stress tensor and its radial projection have units
+\begin{equation}
+    [\tau_{\mu\nu}] = [\tau_{rr}] = \mathrm{N/m^2}.
+\end{equation}
 
-\vspace{0.5em}
-\noindent\textbf{Validation:} Future work requires replacing this parametric approximation by calculating $\Pi$ directly from the Baryonic Mass Profile of observed galaxies using high-resolution catalogs (e.g., SPARC).
+The scalar volumetric tension $\tau$ represents the isotropic component of the local tension state, whereas $\tau_{\mu\nu}$ describes its directional extension.
+
+For a spherically symmetric field, the restorative stress is entirely radial, and the projector returns the complete field. For an anisotropic source, the contraction isolates only the component transmitted along $\hat{\mathbf{r}}$.
+
+\section{Scalar Geometric Transmission Factor}
+
+In a reduced radial model, the spherical-equivalent baryonic acceleration is defined as
+\begin{equation}
+    g_b(R) = \frac{G M_b(<R)}{R^2},
+\end{equation}
+where $M_b(<R)$ is the baryonic mass enclosed within radius $R$.
+
+For an anisotropic source, the radially transmitted acceleration may differ from this spherical-equivalent value. The projected baryonic acceleration is therefore written as
+\begin{equation}
+    g_{b,\Pi}(R) = \Pi(R) g_b(R).
+\end{equation}
+
+The scalar geometric transmission factor is consequently defined by
+\begin{equation}
+    \Pi(R) = \frac{g_{b,\Pi}(R)}{g_b(R)}.
+\end{equation}
+
+Its physical limits are
+\begin{equation}
+    \Pi(R) = 1
+\end{equation}
+for isotropic spherical transmission,
+\begin{equation}
+    \Pi(R) < 1
+\end{equation}
+for reduced radial transmission associated with flattening, shear, or tangential redistribution, and
+\begin{equation}
+    \Pi(R) > 1
+\end{equation}
+for enhanced radial transmission associated with geometric convergence or focusing.
+
+The scalar $\Pi(R)$ represents the net radial effect of the source geometry after the directional field has been reduced to a one-dimensional acceleration law. It does not retain the complete angular structure contained in $\tau_{\mu\nu}$.
+
+\section{Bounded Parametric Representation}
+
+When the full anisotropic tension field is unavailable, the scalar transmission factor may be represented by the bounded form
+\begin{equation}
+    \Pi(R) = 1 \pm \frac{\delta}{1+\left(R/R_{\mathrm{d}}\right)^n}.
+\end{equation}
+
+The minus sign describes reduced radial transmission, while the plus sign describes enhanced radial transmission or geometric focusing.
+
+The parameter $\delta$ is the maximum fractional departure from spherical transmission, $R_{\mathrm{d}}$ is the characteristic geometric scale of the source, and $n>0$ controls the radial decay of the anisotropic correction.
+
+For $0 \leq \delta < 1$, the transmission factor remains finite and positive. At the inner limit,
+\begin{equation}
+    \Pi(0) = 1 \pm \delta.
+\end{equation}
+
+At distances much larger than the characteristic source scale,
+\begin{equation}
+    \Pi(R) \rightarrow 1 \qquad \text{for} \qquad R \gg R_{\mathrm{d}}.
+\end{equation}
+
+The far-field expansion is
+\begin{equation}
+    \Pi(R) \approx 1 \pm \delta \left( \frac{R_{\mathrm{d}}}{R} \right)^n, \qquad R \gg R_{\mathrm{d}},
+\end{equation}
+so the bounded expression preserves the intended asymptotic power-law correction while remaining regular near the source.
+
+The quantities $\delta$, $R_{\mathrm{d}}$, and $n$ are source-dependent geometric parameters. They may be determined from the baryonic mass distribution, the source inertia tensor, or a direct numerical solution of the anisotropic TFT field equations.
+
+\section{Application to the Environmental Acceleration}
+
+The baryonic restorative field is first projected into the radial direction:
+\begin{equation}
+    g_{b,\Pi}(R) = \Pi(R)g_b(R).
+\end{equation}
+
+The interstitial-condensate response is driven by this locally transmitted baryonic acceleration. The total environmental acceleration is therefore
+\begin{equation}
+    g_{\mathrm{obs}}(R) = g_{b,\Pi}(R) + \Xi(R) \sqrt{ a_{\mathrm{gal}}g_{b,\Pi}(R) }.
+\end{equation}
+
+Substitution of the projected field gives
+\begin{equation}
+    g_{\mathrm{obs}}(R) = \Pi(R)g_b(R) + \Xi(R) \sqrt{ a_{\mathrm{gal}}\Pi(R)g_b(R) }.
+\end{equation}
+
+The first term represents the direct baryonic restorative acceleration. The second term represents the induced interstitial-condensate response. The screening function $\Xi(R)$ controls the activation and finite coherence of the condensate contribution, while $a_{\mathrm{gal}}$ is the galactically projected impedance acceleration defined in Appendix H.
+
+The geometric factor enters linearly in the direct baryonic contribution and through its square root in the induced condensate contribution. In the spherical limit,
+\begin{equation}
+    \Pi(R) = 1,
+\end{equation}
+and the environmental law reduces to
+\begin{equation}
+    g_{\mathrm{obs}}(R) = g_b(R) + \Xi(R) \sqrt{ a_{\mathrm{gal}}g_b(R) }.
+\end{equation}
+
+When $g_b(R)$ is obtained from the spherical-equivalent enclosed mass, $\Pi(R)$ represents the correction associated with the nonspherical source geometry. When the baryonic acceleration is calculated directly from the complete stellar disk, gas distribution, bulge, and other nonspherical components, the geometric transmission is already contained in the calculated field. In that case, the explicit scalar factor is set to unity or absorbed into the definition of $g_b(R)$.
+
+For a complete anisotropic or rotating solution, the radial acceleration is obtained directly from the solved directional tension field. The tensor projector may then be applied as
+\begin{equation}
+    \tau_{rr}(R,\theta) = \Pi_{\mu\nu} \tau^{\mu\nu}(R,\theta).
+\end{equation}
+
+In a spherically symmetric exterior, the scalar transmission factor remains unity. In an axisymmetric or rotating strong field, the angular dependence of the tension field must be retained explicitly, and the scalar function $\Pi(R)$ serves only as a reduced radial representation.
+
+The parametric transmission factor may be tested against numerical anisotropic field solutions and observed baryonic mass profiles. Its dependence on source geometry provides a direct measure of radial tension transmission in flattened and rotationally structured systems.

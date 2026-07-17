@@ -63,30 +63,6 @@ h_{\mathrm{GW}} & 0 & 0 \\
 
 Because the trace of this matrix is strictly zero ($\text{tr}(\epsilon) = 0$), this classical volume-conservation requirement perfectly mimics the abstract geometric definition of a spin-2 quadrupole wave. Therefore, the $+$ and $\times$ polarizations observed by LIGO are not abstract metric ripples; they are the direct macroscopic observation of the orthogonal mechanical shear planes of the active vacuum in motion. The physical strain measured by the interferometer is the direct continuum measurement of this transverse shear strain propagating through the visco-elastic supersolid (see \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} for the complete linear elastic stress-energy tensor validation).
 
-\section{Structural Gravitational Coupling ($\alpha_{\mathrm{G}}$)}
-\label{sec:gravitational_coupling_alpha}
-The structural gravitational coupling ($\alpha_{\mathrm{G}}$) is defined as the active gravitational strain induced by localized mass-energy on the Soft Floor. It rigorously quantifies the ratio between the local mass-induced tension ($\tau_{\mathrm{L}}$) and the invariant Soft Floor stiffness ($\tau_{\mathrm{D}}$):
-\begin{equation}
-    \alpha_{\mathrm{G}} = \frac{\tau_{\mathrm{L}}}{\tau_{\mathrm{D}}} = \frac{\left(\frac{G M \mu_{\mathrm{D}}}{r}\right)}{\mu_{\mathrm{D}} c_{\mathrm{E}}^2} = \frac{G M}{r c_{\mathrm{E}}^2}
-\end{equation}
-This dimensionless ratio governs the kinematics of the Soft Floor, determining exactly how strongly a local mass couples to the active Face--Centered Cubic (FCC) lattice.
-
-\subsection*{The Quantum Unification of $\alpha_{\mathrm{G}}$}
-In standard quantum mechanics, the gravitational coupling of a proton is treated as a fixed, fundamental constant: $\alpha_{\mathrm{G}} = \frac{G m_{\mathrm{p}}^2}{\hbar c_{\mathrm{E}}}$. Tension Field Theory (TFT) proves this is not a separate physical constant, but simply the macroscopic Soft Floor strain equation evaluated at the quantum limit.
-
-If we evaluate the TFT strain equation for a single proton ($M = m_{\mathrm{p}}$) at the geometric boundary of its mass-energy (its reduced Compton wavelength, $r = \frac{\hbar}{m_{\mathrm{p}} c_{\mathrm{E}}}$), the equations perfectly unify:
-\begin{equation}
-    \alpha_{\mathrm{G}} = \frac{G m_{\mathrm{p}}}{\left(\frac{\hbar}{m_{\mathrm{p}} c_{\mathrm{E}}}\right) c_{\mathrm{E}}^2} = \frac{G m_{\mathrm{p}}^2}{\hbar c_{\mathrm{E}}}
-\end{equation}
-
-\vspace{0.5em}
-\noindent\textbf{Result:} Standard quantum gravitational coupling is simply the local structural strain of the Soft Floor exerted by a particle.
-
-\subsection*{The Saturation Phase Transition ($\alpha_{\mathrm{G}} = 1$)}
-Because $\alpha_{\mathrm{G}}$ represents the physical mechanical strain of the Soft Floor, it is bounded by an absolute geometric limit. When $\alpha_{\mathrm{G}} = 1$, the local mass has consumed 100\% of the available Soft Floor tension capacity. The system becomes gravitationally saturated, forcing a structural phase transition.
-
-At the macroscopic scale ($r \gg \ell_{\mathrm{S}}$), reaching $\alpha_{\mathrm{G}} = 1$ dictates that the local load density ($\rho_{\mathrm{L}}$) has reached the scale-dependent convergence density ($\rho_{\mathrm{QG}}(r)$, derived in \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}}). For a macroscopic stellar collapse, this corresponds to $\rho_{\mathrm{QG}} \approx 10^{70}$ kg/m$^3$, defining the Event Horizon of a black hole. At this boundary, the active FCC Soft Floor structurally yields, geometrically locking into the rigid Simple Cubic (SC) Substrate and uncovering the fundamental lattice parameters (derived in \hyperref[app:substrate_units]{Appendix \ref*{app:substrate_units}}).
-
 \section{Gravitational Curvature and the Vacuum Catastrophe}
 
 \subsection{The Gravitational Saturation Radius ($R_{\mathrm{sat}}$)}
@@ -233,7 +209,7 @@ We define the general strain-induced vacuum refractive index $n_\tau(\mathbf{x})
 
 Here the spatial argument $\mathbf{x}$ is attached to $n_\tau$, because the refractive index is the field quantity that varies across the strained Soft Floor. The propagation speed $c_{\mathrm{P}}$ is understood as the corresponding local signal speed at the point being considered.
 
-Using the effective optical inertia derived in \hyperref[sec:blackhole_horizon]{Section~\ref*{sec:blackhole_horizon}}, where
+Using the effective optical inertia derived in \hyperref[sec:discrete_state_transfer]{Section \ref*{sec:discrete_state_transfer}}, where
 \begin{equation}
     \mu_{\mathrm{eff}} \propto (1-\alpha_{\mathrm{G}})^{-4},
 \end{equation}
@@ -304,6 +280,7 @@ The apparent slowing of time is not a geometric curvature of a background tempor
 Just as Phase Damping slows the internal clock of a localized mass, it also physically deforms its spatial footprint. A macroscopic object is held together by internal structural bonds (transverse shear waves). Because the local elastic capacity is pre-emptively consumed by gravitational tension ($\alpha_{\mathrm{G}}$), the available energy to maintain these bonds drops to $E_{\alpha} = E_0(1 - \alpha_{\mathrm{G}})$. Lacking the full baseline energy to hold the constituent atoms apart, the object's structural bonds physically compress to reach mechanical equilibrium with the surrounding vacuum. Therefore, while the underlying geometric lattice ($r_{\mathrm{D}}$) remains invariant, the macroscopic object itself physically shrinks in the direction of the tension gradient by the exact ratio of the strain deficit: $L_{\alpha} = L_0 (1 - \alpha_{\mathrm{G}})$.
 
 \subsection{From Strain-Weighted Paths to the Effective Optical Metric}
+\label{sec:optical_metric}
 The strain-weighted path functional introduced in Part I defines the accumulated spatial penalty experienced by a propagating excitation moving through a nonuniform tension field. At the postulate level, this object is written compactly as
 \begin{equation}
     D_\tau = \int \left( 1 + \frac{r_{\mathrm{D}}}{\tau_{\mathrm{S}}} |\nabla\tau(\mathbf{x})| \right) \mathrm{d}\ell .

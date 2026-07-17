@@ -77,13 +77,13 @@ A rotating TFT black hole sources an azimuthal shear response in the surrounding
 
 Let the spin axis define the \(z\)-axis and let
 \begin{equation}
-    \varpi = r\sin\theta
+    r_\perp = r\sin\theta
 \end{equation}
 denote the cylindrical distance from that axis. In the stationary axisymmetric exterior, the leading torsional response may be written as
 \begin{equation}
     v_{\phi}^{(\mathrm{SF})}(r,\theta)
     =
-    \varpi\,\omega_{\mathrm{drag}}(r)
+    r_\perp\,\omega_{\mathrm{drag}}(r)
     =
     r\sin\theta\,\omega_{\mathrm{drag}}(r),
 \end{equation}
@@ -779,12 +779,12 @@ The live-boundary appendix introduced a scalar relaxation model for post-merger 
 
 A general angular-mode expansion may be written as
 \begin{equation}
-    \delta R(\theta,\varphi,t) = \sum_{\ell,m} A_{\ell m} e^{-\Gamma_{\ell m}t} \cos \left( \omega_{\ell m}t+\phi_{\ell m} \right) Y_{\ell m}(\theta,\varphi).
+    \delta R(\theta,\varphi,t) = \sum_{\ell,m} A_{\ell m} e^{-\Gamma_{\ell m}^{(\mathrm{rd})}t} \cos \left( \omega_{\ell m}t+\phi_{\ell m} \right) Y_{\ell m}(\theta,\varphi).
 \end{equation}
 For a Kerr-like boundary attractor, the final ringdown spectrum must depend only on the remnant mass and spin:
 \begin{align}
     \omega_{\ell m} &= \omega_{\ell m}(M,a_\ast), \\
-    \Gamma_{\ell m} &= \Gamma_{\ell m}(M,a_\ast).
+    \Gamma_{\ell m}^{(\mathrm{rd})} &= \Gamma_{\ell m}^{(\mathrm{rd})}(M,a_\ast).
 \end{align}
 
 This is the dynamical counterpart of the multipole constraint. Merger may excite arbitrary transient surface structure, but the relaxed spectrum must lose dependence on uncontrolled boundary details. The observable ringdown modes then become normal modes of the rotating FCC/SC phase boundary.
@@ -969,7 +969,7 @@ Photon-ring and shadow structures must follow from stationary and unstable circu
 
 Ninth, derive the rotating-boundary ringdown spectrum as a normal-mode problem of the live FCC/SC boundary coupled to the torsional Soft-Floor exterior:
 \begin{equation}
-    \omega_{\ell m} = \omega_{\ell m}(M,a_\ast), \qquad \Gamma_{\ell m} = \Gamma_{\ell m}(M,a_\ast).
+    \omega_{\ell m} = \omega_{\ell m}(M,a_\ast), \qquad \Gamma_{\ell m}^{(\mathrm{rd})} = \Gamma_{\ell m}^{(\mathrm{rd})}(M,a_\ast).
 \end{equation}
 A Kerr-correspondence limit requires that the dominant relaxed modes depend only on the conserved mass and spin, not on arbitrary initial boundary distortions.
 
@@ -998,4 +998,4 @@ The corresponding development sequence is
     \text{boundary torsion} \rightarrow \text{Soft-Floor shear} \rightarrow \text{rotating optical geometry} \rightarrow \text{capacity surface} \rightarrow \text{ISCO/photon-ring dynamics} \rightarrow \text{ringdown}.
 \end{equation}
 
-The decisive condition is uniqueness of the relaxed exterior. The rotating boundary must produce a field determined by $M$ and $\mathcal{J}_{\mathrm{BH}}$, without independent residual surface hair. If such a saturated attractor state can be derived, Kerr geometry may be interpreted as the continuum-limit representation of a rotating FCC/SC phase-boundary system.
+The present appendix identifies the Kerr-correspondence conditions required of a rotating TFT exterior. The detailed constitutive closure, coefficient matching, photon-ring equations, ISCO map, observational surface map, ringdown scaling, and numerical exterior solver are developed in \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.

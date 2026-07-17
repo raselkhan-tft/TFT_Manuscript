@@ -128,6 +128,46 @@ Total Deflection \newline \textit{Angle} & $\theta_{\mathrm{total}} = \frac{4GM}
 
 \newpage % Forces the section and table to start cleanly on the next page
 
+\newpage % Forces the section and table to start cleanly on the next page
+
+\section*{Part II (Continued): Weak-Field Orbital Dynamics (Perihelion Precession)}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endfirsthead
+
+% This tells longtable what to print at the top if the table breaks to a new page
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endhead
+
+Radial Strain \newline \textit{Potential} & $\Phi_\tau(r) = - \frac{GM}{r}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+
+Tangential \newline \textit{Loading Factor} & $q_{\mathrm{orb}} = \frac{v_\perp^2}{c_{\mathrm{E}}^2}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+
+Specific Orbital \newline \textit{Strain Coupling} & $\Phi_{\mathrm{orb}} = \Phi_\tau \left( \frac{v_\perp^2}{c_{\mathrm{E}}^2} \right)$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+
+Reduced Orbital \newline \textit{Strain Potential} & $\Phi_{\mathrm{orb}}^{(\mathrm{red})} = - \frac{GM\ell_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2r^3}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+
+Bound-Orbit \newline \textit{Acceleration Correction} & $g_{\mathrm{orb}} = 3g_{\mathrm{b}} \frac{v_\perp^2}{c_{\mathrm{E}}^2}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+
+TFT Post-Newtonian \newline \textit{Orbital Equation} & $\frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2} + u = \frac{GM}{\ell_{\mathrm{orb}}^2} + \frac{3GM}{c_{\mathrm{E}}^2}u^2$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+
+Perihelion \newline \textit{Advance} & $\Delta\varphi = \frac{6\pi GM}{a(1-e^2)c_{\mathrm{E}}^2}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+
+Total Bound-Orbit \newline \textit{Acceleration} & $g_{\mathrm{bound}} = g_{\mathrm{env}} + g_{\mathrm{orb}}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+
+\bottomrule
+\end{longtable}
+
+\vspace{1cm}
+
 \section*{Part II (Continued): Microphysics of Black Holes and Gravitational Saturation}
 
 \vspace{0.5cm}
@@ -183,7 +223,7 @@ Master Phase Radius \newline \textit{Equation} & $r(\rho) = \ell_{\mathrm{S}} \c
 \end{longtable}
 
 \vspace{1cm}
-
+\newpage % Forces the section and table to start cleanly on the next page
 \section*{Part II (Continued): Black Hole Thermodynamics \& Information (Phase Boundaries)}
 
 \vspace{0.5cm}
@@ -218,7 +258,97 @@ Topological Invariant \newline \textit{Absolute Unitarity} & $N_{\mathrm{QG}} \c
 \end{longtable}
 
 \vspace{1cm}
-\newpage % Forces the section and table to start cleanly on the next page
+\section*{Part II (Continued): Live Phase-Boundary Dynamics \& Binary Kinematics}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endfirsthead
+
+% This tells longtable what to print at the top if the table breaks to a new page
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endhead
+
+Spherical Boundary \newline \textit{Growth Rate} & $\dot{R}_{\mathrm{QG}} = \frac{G}{c_{\mathrm{E}}^2}\dot{M}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Live-Boundary \newline \textit{Spin Relation} & $\mathcal{J}_{\mathrm{BH}} = I_{\mathrm{surf}} \frac{v_{\mathrm{tor}}}{R_{\mathrm{QG}}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Dimensionless \newline \textit{Spin Parameter} & $a_\ast = \left( \frac{I_{\mathrm{surf}}}{M R_{\mathrm{QG}}^2} \right) \frac{v_{\mathrm{tor}}}{c_{\mathrm{E}}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Binary Separation \newline \textit{Orbital Velocity} & $v_{\mathrm{rel}} = c_{\mathrm{E}} \sqrt{\frac{R_1+R_2}{d}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Merger Bridge \newline \textit{Saturation Condition} & $\alpha_{\mathrm{bridge}} = \alpha_{\mathrm{G},1} + \alpha_{\mathrm{G},2} + \alpha_{\mathrm{dyn}} \geq 1$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Boundary Mass \newline \textit{Conservation} & $\frac{\partial \Sigma_{\partial}}{\partial t} + \nabla_A\left(\Sigma_{\partial} v_{\parallel}^{A}\right) + \frac{2\Sigma_{\partial}v_n}{R} =$ \newline $\dot{\Sigma}_{\partial,\mathrm{in}} + \dot{\Sigma}_{\partial,\mathrm{vac}} - \dot{\Sigma}_{\partial,\mathrm{shed}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Remnant Mass \newline \textit{(Stress Shedding)} & $M_f = M_1 + M_2 - \frac{E_{\mathrm{shed}}}{c_{\mathrm{E}}^2}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Remnant \newline \textit{Angular Momentum} & $\mathcal{J}_f = \mathcal{J}_1^{(\mathrm{spin})} + \mathcal{J}_2^{(\mathrm{spin})} + \mathcal{J}_{\mathrm{orb}}^{(\mathrm{bin})} - \mathcal{J}_{\mathrm{shed}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Linearized Boundary \newline \textit{Ringdown Equation} & $\frac{\partial^2 \delta R}{\partial t^2} + \Gamma_{\mathrm{QG}}\frac{\partial \delta R}{\partial t} + \omega_{\mathrm{QG}}^2\delta R = 0$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Kinematic Capacity \newline \textit{Constraint} & $V_{\mathrm{CM}}^2 + v_n^2 + v_{\parallel}^2 + v_{\mathrm{tor}}^2 \lesssim c_{\mathrm{E}}^2$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+
+Exterior Torsional \newline \textit{Field Equation} & $\frac{\mathrm{d}}{\mathrm{d}r} \left[ \tau_{\mathrm{tor}}(r) r^4 \frac{\mathrm{d}\omega_{\mathrm{drag}}}{\mathrm{d}r} \right] = 0$ & - & \hyperref[app:kerr_limit]{App. \ref*{app:kerr_limit}} \\
+
+Effective Rotating \newline \textit{Optical Line Element} & $ds_{\tau,\mathrm{rot}}^2 = -c_{\mathrm{E}}^2 (1-\alpha_{\mathrm{G}})^2 dt^2$ \newline $+ \frac{dr^2 + r^2d\theta^2 + r^2\sin^2\theta (d\phi - \omega_{\mathrm{drag}}dt)^2}{(1-\alpha_{\mathrm{G}})^2}$ & - & \hyperref[app:kerr_limit]{App. \ref*{app:kerr_limit}} \\
+
+Spin-Orbit Strain \newline \textit{Effective Potential} & $\Phi_{\mathrm{spin}} = - \ell_{\mathrm{orb}} \omega_{\mathrm{drag}}(r)$ & - & \hyperref[app:kerr_limit]{App. \ref*{app:kerr_limit}} \\
+
+Boundary Relaxation \newline \textit{Selection Law} & $\frac{\mathrm{d}\mathcal{E}_{\mathrm{stored}}}{\mathrm{d}t} = - \mathcal{P}_{\mathrm{shed}} \leq 0$ & - & \hyperref[app:kerr_limit]{App. \ref*{app:kerr_limit}} \\
+
+\bottomrule
+\end{longtable}
+
+\vspace{1cm}
+\section*{Part II (Continued): Rotating Black Hole Exteriors (Kerr Correspondence)}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endfirsthead
+
+% This tells longtable what to print at the top if the table breaks to a new page
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endhead
+
+Torsional Stiffness \newline \textit{Constitutive Closure} & $\tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \tau_{D,\mathrm{bulk}} = \frac{c_{\mathrm{E}}^4}{G r_D^2}$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+Angular Drag Field \newline \textit{Lense--Thirring Match} & $\omega_{\mathrm{drag}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3}$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+No-Hair Quadrupole \newline \textit{TFT Closure} & $Q_{\mathrm{TFT}} = -\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2} = -a_\ast^2 M R_{\mathrm{QG}}^2$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+Rotating Strain Field \newline \textit{Quadrupole-Corrected} & $\alpha_{\mathrm{G}}(r,\theta) = \frac{R_{\mathrm{QG}}}{r} - a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 P_2(\cos\theta)$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+Phase Boundary \newline \textit{Spin-Deformed Saturation} & $r_{\mathrm{sat}}(\theta,a_\ast) = R_{\mathrm{QG}} \left[ 1 - a_\ast^2P_2(\cos\theta) \right]$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+Torsional Capacity \newline \textit{Co-Motion Surface} & $r_{\mathrm{cap}}(\theta,a_\ast) = R_{\mathrm{QG}} \left[ 1+\sqrt{2|a_\ast|\sin\theta} \right]$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+Photon Ring \newline \textit{Equatorial Orbit Condition} & $\omega_{\mathrm{drag}}'(r) + s_{\mathrm{br}} \left[ \frac{c_P'(r)}{r} - \frac{c_P(r)}{r^2} \right] = 0$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+Shadow Edge \newline \textit{Impact Scale} & $B_{\gamma,s_{\mathrm{br}}}(a_\ast) = \frac{ c_{\mathrm{E}} }{ \left| \omega_{\mathrm{drag}} + s_{\mathrm{br}} \frac{c_P}{r_{\gamma,s_{\mathrm{br}}}} \right| }$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+ISCO Map \newline \textit{Marginal Stability} & $\mathcal{R}_m = 0, \quad \frac{\partial\mathcal{R}_m}{\partial x} = 0, \quad \frac{\partial^2\mathcal{R}_m}{\partial x^2} = 0$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+Ringdown Spectrum \newline \textit{Complex Eigenfrequency} & $\varpi_{\ell m} = \frac{c_{\mathrm{E}}^3}{GM} \left[ \widehat{\omega}_{\ell m} - i\widehat{\Gamma}_{\ell m}^{(\mathrm{rd})} \right]$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+
+\bottomrule
+\end{longtable}
+
+\vspace{1cm}
+
 \section*{Part II (Continued): The Quantum Structure of the Vacuum \& Vertical Topology}
 
 \vspace{0.5cm}
@@ -300,7 +430,7 @@ Topological Winding \newline \textit{Condition} & $\oint \nabla \phi \cdot \math
 
 Scale-Invariant \newline \textit{Mass Moment} & $J_i = \rho_i r_i^4$ & \hyperref[sec:18.2]{18.2} & \hyperref[app:fractal_architecture]{Appendix \ref*{app:fractal_architecture}} \\
 
-Strong Force \newline \textit{1D Confinement} & $\sigma_{\mathrm{s}} = 2\pi \rho_{\mathrm{eff}} c_{\mathrm{E}}^2 r_{\mathrm{N}}^2$ & \hyperref[sec:18.3]{18.3} & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
+Strong Force \newline \textit{1D Confinement} & $T_{\mathrm{s}} = 2\pi \rho_{\mathrm{eff}} c_{\mathrm{E}}^2 r_{\mathrm{N}}^2$ & \hyperref[sec:18.3]{18.3} & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
 
 Electromagnetism \newline \textit{Fine-Structure} & $\alpha = \frac{K_{\mathrm{L}}}{\hbar c_{\mathrm{E}}}$ & \hyperref[sec:18.4]{18.4} & \hyperref[app:geometric_alpha]{App. \ref*{app:geometric_alpha}} \& \hyperref[app:dynamic_alpha]{\ref*{app:dynamic_alpha}} \\
 

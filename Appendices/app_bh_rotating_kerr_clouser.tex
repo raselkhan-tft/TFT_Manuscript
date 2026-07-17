@@ -1,0 +1,2480 @@
+\chapter{Constitutive Closure for Rotating TFT Black-Hole Exteriors}
+\label{app:bh_rotating_kerr_clouser}
+
+This appendix develops the constitutive closure required to treat rotating TFT black holes as phenomenological alternatives to Kerr exteriors. \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}} introduced the black hole as a live FCC/SC phase boundary coupled to an external strained Soft Floor. \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}} then formulated the rotating TFT black-hole exterior and identified the correspondence conditions required for Kerr-like behavior. The present appendix turns that correspondence structure into a closed continuum-mechanical exterior model.
+
+The objective is not to claim that the Kerr exterior has already been derived from microscopic FCC/SC node dynamics. Rather, the purpose is to construct a Kerr-correspondence continuum closure: the weak-field frame-dragging coefficient, the no-hair quadrupole relation, and the leading optical and orbital observables are constrained to agree with established black-hole phenomenology where required, while the strong-field saturation boundary, capacity surface, photon-ring structure, ISCO map, shadow scale, and ringdown spectrum are expressed in TFT variables.
+
+The fundamental inputs are the final mass $M$, total black-hole angular momentum $\mathcal{J}_{\mathrm{BH}}$, and dimensionless spin
+\begin{equation}
+    a_\ast = \frac{c_{\mathrm{E}}\mathcal{J}_{\mathrm{BH}}}{GM^2}.
+\end{equation}
+
+The associated TFT mass scale is
+\begin{equation}
+    R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2}.
+\end{equation}
+
+In the nonrotating limit, $R_{\mathrm{QG}}$ is the spherical FCC/SC saturation radius. In the rotating case, the actual phase boundary becomes a spin-deformed surface
+\begin{equation}
+    r_{\mathrm{sat}}(\theta,a_\ast),
+\end{equation}
+defined by the saturation condition
+\begin{equation}
+    \alpha_{\mathrm{G}}(r_{\mathrm{sat}},\theta) = 1.
+\end{equation}
+
+The appendix proceeds by closing the torsional stiffness law, matching the weak-field angular-drag coefficient, deriving photon-ring and massive-particle orbit conditions, constructing the observational surface map, formulating the ringdown spectrum, and finally assembling these elements into a numerical exterior free-boundary solver.
+
+This establishes a constrained, computable TFT replacement framework for rotating black-hole exteriors. The weak-field Kerr correspondence is imposed as a phenomenological consistency condition; possible TFT-specific deviations are reserved for the nonlinear strong-field regime near the FCC/SC saturation boundary.
+
+\section{Constitutive Closure for the Torsional Soft-Floor Stiffness ($\tau_{\mathrm{tor}}(\alpha_{\mathrm{G}})$)}
+
+\hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}} establishes that black-hole spin in TFT is not ordinary material rotation of the SC saturated interior. The spin degree of freedom is carried by the live FCC/SC phase boundary and transmitted into the surrounding FCC Soft Floor as torsional shear. \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}} then derives the leading exterior torsional field equation for the dragged Soft Floor. The remaining constitutive question is what stiffness coefficient should appear in that exterior torsional equation.
+
+The quantity to be determined is:
+\begin{equation}
+    \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}).
+\end{equation}
+
+This coefficient represents the effective three-dimensional torsional stiffness density of the active FCC Soft Floor in the azimuthal shear channel. It is not introduced as a new fundamental constant. It must be fixed by the already-defined Soft-Floor stiffness, inertia, and strained propagation laws of TFT.
+
+The active FCC Soft Floor has surface shear stiffness
+\begin{equation}
+    \tau_D = \frac{c_{\mathrm{E}}^4}{G r_D}.
+\end{equation}
+
+Dimensionally,
+\begin{equation}
+    [\tau_D] = \mathrm{N/m}.
+\end{equation}
+
+For a three-dimensional torsional shear field, the corresponding bulk stiffness density is obtained by projecting the surface stiffness across one FCC node scale ($r_D$):
+\begin{equation}
+    \tau_{D,\mathrm{bulk}} = \frac{\tau_D}{r_D}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \tau_{D,\mathrm{bulk}} = \frac{c_{\mathrm{E}}^4}{G r_D^2}.
+\end{equation}
+
+This has the correct dimensional form of a three-dimensional stiffness density:
+\begin{equation}
+    [\tau_{D,\mathrm{bulk}}] = \mathrm{N/m^2} = \mathrm{Pa}.
+\end{equation}
+
+The central question is whether gravitational strain modifies this torsional stiffness as the black-hole phase boundary is approached.
+
+The local gravitational strain variable is denoted by $\alpha_{\mathrm{G}}$. In the leading spherical exterior it reduces to
+\begin{equation}
+    \alpha_{\mathrm{G}} = \frac{GM}{r c_{\mathrm{E}}^2}.
+\end{equation}
+
+The FCC/SC saturation boundary occurs at
+\begin{equation}
+    \alpha_{\mathrm{G}} = 1.
+\end{equation}
+
+The strained propagation speed of a transverse excitation in the active Soft Floor is
+\begin{equation}
+    c_P(\alpha_{\mathrm{G}}) = c_{\mathrm{E}}(1-\alpha_{\mathrm{G}})^2.
+\end{equation}
+
+Thus, as
+\begin{equation}
+    \alpha_{\mathrm{G}} \rightarrow 1,
+\end{equation}
+the local propagation speed collapses:
+\begin{equation}
+    c_P(\alpha_{\mathrm{G}}) \rightarrow 0.
+\end{equation}
+
+This causal slowing should not be interpreted as a disappearance of Soft-Floor stiffness. In TFT, the slowing is already accounted for by the divergence of the effective inertia. The effective surface inertia scales as
+\begin{equation}
+    \mu_{\mathrm{eff}}(\alpha_{\mathrm{G}}) = \frac{\mu_D}{(1-\alpha_{\mathrm{G}})^4}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \mu_{\mathrm{eff}}(\alpha_{\mathrm{G}}) \rightarrow \infty \qquad \text{as} \qquad \alpha_{\mathrm{G}} \rightarrow 1.
+\end{equation}
+
+For the torsional exterior, the relevant inertia is the three-dimensional effective inertia density in the azimuthal shear channel. Since $\mu_{\mathrm{eff}}$ is a surface inertia, the corresponding three-dimensional effective torsional inertia density is
+\begin{equation}
+    \rho_{\mathrm{tor,eff}}(\alpha_{\mathrm{G}}) = \frac{\mu_{\mathrm{eff}}(\alpha_{\mathrm{G}})}{r_D}.
+\end{equation}
+
+Substituting the TFT inertia scaling gives
+\begin{equation}
+    \rho_{\mathrm{tor,eff}}(\alpha_{\mathrm{G}}) = \frac{\mu_D}{r_D}(1-\alpha_{\mathrm{G}})^{-4}.
+\end{equation}
+
+The local shear-wave identity for the torsional channel is
+\begin{equation}
+    c_P^2(\alpha_{\mathrm{G}}) = \frac{\tau_{\mathrm{tor}}(\alpha_{\mathrm{G}})}{\rho_{\mathrm{tor,eff}}(\alpha_{\mathrm{G}})}.
+\end{equation}
+
+Solving for the torsional stiffness gives
+\begin{equation}
+    \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \rho_{\mathrm{tor,eff}}(\alpha_{\mathrm{G}})c_P^2(\alpha_{\mathrm{G}}).
+\end{equation}
+
+Now substitute
+\begin{equation}
+    \rho_{\mathrm{tor,eff}}(\alpha_{\mathrm{G}}) = \frac{\mu_D}{r_D}(1-\alpha_{\mathrm{G}})^{-4},
+\end{equation}
+and
+\begin{equation}
+    c_P^2(\alpha_{\mathrm{G}}) = c_{\mathrm{E}}^2(1-\alpha_{\mathrm{G}})^4.
+\end{equation}
+
+Then
+\begin{equation}
+    \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \left[ \frac{\mu_D}{r_D}(1-\alpha_{\mathrm{G}})^{-4} \right] \left[ c_{\mathrm{E}}^2(1-\alpha_{\mathrm{G}})^4 \right].
+\end{equation}
+
+The strain factors cancel exactly:
+\begin{equation}
+    (1-\alpha_{\mathrm{G}})^{-4}(1-\alpha_{\mathrm{G}})^4 = 1.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \frac{\mu_D c_{\mathrm{E}}^2}{r_D}.
+\end{equation}
+
+Using the Soft-Floor identity
+\begin{equation}
+    c_{\mathrm{E}}^2 = \frac{\tau_D}{\mu_D},
+\end{equation}
+this becomes
+\begin{equation}
+    \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \frac{\tau_D}{r_D}.
+\end{equation}
+
+Thus, the leading constitutive closure is
+\begin{equation}
+    \boxed{ \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \tau_{D,\mathrm{bulk}} = \frac{c_{\mathrm{E}}^4}{G r_D^2}, \qquad 0 \leq \alpha_{\mathrm{G}} < 1. }
+\end{equation}
+
+The result is physically significant. In the active FCC exterior, gravitational strain does not soften the baseline torsional stiffness at leading order. Instead, the approach to causal arrest is carried by the divergence of the effective inertia:
+\begin{equation}
+    \rho_{\mathrm{tor,eff}}(\alpha_{\mathrm{G}}) = \frac{\mu_D}{r_D}(1-\alpha_{\mathrm{G}})^{-4}.
+\end{equation}
+
+As
+\begin{equation}
+    \alpha_{\mathrm{G}} \rightarrow 1,
+\end{equation}
+one has
+\begin{equation}
+    \rho_{\mathrm{tor,eff}} \rightarrow \infty,
+\end{equation}
+and therefore
+\begin{equation}
+    c_P(\alpha_{\mathrm{G}}) = \sqrt{ \frac{\tau_{\mathrm{tor}}}{\rho_{\mathrm{tor,eff}}(\alpha_{\mathrm{G}})} } = c_{\mathrm{E}}(1-\alpha_{\mathrm{G}})^2 \rightarrow 0.
+\end{equation}
+
+Thus, the mechanical interpretation is:
+\begin{equation}
+    \boxed{ \text{finite stiffness} + \text{divergent effective inertia} = \text{causal arrest}. }
+\end{equation}
+
+This avoids double-counting the gravitational strain effect. If one instead assumed a softening law such as
+\begin{equation}
+    \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \tau_{D,\mathrm{bulk}}(1-\alpha_{\mathrm{G}})^p,
+\end{equation}
+then the propagation law would become
+\begin{equation}
+    c_P^2 \sim (1-\alpha_{\mathrm{G}})^{p+4}.
+\end{equation}
+
+This would conflict with the already-established TFT propagation law
+\begin{equation}
+    c_P^2 = c_{\mathrm{E}}^2(1-\alpha_{\mathrm{G}})^4
+\end{equation}
+unless $p=0$. Therefore, the leading torsional stiffness is strain-independent, while the strain dependence resides in the effective inertia.
+
+The domain of validity is essential. The closure
+\begin{equation}
+    \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \tau_{D,\mathrm{bulk}}
+\end{equation}
+applies only in the active FCC exterior:
+\begin{equation}
+    0 \leq \alpha_{\mathrm{G}} < 1.
+\end{equation}
+
+At
+\begin{equation}
+    \alpha_{\mathrm{G}} = 1,
+\end{equation}
+the FCC Soft Floor no longer remains an ordinary strained elastic medium. It undergoes the FCC-to-SC phase transition and becomes part of the internally phase-locked saturated domain. Therefore, $\tau_{\mathrm{tor}}$ is an exterior FCC constitutive coefficient. It should not be continued through the SC core as though the black-hole interior were still an active torsional medium.
+
+The consequence for rotating black-hole exterior dynamics is direct. \hyperref[app:app:kerr_limit]{Appendix~\ref*{app:kerr_limit}} writes the leading axisymmetric torsional equation as
+\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}r} \left[ \tau_{\mathrm{tor}}(r) r^4 \frac{\mathrm{d}\omega_{\mathrm{drag}}}{\mathrm{d}r} \right] = 0.
+\end{equation}
+
+With
+\begin{equation}
+    \tau_{\mathrm{tor}}(r) = \tau_{D,\mathrm{bulk}},
+\end{equation}
+this reduces to
+\begin{equation}
+    \boxed{ \frac{\mathrm{d}}{\mathrm{d}r} \left[ r^4 \frac{\mathrm{d}\omega_{\mathrm{drag}}}{\mathrm{d}r} \right] = 0. }
+\end{equation}
+
+The exterior angular-drag field therefore has the radial form
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = \frac{A_{\mathrm{drag}}}{r^3},
+\end{equation}
+after imposing vanishing drag at spatial infinity. The present constitutive closure fixes the radial dependence of the torsional field. The coefficient $A_{\mathrm{drag}}$ is not fixed by the stiffness closure alone; it is fixed in the next section by weak-field angular-momentum matching to the Lense--Thirring limit.
+
+This completes the baseline torsional constitutive closure required for the rotating TFT black-hole exterior.
+
+\section{Weak-Field Coefficient Matching: Lense--Thirring Normalization}
+
+The previous section fixed the torsional stiffness sector of the rotating TFT exterior. In the active FCC exterior,
+\begin{equation}
+    \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \tau_{D,\mathrm{bulk}},
+\end{equation}
+so the leading axisymmetric torsional field equation reduces to
+\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}r} \left[ r^4 \frac{\mathrm{d}\omega_{\mathrm{drag}}}{\mathrm{d}r} \right] = 0.
+\end{equation}
+
+The exterior solution has the radial form
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = \frac{A_{\mathrm{drag}}}{r^3},
+\end{equation}
+after imposing vanishing angular drag at spatial infinity. Thus, the torsional constitutive closure fixes the radial dependence,
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) \propto r^{-3},
+\end{equation}
+but it does not by itself fix the amplitude $A_{\mathrm{drag}}$.
+
+The remaining problem is therefore the weak-field coefficient-matching problem:
+\begin{equation}
+    A_{\mathrm{drag}} = ?
+\end{equation}
+
+\hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}} identifies the rotating black hole as a live FCC/SC boundary carrying angular momentum, while \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}} derives the leading torsional Soft-Floor exterior. The present section fixes the far-field normalization required for the TFT exterior to reproduce the empirically successful weak-field frame-dragging limit.
+
+In the weak-field exterior of a rotating compact object, the Lense--Thirring angular-dragging rate is
+\begin{equation}
+    \omega_{\mathrm{LT}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3},
+\end{equation}
+where $\mathcal{J}_{\mathrm{BH}}$ is the total axial angular momentum of the black hole. Therefore, exact weak-field correspondence requires
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) \rightarrow \omega_{\mathrm{LT}}(r) \qquad \text{for} \qquad r \gg R_{\mathrm{QG}}.
+\end{equation}
+
+Hence the far-field amplitude must be
+\begin{equation}
+    A_{\mathrm{drag}} = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2}.
+\end{equation}
+
+The weak-field matched TFT dragging law is therefore
+\begin{equation}
+    \boxed{ \omega_{\mathrm{drag}}^{\mathrm{TFT}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3}. }
+\end{equation}
+
+Using
+\begin{equation}
+    R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2},
+\end{equation}
+and
+\begin{equation}
+    a_\ast = \frac{c_{\mathrm{E}}\mathcal{J}_{\mathrm{BH}}}{GM^2},
+\end{equation}
+the same expression becomes
+\begin{equation}
+    \omega_{\mathrm{drag}}^{\mathrm{TFT}}(r) = 2a_\ast c_{\mathrm{E}} \frac{R_{\mathrm{QG}}^2}{r^3}.
+\end{equation}
+
+The corresponding azimuthal Soft-Floor drift speed is
+\begin{equation}
+    v_{\phi}^{(\mathrm{SF})}(r,\theta) = r\sin\theta \, \omega_{\mathrm{drag}}(r).
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \boxed{ v_{\phi}^{(\mathrm{SF})}(r,\theta) = 2a_\ast c_{\mathrm{E}} \left( \frac{R_{\mathrm{QG}}}{r} \right)^2 \sin\theta. }
+\end{equation}
+
+This fixes the leading weak-field decision:
+\begin{equation}
+    \boxed{ \frac{ \omega_{\mathrm{drag}}^{\mathrm{TFT}} }{ \omega_{\mathrm{LT}} } \rightarrow 1 \qquad \text{for} \qquad r \gg R_{\mathrm{QG}}. }
+\end{equation}
+
+Thus, TFT predicts no deviation from the standard Lense--Thirring coefficient in the weak-field exterior. Any deviation should be reserved for the strong-field saturation regime near the FCC/SC phase boundary, where $\alpha_{\mathrm{G}} \rightarrow 1$.
+
+The important subtlety is that the far-field coefficient must be normalized by the conserved total angular momentum $\mathcal{J}_{\mathrm{BH}}$, not by a naive no-slip surface velocity alone.
+
+The live-boundary spin relation is
+\begin{equation}
+    \mathcal{J}_{\mathrm{BH}} = I_{\mathrm{surf}} \frac{v_{\mathrm{tor}}}{R_{\mathrm{QG}}},
+\end{equation}
+where $I_{\mathrm{surf}}$ is the effective surface moment of inertia of the phase-segregated boundary mass and $v_{\mathrm{tor}}$ is the effective torsional boundary speed.
+
+A purely no-slip surface estimate would write
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = \omega_{\partial} \left( \frac{R_{\mathrm{QG}}}{r} \right)^3,
+\end{equation}
+with
+\begin{equation}
+    \omega_{\partial} = \frac{v_{\mathrm{tor}}}{R_{\mathrm{QG}}}.
+\end{equation}
+
+Combining this with the live-boundary spin relation gives
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = \frac{\mathcal{J}_{\mathrm{BH}}}{I_{\mathrm{surf}}} \left( \frac{R_{\mathrm{QG}}}{r} \right)^3.
+\end{equation}
+
+Using
+\begin{equation}
+    R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2},
+\end{equation}
+this may be rewritten as
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = \left( \frac{M R_{\mathrm{QG}}^2}{I_{\mathrm{surf}}} \right) \frac{G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3}.
+\end{equation}
+
+Comparing this expression with the Lense--Thirring coefficient,
+\begin{equation}
+    \omega_{\mathrm{LT}}(r) = 2 \frac{G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3},
+\end{equation}
+shows that exact coefficient matching through a pure no-slip surface-shell model would require
+\begin{equation}
+    \frac{M R_{\mathrm{QG}}^2}{I_{\mathrm{surf}}} = 2.
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    I_{\mathrm{surf}} = \frac{1}{2} M R_{\mathrm{QG}}^2.
+\end{equation}
+
+This value is not mathematically forbidden. It lies within the boundary-confined range
+\begin{equation}
+    0 \leq I_{\mathrm{surf}} \leq M R_{\mathrm{QG}}^2.
+\end{equation}
+
+However, treating this as a universal no-slip identity would create a separate problem. The dimensionless spin relation is
+\begin{equation}
+    a_\ast = \left( \frac{I_{\mathrm{surf}}}{M R_{\mathrm{QG}}^2} \right) \frac{v_{\mathrm{tor}}}{c_{\mathrm{E}}}.
+\end{equation}
+
+If
+\begin{equation}
+    I_{\mathrm{surf}} = \frac{1}{2} M R_{\mathrm{QG}}^2,
+\end{equation}
+then
+\begin{equation}
+    a_\ast = \frac{1}{2} \frac{v_{\mathrm{tor}}}{c_{\mathrm{E}}}.
+\end{equation}
+
+Since the boundary torsional speed is limited by
+\begin{equation}
+    v_{\mathrm{tor}} \leq c_{\mathrm{E}},
+\end{equation}
+this would imply
+\begin{equation}
+    a_\ast \leq \frac{1}{2}.
+\end{equation}
+
+That cannot be the complete rotating black-hole theory, because a Kerr-correspondence framework must allow the full spin range
+\begin{equation}
+    0 \leq a_\ast \leq 1.
+\end{equation}
+
+Therefore, the no-slip surface-shell expression should be interpreted as a local boundary estimate that reproduces the $r^{-3}$ radial field shape. It should not be used as the universal coefficient closure for the exterior field.
+
+The coefficient of the far exterior must instead be fixed by total angular-momentum matching:
+\begin{equation}
+    \boxed{ A_{\mathrm{drag}} = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2}. }
+\end{equation}
+
+Thus, the weak-field exterior is angular-momentum normalized:
+\begin{equation}
+    \boxed{ \omega_{\mathrm{drag}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3}. }
+\end{equation}
+
+The surface quantities $I_{\mathrm{surf}}$ and $v_{\mathrm{tor}}$ remain essential for describing how angular momentum is stored and redistributed on the live FCC/SC boundary. However, the asymptotic exterior coefficient is fixed by the conserved total angular momentum $\mathcal{J}_{\mathrm{BH}}$, not by assuming that a single no-slip boundary velocity controls the entire exterior.
+
+This resolves the coefficient-matching problem. The rotating TFT exterior exactly reproduces Lense--Thirring frame dragging in the weak-field regime:
+\begin{equation}
+    \boxed{ \omega_{\mathrm{drag}}^{\mathrm{TFT}} = \omega_{\mathrm{LT}} = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3} \qquad (r \gg R_{\mathrm{QG}}). }
+\end{equation}
+
+The present section therefore fixes the weak-field coefficient of the rotating TFT exterior. The radial field shape follows from the torsional stiffness closure, while the amplitude follows from angular-momentum normalization. TFT deviations are not placed in the leading weak-field coefficient; they belong only to the nonlinear saturation regime near the FCC/SC phase boundary.
+
+\section{Photon-Ring Conditions from the Rotating Soft-Floor Hamiltonian}
+
+After fixing the torsional stiffness closure and the weak-field frame-dragging coefficient, the next task is to derive the circular photon-orbit conditions from the rotating TFT exterior Hamiltonian. \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}} defines the black hole as a live FCC/SC phase boundary, while \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}} gives the rotating Soft-Floor propagation structure used here as the starting point. 
+
+The rotating exterior propagation law is
+\begin{equation}
+    \mathcal{H}_{\gamma} = \frac{1}{2} \left[ - \frac{\left(\omega - m_{\phi}\omega_{\mathrm{drag}}(r)\right)^2}{c_P^2(r)} + k_r^2 + \frac{k_{\theta}^2}{r^2} + \frac{m_{\phi}^2}{r^2\sin^2\theta} \right] = 0.
+\end{equation}
+
+Here $\omega$ is the conserved wave frequency, $m_{\phi}$ is the azimuthal angular mode number, $\omega_{\mathrm{drag}}(r)$ is the torsional angular-drag rate of the Soft Floor, and $c_P(r)$ is the local strained propagation speed.
+
+For equatorial circular photon orbits, restrict to
+\begin{equation}
+    \theta = \frac{\pi}{2},
+\end{equation}
+and set
+\begin{equation}
+    k_{\theta} = 0.
+\end{equation}
+
+The Hamiltonian then reduces to
+\begin{equation}
+    \mathcal{H}_{\gamma} = \frac{1}{2} \left[ - \frac{\left(\omega - m_{\phi}\omega_{\mathrm{drag}}(r)\right)^2}{c_P^2(r)} + k_r^2 + \frac{m_{\phi}^2}{r^2} \right] = 0.
+\end{equation}
+
+Solving for the radial wave number gives
+\begin{equation}
+    k_r^2 = \frac{\left(\omega - m_{\phi}\omega_{\mathrm{drag}}(r)\right)^2}{c_P^2(r)} - \frac{m_{\phi}^2}{r^2}.
+\end{equation}
+
+Define the signed photon impact parameter
+\begin{equation}
+    b_{\gamma} = \frac{m_{\phi}}{\omega}.
+\end{equation}
+
+In this normalization, $b_{\gamma}$ has dimensions of time. The corresponding physical impact length is $c_{\mathrm{E}}|b_{\gamma}|$.
+
+Dividing the radial equation by $\omega^2$, one obtains
+\begin{equation}
+    k_r^2 = \omega^2 \mathcal{R}_{\gamma}(r;b_{\gamma}),
+\end{equation}
+where the radial photon potential is
+\begin{equation}
+    \mathcal{R}_{\gamma}(r;b_{\gamma}) = \frac{\left[ 1 - b_{\gamma}\omega_{\mathrm{drag}}(r) \right]^2}{c_P^2(r)} - \frac{b_{\gamma}^2}{r^2}.
+\end{equation}
+
+A circular photon orbit is a double root of this radial potential. Therefore, the photon-ring conditions are
+\begin{equation}
+    \mathcal{R}_{\gamma}(r;b_{\gamma}) = 0,
+\end{equation}
+and
+\begin{equation}
+    \frac{\mathrm{d}\mathcal{R}_{\gamma}}{\mathrm{d}r} = 0.
+\end{equation}
+
+The first condition gives zero radial motion,
+\begin{equation}
+    k_r = 0.
+\end{equation}
+
+The second condition requires the orbit to be stationary under radial perturbation. With the convention
+\begin{equation}
+    k_r^2 = \omega^2\mathcal{R}_{\gamma},
+\end{equation}
+the unstable photon-ring branch satisfies
+\begin{equation}
+    \frac{\mathrm{d}^2\mathcal{R}_{\gamma}}{\mathrm{d}r^2} > 0.
+\end{equation}
+This sign means that a small displacement away from the double root opens an allowed escape or plunge channel.
+
+From
+\begin{equation}
+    \mathcal{R}_{\gamma} = 0,
+\end{equation}
+we obtain
+\begin{equation}
+    \frac{\left[ 1 - b_{\gamma}\omega_{\mathrm{drag}}(r) \right]^2}{c_P^2(r)} = \frac{b_{\gamma}^2}{r^2}.
+\end{equation}
+
+Taking the two circular-orbit branches gives
+\begin{equation}
+    1 - b_{\gamma}\omega_{\mathrm{drag}}(r) = s_{\mathrm{br}} \frac{b_{\gamma}c_P(r)}{r},
+\end{equation}
+where
+\begin{equation}
+    s_{\mathrm{br}} = +1
+\end{equation}
+labels the prograde branch and
+\begin{equation}
+    s_{\mathrm{br}} = -1
+\end{equation}
+labels the retrograde branch.
+
+Solving for the branch impact parameter gives
+\begin{equation}
+    b_{\gamma,s_{\mathrm{br}}}(r) = \frac{1}{ \omega_{\mathrm{drag}}(r) + s_{\mathrm{br}}\frac{c_P(r)}{r} }.
+\end{equation}
+
+The circular photon-ring radius is obtained by requiring this impact parameter to be stationary with respect to radius:
+\begin{equation}
+    \frac{\mathrm{d} b_{\gamma,s_{\mathrm{br}}}}{\mathrm{d}r} = 0.
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}r} \left[ \omega_{\mathrm{drag}}(r) + s_{\mathrm{br}} \frac{c_P(r)}{r} \right] = 0.
+\end{equation}
+
+Thus, the general TFT equatorial photon-ring condition is
+\begin{equation}
+    \boxed{ \omega_{\mathrm{drag}}'(r) + s_{\mathrm{br}} \left[ \frac{c_P'(r)}{r} - \frac{c_P(r)}{r^2} \right] = 0. }
+\end{equation}
+
+This is the central result of the section. A circular photon orbit is not imposed by importing the Kerr photon-sphere condition. It occurs where the radial gradient of the torsional Soft-Floor dragging rate balances the radial gradient of the local optical propagation term.
+
+The corresponding photon-ring impact parameter is
+\begin{equation}
+    \boxed{ b_{\gamma,s_{\mathrm{br}}} = \frac{1}{ \omega_{\mathrm{drag}}(r_{\gamma,s_{\mathrm{br}}}) + s_{\mathrm{br}}\frac{c_P(r_{\gamma,s_{\mathrm{br}}})}{r_{\gamma,s_{\mathrm{br}}}} }. }
+\end{equation}
+Here $r_{\gamma,s_{\mathrm{br}}}$ is the photon-ring radius of the prograde or retrograde branch.
+
+In the nonrotating case,
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = 0.
+\end{equation}
+
+The photon-ring equation reduces to
+\begin{equation}
+    \frac{c_P'(r)}{r} - \frac{c_P(r)}{r^2} = 0.
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    r c_P'(r) = c_P(r).
+\end{equation}
+
+Using the static TFT optical propagation law
+\begin{equation}
+    c_P(r) = c_{\mathrm{E}} \left( 1-\frac{R_{\mathrm{QG}}}{r} \right)^2,
+\end{equation}
+we have
+\begin{equation}
+    c_P'(r) = 2c_{\mathrm{E}} \left( 1-\frac{R_{\mathrm{QG}}}{r} \right) \frac{R_{\mathrm{QG}}}{r^2}.
+\end{equation}
+
+Substituting into the photon-ring condition gives
+\begin{equation}
+    2 \frac{R_{\mathrm{QG}}}{r} \left( 1-\frac{R_{\mathrm{QG}}}{r} \right) = \left( 1-\frac{R_{\mathrm{QG}}}{r} \right)^2.
+\end{equation}
+
+For the exterior region
+\begin{equation}
+    r > R_{\mathrm{QG}},
+\end{equation}
+the factor
+\begin{equation}
+    1 - \frac{R_{\mathrm{QG}}}{r}
+\end{equation}
+is nonzero and may be divided out. This leaves
+\begin{equation}
+    2\frac{R_{\mathrm{QG}}}{r} = 1 - \frac{R_{\mathrm{QG}}}{r}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    3\frac{R_{\mathrm{QG}}}{r} = 1,
+\end{equation}
+and the nonrotating TFT photon-ring radius is
+\begin{equation}
+    \boxed{ r_{\gamma,0} = 3R_{\mathrm{QG}}. }
+\end{equation}
+
+Now include the weak-field matched rotational dragging law derived in the previous section:
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3}.
+\end{equation}
+
+Using
+\begin{equation}
+    a_\ast = \frac{c_{\mathrm{E}}\mathcal{J}_{\mathrm{BH}}}{GM^2},
+\end{equation}
+and
+\begin{equation}
+    R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2},
+\end{equation}
+this becomes
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = 2a_\ast c_{\mathrm{E}} \frac{R_{\mathrm{QG}}^2}{r^3}.
+\end{equation}
+
+The static propagation speed remains
+\begin{equation}
+    c_P(r) = c_{\mathrm{E}} \left( 1-\frac{R_{\mathrm{QG}}}{r} \right)^2.
+\end{equation}
+
+Define the dimensionless inverse radius
+\begin{equation}
+    x = \frac{R_{\mathrm{QG}}}{r}.
+\end{equation}
+
+The photon-ring condition
+\begin{equation}
+    \omega_{\mathrm{drag}}'(r) + s_{\mathrm{br}} \left[ \frac{c_P'(r)}{r} - \frac{c_P(r)}{r^2} \right] = 0
+\end{equation}
+then becomes
+\begin{equation}
+    \boxed{ s_{\mathrm{br}}(1-x)(3x-1) = 6a_\ast x^2. }
+\end{equation}
+
+This is the leading rotating TFT photon-ring equation in dimensionless form.
+
+For small spin,
+\begin{equation}
+    a_\ast \ll 1,
+\end{equation}
+write
+\begin{equation}
+    x_{s_{\mathrm{br}}} = \frac{1}{3} + \delta x_{s_{\mathrm{br}}}.
+\end{equation}
+
+Keeping only first order in $a_\ast$, the solution is
+\begin{equation}
+    \delta x_{s_{\mathrm{br}}} = s_{\mathrm{br}}\frac{a_\ast}{3}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    x_{s_{\mathrm{br}}} = \frac{1+s_{\mathrm{br}} a_\ast}{3} + \mathcal{O}(a_\ast^2).
+\end{equation}
+
+Since
+\begin{equation}
+    r_{\gamma,s_{\mathrm{br}}} = \frac{R_{\mathrm{QG}}}{x_{s_{\mathrm{br}}}},
+\end{equation}
+the weak-spin photon-ring radius becomes
+\begin{equation}
+    \boxed{ r_{\gamma,s_{\mathrm{br}}} = 3R_{\mathrm{QG}} \left( 1-s_{\mathrm{br}} a_\ast \right) + \mathcal{O}(a_\ast^2). }
+\end{equation}
+
+Thus, for the prograde branch,
+\begin{equation}
+    s_{\mathrm{br}} = +1,
+\end{equation}
+one has
+\begin{equation}
+    \boxed{ r_{\gamma,+} = 3R_{\mathrm{QG}} (1-a_\ast) + \mathcal{O}(a_\ast^2), }
+\end{equation}
+while for the retrograde branch,
+\begin{equation}
+    s_{\mathrm{br}} = -1,
+\end{equation}
+one has
+\begin{equation}
+    \boxed{ r_{\gamma,-} = 3R_{\mathrm{QG}} (1+a_\ast) + \mathcal{O}(a_\ast^2). }
+\end{equation}
+
+The physical interpretation is direct: torsional Soft-Floor dragging pulls the prograde photon ring inward and pushes the retrograde photon ring outward.
+
+This is the correct qualitative behavior expected of a rotating black-hole exterior. However, this weak-spin splitting should be understood as a baseline result. It uses the weak-field matched angular-drag law and the static optical propagation law evaluated in the photon-ring region. A completed strong-field treatment must determine whether nonlinear saturation corrections modify the photon-ring and shadow map near the FCC/SC phase boundary.
+
+The present section therefore establishes the baseline photon-ring condition for the rotating TFT exterior. The photon ring is obtained as a stationary impact-parameter orbit of the rotating Soft-Floor Hamiltonian, not by importing the Kerr photon-sphere condition. In the nonrotating limit, the static TFT optical law gives
+\begin{equation}
+    r_{\gamma,0} = 3R_{\mathrm{QG}}.
+\end{equation}
+
+In the weak-spin, weak-field-matched exterior, torsional Soft-Floor dragging shifts the prograde branch inward and the retrograde branch outward. These results establish the circular photon-orbit condition, while the final strong-field shadow prediction remains a separate problem involving the saturation-corrected dragging field, the capacity surface, and the observational shadow radius.
+
+\section{Spin-Induced Quadrupole Closure: $Q_{\mathrm{TFT}}(M,\mathcal{J}_{\mathrm{BH}})$}
+
+The next requirement for replacing the Kerr exterior is not only frame dragging and photon-ring formation. A rotating black hole also carries a mass quadrupole. In the Kerr exterior, that quadrupole is not an independent parameter; it is fixed entirely by the mass and angular momentum of the black hole.
+
+For TFT, this is a serious structural test. A mechanical FCC/SC boundary could, in principle, carry arbitrary surface deformations. If those arbitrary deformations survived into the exterior field, then TFT would describe a generic rotating elastic object rather than a black-hole exterior. Therefore, the next closure is the TFT no-hair quadrupole relation:
+\begin{equation}
+    Q_{\mathrm{TFT}}(M,\mathcal{J}_{\mathrm{BH}}).
+\end{equation}
+
+The goal of this section is to derive the leading spin-induced quadrupole that the relaxed rotating TFT boundary must produce in the far exterior. \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}} establishes the live FCC/SC boundary as the mechanical carrier of black-hole spin, while \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}} constructs the torsional Soft-Floor exterior and Kerr-correspondence structure for rotating TFT black holes. The present section closes the next multipole level: the spin-induced quadrupole. 
+
+\subsection{Exterior Quadrupole Definition}
+
+In the far exterior, the strained Soft-Floor potential can be expanded into spherical multipoles. The leading monopole term is the ordinary radial mass field:
+\begin{equation}
+    \Phi_{\tau}^{(0)}(r) = -\frac{GM}{r}.
+\end{equation}
+
+For a stationary axisymmetric rotating black hole, the first allowed nonspherical mass multipole is the quadrupole term. We define the TFT quadrupole $Q_{\mathrm{TFT}}$ through the far-field potential expansion
+\begin{equation}
+    \Phi_{\tau}(r,\theta) = -\frac{GM}{r} + \frac{GQ_{\mathrm{TFT}}}{r^3} P_2(\cos\theta) + \mathcal{O}(r^{-4}),
+\end{equation}
+where
+\begin{equation}
+    P_2(\cos\theta) = \frac{1}{2} \left( 3\cos^2\theta-1 \right).
+\end{equation}
+
+The sign convention is chosen so that a negative quadrupole corresponds to the oblate rotating black-hole exterior. The structural strain variable is
+\begin{equation}
+    \alpha_{\mathrm{G}}(r,\theta) = -\frac{\Phi_{\tau}(r,\theta)}{c_{\mathrm{E}}^2}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \alpha_{\mathrm{G}}(r,\theta) = \frac{GM}{c_{\mathrm{E}}^2r} + \frac{GQ_{\mathrm{TFT}}}{c_{\mathrm{E}}^2r^3} P_2(\cos\theta) + \mathcal{O}(r^{-4}).
+\end{equation}
+
+Using
+\begin{equation}
+    R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2},
+\end{equation}
+this becomes
+\begin{equation}
+    \alpha_{\mathrm{G}}(r,\theta) = \frac{R_{\mathrm{QG}}}{r} + \frac{GQ_{\mathrm{TFT}}}{c_{\mathrm{E}}^2r^3} P_2(\cos\theta) + \mathcal{O}(r^{-4}).
+\end{equation}
+
+This equation defines how the spin-induced quadrupole modifies the local Soft-Floor strain field.
+
+\subsection{Symmetry and Dimensional Constraints}
+
+The quadrupole relation is strongly constrained before any detailed boundary model is introduced.
+
+First, the relaxed rotating black hole is axisymmetric. Therefore, the exterior cannot depend on the azimuthal angle $\phi$.
+
+Second, the center-of-mass frame removes the dipole term. Therefore, the first nontrivial mass multipole is the $\ell=2$ quadrupole.
+
+Third, reversing the spin direction,
+\begin{equation}
+    \mathcal{J}_{\mathrm{BH}} \rightarrow -\mathcal{J}_{\mathrm{BH}},
+\end{equation}
+does not change the mass distribution. It changes the direction of frame dragging, but not whether the boundary is oblate or prolate. Therefore, the mass quadrupole must be even in angular momentum:
+\begin{equation}
+    Q_{\mathrm{TFT}}(M,-\mathcal{J}_{\mathrm{BH}}) = Q_{\mathrm{TFT}}(M,\mathcal{J}_{\mathrm{BH}}).
+\end{equation}
+
+Thus, the leading spin-induced quadrupole must scale as
+\begin{equation}
+    Q_{\mathrm{TFT}} \propto \mathcal{J}_{\mathrm{BH}}^2.
+\end{equation}
+
+Fourth, the quadrupole must vanish when the black hole is nonrotating:
+\begin{equation}
+    \mathcal{J}_{\mathrm{BH}}=0 \quad \Rightarrow \quad Q_{\mathrm{TFT}}=0.
+\end{equation}
+
+Fifth, the dimensional form is fixed. A mass quadrupole has units
+\begin{equation}
+    [Q] = \mathrm{kg}\cdot\mathrm{m^2}.
+\end{equation}
+The only combination of $M$, $\mathcal{J}_{\mathrm{BH}}$, and $c_{\mathrm{E}}$ with these units is
+\begin{equation}
+    \frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2}.
+\end{equation}
+
+Therefore, the most general leading-order TFT quadrupole closure is
+\begin{equation}
+    Q_{\mathrm{TFT}} = -\lambda_Q \frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2} + \mathcal{O}(\mathcal{J}_{\mathrm{BH}}^4),
+\end{equation}
+where $\lambda_Q$ is a dimensionless quadrupole coefficient. The negative sign corresponds to the oblate deformation expected from rotation.
+
+\subsection{Kerr-Correspondence Closure}
+
+A generic mechanical boundary would permit arbitrary values of $\lambda_Q$. But a black-hole exterior cannot carry arbitrary quadrupole hair if it is to reproduce the successful weak-field Kerr phenomenology.
+
+Therefore, the relaxed TFT boundary must satisfy a no-hair selection rule:
+\begin{equation}
+    \text{relaxed exterior} \quad \Rightarrow \quad Q_{\mathrm{TFT}} = Q_{\mathrm{TFT}}(M,\mathcal{J}_{\mathrm{BH}}),
+\end{equation}
+not
+\begin{equation}
+    Q_{\mathrm{TFT}} = Q_{\mathrm{TFT}}(M,\mathcal{J}_{\mathrm{BH}},\text{arbitrary boundary history}).
+\end{equation}
+
+The weak-field Kerr-correspondence limit fixes
+\begin{equation}
+    \lambda_Q=1.
+\end{equation}
+
+The value $\lambda_Q = 1$ is a Kerr-correspondence closure, not yet a microscopic derivation from FCC/SC boundary stress balance. A future first-principles derivation must obtain this coefficient from the rotating boundary energy functional. In the present appendix, $\lambda_Q = 1$ is imposed as the no-hair condition required for weak-field Kerr correspondence.
+
+Thus, the baseline TFT quadrupole closure is
+\begin{equation}
+    \boxed{ Q_{\mathrm{TFT}}(M,\mathcal{J}_{\mathrm{BH}}) = -\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2}. }
+\end{equation}
+
+Using
+\begin{equation}
+    a_\ast = \frac{c_{\mathrm{E}}\mathcal{J}_{\mathrm{BH}}}{GM^2},
+\end{equation}
+we have
+\begin{equation}
+    \mathcal{J}_{\mathrm{BH}} = a_\ast \frac{GM^2}{c_{\mathrm{E}}}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    Q_{\mathrm{TFT}} = -\frac{1}{M c_{\mathrm{E}}^2} \left( a_\ast^2 \frac{G^2M^4}{c_{\mathrm{E}}^2} \right).
+\end{equation}
+
+So,
+\begin{equation}
+    Q_{\mathrm{TFT}} = -a_\ast^2 \frac{G^2M^3}{c_{\mathrm{E}}^4}.
+\end{equation}
+
+Using
+\begin{equation}
+    R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2},
+\end{equation}
+we obtain
+\begin{equation}
+    \boxed{ Q_{\mathrm{TFT}} = -a_\ast^2 M R_{\mathrm{QG}}^2. }
+\end{equation}
+
+This is the leading no-hair quadrupole closure for the rotating TFT exterior.
+
+\subsection{Strain-Field Form of the Quadrupole Closure}
+
+Substituting
+\begin{equation}
+    Q_{\mathrm{TFT}} = -a_\ast^2M R_{\mathrm{QG}}^2
+\end{equation}
+into the strain expansion gives
+\begin{equation}
+    \alpha_{\mathrm{G}}(r,\theta) = \frac{R_{\mathrm{QG}}}{r} - \frac{G}{c_{\mathrm{E}}^2r^3} \left( a_\ast^2M R_{\mathrm{QG}}^2 \right) P_2(\cos\theta) + \mathcal{O}(a_\ast^4).
+\end{equation}
+
+Since
+\begin{equation}
+    \frac{GM}{c_{\mathrm{E}}^2} = R_{\mathrm{QG}},
+\end{equation}
+this becomes
+\begin{equation}
+    \alpha_{\mathrm{G}}(r,\theta) = \frac{R_{\mathrm{QG}}}{r} - a_\ast^2 \frac{R_{\mathrm{QG}}^3}{r^3} P_2(\cos\theta) + \mathcal{O}(a_\ast^4).
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \boxed{ \alpha_{\mathrm{G}}(r,\theta) = \frac{R_{\mathrm{QG}}}{r} - a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 P_2(\cos\theta) + \mathcal{O}(a_\ast^4). }
+\end{equation}
+
+This is the quadrupole-corrected TFT strain field.
+
+At the equator,
+\begin{equation}
+    \theta = \frac{\pi}{2},
+\end{equation}
+so
+\begin{equation}
+    P_2(0) = -\frac{1}{2}.
+\end{equation}
+
+Therefore, the equatorial strain becomes
+\begin{equation}
+    \boxed{ \alpha_{\mathrm{G},\mathrm{eq}}(r) = \frac{R_{\mathrm{QG}}}{r} + \frac{1}{2} a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 + \mathcal{O}(a_\ast^4). }
+\end{equation}
+
+Along the polar axis,
+\begin{equation}
+    \theta = 0,
+\end{equation}
+so
+\begin{equation}
+    P_2(1) = 1.
+\end{equation}
+
+Therefore, the polar strain becomes
+\begin{equation}
+    \boxed{ \alpha_{\mathrm{G},\mathrm{pole}}(r) = \frac{R_{\mathrm{QG}}}{r} - a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 + \mathcal{O}(a_\ast^4). }
+\end{equation}
+
+This is physically consistent with an oblate rotating exterior: the equatorial strain is enhanced, while the polar strain is reduced.
+
+\subsection{Effect on the Photon-Orbit Equations}
+
+The previous section derived the circular photon-orbit condition from the Hamiltonian
+\begin{equation}
+    \mathcal{H}_{\gamma} = 0.
+\end{equation}
+
+For equatorial circular photon orbits, the central condition was
+\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}r} \left[ \omega_{\mathrm{drag}}(r) + s_{\mathrm{br}} \frac{c_P(r)}{r} \right] = 0,
+\end{equation}
+where $s_{\mathrm{br}}=+1$ labels the prograde branch and $s_{\mathrm{br}}=-1$ labels the retrograde branch.
+
+The quadrupole closure does not change this Hamiltonian structure. It changes the strain-dependent propagation speed through
+\begin{equation}
+    c_P(r,\theta) = c_{\mathrm{E}} \left[ 1-\alpha_{\mathrm{G}}(r,\theta) \right]^2.
+\end{equation}
+
+For equatorial photon rings, this becomes
+\begin{equation}
+    c_{P,\mathrm{eq}}(r) = c_{\mathrm{E}} \left[ 1-\alpha_{\mathrm{G},\mathrm{eq}}(r) \right]^2.
+\end{equation}
+
+Using the quadrupole-corrected equatorial strain,
+\begin{equation}
+    \alpha_{\mathrm{G},\mathrm{eq}}(r) = \frac{R_{\mathrm{QG}}}{r} + \frac{1}{2} a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3,
+\end{equation}
+we obtain
+\begin{equation}
+    \boxed{ c_{P,\mathrm{eq}}(r) = c_{\mathrm{E}} \left[ 1 - \frac{R_{\mathrm{QG}}}{r} - \frac{1}{2} a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 \right]^2. }
+\end{equation}
+
+Therefore, the quadrupole-corrected equatorial photon-ring condition is
+\begin{equation}
+    \boxed{ \frac{\mathrm{d}}{\mathrm{d}r} \left[ \omega_{\mathrm{drag}}(r) + s_{\mathrm{br}} \frac{c_{P,\mathrm{eq}}(r)}{r} \right] = 0. }
+\end{equation}
+
+With the weak-field matched dragging law,
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3} = 2a_\ast c_{\mathrm{E}} \frac{R_{\mathrm{QG}}^2}{r^3},
+\end{equation}
+the full baseline equatorial circular photon-orbit equation is
+\begin{equation}
+    \boxed{ \frac{\mathrm{d}}{\mathrm{d}r} \left[ 2a_\ast c_{\mathrm{E}} \frac{R_{\mathrm{QG}}^2}{r^3} + s_{\mathrm{br}} \frac{c_{\mathrm{E}}}{r} \left[ 1 - \frac{R_{\mathrm{QG}}}{r} - \frac{1}{2} a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 \right]^2 \right] = 0. }
+\end{equation}
+
+This is the circular photon-orbit equation including both the torsional frame-dragging term and the no-hair quadrupole correction.
+
+In dimensionless form, define
+\begin{equation}
+    x = \frac{R_{\mathrm{QG}}}{r}.
+\end{equation}
+
+Then
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = \frac{c_{\mathrm{E}}}{R_{\mathrm{QG}}} 2a_\ast x^3,
+\end{equation}
+and
+\begin{equation}
+    \frac{c_{P,\mathrm{eq}}(r)}{r} = \frac{c_{\mathrm{E}}}{R_{\mathrm{QG}}} x \left[ 1 - x - \frac{1}{2}a_\ast^2x^3 \right]^2.
+\end{equation}
+
+The circular photon-orbit equation becomes
+\begin{equation}
+    \boxed{ \frac{\mathrm{d}}{\mathrm{d}x} \left\{ 2a_\ast x^3 + s_{\mathrm{br}} x \left[ 1 - x - \frac{1}{2}a_\ast^2x^3 \right]^2 \right\} = 0. }
+\end{equation}
+
+Expanding to second order in spin gives
+\begin{equation}
+    \boxed{ 6a_\ast x^2 + s_{\mathrm{br}} \left[ (1-x)(1-3x) - a_\ast^2x^3(4-5x) \right] = 0. }
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    \boxed{ s_{\mathrm{br}}(1-x)(3x-1) + s_{\mathrm{br}} a_\ast^2x^3(4-5x) = 6a_\ast x^2. }
+\end{equation}
+
+This is the baseline quadrupole-corrected circular photon-orbit equation.
+
+\subsection{Interpretation}
+
+The quadrupole enters at order
+\begin{equation}
+    a_\ast^2.
+\end{equation}
+
+This is expected because reversing the spin direction should not reverse the mass deformation. Frame dragging is odd in spin:
+\begin{equation}
+    \omega_{\mathrm{drag}} \propto a_\ast,
+\end{equation}
+while the quadrupole is even in spin:
+\begin{equation}
+    Q_{\mathrm{TFT}} \propto -a_\ast^2.
+\end{equation}
+
+Thus, the rotating TFT photon-ring structure has two distinct spin corrections:
+\begin{equation}
+    \boxed{ \text{order } a_\ast: \text{ torsional Soft-Floor frame dragging}, }
+\end{equation}
+and
+\begin{equation}
+    \boxed{ \text{order } a_\ast^2: \text{ spin-induced quadrupolar strain}. }
+\end{equation}
+
+The quadrupole closure
+\begin{equation}
+    Q_{\mathrm{TFT}} = -\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2}
+\end{equation}
+should be interpreted as the leading weak-field no-hair selection rule for the relaxed rotating TFT boundary. It does not mean that TFT imports the Kerr interior. It means that the exterior multipole measured far from the black hole must match the successful Kerr quadrupole relation if TFT is to replace Kerr without breaking established weak-field phenomenology.
+
+A deviation may be parametrized as
+\begin{equation}
+    Q_{\mathrm{TFT}} = -(1+\delta_Q) \frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2}.
+\end{equation}
+
+The baseline Kerr-correspondence limit is
+\begin{equation}
+    \delta_Q=0.
+\end{equation}
+
+A nonzero $\delta_Q$ would be a direct observational deviation from Kerr-like no-hair behavior. Therefore, the conservative replacement strategy is
+\begin{equation}
+    \boxed{ \delta_Q=0 \quad \text{in the weak-field correspondence limit,} }
+\end{equation}
+while any TFT-specific deviations should be reserved for the strong-field saturation regime near the FCC/SC phase boundary.
+
+\subsection{Baseline Conclusion}
+
+The relaxed rotating TFT exterior must carry the no-hair quadrupole
+\begin{equation}
+    \boxed{ Q_{\mathrm{TFT}}(M,\mathcal{J}_{\mathrm{BH}}) = -\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2} = -a_\ast^2 M R_{\mathrm{QG}}^2. }
+\end{equation}
+
+This gives the quadrupole-corrected strain field
+\begin{equation}
+    \boxed{ \alpha_{\mathrm{G}}(r,\theta) = \frac{R_{\mathrm{QG}}}{r} - a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 P_2(\cos\theta) + \mathcal{O}(a_\ast^4). }
+\end{equation}
+
+It also gives the equatorial circular photon-orbit equation
+\begin{equation}
+    \boxed{ \frac{\mathrm{d}}{\mathrm{d}x} \left\{ 2a_\ast x^3 + s_{\mathrm{br}} x \left[ 1 - x - \frac{1}{2}a_\ast^2x^3 \right]^2 \right\} = 0, \qquad x=\frac{R_{\mathrm{QG}}}{r}. }
+\end{equation}
+
+The present section therefore fixes the leading no-hair quadrupole sector of the rotating TFT exterior. Frame dragging supplies the odd-in-spin correction, while the relaxed boundary quadrupole supplies the even-in-spin correction. Together, they determine the baseline circular photon-orbit structure through second order in spin.
+
+\section{Massive-Particle Orbits and the ISCO Map ($r_{\mathrm{ISCO}}(a_\ast)$)}
+
+The preceding sections derived the optical Hamiltonian for massless propagation and used it to obtain the photon-ring and shadow-impact map. However, a complete rotating black-hole phenomenology also requires massive-particle orbits. This is essential because accretion-disk observations, X-ray reflection spectroscopy, and continuum-fitting spin estimates are tied not primarily to the photon ring, but to the innermost stable circular orbit, or ISCO.
+
+Therefore, the rotating TFT exterior must also provide a massive-particle Hamiltonian and an ISCO map,
+\begin{equation}
+    r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast),
+\end{equation}
+where $s_{\mathrm{br}}=+1$ labels the prograde branch and $s_{\mathrm{br}}=-1$ labels the retrograde branch.
+
+The purpose of this section is to formulate the massive-particle orbital problem in the same Soft-Floor language used for photon propagation.
+
+\subsection{Massive-Particle Hamiltonian}
+
+The photon Hamiltonian used earlier follows from the local massless dispersion relation in the dragged Soft-Floor frame. For a massive particle, the corresponding local dispersion relation must include the rest-mass term.
+
+Let
+\begin{equation}
+    k_0 = \frac{m_0 c_{\mathrm{E}}}{\hbar}
+\end{equation}
+be the inverse Compton length of a particle of rest mass $m_0$. The massive Soft-Floor Hamiltonian is then
+\begin{equation}
+    \mathcal{H}_m = \frac{1}{2} \left[ - \frac{ \left( \omega - m_{\phi}\omega_{\mathrm{drag}}(r,\theta) \right)^2 }{ c_P^2(r,\theta) } + k_r^2 + \frac{k_{\theta}^2}{r^2} + \frac{m_{\phi}^2}{r^2\sin^2\theta} + k_0^2 \right] = 0.
+\end{equation}
+
+Here $\omega$ is the conserved wave frequency, $m_{\phi}$ is the azimuthal angular mode number, $k_r$ and $k_{\theta}$ are radial and polar wave numbers, and $\omega_{\mathrm{drag}}$ is the torsional Soft-Floor dragging rate.
+
+The massless photon Hamiltonian is recovered by setting
+\begin{equation}
+    k_0 = 0.
+\end{equation}
+
+Thus, the massive Hamiltonian is not an independent construction. It is the massive extension of the same dragged Soft-Floor dispersion law used for photon propagation.
+
+Dimensionally, every term in $\mathcal{H}_m$ has units of inverse length squared. The term
+\begin{equation}
+    \frac{ \left( \omega - m_{\phi}\omega_{\mathrm{drag}} \right)^2 }{ c_P^2 }
+\end{equation}
+has units
+\begin{equation}
+    \frac{\mathrm{s}^{-2}}{\mathrm{m^2s^{-2}}} = \mathrm{m^{-2}},
+\end{equation}
+and the rest term $k_0^2$ also has units $\mathrm{m^{-2}}$. Therefore, the Hamiltonian is dimensionally consistent.
+
+\subsection{Equatorial Massive-Particle Radial Potential}
+
+For equatorial circular orbits, set
+\begin{equation}
+    \theta = \frac{\pi}{2},
+\end{equation}
+and
+\begin{equation}
+    k_{\theta} = 0.
+\end{equation}
+
+The Hamiltonian becomes
+\begin{equation}
+    \mathcal{H}_m = \frac{1}{2} \left[ - \frac{ \left( \omega - m_{\phi}\omega_{\mathrm{drag}}(r) \right)^2 }{ c_P^2(r) } + k_r^2 + \frac{m_{\phi}^2}{r^2} + k_0^2 \right] = 0.
+\end{equation}
+
+Solving for the radial wave number gives
+\begin{equation}
+    k_r^2 = \frac{ \left( \omega - m_{\phi}\omega_{\mathrm{drag}}(r) \right)^2 }{ c_P^2(r) } - \frac{m_{\phi}^2}{r^2} - k_0^2.
+\end{equation}
+
+Now define the dimensionless specific energy
+\begin{equation}
+    \varepsilon = \frac{\omega}{k_0 c_{\mathrm{E}}},
+\end{equation}
+and the dimensionless axial angular momentum
+\begin{equation}
+    j_z = \frac{m_{\phi}}{k_0 R_{\mathrm{QG}}}.
+\end{equation}
+
+Also define
+\begin{equation}
+    x = \frac{R_{\mathrm{QG}}}{r},
+\end{equation}
+and the dimensionless dragging rate
+\begin{equation}
+    \widehat{\omega}(x) = \frac{R_{\mathrm{QG}}}{c_{\mathrm{E}}} \omega_{\mathrm{drag}}(r).
+\end{equation}
+
+Then
+\begin{equation}
+    \omega - m_{\phi}\omega_{\mathrm{drag}} = k_0 c_{\mathrm{E}} \left[ \varepsilon - j_z\widehat{\omega}(x) \right].
+\end{equation}
+
+The dimensionless propagation capacity is
+\begin{equation}
+    \widehat{c}_P(x) = \frac{c_P(x)}{c_{\mathrm{E}}}.
+\end{equation}
+
+Dividing the radial equation by $k_0^2$, one obtains
+\begin{equation}
+    \frac{k_r^2}{k_0^2} = \mathcal{R}_m(x;\varepsilon,j_z),
+\end{equation}
+where the massive-particle radial potential is
+\begin{equation}
+    \boxed{ \mathcal{R}_m(x;\varepsilon,j_z) = \frac{ \left[ \varepsilon - j_z\widehat{\omega}(x) \right]^2 }{ \widehat{c}_P^2(x) } - j_z^2x^2 - 1. }
+\end{equation}
+
+Allowed radial motion satisfies
+\begin{equation}
+    \mathcal{R}_m \geq 0.
+\end{equation}
+
+Circular massive-particle orbits are therefore determined by
+\begin{equation}
+    \mathcal{R}_m = 0,
+\end{equation}
+and
+\begin{equation}
+    \frac{\partial \mathcal{R}_m}{\partial x} = 0.
+\end{equation}
+
+The first condition imposes zero radial motion. The second condition imposes radial stationarity of the orbit.
+
+\subsection{ISCO Condition}
+
+A stable circular orbit is one for which small radial perturbations do not immediately open an allowed plunge or escape channel at the same conserved energy and angular momentum. With the convention
+\begin{equation}
+    k_r^2 = k_0^2\mathcal{R}_m,
+\end{equation}
+the stable circular branch satisfies
+\begin{equation}
+    \frac{\partial^2\mathcal{R}_m}{\partial x^2} < 0.
+\end{equation}
+
+The innermost stable circular orbit is the marginal orbit separating stable circular motion from unstable circular motion. Therefore, the ISCO is defined by
+\begin{equation}
+    \boxed{ \mathcal{R}_m = 0, \qquad \frac{\partial \mathcal{R}_m}{\partial x} = 0, \qquad \frac{\partial^2\mathcal{R}_m}{\partial x^2} = 0. }
+\end{equation}
+
+Solving this system gives
+\begin{equation}
+    x_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast),
+\end{equation}
+and therefore
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) = \frac{R_{\mathrm{QG}}}{x_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast)}. }
+\end{equation}
+
+The prograde and retrograde branches are distinguished by the sign of the orbital angular momentum relative to the black-hole spin. For $a_\ast>0$, $s_{\mathrm{br}}=+1$ corresponds to $j_z>0$, and $s_{\mathrm{br}}=-1$ corresponds to $j_z<0$. For general spin orientation, the branch sign is determined by the sign of $a_\ast j_z$.
+
+\subsection{Nonrotating ISCO Limit}
+
+The nonrotating limit provides an important validation test.
+
+For
+\begin{equation}
+    a_\ast = 0,
+\end{equation}
+one has
+\begin{equation}
+    \widehat{\omega}(x) = 0.
+\end{equation}
+
+The static TFT propagation law is
+\begin{equation}
+    c_P(r) = c_{\mathrm{E}} \left( 1-\frac{R_{\mathrm{QG}}}{r} \right)^2.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \widehat{c}_P(x) = (1-x)^2.
+\end{equation}
+
+The massive radial potential becomes
+\begin{equation}
+    \mathcal{R}_m(x;\varepsilon,j_z) = \frac{\varepsilon^2}{(1-x)^4} - j_z^2x^2 - 1.
+\end{equation}
+
+The circular-orbit conditions are
+\begin{equation}
+    \mathcal{R}_m = 0,
+\end{equation}
+and
+\begin{equation}
+    \frac{\partial \mathcal{R}_m}{\partial x} = 0.
+\end{equation}
+
+Solving these two equations gives
+\begin{equation}
+    \varepsilon^2 = \frac{(1-x)^5}{1-3x},
+\end{equation}
+and
+\begin{equation}
+    j_z^2 = \frac{2}{x(1-3x)}.
+\end{equation}
+
+Circular massive-particle orbits therefore require
+\begin{equation}
+    1-3x > 0.
+\end{equation}
+
+Thus,
+\begin{equation}
+    x < \frac{1}{3},
+\end{equation}
+or equivalently,
+\begin{equation}
+    r > 3R_{\mathrm{QG}}.
+\end{equation}
+
+The photon ring at
+\begin{equation}
+    r = 3R_{\mathrm{QG}}
+\end{equation}
+is therefore the limiting inner boundary of circular timelike orbits, as expected.
+
+The ISCO is obtained from the marginal-stability condition
+\begin{equation}
+    \frac{\partial^2\mathcal{R}_m}{\partial x^2} = 0.
+\end{equation}
+
+Substituting the circular-orbit solution into the second derivative gives the condition
+\begin{equation}
+    6x - 1 = 0.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    x_{\mathrm{ISCO},0} = \frac{1}{6},
+\end{equation}
+and hence
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},0} = 6R_{\mathrm{QG}}. }
+\end{equation}
+
+This is an important result. The same static TFT optical law that gives
+\begin{equation}
+    r_{\gamma,0} = 3R_{\mathrm{QG}}
+\end{equation}
+for the photon ring also gives
+\begin{equation}
+    r_{\mathrm{ISCO},0} = 6R_{\mathrm{QG}}
+\end{equation}
+for massive-particle orbital stability.
+
+Thus, the baseline TFT exterior reproduces the standard nonrotating ordering:
+\begin{equation}
+    \boxed{ R_{\mathrm{QG}} < r_{\gamma,0} = 3R_{\mathrm{QG}} < r_{\mathrm{ISCO},0} = 6R_{\mathrm{QG}}. }
+\end{equation}
+
+This ordering is necessary for any viable accretion-disk phenomenology.
+
+\subsection{Rotating ISCO Equation}
+
+For a rotating black hole, the weak-field matched dragging law gives
+\begin{equation}
+    \widehat{\omega}(x) = 2a_\ast x^3.
+\end{equation}
+
+The equatorial quadrupole-corrected propagation capacity is
+\begin{equation}
+    \widehat{c}_{P,\mathrm{eq}}(x) = \left[ 1 - x - \frac{1}{2}a_\ast^2x^3 \right]^2.
+\end{equation}
+
+Substituting these into the massive-particle radial potential gives
+\begin{equation}
+    \boxed{ \mathcal{R}_{m,\mathrm{eq}}(x;\varepsilon,j_z,a_\ast) = \frac{ \left[ \varepsilon - 2a_\ast j_z x^3 \right]^2 }{ \left[ 1 - x - \frac{1}{2}a_\ast^2x^3 \right]^4 } - j_z^2x^2 - 1. }
+\end{equation}
+
+The rotating ISCO is then determined by
+\begin{equation}
+    \boxed{ \mathcal{R}_{m,\mathrm{eq}} = 0, \qquad \frac{\partial\mathcal{R}_{m,\mathrm{eq}}}{\partial x} = 0, \qquad \frac{\partial^2\mathcal{R}_{m,\mathrm{eq}}}{\partial x^2} = 0. }
+\end{equation}
+
+This system is solved for
+\begin{equation}
+    \varepsilon_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast),
+\end{equation}
+\begin{equation}
+    j_{z,\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast),
+\end{equation}
+and
+\begin{equation}
+    x_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast).
+\end{equation}
+
+The ISCO radius is then
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) = \frac{R_{\mathrm{QG}}}{x_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast)}. }
+\end{equation}
+
+This equation is the TFT massive-particle counterpart of the photon-ring equation. It is the key bridge between the rotating TFT exterior and accretion-disk observables.
+
+\subsection{Weak-Spin Structure}
+
+The ISCO map must have the symmetry
+\begin{equation}
+    r_{\mathrm{ISCO},+}(a_\ast) = r_{\mathrm{ISCO},-}(-a_\ast).
+\end{equation}
+
+Therefore, for small spin, the ISCO branches must have the form
+\begin{equation}
+    r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) = 6R_{\mathrm{QG}} \left[ 1 - s_{\mathrm{br}}\kappa_{\mathrm{ISCO}}a_\ast + \mathcal{O}(a_\ast^2) \right].
+\end{equation}
+
+Here $\kappa_{\mathrm{ISCO}}$ is the dimensionless linear spin-response coefficient of the TFT massive-particle orbital closure.
+
+The prograde branch shifts inward,
+\begin{equation}
+    r_{\mathrm{ISCO},+} < 6R_{\mathrm{QG}},
+\end{equation}
+while the retrograde branch shifts outward,
+\begin{equation}
+    r_{\mathrm{ISCO},-} > 6R_{\mathrm{QG}}.
+\end{equation}
+
+This is the same qualitative branch splitting found for the photon ring, but it applies to massive-particle orbital stability rather than optical trapping.
+
+For exact weak-spin Kerr-ISCO correspondence, the coefficient would have to satisfy the Kerr value
+\begin{equation}
+    \kappa_{\mathrm{ISCO}} = \frac{2}{3},
+\end{equation}
+because the Kerr weak-spin ISCO expansion is
+\begin{equation}
+    r_{\mathrm{ISCO},s_{\mathrm{br}}}^{\mathrm{Kerr}} = 6R_{\mathrm{QG}} \left[ 1 - \frac{2}{3}s_{\mathrm{br}} a_\ast + \mathcal{O}(a_\ast^2) \right].
+\end{equation}
+
+In the present appendix, $\kappa_{\mathrm{ISCO}}$ should be treated as a validation output of the massive-particle closure and numerical exterior solver, unless one explicitly chooses to impose Kerr-ISCO correspondence as an additional phenomenological matching condition.
+
+This distinction is important. The photon-ring and frame-dragging sectors were matched to weak-field Kerr behavior by construction. The ISCO sector now provides an independent test of whether the same Soft-Floor dynamics reproduces the massive-particle orbital structure without an additional closure.
+
+\subsection{Observational Role of the ISCO}
+
+The ISCO map is essential because it connects TFT to accretion-disk observables.
+
+The disk inner edge is modeled as
+\begin{equation}
+    r_{\mathrm{in}} \approx r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast)
+\end{equation}
+for geometrically thin, radiatively efficient disks. Therefore, X-ray reflection and continuum-fitting measurements infer spin primarily through the mapping
+\begin{equation}
+    a_\ast \longmapsto r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast).
+\end{equation}
+
+Without this map, TFT can address photon rings and shadows but cannot fully interface with standard black-hole spin measurements.
+
+The present massive-particle Hamiltonian supplies that missing interface:
+\begin{equation}
+    \boxed{ (M,a_\ast) \longrightarrow r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) \longrightarrow \text{disk inner edge observables}. }
+\end{equation}
+
+Thus, the ISCO is not a secondary detail. It is one of the primary observational tests of the rotating TFT exterior.
+
+\subsection{Baseline Conclusion}
+
+The massive-particle extension of the rotating Soft-Floor Hamiltonian is
+\begin{equation}
+    \boxed{ \mathcal{H}_m = \frac{1}{2} \left[ - \frac{ \left( \omega - m_{\phi}\omega_{\mathrm{drag}} \right)^2 }{ c_P^2 } + k_r^2 + \frac{k_{\theta}^2}{r^2} + \frac{m_{\phi}^2}{r^2\sin^2\theta} + k_0^2 \right] = 0. }
+\end{equation}
+
+For equatorial orbits, this gives the radial potential
+\begin{equation}
+    \boxed{ \mathcal{R}_m(x;\varepsilon,j_z) = \frac{ \left[ \varepsilon - j_z\widehat{\omega}(x) \right]^2 }{ \widehat{c}_P^2(x) } - j_z^2x^2 - 1. }
+\end{equation}
+
+The ISCO is defined by the triple condition
+\begin{equation}
+    \boxed{ \mathcal{R}_m = 0, \qquad \frac{\partial\mathcal{R}_m}{\partial x} = 0, \qquad \frac{\partial^2\mathcal{R}_m}{\partial x^2} = 0. }
+\end{equation}
+
+In the nonrotating limit, the baseline TFT exterior gives
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},0} = 6R_{\mathrm{QG}}. }
+\end{equation}
+
+For rotating black holes, the ISCO map is obtained from
+\begin{equation}
+    \boxed{ \mathcal{R}_{m,\mathrm{eq}}(x;\varepsilon,j_z,a_\ast) = \frac{ \left[ \varepsilon - 2a_\ast j_z x^3 \right]^2 }{ \left[ 1 - x - \frac{1}{2}a_\ast^2x^3 \right]^4 } - j_z^2x^2 - 1, }
+\end{equation}
+with
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) = \frac{R_{\mathrm{QG}}}{x_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast)}. }
+\end{equation}
+
+This completes the massive-particle orbital sector required for the rotating TFT black-hole exterior. The appendix now contains the essential observational maps for frame dragging, quadrupole structure, photon rings, shadows, ISCOs, and ringdown.
+
+\section{Observational Surface Map: $R_{\mathrm{obs}}(a_\ast)$, Capacity Surface, Photon Ring, Shadow Radius, and ISCO}
+
+The previous sections fixed the leading ingredients of the rotating TFT black-hole exterior.
+
+The torsional stiffness closure gives
+\begin{equation}
+    \tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \tau_{D,\mathrm{bulk}},
+\end{equation}
+so the leading exterior angular-drag field has the inverse-cubic radial form.
+
+Weak-field coefficient matching fixes the exterior dragging law to
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3} = 2a_\ast c_{\mathrm{E}}\frac{R_{\mathrm{QG}}^2}{r^3}.
+\end{equation}
+
+The relaxed no-hair quadrupole closure gives
+\begin{equation}
+    Q_{\mathrm{TFT}} = -\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2} = -a_\ast^2M R_{\mathrm{QG}}^2.
+\end{equation}
+
+The photon-ring section derived the massless circular-orbit structure, while the massive-particle section derived the ISCO condition from the massive Soft-Floor Hamiltonian. Together, these define the leading observational surface map of a rotating TFT black hole.
+
+The important conceptual point is that the observed black-hole scale is not a single surface. TFT separates the physical phase boundary, the torsional co-motion surface, the photon-ring surface, the shadow-impact scale, and the massive-particle orbital stability surface. Thus the observational map is not one radius but a layered structure:
+\begin{equation}
+    R_{\mathrm{obs}}(a_\ast) = \left\{ R_{\mathrm{QG}}, \, r_{\mathrm{sat}}(\theta,a_\ast), \, r_{\mathrm{cap}}(\theta,a_\ast), \, r_{\gamma,s_{\mathrm{br}}}(a_\ast), \, B_{\gamma,s_{\mathrm{br}}}(a_\ast), \, r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) \right\}.
+\end{equation}
+
+Here
+\begin{equation}
+    R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2}
+\end{equation}
+is the mass-defined saturation scale and the nonrotating FCC/SC boundary radius.
+
+The spin-deformed physical boundary is
+\begin{equation}
+    r_{\mathrm{sat}}(\theta,a_\ast).
+\end{equation}
+
+The torsional capacity surface is
+\begin{equation}
+    r_{\mathrm{cap}}(\theta,a_\ast).
+\end{equation}
+
+The prograde and retrograde photon-ring radii are
+\begin{equation}
+    r_{\gamma,+}(a_\ast), \qquad r_{\gamma,-}(a_\ast).
+\end{equation}
+
+The corresponding observed shadow-impact scales are
+\begin{equation}
+    B_{\gamma,+}(a_\ast), \qquad B_{\gamma,-}(a_\ast).
+\end{equation}
+
+The corresponding massive-particle orbital stability radii are
+\begin{equation}
+    r_{\mathrm{ISCO},+}(a_\ast), \qquad r_{\mathrm{ISCO},-}(a_\ast).
+\end{equation}
+
+These define the prograde and retrograde innermost stable circular orbits of the rotating TFT exterior.
+
+This is the TFT replacement for treating the Kerr horizon, ergosurface, photon ring, shadow, and ISCO as consequences of a single geometric metric. In TFT, they are mechanically distinct surfaces or orbital maps of the strained Soft Floor.
+
+\subsection{Physical Boundary Versus Observational Surface}
+
+The nonrotating black-hole saturation radius is
+\begin{equation}
+    R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2}.
+\end{equation}
+
+This is the radius at which the active FCC Soft Floor reaches
+\begin{equation}
+    \alpha_{\mathrm{G}} = 1
+\end{equation}
+in the spherical limit.
+
+For a rotating black hole, however, the physical phase boundary is not exactly spherical. It is the surface on which the strain reaches saturation:
+\begin{equation}
+    \alpha_{\mathrm{G}}(r,\theta) = 1.
+\end{equation}
+
+Therefore, the rotating physical boundary is defined by
+\begin{equation}
+    \boxed{ \alpha_{\mathrm{G}}(r_{\mathrm{sat}}(\theta,a_\ast),\theta) = 1. }
+\end{equation}
+
+Thus,
+\begin{equation}
+    R_{\mathrm{QG}}
+\end{equation}
+is the underlying mass scale, while
+\begin{equation}
+    r_{\mathrm{sat}}(\theta,a_\ast)
+\end{equation}
+is the actual spin-deformed FCC/SC boundary.
+
+An observer does not directly image this microscopic phase boundary. The observer infers the black hole through optical trapping, frame dragging, photon-ring structure, accretion emission, shadow formation, and disk orbital stability. Therefore, the observed black-hole boundary is a derived phenomenological map, not simply the physical saturation boundary.
+
+This distinction is central:
+\begin{equation}
+    \boxed{ \text{physical boundary} \neq \text{capacity surface} \neq \text{photon ring} \neq \text{shadow edge} \neq \text{ISCO}. }
+\end{equation}
+
+The photon ring and shadow are massless optical observables. The ISCO is a massive-particle orbital-stability observable. They probe different sectors of the rotating TFT exterior.
+
+\subsection{Quadrupole-Corrected Strain Field}
+
+The no-hair quadrupole closure gives the leading rotating strain field:
+\begin{equation}
+    \alpha_{\mathrm{G}}(r,\theta) = \frac{R_{\mathrm{QG}}}{r} - a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 P_2(\cos\theta) + \mathcal{O}(a_\ast^4),
+\end{equation}
+where
+\begin{equation}
+    P_2(\cos\theta) = \frac{1}{2} \left( 3\cos^2\theta-1 \right).
+\end{equation}
+
+The local Soft-Floor propagation speed is
+\begin{equation}
+    c_P(r,\theta) = c_{\mathrm{E}} \left[ 1-\alpha_{\mathrm{G}}(r,\theta) \right]^2.
+\end{equation}
+
+Substituting the quadrupole-corrected strain gives
+\begin{equation}
+    \boxed{ c_P(r,\theta) = c_{\mathrm{E}} \left[ 1 - \frac{R_{\mathrm{QG}}}{r} + a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 P_2(\cos\theta) \right]^2. }
+\end{equation}
+
+This propagation law is the optical input for the capacity surface, photon-ring condition, shadow-impact map, and massive-particle orbital stability calculation.
+
+\subsection{Spin-Deformed Saturation Boundary}
+
+The physical FCC/SC boundary is defined by
+\begin{equation}
+    \alpha_{\mathrm{G}}(r,\theta) = 1.
+\end{equation}
+
+Using the quadrupole-corrected strain field, the boundary condition becomes
+\begin{equation}
+    1 = \frac{R_{\mathrm{QG}}}{r} - a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 P_2(\cos\theta).
+\end{equation}
+
+Define
+\begin{equation}
+    x = \frac{R_{\mathrm{QG}}}{r}.
+\end{equation}
+
+Then
+\begin{equation}
+    1 = x - a_\ast^2x^3P_2(\cos\theta).
+\end{equation}
+
+For a perturbative rotating solution, write
+\begin{equation}
+    x = 1+\delta x,
+\end{equation}
+where
+\begin{equation}
+    \delta x = \mathcal{O}(a_\ast^2).
+\end{equation}
+
+Keeping terms through order $a_\ast^2$ gives
+\begin{equation}
+    \delta x = a_\ast^2P_2(\cos\theta).
+\end{equation}
+
+Since
+\begin{equation}
+    r = \frac{R_{\mathrm{QG}}}{x},
+\end{equation}
+the spin-deformed saturation boundary is
+\begin{equation}
+    \boxed{ r_{\mathrm{sat}}(\theta,a_\ast) = R_{\mathrm{QG}} \left[ 1 - a_\ast^2P_2(\cos\theta) \right] + \mathcal{O}(a_\ast^4). }
+\end{equation}
+
+At the equator,
+\begin{equation}
+    \theta = \frac{\pi}{2}, \qquad P_2(0) = -\frac{1}{2},
+\end{equation}
+so
+\begin{equation}
+    \boxed{ r_{\mathrm{sat,eq}} = R_{\mathrm{QG}} \left( 1+\frac{1}{2}a_\ast^2 \right) + \mathcal{O}(a_\ast^4). }
+\end{equation}
+
+At the pole,
+\begin{equation}
+    \theta = 0, \qquad P_2(1) = 1,
+\end{equation}
+so
+\begin{equation}
+    \boxed{ r_{\mathrm{sat,pole}} = R_{\mathrm{QG}} \left( 1-a_\ast^2 \right) + \mathcal{O}(a_\ast^4). }
+\end{equation}
+
+Thus, to leading order, rotation produces an oblate saturation boundary: the equatorial boundary expands and the polar boundary contracts.
+
+This result should not be extrapolated to extremal spin. The expression is a perturbative quadrupole boundary map through order $a_\ast^2$. A full near-extremal solution requires the nonlinear numerical exterior solver developed later.
+
+\subsection{Torsional Capacity Surface}
+
+The torsional capacity surface is the surface on which the local azimuthal drift speed of the Soft Floor equals the local propagation capacity.
+
+The defining condition is
+\begin{equation}
+    \left| v_{\phi}^{(\mathrm{SF})}(r,\theta) \right| = c_P(r,\theta).
+\end{equation}
+
+The Soft-Floor drift speed is
+\begin{equation}
+    v_{\phi}^{(\mathrm{SF})}(r,\theta) = r\sin\theta \, \omega_{\mathrm{drag}}(r).
+\end{equation}
+
+Using the weak-field matched dragging law,
+\begin{equation}
+    \omega_{\mathrm{drag}}(r) = 2a_\ast c_{\mathrm{E}} \frac{R_{\mathrm{QG}}^2}{r^3},
+\end{equation}
+one obtains
+\begin{equation}
+    v_{\phi}^{(\mathrm{SF})}(r,\theta) = 2a_\ast c_{\mathrm{E}} \left( \frac{R_{\mathrm{QG}}}{r} \right)^2 \sin\theta.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \left| v_{\phi}^{(\mathrm{SF})} \right| = 2|a_\ast|c_{\mathrm{E}} \left( \frac{R_{\mathrm{QG}}}{r} \right)^2 \sin\theta.
+\end{equation}
+
+Equating this with the quadrupole-corrected propagation speed gives
+\begin{equation}
+    2|a_\ast| \left( \frac{R_{\mathrm{QG}}}{r} \right)^2 \sin\theta = \left[ 1 - \frac{R_{\mathrm{QG}}}{r} + a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 P_2(\cos\theta) \right]^2.
+\end{equation}
+
+In dimensionless form,
+\begin{equation}
+    x = \frac{R_{\mathrm{QG}}}{r},
+\end{equation}
+the capacity-surface equation is
+\begin{equation}
+    \boxed{ 2|a_\ast|x^2\sin\theta = \left[ 1-x+a_\ast^2x^3P_2(\cos\theta) \right]^2. }
+\end{equation}
+
+The physical capacity surface is the exterior solution satisfying
+\begin{equation}
+    r_{\mathrm{cap}}(\theta,a_\ast) \geq r_{\mathrm{sat}}(\theta,a_\ast).
+\end{equation}
+
+At leading order, neglect the $a_\ast^2$ quadrupole correction inside the propagation factor. Then
+\begin{equation}
+    2|a_\ast|x^2\sin\theta = (1-x)^2.
+\end{equation}
+
+For the exterior branch,
+\begin{equation}
+    0 < x < 1,
+\end{equation}
+so
+\begin{equation}
+    1-x = x\sqrt{2|a_\ast|\sin\theta}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    x = \frac{1}{ 1+\sqrt{2|a_\ast|\sin\theta} }.
+\end{equation}
+
+Thus,
+\begin{equation}
+    \boxed{ r_{\mathrm{cap}}(\theta,a_\ast) = R_{\mathrm{QG}} \left[ 1+\sqrt{2|a_\ast|\sin\theta} \right] }
+\end{equation}
+to leading order.
+
+At the pole,
+\begin{equation}
+    \sin\theta = 0,
+\end{equation}
+so
+\begin{equation}
+    \boxed{ r_{\mathrm{cap,pole}} = R_{\mathrm{QG}}. }
+\end{equation}
+
+At the equator,
+\begin{equation}
+    \sin\theta = 1,
+\end{equation}
+so
+\begin{equation}
+    \boxed{ r_{\mathrm{cap,eq}} = R_{\mathrm{QG}} \left[ 1+\sqrt{2|a_\ast|} \right]. }
+\end{equation}
+
+This is the TFT analogue of an ergosurface, but it should not be described as a copied Kerr ergosphere. It is a mechanical co-motion surface: the surface where torsional Soft-Floor drift consumes the available local propagation capacity.
+
+The square-root dependence is also important. The capacity surface is a near-boundary strong-field object; therefore, its leading displacement is not analytic in $a_\ast$. This occurs because the propagation capacity collapses quadratically near saturation, while the torsional drift is linear in spin.
+
+\subsection{Photon-Ring Radius as an Observational Surface}
+
+The photon ring is determined by the rotating Soft-Floor Hamiltonian. For equatorial circular photon orbits, the condition derived earlier is
+\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}r} \left[ \omega_{\mathrm{drag}}(r) + s_{\mathrm{br}} \frac{c_{P,\mathrm{eq}}(r)}{r} \right] = 0,
+\end{equation}
+where
+\begin{equation}
+    s_{\mathrm{br}} = +1
+\end{equation}
+labels the prograde branch, and
+\begin{equation}
+    s_{\mathrm{br}} = -1
+\end{equation}
+labels the retrograde branch.
+
+The quadrupole-corrected equatorial propagation speed is
+\begin{equation}
+    c_{P,\mathrm{eq}}(r) = c_{\mathrm{E}} \left[ 1 - \frac{R_{\mathrm{QG}}}{r} - \frac{1}{2}a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 \right]^2.
+\end{equation}
+
+Therefore, the quadrupole-corrected equatorial photon-ring condition is
+\begin{equation}
+    \boxed{ \frac{\mathrm{d}}{\mathrm{d}r} \left[ 2a_\ast c_{\mathrm{E}} \frac{R_{\mathrm{QG}}^2}{r^3} + s_{\mathrm{br}} \frac{c_{\mathrm{E}}}{r} \left[ 1 - \frac{R_{\mathrm{QG}}}{r} - \frac{1}{2}a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 \right]^2 \right] = 0. }
+\end{equation}
+
+In dimensionless form,
+\begin{equation}
+    x = \frac{R_{\mathrm{QG}}}{r},
+\end{equation}
+this becomes
+\begin{equation}
+    \boxed{ \frac{\mathrm{d}}{\mathrm{d}x} \left\{ 2a_\ast x^3 + s_{\mathrm{br}} x \left[ 1-x-\frac{1}{2}a_\ast^2x^3 \right]^2 \right\} = 0. }
+\end{equation}
+
+This equation defines
+\begin{equation}
+    x_{\gamma,s_{\mathrm{br}}}(a_\ast),
+\end{equation}
+and therefore
+\begin{equation}
+    \boxed{ r_{\gamma,s_{\mathrm{br}}}(a_\ast) = \frac{R_{\mathrm{QG}}}{x_{\gamma,s_{\mathrm{br}}}(a_\ast)}. }
+\end{equation}
+
+In the nonrotating limit,
+\begin{equation}
+    a_\ast = 0,
+\end{equation}
+one obtains
+\begin{equation}
+    \boxed{ r_{\gamma,0} = 3R_{\mathrm{QG}}. }
+\end{equation}
+
+In the weak-spin limit, the leading branch splitting is
+\begin{equation}
+    \boxed{ r_{\gamma,s_{\mathrm{br}}} = 3R_{\mathrm{QG}} \left( 1-s_{\mathrm{br}} a_\ast \right) + \mathcal{O}(a_\ast^2). }
+\end{equation}
+
+Thus, the prograde photon ring shifts inward, while the retrograde photon ring shifts outward.
+
+\subsection{Shadow Impact Scale}
+
+The photon ring is not itself the directly observed shadow radius. The observable shadow edge is determined by the critical impact scale of rays that asymptotically approach the circular photon orbit.
+
+From the photon-ring derivation, the signed impact parameter is
+\begin{equation}
+    b_{\gamma,s_{\mathrm{br}}} = \frac{1}{ \omega_{\mathrm{drag}}(r_{\gamma,s_{\mathrm{br}}}) + s_{\mathrm{br}} \frac{c_P(r_{\gamma,s_{\mathrm{br}}})}{r_{\gamma,s_{\mathrm{br}}}} }.
+\end{equation}
+
+In this normalization, $b_{\gamma,s_{\mathrm{br}}}$ has dimensions of time. The corresponding physical impact length is
+\begin{equation}
+    B_{\gamma,s_{\mathrm{br}}} = c_{\mathrm{E}} \left| b_{\gamma,s_{\mathrm{br}}} \right|.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \boxed{ B_{\gamma,s_{\mathrm{br}}}(a_\ast) = \frac{ c_{\mathrm{E}} }{ \left| \omega_{\mathrm{drag}}(r_{\gamma,s_{\mathrm{br}}}) + s_{\mathrm{br}} \frac{c_P(r_{\gamma,s_{\mathrm{br}}})}{r_{\gamma,s_{\mathrm{br}}}} \right| }. }
+\end{equation}
+
+This is the baseline equatorial TFT shadow-impact scale.
+
+In the nonrotating case,
+\begin{equation}
+    r_{\gamma,0} = 3R_{\mathrm{QG}},
+\end{equation}
+and
+\begin{equation}
+    c_P(3R_{\mathrm{QG}}) = c_{\mathrm{E}} \left( 1-\frac{1}{3} \right)^2 = \frac{4}{9}c_{\mathrm{E}}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    B_{\gamma,0} = \frac{c_{\mathrm{E}}}{ c_P/r } = \frac{c_{\mathrm{E}}}{ \left( \frac{4}{9}c_{\mathrm{E}} \right) \left( \frac{1}{3R_{\mathrm{QG}}} \right) }.
+\end{equation}
+
+Thus,
+\begin{equation}
+    \boxed{ B_{\gamma,0} = \frac{27}{4}R_{\mathrm{QG}}. }
+\end{equation}
+
+This is the static TFT shadow-impact scale implied by the present optical propagation law. It should not yet be described as Kerr-matched. Rather, it is a sharp prediction of the current baseline optical closure.
+
+For small spin, using the leading photon-ring splitting gives
+\begin{equation}
+    \boxed{ B_{\gamma,+} \approx \frac{27}{4}R_{\mathrm{QG}} \left( 1-\frac{1}{2}a_\ast \right) }
+\end{equation}
+for the prograde branch, and
+\begin{equation}
+    \boxed{ B_{\gamma,-} \approx \frac{27}{4}R_{\mathrm{QG}} \left( 1+\frac{1}{2}a_\ast \right) }
+\end{equation}
+for the retrograde branch.
+
+Thus, frame dragging compresses the prograde shadow edge and expands the retrograde shadow edge. The leading average shadow scale remains
+\begin{equation}
+    \boxed{ B_{\mathrm{sh,avg}} \approx \frac{27}{4}R_{\mathrm{QG}} + \mathcal{O}(a_\ast^2). }
+\end{equation}
+
+The leading equatorial asymmetry scale is
+\begin{equation}
+    \boxed{ \Delta B_{\mathrm{sh}} = B_{\gamma,-}-B_{\gamma,+} \approx \frac{27}{4}R_{\mathrm{QG}}a_\ast. }
+\end{equation}
+
+This gives a direct observational map from spin to shadow asymmetry in the baseline rotating TFT exterior.
+
+\subsection{ISCO as a Massive-Particle Observational Surface}
+
+The photon ring and shadow-impact scale describe massless propagation. Accretion-disk observables, however, depend on massive-particle orbital stability. Therefore, the observational map must also include the ISCO surface derived from the massive-particle Hamiltonian.
+
+The ISCO branches are
+\begin{equation}
+    r_{\mathrm{ISCO},+}(a_\ast), \qquad r_{\mathrm{ISCO},-}(a_\ast),
+\end{equation}
+where the $(+)$ branch is prograde and the $(-)$ branch is retrograde.
+
+They are obtained from the massive-particle radial potential by the triple condition
+\begin{equation}
+    \mathcal{R}_m = 0, \qquad \frac{\partial\mathcal{R}_m}{\partial x} = 0, \qquad \frac{\partial^2\mathcal{R}_m}{\partial x^2} = 0.
+\end{equation}
+
+Thus,
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) = \frac{R_{\mathrm{QG}}}{x_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast)}. }
+\end{equation}
+
+In the nonrotating limit, the baseline TFT massive-particle closure gives
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},0} = 6R_{\mathrm{QG}}. }
+\end{equation}
+
+Therefore, the nonrotating ordering of characteristic radii is
+\begin{equation}
+    \boxed{ R_{\mathrm{QG}} < r_{\gamma,0}=3R_{\mathrm{QG}} < r_{\mathrm{ISCO},0}=6R_{\mathrm{QG}}. }
+\end{equation}
+
+This ordering is required for viable accretion-disk phenomenology. The ISCO surface supplies the link between the rotating TFT exterior and disk-based spin measurements, while the photon ring and shadow scale supply the optical imaging observables.
+
+The ISCO should therefore be treated as a distinct observational layer:
+\begin{equation}
+    \boxed{ \text{shadow} = \text{massless optical observable}, \qquad \text{ISCO} = \text{massive-particle disk observable}. }
+\end{equation}
+
+\subsection{The Observational Map}
+
+The leading observational map is therefore:
+
+\begin{equation}
+    \boxed{ R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2} }
+\end{equation}
+as the nonrotating saturation scale;
+
+\begin{equation}
+    \boxed{ r_{\mathrm{sat}}(\theta,a_\ast) = R_{\mathrm{QG}} \left[ 1-a_\ast^2P_2(\cos\theta) \right] + \mathcal{O}(a_\ast^4) }
+\end{equation}
+as the spin-deformed physical FCC/SC boundary;
+
+\begin{equation}
+    \boxed{ r_{\mathrm{cap}}(\theta,a_\ast) = R_{\mathrm{QG}} \left[ 1+\sqrt{2|a_\ast|\sin\theta} \right] }
+\end{equation}
+as the leading torsional capacity surface;
+
+\begin{equation}
+    \boxed{ r_{\gamma,s_{\mathrm{br}}}(a_\ast) = \frac{R_{\mathrm{QG}}}{x_{\gamma,s_{\mathrm{br}}}(a_\ast)} }
+\end{equation}
+where $x_{\gamma,s_{\mathrm{br}}}$ is determined by
+\begin{equation}
+    \boxed{ \frac{\mathrm{d}}{\mathrm{d}x} \left\{ 2a_\ast x^3 + s_{\mathrm{br}} x \left[ 1-x-\frac{1}{2}a_\ast^2x^3 \right]^2 \right\} = 0; }
+\end{equation}
+
+\begin{equation}
+    \boxed{ B_{\gamma,s_{\mathrm{br}}}(a_\ast) = \frac{ c_{\mathrm{E}} }{ \left| \omega_{\mathrm{drag}}(r_{\gamma,s_{\mathrm{br}}}) + s_{\mathrm{br}} \frac{c_P(r_{\gamma,s_{\mathrm{br}}})}{r_{\gamma,s_{\mathrm{br}}}} \right| } }
+\end{equation}
+as the equatorial shadow-impact scale; and
+
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) = \frac{R_{\mathrm{QG}}}{x_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast)} }
+\end{equation}
+as the massive-particle orbital-stability surface.
+
+Collectively,
+\begin{equation}
+    \boxed{ R_{\mathrm{obs}}(a_\ast) = \left\{ R_{\mathrm{QG}}, \, r_{\mathrm{sat}}, \, r_{\mathrm{cap}}, \, r_{\gamma,s_{\mathrm{br}}}, \, B_{\gamma,s_{\mathrm{br}}}, \, r_{\mathrm{ISCO},s_{\mathrm{br}}} \right\}. }
+\end{equation}
+
+This is the observational horizon/shadow/capacity/ISCO map for the leading rotating TFT exterior.
+
+\subsection{Baseline Conclusion}
+
+The observational black-hole surface in TFT is not a single Kerr coordinate horizon. It is a layered mechanical-optical-orbital map:
+\begin{equation}
+    \boxed{ \text{mass scale} \rightarrow \text{physical phase boundary} \rightarrow \text{torsional capacity surface} \rightarrow \text{photon ring} \rightarrow \text{shadow impact scale} \rightarrow \text{ISCO}. }
+\end{equation}
+
+The mass scale is
+\begin{equation}
+    R_{\mathrm{QG}}.
+\end{equation}
+
+The physical rotating FCC/SC boundary is
+\begin{equation}
+    r_{\mathrm{sat}}(\theta,a_\ast).
+\end{equation}
+
+The torsional co-motion surface is
+\begin{equation}
+    r_{\mathrm{cap}}(\theta,a_\ast).
+\end{equation}
+
+The photon-ring radius is
+\begin{equation}
+    r_{\gamma,s_{\mathrm{br}}}(a_\ast).
+\end{equation}
+
+The observed equatorial shadow edge is
+\begin{equation}
+    B_{\gamma,s_{\mathrm{br}}}(a_\ast).
+\end{equation}
+
+The massive-particle orbital stability surface is
+\begin{equation}
+    r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast).
+\end{equation}
+
+The ISCO connects the rotating TFT exterior to accretion-disk spin measurements and completes the observational map beyond optical shadow phenomenology.
+
+This map is sufficient as the baseline TFT observational framework. It also identifies a critical strong-field test: the present static optical closure predicts
+\begin{equation}
+    B_{\gamma,0} = \frac{27}{4}R_{\mathrm{QG}}.
+\end{equation}
+
+Therefore, a final Kerr-replacement model must decide whether this value is a genuine TFT shadow-scale deviation, or whether a saturation-corrected optical law modifies the shadow-impact scale while preserving the weak-field lensing, frame-dragging, photon-ring, ISCO, and ringdown limits recovered or formulated in the preceding sections.
+
+\section{Numerical Exterior Solver for the Rotating TFT Black-Hole Exterior}
+
+The previous sections derived the analytic closures needed to construct the rotating TFT black-hole exterior. These closures determine the torsional stiffness, weak-field angular-drag normalization, spin-induced quadrupole, photon-ring condition, massive-particle ISCO condition, observational surface map, and ringdown scaling.
+
+The final step is to formulate the numerical exterior solver. The purpose of the solver is to determine the coupled exterior fields
+\begin{equation}
+    r_{\partial}(\theta,a_\ast), \qquad \alpha_{\mathrm{G}}(r,\theta), \qquad \omega_{\mathrm{drag}}(r,\theta), \qquad c_P(r,\theta),
+\end{equation}
+for a rotating TFT black hole with final mass $M$ and dimensionless spin $a_\ast$.
+
+Here $r_{\partial}(\theta,a_\ast)$ is the spin-deformed FCC/SC phase boundary. To prevent ambiguity, we explicitly define $r_{\partial}(\theta,a_\ast) \equiv r_{\mathrm{sat}}(\theta,a_\ast)$ when referring to the solved FCC/SC saturation boundary. Furthermore, $\alpha_{\mathrm{G}}(r,\theta)$ is the exterior gravitational strain field, $\omega_{\mathrm{drag}}(r,\theta)$ is the torsional Soft-Floor angular-drag field, and $c_P(r,\theta)$ is the local propagation capacity of the strained Soft Floor.
+
+The numerical solver is therefore not a metric solver in the GR sense. It is a coupled free-boundary and Soft-Floor constitutive solver.
+
+\subsection{Dimensionless Variables}
+
+For numerical stability, introduce the dimensionless radius
+\begin{equation}
+    \bar{r} = \frac{r}{R_{\mathrm{QG}}},
+\end{equation}
+where
+\begin{equation}
+    R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2}.
+\end{equation}
+
+The dimensionless spin is
+\begin{equation}
+    a_\ast = \frac{c_{\mathrm{E}}\mathcal{J}_{\mathrm{BH}}}{GM^2}.
+\end{equation}
+
+The dimensionless angular-drag field is
+\begin{equation}
+    \widehat{\omega}(\bar{r},\theta) = \frac{R_{\mathrm{QG}}}{c_{\mathrm{E}}} \omega_{\mathrm{drag}}(r,\theta).
+\end{equation}
+
+Thus,
+\begin{equation}
+    \omega_{\mathrm{drag}}(r,\theta) = \frac{c_{\mathrm{E}}}{R_{\mathrm{QG}}} \widehat{\omega}(\bar{r},\theta).
+\end{equation}
+
+The propagation law becomes
+\begin{equation}
+    \boxed{ \frac{c_P(\bar{r},\theta)}{c_{\mathrm{E}}} = \left[ 1-\alpha_{\mathrm{G}}(\bar{r},\theta) \right]^2. }
+\end{equation}
+
+The dimensionless Soft-Floor azimuthal drift speed is
+\begin{equation}
+    \frac{v_{\phi}^{(\mathrm{SF})}}{c_{\mathrm{E}}} = \bar{r}\sin\theta \, \widehat{\omega}(\bar{r},\theta).
+\end{equation}
+
+This gives the fundamental numerical field set:
+\begin{equation}
+    \boxed{ \left\{ \bar{r}_{\partial}(\theta,a_\ast), \, \alpha_{\mathrm{G}}(\bar{r},\theta), \, \widehat{\omega}(\bar{r},\theta), \, \frac{c_P(\bar{r},\theta)}{c_{\mathrm{E}}} \right\}. }
+\end{equation}
+
+\subsection{Exterior Strain Equation}
+
+At the baseline closure level, the exterior active FCC Soft Floor is source-free outside the saturated domain. The black-hole mass and spin-induced quadrupole are encoded through the inner phase boundary and the far-field multipole conditions.
+
+Therefore, the exterior strain field satisfies
+\begin{equation}
+    \boxed{ \bar{\nabla}^2\alpha_{\mathrm{G}} = 0 }
+\end{equation}
+in the exterior domain
+\begin{equation}
+    \bar{r} > \bar{r}_{\partial}(\theta,a_\ast).
+\end{equation}
+
+Here $\bar{\nabla}$ denotes differentiation with respect to the dimensionless coordinates $(\bar{r},\theta,\phi)$. In axisymmetric spherical coordinates, this equation is
+\begin{equation}
+    \frac{1}{\bar{r}^2} \frac{\partial}{\partial \bar{r}} \left( \bar{r}^2 \frac{\partial \alpha_{\mathrm{G}}}{\partial \bar{r}} \right) + \frac{1}{\bar{r}^2\sin\theta} \frac{\partial}{\partial\theta} \left( \sin\theta \frac{\partial \alpha_{\mathrm{G}}}{\partial\theta} \right) = 0.
+\end{equation}
+
+The inner boundary is the FCC/SC saturation condition:
+\begin{equation}
+    \boxed{ \alpha_{\mathrm{G}}(\bar{r}_{\partial}(\theta,a_\ast),\theta) = 1. }
+\end{equation}
+
+The far-field condition is fixed by the mass monopole and the no-hair quadrupole closure:
+\begin{equation}
+    \boxed{ \alpha_{\mathrm{G}}(\bar{r},\theta) \rightarrow \frac{1}{\bar{r}} - a_\ast^2 \frac{P_2(\cos\theta)}{\bar{r}^3} \qquad (\bar{r}\rightarrow\infty). }
+\end{equation}
+
+This condition encodes
+\begin{equation}
+    Q_{\mathrm{TFT}} = -a_\ast^2 M R_{\mathrm{QG}}^2 = -\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2}.
+\end{equation}
+
+Thus, the strain solver is the free-boundary problem
+\begin{equation}
+    \boxed{ \bar{\nabla}^2\alpha_{\mathrm{G}}=0, \qquad \alpha_{\mathrm{G}}(\bar{r}_{\partial},\theta)=1, \qquad \alpha_{\mathrm{G}} \rightarrow \frac{1}{\bar{r}} - a_\ast^2 \frac{P_2(\cos\theta)}{\bar{r}^3}. }
+\end{equation}
+
+This is the leading exterior structural equation. A later nonlinear strong-field completion may replace $\bar{\nabla}^2\alpha_{\mathrm{G}}=0$ with a nonlinear constitutive operator, but the present equation is the baseline closure implied by the appendix.
+
+\subsection{Free-Boundary Update}
+
+The physical boundary is not prescribed independently. It is the level surface on which the active FCC Soft Floor reaches saturation:
+\begin{equation}
+    \alpha_{\mathrm{G}} = 1.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \boxed{ \bar{r}_{\partial}(\theta,a_\ast) \text{ is determined by } \alpha_{\mathrm{G}}(\bar{r}_{\partial}(\theta,a_\ast),\theta)=1. }
+\end{equation}
+
+The perturbative analytic result for the spin-deformed saturation boundary provides the initial boundary guess:
+\begin{equation}
+    \bar{r}_{\partial}^{(0)}(\theta) = 1 - a_\ast^2 P_2(\cos\theta).
+\end{equation}
+
+The solver then updates the boundary iteratively. If the current boundary estimate is $\bar{r}_{\partial}^{(n)}(\theta)$, then the residual is
+\begin{equation}
+    \mathcal{R}_{\partial}^{(n)}(\theta) = \alpha_{\mathrm{G}}(\bar{r}_{\partial}^{(n)}(\theta),\theta)-1.
+\end{equation}
+
+A Newton-type level-set update has the form
+\begin{equation}
+    \bar{r}_{\partial}^{(n+1)}(\theta) = \bar{r}_{\partial}^{(n)}(\theta) - \frac{ \mathcal{R}_{\partial}^{(n)}(\theta) }{ \partial_{\bar{r}}\alpha_{\mathrm{G}}(\bar{r}_{\partial}^{(n)}(\theta),\theta) }.
+\end{equation}
+
+The iteration continues until
+\begin{equation}
+    \left| \alpha_{\mathrm{G}}(\bar{r}_{\partial}(\theta),\theta)-1 \right|
+\end{equation}
+is below the chosen tolerance for all $\theta$.
+
+This turns the black-hole boundary into a solved phase-transition surface, not an imposed geometric horizon.
+
+\subsection{Exterior Torsional-Drag Equation}
+
+The torsional Soft-Floor field is governed by angular-momentum flux balance in the exterior FCC medium.
+
+The cylindrical distance from the spin axis is
+\begin{equation}
+    r_\perp = r\sin\theta.
+\end{equation}
+
+In dimensionless variables,
+\begin{equation}
+    \frac{r_\perp}{R_{\mathrm{QG}}} = \bar{r}\sin\theta.
+\end{equation}
+
+The torsional energy density is proportional to the square of the angular-drag gradient weighted by the lever arm $r_\perp^2$. The corresponding exterior balance equation is
+\begin{equation}
+    \boxed{ \bar{\nabla}\cdot \left[ \bar{r}^2\sin^2\theta \, \bar{\nabla}\widehat{\omega} \right] = 0. }
+\end{equation}
+
+This equation is the two-dimensional axisymmetric extension of the radial torsional equation. If
+\begin{equation}
+    \widehat{\omega} = \widehat{\omega}(\bar{r})
+\end{equation}
+only, then it reduces to
+\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}\bar{r}} \left[ \bar{r}^4 \frac{\mathrm{d}\widehat{\omega}}{\mathrm{d}\bar{r}} \right] = 0,
+\end{equation}
+which is the dimensionless form of the analytic radial equation derived earlier.
+
+The far-field condition is fixed by weak-field Lense--Thirring matching:
+\begin{equation}
+    \boxed{ \widehat{\omega}(\bar{r},\theta) \rightarrow \frac{2a_\ast}{\bar{r}^3} \qquad (\bar{r}\rightarrow\infty). }
+\end{equation}
+
+The axis regularity condition is
+\begin{equation}
+    \boxed{ \frac{\partial\widehat{\omega}}{\partial\theta}=0 \qquad \text{at} \qquad \theta=0,\pi. }
+\end{equation}
+
+For reflection-symmetric solutions, one may solve only the northern half-domain,
+\begin{equation}
+    0\leq\theta\leq\frac{\pi}{2},
+\end{equation}
+with equatorial symmetry condition
+\begin{equation}
+    \boxed{ \frac{\partial\widehat{\omega}}{\partial\theta}=0 \qquad \text{at} \qquad \theta=\frac{\pi}{2}. }
+\end{equation}
+
+The inner torsional boundary condition is supplied by the live FCC/SC boundary. For the baseline Kerr-correspondence solver, the inner boundary is treated as a phase-locked angular-momentum reservoir. The boundary angular-drag datum is adjusted so that the exterior satisfies the global angular-momentum normalization
+\begin{equation}
+    \mathcal{J}_{\mathrm{BH}} = a_\ast\frac{GM^2}{c_{\mathrm{E}}}
+\end{equation}
+and the far-field coefficient
+\begin{equation}
+    \widehat{\omega} \rightarrow \frac{2a_\ast}{\bar{r}^3}.
+\end{equation}
+
+Thus, the torsional problem is not normalized by an arbitrary local no-slip surface velocity. It is normalized by the conserved total angular momentum of the black hole.
+
+A practical numerical implementation is to use a boundary value
+\begin{equation}
+    \widehat{\omega}_{\partial}(\theta) = \widehat{\omega}(\bar{r}_{\partial}(\theta),\theta),
+\end{equation}
+solve the exterior torsional equation, and iterate $\widehat{\omega}_{\partial}$ until the asymptotic coefficient satisfies
+\begin{equation}
+    \boxed{ \lim_{\bar{r}\rightarrow\infty} \bar{r}^3\widehat{\omega} = 2a_\ast. }
+\end{equation}
+
+In the spherical radial limit this gives
+\begin{equation}
+    \widehat{\omega}(\bar{r}) = \frac{2a_\ast}{\bar{r}^3}.
+\end{equation}
+
+This recovers the analytic weak-field-matched result exactly.
+
+\subsection{Propagation-Capacity Field}
+
+Once the strain field is known, the propagation-capacity field is not independently solved. It is determined algebraically:
+\begin{equation}
+    \boxed{ c_P(\bar{r},\theta) = c_{\mathrm{E}} \left[ 1-\alpha_{\mathrm{G}}(\bar{r},\theta) \right]^2. }
+\end{equation}
+
+The causal-capacity collapse occurs automatically at the phase boundary because
+\begin{equation}
+    \alpha_{\mathrm{G}}(\bar{r}_{\partial},\theta) = 1.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \boxed{ c_P(\bar{r}_{\partial},\theta) = 0. }
+\end{equation}
+
+This is the numerical representation of causal arrest at the FCC/SC boundary.
+
+\subsection{Capacity-Surface Extraction}
+
+After solving for $\alpha_{\mathrm{G}}(\bar{r},\theta)$ and $\widehat{\omega}(\bar{r},\theta)$, the torsional capacity surface is extracted from
+\begin{equation}
+    \left| v_{\phi}^{(\mathrm{SF})} \right| = c_P.
+\end{equation}
+
+In dimensionless form, this condition is
+\begin{equation}
+    \boxed{ \left| \bar{r}\sin\theta \, \widehat{\omega}(\bar{r},\theta) \right| = \left[ 1-\alpha_{\mathrm{G}}(\bar{r},\theta) \right]^2. }
+\end{equation}
+
+Solving this equation for $\bar{r}$ at each $\theta$ gives
+\begin{equation}
+    \boxed{ \bar{r}_{\mathrm{cap}}(\theta,a_\ast). }
+\end{equation}
+
+The physical surface is
+\begin{equation}
+    r_{\mathrm{cap}}(\theta,a_\ast) = R_{\mathrm{QG}}\bar{r}_{\mathrm{cap}}(\theta,a_\ast).
+\end{equation}
+
+The extracted capacity surface must satisfy
+\begin{equation}
+    \boxed{ \bar{r}_{\mathrm{cap}}(\theta,a_\ast) \geq \bar{r}_{\partial}(\theta,a_\ast). }
+\end{equation}
+
+This ensures that the capacity surface lies in the active exterior rather than inside the saturated SC domain.
+
+\subsection{Photon-Ring Extraction}
+
+The numerical photon-ring calculation uses the rotating Soft-Floor Hamiltonian:
+\begin{equation}
+    \mathcal{H}_{\gamma} = \frac{1}{2} \left[ - \frac{ \left( \omega - m_{\phi}\omega_{\mathrm{drag}}(r,\theta) \right)^2 }{ c_P^2(r,\theta) } + k_r^2 + \frac{k_{\theta}^2}{r^2} + \frac{m_{\phi}^2}{r^2\sin^2\theta} \right] = 0.
+\end{equation}
+
+For equatorial circular photon orbits,
+\begin{equation}
+    \theta = \frac{\pi}{2}, \qquad k_{\theta} = 0.
+\end{equation}
+
+The radial photon potential is
+\begin{equation}
+    \mathcal{R}_{\gamma}(r;b_{\gamma}) = \frac{ \left[ 1-b_{\gamma}\omega_{\mathrm{drag}}(r) \right]^2 }{ c_P^2(r) } - \frac{b_{\gamma}^2}{r^2},
+\end{equation}
+where
+\begin{equation}
+    b_{\gamma} = \frac{m_{\phi}}{\omega}.
+\end{equation}
+
+The circular photon orbit is a double root:
+\begin{equation}
+    \boxed{ \mathcal{R}_{\gamma} = 0, \qquad \frac{\mathrm{d}\mathcal{R}_{\gamma}}{\mathrm{d}r} = 0. }
+\end{equation}
+
+Equivalently, in the equatorial branch form,
+\begin{equation}
+    \boxed{ \frac{\mathrm{d}}{\mathrm{d}r} \left[ \omega_{\mathrm{drag}}(r) + s_{\mathrm{br}} \frac{c_P(r)}{r} \right] = 0, }
+\end{equation}
+where $s_{\mathrm{br}}=+1$ labels the prograde branch, and $s_{\mathrm{br}}=-1$ labels the retrograde branch.
+
+The solver therefore outputs
+\begin{equation}
+    \boxed{ r_{\gamma,+}(a_\ast), \qquad r_{\gamma,-}(a_\ast). }
+\end{equation}
+
+The corresponding impact scale is
+\begin{equation}
+    \boxed{ B_{\gamma,s_{\mathrm{br}}} = \frac{ c_{\mathrm{E}} }{ \left| \omega_{\mathrm{drag}}(r_{\gamma,s_{\mathrm{br}}}) + s_{\mathrm{br}} \frac{c_P(r_{\gamma,s_{\mathrm{br}}})}{r_{\gamma,s_{\mathrm{br}}}} \right| }. }
+\end{equation}
+
+This gives the equatorial numerical shadow-impact scale.
+
+\subsection{ISCO Extraction}
+
+The numerical exterior also determines the massive-particle ISCO map. This is required for comparison with accretion-disk observables.
+
+The massive-particle radial potential is
+\begin{equation}
+    \mathcal{R}_m(x;\varepsilon,j_z) = \frac{ \left[ \varepsilon - j_z\widehat{\omega}(x) \right]^2 }{ \widehat{c}_P^2(x) } - j_z^2x^2 - 1.
+\end{equation}
+
+For the rotating equatorial exterior,
+\begin{equation}
+    \widehat{\omega}(x) = 2a_\ast x^3,
+\end{equation}
+and
+\begin{equation}
+    \widehat{c}_{P,\mathrm{eq}}(x) = \left[ 1 - x - \frac{1}{2}a_\ast^2x^3 \right]^2.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \mathcal{R}_{m,\mathrm{eq}}(x;\varepsilon,j_z,a_\ast) = \frac{ \left[ \varepsilon - 2a_\ast j_z x^3 \right]^2 }{ \left[ 1 - x - \frac{1}{2}a_\ast^2x^3 \right]^4 } - j_z^2x^2 - 1.
+\end{equation}
+
+The numerical ISCO is obtained from the triple condition
+\begin{equation}
+    \boxed{ \mathcal{R}_{m,\mathrm{eq}} = 0, \qquad \frac{\partial\mathcal{R}_{m,\mathrm{eq}}}{\partial x} = 0, \qquad \frac{\partial^2\mathcal{R}_{m,\mathrm{eq}}}{\partial x^2} = 0. }
+\end{equation}
+
+Solving these equations gives
+\begin{equation}
+    x_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast),
+\end{equation}
+and therefore
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) = \frac{R_{\mathrm{QG}}}{x_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast)}. }
+\end{equation}
+
+The prograde and retrograde branches are distinguished by the sign of the orbital angular momentum relative to the black-hole spin. The solver must recover
+\begin{equation}
+    \boxed{ r_{\mathrm{ISCO},0} = 6R_{\mathrm{QG}} }
+\end{equation}
+in the nonrotating limit.
+
+This subsection closes the gap between the numerical exterior and accretion-disk spin observables.
+
+\subsection{Full Ray-Traced Shadow}
+
+The equatorial photon-ring calculation gives the branch impact scales. The full observed shadow, however, requires ray tracing through the numerical Soft-Floor fields.
+
+The Hamilton equations are
+\begin{equation}
+    \frac{\mathrm{d}x^i}{\mathrm{d}\lambda} = \frac{\partial\mathcal{H}_{\gamma}}{\partial k_i},
+\end{equation}
+and
+\begin{equation}
+    \frac{\mathrm{d}k_i}{\mathrm{d}\lambda} = - \frac{\partial\mathcal{H}_{\gamma}}{\partial x^i}.
+\end{equation}
+
+Here $x^i=(r,\theta,\phi)$ and $k_i=(k_r,k_{\theta},m_{\phi})$.
+
+The ray-tracing procedure is:
+\begin{enumerate}
+    \item Choose the observer inclination and screen coordinates.
+    \item Launch rays backward from the observer screen.
+    \item Evolve each ray using the Hamilton equations.
+    \item Classify the ray as escaping, approaching the capacity region, or terminating on the FCC/SC phase boundary.
+    \item The boundary between escaping and terminating rays defines the observed shadow curve.
+\end{enumerate}
+
+The full shadow curve is therefore an output of the numerical Soft-Floor Hamiltonian, not an imported Kerr shadow formula.
+
+\subsection{Ringdown Extraction from the Solved Boundary}
+
+After the exterior fields and phase boundary have been solved, the ringdown spectrum is obtained from perturbations of the numerical boundary:
+\begin{equation}
+    r_{\partial}(\theta,a_\ast) \rightarrow r_{\partial}(\theta,a_\ast) + \delta R(\theta,\phi,t).
+\end{equation}
+
+The perturbation is expanded as
+\begin{equation}
+    \delta R(\theta,\phi,t) = \sum_{\ell,m} q_{\ell m}(t) \mathcal{Y}_{\ell m}^{(\partial)}(\theta,\phi;a_\ast),
+\end{equation}
+where $\mathcal{Y}_{\ell m}^{(\partial)}$ are the spin-deformed boundary eigenfunctions.
+
+The numerical boundary operator has the schematic eigenvalue form
+\begin{equation}
+    \mathcal{L}_{\partial}(a_\ast)\mathcal{Y}_{\ell m}^{(\partial)} = \lambda_{\ell m}(a_\ast)\mathcal{Y}_{\ell m}^{(\partial)}.
+\end{equation}
+
+Including stress shedding into the exterior gives a complex eigenfrequency
+\begin{equation}
+    \varpi_{\ell m} = \omega_{\ell m} - i\Gamma_{\ell m}^{(\mathrm{rd})}.
+\end{equation}
+
+The no-hair scaling derived earlier requires
+\begin{equation}
+    \boxed{ \varpi_{\ell m}(M,a_\ast) = \frac{c_{\mathrm{E}}^3}{GM} \left[ \widehat{\omega}_{\ell m}(a_\ast) - i\widehat{\Gamma}_{\ell m}^{(\mathrm{rd})}(a_\ast) \right]. }
+\end{equation}
+
+The numerical solver therefore determines the dimensionless functions
+\begin{equation}
+    \widehat{\omega}_{\ell m}(a_\ast), \qquad \widehat{\Gamma}_{\ell m}^{(\mathrm{rd})}(a_\ast).
+\end{equation}
+
+\subsection{Solver Sequence}
+
+The complete baseline numerical procedure is as follows:
+
+\begin{enumerate}
+    \item Prescribe the final black-hole parameters $M$ and $a_\ast$. Then compute $R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2}$ and $\mathcal{J}_{\mathrm{BH}} = a_\ast \frac{GM^2}{c_{\mathrm{E}}}$.
+    \item Initialize the phase boundary using $\bar{r}_{\partial}^{(0)}(\theta) = 1 - a_\ast^2P_2(\cos\theta)$.
+    \item Solve the exterior strain equation $\bar{\nabla}^2\alpha_{\mathrm{G}}=0$ with $\alpha_{\mathrm{G}}(\bar{r}_{\partial},\theta)=1$ and the far-field monopole-quadrupole condition.
+    \item Update the free boundary until $\alpha_{\mathrm{G}}(\bar{r}_{\partial}(\theta),\theta)=1$ is satisfied globally.
+    \item Compute $c_P = c_{\mathrm{E}}(1-\alpha_{\mathrm{G}})^2$.
+    \item Solve the torsional equation $\bar{\nabla}\cdot \left[ \bar{r}^2\sin^2\theta \, \bar{\nabla}\widehat{\omega} \right] = 0$ with far-field angular-momentum normalization $\widehat{\omega} \rightarrow \frac{2a_\ast}{\bar{r}^3}$.
+    \item Extract the capacity surface from $\left| \bar{r}\sin\theta \, \widehat{\omega} \right| = (1-\alpha_{\mathrm{G}})^2$.
+    \item Extract the photon-ring radii from the double-root condition $\mathcal{R}_{\gamma}=0$ and $\frac{\mathrm{d}\mathcal{R}_{\gamma}}{\mathrm{d}r}=0$.
+    \item Extract the ISCO branches from the massive-particle radial potential using $\mathcal{R}_{m,\mathrm{eq}}=0$, $\frac{\partial\mathcal{R}_{m,\mathrm{eq}}}{\partial x}=0$, and $\frac{\partial^2\mathcal{R}_{m,\mathrm{eq}}}{\partial x^2}=0$. This gives $r_{\mathrm{ISCO},+}(a_\ast)$ and $r_{\mathrm{ISCO},-}(a_\ast)$.
+    \item Ray-trace the full shadow curve using $\mathcal{H}_{\gamma}=0$.
+    \item Perturb the solved boundary and solve the complex eigenvalue problem for $\omega_{\ell m}(M,a_\ast)$ and $\Gamma_{\ell m}^{(\mathrm{rd})}(M,a_\ast)$.
+\end{enumerate}
+
+\subsection{Validation Limits}
+
+The numerical exterior solution must reproduce the analytic limits derived earlier.
+
+In the nonrotating limit, $a_\ast=0$, the solution must reduce to:
+\begin{itemize}
+    \item $\bar{r}_{\partial}=1$
+    \item $\alpha_{\mathrm{G}}=\frac{1}{\bar{r}}$
+    \item $\widehat{\omega}=0$
+    \item $r_{\gamma,0}=3R_{\mathrm{QG}}$
+    \item $B_{\gamma,0} = \frac{27}{4}R_{\mathrm{QG}}$
+    \item $r_{\mathrm{ISCO},0} = 6R_{\mathrm{QG}}$
+\end{itemize}
+
+In the weak-spin limit, the components must approach:
+\begin{itemize}
+    \item \textbf{Boundary:} $\bar{r}_{\partial}(\theta) = 1 - a_\ast^2P_2(\cos\theta)$
+    \item \textbf{Far-field strain:} $\alpha_{\mathrm{G}} \rightarrow \frac{1}{\bar{r}} - a_\ast^2 \frac{P_2(\cos\theta)}{\bar{r}^3}$
+    \item \textbf{Far-field angular drag:} $\widehat{\omega} \rightarrow \frac{2a_\ast}{\bar{r}^3}$
+    \item \textbf{Photon-ring branches:} $r_{\gamma,s_{\mathrm{br}}} = 3R_{\mathrm{QG}} (1-s_{\mathrm{br}} a_\ast) + \mathcal{O}(a_\ast^2)$
+    \item \textbf{ISCO branches:} $r_{\mathrm{ISCO},s_{\mathrm{br}}}(a_\ast) = 6R_{\mathrm{QG}} \left[ 1 - s_{\mathrm{br}}\kappa_{\mathrm{ISCO}}a_\ast + \mathcal{O}(a_\ast^2) \right]$. The coefficient $\kappa_{\mathrm{ISCO}}$ is a validation output of the massive-particle closure unless Kerr-ISCO correspondence is imposed as an additional phenomenological matching condition.
+    \item \textbf{Ringdown spectrum:} $\omega_{\ell m} = \frac{c_{\mathrm{E}}^3}{GM} \widehat{\omega}_{\ell m}(a_\ast)$ and $\Gamma_{\ell m}^{(\mathrm{rd})} = \frac{c_{\mathrm{E}}^3}{GM} \widehat{\Gamma}_{\ell m}^{(\mathrm{rd})}(a_\ast)$
+\end{itemize}
+
+The topological stability of the saturated FCC/SC boundary in the near-extremal regime ($a_\ast \rightarrow 1$) is not assumed analytically. It is a validation condition of the numerical solver: the solution must demonstrate that $\alpha_{\mathrm{G}}=1$ remains a closed, regular, simply connected phase boundary throughout the allowed spin range.
+
+These validation limits are required for the solver to be consistent with the analytic closure sections.
+
+\subsection{Baseline Conclusion}
+
+The full rotating TFT exterior is obtained by solving the coupled field set
+\begin{equation}
+    \boxed{ \bar{r}_{\partial}(\theta,a_\ast), \qquad \alpha_{\mathrm{G}}(\bar{r},\theta), \qquad \widehat{\omega}(\bar{r},\theta), \qquad c_P(\bar{r},\theta). }
+\end{equation}
+
+The baseline governing system is
+\begin{equation}
+    \boxed{ \bar{\nabla}^2\alpha_{\mathrm{G}} = 0, }
+\end{equation}
+\begin{equation}
+    \boxed{ \bar{\nabla}\cdot \left[ \bar{r}^2\sin^2\theta \, \bar{\nabla}\widehat{\omega} \right] = 0, }
+\end{equation}
+and
+\begin{equation}
+    \boxed{ c_P = c_{\mathrm{E}}(1-\alpha_{\mathrm{G}})^2, }
+\end{equation}
+with the free-boundary condition
+\begin{equation}
+    \boxed{ \alpha_{\mathrm{G}}(\bar{r}_{\partial}(\theta),\theta) = 1. }
+\end{equation}
+
+The far-field conditions impose the conserved mass, angular momentum, and no-hair quadrupole:
+\begin{equation}
+    \boxed{ \alpha_{\mathrm{G}} \rightarrow \frac{1}{\bar{r}} - a_\ast^2 \frac{P_2(\cos\theta)}{\bar{r}^3}, }
+\end{equation}
+and
+\begin{equation}
+    \boxed{ \widehat{\omega} \rightarrow \frac{2a_\ast}{\bar{r}^3}. }
+\end{equation}
+
+From this solved exterior, one extracts the physical phase boundary, torsional capacity surface, photon-ring radii, shadow-impact curve, ISCO branches, and ringdown spectrum.
+
+The present section therefore converts the analytic rotating TFT closures into a numerical free-boundary solver. It completes the baseline mathematical program for constructing the rotating TFT black-hole exterior while leaving room for a later nonlinear strong-field constitutive upgrade if required by shadow, ISCO, or ringdown data.
+
+\section{Summary of the Kerr-TFT Correspondence}
+
+The table below summarizes how the standard geometric features of the Kerr metric are systematically replaced by the mechanical continuum dynamics of the rotating Tension Field Theory (TFT) exterior.
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{longtable}{@{} p{3cm} p{4.5cm} p{4.5cm} p{4cm} @{}}
+\toprule
+\textbf{Kerr Structure} & \textbf{Kerr Equation / Condition} & \textbf{TFT Replacement} & \textbf{Mechanical Meaning in TFT} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Kerr Structure} & \textbf{Kerr Equation / Condition} & \textbf{TFT Replacement} & \textbf{Mechanical Meaning in TFT} \\
+\midrule
+\endhead
+
+Spin parameter & $a_\ast = \frac{c_{\mathrm{E}}\mathcal{J}_{\mathrm{BH}}}{GM^2}$ & Same normalization & Kerr spin becomes \textbf{angular momentum stored in live FCC/SC boundary torsion plus external Soft-Floor shear}. \\
+
+Gravitational length & $R_{\mathrm{QG}} = \frac{GM}{c_{\mathrm{E}}^2}$ & Same mass scale & TFT keeps the successful gravitational scale but interprets it as the \textbf{saturation scale of the strain field}, not a geometric singularity scale. \\
+
+Kerr vacuum exterior & $R_{\mu\nu}=0$ with Kerr metric & $\bar{\nabla}^2\alpha_{\mathrm{G}}=0$, outside $r_{\partial}$ & Vacuum curvature is replaced by a \textbf{source-free strain field in the active FCC Soft Floor}. \\
+
+Kerr rotating metric & $ds^2_{\mathrm{Kerr}}$ with $g_{t\phi} \neq 0$ & $ds^2_{\tau,\mathrm{rot}} = -c_{\mathrm{E}}^2(1-\alpha_{\mathrm{G}})^2 dt^2 + \frac{dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta (d\phi - \omega_{\mathrm{drag}} dt)^2}{(1-\alpha_{\mathrm{G}})^2}$ & Metric rotation is replaced by \textbf{strain refraction plus dragged Soft-Floor azimuthal flow}. \\
+
+Frame dragging & $\omega_{\mathrm{LT}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2 r^3}$ & $\omega_{\mathrm{drag}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2 r^3}$ & Kerr frame dragging becomes \textbf{torsional shear propagation through the FCC Soft Floor}. \\
+
+Torsional field law & Encoded geometrically in $g_{t\phi}$ & $\frac{\mathrm{d}}{\mathrm{d}r}\left[\tau_{\mathrm{tor}}(r)r^4\frac{\mathrm{d}\omega_{\mathrm{drag}}}{\mathrm{d}r}\right]=0$ & The rotating exterior is generated by \textbf{angular-momentum flux balance}, not by postulating a rotating metric. \\
+
+Torsional stiffness & No material stiffness in GR & $\tau_{\mathrm{tor}} = \tau_{D,\mathrm{bulk}} = \frac{c_{\mathrm{E}}^4}{G r_{\mathrm{D}}^2}$ & The exterior has a real \textbf{mechanical stiffness coefficient} inherited from the Soft-Floor lattice. \\
+
+Horizon & $\Delta=0$, \newline $r_+=R_{\mathrm{QG}}\left(1+\sqrt{1-a_\ast^2}\right)$ & $\alpha_{\mathrm{G}}(r_{\partial},\theta)=1$, with $r_{\partial}\equiv r_{\mathrm{sat}}$ & The Kerr horizon is replaced by a \textbf{FCC/SC phase boundary where the active Soft Floor saturates}. \\
+
+Causal arrest & Horizon traps null rays geometrically & $c_P(r_{\partial},\theta) = c_{\mathrm{E}}(1-\alpha_{\mathrm{G}})^2 = 0$ & Light arrest occurs because \textbf{local propagation capacity collapses at saturation}. \\
+
+Ergosurface & $g_{tt}=0$ & $\left|r\sin\theta\,\omega_{\mathrm{drag}}\right| = c_P(r,\theta)$ & The ergosphere becomes a \textbf{capacity surface where Soft-Floor drift equals local propagation speed}. \\
+
+No-hair quadrupole & $Q_{\mathrm{Kerr}} = -\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2} = -a_\ast^2 M R_{\mathrm{QG}}^2$ & $Q_{\mathrm{TFT}} = -\lambda_Q\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2}$, with $\lambda_Q=1$ & Kerr no-hair becomes a \textbf{relaxed saturated-boundary attractor} with no residual surface memory. \\
+
+Photon ring & Null geodesic double root: $\mathcal{R}_{\gamma}=0,\ \mathcal{R}'_{\gamma}=0$ & $\frac{\mathrm{d}}{\mathrm{d}r}\left[\omega_{\mathrm{drag}}(r)+s_{\mathrm{br}}\frac{c_P(r)}{r}\right]=0$ & Photon rings arise from \textbf{competition between torsional dragging and radial propagation capacity}. \\
+
+Photon impact scale & Kerr shadow from null geodesic constants & $B_{\gamma,s_{\mathrm{br}}} = \frac{c_{\mathrm{E}}}{\left| \omega_{\mathrm{drag}} + s_{\mathrm{br}} \frac{c_P}{r_{\gamma,s_{\mathrm{br}}}} \right|}$ & The shadow scale is computed from the \textbf{TFT optical Hamiltonian}, not imported from Kerr. \\
+
+ISCO & Massive-particle triple root: $\mathcal{R}_m=0,\ \mathcal{R}'_m=0,\ \mathcal{R}''_m=0$ & $\mathcal{R}_m = \frac{[\varepsilon-j_z\widehat{\omega}(x)]^2}{\widehat{c}_P^2(x)} - j_z^2x^2 - 1$ & Stable orbits are governed by \textbf{particle motion through a dragged, strain-refractive medium}. \\
+
+Ringdown & $\omega_{\ell mn} = \frac{c_{\mathrm{E}}^3}{GM}f_{\ell mn}(a_\ast)$ & $\varpi_{\ell m} = \frac{c_{\mathrm{E}}^3}{GM}\left[\widehat{\omega}_{\ell m}(a_\ast)-i\widehat{\Gamma}^{(\mathrm{rd})}_{\ell m}(a_\ast)\right]$ & Kerr quasi-normal modes become \textbf{damped eigenmodes of the live FCC/SC boundary}. \\
+
+Kerr uniqueness & Exterior fixed by $M, \mathcal{J}_{\mathrm{BH}}$ & Relaxed exterior fixed by $M, \mathcal{J}_{\mathrm{BH}}$ & TFT replaces geometric no-hair with \textbf{mechanical relaxation to a saturated boundary attractor}. \\
+
+\bottomrule
+\end{longtable}

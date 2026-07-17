@@ -352,32 +352,135 @@ When this scaling law is evaluated at the FCC Node Radius ($r = r_{\mathrm{D}} \
 
 \section{The Constitution of the FCC Phase Soft Floor Active Vacuum}
 \label{sec:fcc_lattice}
-While the Substrate (the Hard Floor) provides the absolute boundary conditions, the observable cosmos exists exclusively on the active Spacetime Gravitational Floor (SGF). As established in \hyperref[postulate:three]{Postulate III}, Tension Field Theory (TFT) models this Soft Floor not as a smooth, continuous geometry, but as a dual-phase visco-elastic Face--Centered Cubic (FCC) medium emerging from the substrate via symmetry breaking at the FCC Node Radius ($r_{\mathrm{D}} \approx 10^{-26}$ m).
 
-At this scale, the active SGF acquires finite stiffness, inertia, and viscous impedance. The FCC geometry is not chosen heuristically; it is the unique close-packed spherical architecture that maximizes local connectivity while preserving interstitial freedom.
+While the Substrate, or Hard Floor, provides the absolute boundary conditions of the theory, the observable cosmos exists on the active Spacetime Gravitational Floor (SGF). As established in \hyperref[postulate:three]{Postulate III}, Tension Field Theory (TFT) models this Soft Floor not as a fundamentally smooth geometric manifold, but as a dual-phase Face--Centered Cubic (FCC) medium produced by symmetry breaking at the calibrated FCC Node Radius,
+\begin{equation}
+    r_{\mathrm{D}} \approx 7.45\times10^{-27}\,\mathrm{m}.
+\end{equation}
 
-This architecture dictates that the vacuum is strictly partitioned into two inseparable, constitutive phases:
+At this scale, the active SGF acquires finite contact stiffness, surface inertia, condensate impedance, and dissipative response channels. The FCC configuration is selected as the cubic close-packed branch of the active vacuum because it combines twelve-neighbor coordination, a connected interstitial network, and direct structural compatibility with the saturated Simple Cubic phase. The FCC geometry establishes cubic material symmetry; exact isotropy of the leading long-wavelength elastic response additionally requires a constitutive relation between the normal and tangential contact coefficients.
+
+For equal spherical nodes, as derived in \hyperref[chap:vacuum_energy_budget]{Chapter \ref*{chap:vacuum_energy_budget}}, the FCC packing fraction is
+\begin{equation}
+    \beta_{\mathrm{geo}} = \frac{\pi}{3\sqrt{2}} \approx 0.74048.
+    \label{eq:sec34_fcc_packing_fraction}
+\end{equation}
+
+The complementary interstitial fraction is
+\begin{equation}
+    \beta_{\mathrm{IC}} = 1-\beta_{\mathrm{geo}} \approx 0.25952.
+    \label{eq:sec34_interstitial_fraction}
+\end{equation}
+
+These quantities are geometric volume fractions of the active FCC structure. They partition the Soft Floor into two inseparable constitutive phases.
+
 \begin{itemize}
-    \item \textbf{The Solid Lattice Phase (74\% Volumetric Capacity)}
+
+    \item \textbf{The Solid FCC Scaffold \texorpdfstring{$(\beta_{\mathrm{geo}}\approx74.048\%)$}{(approximately 74.048 percent)}}
+
     \begin{itemize}
-        \item \textbf{Geometry:} Approximately 74\% of the spatial volume is occupied by the solid, spherical FCC nodes acting as a rigid scaffold.
-        \item \textbf{Constitutive Role:} This phase provides the lattice shear stiffness, surface tension, and transverse-wave support required for the propagation of light and all coherent elastic communication.
+        \item \textbf{Geometry:}
+        The spherical FCC nodes occupy the fraction $\beta_{\mathrm{geo}}$ of each periodic cell and form a twelve-connected load-bearing scaffold. The nodes are not treated as perfectly rigid bodies; their interfaces possess finite normal, tangential, rotational, and phase-contact responses.
+
+        \item \textbf{Constitutive Role:}
+        The FCC scaffold supplies the microscopic contact stiffness, baseline surface-tension scale, and restoring action of coherent transverse propagation. The node density $\rho_{\mathrm{D}}$ (derived in \hyperref[app:fcc_constants]{Appendix~\ref*{app:fcc_constants}}) is the operational material density assigned to the solid nodal phase, while the volume-averaged primitive-cell inertia of the coherent microscopic branch is
+        \begin{equation}
+            \rho_{\mathrm{eff}}^{(\mathrm{micro})} = \beta_{\mathrm{geo}}\rho_{\mathrm{D}}.
+            \label{eq:sec34_micro_effective_density}
+        \end{equation}
+
+        \item \textbf{Mechanical Communication:}
+        Neighboring nodes transmit deformation through the objective FCC contact network. This network supports coherent transverse elastic communication and carries the local gravitational loading imposed on the active Soft Floor.
     \end{itemize}
-    \item \textbf{The Interstitial Condensate Phase (26\% Volumetric Capacity)}
+
+    \item \textbf{The Interstitial Condensate \texorpdfstring{$(\beta_{\mathrm{IC}}\approx25.952\%)$}{(approximately 25.952 percent)}}
+
     \begin{itemize}
-        \item \textbf{Geometry:} The remaining 26\% of the volume consists of the contiguous, interconnected void network between the FCC nodes, filled entirely by the fluid-like interstitial condensate.
-        \item \textbf{Constitutive Role:} This phase provides the viscous and inertial response of the vacuum. It supplies the hydrodynamic impedance and inductive reactance associated with mass, vacuum damping, and dissipative coupling.
+        \item \textbf{Geometry:}
+        The complementary fraction $\beta_{\mathrm{IC}}$ forms the contiguous tetrahedral--octahedral interstitial network between the FCC nodes. This connected region is occupied by the fluid-like interstitial condensate.
+
+        \item \textbf{Coherent Constitutive Role:}
+        In the conservative coherent branch, the condensate is entrained by the FCC scaffold. It therefore contributes to the effective inertia of the propagating dual-phase mode without undergoing an independent relative flow through the lattice.
+
+        \item \textbf{Localized Constitutive Role:}
+        A localized topological defect can produce condensate motion relative to the surrounding scaffold. The resulting conservative relative-flow field generates a mode-resolved hydrodynamic added inertia. Viscous drag, irreversible heating, and vacuum damping arise only when a dissipative phase lag is added to this conservative response.
+
+        \item \textbf{Status of the Projected Density:}
+        The quantity presently denoted by $\rho_{\mathrm{IC}}$ in the calibrated particle calculations is not yet established as an independently derived intrinsic equilibrium density of the condensate. It is the empirical volumetric impedance projection
+        \begin{equation}
+            \rho_{\mathrm{IC}}^{(\mathrm{emp})} = \mu_{\mathrm{D}}\iota_V, \qquad \iota_V = 1\,\mathrm{m}^{-1}.
+            \label{eq:sec34_empirical_condensate_density}
+        \end{equation}
+        Its microscopic replacement is a defect-mode boundary-value functional developed in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.
     \end{itemize}
+
 \end{itemize}
 
+
+\subsection{Leading Constitutive Closure of the Active FCC Vacuum}
+\label{subsec:fcc_leading_constitutive_closure}
+
+Let $\mathbf{u}(\mathbf{x},t)$ denote the FCC scaffold displacement and let $\mathbf{v}_{\mathrm{IC}}(\mathbf{x},t)$ denote the condensate velocity. Their relative velocity is
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} = \mathbf{v}_{\mathrm{IC}} - \dot{\mathbf{u}}.
+    \label{eq:sec34_relative_velocity}
+\end{equation}
+
+For the conservative coherent branch,
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} = \mathbf{0}.
+    \label{eq:sec34_coherent_entrainment}
+\end{equation}
+
+Equation~\eqref{eq:sec34_coherent_entrainment} does not require the condensate to remain absolutely stationary. It states that the condensate and the FCC scaffold move together at the retained coherent order. Relative condensate flow is reserved for localized defect impedance, dissipative phase lag, or another explicitly non-entrained sector.
+
+The nearest-neighbor FCC contact system homogenizes to a cubic elastic continuum. Cubic symmetry alone does not guarantee exact isotropy. Within the leading objective contact model, exact long-wavelength isotropy requires equality of the normal and tangential contact coefficients:
+\begin{equation}
+    \kappa_{\mathrm{n}} = \kappa_{\mathrm{t}} \equiv \kappa_{\mathrm{c}}.
+    \label{eq:sec34_isotropic_contact_condition}
+\end{equation}
+
+Under this constitutive closure, the microscopic shear coefficient of the unstrained coherent FCC branch satisfies
+\begin{equation}
+    K_{\mathrm{sh}}^{(\mathrm{micro})} = \rho_{\mathrm{eff}}^{(\mathrm{micro})} c_{\mathrm{E}}^2 = \beta_{\mathrm{geo}} \rho_{\mathrm{D}} c_{\mathrm{E}}^2.
+    \label{eq:sec34_micro_shear_normalization}
+\end{equation}
+
+Here $K_{\mathrm{sh}}^{(\mathrm{micro})}$ is the primitive-cell tangent coefficient of the coherent microscopic branch. It must not be identified directly with the much smaller macroscopic participating-continuum modulus inferred from long-baseline gravitational-wave observations without an explicit coarse-graining relation.
+
+The condensate supplies the incremental volume constraint of the coherent active phase, while the FCC contact system supplies the finite transverse restoring coefficient. The coherent translational acoustic sector consequently contains two transverse polarizations and no independent finite-frequency volumetric polarization. This statement applies only to the incremental coherent FCC branch. It does not eliminate static longitudinal tension, quasistatic condensate pressure, localized compressive defect fields, or finite background compaction toward the FCC--SC phase transition.
+
+The complete objective FCC contact action, primitive-cell inertia, homogenized cubic tensor, isotropy condition, and microscopic transverse normalization are derived in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}. The coherent condensate constraint, localized relative-flow sector, and mode-resolved impedance projection are developed in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.
+
 \noindent\textbf{The Mechanical Stage}\\
-The Soft Floor is neither a pure crystal nor a pure fluid; it is a universal, dual-phase visco-elastic medium exhibiting supersolid-superfluid mechanics. The solid lattice nodes and the interstitial condensate strictly divide the labor of reality. This exact geometric partition dictates the origins of light, mass, gravity, and dark-sector phenomena. The specific mechanical derivations of these interactions---including localized kinematic transport, impedance mismatch, and structural saturation thresholds---are systematically developed in the subsequent sections of this framework.
+The Soft Floor is neither a pure crystal nor a pure fluid. It is a coupled dual-phase medium whose solid and condensate constituents perform distinct but dynamically connected mechanical functions. The FCC scaffold provides the contact structure and finite transverse restoring action. The condensate is entrained in coherent propagation, enforces the incremental volume constraint, and develops relative flow around localized topological defects. Conservative relative flow produces hydrodynamic added inertia, whereas viscous or phase-lagged relative flow produces damping and irreversible energy transfer.
+
+The geometric partition alone does not determine every constitutive coefficient. The FCC arrangement fixes the packing fractions and cubic neighbor geometry, while the contact law, condensate constraint, defect topology, and phase participation determine the realized mechanical response. The subsequent chapters apply this architecture to quantized action, particle mass, gravity, optical propagation, structural saturation, and the dark-sector response.
+
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Fig03_PartI_FCCLattice.pdf}
-    \caption{\textbf{The Active Vacuum Phase (Soft Floor FCC Architecture).} The observable vacuum manifests as a Face--Centered Cubic (FCC) structure precisely at the FCC Node Radius ($r_{\mathrm{D}} \approx 7.45 \times 10^{-27}$ m). This maximum-density packing arrangement geometrically partitions the vacuum into two distinct phases: The \textbf{Solid Nodal Scaffold} ($\rho_{\mathrm{D}} \approx 1.71 \times 10^{62} \text{ kg/m}^3$) represents the operational, vibrational density of the lattice, acting as the fundamental source of quantum action. The structural integrity of this scaffold generates the absolute lattice shear stiffness ($\tau_{\mathrm{D}}$), which provides the restorative tension for gravity and transverse wave propagation. The \textbf{Interstitial Condensate} ($\rho_{\mathrm{IC}} \approx 1.81 \times 10^{53} \text{ kg/m}^3$) is the volumetric projection of baseline inertia ($\mu_{\mathrm{D}}$), providing the fluidic response responsible for absolute hydrodynamic impedance. Together, they establish the dual-phase visco-elastic foundation of the Soft Floor.}
-\label{fig:fcc_lattice}
+    \caption{\textbf{The Active Vacuum Phase: Soft Floor FCC Architecture.}
+    The active vacuum is represented as a Face--Centered Cubic structure at the calibrated FCC Node Radius
+    $r_{\mathrm{D}} \approx 7.45\times10^{-27}\,\mathrm{m}$.
+    Equal-node FCC packing partitions each periodic cell into the solid nodal fraction
+    $\beta_{\mathrm{geo}} = \pi/(3\sqrt{2}) \approx 0.74048$
+    and the connected interstitial fraction
+    $\beta_{\mathrm{IC}} = 1-\beta_{\mathrm{geo}} \approx 0.25952$.
+    The solid nodal phase has operational density
+    $\rho_{\mathrm{D}} \approx 1.71\times10^{62}\,\mathrm{kg\,m^{-3}}$
+    and supplies the FCC contact structure, the baseline surface-tension coefficient
+    $\tau_{\mathrm{D}}$, and the microscopic coherent shear coefficient
+    $K_{\mathrm{sh}}^{(\mathrm{micro})} = \beta_{\mathrm{geo}}\rho_{\mathrm{D}}c_{\mathrm{E}}^2$.
+    The interstitial condensate occupies the connected void network. It is entrained in the conservative coherent branch and develops relative flow around localized topological defects.
+    The currently calibrated value
+    $\rho_{\mathrm{IC}}^{(\mathrm{emp})} \approx 1.81\times10^{53}\,\mathrm{kg\,m^{-3}}$
+    is the empirical defect-impedance projection
+    $\rho_{\mathrm{IC}}^{(\mathrm{emp})} = \mu_{\mathrm{D}}\iota_V$
+    with $\iota_V = 1\,\mathrm{m}^{-1}$;
+    it remains conditional until the microscopic defect-flow boundary-value problem determines the corresponding mode-resolved projection.}
+    \label{fig:fcc_lattice}
 \end{figure}
 
 \newpage

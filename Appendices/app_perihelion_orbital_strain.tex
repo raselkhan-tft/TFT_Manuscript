@@ -1,776 +1,604 @@
-\chapter{Derivation of Perihelion Precession from Orbital Strain Coupling}
+\chapter{Derivation of Perihelion Precession from the Bound-Orbit Strain Action}
 \label{app:perihelion_orbital_strain}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Subject:} Deriving the weak-field perihelion orbital correction from conservative orbital strain coupling in the active Soft Floor.
+\noindent\textbf{Subject:} Action-level derivation of the weak-field perihelion correction from conservative transport of a bound topological defect through the radially strained Soft Floor.
 
-This appendix derives the perihelion orbital correction from Tension Field Theory (TFT) using a mechanical specific-strain-potential argument. The purpose is to show that the standard weak-field perihelion equation of General Relativity (GR) can be recovered without treating spacetime curvature as the fundamental cause.
+This appendix derives the weak-field perihelion correction from the variational dynamics of a massive bound defect in the active Soft Floor. The derivation applies to a static, spherically symmetric source and to a conservative orbit satisfying
+\begin{equation}
+    \alpha_{\mathrm{G}} \ll 1, \qquad \frac{v^2}{c_{\mathrm{E}}^2} \ll 1.
+\end{equation}
 
-In General Relativity, perihelion precession is described as the post-Newtonian effect of curved spacetime on a massive orbit. In Tension Field Theory, the same effect is interpreted as the accumulated orbital phase shift of a bound three-dimensional topological defect moving tangentially through the radial strain field of the active FCC Soft Floor.
+The resulting action is a homogenized continuum description of the active FCC lattice. It is distinct from the optical propagation law for massless transverse waves. The optical sector governs refractive signal propagation, whereas the present action governs the transport of a localized three-dimensional topological defect whose phase structure remains bound during orbital motion.
 
-This derivation does not duplicate the optical derivations of gravitational redshift, Shapiro delay, or gravitational lensing. Those effects concern wave propagation through a strain-induced refractive index. Perihelion precession is different. It is a bound-mass orbital effect. Therefore, it must be derived from the mechanical coupling between radial tension strain and tangential orbital transport.
+From this point onward, all quantities denoted by $g$ represent positive inward acceleration magnitudes unless a vector direction is written explicitly.
 
 \section{Newtonian Closed-Orbit Baseline}
 
-A central mass $M$ produces the ordinary radial gravitational acceleration
+A static spherical source of mass $M$ produces the baryonic restorative acceleration
 \begin{equation}
-    g_{\mathrm{b}} = \frac{GM}{r^2}.
+    g_{\mathrm{b}}(r) = \frac{GM}{r^2}.
 \end{equation}
 
-The corresponding inward radial acceleration is
+The corresponding inward vector acceleration is
 \begin{equation}
-    a_r = - \frac{GM}{r^2}.
+    \mathbf{a}_{\mathrm{b}} = -\frac{GM}{r^2}\hat{\mathbf{r}}.
 \end{equation}
 
-In Newtonian mechanics, this exact inverse-square acceleration produces a closed Keplerian ellipse. Define
+Introduce the reciprocal radial coordinate
 \begin{equation}
     u = \frac{1}{r}.
 \end{equation}
 
-The Newtonian orbital equation is
+For a central inverse-square field, the Newtonian orbital equation is
 \begin{equation}
     \frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2} + u = \frac{GM}{\ell_{\mathrm{orb}}^2},
 \end{equation}
-where $\ell_{\mathrm{orb}}$ is the specific orbital angular momentum of the orbiting body:
-\begin{equation}
-    \ell_{\mathrm{orb}} = rv_\perp.
-\end{equation}
-Here $v_\perp$ is the tangential orbital velocity.
+where $\ell_{\mathrm{orb}}$ is the conserved specific orbital angular momentum.
 
 The Newtonian solution is
 \begin{equation}
     u(\varphi) = \frac{1}{p} \left( 1+e\cos\varphi \right),
 \end{equation}
-where
+with
 \begin{equation}
     p = \frac{\ell_{\mathrm{orb}}^2}{GM} = a(1-e^2).
 \end{equation}
-Here $a$ is the semi-major axis and $e$ is the orbital eccentricity. Because the angular dependence is exactly $\cos\varphi$, the orbit closes after one full angular cycle,
-\begin{equation}
-    \varphi = 2\pi.
-\end{equation}
 
-Therefore, a pure inverse-square radial force produces no perihelion precession. Any perihelion shift must arise from an additional correction to the Newtonian radial law.
+Here, $a$ is the orbital semi-major axis and $e$ is the eccentricity. The angular dependence is exactly periodic in $2\pi$, so a pure inverse-square field produces a closed Keplerian ellipse.
+
+Perihelion precession therefore requires a conservative correction to the inverse-square orbital dynamics.
 
 \section{Radial Soft Floor Strain Potential}
 
-In TFT, the central mass does not curve an empty manifold at the fundamental level. Instead, it imposes a radial strain on the active Soft Floor.
-
-The dimensionless gravitational strain is
+In TFT, the central source establishes a radial strain state in the active Soft Floor. The dimensionless gravitational strain is
 \begin{equation}
     \alpha_{\mathrm{G}}(r) = \frac{GM}{rc_{\mathrm{E}}^2}.
 \end{equation}
 
-The corresponding radial strain potential per unit mass is
+The corresponding specific tension potential is
 \begin{equation}
-    \Phi_\tau(r) = - c_{\mathrm{E}}^2 \alpha_{\mathrm{G}}(r).
-\end{equation}
-
-Substituting the expression for $\alpha_{\mathrm{G}}$,
-\begin{equation}
-    \Phi_\tau(r) = - c_{\mathrm{E}}^2 \left( \frac{GM}{rc_{\mathrm{E}}^2} \right).
+    \Phi_\tau(r) = -c_{\mathrm{E}}^2\alpha_{\mathrm{G}}(r).
 \end{equation}
 
 Therefore,
 \begin{equation}
-    \Phi_\tau(r) = - \frac{GM}{r}.
+    \Phi_\tau(r) = -\frac{GM}{r}.
 \end{equation}
 
-This is algebraically identical to the Newtonian potential, but its TFT interpretation is different. In TFT, $\Phi_\tau$ is the radial strain potential of the active Soft Floor, not the curvature of empty spacetime.
-
-Taking its radial derivative gives the ordinary inward acceleration:
+The potential has dimensions
 \begin{equation}
-    a_\tau = - \frac{\mathrm{d}\Phi_\tau}{\mathrm{d}r}.
+    [\Phi_\tau] = \mathrm{m^2/s^2}.
 \end{equation}
 
-Since
+Its radial derivative gives the source-generated acceleration:
 \begin{equation}
-    \frac{\mathrm{d}}{\mathrm{d}r} \left( - \frac{GM}{r} \right) = \frac{GM}{r^2},
-\end{equation}
-we obtain
-\begin{equation}
-    a_\tau = - \frac{GM}{r^2}.
+    -\frac{\mathrm{d}\Phi_\tau}{\mathrm{d}r} = -\frac{GM}{r^2}.
 \end{equation}
 
-The inward acceleration magnitude is therefore
+Thus, the inward acceleration magnitude is
 \begin{equation}
-    g_{\mathrm{b}} = \frac{GM}{r^2}.
+    g_{\mathrm{b}}(r) = \frac{GM}{r^2}.
 \end{equation}
 
-This recovers the Newtonian closed-orbit limit.
+The Newtonian potential is therefore recovered as the specific mechanical tension potential of the active Soft Floor.
 
-\section{Tangential Loading of a Bound Mass Defect}
+\section{Coordinate Bridge to the Areal-Radius Representation}
 
-A planet is not a static test mass inside the radial strain field. It is a bound topological-defect aggregate moving tangentially through that strain field.
-
-Let the tangential orbital speed be
+The effective Soft Floor measurement tensor developed in \hyperref[sec:optical_metric]{Section \ref*{sec:optical_metric}} is expressed in locally isotropic spatial coordinates. In the weak-field limit,
 \begin{equation}
-    v_\perp.
+    \alpha_{\mathrm{G}} \ll 1,
+\end{equation}
+its line element is
+\begin{equation}
+    \mathrm{d}s_\tau^2 \approx - \left[ 1-2\alpha_{\mathrm{G}}(r_{\mathrm{iso}}) \right] c_{\mathrm{E}}^2\mathrm{d}t^2 + \left[ 1+2\alpha_{\mathrm{G}}(r_{\mathrm{iso}}) \right] \left[ \mathrm{d}r_{\mathrm{iso}}^2 + r_{\mathrm{iso}}^2 \left( \mathrm{d}\theta^2 + \sin^2\theta \, \mathrm{d}\varphi^2 \right) \right].
 \end{equation}
 
-The dimensionless tangential loading of the Soft Floor is
+Here, $r_{\mathrm{iso}}$ is the isotropic radial coordinate associated with the spatial representation used in \hyperref[chap:gravitational_field]{Chapter \ref*{chap:gravitational_field}}.
+
+For the bound-orbit problem, it is convenient to introduce the areal radius $r$, defined so that a spherical strain shell has physical area $4\pi r^2$. To first weak-field order,
 \begin{equation}
-    q_{\mathrm{orb}} = \frac{v_\perp^2}{c_{\mathrm{E}}^2}.
-\end{equation}
-
-This quantity measures the fraction of the Soft Floor's kinematic capacity consumed by tangential orbital transport.
-
-In TFT, this tangential loading is mechanically significant because a massive body is not a massless wave. A photon follows a refractive path through the strain field, but a massive body must preserve its three-dimensional bound topology while moving sideways through the radial tension gradient.
-
-Therefore, the orbiting body produces a local conservative cross-coupling between radial strain and tangential transport.
-
-\section{Mechanical Origin of the Orbital Coupling Term}
-
-To understand why the specific orbital strain potential takes the form
-\begin{equation}
-    \Phi_{\mathrm{orb}}
-    =
-    \Phi_\tau
-    \frac{v_\perp^2}{c_{\mathrm{E}}^2},
-\end{equation}
-we must treat the active vacuum as a pre-stressed nonlinear elastic lattice rather than as empty geometry.
-
-A central mass establishes a radial strain potential in the Soft Floor,
-\begin{equation}
-    \Phi_\tau
-    =
-    -
-    \frac{GM}{r}.
-\end{equation}
-
-This radial potential is not merely a passive background. It is a real pre-existing strain state of the active FCC lattice.
-
-When a bound mass defect moves tangentially through this radial strain field, it must continuously preserve its three-dimensional topological closure while being transported orthogonally to the radial tension gradient. The Soft Floor must therefore perform additional conservative structural work to maintain the defect's bound configuration during orbital motion.
-
-In continuum mechanics, a pre-stressed medium responds differently to an additional deformation than an unstressed medium. A deformation applied orthogonally to an existing prestress produces an incremental strain-energy density proportional to the product of the existing prestress and the newly applied strain:
-\begin{equation}
-    \text{incremental strain-energy density}
-    \sim
-    \text{prestress}
-    \times
-    \text{incremental strain}.
-\end{equation}
-
-After normalizing the corresponding strain-energy density by the inertial mass density of the bound defect, this prestress interaction appears as a specific strain potential per unit mass.
-
-In the TFT orbital case, the radial prestress is represented by the specific strain potential
-\begin{equation}
-    \Phi_\tau.
-\end{equation}
-
-The incremental tangential strain is represented by the fraction of the Soft Floor kinematic capacity consumed by orbital motion:
-\begin{equation}
-    \frac{v_\perp^2}{c_{\mathrm{E}}^2}.
-\end{equation}
-
-This quantity is not the Newtonian kinetic energy per unit mass. It is a dimensionless structural loading factor. It measures how strongly tangential motion consumes the available elastic propagation capacity of the lattice. Therefore, no classical kinetic-energy factor of \(1/2\) appears in this term.
-
-The leading conservative orbital strain potential is therefore
-\begin{equation}
-    \Phi_{\mathrm{orb}}
-    =
-    \Phi_\tau
-    \left(
-    \frac{v_\perp^2}{c_{\mathrm{E}}^2}
-    \right).
-\end{equation}
-
-This is the central constitutive relation of the perihelion derivation. It states that transverse motion through a radially pre-strained Soft Floor generates an additional conservative strain-locking potential per unit mass.
-
-Physically, the term means
-\begin{equation}
-    \text{radial Soft Floor strain}
-    +
-    \text{tangential transport of a bound defect}
-    \rightarrow
-    \text{orbital strain-locking potential}.
-\end{equation}
-
-This mechanism is distinct from dark-matter-like cosmic impedance. It is the local conservative correction required for a bound three-dimensional topological defect to maintain structural closure while orbiting through a radial lattice strain field.
-
-\section{Cubic Reduced Orbital Strain Potential}
-
-Substitute
-\begin{equation}
-    \Phi_\tau
-    =
-    -
-    \frac{GM}{r}
-\end{equation}
-into the orbital coupling term:
-\begin{equation}
-    \Phi_{\mathrm{orb}}
-    =
-    -
-    \frac{GM}{r}
-    \frac{v_\perp^2}{c_{\mathrm{E}}^2}.
-\end{equation}
-
-The specific orbital angular momentum is conserved for the weak-field spherical bound-orbit problem:
-\begin{equation}
-    \ell_{\mathrm{orb}}
-    =
-    rv_\perp.
-\end{equation}
-
-\noindent\textit{Reduction note.}
-At this step, the orbital strain term is being reduced to the central-force bound-orbit problem by imposing conservation of specific angular momentum. Therefore, the potential used below should be read as a reduced central-orbit strain potential, not as a fully general velocity-dependent field potential for arbitrary motion. The derivation applies to weak-field, spherical, conservative bound orbits.
-
-Therefore,
-\begin{equation}
-    v_\perp
-    =
-    \frac{\ell_{\mathrm{orb}}}{r},
-\end{equation}
-and
-\begin{equation}
-    v_\perp^2
-    =
-    \frac{\ell_{\mathrm{orb}}^2}{r^2}.
-\end{equation}
-
-Substituting this into the orbital strain potential gives
-\begin{equation}
-    \Phi_{\mathrm{orb}}^{(\mathrm{red})}
-    =
-    -
-    \frac{GM}{r}
-    \frac{\ell_{\mathrm{orb}}^2}{r^2c_{\mathrm{E}}^2}.
+    r^2 = \left[ 1+2\alpha_{\mathrm{G}}(r_{\mathrm{iso}}) \right] r_{\mathrm{iso}}^2.
 \end{equation}
 
 Therefore,
 \begin{equation}
-    \Phi_{\mathrm{orb}}^{(\mathrm{red})}
-    =
-    -
-    \frac{GM\ell_{\mathrm{orb}}^2}
-    {c_{\mathrm{E}}^2r^3}.
+    r = r_{\mathrm{iso}} \left[ 1+\alpha_{\mathrm{G}}(r_{\mathrm{iso}}) \right] + \mathcal{O}(\alpha_{\mathrm{G}}^2).
 \end{equation}
 
-This is the key reduced mechanical result. The correction potential per unit mass scales as
+For the spherical source field,
 \begin{equation}
-    \Phi_{\mathrm{orb}}^{(\mathrm{red})}
-    \sim
-    -
-    \frac{1}{r^3}.
+    \alpha_{\mathrm{G}}(r_{\mathrm{iso}}) = \frac{GM}{r_{\mathrm{iso}}c_{\mathrm{E}}^2}.
 \end{equation}
 
-The cubic radial dependence arises because the correction combines the radial strain potential,
+Consequently,
 \begin{equation}
-    \Phi_\tau
-    \sim
-    -
-    \frac{1}{r},
+    \frac{\mathrm{d}\alpha_{\mathrm{G}}}{\mathrm{d}r_{\mathrm{iso}}} = -\frac{\alpha_{\mathrm{G}}}{r_{\mathrm{iso}}},
 \end{equation}
-with the tangential orbital loading,
+and differentiation of the areal-radius relation gives
 \begin{equation}
-    v_\perp^2
-    \sim
-    \frac{1}{r^2}.
+    \mathrm{d}r = \mathrm{d}r_{\mathrm{iso}} + \mathcal{O}(\alpha_{\mathrm{G}}^2).
 \end{equation}
 
-Thus,
+The angular sector then becomes
 \begin{equation}
-    \frac{1}{r}
-    \times
-    \frac{1}{r^2}
-    =
-    \frac{1}{r^3}.
+    \left[ 1+2\alpha_{\mathrm{G}}(r_{\mathrm{iso}}) \right] r_{\mathrm{iso}}^2 \left( \mathrm{d}\theta^2 + \sin^2\theta \, \mathrm{d}\varphi^2 \right) = r^2 \left( \mathrm{d}\theta^2 + \sin^2\theta \, \mathrm{d}\varphi^2 \right) + \mathcal{O}(\alpha_{\mathrm{G}}^2).
 \end{equation}
 
-In TFT language, perihelion precession arises from this cubic reduced orbital strain-potential coupling.
-
-\section{Radial Derivative and Emergence of the Coefficient \(3\)}
-
-The reduced central-orbit strain potential is
+Similarly,
 \begin{equation}
-    \Phi_{\mathrm{strain}}^{(\mathrm{red})}
-    =
-    \Phi_\tau
-    +
-    \Phi_{\mathrm{orb}}^{(\mathrm{red})}.
-\end{equation}
-
-Therefore,
-\begin{equation}
-    \Phi_{\mathrm{strain}}^{(\mathrm{red})}
-    =
-    -
-    \frac{GM}{r}
-    -
-    \frac{GM\ell_{\mathrm{orb}}^2}
-    {c_{\mathrm{E}}^2r^3}.
-\end{equation}
-
-The inward central acceleration generated by this reduced strain potential is obtained from
-\begin{equation}
-    a_{\mathrm{strain}}^{(\mathrm{red})}
-    =
-    -
-    \frac{\mathrm{d}\Phi_{\mathrm{strain}}^{(\mathrm{red})}}{\mathrm{d}r}.
-\end{equation}
-
-The Newtonian strain term gives
-\begin{equation}
-    -
-    \frac{\mathrm{d}}{\mathrm{d}r}
-    \left(
-    -
-    \frac{GM}{r}
-    \right)
-    =
-    -
-    \frac{GM}{r^2}.
-\end{equation}
-
-The reduced orbital strain term gives
-\begin{equation}
-    -
-    \frac{\mathrm{d}}{\mathrm{d}r}
-    \left(
-    -
-    \frac{GM\ell_{\mathrm{orb}}^2}
-    {c_{\mathrm{E}}^2r^3}
-    \right)
-    =
-    -
-    \frac{3GM\ell_{\mathrm{orb}}^2}
-    {c_{\mathrm{E}}^2r^4}.
-\end{equation}
-
-Therefore, the reduced inward central acceleration generated by the strain field is
-\begin{equation}
-    a_{\mathrm{strain}}^{(\mathrm{red})}
-    =
-    -
-    \left[
-    \frac{GM}{r^2}
-    +
-    \frac{3GM\ell_{\mathrm{orb}}^2}
-    {c_{\mathrm{E}}^2r^4}
-    \right].
-\end{equation}
-
-Equivalently, the inward central acceleration magnitude used in the reduced orbital equation is
-\begin{equation}
-    g_{\mathrm{strain}}^{(\mathrm{red})}(r)
-    =
-    \frac{GM}{r^2}
-    +
-    \frac{3GM\ell_{\mathrm{orb}}^2}
-    {c_{\mathrm{E}}^2r^4}.
-\end{equation}
-
-Since
-\begin{equation}
-    g_{\mathrm{b}}
-    =
-    \frac{GM}{r^2},
-\end{equation}
-and
-\begin{equation}
-    v_\perp^2
-    =
-    \frac{\ell_{\mathrm{orb}}^2}{r^2},
-\end{equation}
-the correction may also be written as
-\begin{equation}
-    g_{\mathrm{orb}}
-    =
-    3g_{\mathrm{b}}
-    \frac{v_\perp^2}{c_{\mathrm{E}}^2}.
-\end{equation}
-
-This expression should be understood as the reduced bound-orbit correction, not as an independent static gravitational field term.
-
-The coefficient \(3\) is therefore not inserted as a numerical fitting factor. It emerges from the radial derivative of the cubic reduced strain-potential term:
-\begin{equation}
-    \frac{\mathrm{d}}{\mathrm{d}r}
-    \left(
-    r^{-3}
-    \right)
-    =
-    -3r^{-4}.
-\end{equation}
-
-Thus, the origin of the coefficient is mechanical:
-\begin{equation}
-\begin{split}
-    \text{radial strain potential} &\times \text{tangential orbital loading} \\
-    &\rightarrow r^{-3} \text{ reduced strain potential} \\
-    &\rightarrow 3r^{-4} \text{ bound-orbit acceleration correction}.
-\end{split}
-\end{equation}
-
-\section{Conversion to the Orbital Equation}
-
-For the reduced weak-field central-orbit problem, the inward acceleration magnitude used in Binet's equation is
-\begin{equation}
-    g_{\mathrm{strain}}^{(\mathrm{red})}(r)
-    =
-    \frac{GM}{r^2}
-    +
-    \frac{3GM\ell_{\mathrm{orb}}^2}
-    {c_{\mathrm{E}}^2r^4}.
-\end{equation}
-
-For a reduced central-acceleration problem, the Binet equation is
-\begin{equation}
-    \frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2}
-    +
-    u
-    =
-    \frac{
-    g_{\mathrm{strain}}^{(\mathrm{red})}(1/u)
-    }
-    {\ell_{\mathrm{orb}}^2u^2},
+    \left[ 1+2\alpha_{\mathrm{G}}(r_{\mathrm{iso}}) \right] \mathrm{d}r_{\mathrm{iso}}^2 = \left[ 1-2\alpha_{\mathrm{G}}(r) \right]^{-1} \mathrm{d}r^2 + \mathcal{O}(\alpha_{\mathrm{G}}^2),
 \end{equation}
 where
 \begin{equation}
-    u
-    =
-    \frac{1}{r}.
+    \alpha_{\mathrm{G}}(r_{\mathrm{iso}}) = \alpha_{\mathrm{G}}(r) + \mathcal{O}(\alpha_{\mathrm{G}}^2).
+\end{equation}
+
+The weak-field Soft Floor line element may therefore be written in areal-radius form as
+\begin{equation}
+    \mathrm{d}s_\tau^2 \approx - \left[ 1-2\alpha_{\mathrm{G}}(r) \right] c_{\mathrm{E}}^2\mathrm{d}t^2 + \left[ 1-2\alpha_{\mathrm{G}}(r) \right]^{-1} \mathrm{d}r^2 + r^2 \left( \mathrm{d}\theta^2 + \sin^2\theta \, \mathrm{d}\varphi^2 \right).
+\end{equation}
+
+For an orbit confined to the equatorial plane,
+\begin{equation}
+    \theta = \frac{\pi}{2}, \qquad \mathrm{d}\theta = 0,
+\end{equation}
+this reduces to
+\begin{equation}
+    \mathrm{d}s_\tau^2 \approx - \left[ 1-2\alpha_{\mathrm{G}}(r) \right] c_{\mathrm{E}}^2\mathrm{d}t^2 + \left[ 1-2\alpha_{\mathrm{G}}(r) \right]^{-1} \mathrm{d}r^2 + r^2\mathrm{d}\varphi^2.
+\end{equation}
+
+This expression is the areal-coordinate weak-field representation of the effective Soft Floor tensor developed in \hyperref[chap:gravitational_field]{Chapter \ref*{chap:gravitational_field}}. It is not introduced as an independent geometric field postulate.
+
+\section{Leading Bound-Orbit Strain Action}
+
+The preceding coordinate transformation expresses the \hyperref[chap:gravitational_field]{Chapter \ref*{chap:gravitational_field}} Soft Floor response in the areal radial coordinate appropriate to central-orbit dynamics. At the homogenized continuum level, the motion of a massive bound topological defect is represented by the quadratic specific action associated with this effective strain tensor.
+
+\begin{equation}
+    \boxed{ \mathcal{L}_{\mathrm{orb}} = \frac{1}{2} \left[ - \left( 1-2\alpha_{\mathrm{G}} \right) c_{\mathrm{E}}^2\dot{t}^2 + \left( 1-2\alpha_{\mathrm{G}} \right)^{-1} \dot{r}^2 + r^2\dot{\varphi}^2 \right] }.
+\end{equation}
+
+The reciprocal radial coefficient is understood at the retained weak-field order,
+\begin{equation}
+    \left( 1-2\alpha_{\mathrm{G}} \right)^{-1} = 1+2\alpha_{\mathrm{G}} + \mathcal{O}(\alpha_{\mathrm{G}}^2).
+\end{equation}
+
+The action is therefore the areal-coordinate continuum representation of the strained Soft Floor. It does not treat the effective tensor as fundamental spacetime geometry; the tensor supplies the variational bookkeeping for the transport of a bound defect through the material strain field.
+
+The overdot denotes differentiation with respect to the proper-time parameter $t_{\mathrm{p}}$:
+\begin{equation}
+    \dot{t} = \frac{\mathrm{d}t}{\mathrm{d}t_{\mathrm{p}}}, \qquad \dot{r} = \frac{\mathrm{d}r}{\mathrm{d}t_{\mathrm{p}}}, \qquad \dot{\varphi} = \frac{\mathrm{d}\varphi}{\mathrm{d}t_{\mathrm{p}}}.
+\end{equation}
+
+The action retains radial motion explicitly through $\dot{r}$. Tangential transport appears through $r\dot{\varphi}$, while no assumption of a purely circular orbit is required.
+
+\section{Conserved Energy and Canonical Angular Momentum}
+
+The coordinates $t$ and $\varphi$ do not appear explicitly in $\mathcal{L}_{\mathrm{orb}}$. They are therefore cyclic coordinates.
+
+Time-translation symmetry gives the conserved specific energy
+\begin{equation}
+    \boxed{ \mathcal{E}_{\mathrm{orb}} = \left( 1-2\alpha_{\mathrm{G}} \right) c_{\mathrm{E}}^2\dot{t} }.
+\end{equation}
+
+Azimuthal symmetry gives the conserved canonical specific angular momentum
+\begin{equation}
+    \boxed{ \ell_{\mathrm{orb}} = \frac{\partial\mathcal{L}_{\mathrm{orb}}}{\partial\dot{\varphi}} = r^2\dot{\varphi} }.
+\end{equation}
+
+The same conserved quantity may be evaluated before the coordinate transformation. In the isotropic radial coordinate,
+\begin{equation}
+    \ell_{\mathrm{orb}} = \left[ 1+2\alpha_{\mathrm{G}}(r_{\mathrm{iso}}) \right] r_{\mathrm{iso}}^2\dot{\varphi}.
+\end{equation}
+
+Using the areal-radius definition,
+\begin{equation}
+    r^2 = \left[ 1+2\alpha_{\mathrm{G}}(r_{\mathrm{iso}}) \right] r_{\mathrm{iso}}^2,
+\end{equation}
+gives
+\begin{equation}
+    \ell_{\mathrm{orb}} = r^2\dot{\varphi}.
+\end{equation}
+
+Thus, the conserved angular momentum used in the orbital reduction follows from azimuthal symmetry and is preserved under the coordinate transformation.
+
+The tangential transport speed measured with respect to the proper-time parameter is therefore
+\begin{equation}
+    v_\perp = r\dot{\varphi} = \frac{\ell_{\mathrm{orb}}}{r}.
+\end{equation}
+
+Hence,
+\begin{equation}
+    v_\perp^2 = \frac{\ell_{\mathrm{orb}}^2}{r^2}.
+\end{equation}
+
+The conservation law
+\begin{equation}
+    \ell_{\mathrm{orb}} = r v_\perp
+\end{equation}
+is therefore not imposed independently. It follows directly from azimuthal symmetry of the bound-orbit action.
+
+For weak fields, the difference between proper-time and coordinate-time tangential speeds contributes beyond the retained leading orbital-strain term. The same symbol $v_\perp$ may therefore be used for the weak-field orbital speed appearing in the reduced acceleration law.
+
+\section{Cyclic Reduction of the Bound-Orbit Action}
+
+For a massive trajectory parameterized by proper time, the specific action satisfies the normalization
+\begin{equation}
+    2\mathcal{L}_{\mathrm{orb}} = -c_{\mathrm{E}}^2.
+\end{equation}
+
+Substitution of the conserved energy and angular momentum gives
+\begin{equation}
+    -c_{\mathrm{E}}^2 = - \frac{ \mathcal{E}_{\mathrm{orb}}^2 }{ \left( 1-2\alpha_{\mathrm{G}} \right) c_{\mathrm{E}}^2 } + \left( 1-2\alpha_{\mathrm{G}} \right)^{-1} \dot{r}^2 + \frac{\ell_{\mathrm{orb}}^2}{r^2}.
+\end{equation}
+
+Multiplying by $-\left( 1-2\alpha_{\mathrm{G}} \right)$ yields
+\begin{equation}
+    \left( 1-2\alpha_{\mathrm{G}} \right) c_{\mathrm{E}}^2 = \frac{\mathcal{E}_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2} - \dot{r}^2 - \left( 1-2\alpha_{\mathrm{G}} \right) \frac{\ell_{\mathrm{orb}}^2}{r^2}.
+\end{equation}
+
+Rearranging,
+\begin{equation}
+    \dot{r}^2 + \left( 1-2\alpha_{\mathrm{G}} \right) \left( c_{\mathrm{E}}^2 + \frac{\ell_{\mathrm{orb}}^2}{r^2} \right) = \frac{\mathcal{E}_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2}.
+\end{equation}
+
+Dividing by two and expanding the strain term gives
+\begin{equation}
+    \frac{1}{2}\dot{r}^2 + \frac{1}{2}c_{\mathrm{E}}^2 + \frac{\ell_{\mathrm{orb}}^2}{2r^2} - \alpha_{\mathrm{G}}c_{\mathrm{E}}^2 - \alpha_{\mathrm{G}} \frac{\ell_{\mathrm{orb}}^2}{r^2} = \frac{\mathcal{E}_{\mathrm{orb}}^2}{2c_{\mathrm{E}}^2}.
 \end{equation}
 
 Using
 \begin{equation}
-    \frac{1}{r^2} = u^2,
+    \Phi_\tau = -\alpha_{\mathrm{G}}c_{\mathrm{E}}^2,
+\end{equation}
+the radial first integral becomes
+\begin{equation}
+    \frac{1}{2}\dot{r}^2 + \frac{\ell_{\mathrm{orb}}^2}{2r^2} + \Phi_\tau(r) + \Phi_\tau(r) \frac{\ell_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2r^2} = \frac{1}{2} \left( \frac{\mathcal{E}_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2} - c_{\mathrm{E}}^2 \right).
+\end{equation}
+
+The constant rest-capacity term has been transferred to the right-hand side. The remaining terms form the reduced radial energy balance.
+
+\section{Emergence of the Orbital Strain Potential}
+
+The first three terms of the reduced radial energy are the radial kinetic contribution, the ordinary centrifugal contribution, and the Newtonian Soft Floor potential.
+
+The remaining mixed term defines the reduced orbital strain potential:
+\begin{equation}
+    \boxed{ \Phi_{\mathrm{orb}}^{(\mathrm{red})}(r) = \Phi_\tau(r) \frac{\ell_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2r^2} }.
+\end{equation}
+
+Since
+\begin{equation}
+    v_\perp^2 = \frac{\ell_{\mathrm{orb}}^2}{r^2},
+\end{equation}
+the same result is
+\begin{equation}
+    \boxed{ \Phi_{\mathrm{orb}}^{(\mathrm{red})} = \Phi_\tau \frac{v_\perp^2}{c_{\mathrm{E}}^2} }.
+\end{equation}
+
+Thus, the orbital coupling is not introduced as an independent velocity-dependent potential before variation. It emerges from the cyclic reduction of the bound-orbit action.
+
+The unit coefficient follows directly from the linear-strain factor in the action. Specifically,
+\begin{equation}
+    \frac{1}{2} \left( -2\alpha_{\mathrm{G}} \right) \frac{\ell_{\mathrm{orb}}^2}{r^2} = -\alpha_{\mathrm{G}} \frac{\ell_{\mathrm{orb}}^2}{r^2},
+\end{equation}
+and because
+\begin{equation}
+    -\alpha_{\mathrm{G}} = \frac{\Phi_\tau}{c_{\mathrm{E}}^2},
+\end{equation}
+the coefficient multiplying
+\begin{equation}
+    \Phi_\tau \frac{\ell_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2r^2}
+\end{equation}
+is exactly unity.
+
+No independent numerical fitting coefficient is required.
+
+Substituting
+\begin{equation}
+    \Phi_\tau = -\frac{GM}{r}
+\end{equation}
+gives
+\begin{equation}
+    \boxed{ \Phi_{\mathrm{orb}}^{(\mathrm{red})}(r) = - \frac{ GM\ell_{\mathrm{orb}}^2 }{ c_{\mathrm{E}}^2r^3 } }.
+\end{equation}
+
+The cubic radial dependence follows from the product
+\begin{equation}
+    \Phi_\tau \propto r^{-1}, \qquad v_\perp^2 \propto r^{-2},
+\end{equation}
+so that
+\begin{equation}
+    \Phi_{\mathrm{orb}}^{(\mathrm{red})} \propto r^{-3}.
+\end{equation}
+
+\section{Radial Dynamics and the Coefficient $3$}
+
+The reduced radial energy contains the effective potential
+\begin{equation}
+    \frac{\ell_{\mathrm{orb}}^2}{2r^2} - \frac{GM}{r} - \frac{ GM\ell_{\mathrm{orb}}^2 }{ c_{\mathrm{E}}^2r^3 }.
+\end{equation}
+
+Differentiation gives the radial equation of motion
+\begin{equation}
+    \ddot{r} = \frac{\ell_{\mathrm{orb}}^2}{r^3} - \frac{GM}{r^2} - \frac{ 3GM\ell_{\mathrm{orb}}^2 }{ c_{\mathrm{E}}^2r^4 }.
+\end{equation}
+
+The first term is the outward centrifugal contribution. The remaining terms are the inward source-field accelerations.
+
+The total inward strain-generated acceleration magnitude is therefore
+\begin{equation}
+    g_{\mathrm{strain}}^{(\mathrm{red})}(r) = \frac{GM}{r^2} + \frac{ 3GM\ell_{\mathrm{orb}}^2 }{ c_{\mathrm{E}}^2r^4 }.
+\end{equation}
+
+Using
+\begin{equation}
+    g_{\mathrm{b}} = \frac{GM}{r^2}
 \end{equation}
 and
 \begin{equation}
-    \frac{1}{r^4} = u^4,
+    v_\perp^2 = \frac{\ell_{\mathrm{orb}}^2}{r^2},
 \end{equation}
-we obtain
+the additional bound-orbit correction is
 \begin{equation}
-    g_{\mathrm{strain}}^{(\mathrm{red})}(1/u) = GMu^2 + \frac{3GM\ell_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2} u^4.
+    \boxed{ g_{\mathrm{orb}} = 3g_{\mathrm{b}} \frac{v_\perp^2}{c_{\mathrm{E}}^2} }.
 \end{equation}
 
-Substituting this into the Binet equation gives
+The coefficient $3$ follows from
 \begin{equation}
-    \frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2} + u = \frac{ GMu^2 + \frac{3GM\ell_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2}u^4 }{\ell_{\mathrm{orb}}^2u^2}.
+    \frac{\mathrm{d}}{\mathrm{d}r} \left( r^{-3} \right) = -3r^{-4}.
 \end{equation}
 
-Separate the two terms:
+It is therefore generated by the radial derivative of the action-derived cubic strain potential.
+
+\section{Why the Leading Mixed Term Is Tangential}
+
+An eccentric orbit contains both radial and tangential motion. The radial velocity has not been omitted: it appears explicitly in the action through
 \begin{equation}
-    \frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2} + u = \frac{GM}{\ell_{\mathrm{orb}}^2} + \frac{3GM}{c_{\mathrm{E}}^2}u^2.
+    \left( 1-2\alpha_{\mathrm{G}} \right)^{-1} \dot{r}^2.
 \end{equation}
 
-Thus, TFT recovers the standard weak-field post-Newtonian orbital equation:
+The radial degree of freedom describes motion along the pre-existing strain gradient and supplies the radial kinetic part of the variational equation.
+
+The additional orbital potential arises from the angular sector after the cyclic coordinate $\varphi$ is reduced. It therefore depends on the conserved transverse transport quantity
+\begin{equation}
+    \ell_{\mathrm{orb}} = r^2\dot{\varphi}.
+\end{equation}
+
+Mechanically, the mixed term represents the additional strain-locking cost of preserving a bound three-dimensional topological defect while transporting it across the concentric radial prestress shells.
+
+Radial motion and tangential transport therefore enter the action through different channels:
+\begin{equation}
+    \dot{r} \quad \text{governs radial evolution along the strain gradient},
+\end{equation}
+while
+\begin{equation}
+    \ell_{\mathrm{orb}} \quad \text{governs conservative transport across the strain shells}.
+\end{equation}
+
+The perihelion term is consequently transverse at leading mixed order without assuming a circular orbit.
+
+\section{Conversion to the Orbital Equation}
+
+From canonical angular-momentum conservation,
+\begin{equation}
+    \dot{\varphi} = \frac{\ell_{\mathrm{orb}}}{r^2}.
+\end{equation}
+
+With
+\begin{equation}
+    u = \frac{1}{r},
+\end{equation}
+the radial derivative is
+\begin{equation}
+    \dot{r} = -\ell_{\mathrm{orb}} \frac{\mathrm{d}u}{\mathrm{d}\varphi},
+\end{equation}
+and
+\begin{equation}
+    \ddot{r} = -\ell_{\mathrm{orb}}^2 u^2 \frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2}.
+\end{equation}
+
+Substituting these relations into
+\begin{equation}
+    \ddot{r} = \frac{\ell_{\mathrm{orb}}^2}{r^3} - \frac{GM}{r^2} - \frac{ 3GM\ell_{\mathrm{orb}}^2 }{ c_{\mathrm{E}}^2r^4 }
+\end{equation}
+gives
+\begin{equation}
+    -\ell_{\mathrm{orb}}^2 u^2 \frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2} = \ell_{\mathrm{orb}}^2 u^3 - GMu^2 - \frac{ 3GM\ell_{\mathrm{orb}}^2 }{ c_{\mathrm{E}}^2 } u^4.
+\end{equation}
+
+Dividing by
+\begin{equation}
+    -\ell_{\mathrm{orb}}^2 u^2
+\end{equation}
+yields
 \begin{equation}
     \boxed{ \frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2} + u = \frac{GM}{\ell_{\mathrm{orb}}^2} + \frac{3GM}{c_{\mathrm{E}}^2}u^2 }.
 \end{equation}
 
-This is the same orbital equation obtained in General Relativity for the weak-field perihelion correction.
+This is the standard weak-field post-Newtonian orbital equation.
+
+In TFT, the nonlinear $u^2$ term is generated by the action-level coupling between the radial Soft Floor strain and the canonical angular transport of the bound defect.
 
 \section{Recovery of Perihelion Precession}
 
 The Newtonian solution is
 \begin{equation}
-    u_N(\varphi)
-    =
-    \frac{1}{p}
-    \left(
-    1+e\cos\varphi
-    \right),
+    u_{\mathrm{N}}(\varphi) = \frac{1}{p} \left( 1+e\cos\varphi \right),
 \end{equation}
 where
 \begin{equation}
-    p
-    =
-    \frac{\ell_{\mathrm{orb}}^2}{GM}
-    =
-    a(1-e^2).
+    p = \frac{\ell_{\mathrm{orb}}^2}{GM} = a(1-e^2).
 \end{equation}
 
-The TFT correction adds the nonlinear term
+The additional nonlinear term is
 \begin{equation}
     \frac{3GM}{c_{\mathrm{E}}^2}u^2.
 \end{equation}
 
-To first order, substituting the Newtonian solution
-\begin{equation}
-    u_N(\varphi)
-    =
-    \frac{1}{p}
-    \left(
-    1+e\cos\varphi
-    \right)
-\end{equation}
-into the nonlinear correction produces a resonant term proportional to \(e\cos\varphi\). This resonant term is absorbed as a small shift of the orbital angular frequency.
+To first order, substitution of the Newtonian solution into this term produces a resonant contribution proportional to $e\cos\varphi$. The resonance shifts the angular frequency of the radial oscillation.
 
-The corrected orbit may therefore be written approximately as
+The corrected orbit may be written as
 \begin{equation}
-    u(\varphi)
-    \approx
-    \frac{1}{p}
-    \left[
-    1+
-    e\cos\left((1-\delta)\varphi\right)
-    \right],
+    u(\varphi) \approx \frac{1}{p} \left[ 1+ e\cos \left( (1-\delta)\varphi \right) \right],
 \end{equation}
-where the small precession parameter is
+where
 \begin{equation}
-    \delta
-    =
-    \frac{3GM}{pc_{\mathrm{E}}^2}.
+    \delta = \frac{3GM}{pc_{\mathrm{E}}^2}.
 \end{equation}
 
 The perihelion advance per orbit is
 \begin{equation}
-    \Delta\varphi
-    =
-    2\pi\delta.
-\end{equation}
-
-Substituting \(\delta\) gives
-\begin{equation}
-    \Delta\varphi
-    =
-    2\pi
-    \left(
-    \frac{3GM}{pc_{\mathrm{E}}^2}
-    \right).
+    \Delta\varphi = 2\pi\delta.
 \end{equation}
 
 Therefore,
 \begin{equation}
-    \Delta\varphi
-    =
-    \frac{6\pi GM}
-    {pc_{\mathrm{E}}^2}.
+    \Delta\varphi = \frac{6\pi GM} {pc_{\mathrm{E}}^2}.
 \end{equation}
 
 Using
 \begin{equation}
-    p
-    =
-    a(1-e^2),
+    p = a(1-e^2),
 \end{equation}
-we obtain
+the perihelion advance is
 \begin{equation}
-    \boxed{
-    \Delta\varphi
-    =
-    \frac{6\pi GM}
-    {a(1-e^2)c_{\mathrm{E}}^2}
-    }.
+    \boxed{ \Delta\varphi = \frac{ 6\pi GM }{ a(1-e^2)c_{\mathrm{E}}^2 } }.
 \end{equation}
 
-This is the standard weak-field perihelion precession formula. In TFT, the same orbital phase advance is interpreted as the cumulative effect of the cubic reduced Soft Floor strain potential rather than as fundamental spacetime curvature.
+The standard weak-field perihelion result is therefore recovered.
 
 \section{Mechanical Interpretation}
 
-In General Relativity, the non-closing orbit is attributed to the curvature of spacetime around the central mass. In TFT, the same mathematical correction is interpreted differently.
-
-The central mass creates a radial strain potential in the active Soft Floor:
+The source mass establishes the radial Soft Floor strain potential
 \begin{equation}
-    \Phi_\tau
-    =
-    -
-    \frac{GM}{r}.
+    \Phi_\tau = -\frac{GM}{r}.
 \end{equation}
 
-The orbiting mass is a bound three-dimensional topological defect that must preserve its structural closure while moving tangentially through this radial strain field.
+A massive orbiting body remains a bound topological defect while undergoing radial and tangential transport through this prestressed medium.
 
-This produces an additional conservative specific orbital strain-potential coupling:
+The bound-orbit action produces two conserved quantities:
 \begin{equation}
-    \Phi_{\mathrm{orb}}
-    =
-    \Phi_\tau
-    \frac{v_\perp^2}{c_{\mathrm{E}}^2}.
+    \mathcal{E}_{\mathrm{orb}}
 \end{equation}
-
-After imposing conservation of specific angular momentum,
+from time-translation symmetry, and
 \begin{equation}
     \ell_{\mathrm{orb}}
-    =
-    rv_\perp,
 \end{equation}
-this coupling reduces to the central-orbit strain potential
+from azimuthal symmetry.
+
+After the cyclic coordinates are reduced, the angular transport energy is modulated by the radial strain. The resulting mixed potential is
 \begin{equation}
-    \Phi_{\mathrm{orb}}^{(\mathrm{red})}
-    =
-    -
-    \frac{GM\ell_{\mathrm{orb}}^2}
-    {c_{\mathrm{E}}^2r^3}.
+    \Phi_{\mathrm{orb}}^{(\mathrm{red})} = \Phi_\tau \frac{v_\perp^2}{c_{\mathrm{E}}^2} = - \frac{ GM\ell_{\mathrm{orb}}^2 }{ c_{\mathrm{E}}^2r^3 }.
 \end{equation}
 
-Because the reduced tangential orbital loading scales as
-\begin{equation}
-    v_\perp^2
-    \sim
-    r^{-2},
-\end{equation}
-and the radial strain potential scales as
-\begin{equation}
-    \Phi_\tau
-    \sim
-    r^{-1},
-\end{equation}
-their reduced coupling scales as
-\begin{equation}
-    \Phi_{\mathrm{orb}}^{(\mathrm{red})}
-    \sim
-    r^{-3}.
-\end{equation}
-
-The radial derivative of this cubic reduced strain potential generates the additional inward bound-orbit correction:
-\begin{equation}
-    g_{\mathrm{orb}}
-    =
-    3g_{\mathrm{b}}
-    \frac{v_\perp^2}{c_{\mathrm{E}}^2}.
-\end{equation}
-
-This expression is not an independent static gravitational field term. It is the reduced conservative correction experienced by a massive bound orbit after angular momentum conservation has been imposed.
-
-This correction slightly over-closes the radial restoring force during each orbit, causing the ellipse to fail to return to its original orientation. The result is perihelion precession.
-
-Thus,
-\begin{equation}
-    \boxed{
-    \text{perihelion precession}
-    =
-    \text{cumulative orbital phase advance from cubic reduced Soft Floor strain potential}
-    }.
-\end{equation}
-
-\section{Distinction from the Dark-Matter Impedance Term}
-
-The perihelion correction derived in this appendix must be distinguished from the galactic impedance mechanism developed in \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}.
-
-The dark-matter-like acceleration correction is associated with large-scale inductive coupling of the interstitial condensate:
-
-\begin{equation}
-    g_{\mathrm{DM}}
-    =
-    \Xi(R)\sqrt{a_{\mathrm{D}}g_{\mathrm{b}}}.
-\end{equation}
-
-This term is an environmental response of the active vacuum. It becomes relevant in the low-acceleration galactic regime,
-
-\begin{equation}
-    g_{\mathrm{b}}
-    \ll
-    a_{\mathrm{D}},
-\end{equation}
-
-where the interstitial condensate contributes an additional large-scale impedance response to baryonic gravity.
-
-Solar-system perihelion precession occurs in the opposite regime,
-
-\begin{equation}
-    g_{\mathrm{b}}
-    \gg
-    a_{\mathrm{D}}.
-\end{equation}
-
-In this high-acceleration regime, the galactic impedance term is screened or negligible:
-
-\begin{equation}
-    g_{\mathrm{DM}}
-    \rightarrow
-    0.
-\end{equation}
-
-The perihelion correction is therefore not a dark-matter effect. It is a local conservative bound-orbit correction produced by tangential transport of a massive defect through a radial Soft Floor strain field.
-
-The environmental acceleration hierarchy may be written schematically as
-
-\begin{equation}
-    g_{\mathrm{env}}
-    =
-    g_{\mathrm{b}}
-    +
-    g_{\mathrm{DM}},
-\end{equation}
-
-where
-
-\begin{equation}
-    g_{\mathrm{DM}}
-    =
-    \Xi(R)\sqrt{a_{\mathrm{D}}g_{\mathrm{b}}}.
-\end{equation}
-
-For precision massive bound-orbit dynamics, this environmental field is supplemented by the reduced orbital correction
-
-\begin{equation}
-    g_{\mathrm{bound}}
-    =
-    g_{\mathrm{env}}
-    +
-    g_{\mathrm{orb}},
-\end{equation}
-
-where
-
-\begin{equation}
-    g_{\mathrm{orb}}
-    =
-    3g_{\mathrm{b}}
-    \frac{v_\perp^2}{c_{\mathrm{E}}^2}.
-\end{equation}
-
-Thus, \(g_{\mathrm{DM}}\) and \(g_{\mathrm{orb}}\) arise from different mechanical channels. The term \(g_{\mathrm{DM}}\) is a large-scale condensate impedance response, while \(g_{\mathrm{orb}}\) is a reduced conservative correction for massive bound orbits. In the solar system, \(g_{\mathrm{DM}}\) is negligible while \(g_{\mathrm{orb}}\) produces the weak-field perihelion correction. In galactic outskirts, \(g_{\mathrm{orb}}\) is negligible while \(g_{\mathrm{DM}}\) dominates the non-Newtonian rotation-curve behavior.
-
-\section{Relation to the Effective GR Metric}
-
-The same result may be expressed in effective metric language. The perihelion correction recovered here is the standard first post-Newtonian orbital correction associated with the weak-field Schwarzschild limit.
-
-In the parametrized post-Newtonian description, the standard perihelion advance is governed by the combination of metric coefficients that reduces to the General Relativistic value when
-\begin{equation}
-    \beta_{\mathrm{PPN}} = 1,
-    \qquad
-    \gamma_{\mathrm{PPN}} = 1.
-\end{equation}
-
-The present appendix does not independently derive the full PPN metric. Instead, it shows that the TFT reduced bound-orbit strain potential generates the same weak-field orbital equation and therefore the same perihelion advance as the Schwarzschild weak-field limit.
-
-The correspondence is therefore
-\begin{equation}
-    \text{GR weak-field orbital curvature correction}
-    \quad
-    \longleftrightarrow
-    \quad
-    \text{TFT reduced conservative orbital strain correction}.
-\end{equation}
-
-The distinction is ontological: GR represents the correction as spacetime curvature, while TFT represents it as conservative strain-locking of a bound topological defect moving through the radially pre-stressed Soft Floor.
-
-\section{Conclusion}
-
-TFT reproduces the GR perihelion orbital equation from a conservative reduced orbital strain-potential correction.
-
-Starting from the radial Soft Floor strain potential,
-\begin{equation}
-    \Phi_\tau = - \frac{GM}{r},
-\end{equation}
-and coupling it to tangential orbital loading,
-\begin{equation}
-    \frac{v_\perp^2}{c_{\mathrm{E}}^2},
-\end{equation}
-yields the cubic reduced specific orbital strain potential
-\begin{equation}
-    \Phi_{\mathrm{orb}}^{(\mathrm{red})}
-=
--
-\frac{GM\ell_{\mathrm{orb}}^2}
-{c_{\mathrm{E}}^2r^3}.
-\end{equation}
-
-The radial derivative of this term generates the acceleration correction
+Its radial derivative produces the additional inward acceleration
 \begin{equation}
     g_{\mathrm{orb}} = 3g_{\mathrm{b}} \frac{v_\perp^2}{c_{\mathrm{E}}^2}.
 \end{equation}
 
-This leads directly to the orbital equation
+The orbit therefore accumulates a small phase advance during every radial cycle. The ellipse fails to return exactly to its previous orientation, producing perihelion precession.
+
+In TFT, this effect is interpreted as conservative strain locking of a bound topological defect in the radially prestressed active vacuum, rather than as fundamental curvature of an empty manifold.
+
+\section{Distinction from the Galactic Condensate Response}
+
+The perihelion correction is mechanically distinct from the large-scale galactic response developed in \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}.
+
+The geometry-corrected baryonic acceleration is
+\begin{equation}
+    g_{b,\Pi}(R) = \Pi(R)g_b(R).
+\end{equation}
+
+The environmental galactic acceleration is
+\begin{equation}
+    g_{\mathrm{obs}}(R) = g_{b,\Pi}(R) + \Xi(R) \sqrt{ a_{\mathrm{gal}}g_{b,\Pi}(R) }.
+\end{equation}
+
+The condensate term is an environmental response controlled by the finite-coherence function $\Xi(R)$. It becomes significant in the coherent low-acceleration galactic regime.
+
+In the high-acceleration solar-system regime,
+\begin{equation}
+    \Xi(R) \rightarrow 0,
+\end{equation}
+and, for a nearly spherical source,
+\begin{equation}
+    \Pi(R) \approx 1.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    g_{\mathrm{obs}}(R) \approx g_b(R).
+\end{equation}
+
+Precision bound-orbit dynamics is then obtained by adding the local orbital strain correction:
+\begin{equation}
+    \boxed{ g_{\mathrm{bound}}(R) = g_{\mathrm{obs}}(R) + g_{\mathrm{orb}}(R) }.
+\end{equation}
+
+Thus,
+\begin{equation}
+    g_{\mathrm{bound}}(R) \approx g_b(R) + 3g_b(R) \frac{v_\perp^2}{c_{\mathrm{E}}^2}
+\end{equation}
+in the solar-system weak-field limit.
+
+The two non-Newtonian channels therefore have different origins:
+\begin{equation}
+    \Xi(R) \sqrt{ a_{\mathrm{gal}}g_{b,\Pi}(R) }
+\end{equation}
+is the coherent environmental response of the Vacuum Interstitial Condensate, whereas
+\begin{equation}
+    3g_b \frac{v_\perp^2}{c_{\mathrm{E}}^2}
+\end{equation}
+is the local conservative bound-orbit correction derived from the massive-defect action.
+
+The galactic term is negligible for solar-system perihelion dynamics. The bound-orbit term is negligible relative to the condensate response in the low-acceleration galactic outskirts.
+
+\section{Relation to the Effective Soft Floor Tensor and Constitutive Scope}
+
+The coordinate bridge established above shows that the bound-orbit action is compatible with the effective Soft Floor measurement tensor developed in \hyperref[chap:gravitational_field]{Chapter \ref*{chap:gravitational_field}}. The locally isotropic representation and the areal-radius representation describe the same weak-field continuum response through the retained order.
+
+The causal sequence remains
+\begin{equation}
+    \text{source mass} \longrightarrow \text{radial Soft Floor strain} \longrightarrow \text{effective bound-defect action} \longrightarrow \text{orbital phase advance}.
+\end{equation}
+
+The effective tensor is not interpreted as the fundamental cause of gravity. It packages the response of rods, clocks, wave paths, and bound-defect transport to the underlying material strain field.
+
+The present result is an action-level derivation within the homogenized Soft Floor continuum. The derivation establishes the conserved canonical quantities, retains radial motion, and produces the reduced cubic orbital strain potential through cyclic reduction.
+
+A microscopic completion requires derivation of the continuum action from the discrete FCC contact network and the interstitial condensate. In particular, the bond-level theory must determine the incremental radial and tangential compliance of the prestressed lattice and verify the coefficients appearing in the effective bound-orbit action.
+
+\section{Conclusion}
+
+The weak-field perihelion correction follows from the homogenized action of a massive bound topological defect moving through the radially strained Soft Floor. The action is written in the areal radial coordinate obtained from the locally isotropic effective Soft Floor tensor developed in \hyperref[chap:gravitational_field]{Chapter \ref*{chap:gravitational_field}}.
+
+The specific bound-orbit Lagrangian is
+\begin{equation}
+    \mathcal{L}_{\mathrm{orb}} = \frac{1}{2} \left[ - \left( 1-2\alpha_{\mathrm{G}} \right)c_{\mathrm{E}}^2\dot{t}^2 + \left( 1-2\alpha_{\mathrm{G}} \right)^{-1}\dot{r}^2 + r^2\dot{\varphi}^2 \right].
+\end{equation}
+
+Azimuthal symmetry gives the conserved canonical angular momentum
+\begin{equation}
+    \ell_{\mathrm{orb}} = r^2\dot{\varphi}.
+\end{equation}
+
+Cyclic reduction produces the orbital strain potential
+\begin{equation}
+    \Phi_{\mathrm{orb}}^{(\mathrm{red})} = \Phi_\tau \frac{v_\perp^2}{c_{\mathrm{E}}^2} = - \frac{ GM\ell_{\mathrm{orb}}^2 }{ c_{\mathrm{E}}^2r^3 }.
+\end{equation}
+
+Its radial derivative gives
+\begin{equation}
+    g_{\mathrm{orb}} = 3g_{\mathrm{b}} \frac{v_\perp^2}{c_{\mathrm{E}}^2}.
+\end{equation}
+
+The resulting orbital equation is
 \begin{equation}
     \frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2} + u = \frac{GM}{\ell_{\mathrm{orb}}^2} + \frac{3GM}{c_{\mathrm{E}}^2}u^2,
 \end{equation}
-and therefore to the perihelion advance
+which yields
 \begin{equation}
-    \Delta\varphi = \frac{6\pi GM}{a(1-e^2)c_{\mathrm{E}}^2}.
+    \boxed{ \Delta\varphi = \frac{ 6\pi GM }{ a(1-e^2)c_{\mathrm{E}}^2 } }.
 \end{equation}
 
-Thus, the standard GR perihelion result is recovered, while its interpretation is shifted from fundamental spacetime curvature to the conservative strain-locking dynamics of a bound topological defect moving through the active vacuum lattice.
+The perihelion advance is therefore recovered as the accumulated phase shift generated by the action-level coupling between radial Soft Floor prestress and canonical tangential transport of a bound topological defect.
