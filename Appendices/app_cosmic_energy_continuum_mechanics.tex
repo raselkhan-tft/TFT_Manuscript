@@ -1,0 +1,988 @@
+\chapter{Tensorial Cosmological Energy Budget from Continuum Mechanics}
+\label{app:cosmic_energy_continuum_mechanics}
+
+\section*{Abstract}
+This appendix derives the tensorial cosmological energy budget of Tension Field Theory from the continuum mechanics of the State-I active vacuum.
+
+The active vacuum consists of an FCC nodal scaffold and a connected interstitial condensate. The nodal scaffold supplies contact stiffness, structural connectivity, and directional tensile stress. The condensate supplies coherent inertial participation, the incremental volume constraint, quasistatic pressure under gravitational loading, and conservative added inertia around localized topological defects. These constituents possess different operational densities and different constitutive responses, but they form one coupled quantum continuum.
+
+The derivation distinguishes the operational quantities
+\begin{equation}
+    \rho_{\mathrm{D}}, \qquad \tau_{\mathrm{D}}, \qquad \rho_{\mathrm{IC}}^{(\mathrm{imp})},
+\end{equation}
+from the structural cosmological quantities
+\begin{equation}
+    \rho_{\mathrm{G}}, \qquad \tau_{\mathrm{G}} = \rho_{\mathrm{G}}c_{\mathrm{E}}^2.
+\end{equation}
+
+The FCC fractions enter through phase-volume averaging of mechanically distinct nodal and interstitial tensors. They do not multiply identical copies of the background metric. Under the uniform TFT structural-capacity closure, the exact FCC geometric fractions become the normalized TFT structural-energy fractions,
+\begin{equation}
+    \Omega_{\mathrm{D}}^{(\mathrm{TFT},0)} = \beta_{\mathrm{geo}}, \qquad \Omega_{\mathrm{IC}}^{(\mathrm{TFT},0)} = \beta_{\mathrm{IC}}.
+\end{equation}
+
+Conversion of part of the nodal structural allocation into localized baryonic defects gives the closed background ledger
+\begin{equation}
+    \left( \beta_{\mathrm{geo}}-\beta_{\mathrm{b}} \right) + \beta_{\mathrm{IC}} + \beta_{\mathrm{b}} = 1.
+\end{equation}
+
+The spatial components are determined independently by nodal tension, condensate pressure and momentum transport, and defect stress. The appendix therefore replaces the GR/$\Lambda$CDM source-side budget by a phase-resolved continuum-mechanical tensor construction while leaving TFT's non-expanding cosmological kinematics as a separate sector.
+
+\section{Purpose, State Domain, and Tensor Conventions}
+
+The purpose of this appendix is not merely to rewrite the FCC packing fractions in tensor notation. It is to construct the mechanical source-side energy, momentum, flux, and stress budget required for TFT cosmology.
+
+The three TFT substrate states must remain distinct:
+\begin{itemize}
+    \item \textbf{State 0: Latent Substrate.} The absolute phase-locked SC reference state. It does not possess the ordinary propagating FCC--condensate degrees of freedom used in this appendix.
+    \item \textbf{State I: Active Vacuum.} The dual-phase FCC Soft Floor composed of the nodal scaffold and interstitial condensate. This is the dynamical continuum treated below.
+    \item \textbf{State II: Saturated Core.} The phase-locked SC black-hole core reached after local State-I saturation. Its interior and live FCC/SC boundary require separate saturated-phase mechanics.
+\end{itemize}
+
+Accordingly, every continuum tensor derived from the FCC scaffold and interstitial condensate in this appendix is a \emph{State-I Soft-Floor material tensor}. It is not a tensor of the State-0 Latent Substrate and is not analytically continued into the State-II saturated core.
+
+The preferred State-I SGF coordinate is
+\begin{equation}
+    x^0 = c_{\mathrm{E}}t,
+\end{equation}
+and the effective measurement signature is taken to be
+\begin{equation}
+    (-,+,+,+).
+\end{equation}
+Hatted indices denote components measured in the local orthonormal State-I SGF frame. In that frame,
+\begin{equation}
+    T^{\hat{0}\hat{0}} = T_{\hat{0}\hat{0}}
+\end{equation}
+is the mechanical energy density. The manuscript uses positive mechanical tension in the Cauchy-stress convention, so the spatial block of the energy--momentum tensor is
+\begin{equation}
+    T^{\hat{i}\hat{j}} = -\sigma_{ij}.
+\end{equation}
+Thus, positive isotropic tensile stress appears as negative pressure in the effective tensor representation.
+
+For the effective Soft-Floor measurement tensor, define
+\begin{equation}
+    g^{(\tau)} \equiv \det\!\left(g_{\mu\nu}^{(\tau)}\right).
+\end{equation}
+
+The construction below tracks
+\begin{equation}
+\begin{aligned}
+    &\text{energy density}, \qquad \text{momentum density}, \\
+    &\text{energy flux}, \qquad \text{normal and shear stress},
+\end{aligned}
+\end{equation}
+and their redistribution among the nodal, interstitial, and defect sectors.
+
+Three constitutive levels must remain separate.
+
+\paragraph{Structural cosmological level:}
+\begin{equation}
+    \rho_{\mathrm{G}}, \qquad \tau_{\mathrm{G}} = \rho_{\mathrm{G}}c_{\mathrm{E}}^2.
+\end{equation}
+These characterize the absolute structural capacity assigned to the complete unbroken State-I active vacuum.
+
+\paragraph{Operational nodal level:}
+\begin{equation}
+    \rho_{\mathrm{D}}, \qquad \tau_{\mathrm{D}}, \qquad K_{\mathrm{sh}}.
+\end{equation}
+These govern the inertia and contact mechanics of the FCC scaffold.
+
+\paragraph{Operational condensate and defect level:}
+\begin{equation}
+\begin{aligned}
+    \rho_{\mathrm{IC}}^{(\mathrm{imp})} &= \mu_{\mathrm{D}}\iota_V^{(\mathrm{def})}, \\
+    M_{\mathrm{top}} &= \rho_{\mathrm{IC}}^{(\mathrm{imp})} V_{\mathrm{imp}} f_{\varphi}(\Delta\varphi).
+\end{aligned}
+\end{equation}
+These are mode-resolved quantities associated with a particular defect-induced boundary-value problem. They do not define the structural cosmological energy density of the complete interstitial geometry.
+
+Accordingly,
+\begin{equation}
+    \rho_{\mathrm{G}} \neq \rho_{\mathrm{D}}, \qquad \rho_{\mathrm{G}} \neq \rho_{\mathrm{IC}}^{(\mathrm{imp})}.
+\end{equation}
+The structural budget and operational dynamics are constitutively connected but are not numerically identical.
+
+\section{Conservative Coherent State-I Continuum}
+
+Let $\mathbf{u}(\mathbf{x},t)$ be the FCC scaffold displacement. The infinitesimal strain tensor is
+\begin{equation}
+    \varepsilon_{ij} = \frac{1}{2} \left( \partial_i u_j + \partial_j u_i \right).
+\end{equation}
+
+The coherent State-I branch is incrementally incompressible:
+\begin{equation}
+    \partial_i u_i = 0.
+\end{equation}
+
+The retained quadratic action for the coherent FCC--condensate continuum is
+\begin{equation}
+    S_{\mathrm{IC}}^{(2)} = \int \left[ \frac{1}{2} \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}}) \dot{u}_i\dot{u}_i - K_{\mathrm{sh}} \varepsilon_{ij}\varepsilon_{ij} + \delta p_{\mathrm{IC}}\,\partial_i u_i \right] \,\mathrm{d}^3x\,\mathrm{d}t.
+\end{equation}
+
+Its incremental stress is
+\begin{equation}
+    \delta\sigma_{ij} = 2K_{\mathrm{sh}}\varepsilon_{ij} - \delta p_{\mathrm{IC}}\delta_{ij}.
+\end{equation}
+
+The equation of motion is
+\begin{equation}
+    \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}}) \ddot{u}_i = \partial_j\delta\sigma_{ij}.
+\end{equation}
+
+The condensate pressure multiplier supplies the incremental volume constraint, while the FCC contact network supplies the finite transverse restoring coefficient. The coherent translational spectrum contains two transverse polarizations and no independent finite-frequency volumetric translational polarization.
+
+The gravitational endpoint-transfer closure gives
+\begin{equation}
+    \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})
+    =
+    \frac{\rho_{\mathrm{eff}}^{(0)}}{(1-\alpha_{\mathrm{G}})^{4}}.
+\end{equation}
+
+Here $\rho_{\mathrm{eff}}^{(0)}$ is the scale-neutral continuum inertia coefficient of the selected coherent transfer coordinate; at the primitive-cell microscopic scale established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} it is identified with the scaffold-only normalization $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$, and it must not be interpreted as an independently derived equilibrium density of the complete dual-phase vacuum.
+
+Therefore,
+\begin{equation}
+    c_{\mathrm{P}}
+    =
+    c_{\mathrm{E}}(1-\alpha_{\mathrm{G}})^{2}.
+\end{equation}
+
+\section{Mechanical Energy Balance}
+
+For a gravitational background that is quasistatic over the disturbance,
+\begin{equation}
+    \dot{\alpha}_{\mathrm{G}} \simeq 0,
+\end{equation}
+the coherent mechanical energy density is
+\begin{equation}
+    T_{\mathrm{coh}}^{00} = \frac{1}{2} \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}}) \dot{u}_i\dot{u}_i + K_{\mathrm{sh}} \varepsilon_{ij}\varepsilon_{ij}.
+\end{equation}
+
+The constraint term does not contribute independent stored energy on the coherent branch because
+\begin{equation}
+    \delta p_{\mathrm{IC}}\,\partial_i u_i = 0.
+\end{equation}
+
+Multiplying the equation of motion by $\dot{u}_i$ gives
+\begin{equation}
+    \rho_{\mathrm{eff}} \dot{u}_i\ddot{u}_i = \dot{u}_i\partial_j\delta\sigma_{ij}.
+\end{equation}
+
+Using
+\begin{equation}
+    \dot{u}_i\partial_j\delta\sigma_{ij} = \partial_j \left( \delta\sigma_{ij}\dot{u}_i \right) - \delta\sigma_{ij}\partial_j\dot{u}_i,
+\end{equation}
+together with $\delta\sigma_{ij}=\delta\sigma_{ji}$, gives
+\begin{equation}
+    \delta\sigma_{ij}\partial_j\dot{u}_i = 2K_{\mathrm{sh}} \varepsilon_{ij}\dot{\varepsilon}_{ij}.
+\end{equation}
+The pressure contribution vanishes because
+\begin{equation}
+    \delta p_{\mathrm{IC}}\partial_i\dot{u}_i=0.
+\end{equation}
+Therefore,
+\begin{equation}
+    \frac{\partial T_{\mathrm{coh}}^{00}}{\partial t} - \partial_j \left( \delta\sigma_{ij}\dot{u}_i \right) = 0.
+\end{equation}
+
+The mechanical energy flux is represented by
+\begin{equation}
+    c_{\mathrm{E}}T_{\mathrm{coh}}^{j0} = -\delta\sigma_{ij}\dot{u}_i.
+\end{equation}
+This is the continuum-mechanical statement that energy is transported by stress performing work on the moving State-I medium.
+
+\section{Mechanical Momentum Balance}
+
+The coherent momentum density is
+\begin{equation}
+    \rho_{\mathrm{eff}}\dot{u}_i.
+\end{equation}
+For a frozen background, the equation of motion may be written as
+\begin{equation}
+    \frac{\partial}{\partial t} \left( \rho_{\mathrm{eff}}\dot{u}_i \right) - \partial_j\delta\sigma_{ij} = 0.
+\end{equation}
+
+The corresponding tensor components are
+\begin{equation}
+    T_{\mathrm{coh}}^{0i} = c_{\mathrm{E}} \rho_{\mathrm{eff}}\dot{u}_i,
+\end{equation}
+and
+\begin{equation}
+    T_{\mathrm{coh}}^{ji} = -\delta\sigma_{ij}.
+\end{equation}
+
+The complete State-I Soft-Floor material balance tensor is therefore
+\begin{equation}
+    T_{\mathrm{coh}}^{\mu\nu} =
+    \begin{pmatrix}
+        \displaystyle
+        \frac{1}{2}\rho_{\mathrm{eff}}\dot{u}_k\dot{u}_k + K_{\mathrm{sh}}\varepsilon_{kl}\varepsilon_{kl}
+        &
+        \displaystyle
+        c_{\mathrm{E}}\rho_{\mathrm{eff}}\dot{u}_j
+        \\[8pt]
+        \displaystyle
+        -\frac{1}{c_{\mathrm{E}}} \delta\sigma_{ik}\dot{u}_k
+        &
+        \displaystyle
+        -\delta\sigma_{ij}
+    \end{pmatrix}.
+\end{equation}
+
+It satisfies
+\begin{equation}
+    \partial_\mu T_{\mathrm{coh}}^{\mu\nu}=0
+\end{equation}
+for an isolated coherent disturbance in a frozen State-I background. For $\nu=0$, this is energy conservation. For $\nu=i$, it is momentum conservation.
+
+\section{State-I Material Tensor Versus Effective Observable Tensor}
+
+The State-I Soft-Floor material tensor need not be symmetric in the preferred SGF frame. Its temporal--spatial components are
+\begin{equation}
+    T_{\mathrm{coh}}^{0i} = c_{\mathrm{E}}\rho_{\mathrm{eff}}\dot{u}_i,
+\end{equation}
+whereas its spatial--temporal components are
+\begin{equation}
+    T_{\mathrm{coh}}^{i0} = -\frac{1}{c_{\mathrm{E}}} \delta\sigma_{ij}\dot{u}_j.
+\end{equation}
+The first represents momentum density. The second represents mechanical energy flux. These material currents need not be identical, so
+\begin{equation}
+    T_{\mathrm{coh}}^{0i} \neq T_{\mathrm{coh}}^{i0}
+\end{equation}
+does not violate the State-I conservation law.
+
+This possible asymmetry is not specifically caused by matter. It may occur for any dynamic State-I configuration, including a coherent transverse wave, an elastic disturbance, a gravitational-wave-like shear mode, or a defect-loaded condensate flow. Localized matter adds defect and induced-condensate contributions to the total State-I tensor but does not create the underlying distinction between momentum density and energy flux.
+
+The spatial stress remains symmetric in the parity-even unpolarized continuum sector:
+\begin{equation}
+    \delta\sigma_{ij}=\delta\sigma_{ji}.
+\end{equation}
+
+At the observable long-wavelength level, TFT represents the homogenized response through the effective Soft-Floor measurement tensor $g_{\mu\nu}^{(\tau)}$. Let $S_{\mathrm{eff}}$ denote the corresponding long-wavelength action. The symmetric observable tensor is defined by
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{eff})} = -\frac{2}{\sqrt{-g^{(\tau)}}} \frac{\delta S_{\mathrm{eff}}} {\delta g_{(\tau)}^{\mu\nu}}.
+\end{equation}
+It satisfies
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{eff})} = T_{\nu\mu}^{(\mathrm{eff})}.
+\end{equation}
+
+If the completed effective action is local and invariant under the emergent coordinate transformations associated with $g_{\mu\nu}^{(\tau)}$, its Hilbert tensor would coincide on shell with the Belinfante--Rosenfeld improvement of the canonical State-I material current, up to identically conserved boundary terms. This equivalence is therefore a completion condition of the effective theory, not an identity imposed on the microscopic State-I continuum.
+
+The hierarchy is
+\begin{equation}
+    \begin{aligned}
+    \text{State-I material balance} &\longrightarrow \text{homogenized effective action} \\
+    &\longrightarrow \text{symmetric observable tensor}.
+    \end{aligned}
+\end{equation}
+TFT does not assume that the symmetric spacetime tensor is fundamental. It treats it as the long-wavelength observational representation of the underlying State-I continuum.
+
+\section{Primitive-Cell Phase Averaging}
+
+Let $V_{\mathrm{p}}$ be the primitive-cell volume. The nodal and interstitial subvolumes are
+\begin{equation}
+    V_{\mathrm{D}} = \beta_{\mathrm{geo}}V_{\mathrm{p}}, \qquad V_{\mathrm{IC}} = \beta_{\mathrm{IC}}V_{\mathrm{p}}.
+\end{equation}
+
+For a phase-resolved effective tensor, the primitive-cell average is
+\begin{equation}
+    \left\langle T_{\mu\nu}\right\rangle_{\mathrm{p}} = \frac{1}{V_{\mathrm{p}}} \left[ \int_{V_{\mathrm{D}}} T_{\mu\nu}^{(\mathrm{D})}\,\mathrm{d}V + \int_{V_{\mathrm{IC}}} T_{\mu\nu}^{(\mathrm{IC})}\,\mathrm{d}V \right].
+\end{equation}
+
+The nodal tensor $T_{\mu\nu}^{(\mathrm{D})}$ is understood as the \emph{homogenized load-bearing scaffold tensor}. It includes the FCC nodal contribution together with the contact-interface energy and stress assigned to the bonded scaffold. The interstitial tensor $T_{\mu\nu}^{(\mathrm{IC})}$ contains the condensate energy, momentum transport, and stress not already assigned to a localized defect interaction. This allocation convention prevents omission or double counting of the FCC contact and defect--condensate interface energies.
+
+If the leading background tensors are uniform within their phase volumes, the average reduces to
+\begin{equation}
+    \left\langle T_{\mu\nu}^{(0)}\right\rangle_{\mathrm{p}} = \beta_{\mathrm{geo}} T_{\mu\nu}^{(\mathrm{D},0)} + \beta_{\mathrm{IC}} T_{\mu\nu}^{(\mathrm{IC},0)}.
+\end{equation}
+
+The two phase tensors need not be equal:
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{D},0)} \neq T_{\mu\nu}^{(\mathrm{IC},0)}.
+\end{equation}
+Their energy densities, momentum currents, and spatial stresses are determined by different constitutive mechanisms.
+
+This is the principal correction to the scalar expression
+\begin{equation}
+    \beta_{\mathrm{geo}}\tau_{\mathrm{G}}\eta_{\mu\nu} + \beta_{\mathrm{IC}}\tau_{\mathrm{G}}\eta_{\mu\nu},
+\end{equation}
+which assigns identical tensor structure to both phases and therefore contains no phase-specific mechanics.
+
+\section{Structural Volumetric-Energy Closure}
+
+A geometric fraction is not automatically an energy fraction. TFT therefore introduces the uniform structural-capacity closure
+\begin{equation}
+    T_{\hat{0}\hat{0}}^{(\mathrm{D},0)} = T_{\hat{0}\hat{0}}^{(\mathrm{IC},0)} = \tau_{\mathrm{G}}.
+\end{equation}
+
+This statement assigns the same structural-capacity scale $\tau_{\mathrm{G}}$ per occupied phase volume of the complete mechanically maintained State-I cell. It does not imply equal operational inertia,
+\begin{equation}
+    \rho_{\mathrm{D}} \neq \rho_{\mathrm{IC}}^{(\mathrm{imp})},
+\end{equation}
+and it does not imply equal spatial stresses,
+\begin{equation}
+    T_{\hat{i}\hat{j}}^{(\mathrm{D},0)} \neq T_{\hat{i}\hat{j}}^{(\mathrm{IC},0)}.
+\end{equation}
+
+The phase-averaged reference energy density is
+\begin{equation}
+\begin{aligned}
+    \left\langle T_{\hat{0}\hat{0}}^{(0)} \right\rangle_{\mathrm{p}} &= \beta_{\mathrm{geo}} T_{\hat{0}\hat{0}}^{(\mathrm{D},0)} + \beta_{\mathrm{IC}} T_{\hat{0}\hat{0}}^{(\mathrm{IC},0)} \\[3pt]
+    &= \beta_{\mathrm{geo}}\tau_{\mathrm{G}} + \beta_{\mathrm{IC}}\tau_{\mathrm{G}}.
+\end{aligned}
+\end{equation}
+
+Since
+\begin{equation}
+    \beta_{\mathrm{geo}} + \beta_{\mathrm{IC}} = 1,
+\end{equation}
+one obtains
+\begin{equation}
+    \left\langle T_{\hat{0}\hat{0}}^{(0)} \right\rangle_{\mathrm{p}} = \tau_{\mathrm{G}}.
+\end{equation}
+
+The normalized TFT structural fractions are therefore
+\begin{equation}
+    \Omega_{\mathrm{D}}^{(\mathrm{TFT},0)} \equiv \frac{\beta_{\mathrm{geo}}\tau_{\mathrm{G}}} {\tau_{\mathrm{G}}} = \beta_{\mathrm{geo}},
+\end{equation}
+and
+\begin{equation}
+    \Omega_{\mathrm{IC}}^{(\mathrm{TFT},0)} \equiv \frac{\beta_{\mathrm{IC}}\tau_{\mathrm{G}}} {\tau_{\mathrm{G}}} = \beta_{\mathrm{IC}}.
+\end{equation}
+
+Thus,
+\begin{equation}
+    \Omega_{\mathrm{D}}^{(\mathrm{TFT},0)} = \frac{\pi}{3\sqrt{2}} \approx 0.74048,
+\end{equation}
+and
+\begin{equation}
+    \Omega_{\mathrm{IC}}^{(\mathrm{TFT},0)} = 1-\frac{\pi}{3\sqrt{2}} \approx 0.25952.
+\end{equation}
+
+The FCC fractions are exact geometric results. Their identification with normalized TFT structural-energy fractions is conditional on the closure above. Their identification with the standard critical-density parameters additionally requires an explicit normalization bridge between $\tau_{\mathrm{G}}$ and the observational cosmological reference density.
+
+\section{Baryonic Defect Conversion and the Closed Background Ledger}
+
+TFT represents baryonic matter as localized topological defects of the State-I active vacuum. The defect's inertial coefficient is generated by conservative condensate added inertia:
+\begin{equation}
+    M_{\mathrm{top}} = \rho_{\mathrm{IC}}^{(\mathrm{imp})} V_{\mathrm{imp}} f_{\varphi}(\Delta\varphi).
+\end{equation}
+
+The baryonic tensor $T_{\mu\nu}^{(\mathrm{b})}$ is defined to include the localized defect energy, its conservative condensate added inertia, and the local defect--condensate interaction energy. These contributions are therefore not added again as independent interstitial mass terms.
+
+Define the cosmological baryonic fraction in the State-I SGF background frame by
+\begin{equation}
+    \beta_{\mathrm{b}} \equiv \frac{ \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{b})} \right\rangle }{ \tau_{\mathrm{G}} }.
+\end{equation}
+
+TFT adopts the defect-conversion closure that the structural energy required to form baryonic defects is drawn from the nodal structural allocation. The remaining nodal contribution is therefore
+\begin{equation}
+    \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{D},\mathrm{rem})} \right\rangle = \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) \tau_{\mathrm{G}}.
+\end{equation}
+
+The interstitial structural allocation remains
+\begin{equation}
+    \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{IC},0)} \right\rangle = \beta_{\mathrm{IC}}\tau_{\mathrm{G}}.
+\end{equation}
+
+The localized baryonic contribution is
+\begin{equation}
+    \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{b})} \right\rangle = \beta_{\mathrm{b}}\tau_{\mathrm{G}}.
+\end{equation}
+
+The interstitial tensor may be decomposed as
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{IC})} = T_{\mu\nu}^{(\mathrm{IC},0)} + \delta T_{\mu\nu}^{(\mathrm{IC})}.
+\end{equation}
+Here $\delta T_{\mu\nu}^{(\mathrm{IC})}$ denotes the extended induced condensate response not already included in the localized baryonic interaction tensor. In the homogeneous reference-budget average,
+\begin{equation}
+    \left\langle \delta T_{\hat{0}\hat{0}}^{(\mathrm{IC})} \right\rangle = 0,
+\end{equation}
+while local and perturbative condensate response may be nonzero and contributes to gravitational clustering and structure formation.
+
+The homogeneous closed-background energy density is therefore
+\begin{equation}
+\begin{aligned}
+    \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{TFT})} \right\rangle &= \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) \tau_{\mathrm{G}} + \beta_{\mathrm{IC}}\tau_{\mathrm{G}} + \beta_{\mathrm{b}}\tau_{\mathrm{G}} \\[3pt]
+    &= \left( \beta_{\mathrm{geo}} + \beta_{\mathrm{IC}} \right) \tau_{\mathrm{G}} \\[3pt]
+    &= \tau_{\mathrm{G}}.
+\end{aligned}
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \beta_{\Lambda,\mathrm{eff}} = \beta_{\mathrm{geo}} - \beta_{\mathrm{b}}
+\end{equation}
+is a structural conversion identity, not an energy-destruction identity.
+
+For
+\begin{equation}
+    \beta_{\mathrm{b}}\simeq0.05,
+\end{equation}
+one obtains
+\begin{equation}
+    \beta_{\Lambda,\mathrm{eff}} \simeq0.69048.
+\end{equation}
+The closed scalar budget is
+\begin{equation}
+    0.69048+0.25952+0.05=1.
+\end{equation}
+
+\section{Phase-Resolved Cosmological Tensor}
+
+For a statistically homogeneous and isotropic State-I background, define the effective equation-of-state ratios by
+\begin{equation}
+    w_{\mathrm{D}} = \frac{ \delta^{ij} \left\langle T_{\hat{i}\hat{j}}^{(\mathrm{D},\mathrm{rem})} \right\rangle }{ 3 \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{D},\mathrm{rem})} \right\rangle },
+\end{equation}
+\begin{equation}
+    w_{\mathrm{IC}} = \frac{ \delta^{ij} \left\langle T_{\hat{i}\hat{j}}^{(\mathrm{IC})} \right\rangle }{ 3 \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{IC})} \right\rangle },
+\end{equation}
+and
+\begin{equation}
+    w_{\mathrm{b}} = \frac{ \delta^{ij} \left\langle T_{\hat{i}\hat{j}}^{(\mathrm{b})} \right\rangle }{ 3 \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{b})} \right\rangle }.
+\end{equation}
+
+The three phase tensors may then be written as
+\begin{equation}
+    \left\langle T_{\hat{\mu}\hat{\nu}}^{(\mathrm{D},\mathrm{rem})} \right\rangle = \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) \tau_{\mathrm{G}} \operatorname{diag} \left( 1,w_{\mathrm{D}},w_{\mathrm{D}},w_{\mathrm{D}} \right),
+\end{equation}
+\begin{equation}
+    \left\langle T_{\hat{\mu}\hat{\nu}}^{(\mathrm{IC})} \right\rangle = \beta_{\mathrm{IC}} \tau_{\mathrm{G}} \operatorname{diag} \left( 1,w_{\mathrm{IC}},w_{\mathrm{IC}},w_{\mathrm{IC}} \right),
+\end{equation}
+and
+\begin{equation}
+    \left\langle T_{\hat{\mu}\hat{\nu}}^{(\mathrm{b})} \right\rangle = \beta_{\mathrm{b}} \tau_{\mathrm{G}} \operatorname{diag} \left( 1,w_{\mathrm{b}},w_{\mathrm{b}},w_{\mathrm{b}} \right).
+\end{equation}
+
+The complete homogeneous cosmological tensor is
+\begin{equation}
+    \left\langle T_{\hat{\mu}\hat{\nu}}^{(\mathrm{TFT})} \right\rangle = \left\langle T_{\hat{\mu}\hat{\nu}}^{(\mathrm{D},\mathrm{rem})} \right\rangle + \left\langle T_{\hat{\mu}\hat{\nu}}^{(\mathrm{IC})} \right\rangle + \left\langle T_{\hat{\mu}\hat{\nu}}^{(\mathrm{b})} \right\rangle.
+\end{equation}
+
+Its total equation-of-state diagnostic is
+\begin{equation}
+    w_{\mathrm{tot}} = \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) w_{\mathrm{D}} + \beta_{\mathrm{IC}}w_{\mathrm{IC}} + \beta_{\mathrm{b}}w_{\mathrm{b}}.
+\end{equation}
+The scalar fractions determine the energy weights. The constitutive mechanics determines the spatial stress and dynamical behavior.
+
+\section{Nodal Structural Stress}
+
+Let $\tau_{ij}^{(\mathrm{D},0)}$ be the positive-tension mechanical stress of the unperturbed nodal scaffold per occupied nodal volume. Because $T_{\mu\nu}^{(\mathrm{D},0)}$ is the homogenized scaffold tensor, $\tau_{ij}^{(\mathrm{D},0)}$ includes the background FCC contact-interface stress assigned to the nodal network.
+
+Positive tensile stress corresponds to negative pressure in the effective tensor representation:
+\begin{equation}
+    T_{\hat{i}\hat{j}}^{(\mathrm{D},0)} = -\tau_{ij}^{(\mathrm{D},0)}.
+\end{equation}
+
+After baryonic conversion,
+\begin{equation}
+    \left\langle T_{\hat{i}\hat{j}}^{(\mathrm{D},\mathrm{rem})} \right\rangle = -\left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) \tau_{ij}^{(\mathrm{D},0)}.
+\end{equation}
+
+The general nodal equation-of-state ratio is
+\begin{equation}
+    w_{\mathrm{D}} = -\frac{ \delta^{ij}\tau_{ij}^{(\mathrm{D},0)} }{ 3\tau_{\mathrm{G}} }.
+\end{equation}
+
+Cubic symmetry or leading long-wavelength isotropy constrains the form to
+\begin{equation}
+    \tau_{ij}^{(\mathrm{D},0)} = \tau_{\mathrm{iso}}\delta_{ij},
+\end{equation}
+but does not determine the magnitude $\tau_{\mathrm{iso}}$. Therefore,
+\begin{equation}
+    w_{\mathrm{D}} = -\frac{\tau_{\mathrm{iso}}}{\tau_{\mathrm{G}}}.
+\end{equation}
+
+Under the additional isotropic structural-tension closure
+\begin{equation}
+    \tau_{ij}^{(\mathrm{D},0)} = \tau_{\mathrm{G}}\delta_{ij},
+\end{equation}
+one obtains
+\begin{equation}
+    w_{\mathrm{D}}=-1.
+\end{equation}
+
+This closure gives a mechanical interpretation of the effective negative pressure:
+\begin{equation}
+    \text{positive isotropic structural tension} \longrightarrow \text{negative isotropic tensor pressure}.
+\end{equation}
+It does not require a fundamental thermodynamic fluid with negative internal pressure.
+
+The equality $\tau_{\mathrm{iso}}=\tau_{\mathrm{G}}$ remains a constitutive closure. A first-principles derivation requires the absolute State-I ground-state energy as a function of volume and must show that
+\begin{equation}
+    p_{\mathrm{D}} = -\frac{\partial E_{\mathrm{D}}}{\partial V} = -\frac{E_{\mathrm{D}}}{V}.
+\end{equation}
+
+If only one principal direction carried tension of magnitude $\tau_{\mathrm{G}}$, then $w_{\mathrm{D}}=-1/3$. That would describe a one-dimensional string-like projection rather than the isotropic three-dimensional FCC background.
+
+Thus, FCC isotropy fixes the tensor form, while the structural closure fixes the value of $w_{\mathrm{D}}$.
+
+\section{Interstitial Background Stress}
+
+The interstitial sector has a different constitutive structure. The quasistatic pressure generated by gravitational loading is
+\begin{equation}
+    \overline{p}_{\mathrm{IC}} = \alpha_{\mathrm{G}}\tau_{\mathrm{D,bulk}}.
+\end{equation}
+
+In the unstrained State-I reference state,
+\begin{equation}
+    \alpha_{\mathrm{G}}=0, \qquad \overline{p}_{\mathrm{IC}}=0, \qquad \mathbf{v}_{\mathrm{rel}}=\mathbf{0}.
+\end{equation}
+These relations eliminate the load-induced pressure increment and background relative-flow momentum stress. They do not, by themselves, prove that no intrinsic interstitial pre-stress exists.
+
+TFT therefore states the cold interstitial reference-state closure explicitly:
+\begin{equation}
+    T_{\hat{i}\hat{j}}^{(\mathrm{IC},0)}=0.
+\end{equation}
+Under this closure,
+\begin{equation}
+    w_{\mathrm{IC}}^{(0)}=0.
+\end{equation}
+
+Under localized gravitational loading, the interstitial tensor acquires quasistatic pressure, coherent momentum transport, defect-induced relative-flow stress, conservative reactive loading, and any separately derived dissipative correction. Schematically,
+\begin{equation}
+    w_{\mathrm{IC}} \sim \frac{\overline{p}_{\mathrm{IC}}}{\tau_{\mathrm{G}}} + \mathcal{O} \left( \frac{ \left\langle v_{\mathrm{rel}}^2 \right\rangle }{ c_{\mathrm{E}}^2 } \right).
+\end{equation}
+
+For nonrelativistic large-scale condensate response and weak phase-averaged pressure,
+\begin{equation}
+    |w_{\mathrm{IC}}|\ll1.
+\end{equation}
+This is the TFT cold-dark-response condition.
+
+The structural allocation and dynamical response remain distinct:
+\begin{equation}
+    \beta_{\mathrm{IC}} = \text{structural interstitial allocation},
+\end{equation}
+whereas
+\begin{equation}
+    \delta T_{\mu\nu}^{(\mathrm{IC})} = \text{induced clustering and impedance response}.
+\end{equation}
+
+\section{Baryonic Defect Stress}
+
+For a dilute cosmological population of nonrelativistic defects,
+\begin{equation}
+    \left\langle v_{\mathrm{b}}^2 \right\rangle \ll c_{\mathrm{E}}^2.
+\end{equation}
+
+The phase-averaged kinetic pressure is therefore small compared with the baryonic energy density:
+\begin{equation}
+    \left| \delta^{ij} \left\langle T_{\hat{i}\hat{j}}^{(\mathrm{b})} \right\rangle \right| \ll 3 \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{b})} \right\rangle.
+\end{equation}
+Thus,
+\begin{equation}
+    w_{\mathrm{b}}\simeq0.
+\end{equation}
+Internal stresses may be important inside individual defects, stars, or compact bodies, but they average to a small cosmological pressure in the nonrelativistic late-time background.
+
+\section{Late-Time Tensor Budget}
+
+For the late-time homogeneous State-I background,
+\begin{equation}
+    w_{\mathrm{IC}}\simeq0, \qquad w_{\mathrm{b}}\simeq0.
+\end{equation}
+The total equation-of-state diagnostic becomes
+\begin{equation}
+    w_{\mathrm{tot}} \simeq \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) w_{\mathrm{D}}.
+\end{equation}
+
+Under the isotropic nodal structural-tension closure,
+\begin{equation}
+    w_{\mathrm{D}}=-1,
+\end{equation}
+and therefore
+\begin{equation}
+    w_{\mathrm{tot}} \simeq -\left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right).
+\end{equation}
+Numerically,
+\begin{equation}
+    w_{\mathrm{tot}}\simeq-0.69048.
+\end{equation}
+
+The corresponding GR-comparison tensor is
+\begin{equation}
+    \left\langle T_{\hat{\mu}\hat{\nu}}^{(\mathrm{TFT})} \right\rangle \simeq \tau_{\mathrm{G}} \operatorname{diag} \left( 1,-0.69048,-0.69048,-0.69048 \right).
+\end{equation}
+
+This tensor is an effective source-side diagnostic. It does not restore FLRW expansion as the fundamental TFT dynamics. TFT assigns redshift and apparent acceleration to separate visco-elastic optical and kinematic mechanisms. If $\tau_{\mathrm{iso}}$ is not set equal to $\tau_{\mathrm{G}}$, the structural fractions remain fixed while $w_{\mathrm{D}}$ and $w_{\mathrm{tot}}$ remain constitutive quantities.
+
+\section{Total Conserved Tensor, Remaining Capacity, and Converted Capacity}
+
+Three objects must be distinguished.
+
+First, the complete State-I energy--momentum tensor after defect conversion is
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{TFT})} = T_{\mu\nu}^{(\mathrm{D},\mathrm{rem})} + T_{\mu\nu}^{(\mathrm{IC},0)} + \delta T_{\mu\nu}^{(\mathrm{IC})} + T_{\mu\nu}^{(\mathrm{b})}.
+\end{equation}
+This tensor accounts for all retained State-I energy, momentum, flux, and stress. It is the tensor subject to the closed-system conservation law.
+
+Second, the unperturbed State-I structural reference tensor is
+\begin{equation}
+    T_{\mu\nu}^{(0)} = \beta_{\mathrm{geo}} T_{\mu\nu}^{(\mathrm{D},0)} + \beta_{\mathrm{IC}} T_{\mu\nu}^{(\mathrm{IC},0)}.
+\end{equation}
+
+Third, $T_{\mu\nu}^{(\mathrm{rem})}$ denotes the structural capacity that remains available in the unbroken State-I phase after localized conversion and induced condensate response. It is a constitutive capacity tensor, not the complete conserved energy--momentum tensor.
+
+Define the converted structural-capacity tensor by the exact ledger
+\begin{equation}
+    T_{\mu\nu}^{(0)} = T_{\mu\nu}^{(\mathrm{rem})} + \Delta T_{\mu\nu}^{(\tau)}.
+\end{equation}
+Therefore,
+\begin{equation}
+    \Delta T_{\mu\nu}^{(\tau)} \equiv T_{\mu\nu}^{(0)} - T_{\mu\nu}^{(\mathrm{rem})}.
+\end{equation}
+
+At retained conservative order, the converted capacity is represented by
+\begin{equation}
+    \Delta T_{\mu\nu}^{(\tau)} = T_{\mu\nu}^{(\mathrm{b})} + \delta T_{\mu\nu}^{(\mathrm{IC})}.
+\end{equation}
+Here $T_{\mu\nu}^{(\mathrm{b})}$ already includes the localized defect--condensate interaction and conservative added-inertia energy. The extended term $\delta T_{\mu\nu}^{(\mathrm{IC})}$ therefore excludes those localized contributions and represents only the nonlocal induced condensate response.
+
+The distinction is essential:
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{TFT})} = \text{total conserved State-I energy--momentum},
+\end{equation}
+whereas
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{rem})} = \text{remaining unconverted structural capacity}.
+\end{equation}
+The two tensors are not interchangeable.
+
+In the homogeneous reference-budget average,
+\begin{equation}
+    \left\langle \delta T_{\hat{0}\hat{0}}^{(\mathrm{IC})} \right\rangle = 0,
+\end{equation}
+so the background $69/26/5$ scalar ledger remains closed. Locally, $\delta T_{\mu\nu}^{(\mathrm{IC})}$ may be nonzero and contributes to gravitational response and structure formation.
+
+\section{TFT Gravitational Tensor Equation}
+
+The effective State-I gravitational strain is sourced by converted structural capacity:
+\begin{equation}
+    G_{\mu\nu}^{(\tau)} = \frac{\kappa G}{c_{\mathrm{E}}^4} \Delta T_{\mu\nu}^{(\tau)}.
+\end{equation}
+Equivalently,
+\begin{equation}
+    G_{\mu\nu}^{(\tau)} = \frac{\kappa G}{c_{\mathrm{E}}^4} \left[ T_{\mu\nu}^{(0)} - T_{\mu\nu}^{(\mathrm{rem})} \right].
+\end{equation}
+
+This equation must be distinguished from the remaining-capacity relation itself. The remaining State-I capacity decreases as loading increases, whereas the induced strain increases with the converted-capacity deficit:
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{rem})} \downarrow \qquad\Longrightarrow\qquad \Delta T_{\mu\nu}^{(\tau)} \uparrow.
+\end{equation}
+
+An unperturbed State-I region satisfies
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{rem})} = T_{\mu\nu}^{(0)},
+\end{equation}
+so that
+\begin{equation}
+    G_{\mu\nu}^{(\tau)}=0.
+\end{equation}
+A positive localized load produces
+\begin{equation}
+    \Delta T_{\hat{0}\hat{0}}^{(\tau)}>0.
+\end{equation}
+
+At State-I saturation, the remaining active transfer capacity approaches zero and the accumulated deficit approaches its maximum. The State-I constitutive relation terminates at the FCC-to-SC phase boundary and is not continued into the State-II core.
+
+In TFT, $G_{\mu\nu}^{(\tau)}$ is an effective representation of State-I lattice strain and measurement distortion. The metric-like tensor is emergent, and the underlying dynamics remain continuum mechanical.
+
+\section{Weak-Field Normalization and Attractive Gravity}
+
+Define the positive structural-deficit density by
+\begin{equation}
+    \Delta\rho_{\mathrm{G}} = \frac{ \Delta T_{\hat{0}\hat{0}}^{(\tau)} }{ c_{\mathrm{E}}^2 }.
+\end{equation}
+
+In the weak static limit, the effective Soft-Floor metric is written as
+\begin{equation}
+    g_{00}^{(\tau)} \simeq -\left( 1+\frac{2\Phi_\tau}{c_{\mathrm{E}}^2} \right)c_{\mathrm{E}}^2.
+\end{equation}
+When $G_{\mu\nu}^{(\tau)}$ is identified with the Einstein-tensor weak-field form of this effective metric representation,
+\begin{equation}
+    G_{\hat{0}\hat{0}}^{(\tau)} \simeq \frac{2}{c_{\mathrm{E}}^2} \nabla^2\Phi_\tau.
+\end{equation}
+This weak-field identification is an effective projection condition; it does not follow from a generic strain tensor alone.
+
+Substitution into the TFT tensor equation gives
+\begin{equation}
+    \frac{2}{c_{\mathrm{E}}^2} \nabla^2\Phi_\tau = \frac{\kappa G}{c_{\mathrm{E}}^4} \Delta\rho_{\mathrm{G}}c_{\mathrm{E}}^2,
+\end{equation}
+and therefore
+\begin{equation}
+    \nabla^2\Phi_\tau = \frac{\kappa}{2} G\Delta\rho_{\mathrm{G}}.
+\end{equation}
+
+For the tensor normalization
+\begin{equation}
+    \kappa=8\pi,
+\end{equation}
+one obtains
+\begin{equation}
+    \nabla^2\Phi_\tau = 4\pi G\Delta\rho_{\mathrm{G}}.
+\end{equation}
+
+With
+\begin{equation}
+    \Phi_\tau(\infty)=0,
+\end{equation}
+the solution is
+\begin{equation}
+    \Phi_\tau(\mathbf{x}) = -G \int \frac{ \Delta\rho_{\mathrm{G}}(\mathbf{x}') }{ |\mathbf{x}-\mathbf{x}'| } \,\mathrm{d}^3x'.
+\end{equation}
+
+Define the integrated structural-deficit mass by
+\begin{equation}
+    M_{\Delta} \equiv \int \Delta\rho_{\mathrm{G}}(\mathbf{x}') \,\mathrm{d}^3x'.
+\end{equation}
+For an isolated localized defect, the TFT source-normalization closure identifies
+\begin{equation}
+    M_{\Delta} = m_{\mathrm{g}} = M_{\mathrm{top}}.
+\end{equation}
+This is the tensor-integrated form of the topological loading identity.
+
+For a compact spherical source,
+\begin{equation}
+    \Phi_\tau(R) = -\frac{GM_{\Delta}}{R} = -\frac{Gm_{\mathrm{g}}}{R}.
+\end{equation}
+The acceleration is
+\begin{equation}
+    \mathbf{g} = -\nabla\Phi_\tau,
+\end{equation}
+so that
+\begin{equation}
+    \mathbf{g}(R) = -\frac{Gm_{\mathrm{g}}}{R^2} \hat{\mathbf{r}}.
+\end{equation}
+
+Thus,
+\begin{equation}
+    \begin{aligned}
+    \text{positive structural-capacity deficit} &\Longrightarrow \text{negative tension potential} \\
+    &\Longrightarrow \text{attractive acceleration}.
+    \end{aligned}
+\end{equation}
+The deficit sign does not imply negative matter energy. It represents the loss of available restorative capacity from the unbroken State-I reference state.
+
+\section{Local and Cosmological Capacity Scales}
+
+The same tensor architecture applies to local gravitational and cosmological problems, but the reference capacity differs.
+
+For the unbroken cosmological State-I background,
+\begin{equation}
+    T_{\hat{0}\hat{0}}^{(0)} = \tau_{\mathrm{G}}.
+\end{equation}
+For a localized convergence or strong-field problem, the scale-dependent State-I reference capacity is
+\begin{equation}
+    T_{\hat{0}\hat{0}}^{(0)} = \tau_{\mathrm{QG}}.
+\end{equation}
+
+The tensor form remains
+\begin{equation}
+    G_{\mu\nu}^{(\tau)} = \frac{\kappa G}{c_{\mathrm{E}}^4} \left[ T_{\mu\nu}^{(0)} - T_{\mu\nu}^{(\mathrm{rem})} \right],
+\end{equation}
+but $\tau_{\mathrm{G}}$ governs the global unbroken structural budget, whereas $\tau_{\mathrm{QG}}$ governs the local convergence problem. This distinction connects the cosmological energy budget to local gravitational loading without identifying the two capacity scales.
+
+\section{Conservation Compatibility}
+
+The State-I coherent action gives
+\begin{equation}
+    \partial_\mu T_{\mathrm{coh}}^{\mu\nu}=0
+\end{equation}
+for the conservative coherent sector in a frozen background.
+
+The complete effective action must include the nodal, interstitial, defect, and interaction contributions. Its total observable tensor must satisfy
+\begin{equation}
+    \nabla_\mu^{(\tau)} T_{\mathrm{TFT}}^{\mu\nu} = 0
+\end{equation}
+on shell.
+
+If the effective gravitational tensor obeys a Bianchi-type identity,
+\begin{equation}
+    \nabla_\mu^{(\tau)} G_{(\tau)}^{\mu\nu} = 0,
+\end{equation}
+then the completed converted-capacity source must satisfy
+\begin{equation}
+    \nabla_\mu^{(\tau)} \Delta T_{(\tau)}^{\mu\nu} = 0.
+\end{equation}
+
+This compatibility will be satisfied if the source tensor and gravitational response are derived from the same completed effective action and all scaffold--condensate--defect exchange terms are included exactly once. At the homogeneous static background level developed here, the phase-averaged tensors are spatially uniform and time independent, so the conservation condition is satisfied trivially. Dynamic covariant conservation remains a completion requirement of the time-dependent effective theory.
+
+\section{Tensorial Replacement of the \texorpdfstring{$\Lambda$CDM}{LambdaCDM} Source Budget}
+
+The conventional source decomposition is schematically
+\begin{equation}
+    T_{\mu\nu}^{(\Lambda\mathrm{CDM})} = T_{\mu\nu}^{(\Lambda)} + T_{\mu\nu}^{(\mathrm{CDM})} + T_{\mu\nu}^{(\mathrm{b})}.
+\end{equation}
+
+The TFT source-side replacement is
+\begin{equation}
+    T_{\mu\nu}^{(\mathrm{TFT})} = T_{\mu\nu}^{(\mathrm{D},\mathrm{rem})} + T_{\mu\nu}^{(\mathrm{IC})} + T_{\mu\nu}^{(\mathrm{b})}.
+\end{equation}
+
+The correspondence is
+\begin{itemize}
+    \item $T_{\mu\nu}^{(\mathrm{D},\mathrm{rem})}$: smooth remaining nodal structural sector;
+    \item $T_{\mu\nu}^{(\mathrm{IC})}$: interstitial structural allocation and condensate dynamical response;
+    \item $T_{\mu\nu}^{(\mathrm{b})}$: localized baryonic defects with conservative condensate added inertia.
+\end{itemize}
+
+The normalized TFT structural fractions are
+\begin{equation}
+    \Omega_{\Lambda,\mathrm{eff}}^{(\mathrm{TFT})} = \beta_{\mathrm{geo}}-\beta_{\mathrm{b}},
+\end{equation}
+\begin{equation}
+    \Omega_{\mathrm{DM}}^{(\mathrm{TFT},0)} = \beta_{\mathrm{IC}},
+\end{equation}
+and
+\begin{equation}
+    \Omega_{\mathrm{b}}^{(\mathrm{TFT})} = \beta_{\mathrm{b}}.
+\end{equation}
+The superscript $(0)$ on the interstitial term indicates that $\beta_{\mathrm{IC}}$ fixes the structural allocation. The clustering response requires $\delta T_{\mu\nu}^{(\mathrm{IC})}$.
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{p{0.39\linewidth} p{0.52\linewidth}}
+        \toprule
+        \textbf{Conventional Sector} & \textbf{TFT Mechanical Replacement} \\
+        \midrule
+        Cosmological constant or dark-energy fluid & Remaining FCC nodal structural capacity \\
+        Cold dark-matter particles & Interstitial structural allocation plus condensate impedance response \\
+        Baryonic matter & Localized topological defects with conservative condensate added inertia \\
+        Fundamental metric curvature & Effective representation of State-I lattice strain \\
+        Positive matter source & Positive converted-capacity deficit relative to the State-I reference state \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{What Is Derived and What Remains Constitutive}
+
+The following results are derived from the retained continuum mechanics and tensor bookkeeping:
+\begin{itemize}
+    \item the State-I coherent conservation law
+    \begin{equation}
+        \partial_\mu T_{\mathrm{coh}}^{\mu\nu}=0;
+    \end{equation}
+    \item the phase-volume average
+    \begin{equation}
+        \left\langle T_{\mu\nu}^{(0)} \right\rangle = \beta_{\mathrm{geo}} T_{\mu\nu}^{(\mathrm{D},0)} + \beta_{\mathrm{IC}} T_{\mu\nu}^{(\mathrm{IC},0)};
+    \end{equation}
+    \item the exact capacity ledger
+    \begin{equation}
+        T_{\mu\nu}^{(0)} = T_{\mu\nu}^{(\mathrm{rem})} + \Delta T_{\mu\nu}^{(\tau)};
+    \end{equation}
+    \item the homogeneous structural conversion identity
+    \begin{equation}
+        \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) + \beta_{\mathrm{IC}} + \beta_{\mathrm{b}} = 1;
+    \end{equation}
+    \item the general equation-of-state budget
+    \begin{equation}
+        w_{\mathrm{tot}} = \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right)w_{\mathrm{D}} + \beta_{\mathrm{IC}}w_{\mathrm{IC}} + \beta_{\mathrm{b}}w_{\mathrm{b}};
+    \end{equation}
+    \item the attractive weak-field sign once the effective Einstein-tensor projection and source normalization are imposed.
+\end{itemize}
+
+The following are explicit TFT constitutive closures:
+\begin{enumerate}
+    \item uniform structural-capacity density per occupied phase volume,
+    \begin{equation}
+        T_{\hat{0}\hat{0}}^{(\mathrm{D},0)} = T_{\hat{0}\hat{0}}^{(\mathrm{IC},0)} = \tau_{\mathrm{G}};
+    \end{equation}
+    \item baryonic defects draw their structural energy from the nodal allocation,
+    \begin{equation}
+        \beta_{\Lambda,\mathrm{eff}} = \beta_{\mathrm{geo}}-\beta_{\mathrm{b}};
+    \end{equation}
+    \item the cold interstitial reference-state closure,
+    \begin{equation}
+        T_{\hat{i}\hat{j}}^{(\mathrm{IC},0)}=0;
+    \end{equation}
+    \item the isotropic nodal pre-tension closure if the GR-equivalent limit $w_{\mathrm{D}}=-1$ is adopted;
+    \item the source-integral identification
+    \begin{equation}
+        M_{\Delta} = m_{\mathrm{g}} = M_{\mathrm{top}}.
+    \end{equation}
+\end{enumerate}
+
+The following remain completion requirements:
+\begin{itemize}
+    \item derivation of the absolute nodal pre-tension from the microscopic FCC ground-state action;
+    \item derivation of the coarse-grained interstitial perturbation tensor from the cosmic-impedance response;
+    \item construction of the complete effective action $S_{\mathrm{eff}}$;
+    \item proof of the dynamic covariant conservation identity;
+    \item derivation of the normalization bridge between $\tau_{\mathrm{G}}$ and the observational critical-density convention;
+    \item derivation of the time-dependent cosmological evolution and perturbation equations.
+\end{itemize}
+
+\section{Main Cosmological Result}
+
+The TFT tensorial cosmological energy budget is
+\begin{equation}
+\begin{aligned}
+    \left\langle T_{\hat{\mu}\hat{\nu}}^{(\mathrm{TFT})} \right\rangle ={}& \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) \tau_{\mathrm{G}} \operatorname{diag} \left( 1,w_{\mathrm{D}},w_{\mathrm{D}},w_{\mathrm{D}} \right) \\
+    &+ \beta_{\mathrm{IC}} \tau_{\mathrm{G}} \operatorname{diag} \left( 1,w_{\mathrm{IC}},w_{\mathrm{IC}},w_{\mathrm{IC}} \right) \\
+    &+ \beta_{\mathrm{b}} \tau_{\mathrm{G}} \operatorname{diag} \left( 1,w_{\mathrm{b}},w_{\mathrm{b}},w_{\mathrm{b}} \right).
+\end{aligned}
+\end{equation}
+
+Its temporal component is
+\begin{equation}
+    \left\langle T_{\hat{0}\hat{0}}^{(\mathrm{TFT})} \right\rangle = \tau_{\mathrm{G}}.
+\end{equation}
+
+Its normalized TFT structural fractions are
+\begin{equation}
+    \Omega_{\Lambda,\mathrm{eff}}^{(\mathrm{TFT})} = \beta_{\mathrm{geo}}-\beta_{\mathrm{b}}, \qquad \Omega_{\mathrm{DM}}^{(\mathrm{TFT},0)} = \beta_{\mathrm{IC}}, \qquad \Omega_{\mathrm{b}}^{(\mathrm{TFT})} = \beta_{\mathrm{b}}.
+\end{equation}
+
+For the late-time cold interstitial and baryonic limits,
+\begin{equation}
+    w_{\mathrm{IC}}\simeq0, \qquad w_{\mathrm{b}}\simeq0.
+\end{equation}
+Under the isotropic nodal structural-tension closure,
+\begin{equation}
+    w_{\mathrm{D}}=-1,
+\end{equation}
+and therefore
+\begin{equation}
+    w_{\mathrm{tot}} \simeq -\left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) \simeq-0.69048.
+\end{equation}
+
+The effective State-I gravitational response is
+\begin{equation}
+    G_{\mu\nu}^{(\tau)} = \frac{\kappa G}{c_{\mathrm{E}}^4} \left[ T_{\mu\nu}^{(0)} - T_{\mu\nu}^{(\mathrm{rem})} \right].
+\end{equation}
+This replaces the former phase split into two identical terms proportional to $\eta_{\mu\nu}$.
+
+\section{Conclusion}
+
+The cosmological energy budget of TFT can be formulated as a phase-resolved State-I tensor budget grounded in continuum mechanics.
+
+The FCC scaffold and interstitial condensate form a coupled quantum continuum. Their coherent action yields a conserved State-I Soft-Floor material energy--momentum balance. This material tensor may be asymmetric in the preferred SGF frame because momentum density and mechanical energy flux are distinct continuum currents. At the homogenized observational level, a completed effective Soft-Floor action would generate a symmetric Hilbert tensor and, under the stated emergent symmetry conditions, its Belinfante--Rosenfeld equivalent.
+
+The FCC fractions enter through phase-volume homogenization:
+\begin{equation}
+    T_{\mu\nu}^{(0)} = \beta_{\mathrm{geo}} T_{\mu\nu}^{(\mathrm{D},0)} + \beta_{\mathrm{IC}} T_{\mu\nu}^{(\mathrm{IC},0)}.
+\end{equation}
+The nodal tensor includes the homogenized FCC contact-interface energy and stress. The structural-capacity closure fixes the energy components but does not make the complete phase tensors equal.
+
+Baryonic defect formation converts part of the nodal structural allocation:
+\begin{equation}
+    \beta_{\mathrm{geo}} \longrightarrow \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) +\beta_{\mathrm{b}}.
+\end{equation}
+The homogeneous background budget is
+\begin{equation}
+    \left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) + \beta_{\mathrm{IC}} + \beta_{\mathrm{b}} = 1.
+\end{equation}
+
+The total conserved State-I tensor and the remaining structural-capacity tensor are distinct. Their exact ledger is
+\begin{equation}
+    T_{\mu\nu}^{(0)} = T_{\mu\nu}^{(\mathrm{rem})} + \Delta T_{\mu\nu}^{(\tau)}.
+\end{equation}
+Gravity is sourced by the positive converted-capacity deficit,
+\begin{equation}
+    G_{\mu\nu}^{(\tau)} = \frac{\kappa G}{c_{\mathrm{E}}^4} \Delta T_{\mu\nu}^{(\tau)},
+\end{equation}
+while the remaining active capacity decreases under loading. The weak-field projection produces the Poisson equation and inward acceleration when the integrated deficit is normalized to the topological gravitational loading.
+
+The resulting construction replaces the GR/$\Lambda$CDM source-side energy-budget decomposition with a TFT continuum-mechanical formulation. It does not treat the State-0 Latent Substrate, the State-II saturated core, fundamental spacetime curvature, or metric expansion as the dynamical ontology of the active cosmological medium.

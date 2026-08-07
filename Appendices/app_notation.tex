@@ -62,6 +62,12 @@ $\Phi_{\mathrm{kin}}$ & Kinematic Fill Ratio (Mass Dilution) & $\frac{1}{4\pi} \
 
 $\Phi_{\mathrm{info}}$ & Information Fill Ratio (Strain Dilution) & $\frac{1}{4\pi} \left(\frac{\ell_{\mathrm{S}}}{R_{\mathrm{QG}}}\right)^4$ & Dimensionless \\
 
+$d_{\mathrm{nn}}$ & FCC Nearest-Neighbor Separation & $2r_{\mathrm{D}}$ & $\approx 1.4901 \times 10^{-26} \text{ m}$ \\
+
+$V_{\mathrm{p}}$ & FCC Primitive-Cell Volume & $4\sqrt{2} r_{\mathrm{D}}^3$ & $\approx 2.339 \times 10^{-78} \text{ m}^3$ \\
+
+$A_{\mathrm{ct}}^{(\mathrm{modal})}$ & Effective Modal Contact Area & $2\pi\ell_{\mathrm{S}}^2$ & $\approx 1.641 \times 10^{-69} \text{ m}^2$ \\
+
 \bottomrule
 \end{longtable}
 
@@ -121,6 +127,19 @@ $\tau_{\mathrm{G}}$ & Local Yield Tension & $\rho_{\mathrm{G}} c_{\mathrm{E}}^2$
 
 $K_{\mathrm{shear}}$ & Substrate Shear Modulus & $\rho_{\mathrm{c}} \cdot c_{\mathrm{E}}^2$ & Derived limit (Pa) \\
 
+$\mathcal{C}$ & Two-Endpoint Residual Capacity Factor & $(1 - \alpha_{\mathrm{G}})^2$ & Dimensionless \\
+
+$\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$ & Microscopic Scaffold Inertia Normalization & $\beta_{\mathrm{geo}}\rho_{\mathrm{D}}$ & $\approx 1.268 \times 10^{62} \text{ kg/m}^3$ \\
+
+$K_{\mathrm{sh}}^{(\mathrm{micro},0)}$ & Microscopic Tangent Shear Coefficient & $\beta_{\mathrm{geo}}\rho_{\mathrm{D}}c_{\mathrm{E}}^2$ & $\approx 1.14 \times 10^{79} \text{ Pa}$ \\
+
+$\mathcal{T}_{\mathrm{TT}}^{(0)}$ & Collective Tensor-Gradient Coefficient & $\frac{c_{\mathrm{E}}^4}{8\pi G}$ & $\approx 4.814 \times 10^{42} \text{ N}$ \\
+
+$M_{\mathrm{TT}}^{(0)}$ & Collective Line Inertia & $\frac{c_{\mathrm{E}}^2}{8\pi G}$ & $\approx 5.356 \times 10^{25} \text{ kg/m}$ \\
+
+$\iota_{\mathrm{V}}^{(\mathrm{def})}$ & Localized Defect Impedance Projection & $1/\ell_{\mathrm{imp}}^{(\mathrm{def})}$ & Variable ($\text{m}^{-1}$) \\
+
+$\rho_{\mathrm{IC}}^{(\mathrm{imp})}$ & Mode-Resolved Condensate Impedance Density & $\mu_{\mathrm{D}}\iota_{\mathrm{V}}^{(\mathrm{def})}$ & Variable ($\text{kg/m}^3$) \\
 
 $\rho_{\mathrm{Q}}$ & Quantum Saturation Density (Kinematic Limit) & $\frac{\hbar}{c_{\mathrm{E}} r_{\mathrm{D}}^4}$ & $\approx 1.1416 \times 10^{62} \text{ kg/m}^3$ \\
 
@@ -136,7 +155,7 @@ $Z_{\mathrm{drive}}$ & Active Drive Impedance (Tunneling) & Applied frequency dr
 
 $n_K(x)$ & Topological Knot Density & Local structural defects & Variable ($\text{m}^{-3}$) \\
 
-$\Psi$ & Physical Wavefunction (Macroscopic Order) & $\sqrt{\rho} \cdot e^{i\phi}$ & Complex Phase \\
+$\Psi$ & Physical Wavefunction (Macroscopic Order) & $\sqrt{\rho} \cdot e^{i\varphi}$ & Complex Phase \\
 
 \bottomrule
 \end{longtable}
@@ -167,21 +186,23 @@ $T_{\mathrm{S}}$ & Substrate Transition Temperature (Thermal Yield) & $\sqrt{\fr
 
 $c_{\mathrm{E}}$ & Invariant Energy Constant (Absolute Shear Limit) & $\sqrt{\frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}}}$ & 299,792,458 m/s \\
 
-$c_{\mathrm{P}}$ & Dynamic Wave Propagation Speed & $c_{\mathrm{E}} \sqrt{\frac{\mu_{\mathrm{D}}}{\mu_{\mathrm{eff}}}} \cos(\Delta\phi)$ & $\le c_{\mathrm{E}}$ \\
+$c_{\mathrm{P}}$ & Dynamic Wave Propagation Speed & $c_{\mathrm{E}} \sqrt{\frac{\mu_{\mathrm{D}}}{\mu_{\mathrm{eff}}}}$ & $\le c_{\mathrm{E}}$ \\
 
 $c_{\mathrm{S}}$ & Substrate Longitudinal Speed (Entanglement) & $\sqrt{\frac{\tau_{\mathrm{S}}}{\mu_{\mathrm{S}}}}$ & $\to \infty$ \\
 
 $t_{\mathrm{p}}$ & Proper Time (Internal Clock of Localized Defect) & $n \left( \frac{h}{E_0} \right)$ & Variable (s) \\
 
-$\Delta\phi$ & Lattice Phase Differential & Phase topology & Radians \\
+$\Delta\varphi$ & Lattice Phase Differential & Phase topology & Radians \\
 
-$J_i$ & Scale-Invariant Mass Moment & $\rho_i r_i^4$ & Scale-dependent \\
+$J_i$ & Structural Mass Moment & $\rho_i r_i^4$ & Topology-weighted ($J_i = \mathcal{F}_i \hat{J}$) \\
+
+$\hat{J}$ & Topology-Normalized Scale-Invariant Mass Moment & $\frac{J_i}{\mathcal{F}_i}$ & Universal constant \\
 
 $J_{\mathrm{D}}$ & Fundamental Node Structural Mass Moment & $\rho_{\mathrm{D}} r_{\mathrm{D}}^4$ & Derived constant \\
 
 $J_{\mathrm{N}}$ & Nucleon Structural Mass Moment & $\rho_{\mathrm{N}} r_{\mathrm{N}}^4$ & $\approx 3.51 \times 10^{-43}$ kg$\cdot$m \\
 
-$h$ & Quantum of Action (Lattice Rotational Momentum) & $2\pi \cdot J_{\mathrm{D}} \cdot c_{\mathrm{E}}$ & $\approx 6.626 \times 10^{-34}$ J$\cdot$s \\
+$h$ & Quantum of Action (Lattice Rotational Momentum) & $2\pi \cdot \hat{J} \cdot c_{\mathrm{E}}$ & $\approx 6.626 \times 10^{-34} \text{ J}\cdot\text{s}$ \\
 
 $\hbar$ & Reduced Quantum of Action & $\frac{h}{2\pi}$ & $\approx 1.054 \times 10^{-34}$ J$\cdot$s \\
 
@@ -207,7 +228,7 @@ $K_{\mathrm{D}}$ & Fundamental Impedance Constant & $\rho_{\mathrm{IC}} \cdot 4\
 
 $f_{\mathrm{D}}$ & Baseline Structural Frequency & $\frac{c_{\mathrm{E}}}{2r_{\mathrm{D}}}$ & Derived constant ($\text{Hz}$) \\
 
-$\eta_{\phi}$ & Geometric Coupling Efficiency & Empirical calibration & Dimensionless ($<1$) \\
+$\eta_{\varphi}$ & Geometric Coupling Efficiency & Empirical calibration & Dimensionless ($<1$) \\
 
 $G_{\mathrm{F}}$ & Weak Force 3D Gear Slip (Fermi Limit) & $(\tau V)^{-2}$ & $\approx 1.6 \times 10^{-5} \text{ GeV}^{-2}$ \\
 
@@ -216,6 +237,18 @@ $T_{\mathrm{s}}$ & Strong Force 1D Bond Pull (QCD Tension) & $\tau A_{\mathrm{ch
 $k_{\mathrm{e}}$ & Electrostatic Constant (SI Normalized) & $10^{-7} \cdot c_{\mathrm{E}}^2$ & $\approx 8.987 \times 10^9 \text{ N}\cdot\text{m}^2/\text{C}^2$ \\
 
 $e$ & Elementary Charge Conversion Factor & $\sqrt{K_{\mathrm{L}} / k_{\mathrm{e}}}$ & $\approx 1.602 \times 10^{-19} \text{ C}$ \\
+
+$a_{\mathrm{gal}}$ & Galactic Acceleration Scale & $\frac{a_{\mathrm{D}}}{2\pi}$ & $\approx 1.129 \times 10^{-10} \text{ m/s}^2$ \\
+
+$\chi_{\mathrm{g}}(R)$ & Condensate Relative Response & $\sqrt{a_{\mathrm{gal}} / g_{b,\Pi}}$ & Dimensionless \\
+
+$\mathsf{H}_{ij}^{(\mathrm{GW})}$ & Collective Transverse-Traceless Tensor & Directional-tension redistribution & Dimensionless \\
+
+$h_{ij}^{(\mathrm{TT})}$ & Observable Transverse-Traceless Strain & $2\mathsf{H}_{ij}^{(\mathrm{GW})}$ & Dimensionless \\
+
+$K_{\mathrm{GW}}^{(\mathrm{eff})}$ & Spectral Gravitational-Wave Stiffness & $\frac{\pi c_{\mathrm{E}}^2 f^2}{4G}$ & Variable (Pa) \\
+
+$\zeta_{\mathrm{GW}}(f)$ & Microscopic-to-Collective Response Ratio & $\frac{K_{\mathrm{GW}}^{(\mathrm{eff})}}{K_{\mathrm{sh}}^{(\mathrm{micro},0)}}$ & Variable \\
 
 \bottomrule
 \end{longtable}
@@ -336,6 +369,18 @@ $\mathcal{P}_{\mathrm{shed}}$ & Stress Shedding Power (Gravitational Waves) & $-
 $\omega_{\ell m}$ & Ringdown Normal Mode Frequency & Derived eigenvalue & Variable (rad/s) \\
 
 $\Gamma_{\ell m}^{(\mathrm{rd})}$ & Ringdown Normal Mode Damping Rate & Derived eigenvalue & Variable (s$^{-1}$) \\
+
+$r_{\gamma,s_{\mathrm{br}}}$ & Photon Ring Radius (Prograde/Retrograde) & Circular null geodesic root & Variable (m) \\
+
+$B_{\gamma,s_{\mathrm{br}}}$ & Shadow Impact Scale & $\frac{c_{\mathrm{E}}}{\left| \omega_{\mathrm{drag}} + s_{\mathrm{br}} \frac{c_P}{r_\gamma} \right|}$ & Variable (m) \\
+
+$r_{\mathrm{ISCO},s_{\mathrm{br}}}$ & Innermost Stable Circular Orbit Radius & Massive-particle marginal stability & Variable (m) \\
+
+$Q_{ij}$ & Symmetric Trace-Free Mass Quadrupole & $I_{ij} - \frac{1}{3}\delta_{ij}I_{kk}$ & Variable ($\text{kg}\cdot\text{m}^2$) \\
+
+$\mathcal{M}$ & Binary Chirp Mass & $\mu^{3/5}M^{2/5}$ & Variable (kg) \\
+
+$P_{\mathrm{GW}}$ & Total Quadrupole Luminosity & $\frac{G}{5c_{\mathrm{E}}^5} \left\langle \dddot{Q}_{ij} \dddot{Q}_{ij} \right\rangle$ & Variable (W) \\
 
 \bottomrule
 \end{longtable}

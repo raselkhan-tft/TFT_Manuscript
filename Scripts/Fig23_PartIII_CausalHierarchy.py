@@ -152,7 +152,7 @@ def create_causal_hierarchy_visual():
              fontsize=16, color='black', ha='center', va='center', zorder=10)
 
     # Universal Potential Equation (Lower)
-    ax2.text(5.5, 2.4, r"$\phi_{\mathrm{G,U}} = \int_{0}^{R_{\mathrm{U}}} \frac{G \cdot dm}{r} = c_{\mathrm{E}}^2$", 
+    ax2.text(5.5, 2.4, r"$\Phi_{\tau,\mathrm{G,U}} = -\int_{0}^{R_{\mathrm{U}}} \frac{G \, \mathrm{d}m}{r} = -c_{\mathrm{E}}^2$", 
              fontsize=16, color='black', ha='center', va='center', zorder=10)
 
     # =======================================================

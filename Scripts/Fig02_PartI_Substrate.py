@@ -32,7 +32,7 @@ def create_substrate_ghost_canvas():
                 edgecolor=ghost_edge, linewidth=0.5)
 
     # Add topological lock definition near the geometric center of the grid
-    ax3d.text(1.5, 1.5, 1.5, r"$\phi_{\mathrm{S}} = 0$", 
+    ax3d.text(1.5, 1.5, 1.5, r"$\varphi_{\mathrm{S}} = 0$", 
               ha='center', va='center', color=label_color, 
               fontsize=12, fontweight='bold')
 

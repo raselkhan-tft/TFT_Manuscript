@@ -91,7 +91,7 @@ def create_quantum_of_action_schematic():
     # =======================================================
     # 4. THE MASTER EQUATION (Bottom Center)
     # =======================================================
-    h_eq = r"$h = 2\pi \cdot J_{\mathrm{D}} \cdot c_{\mathrm{E}}$"
+    h_eq = r"$h = \frac{4\pi}{3} \cdot J_{\mathrm{D}} \cdot c_{\mathrm{E}}$"
     
     ax.text(50, 15, h_eq, ha='center', va='center', fontsize=26, color='black', zorder=10)
 

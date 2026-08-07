@@ -35,7 +35,7 @@ def create_fractal_column_visual():
         spine.set_visible(False)
 
     # =======================================================
-    # CENTRAL ENGINE: The Structural Mass Moment Shaft
+    # CENTRAL ENGINE: The Torsional Invariant Shaft
     # =======================================================
     # The physical connection bridging the tiers
     # Spans from x=46 to x=54 (width 8, center 50)
@@ -53,7 +53,8 @@ def create_fractal_column_visual():
     # FUNDAMENTAL DEFINITIONS (Bottom Center)
     # =======================================================
     def_text = (r"$\mathbf{Fundamental\ Definitions}$" + "\n" + 
-                r"Scale-Invariant Mass Moment: $J_i = \rho_i r_i^4$" + "\n" + 
+                r"Raw Structural Mass Moment: $J_i = \rho_i r_i^4$" + "\n" + 
+                r"Absolute Invariant: $\hat{J} = J_i / \mathcal{F}_i$" + "\n" +
                 r"Absolute Substrate Area: $A_{\mathrm{S}} = \ell_{\mathrm{S}}^2$" + "\n" +
                 r"Invariant Elastic Capacity: $c_{\mathrm{E}}$")
     
@@ -67,14 +68,14 @@ def create_fractal_column_visual():
     # Both are strictly top-aligned to ensure the titles are perfectly level horizontally.
     
     eq_h = (r"$\mathbf{Invariant\ Action}$" + "\n" + 
-            r"$h_i = (\mathrm{Geo\ Factor}) \cdot J_i c_{\mathrm{E}}$")
+            r"$h = 2\pi \cdot \hat{J} \cdot c_{\mathrm{E}}$")
     ax.text(28, 64.5, eq_h, ha='left', va='top', fontsize=13.5, color='black', linespacing=2.2,
             bbox=dict(facecolor='white', edgecolor='#AABBDD', lw=1.5, boxstyle='round,pad=0.8'))
 
     # \dfrac is used instead of \frac to force display-style sizing for the fractional constants
     # Reduced linespacing to 1.4 to counteract the tall \dfrac bounding box and match the h_i gap
     eq_g = (r"$\mathbf{Invariant\ Gravitational\ Constant}$" + "\n" + 
-            r"$G_i = (\mathrm{Form\ Factor}) \cdot \dfrac{c_{\mathrm{E}}^2 A_{\mathrm{S}}}{J_i}$")
+            r"$G_i = \dfrac{c_{\mathrm{E}}^2 A_{\mathrm{S}}}{\hat{J}}$")
     ax.text(56, 64.5, eq_g, ha='left', va='top', fontsize=13.5, color='black', linespacing=1.4,
             bbox=dict(facecolor='white', edgecolor='#AABBDD', lw=1.5, boxstyle='round,pad=0.8'))
 
@@ -165,7 +166,7 @@ def create_fractal_column_visual():
     # =======================================================
     # Panel Background (Squeezed to width 22, center x=13)
     ax.add_patch(patches.Rectangle((2, 10), 22, 80, facecolor='#F8F9FA', edgecolor='#D0D0D0', lw=1.5, zorder=0))
-    ax.text(13, 88, r"$\mathbf{Thread\ A:\ Action-Scale\ Consistency\ (h)}$", ha='center', va='top', fontsize=13, color='black')
+    ax.text(13, 88, r"$\mathbf{Thread\ A:\ Projection\ of\ Action\ (h)}$", ha='center', va='top', fontsize=13, color='black')
 
     # Progression Nodes
     node_props = dict(boxstyle='square,pad=0.6', facecolor='white', edgecolor='#888888', lw=1.5)
@@ -190,7 +191,7 @@ def create_fractal_column_visual():
     # Thread A Conclusion
     h_text = (r"$\mathbf{Conservation\ of\ h:}$" + "\n\n" + 
               r"$h_{\mathrm{S}} \rightarrow h_{\mathrm{D}} \rightarrow h_{\mathrm{N}} \rightarrow h_{\mathrm{obs}}$" + "\n\n" + 
-              "Geometric factor increases\nprecisely as the Structural Mass Moment\n($J_i$) decreases, consistently\nmaintaining the Action scale.")
+              "Geometric factor increases\nprecisely as the Raw Structural Mass Moment\n($J_i$) decreases, consistently\nmaintaining the Action scale.")
     ax.text(13, 59, h_text, ha='center', va='center', fontsize=11, color='black',
             bbox=dict(facecolor='#E8F4F8', edgecolor='#AABBDD', lw=1, boxstyle='round,pad=0.5'))
 
@@ -199,10 +200,10 @@ def create_fractal_column_visual():
     # =======================================================
     # Panel Background (Squeezed to width 22, center x=87, unified bluish theme)
     ax.add_patch(patches.Rectangle((76, 10), 22, 80, facecolor='#F8F9FA', edgecolor='#D0D0D0', lw=1.5, zorder=0))
-    ax.text(87, 88, r"$\mathbf{Thread\ B:\ Gravitational-Coupling\ Consistency\ (G)}$", ha='center', va='top', fontsize=13, color='black')
+    ax.text(87, 88, r"$\mathbf{Thread\ B:\ Projection\ of\ Gravity\ (G)}$", ha='center', va='top', fontsize=13, color='black')
 
     # Tier 3 (Right)
-    ax.text(87, y_N, r"Coupling: $\mathbf{Toroidal\ (Vortex)}$" + "\n" + r"Form Factor = $1.0$" + "\n" + r"Moment: $J_{\mathrm{N}} = J_{\mathrm{D}} / 1.5$", 
+    ax.text(87, y_N, r"Coupling: $\mathbf{Toroidal\ (Vortex)}$" + "\n" + r"Form Factor = $1.0$" + "\n" + r"Torsion: $J_{\mathrm{N}} = J_{\mathrm{D}} / 1.5$", 
             ha='center', va='center', fontsize=11, color='black', bbox=node_props)
 
     # Tier 2 (Right)
@@ -219,10 +220,10 @@ def create_fractal_column_visual():
 
     # Right Thread Conclusion Box (Unified Architecture & Impedance Match, unified bluish theme)
     conc_text = (r"$\mathbf{The\ Impedance\ Match:}$" + "\n" + 
-                 r"$\mathbf{J_{\mathrm{N}} \approx J_{\mathrm{S}}}$" + "\n\n" + 
+                 r"$\mathbf{J_{\mathrm{N}} \equiv J_{\mathrm{S}}}$" + "\n\n" + 
                  "Matter is a superconductive\n" + 
                  "channel that tunnels directly\n" + 
-                 "to the latent Hard Floor.")
+                 "to the Hard Floor.")
     ax.text(87, 59, conc_text, ha='center', va='center', fontsize=11, color='black',
             bbox=dict(facecolor='#E8F4F8', edgecolor='#AABBDD', lw=1, boxstyle='round,pad=0.5'))
 

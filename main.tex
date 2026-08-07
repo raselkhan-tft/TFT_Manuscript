@@ -40,7 +40,7 @@
 \title{\textbf{Tension Field Theory}\\
 \large The Mechanical Constitution of the Spacetime Lattice from Quantum Gravity to Cosmic Kinematics}
 \author{Rasel Khan \\ \textit{Independent Researcher, Los Angeles, California}}
-\date{\today}
+\date{Version 1.0 — \today}
 
 \usepackage{makeidx}
 \makeindex
@@ -49,12 +49,21 @@
 
 \maketitle
 
+% --- Copyright / Status Page (Verso of Title Page) ---
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\noindent \textbf{Version 1.0.} This monograph is a developing research framework. Later versions may refine constitutive closures, correct errors, and add microscopic and observational tests. Prior versions remain part of the scholarly record.
+\vspace{1in}
+\clearpage
+% -----------------------------------------------------
+
 \begin{abstract}
 This manuscript establishes Tension Field Theory (TFT), a unified framework that models the universe as a strictly mechanical, visco-elastic continuum. TFT fundamentally replaces the abstract expanding geometries of General Relativity and the probabilistic wavefunctions of Quantum Mechanics with the discrete, dual-scale architecture of the Spacetime Gravitational Floor (SGF).
 
 In Part I, we define the active vacuum as a Face-Centered Cubic (FCC) lattice. We demonstrate that fundamental particles are topological phase defects, deriving inertial mass strictly from the hydrodynamic impedance of the interstitial condensate, and reinterpreting the ``Dark Sector'' as the inherent geometric packing fraction of this physical medium.
 
-In Part II, we redefine gravity as the restorative structural tension gradient ($-\nabla\tau$) of this lattice. We eliminate non-physical mathematical singularities by modeling Black Holes as deterministic crystallographic phase transitions into a saturated Simple Cubic (SC) substrate, preserving quantum unitarity topologically through strict geometric phase segregation. Furthermore, we mechanize quantum dynamics, unifying the fundamental forces as distinct geometric projections of a single Scale-Invariant Mass Moment ($J_i$).
+In Part II, we redefine gravity as the restorative structural tension gradient ($-\nabla\tau$) of this lattice. We eliminate non-physical mathematical singularities by modeling Black Holes as deterministic crystallographic phase transitions into a saturated Simple Cubic (SC) substrate, preserving quantum unitarity topologically through strict geometric phase segregation. Furthermore, we mechanize quantum dynamics, unifying the fundamental forces as distinct geometric projections of a single topology-normalized scale-invariant mass moment ($\hat{J}$).
 
 In Part III, we project these solid-state mechanics to global cosmology, formally replacing the expanding FLRW metric. We model the genesis event as the Catastrophic Decompression of a globally percolated fault line (The Big Rupture), and demonstrate that cosmic redshift is driven by visco-elastic damping ($\Gamma_D \equiv H_0$). This mechanical lattice damping natively resolves the Hubble discrepancy and extracts the exact mathematical signature of Dark Energy without invoking negative pressure---ultimately proving the universe operates as a closed, perpetual macro-oscillator.
 \end{abstract}
@@ -155,13 +164,15 @@ Because this framework reconstructs physical law from the absolute quantum subst
 \include{Appendices/app_vacuum_scale_strain_unification}
 % Force LaTeX to skip the letter 'I'
 \stepcounter{chapter}
+\include{Appendices/app_gravitational_endpoint_transfer}
 \include{Appendices/app_perihelion_orbital_strain}
 \include{Appendices/app_cosmic_impedance}
 \include{Appendices/app_radial_projection}
 \include{Appendices/app_kinematic_shear}
-\include{Appendices/app_8pai_origin}
 % Force LaTeX to skip the letter 'O'
 \stepcounter{chapter}
+\include{Appendices/app_8pai_origin}
+\include{Appendices/app_cosmic_energy_continuum_mechanics}
 \include{Appendices/app_optical_relativity}
 \include{Appendices/app_phase_transition}
 \include{Appendices/app_information_paradox}
@@ -179,17 +190,18 @@ Because this framework reconstructs physical law from the absolute quantum subst
 \include{Appendices/app_dynamic_alpha}
 \include{Appendices/app_origin_of_charge}
 \include{Appendices/app_unifiedforces_validation}
-\include{Appendices/app_hydrogenic_shell}
-\include{Appendices/app_atomic_angular_modes}
 % Force LaTeX to skip the letter 'I'
 \stepcounter{chapter}
+\include{Appendices/app_hydrogenic_shell}
+\include{Appendices/app_atomic_angular_modes}
 \include{Appendices/app_fine_structure}
 \include{Appendices/app_baryon_asymmetry}
 \include{Appendices/app_lattice_annealing}
-\include{Appendices/app_vacuumdamping_cosmicredshift}
-\include{Appendices/app_time_dilation}
 % Force LaTeX to skip the letter 'O'
 \stepcounter{chapter}
+\include{Appendices/app_photon_dispersion_relaxation}
+\include{Appendices/app_vacuumdamping_cosmicredshift}
+\include{Appendices/app_time_dilation}
 \include{Appendices/app_hubble_diagram}
 \include{Appendices/app_cosmic_energy_budget}
 
@@ -201,7 +213,7 @@ Because this framework reconstructs physical law from the absolute quantum subst
 \addcontentsline{toc}{chapter}{\protect\numberline{}Acknowledgements and AI Disclosure}
 \chapter*{Acknowledgements and AI Disclosure}
 
-I acknowledge the use of ChatGPT and Google Gemini to expedite the latter stages of this manuscript's development (2023--2026). The AI functioned strictly as a computational and typesetting assistant, utilized to generate Python scripts for Figures, execute complex formatting, and serve as a conversational tool to explore and validate mathematical derivations. All foundational postulates, physical interpretations, and final mathematical proofs of Tension Field Theory are my sole original work, and I take full responsibility for the accuracy and integrity of this publication.
+I acknowledge the use of OpenAI ChatGPT and Google Gemini to expedite the latter stages of this manuscript's development (2023--2026). The AI functioned strictly as a computational and typesetting assistant, exploratory mathematical discussion, drafting and restructuring selected manuscript passages, LaTeX and code generation, figure preparation, and consistency checks. All foundational postulates, physical interpretations, and final mathematical proofs of Tension Field Theory are my sole original work, and I take full responsibility for the accuracy and integrity of this publication.
 
 Furthermore, Tension Field Theory represents the culmination of a three-decade conceptual incubation originating in my childhood, followed by seven years of intensive, rigorous mathematical formalization. This critical final phase of development would have been entirely impossible without the profound patience, sacrifice, and unwavering support of my wife, Shamima Khan, and our daughters, Najwa Khan and Raya Khan. I extend my deepest gratitude to my family for affording me the time, space, and quiet necessary to bring this lifelong endeavor to its conclusion.
 

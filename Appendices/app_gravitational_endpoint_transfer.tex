@@ -1,0 +1,715 @@
+\chapter[Gravitational Endpoint Transfer of the Active FCC Vacuum]{Gravitational Endpoint Transfer\\[0.5ex]
+\Large Gravitational Constraint, Coordinate Reduction, Referred Inertia, and Dispersion}
+\label{app:gravitational_endpoint_transfer}
+
+\noindent\textbf{Subject:}
+Gravity-specific constrained-coordinate reduction of the active FCC Soft Floor and derivation of its referred inertia and long-wavelength propagation law.
+
+\section{Scope and Status of the Construction}
+\label{sec:grav_endpoint_scope}
+
+\hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} develops the gravity-independent FCC contact geometry, objective bond kinematics, parity-even contact action, primitive-cell assembly, and long-wavelength acoustic tensor of the active Soft Floor. The present appendix applies the gravitational loading constraint to that baseline mechanical carrier.
+
+The construction is restricted to the active FCC phase,
+\begin{equation}
+    0 \leq \alpha_{\mathrm{G}} < 1,
+\end{equation}
+and to a gravitational background that is quasistatic during one local transfer event,
+\begin{equation}
+    \dot{\alpha}_{\mathrm{G}} \approx 0.
+\end{equation}
+
+The analysis develops the sequence
+\begin{equation}
+\begin{array}{c}
+    \text{gravitational capacity reduction} \\
+    \longrightarrow
+    \text{work-conjugate endpoint map} \\
+    \longrightarrow
+    \text{serial source-target constraint} \\
+    \longrightarrow
+    \text{latent-to-completed coordinate reduction} \\
+    \longrightarrow
+    \text{referred inertia} \\
+    \longrightarrow
+    \text{constrained FCC dispersion}.
+\end{array}
+\end{equation}
+
+The single-endpoint map is a reduced work-conjugate constitutive construction. It is not claimed to have been derived from a complete parent potential containing all node, contact, condensate, phase, and Tension-Column degrees of freedom. The present appendix instead shows that, once the endpoint map is defined through the active-capacity balance, its inertial and dispersive consequences follow from a conservative constrained action.
+
+The principal statuses are:
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{0.45\linewidth} p{0.5\linewidth}}
+\hline
+\textbf{Result} & \textbf{Status in this appendix} \\
+\hline
+$\tau_{\mathrm{av}}=\tau_{\mathrm{D}}-\tau_{\mathrm{L}}$ &
+active-capacity subtraction within the reduced constitutive model
+\\
+$\mathcal{C}_{i}=1-\alpha_{\mathrm{G}}^{(i)}$ &
+derived from the work-conjugate endpoint map
+\\
+$\mathcal{C}_{ij}=\mathcal{C}_{i}\mathcal{C}_{j}$ &
+derived by serial source release and target acceptance
+\\
+$u=\mathcal{C}y$ &
+holonomic latent-to-completed coordinate constraint
+\\
+$\mathbf{M}_{\mathrm{cell}}^{(\mathrm{eff})}=\mathbf{T}_{\mathrm{cell}}^{-\mathsf{T}}\mathbf{M}_{\mathrm{cell}}^{(0)}\mathbf{T}_{\mathrm{cell}}^{-1}$ &
+mass-matrix congruence within the stated quasistatic holonomic reduction
+\\
+$\rho_{\mathrm{eff}}=\rho_{\mathrm{eff}}^{(0)}/\mathcal{C}^{2}$ &
+referred inertia in the coherent translational sector
+\\
+$c_{\mathrm{P}}=c_{\mathrm{E}}\mathcal{C}$ &
+derived from the constrained directional and FCC acoustic equations
+\\
+full parent microscopic origin of $\mathcal{C}_{i}$ &
+not yet completed
+\\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Gravitational Loading and Available Active Capacity}
+\label{sec:grav_active_capacity}
+
+For endpoint $i$, define the dimensionless gravitational loading fraction by
+\begin{equation}
+    \alpha_{\mathrm{G}}^{(i)} = \frac{\tau_{\mathrm{L}}^{(i)}}{\tau_{\mathrm{D}}},
+\end{equation}
+where $\tau_{\mathrm{L}}^{(i)}$ is the local mass-induced loading and $\tau_{\mathrm{D}}$ is the baseline active surface-tension capacity.
+
+The active capacity remaining for additional local transfer is
+\begin{equation}
+    \tau_{\mathrm{av}}^{(i)} = \tau_{\mathrm{D}}-\tau_{\mathrm{L}}^{(i)}.
+\end{equation}
+
+Substituting the definition of $\alpha_{\mathrm{G}}^{(i)}$ gives
+\begin{equation}
+    \tau_{\mathrm{av}}^{(i)} = \tau_{\mathrm{D}} \left( 1-\alpha_{\mathrm{G}}^{(i)} \right).
+\end{equation}
+
+Define the single-endpoint residual-capacity factor
+\begin{equation}
+    \mathcal{C}_{i} \equiv 1-\alpha_{\mathrm{G}}^{(i)}.
+    \label{eq:single_endpoint_capacity}
+\end{equation}
+
+Then
+\begin{equation}
+    \tau_{\mathrm{av}}^{(i)} = \tau_{\mathrm{D}}\mathcal{C}_{i}.
+\end{equation}
+
+Within the active phase,
+\begin{equation}
+    0 < \mathcal{C}_{i} \leq 1.
+\end{equation}
+
+The limits are
+\begin{equation}
+    \alpha_{\mathrm{G}}^{(i)} = 0 \quad\Longrightarrow\quad \mathcal{C}_{i} = 1,
+\end{equation}
+and
+\begin{equation}
+    \alpha_{\mathrm{G}}^{(i)} \rightarrow 1^{-} \quad\Longrightarrow\quad \mathcal{C}_{i} \rightarrow 0^{+}.
+\end{equation}
+
+The linear dependence in Equation~\eqref{eq:single_endpoint_capacity} is therefore not inferred from the limiting values alone. It follows from the adopted linear subtraction of the local gravitational loading from the available active tension capacity.
+
+\section{Work-Conjugate Single-Endpoint Coordinate Map}
+\label{sec:grav_work_conjugate_endpoint}
+
+Let $y_{i}$ denote the latent node--condensate reconfiguration presented to endpoint $i$, and let $u_{i}$ denote the completed displacement accepted by the active FCC contact state.
+
+Introduce the dimensionless normalized coordinates
+\begin{equation}
+    \widehat{y}_{i} \equiv \frac{y_{i}}{d_{\mathrm{nn}}}, \qquad \widehat{u}_{i} \equiv \frac{u_{i}}{d_{\mathrm{nn}}},
+\end{equation}
+where
+\begin{equation}
+    d_{\mathrm{nn}} = 2r_{\mathrm{D}}
+\end{equation}
+is the nearest-neighbor FCC separation.
+
+The coordinate $\widehat{y}_{i}$ measures the normalized reconfiguration presented to the endpoint, while $\widehat{u}_{i}$ measures the normalized deformation transmitted into the active FCC contact state.
+
+The reduced endpoint closure is obtained by equating the incremental work density represented in the two coordinate descriptions:
+\begin{equation}
+    \tau_{\mathrm{D}}\,\delta\widehat{u}_{i} = \tau_{\mathrm{av}}^{(i)}\,\delta\widehat{y}_{i}.
+    \label{eq:endpoint_work_conjugacy}
+\end{equation}
+
+Using
+\begin{equation}
+    \tau_{\mathrm{av}}^{(i)} = \tau_{\mathrm{D}}\mathcal{C}_{i},
+\end{equation}
+Equation~\eqref{eq:endpoint_work_conjugacy} becomes
+\begin{equation}
+    \tau_{\mathrm{D}}\,\delta\widehat{u}_{i} = \tau_{\mathrm{D}}\mathcal{C}_{i}\,\delta\widehat{y}_{i}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \delta\widehat{u}_{i} = \mathcal{C}_{i}\,\delta\widehat{y}_{i}.
+\end{equation}
+
+For a quasistatic gravitational background, $\mathcal{C}_{i}$ is constant during the local transfer event. Integrating from the common undeformed reference state gives
+\begin{equation}
+    \widehat{u}_{i} = \mathcal{C}_{i}\widehat{y}_{i}.
+\end{equation}
+
+Multiplying by $d_{\mathrm{nn}}$ gives the single-endpoint coordinate map
+\begin{equation}
+    u_{i} = \mathcal{C}_{i}y_{i}.
+    \label{eq:single_endpoint_coordinate_map}
+\end{equation}
+
+Thus $\mathcal{C}_{i}$ is the fraction of the latent reconfiguration admitted into the completed active-FCC coordinate.
+
+\section{Serial Source--Target Composition}
+\label{sec:grav_serial_composition}
+
+Consider a completed nearest-neighbor transfer from source endpoint $i$ to target endpoint $j$.
+
+Let $y_{ij}$ denote the latent transfer amplitude presented to the source endpoint. The source releases only the fraction permitted by its residual active capacity:
+\begin{equation}
+    y_{ij}^{(\mathrm{rel})} = \mathcal{C}_{i}y_{ij}.
+\end{equation}
+
+The target endpoint acts on the amplitude already released by the source:
+\begin{equation}
+    u_{ij} = \mathcal{C}_{j}y_{ij}^{(\mathrm{rel})}.
+\end{equation}
+
+Substitution gives
+\begin{equation}
+    u_{ij} = \mathcal{C}_{i}\mathcal{C}_{j}y_{ij}.
+\end{equation}
+
+Define the completed two-endpoint transfer factor by
+\begin{equation}
+    \mathcal{C}_{ij} \equiv \mathcal{C}_{i}\mathcal{C}_{j}.
+    \label{eq:two_endpoint_factor}
+\end{equation}
+
+Using Equation~\eqref{eq:single_endpoint_capacity},
+\begin{equation}
+    \mathcal{C}_{ij} = \left( 1-\alpha_{\mathrm{G}}^{(i)} \right) \left( 1-\alpha_{\mathrm{G}}^{(j)} \right).
+    \label{eq:gravity_endpoint_product}
+\end{equation}
+
+The completed coordinate therefore satisfies
+\begin{equation}
+    u_{ij} = \mathcal{C}_{ij}y_{ij}.
+    \label{eq:two_endpoint_coordinate_map}
+\end{equation}
+
+The product is not a probability rule. It is the composition of two serial coordinate constraints: source release followed by target acceptance and closure.
+
+For a gravitational loading that varies negligibly across one FCC connection,
+\begin{equation}
+    \alpha_{\mathrm{G}}^{(i)} \approx \alpha_{\mathrm{G}}^{(j)} \approx \alpha_{\mathrm{G}},
+\end{equation}
+and the local two-endpoint factor reduces to
+\begin{equation}
+    \mathcal{C} = \left( 1-\alpha_{\mathrm{G}} \right)^2.
+    \label{eq:uniform_two_endpoint_factor}
+\end{equation}
+
+\section{Constrained Directional Action}
+\label{sec:grav_constrained_directional_action}
+
+\hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} establishes the baseline transverse nearest-neighbor action of the unstrained FCC carrier. The gravitational specialization distinguishes the latent reconfiguration coordinate $y_{n}$ from the completed active-FCC displacement $u_{n}$.
+
+For a locally uniform, quasistatic gravitational loading, impose the holonomic constraint
+\begin{equation}
+    u_{n} = \mathcal{C}y_{n}.
+    \label{eq:directional_holonomic_constraint}
+\end{equation}
+
+A constrained directional Lagrangian per unit participating interface area is
+\begin{equation}
+\begin{aligned}
+    \mathcal{L}_{\perp} = \sum_{n} \Bigg[ & \frac{1}{2}\mu_{\mathrm{D}}\dot{y}_{n}^2 - \frac{\tau_{\mathrm{D}}}{2d_{\mathrm{nn}}^2} \left( u_{n+1}-u_{n} \right)^2 \\
+    & + \lambda_{n} \left( u_{n}-\mathcal{C}y_{n} \right) \Bigg].
+    \label{eq:constrained_directional_lagrangian}
+\end{aligned}
+\end{equation}
+
+Variation with respect to $\lambda_{n}$ gives Equation~\eqref{eq:directional_holonomic_constraint}. Since
+\begin{equation}
+    y_{n} = \frac{u_{n}}{\mathcal{C}},
+\end{equation}
+and
+\begin{equation}
+    \dot{\mathcal{C}} \approx 0,
+\end{equation}
+one has
+\begin{equation}
+    \dot{y}_{n} = \frac{\dot{u}_{n}}{\mathcal{C}}.
+\end{equation}
+
+Eliminating the latent coordinate gives the reduced completed-coordinate Lagrangian
+\begin{equation}
+    \mathcal{L}_{\perp}^{(\mathrm{red})} = \sum_{n} \left[ \frac{1}{2} \frac{\mu_{\mathrm{D}}}{\mathcal{C}^2} \dot{u}_{n}^2 - \frac{\tau_{\mathrm{D}}}{2d_{\mathrm{nn}}^2} \left( u_{n+1}-u_{n} \right)^2 \right].
+    \label{eq:reduced_directional_lagrangian}
+\end{equation}
+
+The active-phase tangent stiffness remains the baseline FCC stiffness at the retained constitutive order. The gravitational constraint instead modifies the kinetic coefficient referred to the completed coordinate.
+
+\section{Referred Surface Inertia}
+\label{sec:grav_referred_surface_inertia}
+
+Comparison of Equation~\eqref{eq:reduced_directional_lagrangian} with the standard kinetic form identifies the effective completed-coordinate surface inertia:
+\begin{equation}
+    \mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{\mathcal{C}^2}.
+    \label{eq:surface_referred_inertia_general}
+\end{equation}
+
+For the locally uniform two-endpoint factor,
+\begin{equation}
+    \mathcal{C} = \left( 1-\alpha_{\mathrm{G}} \right)^2,
+\end{equation}
+the referred surface inertia becomes
+\begin{equation}
+    \mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}} {\left( 1-\alpha_{\mathrm{G}} \right)^4}.
+    \label{eq:surface_referred_inertia_alpha}
+\end{equation}
+
+The inverse fourth power is therefore not introduced by algebraically solving an already assumed wave-speed relation. It follows directly from the constrained kinetic-coordinate transformation:
+\begin{equation}
+    u = \mathcal{C}y \quad\Longrightarrow\quad \dot{y} = \frac{\dot{u}}{\mathcal{C}} \quad\Longrightarrow\quad \mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{\mathcal{C}^2}.
+\end{equation}
+
+The coefficient $\mu_{\mathrm{eff}}$ is the referred surface inertia of the directional contact representation, whereas $\rho_{\mathrm{eff}}$ denotes the corresponding volumetric inertia coefficient at a specified continuum scale. The two quantities are related through the appropriate surface-to-volume projection and are not interchangeable.
+
+\section{Primitive-Cell Transfer Operator}
+\label{sec:grav_cell_transfer_operator}
+
+The scalar endpoint constraint must be embedded into the complete primitive-cell coordinate space.
+
+Let $\mathbf{y}_{\mathrm{cell}}$ denote the latent generalized primitive-cell coordinate, and let $\mathbf{q}_{\mathrm{cell}}$ denote the corresponding completed active-FCC coordinate.
+
+Let $\mathbb{P}_{\mathrm{tr}}$ be the projector onto the coherent translational transfer sector. It satisfies
+\begin{equation}
+    \mathbb{P}_{\mathrm{tr}}^2 = \mathbb{P}_{\mathrm{tr}}, \qquad \mathbb{P}_{\mathrm{tr}}^{\mathsf{T}} = \mathbb{P}_{\mathrm{tr}}.
+\end{equation}
+
+The local gravitational transfer operator is
+\begin{equation}
+    \mathbf{T}_{\mathrm{cell}} = \mathbf{I} + \left( \mathcal{C}-1 \right) \mathbb{P}_{\mathrm{tr}}.
+    \label{eq:cell_transfer_operator}
+\end{equation}
+
+The completed and latent coordinates are related by
+\begin{equation}
+    \mathbf{q}_{\mathrm{cell}} = \mathbf{T}_{\mathrm{cell}} \mathbf{y}_{\mathrm{cell}}.
+    \label{eq:cell_coordinate_map}
+\end{equation}
+
+The operator acts as multiplication by $\mathcal{C}$ on the coherent translational sector and as the identity on the complementary retained sectors:
+\begin{equation}
+    \mathbf{T}_{\mathrm{cell}} \mathbb{P}_{\mathrm{tr}} = \mathcal{C}\mathbb{P}_{\mathrm{tr}},
+\end{equation}
+and
+\begin{equation}
+    \mathbf{T}_{\mathrm{cell}} \left( \mathbf{I}-\mathbb{P}_{\mathrm{tr}} \right) = \mathbf{I}-\mathbb{P}_{\mathrm{tr}}.
+\end{equation}
+
+For
+\begin{equation}
+    \mathcal{C} > 0,
+\end{equation}
+the inverse operator is
+\begin{equation}
+    \mathbf{T}_{\mathrm{cell}}^{-1} = \mathbf{I} + \left( \mathcal{C}^{-1}-1 \right) \mathbb{P}_{\mathrm{tr}}.
+    \label{eq:cell_transfer_inverse}
+\end{equation}
+
+This follows directly from the idempotence of $\mathbb{P}_{\mathrm{tr}}$.
+
+\section{Primitive-Cell Mass-Matrix Congruence}
+\label{sec:grav_mass_matrix_congruence}
+
+Let $\mathbf{M}_{\mathrm{cell}}^{(0)}$ be the gravity-neutral primitive-cell mass matrix constructed in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}. The latent-coordinate kinetic energy is
+\begin{equation}
+    T_{\mathrm{cell}} = \frac{1}{2} \dot{\mathbf{y}}_{\mathrm{cell}}^{\mathsf{T}} \mathbf{M}_{\mathrm{cell}}^{(0)} \dot{\mathbf{y}}_{\mathrm{cell}}.
+\end{equation}
+
+Using
+\begin{equation}
+    \mathbf{y}_{\mathrm{cell}} = \mathbf{T}_{\mathrm{cell}}^{-1} \mathbf{q}_{\mathrm{cell}},
+\end{equation}
+and the quasistatic condition
+\begin{equation}
+    \dot{\mathbf{T}}_{\mathrm{cell}} \approx \mathbf{0},
+\end{equation}
+the kinetic energy becomes
+\begin{equation}
+    T_{\mathrm{cell}} = \frac{1}{2} \dot{\mathbf{q}}_{\mathrm{cell}}^{\mathsf{T}} \mathbf{T}_{\mathrm{cell}}^{-\mathsf{T}} \mathbf{M}_{\mathrm{cell}}^{(0)} \mathbf{T}_{\mathrm{cell}}^{-1} \dot{\mathbf{q}}_{\mathrm{cell}}.
+\end{equation}
+
+Therefore the completed-coordinate mass matrix is
+\begin{equation}
+    \mathbf{M}_{\mathrm{cell}}^{(\mathrm{eff})} = \mathbf{T}_{\mathrm{cell}}^{-\mathsf{T}} \mathbf{M}_{\mathrm{cell}}^{(0)} \mathbf{T}_{\mathrm{cell}}^{-1}.
+    \label{eq:effective_cell_mass_matrix}
+\end{equation}
+
+Equation~\eqref{eq:effective_cell_mass_matrix} is the mass-matrix congruence associated with the stated quasistatic holonomic transfer constraint.
+
+Under the primitive-cell bookkeeping of \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}, the coherent translational mass block is isotropic and decoupled from the retained complementary coordinates at leading order. In that sector,
+\begin{equation}
+    \mathbb{P}_{\mathrm{tr}} \mathbf{M}_{\mathrm{cell}}^{(\mathrm{eff})} \mathbb{P}_{\mathrm{tr}} = \frac{1}{\mathcal{C}^2} \mathbb{P}_{\mathrm{tr}} \mathbf{M}_{\mathrm{cell}}^{(0)} \mathbb{P}_{\mathrm{tr}}.
+    \label{eq:projected_mass_scaling}
+\end{equation}
+
+Thus the cell-level operator reproduces the scalar referred-inertia result while preserving the unmodified complementary sectors at the retained order.
+
+\section{Constrained FCC Dynamic Matrix}
+\label{sec:grav_constrained_dynamic_matrix}
+
+\hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} defines the gravity-neutral FCC Bloch stiffness
+\begin{equation}
+    \mathbf{K}_{\mathrm{FCC}}^{(0)}(\mathbf{k}) = A_{\mathrm{ct}} \sum_{a=1}^{6} \mathbf{B}_{a}^{\dagger}(\mathbf{k}) \mathbf{H}_{\mathrm{c}} \mathbf{B}_{a}(\mathbf{k}).
+\end{equation}
+
+At the retained active-phase tangent order, the gravitational coordinate reduction acts on the kinetic operator while the baseline completed-coordinate contact stiffness remains
+\begin{equation}
+    \mathbf{K}_{\mathrm{FCC}} \left( \mathbf{k}, \alpha_{\mathrm{G}} \right) = \mathbf{K}_{\mathrm{FCC}}^{(0)}(\mathbf{k}).
+    \label{eq:baseline_stiffness_retained}
+\end{equation}
+
+The gravity-constrained generalized eigenvalue problem is therefore
+\begin{equation}
+    \det \left[ \mathbf{K}_{\mathrm{FCC}}^{(0)}(\mathbf{k}) - \omega^2 \mathbf{M}_{\mathrm{cell}}^{(\mathrm{eff})} \right] = 0.
+    \label{eq:constrained_fcc_eigenproblem}
+\end{equation}
+
+The gravitational dependence enters through the congruence-transformed mass matrix rather than through an independent softening of the baseline tangent contact stiffness.
+
+This avoids counting the same gravitational reduction simultaneously in both the stiffness and inertia sectors.
+
+\section{Directional Lattice Dispersion}
+\label{sec:grav_directional_dispersion}
+
+Variation of the reduced directional Lagrangian in Equation~\eqref{eq:reduced_directional_lagrangian} gives
+\begin{equation}
+    \frac{\mu_{\mathrm{D}}}{\mathcal{C}^2} \ddot{u}_{n} = \frac{\tau_{\mathrm{D}}}{d_{\mathrm{nn}}^2} \left( u_{n+1}-2u_{n}+u_{n-1} \right).
+    \label{eq:constrained_directional_equation}
+\end{equation}
+
+For a plane wave,
+\begin{equation}
+    u_{n}(t) = u_{0} \exp \left[ i \left( knd_{\mathrm{nn}}-\omega t \right) \right],
+\end{equation}
+one obtains
+\begin{equation}
+    u_{n+1}-2u_{n}+u_{n-1} = -4u_{n} \sin^2 \left( \frac{kd_{\mathrm{nn}}}{2} \right).
+\end{equation}
+
+The constrained directional dispersion relation is therefore
+\begin{equation}
+    \omega^2 = \frac{ 4\tau_{\mathrm{D}}\mathcal{C}^2 }{ \mu_{\mathrm{D}}d_{\mathrm{nn}}^2 } \sin^2 \left( \frac{kd_{\mathrm{nn}}}{2} \right).
+\end{equation}
+
+Using
+\begin{equation}
+    c_{\mathrm{E}}^2 = \frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}},
+\end{equation}
+the dispersion becomes
+\begin{equation}
+    \omega^2 \left( k, \alpha_{\mathrm{G}} \right) = \frac{ 4c_{\mathrm{E}}^2\mathcal{C}^2 }{ d_{\mathrm{nn}}^2 } \sin^2 \left( \frac{kd_{\mathrm{nn}}}{2} \right).
+    \label{eq:constrained_directional_dispersion}
+\end{equation}
+
+In the long-wavelength limit,
+\begin{equation}
+    kd_{\mathrm{nn}} \ll 1,
+\end{equation}
+Equation~\eqref{eq:constrained_directional_dispersion} gives
+\begin{equation}
+    \omega^2 = c_{\mathrm{E}}^2\mathcal{C}^2k^2 + \mathcal{O} \left( k^4d_{\mathrm{nn}}^2 \right).
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \lim_{k\rightarrow0} \frac{\omega}{k} = c_{\mathrm{E}}\mathcal{C}.
+    \label{eq:directional_longwave_speed}
+\end{equation}
+
+Using Equation~\eqref{eq:uniform_two_endpoint_factor},
+\begin{equation}
+    c_{\mathrm{P}} = c_{\mathrm{E}} \left( 1-\alpha_{\mathrm{G}} \right)^2.
+    \label{eq:gravity_propagation_law}
+\end{equation}
+
+Thus the propagation law follows through the mechanical sequence
+\begin{equation}
+    \text{work-conjugate endpoint map} \longrightarrow \mathcal{C} \longrightarrow \text{referred inertia} \longrightarrow \text{discrete dispersion} \longrightarrow c_{\mathrm{P}}.
+\end{equation}
+
+\section{Full FCC Long-Wavelength Reduction}
+\label{sec:grav_full_fcc_reduction}
+
+The directional derivation must agree with the three-dimensional FCC acoustic tensor developed in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.
+
+Let $K_{\mathrm{sh}}^{(0)}$ and $\rho_{\mathrm{eff}}^{(0)}$ denote the matched baseline shear coefficient and coherent translational inertia coefficient at one chosen descriptive scale. They satisfy
+\begin{equation}
+    \frac{K_{\mathrm{sh}}^{(0)}}{\rho_{\mathrm{eff}}^{(0)}} = c_{\mathrm{E}}^2.
+    \label{eq:baseline_scale_matched_ratio}
+\end{equation}
+
+At the primitive-cell microscopic scale presently derived in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}, these scale-neutral coefficients are identified with
+\begin{equation}
+    \rho_{\mathrm{eff}}^{(0)} = \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}, \qquad K_{\mathrm{sh}}^{(0)} = K_{\mathrm{sh}}^{(\mathrm{micro},0)}.
+    \label{eq:microscopic_baseline_identification}
+\end{equation}
+
+Here $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$ is the primitive-cell FCC scaffold inertia normalization derived in Appendix D. The identification in Equation~\eqref{eq:microscopic_baseline_identification} does not introduce an independently additive condensate kinetic density. Coherent condensate entrainment fixes the relative kinematics, while any additional coherent condensate inertia would require a separately derived coupled two-field kinetic action.
+
+The gravitationally referred density in the coherent transverse sector is
+\begin{equation}
+    \rho_{\mathrm{eff}} \left( \alpha_{\mathrm{G}} \right) = \frac{ \rho_{\mathrm{eff}}^{(0)} }{ \mathcal{C}^2 }.
+    \label{eq:referred_density_general}
+\end{equation}
+
+At the retained tangent order,
+\begin{equation}
+    K_{\mathrm{sh}} \left( \alpha_{\mathrm{G}} \right) = K_{\mathrm{sh}}^{(0)}.
+\end{equation}
+
+The long-wavelength transverse acoustic equation is therefore
+\begin{equation}
+    \omega_{\mathrm{T}}^2 = \frac{ K_{\mathrm{sh}}^{(0)} }{ \rho_{\mathrm{eff}} \left( \alpha_{\mathrm{G}} \right) } k^2 + \mathcal{O} \left( k^4d_{\mathrm{nn}}^2 \right).
+\end{equation}
+
+Substituting Equation~\eqref{eq:referred_density_general} gives
+\begin{equation}
+    \omega_{\mathrm{T}}^2 = \frac{ K_{\mathrm{sh}}^{(0)} }{ \rho_{\mathrm{eff}}^{(0)} } \mathcal{C}^2k^2 + \mathcal{O} \left( k^4d_{\mathrm{nn}}^2 \right).
+\end{equation}
+
+Using Equation~\eqref{eq:baseline_scale_matched_ratio},
+\begin{equation}
+    \omega_{\mathrm{T}}^2 = c_{\mathrm{E}}^2 \mathcal{C}^2k^2 + \mathcal{O} \left( k^4d_{\mathrm{nn}}^2 \right).
+    \label{eq:fcc_constrained_transverse_dispersion}
+\end{equation}
+
+For locally uniform gravitational loading,
+\begin{equation}
+    \omega_{\mathrm{T}}^2 = c_{\mathrm{E}}^2 \left( 1-\alpha_{\mathrm{G}} \right)^4 k^2 + \mathcal{O} \left( k^4d_{\mathrm{nn}}^2 \right).
+    \label{eq:fcc_alpha_dispersion}
+\end{equation}
+
+Consequently,
+\begin{equation}
+    c_{\mathrm{P}} = c_{\mathrm{E}} \left( 1-\alpha_{\mathrm{G}} \right)^2.
+\end{equation}
+
+The same gravitational factor therefore follows from both the constrained directional sequence and the full FCC long-wavelength acoustic tensor.
+
+The baseline coefficients in this section must be taken at the same descriptive scale. Primitive-cell microscopic coefficients must not be mixed with independently inferred macroscopic continuum coefficients.
+
+\section{Exact Nonuniform Endpoint Correction}
+\label{sec:grav_nonuniform_endpoint}
+
+For a selected FCC connection, define the local mean loading by
+\begin{equation}
+    \alpha_{\mathrm{G}} = \frac{ \alpha_{\mathrm{G}}^{(i)} + \alpha_{\mathrm{G}}^{(j)} }{2},
+\end{equation}
+and the endpoint difference by
+\begin{equation}
+    \delta\alpha_{\mathrm{G}} = \alpha_{\mathrm{G}}^{(j)} - \alpha_{\mathrm{G}}^{(i)}.
+\end{equation}
+
+Then
+\begin{equation}
+    \alpha_{\mathrm{G}}^{(i)} = \alpha_{\mathrm{G}} - \frac{\delta\alpha_{\mathrm{G}}}{2}, \qquad \alpha_{\mathrm{G}}^{(j)} = \alpha_{\mathrm{G}} + \frac{\delta\alpha_{\mathrm{G}}}{2}.
+\end{equation}
+
+Substitution into Equation~\eqref{eq:gravity_endpoint_product} gives
+\begin{equation}
+\begin{aligned}
+    \mathcal{C}_{ij} &= \left( 1-\alpha_{\mathrm{G}} + \frac{\delta\alpha_{\mathrm{G}}}{2} \right) \left( 1-\alpha_{\mathrm{G}} - \frac{\delta\alpha_{\mathrm{G}}}{2} \right) \\
+    &= \left( 1-\alpha_{\mathrm{G}} \right)^2 - \frac{ \left( \delta\alpha_{\mathrm{G}} \right)^2 }{4}.
+\end{aligned}
+\label{eq:exact_nonuniform_factor}
+\end{equation}
+
+The first-order endpoint-gradient contribution cancels exactly.
+
+The bond-resolved propagation speed is
+\begin{equation}
+    c_{\mathrm{P}}^{(i\rightarrow j)} = c_{\mathrm{E}} \left[ \left( 1-\alpha_{\mathrm{G}} \right)^2 - \frac{ \left( \delta\alpha_{\mathrm{G}} \right)^2 }{4} \right].
+    \label{eq:nonuniform_bond_speed}
+\end{equation}
+
+The locally uniform continuum approximation is controlled by
+\begin{equation}
+    \frac{ \left( \delta\alpha_{\mathrm{G}} \right)^2 }{4} \ll \left( 1-\alpha_{\mathrm{G}} \right)^2,
+\end{equation}
+or equivalently,
+\begin{equation}
+    \left| \delta\alpha_{\mathrm{G}} \right| \ll 2 \left| 1-\alpha_{\mathrm{G}} \right|.
+    \label{eq:continuum_validity_condition}
+\end{equation}
+
+For a smooth spherical exterior field,
+\begin{equation}
+    \alpha_{\mathrm{G}}(R) = \frac{GM}{Rc_{\mathrm{E}}^2},
+\end{equation}
+the relative change across one radial nearest-neighbor separation is
+\begin{equation}
+    \frac{ \left| \delta\alpha_{\mathrm{G}} \right| }{ \alpha_{\mathrm{G}} } \sim \frac{2r_{\mathrm{D}}}{R}.
+\end{equation}
+
+The continuum correction is therefore negligible throughout ordinary macroscopic exterior regions. It cannot, however, be neglected automatically near the saturation boundary, where $1-\alpha_{\mathrm{G}}$ becomes small, or across a sharp FCC-to-SC phase interface.
+
+\section{Refraction and Effective Optical Index}
+\label{sec:grav_refraction_appendix}
+
+The local propagation index of the coherent transverse branch is
+\begin{equation}
+    n_{\tau} = \frac{c_{\mathrm{E}}}{c_{\mathrm{P}}}.
+\end{equation}
+
+For locally uniform gravitational loading,
+\begin{equation}
+    n_{\tau} = \frac{1}{ \left( 1-\alpha_{\mathrm{G}} \right)^2 }.
+    \label{eq:gravity_refraction_index_appendix}
+\end{equation}
+
+In the weak-field limit,
+\begin{equation}
+    \alpha_{\mathrm{G}} \ll 1,
+\end{equation}
+the expansion is
+\begin{equation}
+    n_{\tau} = 1 + 2\alpha_{\mathrm{G}} + 3\alpha_{\mathrm{G}}^2 + \mathcal{O} \left( \alpha_{\mathrm{G}}^3 \right).
+    \label{eq:gravity_index_expansion_appendix}
+\end{equation}
+
+The leading coefficient $2$ is the continuum expression of the two serial endpoint constraints required to complete one nearest-neighbor transfer.
+
+Internal phase mismatch may alter excitation amplitude, polarization, mode participation, or defect coupling. It does not supply an additional universal multiplicative factor in the coherent transverse propagation speed unless such a factor is separately derived from the microscopic eigenvalue problem.
+
+\section{Saturation and Loss of the Active Coordinate}
+\label{sec:grav_saturation_appendix}
+
+In the unstrained active vacuum,
+\begin{equation}
+    \alpha_{\mathrm{G}} = 0,
+\end{equation}
+so
+\begin{equation}
+    \mathcal{C} = 1, \qquad \mu_{\mathrm{eff}} = \mu_{\mathrm{D}}, \qquad c_{\mathrm{P}} = c_{\mathrm{E}}.
+\end{equation}
+
+As the active FCC phase approaches saturation,
+\begin{equation}
+    \alpha_{\mathrm{G}} \rightarrow 1^{-},
+\end{equation}
+one has
+\begin{equation}
+    \mathcal{C} \rightarrow 0^{+}.
+\end{equation}
+
+The referred surface inertia diverges:
+\begin{equation}
+    \mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{\mathcal{C}^2} \rightarrow \infty,
+\end{equation}
+while the completed transverse propagation speed vanishes:
+\begin{equation}
+    c_{\mathrm{P}} = c_{\mathrm{E}}\mathcal{C} \rightarrow 0.
+\end{equation}
+
+The mechanical interpretation is
+\begin{equation}
+    \text{finite active-side tangent stiffness} + \text{divergent referred inertia} = \text{causal arrest}.
+\end{equation}
+
+The divergence does not represent an ordinary infinite material density of the SC substrate. It indicates that the completed active-FCC coordinate becomes singular and loses validity at the phase boundary.
+
+The present construction applies only while both endpoints remain active:
+\begin{equation}
+    0 \leq \alpha_{\mathrm{G}}^{(i)} < 1, \qquad 0 \leq \alpha_{\mathrm{G}}^{(j)} < 1.
+\end{equation}
+
+The FCC endpoint constraint is not analytically continued through the FCC-to-SC phase transition.
+
+\section{Microscopic Completion Criterion}
+\label{sec:grav_microscopic_completion}
+
+The present appendix gives a conservative reduced derivation of the gravitational endpoint constraint and its kinetic and dispersive consequences. It does not complete the underlying parent microphysics.
+
+A complete node--contact--condensate--Tension-Column action must derive, rather than impose, the single-endpoint relation
+\begin{equation}
+    u_{i} = \left( 1-\alpha_{\mathrm{G}}^{(i)} \right)y_{i}.
+\end{equation}
+
+After elimination of any auxiliary condensate and vertical-constraint variables, the resulting reduced primitive-cell dynamics must reproduce or revise the transfer operator
+\begin{equation}
+    \mathbf{T}_{\mathrm{cell}} = \mathbf{I} + \left( \mathcal{C}-1 \right) \mathbb{P}_{\mathrm{tr}},
+\end{equation}
+and the referred mass matrix
+\begin{equation}
+    \mathbf{M}_{\mathrm{cell}}^{(\mathrm{eff})} = \mathbf{T}_{\mathrm{cell}}^{-\mathsf{T}} \mathbf{M}_{\mathrm{cell}}^{(0)} \mathbf{T}_{\mathrm{cell}}^{-1}.
+\end{equation}
+
+The long-wavelength coherent transverse branch must satisfy
+\begin{equation}
+    \lim_{k\rightarrow0} \frac{ \omega_{\mathrm{T}} \left( k, \alpha_{\mathrm{G}} \right) }{k} = c_{\mathrm{E}} \left( 1-\alpha_{\mathrm{G}} \right)^2.
+    \label{eq:microscopic_completion_speed}
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    \frac{ c_{\mathrm{P}}^2 \left( \alpha_{\mathrm{G}} \right) }{ c_{\mathrm{E}}^2 } = \left( 1-\alpha_{\mathrm{G}} \right)^4.
+    \label{eq:microscopic_completion_ratio}
+\end{equation}
+
+The complete finite-wave-number theory must also verify
+\begin{equation}
+    \omega_{s}^2 \left( \mathbf{k}, \alpha_{\mathrm{G}} \right) \geq 0
+\end{equation}
+for every physical branch $s$, every wave vector in the first Brillouin zone, and every background satisfying
+\begin{equation}
+    0 \leq \alpha_{\mathrm{G}} < 1.
+\end{equation}
+
+If the completed parent action produces a different endpoint dependence, transfer operator, inertia scaling, or long-wavelength dispersion, then the reduced closure developed here must be modified or rejected.
+
+\section{Conclusion}
+
+\hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} establishes the gravity-independent FCC contact carrier. The present appendix applies the gravitational endpoint constraint to that carrier and derives the resulting kinetic and dispersive reduction.
+
+The completed mechanical chain is
+\begin{equation}
+\begin{array}{c}
+    \tau_{\mathrm{av}}^{(i)} = \tau_{\mathrm{D}} \left( 1-\alpha_{\mathrm{G}}^{(i)} \right) \\
+    \Downarrow \\
+    u_{i} = \left( 1-\alpha_{\mathrm{G}}^{(i)} \right)y_{i} \\
+    \Downarrow \\
+    \mathcal{C}_{ij} = \left( 1-\alpha_{\mathrm{G}}^{(i)} \right) \left( 1-\alpha_{\mathrm{G}}^{(j)} \right) \\
+    \Downarrow \\
+    \mathbf{M}_{\mathrm{cell}}^{(\mathrm{eff})} = \mathbf{T}_{\mathrm{cell}}^{-\mathsf{T}} \mathbf{M}_{\mathrm{cell}}^{(0)} \mathbf{T}_{\mathrm{cell}}^{-1} \\
+    \Downarrow \\
+    \rho_{\mathrm{eff}} = \dfrac{ \rho_{\mathrm{eff}}^{(0)} }{ \mathcal{C}^2 } \\
+    \Downarrow \\
+    \omega_{\mathrm{T}}^2 = c_{\mathrm{E}}^2 \mathcal{C}^2k^2 + \mathcal{O} \left( k^4d_{\mathrm{nn}}^2 \right) \\
+    \Downarrow \\
+    c_{\mathrm{P}} = c_{\mathrm{E}} \left( 1-\alpha_{\mathrm{G}} \right)^2.
+\end{array}
+\end{equation}
+
+At the primitive-cell microscopic scale,
+\begin{equation}
+    \rho_{\mathrm{eff}}^{(0)} = \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}, \qquad K_{\mathrm{sh}}^{(0)} = K_{\mathrm{sh}}^{(\mathrm{micro},0)},
+\end{equation}
+while $\rho_{\mathrm{eff}}^{(0)}$ and $K_{\mathrm{sh}}^{(0)}$ remain the scale-neutral notation when the same constrained-coordinate structure is written at a more general continuum level.
+
+The endpoint law is therefore not left as a bare propagation postulate. It is represented as a reduced work-conjugate coordinate constraint whose referred inertia and long-wavelength dispersion follow from a conservative constrained action. The remaining open problem is the derivation of that constraint from the complete microscopic parent dynamics.

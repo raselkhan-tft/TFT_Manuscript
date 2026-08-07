@@ -1,91 +1,2345 @@
 \chapter{Kinematic Shear, Tensor Mechanics, and Field Unification}
 \label{app:kinematic_shear}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Abstract:} Deriving the macroscopic shear stiffness of the vacuum from GW150914 and validating the continuum against General Relativity tensors and static Newtonian gravity.
+\section*{Abstract}
+This appendix develops the long-wavelength gravitational-wave sector of the active State-I vacuum and constructs its mechanical connection to the microscopic FCC scaffold established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and the coherent dual-phase kinematics developed in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}. The microscopic FCC scaffold possesses a finite transverse restoring coefficient and a primitive-cell inertia normalization whose ratio fixes the gravity-neutral propagation capacity $c_{\mathrm{E}}$. In the conservative coherent branch, the interstitial condensate is entrained with the scaffold without relative condensate flow and supplies the corresponding incremental volume constraint.
 
-\section{Introduction: The Kinematic Shear Model}
-To determine the physical state of the spacetime medium, we treat the vacuum as a transmissive continuum capable of supporting transverse shear waves. Because macroscopic gravitational waves propagate through a 3D volume, their propagation speed is governed by the 3D volumetric shear wave equation:
+The gravitational-wave response is represented by a collective transverse-traceless tensor $\mathsf{H}_{ij}^{(\mathrm{GW})}$, distinct from the ordinary affine Cauchy strain of the FCC displacement field. The two tensor polarization bases are derived directly from correlated dyads of the FCC nearest-neighbor bond families, and their degeneracy follows from the same isotropic contact closure that governs the long-wavelength scaffold continuum. This establishes a microscopic geometric origin for the $+$ and $\times$ tensor structures while separating the collective gravitational-wave coordinate from an ordinary transverse phonon.
+
+The propagating tensor sector is formulated as a self-equilibrated directional-tension redistribution of the active Soft Floor. Its leading gapless long-wavelength closure is governed by spatial gradients of the collective tensor rather than by a local affine shear energy. Within this closure, the tensor-source normalization is fixed by the independently established weak-field static gravitational response, while free propagation remains governed solely by the State-I mechanical carrier. The resulting collective response is therefore spectral: the effective gravitational-wave stiffness and equivalent continuum inertia depend on wave number or frequency rather than representing universal equilibrium material constants.
+
+This construction yields a derived microscopic-to-collective response ratio $\zeta_{\mathrm{GW}}(k)$, replacing its previous role as an unexplained numerical scale comparison. The same tensor normalization produces the far-zone quadrupole strain, gravitational-wave energy flux, total quadrupole luminosity, and leading circular-binary chirp relation. GW150914 consequently enters as an observational consistency check on the derived response rather than as the calibration used to define it.
+
+Static gravity and gravitational radiation remain distinct dynamical sectors of the same State-I mechanical architecture: static gravity is an equilibrated restorative tension configuration, whereas gravitational radiation is a propagating transverse tensor redistribution of that configuration. The remaining microscopic completion is the derivation of the collective directional-tension action from the full finite-wave-number FCC contact, phase, rotational, condensate, and Tension-Column dynamics, together with the corresponding strong-field source projection for the evolving FCC/SC phase boundary.
+
+\section{Microscopic Scaffold Baseline and Scale Hierarchy}
+\label{sec:n1_microscopic_scaffold_baseline}
+
+\hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} establishes the gravity-independent microscopic FCC scaffold that supplies the local transverse mechanical carrier of the active State-I vacuum. Under the leading isotropic contact closure,
 \begin{equation}
-    c_{\mathrm{E}} = \sqrt{\frac{K_{\mathrm{shear}}}{\rho_{\mathrm{eff}}}}
+    \kappa_{\mathrm{n}} = \kappa_{\mathrm{t}},
 \end{equation}
-Where $\rho_{\mathrm{eff}}$ represents the effective macroscopic inertial density of the continuum. Our objective is to calculate the empirical volumetric shear modulus ($K_{\mathrm{shear}}$) of the local active vacuum from observational data.
+the primitive-cell scaffold inertia normalization is
+\begin{equation}
+    \rho_{\mathrm{sh}}^{(\mathrm{micro},0)} = \beta_{\mathrm{geo}}\rho_{\mathrm{D}},
+\end{equation}
+and the corresponding primitive-cell tangent shear coefficient is
+\begin{equation}
+    K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}c_{\mathrm{E}}^{2} = \beta_{\mathrm{geo}}\rho_{\mathrm{D}}c_{\mathrm{E}}^{2}.
+\end{equation}
+Here $\rho_{\mathrm{D}}$ is the intrinsic density assigned to the solid nodal phase, whereas $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$ is the nodal mass averaged over the complete FCC primitive-cell volume. The factor
+\begin{equation}
+    \beta_{\mathrm{geo}} = \frac{\pi}{3\sqrt{2}}
+\end{equation}
+is therefore the FCC solid-volume fraction entering the primitive-cell averaging and does not represent a reduction of the intrinsic nodal density.
 
-\section{Observational Data (GW150914)}
-We utilize the signal data from the first direct detection of gravitational waves \cite{LIGO_2016}.
+The coefficient $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$ is the unstrained primitive-cell tangent shear modulus of the FCC scaffold. Equivalently, \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} gives
+\begin{equation}
+    K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \frac{A_{\mathrm{ct}}^{(\mathrm{modal})}}{V_{\mathrm{p}}} \tau_{\mathrm{D}},
+\end{equation}
+where
+\begin{equation}
+    A_{\mathrm{ct}}^{(\mathrm{modal})} = 2\pi\ell_{\mathrm{S}}^{2},
+\end{equation}
+and
+\begin{equation}
+    V_{\mathrm{p}} = 4\sqrt{2}\,r_{\mathrm{D}}^{3}.
+\end{equation}
+The area $A_{\mathrm{ct}}^{(\mathrm{modal})}$ is the modal surface-to-cell normalization of the reduced transverse scaffold coordinate; it is not interpreted as a literal microscopic contact patch. These relations are already established by the FCC homogenization and will be used below without further microscopic normalization.
+
+The underlying State-I interface coefficients occupy a different dimensional level. The baseline surface tension and surface inertia are
+\begin{equation}
+    \tau_{\mathrm{D}} = \frac{F_{\mathrm{S}}}{r_{\mathrm{D}}} = \frac{c_{\mathrm{E}}^{4}}{G r_{\mathrm{D}}},
+\end{equation}
+and
+\begin{equation}
+    \mu_{\mathrm{D}} = \frac{\tau_{\mathrm{D}}}{c_{\mathrm{E}}^{2}} = \frac{c_{\mathrm{E}}^{2}}{G r_{\mathrm{D}}},
+\end{equation}
+so that
+\begin{equation}
+    \frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}} = c_{\mathrm{E}}^{2}.
+\end{equation}
+These quantities are the established two-dimensional Soft-Floor interface coefficients inherited from the structural force scale $F_{\mathrm{S}}=c_{\mathrm{E}}^{4}/G$ at the duality scale $r_{\mathrm{D}}$. They are not re-derived in this appendix. Their role here is to provide the baseline surface stiffness–inertia pair from which the primitive-cell FCC contact action and its continuum coefficients are constructed.
+
+The corresponding scale hierarchy is therefore
+\begin{equation}
+    F_{\mathrm{S}} \longrightarrow \{\tau_{\mathrm{D}}, \mu_{\mathrm{D}}\} \longrightarrow \left\{ K_{\mathrm{sh}}^{(\mathrm{micro},0)}, \rho_{\mathrm{sh}}^{(\mathrm{micro},0)} \right\}.
+\end{equation}
+The first quantity is a force scale, the second pair consists of surface coefficients, and the final pair consists of primitive-cell volumetric coefficients. They describe related levels of the same State-I mechanical construction but are not interchangeable constitutive quantities.
+
+In particular, $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$ is neither a static gravitational stress nor the macroscopic gravitational-wave response coefficient. It measures the local affine tangent response of the microscopic FCC scaffold. The gravitational-wave tensor developed below is a collective directional-tension coordinate assembled across the FCC network, and its effective response must therefore be obtained by a separate long-wavelength projection rather than by identifying it directly with the primitive-cell affine shear modulus.
+
+This distinction is essential. An ordinary affine transverse-traceless deformation of the FCC scaffold would retain the full microscopic coefficient $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$. The observed gravitational-wave sector instead requires a collective tensor coordinate whose spatial transfer is resolved at a different constitutive level. The derivation of that distinction begins with the FCC bond geometry in the following sections.
+
+Gravitational preloading is independently characterized by the dimensionless structural coupling $\alpha_{\mathrm{G}}(\mathbf{x})$, which specifies the locally realized static loading of the active Soft Floor. The endpoint-transfer construction of \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}} gives the corresponding local propagation capacity
+\begin{equation}
+    c_{\mathrm{P}}(\mathbf{x}) = c_{\mathrm{E}} \left[1-\alpha_{\mathrm{G}}(\mathbf{x})\right]^2.
+\end{equation}
+Thus $\alpha_{\mathrm{G}}$ is a local environmental state variable and must remain distinct from the microscopic-to-collective response ratio derived later in this appendix. In the gravity-neutral reference limit, $\alpha_{\mathrm{G}} \rightarrow 0$, the underlying State-I carrier recovers $c_{\mathrm{P}} \rightarrow c_{\mathrm{E}}$.
+
+All finite-frequency gravitational-wave propagation considered here occurs in the active State-I Soft Floor. The phase-locked Hard Floor supplies the underlying structural reference and record used elsewhere in the theory, but it is not assigned an independently additive propagating stiffness or inertia in the gravitational-wave carrier.
+
+\section{The Coherent State-I Carrier}
+\label{sec:n2_coherent_carrier}
+
+\hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}} establishes the conservative coherent kinematics of the dual-phase State-I vacuum. Let $\mathbf{u}(\mathbf{x},t)$ denote the homogenized FCC scaffold displacement and $\mathbf{v}_{\mathrm{IC}}$ the interstitial-condensate velocity. Their relative velocity is
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} = \mathbf{v}_{\mathrm{IC}} - \dot{\mathbf{u}}.
+\end{equation}
+For the coherent branch, $\mathbf{v}_{\mathrm{rel}} = \mathbf{0}$. The condensate is therefore not stationary while the scaffold propagates through it. At the retained conservative order, it is entrained with the FCC scaffold, so the two phases share the coherent translational motion without relative condensate flow.
+
+This entrainment is a kinematic condition. It does not by itself establish an independently additive condensate inertia for the coherent coordinate. At the primitive-cell microscopic scale used in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}, the selected translational carrier is normalized by the scaffold coefficient $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$, while the corresponding restoring coefficient is $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$. Their baseline relation is
+\begin{equation}
+    \frac{K_{\mathrm{sh}}^{(\mathrm{micro},0)}}{\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}} = c_{\mathrm{E}}^{2}.
+\end{equation}
+
+The interstitial condensate supplies the incremental pressure constraint of the coherent branch. In the selected low-energy reduction, $\nabla \cdot \mathbf{u} = 0$. The associated long-wavelength primitive-cell equation may therefore be written
+\begin{equation}
+    \rho_{\mathrm{sh}}^{(\mathrm{micro},0)} \ddot{\mathbf{u}} = K_{\mathrm{sh}}^{(\mathrm{micro},0)} \nabla^{2}\mathbf{u} - \nabla\delta p_{\mathrm{IC}},
+\end{equation}
+subject to $\nabla \cdot \mathbf{u} = 0$. Here $\delta p_{\mathrm{IC}}$ acts as the work-conjugate pressure enforcing the incremental volume constraint. The condition does not imply that the active vacuum is incapable of sustaining finite background gravitational loading or undergoing nonlinear FCC-to-SC conversion; it applies to the selected coherent perturbative branch about a fixed State-I background.
+
+For a transverse plane-wave perturbation,
+\begin{equation}
+    \mathbf{u} = u_{0}\mathbf{e}_{\mathrm{T}} e^{i(\mathbf{k} \cdot \mathbf{x} - \omega t)},
+\end{equation}
+with $\mathbf{k} \cdot \mathbf{e}_{\mathrm{T}} = 0$, the pressure term has no transverse projection. The carrier dispersion is therefore
+\begin{equation}
+    \omega_{\mathrm{T}}^{2} = \frac{K_{\mathrm{sh}}^{(\mathrm{micro},0)}}{\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}} k^{2} = c_{\mathrm{E}}^{2}k^{2}.
+\end{equation}
+Thus, the gravity-neutral coherent translational carrier possesses two degenerate transverse polarizations and propagates at the baseline State-I speed $c_{\mathrm{E}}$.
+
+In a gravitationally preloaded region, the endpoint-transfer construction of \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}} acts on this baseline carrier and gives the locally completed propagation speed
+\begin{equation}
+    c_{\mathrm{P}}(\mathbf{x}) = c_{\mathrm{E}} \left[ 1 - \alpha_{\mathrm{G}}(\mathbf{x}) \right]^{2}.
+\end{equation}
+The background loading $\alpha_{\mathrm{G}}$ is quasistatic on the timescale of the local perturbation and is not itself identified with the propagating wave amplitude.
+
+The restriction $\nabla \cdot \mathbf{u} = 0$ removes the ordinary finite-frequency volumetric polarization from this selected translational sector. It does not remove rotational, torsional, phase, chiral, or localized relative-flow branches from the complete microscopic FCC spectrum.
+
+Most importantly, the two transverse displacement polarizations of $\mathbf{u}$ are the kinematic carrier, not yet the macroscopic gravitational-wave tensor. A vector displacement field and a transverse-traceless rank-two field are different mechanical objects. The collective tensor response must therefore arise from a correlated projection of the FCC directional structure rather than from identifying an ordinary transverse phonon directly with a spin-2 gravitational wave.
+
+The next section constructs that projection from the nearest-neighbor FCC bond dyads and shows that the two gravitational-wave tensor bases are already contained in the microscopic lattice geometry.
+
+\section{FCC Bond-Dyad Origin of the Tensor Polarization Basis}
+\label{sec:n3_fcc_bond_dyad}
+
+The coherent displacement field developed in the preceding section supplies two transverse vector carrier modes. A gravitational-wave response, however, is represented by a symmetric transverse-traceless rank-two field. The required tensor structure is already contained in the directional geometry of the FCC nearest-neighbor network.
+
+Using the six undirected nearest-neighbor bond directions established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}, define
+\begin{align}
+    \mathbf{n}_{1} &= \frac{1}{\sqrt{2}} (1,1,0), & \mathbf{n}_{2} &= \frac{1}{\sqrt{2}} (1,-1,0), \\
+    \mathbf{n}_{3} &= \frac{1}{\sqrt{2}} (1,0,1), & \mathbf{n}_{4} &= \frac{1}{\sqrt{2}} (1,0,-1), \\
+    \mathbf{n}_{5} &= \frac{1}{\sqrt{2}} (0,1,1), & \mathbf{n}_{6} &= \frac{1}{\sqrt{2}} (0,1,-1).
+\end{align}
+Each undirected bond family defines the symmetric rank-two directional dyad
+\begin{equation}
+    \mathbf{P}_{a} \equiv \mathbf{n}_{a} \otimes \mathbf{n}_{a}.
+\end{equation}
+The six dyads satisfy the exact FCC second-moment identity
+\begin{equation}
+    \sum_{a=1}^{6} \mathbf{P}_{a} = 2\mathbf{I}.
+\end{equation}
+This relation expresses the isotropic second moment of the nearest-neighbor FCC bond set. The individual bond families are directionally discrete, but their complete primitive-cell sum is proportional to the identity tensor.
+
+For a wave whose propagation direction is selected as the $z$-axis, consider first the two bond families lying in the $xy$-plane. Their dyadic difference is
+\begin{equation}
+    \mathbf{P}_{1} - \mathbf{P}_{2} = 
+    \begin{pmatrix}
+        0 & 1 & 0 \\
+        1 & 0 & 0 \\
+        0 & 0 & 0
+    \end{pmatrix}.
+\end{equation}
+This is precisely the cross-polarization basis tensor,
+\begin{equation}
+    \mathbf{E}_{\times} = \mathbf{P}_{1} - \mathbf{P}_{2}.
+\end{equation}
+
+Next compare the two $xz$-plane bond families with the two $yz$-plane bond families:
+\begin{equation}
+    \mathbf{P}_{3} + \mathbf{P}_{4} - \mathbf{P}_{5} - \mathbf{P}_{6} = 
+    \begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & -1 & 0 \\
+        0 & 0 & 0
+    \end{pmatrix}.
+\end{equation}
+This gives the plus-polarization basis tensor,
+\begin{equation}
+    \mathbf{E}_{+} = \mathbf{P}_{3} + \mathbf{P}_{4} - \mathbf{P}_{5} - \mathbf{P}_{6}.
+\end{equation}
+
+The two polarization tensors therefore arise as exact correlated imbalances among the FCC bond-family dyads:
+\begin{equation}
+    \mathbf{E}_{+} = 
+    \begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & -1 & 0 \\
+        0 & 0 & 0
+    \end{pmatrix},
+    \qquad
+    \mathbf{E}_{\times} = 
+    \begin{pmatrix}
+        0 & 1 & 0 \\
+        1 & 0 & 0 \\
+        0 & 0 & 0
+    \end{pmatrix}.
+\end{equation}
+They satisfy $\mathbf{E}_{A} : \mathbf{E}_{B} = 2\delta_{AB}$ for $A,B \in \{+,\times\}$, together with
+\begin{equation}
+    (\mathbf{E}_{A})_{ij} = (\mathbf{E}_{A})_{ji}, \qquad (\mathbf{E}_{A})_{ii} = 0, \qquad \hat{z}^{i} (\mathbf{E}_{A})_{ij} = 0.
+\end{equation}
+Thus both bond-derived tensors are symmetric, traceless, transverse to the selected propagation direction, mutually orthogonal, and equally normalized.
+
+A collective transverse-traceless response can consequently be expanded as
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} = \frac{1}{2} \left[ h_{+}(\mathbf{E}_{+})_{ij} + h_{\times}(\mathbf{E}_{\times})_{ij} \right].
+\end{equation}
+The normalization gives
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} \mathsf{H}_{ij}^{(\mathrm{GW})} = \frac{1}{2} \left( h_{+}^{2} + h_{\times}^{2} \right).
+\end{equation}
+For the pure plus mode,
+\begin{equation}
+    \mathsf{H}_{xx}^{(\mathrm{GW})} = \frac{h_{+}}{2}, \qquad \mathsf{H}_{yy}^{(\mathrm{GW})} = -\frac{h_{+}}{2},
+\end{equation}
+and therefore
+\begin{equation}
+    \mathsf{H}_{xx}^{(\mathrm{GW})} - \mathsf{H}_{yy}^{(\mathrm{GW})} = h_{+}.
+\end{equation}
+The amplitudes $h_{+}$ and $h_{\times}$ are consequently normalized directly to the differential transverse strain represented by the collective tensor.
+
+Because the microscopic basis is constructed from directional dyads rather than vectors, a rotation of the transverse axes through an angle $\psi$ closes within the same two-dimensional tensor subspace:
+\begin{align}
+    \mathbf{E}_{+}' &= \cos(2\psi)\mathbf{E}_{+} + \sin(2\psi)\mathbf{E}_{\times}, \\
+    \mathbf{E}_{\times}' &= -\sin(2\psi)\mathbf{E}_{+} + \cos(2\psi)\mathbf{E}_{\times}.
+\end{align}
+The doubled angular dependence is therefore already encoded in the rank-two FCC bond geometry. It does not arise from treating either transverse displacement polarization as an independent scalar amplitude.
+
+\subsection{Energetic Degeneracy of the Two FCC Tensor Patterns}
+\label{subsec:energetic_degeneracy}
+
+The bond construction also determines the microscopic affine energy associated with the two tensor patterns. Let
+\begin{equation}
+    \boldsymbol{\varepsilon}^{(\mathrm{TT})} = \frac{1}{2} \left( h_{+}\mathbf{E}_{+} + h_{\times}\mathbf{E}_{\times} \right)
+\end{equation}
+be an affine symmetric transverse-traceless strain imposed on one FCC primitive cell.
+
+For bond family $a$, the affine relative displacement is
+\begin{equation}
+    \Delta\mathbf{u}_{a} = d_{\mathrm{nn}} \boldsymbol{\varepsilon}^{(\mathrm{TT})} \mathbf{n}_{a}.
+\end{equation}
+Its normal component is determined by
+\begin{equation}
+    \delta_{\mathrm{n}}^{(a)} = d_{\mathrm{nn}} \mathbf{n}_{a} \cdot \boldsymbol{\varepsilon}^{(\mathrm{TT})} \mathbf{n}_{a},
+\end{equation}
+while the remaining part is tangential to the bond.
+
+For a pure plus pattern, the six-bond sums give
+\begin{equation}
+    \sum_{a=1}^{6} \left( \delta_{\mathrm{n}}^{(a)} \right)^{2} = \frac{d_{\mathrm{nn}}^{2}}{4} h_{+}^{2},
+\end{equation}
+and
+\begin{equation}
+    \sum_{a=1}^{6} \left| \boldsymbol{\delta}_{\mathrm{t}}^{(a)} \right|^{2} = \frac{3d_{\mathrm{nn}}^{2}}{4} h_{+}^{2}.
+\end{equation}
+The corresponding primitive-cell energy density is therefore
+\begin{equation}
+    W_{+}^{(\mathrm{aff})} = \frac{A_{\mathrm{ct}}^{(\mathrm{modal})} d_{\mathrm{nn}}^{2}}{8V_{\mathrm{p}}} \left( \kappa_{\mathrm{n}} + 3\kappa_{\mathrm{t}} \right) h_{+}^{2}.
+\end{equation}
+
+For a pure cross pattern,
+\begin{equation}
+    \sum_{a=1}^{6} \left( \delta_{\mathrm{n}}^{(a)} \right)^{2} = \frac{d_{\mathrm{nn}}^{2}}{2} h_{\times}^{2},
+\end{equation}
+and
+\begin{equation}
+    \sum_{a=1}^{6} \left| \boldsymbol{\delta}_{\mathrm{t}}^{(a)} \right|^{2} = \frac{d_{\mathrm{nn}}^{2}}{2} h_{\times}^{2}.
+\end{equation}
+Hence
+\begin{equation}
+    W_{\times}^{(\mathrm{aff})} = \frac{A_{\mathrm{ct}}^{(\mathrm{modal})} d_{\mathrm{nn}}^{2}}{4V_{\mathrm{p}}} \left( \kappa_{\mathrm{n}} + \kappa_{\mathrm{t}} \right) h_{\times}^{2}.
+\end{equation}
+
+Before the isotropic contact closure is imposed, the two tensor patterns generally have different affine energetic weights. Under the \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} condition $\kappa_{\mathrm{n}} = \kappa_{\mathrm{t}} \equiv \kappa_{\mathrm{c}}$, both expressions reduce to
+\begin{equation}
+    W_{+}^{(\mathrm{aff})} = \frac{1}{2} K_{\mathrm{sh}}^{(\mathrm{micro},0)} h_{+}^{2},
+\end{equation}
+and
+\begin{equation}
+    W_{\times}^{(\mathrm{aff})} = \frac{1}{2} K_{\mathrm{sh}}^{(\mathrm{micro},0)} h_{\times}^{2},
+\end{equation}
+where
+\begin{equation}
+    K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \frac{A_{\mathrm{ct}}^{(\mathrm{modal})} \kappa_{\mathrm{c}} d_{\mathrm{nn}}^{2}}{V_{\mathrm{p}}}.
+\end{equation}
+For a general affine combination,
+\begin{equation}
+    W_{\mathrm{TT}}^{(\mathrm{aff})} = \frac{K_{\mathrm{sh}}^{(\mathrm{micro},0)}}{2} \left( h_{+}^{2} + h_{\times}^{2} \right).
+\end{equation}
+The same contact condition that produces the leading isotropic FCC continuum therefore makes the plus and cross tensor patterns exactly degenerate at the primitive-cell affine level.
+
+This calculation establishes two results. First, the FCC nearest-neighbor geometry contains the complete transverse-traceless polarization basis required by the macroscopic gravitational-wave tensor. Second, ordinary affine realization of that basis engages the full primitive-cell scaffold coefficient $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$. The much smaller macroscopic gravitational-wave response therefore cannot be obtained by identifying $\mathsf{H}_{ij}^{(\mathrm{GW})}$ directly with an ordinary affine Cauchy strain.
+
+\section{The Collective Directional-Tension Tensor}
+\label{sec:n4_collective_directional_tension}
+
+The FCC bond dyads derived in the preceding section provide a complete basis for symmetric rank-two states. They do not, by themselves, determine which microscopic coordinate carries the gravitational-wave response. A distinction must therefore be made between an affine deformation of the node positions and a correlated redistribution of the directional tension carried by the FCC contact network.
+
+Let $\lambda_{a}(\mathbf{x},t)$ for $a=1,\ldots,6$ denote dimensionless perturbations of the completed directional transfer associated with the six undirected FCC bond families. Each undirected family represents the opposite pair $+\mathbf{n}_{a}$ and $-\mathbf{n}_{a}$. The corresponding symmetric directional-transfer tensor is
+\begin{equation}
+    \mathsf{A}_{ij} = \sum_{a=1}^{6} \lambda_{a} (\mathbf{P}_{a})_{ij},
+\end{equation}
+where
+\begin{equation}
+    \mathbf{P}_{a} = \mathbf{n}_{a}\otimes\mathbf{n}_{a}.
+\end{equation}
+Both $\lambda_{a}$ and $\mathsf{A}_{ij}$ are dimensionless:
+\begin{equation}
+    [\lambda_{a}] = 1, \qquad [\mathsf{A}_{ij}] = 1.
+\end{equation}
+
+Because $\operatorname{tr}\mathbf{P}_{a}=1$, the trace of the directional-transfer tensor is
+\begin{equation}
+    \mathsf{A}_{ii} = \sum_{a=1}^{6}\lambda_{a}.
+\end{equation}
+Define the mean directional loading by
+\begin{equation}
+    \overline{\lambda} = \frac{1}{6} \sum_{a=1}^{6}\lambda_{a},
+\end{equation}
+and the trace-free directional coefficients by
+\begin{equation}
+    \lambda_{a}^{\circ} = \lambda_{a}-\overline{\lambda}.
+\end{equation}
+They satisfy $\sum_{a=1}^{6}\lambda_{a}^{\circ}=0$.
+
+Using the FCC second-moment identity $\sum_{a=1}^{6}\mathbf{P}_{a} = 2\mathbf{I}$, the full directional-transfer tensor decomposes as
+\begin{equation}
+    \mathsf{A}_{ij} = 2\overline{\lambda}\,\delta_{ij} + \mathsf{A}_{ij}^{\circ},
+\end{equation}
+where
+\begin{equation}
+    \mathsf{A}_{ij}^{\circ} = \sum_{a=1}^{6} \lambda_{a}^{\circ} (\mathbf{P}_{a})_{ij},
+\end{equation}
+and $\mathsf{A}_{ii}^{\circ}=0$.
+
+The first term is the scalar directional average. It belongs to the local isotropic-loading sector and may couple to the background structural loading characterized by $\alpha_{\mathrm{G}}$. The second term is a traceless redistribution of directional transfer at fixed first-order scalar capacity.
+
+For a selected propagation direction represented by the unit vector $\mathbf{s}$, introduce the transverse projector
+\begin{equation}
+    \mathcal{P}_{ij}(\mathbf{s}) = \delta_{ij}-s_{i}s_{j},
+\end{equation}
+and the transverse-traceless rank-four projector
+\begin{equation}
+    \Lambda_{ij,kl}^{(\mathrm{TT})}(\mathbf{s}) = \frac{1}{2} \left[ \mathcal{P}_{ik}\mathcal{P}_{jl} + \mathcal{P}_{il}\mathcal{P}_{jk} - \mathcal{P}_{ij}\mathcal{P}_{kl} \right].
+\end{equation}
+The collective gravitational-wave tensor is defined by
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} = \Lambda_{ij,kl}^{(\mathrm{TT})}(\mathbf{s}) \mathsf{A}_{kl}^{\circ}.
+\end{equation}
+It satisfies
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} = \mathsf{H}_{ji}^{(\mathrm{GW})}, \qquad s^{i}\mathsf{H}_{ij}^{(\mathrm{GW})} = 0, \qquad \mathsf{H}_{ii}^{(\mathrm{GW})} = 0.
+\end{equation}
+
+When $\mathsf{A}_{ij}^{\circ}$ already lies entirely within the transverse-traceless subspace selected by $\mathbf{s}$, the projector acts as the identity and $\mathsf{H}_{ij}^{(\mathrm{GW})} = \mathsf{A}_{ij}^{\circ}$. The explicit projector form is retained because the complete trace-free directional-transfer space contains five independent components, whereas the transverse-traceless radiative sector contains only two.
+
+\subsection{Directional Representation of the Two Polarizations}
+\label{subsec:directional_representation}
+
+For propagation along the $z$-axis, $\mathbf{s}=\hat{\mathbf{z}}$, the directional coefficients required to construct the two tensor polarizations are
+\begin{equation}
+    \begin{pmatrix}
+        \lambda_{1}^{\circ} \\
+        \lambda_{2}^{\circ} \\
+        \lambda_{3}^{\circ} \\
+        \lambda_{4}^{\circ} \\
+        \lambda_{5}^{\circ} \\
+        \lambda_{6}^{\circ}
+    \end{pmatrix}
+    = \frac{1}{2}
+    \begin{pmatrix}
+        h_{\times} \\
+        -h_{\times} \\
+        h_{+} \\
+        h_{+} \\
+        -h_{+} \\
+        -h_{+}
+    \end{pmatrix}.
+\end{equation}
+Their sum vanishes: $\sum_{a=1}^{6} \lambda_{a}^{\circ} = 0$. Substitution into the FCC dyadic expansion gives
+\begin{equation}
+    \begin{aligned}
+        \mathsf{A}_{ij}^{\circ} &= \frac{h_{\times}}{2} \left[ (\mathbf{P}_{1})_{ij} - (\mathbf{P}_{2})_{ij} \right] \\
+        &\quad + \frac{h_{+}}{2} \left[ (\mathbf{P}_{3})_{ij} + (\mathbf{P}_{4})_{ij} - (\mathbf{P}_{5})_{ij} - (\mathbf{P}_{6})_{ij} \right].
+    \end{aligned}
+\end{equation}
+Using the bond-dyad identities of Section~\ref{sec:n3_fcc_bond_dyad},
+\begin{equation}
+    \mathsf{A}_{ij}^{\circ} = \frac{1}{2} \left[ h_{+}(\mathbf{E}_{+})_{ij} + h_{\times}(\mathbf{E}_{\times})_{ij} \right].
+\end{equation}
+This tensor is already transverse to $\hat{\mathbf{z}}$, so the transverse-traceless projector leaves it unchanged:
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} = \frac{1}{2} \left[ h_{+}(\mathbf{E}_{+})_{ij} + h_{\times}(\mathbf{E}_{\times})_{ij} \right].
+\end{equation}
+
+The observed $+$ and $\times$ responses are therefore represented as two specific traceless redistributions among the six FCC directional-transfer channels.
+
+The six FCC bond dyads span the six-dimensional space of symmetric rank-two tensors. Their common scalar combination supplies one trace degree of freedom, while the trace-free combinations span the five-dimensional symmetric-traceless sector. Selection of a propagation direction and application of the transverse-traceless projector reduce this space to the two-dimensional radiative subspace represented by $h_{+}$ and $h_{\times}$.
+
+\subsection{Local Mechanical Balance}
+\label{subsec:local_mechanical_balance}
+
+Each coefficient $\lambda_{a}$ belongs to an opposite FCC bond pair. For a locally uniform pair perturbation, equal changes on the $+\mathbf{n}_{a}$ and $-\mathbf{n}_{a}$ contacts produce no cell-centered first-order resultant:
+\begin{equation}
+    \delta\mathbf{f}_{a}^{(+)} + \delta\mathbf{f}_{a}^{(-)} \propto \lambda_{a}\mathbf{n}_{a} + \lambda_{a}(-\mathbf{n}_{a}) = \mathbf{0}.
+\end{equation}
+The additional trace-free condition $\sum_{a=1}^{6}\lambda_{a}^{\circ}=0$ ensures that the tensor mode also produces no first-order change in the scalar directional capacity.
+
+The collective gravitational-wave state is therefore self-equilibrated in two distinct local senses:
 \begin{itemize}
-    \item \textbf{Energy Flux ($I$):} $1.41 \times 10^{-3}$ W/m$^2$
-    \item \textbf{Strain amplitude ($h_{\mathrm{GW}}$):} $1.0 \times 10^{-21}$ (dimensionless)
-    \item \textbf{Frequency ($f$):} 150 Hz ($\omega \approx 942.48$ rad/s)
+    \item \textbf{opposite-bond pair balance} $\Longrightarrow$ zero cell-centered resultant, and
+    \item \textbf{trace-free redistribution} $\Longrightarrow$ zero first-order scalar-capacity change.
 \end{itemize}
 
-\section{The Continuum Strain-Displacement Relation}
-To calculate the impedance of the continuum, we must relate the dimensionless gravitational strain ($h_{\mathrm{GW}}$) to the macroscopic continuum displacement amplitude ($\epsilon_{\mathrm{GW}}$). In continuum wave mechanics, strain is the spatial derivative of displacement:
+These local balance statements do not imply the absence of propagation forces when the tensor state varies spatially. A uniform directional redistribution satisfies $\partial_{k}\mathsf{H}_{ij}^{(\mathrm{GW})}=0$ and produces no intercell mismatch at the retained order. A nonuniform state satisfies $\partial_{k}\mathsf{H}_{ij}^{(\mathrm{GW})}\neq 0$, so neighboring cells possess different directional-transfer configurations. The resulting intercell mismatch supplies the restoring action developed in Section~\ref{sec:n5_long_wavelength_tensor}.
+
+A gravitational wave may consequently exist on a locally gravity-neutral State-I background. The static environmental loading may satisfy $\alpha_{\mathrm{G}}=0$, while the directional tensor perturbation remains nonzero: $\mathsf{H}_{ij}^{(\mathrm{GW})}\neq 0$. The background variable $\alpha_{\mathrm{G}}$ and the dynamic tensor amplitudes $h_{+}$ and $h_{\times}$ therefore describe different mechanical sectors. The former determines the locally available Soft-Floor transfer capacity; the latter describes a time-dependent traceless redistribution of that capacity.
+
+\subsection{Distinction from Affine FCC Strain}
+\label{subsec:distinction_affine_strain}
+
+The same bond-dyad basis also appears in an ordinary affine transverse-traceless strain,
 \begin{equation}
-    h_{\mathrm{GW}} = \epsilon_{\mathrm{GW}} \left( \frac{\omega}{c_{\mathrm{E}}} \right) \implies \epsilon_{\mathrm{GW}} = \frac{h_{\mathrm{GW}} c_{\mathrm{E}}}{\omega}
+    \varepsilon_{ij}^{(u),\mathrm{TT}} = \frac{1}{2} \left[ h_{+}(\mathbf{E}_{+})_{ij} + h_{\times}(\mathbf{E}_{\times})_{ij} \right].
+\end{equation}
+Equality of tensor form does not imply equality of constitutive coordinate.
+
+As established in Section~\ref{sec:n3_fcc_bond_dyad}, an affine realization engages the full primitive-cell scaffold modulus:
+\begin{equation}
+    W_{\mathrm{TT}}^{(\mathrm{aff})} = \frac{K_{\mathrm{sh}}^{(\mathrm{micro},0)}}{2} \left( h_{+}^{2} + h_{\times}^{2} \right).
+\end{equation}
+If the collective gravitational-wave tensor were identified directly with this affine Cauchy strain, its effective response would necessarily satisfy $K_{\mathrm{GW}}^{(\mathrm{eff})} = K_{\mathrm{sh}}^{(\mathrm{micro},0)}$, and the microscopic-to-collective ratio would be $\zeta_{\mathrm{GW}}=1$. That identification would describe an ordinary affine FCC shear mode rather than a distinct long-wavelength gravitational-wave branch.
+
+The collective tensor is therefore assigned to the projected directional-transfer coordinate,
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} = \Lambda_{ij,kl}^{(\mathrm{TT})}(\mathbf{s}) \sum_{a=1}^{6} \lambda_{a}^{\circ} (\mathbf{P}_{a})_{kl},
+\end{equation}
+rather than to the local displacement gradient:
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} \neq \varepsilon_{ij}^{(u),\mathrm{TT}}
+\end{equation}
+as a constitutive identity.
+
+The two fields may be dynamically coupled, and a propagating collective state may generate small microscopic scaffold displacements. Their work-conjugate response coefficients and energy functionals, however, belong to different levels of the mechanical hierarchy.
+
+The construction above establishes the collective tensor kinematics but does not yet determine its propagation energy. The next section introduces the leading gapless long-wavelength closure by coupling neighboring cell-centered directional-tension tensors through their spatial mismatch.
+
+\section{Long-Wavelength Tensor-Gradient Dynamics}
+\label{sec:n5_long_wavelength_tensor}
+
+The directional-tension tensor constructed in Section~\ref{sec:n4_collective_directional_tension} is a dimensionless, cell-centered collective coordinate, $\mathsf{H}_{ij}^{(\mathrm{GW})}(\mathbf{R},t)$, defined on the FCC primitive cells labeled by $\mathbf{R}$. Its two independent transverse-traceless components describe correlated redistributions among the six FCC directional-transfer channels.
+
+The bond geometry determines the tensor basis, but it does not by itself determine the energy required to transfer that tensor state between neighboring cells. A separate collective closure is therefore required.
+
+\subsection{Gapless Long-Wavelength Selection}
+\label{subsec:gapless_selection}
+
+A propagating gravitational-wave branch must satisfy
+\begin{equation}
+    \omega(k)\rightarrow 0 \qquad \text{as} \qquad k\rightarrow 0.
+\end{equation}
+A local quadratic term of the form $\frac{1}{2} K_{0} \mathsf{H}_{ij}^{(\mathrm{GW})} \mathsf{H}_{ij}^{(\mathrm{GW})}$ would instead produce a finite zero-wave-number frequency,
+\begin{equation}
+    \omega^{2}(0) = \frac{K_{0}}{I_{\mathrm{TT}}},
+\end{equation}
+where $I_{\mathrm{TT}}$ denotes the corresponding tensor-coordinate inertia. Such a term would describe a gapped local internal mode rather than the required long-wavelength radiative branch.
+
+The selected gravitational-wave sector is therefore the gapless collective sector in which the leading restoring energy depends on the mismatch between neighboring tensor states. A spatially uniform tensor configuration produces no intercell transfer mismatch at the retained order.
+
+This is a constitutive selection of the long-wavelength radiative branch. The complete microscopic parent action may contain additional gapped directional, rotational, phase, or internal tensor modes, but those modes are not identified with the gravitational-wave sector developed here.
+
+\subsection{Discrete FCC Tensor-Transfer Action}
+\label{subsec:discrete_fcc_action}
+
+For each of the six undirected nearest-neighbor FCC links, define the tensor difference
+\begin{equation}
+    \Delta_{a}\mathsf{H}_{ij}(\mathbf{R}) = \mathsf{H}_{ij} \left( \mathbf{R} + d_{\mathrm{nn}}\mathbf{n}_{a} \right) - \mathsf{H}_{ij}(\mathbf{R}).
+\end{equation}
+The minimal quadratic cell action for the symmetric transverse-traceless tensor state is
+\begin{equation}
+    \begin{aligned}
+        S_{\mathrm{TT}}^{(\mathrm{disc})} = \int dt \sum_{\mathbf{R}} \Bigg[ &\frac{1}{2} I_{\mathrm{TT}}^{(\mathrm{cell})} \dot{\mathsf{H}}_{ij}(\mathbf{R}) \dot{\mathsf{H}}_{ij}(\mathbf{R}) \\
+        &- \frac{1}{2} K_{\mathrm{TT}}^{(\mathrm{link})} \sum_{a=1}^{6} \Delta_{a}\mathsf{H}_{ij}(\mathbf{R}) \Delta_{a}\mathsf{H}_{ij}(\mathbf{R}) \Bigg].
+    \end{aligned}
+\end{equation}
+Here $[I_{\mathrm{TT}}^{(\mathrm{cell})}] = \mathrm{kg\,m^{2}}$ and $[K_{\mathrm{TT}}^{(\mathrm{link})}] = \mathrm{J}$. These are collective coefficients of the cell-centered directional-tension coordinate. They are not replacements for the microscopic interface coefficients $\tau_{\mathrm{D}}$ and $\mu_{\mathrm{D}}$, nor are they identical to the primitive-cell affine coefficients $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$ and $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$.
+
+Variation with respect to $\mathsf{H}_{ij}(\mathbf{R})$ gives
+\begin{equation}
+    \begin{aligned}
+        I_{\mathrm{TT}}^{(\mathrm{cell})} \ddot{\mathsf{H}}_{ij}(\mathbf{R}) = K_{\mathrm{TT}}^{(\mathrm{link})} \sum_{a=1}^{6} \Big[ &\mathsf{H}_{ij} \left( \mathbf{R} + d_{\mathrm{nn}}\mathbf{n}_{a} \right) \\
+        &+ \mathsf{H}_{ij} \left( \mathbf{R} - d_{\mathrm{nn}}\mathbf{n}_{a} \right) - 2\mathsf{H}_{ij}(\mathbf{R}) \Big].
+    \end{aligned}
 \end{equation}
 
-\section{Transverse Impedance and Empirical Stiffness ($K_{\mathrm{shear}}$)}
-We substitute this continuum displacement ($\epsilon_{\mathrm{GW}}$) into the classical wave intensity equation, $I = \frac{1}{2} Z \omega^2 \epsilon_{\mathrm{GW}}^2$, to solve for the medium's transverse shear impedance ($Z$):
+For the Bloch form
 \begin{equation}
-    I = \frac{1}{2} Z \omega^2 \left( \frac{h_{\mathrm{GW}} c_{\mathrm{E}}}{\omega} \right)^2 = \frac{1}{2} Z h_{\mathrm{GW}}^2 c_{\mathrm{E}}^2
+    \mathsf{H}_{ij}(\mathbf{R},t) = \mathsf{H}_{ij}^{(0)} e^{i(\mathbf{k}\cdot\mathbf{R}-\omega t)},
 \end{equation}
-Solving for $Z$:
+the minimal collective tensor-transfer closure gives the lattice dispersion
 \begin{equation}
-    Z = \frac{2I}{h_{\mathrm{GW}}^2 c_{\mathrm{E}}^2} \approx \frac{2(1.41 \times 10^{-3})}{(1.0 \times 10^{-21})^2 \cdot (299792458)^2} \approx 3.1377 \times 10^{22} \text{ kg/(m}^2\cdot\text{s)}
+    \omega^{2}(\mathbf{k}) = \frac{ 2K_{\mathrm{TT}}^{(\mathrm{link})} }{ I_{\mathrm{TT}}^{(\mathrm{cell})} } \sum_{a=1}^{6} \left[ 1 - \cos \left( d_{\mathrm{nn}} \mathbf{k}\cdot\mathbf{n}_{a} \right) \right].
 \end{equation}
-In continuum mechanics, the Shear Modulus ($K_{\mathrm{shear}}$) is the product of the mechanical impedance and the wave speed ($K = Z \cdot c_{\mathrm{E}}$):
+Equivalently,
 \begin{equation}
-    K_{\mathrm{shear}} = (3.1377 \times 10^{22}) \cdot (299792458) \approx 9.4065 \times 10^{30} \text{ Pa}
+    \omega^{2}(\mathbf{k}) = \frac{ 4K_{\mathrm{TT}}^{(\mathrm{link})} }{ I_{\mathrm{TT}}^{(\mathrm{cell})} } \sum_{a=1}^{6} \sin^{2} \left( \frac{1}{2} d_{\mathrm{nn}} \mathbf{k}\cdot\mathbf{n}_{a} \right).
+\end{equation}
+This dispersion is exact for the minimal collective link action introduced above. It is not asserted to be the complete finite-wave-number spectrum of the full FCC node, contact, phase, rotational, condensate, and Tension-Column parent dynamics.
+
+The selected collective branch is gapless because $\omega(0)=0$.
+
+\subsection{Long-Wavelength FCC Limit}
+\label{subsec:long_wavelength_fcc_limit}
+
+For $k d_{\mathrm{nn}} \ll 1$, the lattice dispersion becomes
+\begin{equation}
+    \omega^{2}(\mathbf{k}) = \frac{ K_{\mathrm{TT}}^{(\mathrm{link})} d_{\mathrm{nn}}^{2} }{ I_{\mathrm{TT}}^{(\mathrm{cell})} } \sum_{a=1}^{6} (\mathbf{k}\cdot\mathbf{n}_{a})^{2} + \mathcal{O} \left( k^{4}d_{\mathrm{nn}}^{4} \right).
+\end{equation}
+Using the exact FCC second-moment identity $\sum_{a=1}^{6} n_{a}^{i}n_{a}^{j} = 2\delta^{ij}$, one obtains
+\begin{equation}
+    \sum_{a=1}^{6} (\mathbf{k}\cdot\mathbf{n}_{a})^{2} = 2k^{2}.
+\end{equation}
+Therefore,
+\begin{equation}
+    \omega^{2} = \frac{ 2K_{\mathrm{TT}}^{(\mathrm{link})} d_{\mathrm{nn}}^{2} }{ I_{\mathrm{TT}}^{(\mathrm{cell})} } k^{2} + \mathcal{O} \left( k^{4}d_{\mathrm{nn}}^{4} \right).
+\end{equation}
+The gravity-neutral collective tensor speed is consequently
+\begin{equation}
+    c_{\mathrm{TT}}^{2} = \frac{ 2K_{\mathrm{TT}}^{(\mathrm{link})} d_{\mathrm{nn}}^{2} }{ I_{\mathrm{TT}}^{(\mathrm{cell})} }.
 \end{equation}
 
-\section{The Neutron Star Alignment ($\rho_{\mathrm{eff}}$)}
-Because $c_{\mathrm{E}} = \sqrt{K_{\mathrm{shear}}/\rho_{\mathrm{eff}}}$, this $10^{30}$ Pa macroscopic stiffness mathematically dictates the macroscopic effective inertial density ($\rho_{\mathrm{eff}}$) of the active vacuum:
+The collective branch is selected as a long-wavelength tensor sector of the same active State-I causal carrier established in Section~\ref{sec:n2_coherent_carrier}. Its gravity-neutral propagation condition is therefore $c_{\mathrm{TT}}=c_{\mathrm{E}}$, which imposes the coefficient relation
 \begin{equation}
-    \rho_{\mathrm{eff}} = \frac{K_{\mathrm{shear}}}{c_{\mathrm{E}}^2} \approx \frac{9.4065 \times 10^{30}}{(299792458)^2} \approx 1.0466 \times 10^{14} \text{ kg/m}^3
+    \frac{ 2K_{\mathrm{TT}}^{(\mathrm{link})} d_{\mathrm{nn}}^{2} }{ I_{\mathrm{TT}}^{(\mathrm{cell})} } = c_{\mathrm{E}}^{2}.
 \end{equation}
-This establishes a profound mechanical continuity: it exactly aligns the local rigidity and effective inertial density of the active vacuum with the physical properties of a neutron star.
+This relation fixes the ratio of the collective link coefficient to the collective cell inertia. It does not yet fix their common absolute normalization.
 
-\section{Continuum Stability vs. Microscopic Yield}
-While the macroscopic stiffness of the visco-elastic continuum is $K_{\mathrm{shear}} \approx 9.4065 \times 10^{30}$ Pa, the theoretical yield limit of a single microscopic FCC node derived previously is vastly higher ($\tau_{\mathrm{D,bulk}} \approx 2.1803 \times 10^{96}$ Pa). The macroscopic wave stress exerted by GW150914 is only $\sigma_{\mathrm{wave}} = K_{\mathrm{shear}} \cdot h_{\mathrm{GW}} \approx 9.4065 \times 10^9$ Pa. Because the wave stress is nearly 86 orders of magnitude below the structural failure limit ($\sigma_{\mathrm{wave}} \ll \tau_{\mathrm{D,bulk}}$), the gravitational wave propagates smoothly and entirely within the elastic limits of the medium, far below the threshold required to trigger a localized phase transition or geometric lock.
+\subsection{Continuum Tensor-Gradient Action}
+\label{subsec:continuum_tensor_gradient_action}
 
-\section{The Spin-2 Strain Tensor (Linear Elasticity)}
-In Tension Field Theory (TFT), the local active vacuum is an isotropic, visco-elastic continuum. For a '+' polarized transverse shear wave propagating along the z-axis, the strain tensor $\epsilon_{ij}$ observed at Earth is:
+Introduce the continuum coefficients
 \begin{equation}
-    \epsilon_{ij} = \begin{bmatrix}
-    h_{\mathrm{GW}} & 0 & 0 \\
-    0 & -h_{\mathrm{GW}} & 0 \\
-    0 & 0 & 0
-    \end{bmatrix}
+    M_{\mathrm{TT}}^{(0)} \equiv \frac{ I_{\mathrm{TT}}^{(\mathrm{cell})} }{ V_{\mathrm{p}} }, \qquad \text{and} \qquad \mathcal{T}_{\mathrm{TT}}^{(0)} \equiv \frac{ 2K_{\mathrm{TT}}^{(\mathrm{link})} d_{\mathrm{nn}}^{2} }{ V_{\mathrm{p}} }.
 \end{equation}
-Because the medium strongly resists volumetric compression (isochoric shear), the trace of the strain tensor is zero ($\text{tr}(\epsilon) = h_{\mathrm{GW}} - h_{\mathrm{GW}} = 0$). This volume-conservation requirement perfectly mimics the geometric definition of the spin-2 quadrupole tensor required by General Relativity, generated entirely through classical solid-state mechanics.
-
-\section{Stress-Energy Tensor Validation}
-For linear elasticity, the stress tensor $\sigma_{ij}$ relates to strain by $\sigma_{ij} = \lambda \delta_{ij} \text{tr}(\epsilon) + 2\mu \epsilon_{ij}$.
-Because $\text{tr}(\epsilon) = 0$, the first term vanishes. In pure transverse shear, the Lam\'e parameter $\mu$ is exactly equal to the Shear Modulus ($K_{\mathrm{shear}}$).
-Therefore, $\sigma_{ij} = 2K_{\mathrm{shear}} \epsilon_{ij}$. The local gravitational energy density ($u$) is given by:
+Their dimensions are $[M_{\mathrm{TT}}^{(0)}] = \mathrm{kg\,m^{-1}}$ and $[\mathcal{T}_{\mathrm{TT}}^{(0)}] = \mathrm{N}$. The long-wavelength coefficient relation becomes
 \begin{equation}
-    u_{\mathrm{TFT}} = \frac{1}{2} \sigma_{ij} \epsilon_{ij} = 2K_{\mathrm{shear}} h_{\mathrm{GW}}^2
-\end{equation}
-\begin{equation}
-    u_{\mathrm{TFT}} = 2(9.4065 \times 10^{30}) \cdot (1.0 \times 10^{-21})^2 \approx 1.8813 \times 10^{-11} \text{ J/m}^3
-\end{equation}
-Standard General Relativity (using the weak-field metric approximation for GW150914) calculates this energy density as $\approx 5.0 \times 10^{-11}$ J/m$^3$. The TFT classical solid-state tensor calculation directly matches the GR metric equation to within a single order of magnitude, proving the mechanical formulation is observationally equivalent to the geometric one.
-
-\section{Dynamic-Static Field Unification}
-In earlier chapters, static acceleration was derived from the tension gradient of the SGF ($g = -\frac{1}{\mu_{\mathrm{D}}} \frac{\mathrm{d}\tau_{\mathrm{M}}}{\mathrm{d}r}$), and structural strain was established as $\alpha_{\mathrm{G}} = \frac{GM}{c_{\mathrm{E}}^2 r}$.
-Applying classical Hooke's Law to the macroscopic continuum, the static radial stress ($\sigma(r)$) is the product of the continuum shear stiffness and the localized spatial strain ($\alpha_{\mathrm{G}}$):
-\begin{equation}
-    \sigma(r) = K_{\mathrm{shear}} \cdot \alpha_{\mathrm{G}}(r) = \frac{K_{\mathrm{shear}} GM}{c_{\mathrm{E}}^2 r}
-\end{equation}
-The macroscopic acceleration ($g$) induced by this stress gradient is equal to its magnitude divided by the effective inertial density ($\rho_{\mathrm{eff}}$):
-\begin{equation}
-    g(r) = \frac{1}{\rho_{\mathrm{eff}}} \left| \frac{\mathrm{d}\sigma}{\mathrm{d}r} \right| = \frac{K_{\mathrm{shear}} GM}{\rho_{\mathrm{eff}} c_{\mathrm{E}}^2 r^2}
-\end{equation}
-Because the visco-elastic wave relation guarantees that $K_{\mathrm{shear}} / \rho_{\mathrm{eff}} = c_{\mathrm{E}}^2$, substituting this into the equation yields:
-\begin{equation}
-    g(r) = \frac{c_{\mathrm{E}}^2 \cdot GM}{c_{\mathrm{E}}^2 r^2} = \frac{GM}{r^2}
+    \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{ M_{\mathrm{TT}}^{(0)} } = c_{\mathrm{E}}^{2}.
 \end{equation}
 
-\vspace{0.5em}
-\noindent\textbf{Conclusion:} The exact empirical stiffness ($\approx 10^{30}$ Pa) and density ($\approx 10^{14}$ kg/m$^3$) that transmit dynamic gravitational waves natively recover the static Newtonian acceleration. The dynamic wave and the static field are unified mechanical expressions of the exact same visco-elastic continuum.
+The corresponding continuum action is
+\begin{equation}
+    S_{\mathrm{TT}}^{(2)} = \frac{1}{2} \int \left[ M_{\mathrm{TT}}^{(0)} \dot{\mathsf{H}}_{ij} \dot{\mathsf{H}}_{ij} - \mathcal{T}_{\mathrm{TT}}^{(0)} \partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij} \right] d^{3}x\,dt.
+\end{equation}
+Using $M_{\mathrm{TT}}^{(0)} = \mathcal{T}_{\mathrm{TT}}^{(0)} / c_{\mathrm{E}}^{2}$, this may be written
+\begin{equation}
+    S_{\mathrm{TT}}^{(2)} = \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{2} \int \left[ \frac{1}{c_{\mathrm{E}}^{2}} \dot{\mathsf{H}}_{ij} \dot{\mathsf{H}}_{ij} - \partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij} \right] d^{3}x\,dt.
+\end{equation}
+The action is restricted to the symmetric transverse-traceless sector:
+\begin{equation}
+    \mathsf{H}_{ij} = \mathsf{H}_{ji}, \qquad \partial_{i}\mathsf{H}_{ij} = 0, \qquad \mathsf{H}_{ii} = 0.
+\end{equation}
+Variation gives the source-free collective wave equation
+\begin{equation}
+    \frac{1}{c_{\mathrm{E}}^{2}} \ddot{\mathsf{H}}_{ij} - \nabla^{2}\mathsf{H}_{ij} = 0.
+\end{equation}
+The two amplitudes $h_{+}$ and $h_{\times}$ therefore obey the same gravity-neutral dispersion, $\omega^{2} = c_{\mathrm{E}}^{2}k^{2}$, at leading long wavelength.
+
+The coefficient $\mathcal{T}_{\mathrm{TT}}^{(0)}$ is a force-dimensioned collective tensor-gradient coefficient. It is not the microscopic surface tension $\tau_{\mathrm{D}}$, the primitive-cell affine modulus $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$, or the transverse-traceless source stress tensor introduced later in this appendix.
+
+\subsection{Propagation Through a Gravitationally Loaded Background}
+\label{subsec:propagation_gravity_background}
+
+The coefficients above refer to the gravity-neutral State-I background. Let
+\begin{equation}
+    C(\mathbf{x}) = \left[ 1-\alpha_{\mathrm{G}}(\mathbf{x}) \right]^{2}
+\end{equation}
+be the completed endpoint-transfer factor established in \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.
+
+The endpoint-transfer construction is established there for the selected coherent State-I transfer coordinate. Conditional on the collective transverse-traceless coordinate inheriting the same completed-transfer Jacobian, its referred collective line inertia becomes
+\begin{equation}
+    M_{\mathrm{TT}}(\alpha_{\mathrm{G}}) = \frac{ M_{\mathrm{TT}}^{(0)} }{ C^{2} } = \frac{ M_{\mathrm{TT}}^{(0)} }{ \left( 1-\alpha_{\mathrm{G}} \right)^{4} }.
+\end{equation}
+At this constitutive order, the local tensor-gradient coefficient retains its gravity-neutral restoring normalization:
+\begin{equation}
+    \mathcal{T}_{\mathrm{TT}}(\alpha_{\mathrm{G}}) = \mathcal{T}_{\mathrm{TT}}^{(0)}.
+\end{equation}
+The locally completed propagation speed is then
+\begin{equation}
+    c_{\mathrm{GW}}^{2} = \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{ M_{\mathrm{TT}}(\alpha_{\mathrm{G}}) } = c_{\mathrm{E}}^{2}C^{2},
+\end{equation}
+and therefore
+\begin{equation}
+    c_{\mathrm{GW}}(\mathbf{x}) = c_{\mathrm{E}} \left[ 1-\alpha_{\mathrm{G}}(\mathbf{x}) \right]^{2}.
+\end{equation}
+
+This loaded-background relation is the selected endpoint-inheritance closure for the collective tensor branch. Its derivation directly from the full directional-tension parent action remains a microscopic completion requirement.
+
+In the gravity-neutral limit, $\alpha_{\mathrm{G}}\to 0$, the nonzero tensor perturbation propagates at $c_{\mathrm{GW}}\to c_{\mathrm{E}}$. The condition $\alpha_{\mathrm{G}}=0$ refers to the absence of static background gravitational loading; it does not require $\mathsf{H}_{ij}^{(\mathrm{GW})}=0$.
+
+\subsection{Role of the Hard Floor}
+\label{subsec:role_of_hard_floor}
+
+The phase-locked Hard Floor supplies the structural reference and record associated with the State-I configuration, but it does not provide the finite propagating energy of the tensor branch.
+
+A fixed local coupling between the collective tensor and an immobile Hard-Floor value would generate a term proportional to $\mathsf{H}_{ij}\mathsf{H}_{ij}$, and would therefore produce a gapped rather than gapless spectrum. In the ideal record limit, the Hard-Floor state follows the completed structural configuration as an auxiliary constraint record without contributing an independently additive finite tensor inertia or tensor-gradient stiffness.
+
+Accordingly:
+\begin{itemize}
+    \item \textbf{Hard Floor} = reference and record.
+    \item \textbf{State-I Soft Floor} = finite-speed tensor carrier.
+\end{itemize}
+
+The coefficient $\mathcal{T}_{\mathrm{TT}}^{(0)}$ introduced here is therefore a collective State-I tensor-gradient coefficient. Its absolute value has not been calibrated from gravitational-wave data and has not been identified with an $8\pi$ propagation geometry. The following section fixes its long-wavelength normalization from the independently established weak-field static-to-tensor projection of TFT.
+
+\section{Static-to-Tensor Projection Normalization}
+\label{sec:n6_static_tensor_normalization}
+
+Section~\ref{sec:n5_long_wavelength_tensor} establishes the form of the gapless collective tensor-gradient action and fixes the ratio
+\begin{equation}
+    \frac{\mathcal{T}_{\mathrm{TT}}^{(0)}}{M_{\mathrm{TT}}^{(0)}} = c_{\mathrm{E}}^{2}.
+\end{equation}
+That result determines the gravity-neutral propagation speed but does not determine the common absolute normalization of the collective tensor stiffness and inertia.
+
+The normalization must not be obtained from a gravitational-wave event, because doing so would use an observed source model to define the vacuum response that is subsequently invoked to interpret the same event. It must instead follow from an independently established sector of TFT.
+
+The required normalization is supplied by the weak-field static gravitational response. The static sector fixes the scalar source strength through spherical tension-flux conservation, while the effective temporal response fixes the conversion from the scalar potential to the dimensionless symmetric tensor coordinate. The resulting tensor projection coefficient is then inherited by the transverse-traceless sector under the minimal single-tensor-sector closure stated below.
+
+\subsection{Weak-Field Static Source Normalization}
+\label{subsec:n6_static_source_normalization}
+
+The specific tension potential of the active Soft Floor is denoted by $\Phi_{\tau}(\mathbf{x})$, with dimensions $[\Phi_{\tau}] = \mathrm{m^{2}\,s^{-2}}$. For a localized static source, the independently established tension-flux law is
+\begin{equation}
+    \oint_{\partial V} \nabla\Phi_{\tau} \cdot d\mathbf{A} = 4\pi G M(V),
+    \label{eq:n6_static_flux}
+\end{equation}
+where
+\begin{equation}
+    M(V) = \int_{V} \rho(\mathbf{x})\,d^{3}x.
+\end{equation}
+
+Applying the divergence theorem to Equation~\eqref{eq:n6_static_flux} gives
+\begin{equation}
+    \int_{V} \nabla^{2}\Phi_{\tau}\,d^{3}x = 4\pi G \int_{V} \rho\,d^{3}x.
+\end{equation}
+Because the volume is arbitrary, the local weak-field static equation is
+\begin{equation}
+    \nabla^{2}\Phi_{\tau} = 4\pi G\rho.
+    \label{eq:n6_static_poisson}
+\end{equation}
+
+The factor $4\pi$ in Equation~\eqref{eq:n6_static_poisson} has an unambiguous geometric origin. It is the spherical flux normalization of a localized three-dimensional source. It is not a constitutive coefficient of free wave propagation.
+
+For an isolated point source,
+\begin{equation}
+    \Phi_{\tau}(R) = -\frac{GM}{R},
+\end{equation}
+and the structural gravitational coupling is
+\begin{equation}
+    \alpha_{\mathrm{G}} = \frac{GM}{Rc_{\mathrm{E}}^{2}} = -\frac{\Phi_{\tau}}{c_{\mathrm{E}}^{2}}.
+    \label{eq:n6_alpha_phi_relation}
+\end{equation}
+
+Equation~\eqref{eq:n6_static_poisson} is therefore the local differential representation of the same restorative tension field that produces the inverse-square acceleration law. It is established independently of the gravitational-wave construction.
+
+\subsection{Dimensionless Temporal Tensor Response}
+\label{subsec:n6_temporal_tensor_response}
+
+The effective temporal response of the gravitationally loaded State-I vacuum is represented by
+\begin{equation}
+    g_{tt}^{(\tau)} = - \left( 1-\alpha_{\mathrm{G}} \right)^{2} c_{\mathrm{E}}^{2}.
+    \label{eq:n6_effective_temporal_response}
+\end{equation}
+The gravity-neutral reference value is $g_{tt}^{(0)} = -c_{\mathrm{E}}^{2}$.
+
+Define the dimensionless temporal departure from the gravity-neutral State-I reference by
+\begin{equation}
+    \mathsf{H}_{00}^{(\tau)} \equiv \frac{g_{tt}^{(\tau)} - g_{tt}^{(0)}}{c_{\mathrm{E}}^{2}}.
+    \label{eq:n6_h00_definition}
+\end{equation}
+Using Equation~\eqref{eq:n6_effective_temporal_response},
+\begin{equation}
+    \mathsf{H}_{00}^{(\tau)} = 1 - \left( 1-\alpha_{\mathrm{G}} \right)^{2},
+\end{equation}
+and therefore
+\begin{equation}
+    \mathsf{H}_{00}^{(\tau)} = 2\alpha_{\mathrm{G}} - \alpha_{\mathrm{G}}^{2}.
+    \label{eq:n6_h00_exact}
+\end{equation}
+
+In the weak-field limit, $\alpha_{\mathrm{G}} \ll 1$, the leading response is
+\begin{equation}
+    \mathsf{H}_{00}^{(\tau)} = 2\alpha_{\mathrm{G}} + \mathcal{O}\left(\alpha_{\mathrm{G}}^{2}\right).
+\end{equation}
+Using Equation~\eqref{eq:n6_alpha_phi_relation},
+\begin{equation}
+    \mathsf{H}_{00}^{(\tau)} = - \frac{2\Phi_{\tau}}{c_{\mathrm{E}}^{2}} + \mathcal{O}\left( \frac{\Phi_{\tau}^{2}}{c_{\mathrm{E}}^{4}} \right).
+    \label{eq:n6_h00_weak}
+\end{equation}
+
+The factor $2$ in Equation~\eqref{eq:n6_h00_weak} is not introduced through spherical geometry. It arises from the two-endpoint temporal response $( 1-\alpha_{\mathrm{G}} )^{2}$ of the loaded State-I transfer coordinate.
+
+Applying the static wave operator to Equation~\eqref{eq:n6_h00_weak} gives
+\begin{equation}
+    - \nabla^{2} \mathsf{H}_{00}^{(\tau)} = \frac{2}{c_{\mathrm{E}}^{2}} \nabla^{2}\Phi_{\tau}.
+\end{equation}
+Using Equation~\eqref{eq:n6_static_poisson},
+\begin{equation}
+    - \nabla^{2} \mathsf{H}_{00}^{(\tau)} = \frac{8\pi G}{c_{\mathrm{E}}^{2}} \rho.
+\end{equation}
+
+In the local weak-field source frame, $T_{00}^{(\mathrm{src})} \simeq \rho c_{\mathrm{E}}^{2}$. Hence,
+\begin{equation}
+    - \nabla^{2} \mathsf{H}_{00}^{(\tau)} = \frac{8\pi G}{c_{\mathrm{E}}^{4}} T_{00}^{(\mathrm{src})}.
+    \label{eq:n6_h00_source_equation}
+\end{equation}
+
+Introducing the State-I wave operator
+\begin{equation}
+    \Box_{\mathrm{E}} \equiv \frac{1}{c_{\mathrm{E}}^{2}} \frac{\partial^{2}}{\partial t^{2}} - \nabla^{2},
+\end{equation}
+the static result may be written
+\begin{equation}
+    \Box_{\mathrm{E}} \mathsf{H}_{00}^{(\tau)} = \frac{8\pi G}{c_{\mathrm{E}}^{4}} T_{00}^{(\mathrm{src})}
+\end{equation}
+when the temporal derivatives vanish.
+
+The transverse-traceless tensor-source normalization is therefore
+\begin{equation}
+    \kappa_{\mathrm{TT}} \equiv \left.\kappa\right|_{\mathrm{TT}} = 8\pi.
+    \label{eq:n6_kappa_tensor}
+\end{equation}
+
+This result has the mechanical decomposition
+\begin{equation}
+    8\pi = \underbrace{4\pi}_{\text{spherical scalar-flux normalization}} \times \underbrace{2}_{\text{dimensionless temporal tensor response}}.
+    \label{eq:n6_8pi_decomposition}
+\end{equation}
+
+The quantity $8\pi$ is therefore not interpreted as the area, solid angle, or physical shape of the propagating vacuum. It is the source-to-tensor normalization produced when the scalar restorative potential is represented as a dimensionless symmetric response of the State-I continuum.
+
+\subsection{Minimal Single-Tensor-Sector Closure}
+\label{subsec:n6_single_tensor_sector}
+
+Equation~\eqref{eq:n6_h00_source_equation} fixes the temporal component of the weak-field symmetric response. The spatial transverse-traceless field developed in Sections~\ref{sec:n3_fcc_bond_dyad}--\ref{sec:n5_long_wavelength_tensor} is a different projection of the same long-wavelength State-I directional-tension architecture.
+
+The minimal constitutive unification adopted here is that the temporal weak-field response and the spatial transverse-traceless response share one long-wavelength symmetric tensor-source normalization:
+\begin{equation}
+    \kappa_{\mathrm{TT}} = 8\pi.
+    \label{eq:n6_single_sector_closure}
+\end{equation}
+Under this closure, the static temporal sector and the dynamic radiative sector are not treated as unrelated effective fields having independently adjustable source coefficients.
+
+This is a long-wavelength constitutive identification. It does not yet constitute a derivation of the complete symmetric tensor action from the full finite-wave-number FCC node, contact, rotational, phase, condensate, and Tension-Column parent action. That microscopic derivation remains a completion requirement.
+
+The same value is also developed through the topological tensor-projection construction of \hyperref[app:8pi_origin]{Appendix~\ref*{app:8pi_origin}}. The present derivation does not import the value $8\pi$ from that appendix as an assumption. Instead, it obtains the normalization independently from the static tension-flux law and the weak-field temporal response. Agreement with \hyperref[app:8pi_origin]{Appendix~\ref*{app:8pi_origin}} therefore provides a cross-sector consistency check.
+
+\subsection{Absolute Tensor-Gradient Normalization}
+\label{subsec:n6_absolute_tensor_normalization}
+
+The absolute TFT structural-force scale is
+\begin{equation}
+    F_{\mathrm{S}} = \frac{c_{\mathrm{E}}^{4}}{G}.
+\end{equation}
+Define the transverse-traceless source-projection coefficient by
+\begin{equation}
+    \frac{1}{\mathcal{T}_{\mathrm{TT}}^{(0)}} \equiv \frac{\kappa_{\mathrm{TT}}}{F_{\mathrm{S}}}.
+    \label{eq:n6_tensor_projection_definition}
+\end{equation}
+Using $\kappa_{\mathrm{TT}} = 8\pi$, one obtains
+\begin{equation}
+    \mathcal{T}_{\mathrm{TT}}^{(0)} = \frac{F_{\mathrm{S}}}{8\pi} = \frac{c_{\mathrm{E}}^{4}}{8\pi G}.
+    \label{eq:n6_TTT_normalization}
+\end{equation}
+
+The corresponding collective line inertia is fixed by the gravity-neutral propagation relation derived in Section~\ref{sec:n5_long_wavelength_tensor}:
+\begin{equation}
+    M_{\mathrm{TT}}^{(0)} = \frac{\mathcal{T}_{\mathrm{TT}}^{(0)}}{c_{\mathrm{E}}^{2}}.
+\end{equation}
+Therefore,
+\begin{equation}
+    M_{\mathrm{TT}}^{(0)} = \frac{c_{\mathrm{E}}^{2}}{8\pi G}.
+    \label{eq:n6_MTT_normalization}
+\end{equation}
+
+The dimensions are $[\mathcal{T}_{\mathrm{TT}}^{(0)}] = \mathrm{N}$ and $[M_{\mathrm{TT}}^{(0)}] = \mathrm{kg\,m^{-1}}$. Their ratio remains $\mathcal{T}_{\mathrm{TT}}^{(0)} / M_{\mathrm{TT}}^{(0)} = c_{\mathrm{E}}^{2}$.
+
+The normalization in Equation~\eqref{eq:n6_TTT_normalization} must not be reversed. The collective tensor-gradient coefficient is $\mathcal{T}_{\mathrm{TT}}^{(0)} = F_{\mathrm{S}} / (8\pi)$, not $8\pi F_{\mathrm{S}}$. The inverse coefficient is what multiplies the source:
+\begin{equation}
+    \frac{1}{\mathcal{T}_{\mathrm{TT}}^{(0)}} = \frac{8\pi G}{c_{\mathrm{E}}^{4}}.
+\end{equation}
+
+\subsection{Normalized Source-Coupled Tensor Action}
+\label{subsec:n6_source_coupled_action}
+
+Let
+\begin{equation}
+    T_{ij}^{(\mathrm{TT})} = \Lambda_{ij,kl}^{(\mathrm{TT})} T_{kl}^{(\mathrm{src})}
+\end{equation}
+denote the transverse-traceless projection of the source stress tensor for the selected radiation direction.
+
+Because the observable tensor strain is normalized by $h_{ij}^{(\mathrm{TT})} = 2\mathsf{H}_{ij}^{(\mathrm{GW})}$, the standard symmetric work-conjugate interaction $\frac{1}{2} h_{ij}^{(\mathrm{TT})} T_{ij}^{(\mathrm{TT})}$ is equivalently $\mathsf{H}_{ij}^{(\mathrm{GW})} T_{ij}^{(\mathrm{TT})}$. No additional dimensionless source-coupling constant is required.
+
+The normalized long-wavelength source-coupled action is therefore
+\begin{equation}
+    \begin{aligned}
+        S_{\mathrm{TT}}^{(2,\mathrm{src})} &= \int \Bigg\{ \frac{c_{\mathrm{E}}^{4}}{16\pi G} \left[ \frac{1}{c_{\mathrm{E}}^{2}} \dot{\mathsf{H}}_{ij} \dot{\mathsf{H}}_{ij} - \partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij} \right] \\
+        &\quad + \mathsf{H}_{ij} T_{ij}^{(\mathrm{TT})} \Bigg\} d^{3}x\,dt.
+    \end{aligned}
+    \label{eq:n6_normalized_source_action}
+\end{equation}
+
+Variation with respect to the transverse-traceless field gives
+\begin{equation}
+    \frac{1}{c_{\mathrm{E}}^{2}} \ddot{\mathsf{H}}_{ij} - \nabla^{2}\mathsf{H}_{ij} = \frac{8\pi G}{c_{\mathrm{E}}^{4}} T_{ij}^{(\mathrm{TT})}.
+    \label{eq:n6_sourced_tensor_equation}
+\end{equation}
+
+The overall sign of the source term may equivalently be reversed by adopting the opposite sign convention for the interaction term or for the definition of the source stress. The physical normalization is the magnitude $8\pi G / c_{\mathrm{E}}^{4}$.
+
+In a source-free region, $T_{ij}^{(\mathrm{TT})} = 0$, and Equation~\eqref{eq:n6_sourced_tensor_equation} reduces to
+\begin{equation}
+    \frac{1}{c_{\mathrm{E}}^{2}} \ddot{\mathsf{H}}_{ij} - \nabla^{2}\mathsf{H}_{ij} = 0.
+    \label{eq:n6_source_free_tensor_equation}
+\end{equation}
+
+Thus the factor $8\pi$ fixes the source-to-tensor conversion but does not appear as a geometry, index, or additional impedance in free propagation. Once the tensor state has left the source region, its gravity-neutral speed remains determined solely by $\mathcal{T}_{\mathrm{TT}}^{(0)} / M_{\mathrm{TT}}^{(0)} = c_{\mathrm{E}}^{2}$.
+
+\subsection{Constitutive Status of the Normalization}
+\label{subsec:n6_constitutive_status}
+
+The normalization established in this section follows the chain:
+\begin{itemize}
+    \item static tension-flux conservation $\longrightarrow 4\pi G\rho$,
+    \item two-endpoint temporal response $\longrightarrow - \frac{2\Phi_{\tau}}{c_{\mathrm{E}}^{2}}$,
+    \item and therefore long-wavelength TT source projection $\longrightarrow \frac{8\pi G}{c_{\mathrm{E}}^{4}}$.
+\end{itemize}
+
+Consequently,
+\begin{equation}
+    \mathcal{T}_{\mathrm{TT}}^{(0)} = \frac{c_{\mathrm{E}}^{4}}{8\pi G}, \qquad M_{\mathrm{TT}}^{(0)} = \frac{c_{\mathrm{E}}^{2}}{8\pi G}.
+\end{equation}
+
+No gravitational-wave event has been used to determine either coefficient. The normalization is inherited from the independently established static weak-field sector under the minimal single-tensor-sector closure.
+
+The remaining microscopic problem is not the numerical value of the long-wavelength normalization. It is the derivation of the collective directional-tension action itself from the complete FCC contact, phase, rotational, condensate, and Tension-Column parent dynamics, together with demonstration that the resulting microscopic eigenbranch reduces to Equation~\eqref{eq:n6_sourced_tensor_equation} in the long-wavelength limit.
+
+With the absolute tensor-gradient normalization fixed, the next section derives the wavelength- and frequency-dependent effective gravitational-wave response and the microscopic-to-collective spectral ratio $\zeta_{\mathrm{GW}}(k)$.
+
+\section{Spectral Gravitational-Wave Response and the Derived Cross-Scale Ratio}
+\label{sec:n7_spectral_response}
+
+Section~\ref{sec:n6_static_tensor_normalization} fixes the absolute gravity-neutral tensor-gradient coefficient and its conjugate collective line inertia:
+\begin{equation}
+    \mathcal{T}_{\mathrm{TT}}^{(0)} = \frac{c_{\mathrm{E}}^{4}}{8\pi G}, \qquad \text{and} \qquad M_{\mathrm{TT}}^{(0)} = \frac{c_{\mathrm{E}}^{2}}{8\pi G}.
+\end{equation}
+Their ratio gives $\mathcal{T}_{\mathrm{TT}}^{(0)} / M_{\mathrm{TT}}^{(0)} = c_{\mathrm{E}}^{2}$, while their common normalization is inherited from the independently established weak-field static-to-tensor projection.
+
+The collective gravitational-wave response is not governed by a local Hookean term proportional to $\mathsf{H}_{ij}^{(\mathrm{GW})} \mathsf{H}_{ij}^{(\mathrm{GW})}$. Its leading restoring energy is instead governed by the tensor gradient. Consequently, any pressure-dimensioned coefficient assigned to a Fourier component of the gravitational-wave field must depend on wave number. It is a spectral representation of the tensor-gradient action rather than a universal equilibrium modulus of the vacuum.
+
+\subsection{Fourier-Mode Tensor Response}
+\label{subsec:n7_fourier_response}
+
+Consider a gravity-neutral transverse-traceless Fourier mode, $\mathsf{H}_{ij}^{(\mathrm{GW})} = \widetilde{\mathsf{H}}_{ij} e^{i(\mathbf{k}\cdot\mathbf{x}-\omega t)}$, with $k^{i}\widetilde{\mathsf{H}}_{ij} = 0$, and $\widetilde{\mathsf{H}}_{ii} = 0$. The source-free field equation derived in Section~\ref{sec:n6_static_tensor_normalization} gives
+\begin{equation}
+    \omega^{2} = c_{\mathrm{E}}^{2}k^{2}.
+    \label{eq:n7_gravity_neutral_dispersion}
+\end{equation}
+
+Using the polarization normalization established in Section~\ref{sec:n3_fcc_bond_dyad},
+\begin{equation}
+    \widetilde{\mathsf{H}}_{ij} = \frac{1}{2} \left[ \widetilde{h}_{+} (\mathbf{E}_{+})_{ij} + \widetilde{h}_{\times} (\mathbf{E}_{\times})_{ij} \right],
+\end{equation}
+one has
+\begin{equation}
+    \widetilde{\mathsf{H}}_{ij}^{*} \widetilde{\mathsf{H}}_{ij} = \frac{1}{2} \left( |\widetilde{h}_{+}|^{2} + |\widetilde{h}_{\times}|^{2} \right).
+    \label{eq:n7_tensor_norm}
+\end{equation}
+
+For a Fourier component, the tensor-gradient contribution to the quadratic energy density is
+\begin{equation}
+    u_{\nabla}(k) = \frac{1}{2} \mathcal{T}_{\mathrm{TT}}^{(0)} k^{2} \widetilde{\mathsf{H}}_{ij}^{*} \widetilde{\mathsf{H}}_{ij}.
+\end{equation}
+Using Equation~\eqref{eq:n7_tensor_norm},
+\begin{equation}
+    u_{\nabla}(k) = \frac{1}{4} \mathcal{T}_{\mathrm{TT}}^{(0)} k^{2} \left( |\widetilde{h}_{+}|^{2} + |\widetilde{h}_{\times}|^{2} \right).
+    \label{eq:n7_gradient_energy}
+\end{equation}
+
+Define the effective spectral gravitational-wave stiffness by the work-conjugate quadratic convention
+\begin{equation}
+    u_{\nabla}(k) \equiv \frac{1}{2} K_{\mathrm{GW}}^{(\mathrm{eff})}(k) \left( |\widetilde{h}_{+}|^{2} + |\widetilde{h}_{\times}|^{2} \right).
+    \label{eq:n7_effective_stiffness_definition}
+\end{equation}
+Comparison with Equation~\eqref{eq:n7_gradient_energy} gives
+\begin{equation}
+    K_{\mathrm{GW}}^{(\mathrm{eff})}(k) = \frac{1}{2} \mathcal{T}_{\mathrm{TT}}^{(0)} k^{2}.
+    \label{eq:n7_effective_stiffness_general}
+\end{equation}
+
+Substituting the absolute tensor-gradient normalization, $\mathcal{T}_{\mathrm{TT}}^{(0)} = c_{\mathrm{E}}^{4} / (8\pi G)$, yields
+\begin{equation}
+    K_{\mathrm{GW}}^{(\mathrm{eff})}(k) = \frac{c_{\mathrm{E}}^{4}k^{2}}{16\pi G}.
+    \label{eq:n7_effective_stiffness_k}
+\end{equation}
+
+The dimensions are $[K_{\mathrm{GW}}^{(\mathrm{eff})}] = \mathrm{Pa}$. This pressure dimension does not make $K_{\mathrm{GW}}^{(\mathrm{eff})}(k)$ an intrinsic local material modulus. It is the pressure-equivalent spectral coefficient obtained when the force-dimensioned tensor-gradient action is evaluated on a mode of wave number $k$.
+
+\subsection{Frequency-Domain Form}
+\label{subsec:n7_frequency_response}
+
+In the gravity-neutral State-I background, $k = \omega/c_{\mathrm{E}}$, so Equation~\eqref{eq:n7_effective_stiffness_k} becomes
+\begin{equation}
+    K_{\mathrm{GW}}^{(\mathrm{eff})}(\omega) = \frac{c_{\mathrm{E}}^{2}\omega^{2}}{16\pi G}.
+    \label{eq:n7_effective_stiffness_omega}
+\end{equation}
+Using $\omega = 2\pi f$, the cyclic-frequency representation is
+\begin{equation}
+    K_{\mathrm{GW}}^{(\mathrm{eff})}(f) = \frac{\pi c_{\mathrm{E}}^{2}f^{2}}{4G}.
+    \label{eq:n7_effective_stiffness_f}
+\end{equation}
+
+The quadratic frequency dependence, $K_{\mathrm{GW}}^{(\mathrm{eff})} \propto \omega^{2} \propto f^{2}$, is a direct consequence of the gradient-controlled collective action. It does not represent ordinary material dispersion introduced phenomenologically. It follows because the effective pressure-dimensioned response is obtained from $\partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij} \longrightarrow k^{2} \mathsf{H}_{ij} \mathsf{H}_{ij}$ for a Fourier mode.
+
+\subsection{Equivalent Continuum Inertia and Impedance}
+\label{subsec:n7_equivalent_continuum}
+
+A pressure-dimensioned stiffness may be represented in the equivalent ordinary-wave form $K_{\mathrm{GW}}^{(\mathrm{eff})} = \rho_{\mathrm{GW}}^{(\mathrm{eff})} c_{\mathrm{E}}^{2}$. This defines the spectral equivalent continuum inertia density
+\begin{equation}
+    \rho_{\mathrm{GW}}^{(\mathrm{eff})}(k) \equiv \frac{K_{\mathrm{GW}}^{(\mathrm{eff})}(k)}{c_{\mathrm{E}}^{2}}.
+    \label{eq:n7_effective_density_definition}
+\end{equation}
+Using Equation~\eqref{eq:n7_effective_stiffness_k},
+\begin{equation}
+    \rho_{\mathrm{GW}}^{(\mathrm{eff})}(k) = \frac{c_{\mathrm{E}}^{2}k^{2}}{16\pi G}.
+    \label{eq:n7_effective_density_k}
+\end{equation}
+Equivalently,
+\begin{equation}
+    \rho_{\mathrm{GW}}^{(\mathrm{eff})}(\omega) = \frac{\omega^{2}}{16\pi G}.
+    \label{eq:n7_effective_density_omega}
+\end{equation}
+In terms of cyclic frequency,
+\begin{equation}
+    \rho_{\mathrm{GW}}^{(\mathrm{eff})}(f) = \frac{\pi f^{2}}{4G}.
+    \label{eq:n7_effective_density_f}
+\end{equation}
+
+The corresponding spectral impedance is defined by $Z_{\mathrm{GW}}^{(\mathrm{eff})} \equiv \sqrt{ K_{\mathrm{GW}}^{(\mathrm{eff})} \rho_{\mathrm{GW}}^{(\mathrm{eff})} }$. Because $K_{\mathrm{GW}}^{(\mathrm{eff})} = \rho_{\mathrm{GW}}^{(\mathrm{eff})} c_{\mathrm{E}}^{2}$, one obtains $Z_{\mathrm{GW}}^{(\mathrm{eff})}(k) = K_{\mathrm{GW}}^{(\mathrm{eff})}(k)/c_{\mathrm{E}}$. Therefore,
+\begin{equation}
+    Z_{\mathrm{GW}}^{(\mathrm{eff})}(k) = \frac{c_{\mathrm{E}}^{3}k^{2}}{16\pi G}.
+    \label{eq:n7_effective_impedance_k}
+\end{equation}
+Equivalently,
+\begin{equation}
+    Z_{\mathrm{GW}}^{(\mathrm{eff})}(\omega) = \frac{c_{\mathrm{E}}\omega^{2}}{16\pi G},
+    \label{eq:n7_effective_impedance_omega}
+\end{equation}
+and
+\begin{equation}
+    Z_{\mathrm{GW}}^{(\mathrm{eff})}(f) = \frac{\pi c_{\mathrm{E}}f^{2}}{4G}.
+    \label{eq:n7_effective_impedance_f}
+\end{equation}
+
+The dimensions are $[\rho_{\mathrm{GW}}^{(\mathrm{eff})}] = \mathrm{kg\,m^{-3}}$, and $[Z_{\mathrm{GW}}^{(\mathrm{eff})}] = \mathrm{kg\,m^{-2}\,s^{-1}}$.
+
+The quantity $\rho_{\mathrm{GW}}^{(\mathrm{eff})}(k)$ must remain distinct from both $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$ and $M_{\mathrm{TT}}^{(0)}$. The first is the primitive-cell-averaged density of the microscopic FCC scaffold, the second is the force-conjugate collective line inertia appearing directly in the tensor action, and the third is a pressure-equivalent spectral density inferred from the Fourier-mode response. They have different dimensional and constitutive meanings.
+
+\subsection{Derived Microscopic-to-Collective Response Ratio}
+\label{subsec:n7_derived_zeta}
+
+The microscopic scaffold coefficient established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and summarized in Section~\ref{sec:n1_microscopic_scaffold_baseline} is
+\begin{equation}
+    K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \frac{A_{\mathrm{ct}}^{(\mathrm{modal})}}{V_{\mathrm{p}}} \tau_{\mathrm{D}},
+    \label{eq:n7_micro_scaffold_start}
+\end{equation}
+with $A_{\mathrm{ct}}^{(\mathrm{modal})} = 2\pi\ell_{\mathrm{S}}^{2}$, $V_{\mathrm{p}} = 4\sqrt{2}\,r_{\mathrm{D}}^{3}$, and $\tau_{\mathrm{D}} = F_{\mathrm{S}}/r_{\mathrm{D}}$. Substitution gives
+\begin{equation}
+    K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \frac{2\pi\ell_{\mathrm{S}}^{2}}{4\sqrt{2}\,r_{\mathrm{D}}^{3}} \frac{F_{\mathrm{S}}}{r_{\mathrm{D}}},
+\end{equation}
+and therefore
+\begin{equation}
+    K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \frac{\pi}{2\sqrt{2}} F_{\mathrm{S}} \frac{\ell_{\mathrm{S}}^{2}}{r_{\mathrm{D}}^{4}}.
+    \label{eq:n7_micro_scaffold_force_form}
+\end{equation}
+
+Using $F_{\mathrm{S}} = c_{\mathrm{E}}^{4}/G$, the spectral gravitational-wave coefficient may be written
+\begin{equation}
+    K_{\mathrm{GW}}^{(\mathrm{eff})}(k) = \frac{F_{\mathrm{S}}k^{2}}{16\pi}.
+    \label{eq:n7_gw_stiffness_force_form}
+\end{equation}
+
+Define the microscopic-to-collective response ratio by
+\begin{equation}
+    \zeta_{\mathrm{GW}}(k) \equiv \frac{K_{\mathrm{GW}}^{(\mathrm{eff})}(k)}{K_{\mathrm{sh}}^{(\mathrm{micro},0)}}.
+    \label{eq:n7_zeta_definition}
+\end{equation}
+Substituting Equations~\eqref{eq:n7_micro_scaffold_force_form} and \eqref{eq:n7_gw_stiffness_force_form} gives
+\begin{equation}
+    \zeta_{\mathrm{GW}}(k) = \frac{F_{\mathrm{S}}k^{2}}{16\pi} \left[ \frac{2\sqrt{2}}{\pi F_{\mathrm{S}}} \frac{r_{\mathrm{D}}^{4}}{\ell_{\mathrm{S}}^{2}} \right].
+\end{equation}
+The structural force scale cancels exactly, leaving
+\begin{equation}
+    \zeta_{\mathrm{GW}}(k) = \frac{\sqrt{2}}{8\pi^{2}} \frac{r_{\mathrm{D}}^{4}k^{2}}{\ell_{\mathrm{S}}^{2}}.
+    \label{eq:n7_zeta_dimensional_form}
+\end{equation}
+Equivalently,
+\begin{equation}
+    \zeta_{\mathrm{GW}}(k) = \frac{\sqrt{2}}{8\pi^{2}} \left( \frac{r_{\mathrm{D}}}{\ell_{\mathrm{S}}} \right)^{2} \left( kr_{\mathrm{D}} \right)^{2}.
+    \label{eq:n7_zeta_k}
+\end{equation}
+
+The corresponding angular-frequency representation is
+\begin{equation}
+    \zeta_{\mathrm{GW}}(\omega) = \frac{\sqrt{2}}{8\pi^{2}} \left( \frac{r_{\mathrm{D}}}{\ell_{\mathrm{S}}} \right)^{2} \left( \frac{\omega r_{\mathrm{D}}}{c_{\mathrm{E}}} \right)^{2}.
+    \label{eq:n7_zeta_omega}
+\end{equation}
+Using $\omega = 2\pi f$, this reduces to
+\begin{equation}
+    \zeta_{\mathrm{GW}}(f) = \frac{1}{\sqrt{2}} \left( \frac{r_{\mathrm{D}}}{\ell_{\mathrm{S}}} \right)^{2} \left( \frac{f r_{\mathrm{D}}}{c_{\mathrm{E}}} \right)^{2}.
+    \label{eq:n7_zeta_f}
+\end{equation}
+
+The ratio is therefore spectral: $\zeta_{\mathrm{GW}} \propto k^{2} \propto \omega^{2} \propto f^{2}$.
+
+\subsection{Representative Long-Wavelength Scale}
+\label{subsec:n7_representative_scale}
+
+To expose the magnitude of the derived hierarchy, consider the representative frequency $f = 150\,\mathrm{Hz}$. This frequency is used only to evaluate the derived spectral response. It is not used to calibrate any coefficient.
+
+The corresponding angular frequency and gravity-neutral wave number are $\omega = 2\pi f$, and $k = 2\pi f/c_{\mathrm{E}} \simeq 3.14\times10^{-6}\,\mathrm{m^{-1}}$. Using $r_{\mathrm{D}} \simeq 7.45\times10^{-27}\,\mathrm{m}$ and $\ell_{\mathrm{S}} \simeq 1.6163\times10^{-35}\,\mathrm{m}$, one finds $kr_{\mathrm{D}} \simeq 2.34\times10^{-32}$, and therefore
+\begin{equation}
+    \zeta_{\mathrm{GW}} \simeq 2.1\times10^{-48}.
+    \label{eq:n7_zeta_150hz}
+\end{equation}
+
+At the same frequency, the derived spectral stiffness, equivalent continuum inertia density, and spectral impedance are:
+\begin{align}
+    K_{\mathrm{GW}}^{(\mathrm{eff})} &\simeq 2.38\times10^{31}\,\mathrm{Pa}, \label{eq:n7_keff_150hz} \\
+    \rho_{\mathrm{GW}}^{(\mathrm{eff})} &\simeq 2.65\times10^{14}\,\mathrm{kg\,m^{-3}}, \label{eq:n7_rhoeff_150hz} \\
+    Z_{\mathrm{GW}}^{(\mathrm{eff})} &\simeq 7.94\times10^{22}\,\mathrm{kg\,m^{-2}\,s^{-1}}. \label{eq:n7_zeff_150hz}
+\end{align}
+
+For the established microscopic scaffold scale $K_{\mathrm{sh}}^{(\mathrm{micro},0)} \simeq 1.14\times10^{79}\,\mathrm{Pa}$, the same ratio is recovered directly: $K_{\mathrm{GW}}^{(\mathrm{eff})} / K_{\mathrm{sh}}^{(\mathrm{micro},0)} \simeq 2.1\times10^{-48}$.
+
+The numerical hierarchy therefore follows from the previously established microscopic scales, the independently normalized collective tensor action, and the selected Fourier wavelength. No gravitational-wave event amplitude or inferred source flux has entered the calculation.
+
+\subsection{Physical Interpretation of the Spectral Ratio}
+\label{subsec:n7_zeta_interpretation}
+
+The quantity $\zeta_{\mathrm{GW}}(k)$ is not a universal vacuum constant. It is also not interpreted as:
+\begin{itemize}
+    \item a material volume fraction,
+    \item a probability,
+    \item an attenuation coefficient,
+    \item a microscopic defect-loading fraction, or
+    \item the fraction of FCC nodes physically present in the wave.
+\end{itemize}
+
+It is a dimensionless comparison between two pressure-dimensioned responses belonging to different constitutive levels:
+\begin{itemize}
+    \item $K_{\mathrm{sh}}^{(\mathrm{micro},0)} =$ local affine primitive-cell scaffold response, whereas
+    \item $K_{\mathrm{GW}}^{(\mathrm{eff})}(k) =$ spectral pressure-equivalent response of the collective tensor-gradient mode.
+\end{itemize}
+
+The factor $(kr_{\mathrm{D}})^{2}$ measures the long-wavelength intercell mismatch of the collective tensor state. For a wavelength vastly larger than the FCC scale, neighboring cells differ only infinitesimally, even though the underlying scaffold itself possesses an extremely large local affine stiffness.
+
+The limit $\lim_{k\to 0} \zeta_{\mathrm{GW}}(k) = 0$ does not mean that the State-I carrier disappears or that its microscopic stiffness vanishes. It means that a spatially uniform tensor redistribution produces no tensor-gradient mismatch at the retained order: $k\to 0 \Longrightarrow \partial_{k}\mathsf{H}_{ij} \to 0$.
+
+The previously unexplained hierarchy near $10^{-48}$ is therefore not assigned to an arbitrarily small microscopic participation coefficient. It emerges primarily from the enormous separation between the gravitational-wave wavelength and the duality scale, together with the established Hard-Floor/Soft-Floor scale ratio contained in $(r_{\mathrm{D}}/\ell_{\mathrm{S}})^{2}$.
+
+\subsection{Scope in a Gravitationally Loaded Background}
+\label{subsec:n7_loaded_background_scope}
+
+Equations~\eqref{eq:n7_effective_stiffness_omega}--\eqref{eq:n7_zeta_f} use the gravity-neutral dispersion $\omega = c_{\mathrm{E}}k$. In a quasistatic gravitationally loaded background, the selected endpoint-inheritance closure of Section~\ref{sec:n5_long_wavelength_tensor} gives $\omega = c_{\mathrm{GW}}(\mathbf{x})k$, with $c_{\mathrm{GW}}(\mathbf{x}) = c_{\mathrm{E}} \left[ 1-\alpha_{\mathrm{G}}(\mathbf{x}) \right]^{2}$.
+
+The wave-number representation $K_{\mathrm{GW}}^{(\mathrm{eff})}(k) = \frac{1}{2} \mathcal{T}_{\mathrm{TT}}^{(0)}k^{2}$ remains the direct constitutive representation of the tensor-gradient energy under that closure. A local frequency representation must instead use $k = \omega/c_{\mathrm{GW}}(\mathbf{x})$. Therefore,
+\begin{equation}
+    K_{\mathrm{GW}}^{(\mathrm{eff})} \left( \omega,\alpha_{\mathrm{G}} \right) = \frac{\mathcal{T}_{\mathrm{TT}}^{(0)}}{2c_{\mathrm{GW}}^{2}(\mathbf{x})} \omega^{2}.
+\end{equation}
+
+The gravity-neutral expressions derived above are the appropriate far-zone State-I reference relations used in the subsequent radiation calculation. The next section applies the normalized sourced tensor equation to a localized conserved source and derives the retarded far-zone quadrupole field.
+
+\section{Source Coupling and the Far-Zone Quadrupole Field}
+\label{sec:n8_source_quadrupole}
+
+Section~\ref{sec:n6_static_tensor_normalization} establishes the normalized source-coupled tensor equation
+\begin{equation}
+    \frac{1}{c_{\mathrm{E}}^{2}} \ddot{\mathsf{H}}_{ij}^{(\mathrm{GW})} - \nabla^{2}\mathsf{H}_{ij}^{(\mathrm{GW})} = \frac{8\pi G}{c_{\mathrm{E}}^{4}} T_{ij}^{(\mathrm{TT})}.
+    \label{eq:n8_sourced_wave_equation}
+\end{equation}
+The source tensor is the transverse-traceless projection of the mechanical stress-energy flux associated with a localized, time-dependent source. The present section derives the retarded solution of Equation~\eqref{eq:n8_sourced_wave_equation} and reduces it, under the leading long-wavelength source approximation, to the far-zone quadrupole field.
+
+No gravitational-wave observation is used to set the amplitude normalization. The coefficient in Equation~\eqref{eq:n8_sourced_wave_equation} has already been fixed by the independently established static-to-tensor projection of Section~\ref{sec:n6_static_tensor_normalization}.
+
+\subsection{Retarded Solution of the Tensor Wave Equation}
+\label{subsec:n8_retarded_solution}
+
+Introduce the gravity-neutral State-I wave operator
+\begin{equation}
+    \Box_{\mathrm{E}} \equiv \frac{1}{c_{\mathrm{E}}^{2}} \frac{\partial^{2}}{\partial t^{2}} - \nabla^{2}.
+\end{equation}
+Equation~\eqref{eq:n8_sourced_wave_equation} may then be written
+\begin{equation}
+    \Box_{\mathrm{E}} \mathsf{H}_{ij}^{(\mathrm{GW})} = \frac{8\pi G}{c_{\mathrm{E}}^{4}} T_{ij}^{(\mathrm{TT})}.
+    \label{eq:n8_box_equation}
+\end{equation}
+
+The retarded Green function of $\Box_{\mathrm{E}}$ in three spatial dimensions is
+\begin{equation}
+    G_{\mathrm{ret}} \left( \mathbf{x},t; \mathbf{x}',t' \right) = \frac{ \delta \left[ t-t' - |\mathbf{x}-\mathbf{x}'|/c_{\mathrm{E}} \right] }{ 4\pi|\mathbf{x}-\mathbf{x}'| }.
+    \label{eq:n8_retarded_green}
+\end{equation}
+It satisfies $\Box_{\mathrm{E}} G_{\mathrm{ret}} \left( \mathbf{x},t; \mathbf{x}',t' \right) = \delta(t-t') \delta^{(3)} \left( \mathbf{x}-\mathbf{x}' \right)$.
+
+The retarded solution of Equation~\eqref{eq:n8_box_equation} is therefore
+\begin{equation}
+    \begin{aligned}
+        \mathsf{H}_{ij}^{(\mathrm{GW})}(\mathbf{x},t) &= \frac{8\pi G}{c_{\mathrm{E}}^{4}} \int G_{\mathrm{ret}} \left( \mathbf{x},t; \mathbf{x}',t' \right) T_{ij}^{(\mathrm{TT})} (\mathbf{x}',t') \,d^{3}x'\,dt' \\
+        &= \frac{2G}{c_{\mathrm{E}}^{4}} \int \frac{ T_{ij}^{(\mathrm{TT})} \left( \mathbf{x}', t- |\mathbf{x}-\mathbf{x}'|/c_{\mathrm{E}} \right) }{ |\mathbf{x}-\mathbf{x}'| } \,d^{3}x'.
+    \end{aligned}
+    \label{eq:n8_exact_retarded_solution}
+\end{equation}
+
+The factor $4\pi$ appearing in the denominator of the three-dimensional Green function combines with the source normalization $8\pi G/c_{\mathrm{E}}^{4}$ to give the coefficient $2G/c_{\mathrm{E}}^{4}$ in Equation~\eqref{eq:n8_exact_retarded_solution}. This is ordinary three-dimensional retarded spreading and does not introduce an additional material or projection coefficient.
+
+\subsection{Radiation-Zone Approximation}
+\label{subsec:n8_radiation_zone}
+
+Let the source occupy a compact region of characteristic size $L$, and let the observation point satisfy $R \equiv |\mathbf{x}| \gg L$. Define the radiation direction $\mathbf{n} \equiv \mathbf{x}/R$, and the leading retarded time
+\begin{equation}
+    t_{\mathrm{R}} \equiv t-\frac{R}{c_{\mathrm{E}}}.
+    \label{eq:n8_retarded_time}
+\end{equation}
+
+For $|\mathbf{x}'| \lesssim L$, the source-to-observer distance is $|\mathbf{x}-\mathbf{x}'| = R - \mathbf{n}\cdot\mathbf{x}' + \mathcal{O} \left( L^{2}/R \right)$. At leading radiation-zone order, $1 / |\mathbf{x}-\mathbf{x}'| = 1/R + \mathcal{O} \left( L/R^{2} \right)$.
+
+The leading quadrupole reduction additionally assumes that the source is long-wavelength relative to its own size:
+\begin{equation}
+    \frac{\omega L}{c_{\mathrm{E}}} \ll 1.
+    \label{eq:n8_long_wavelength_source_condition}
+\end{equation}
+Under this condition, the variation of the retarded phase across the source is subleading at the retained order.
+
+For the selected observation direction $\mathbf{n}$, define the transverse projector $\mathcal{P}_{ij}(\mathbf{n}) = \delta_{ij} - n_{i}n_{j}$, and the transverse-traceless projector
+\begin{equation}
+    \Lambda_{ij,kl}(\mathbf{n}) = \frac{1}{2} \left[ \mathcal{P}_{ik}\mathcal{P}_{jl} + \mathcal{P}_{il}\mathcal{P}_{jk} - \mathcal{P}_{ij}\mathcal{P}_{kl} \right].
+    \label{eq:n8_tt_projector}
+\end{equation}
+
+Within the far-zone approximation, this projector is constant across the compact source and may be applied after the source integration: $T_{ij}^{(\mathrm{TT})} = \Lambda_{ij,kl}(\mathbf{n}) T_{kl}^{(\mathrm{src})}$. Equation~\eqref{eq:n8_exact_retarded_solution} then becomes
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} (\mathbf{x},t) = \frac{2G}{ c_{\mathrm{E}}^{4}R } \Lambda_{ij,kl}(\mathbf{n}) \int T_{kl}^{(\mathrm{src})} \left( \mathbf{x}', t_{\mathrm{R}} \right) d^{3}x'
+    \label{eq:n8_far_zone_stress_field}
+\end{equation}
+to leading order in $L/R$ and $\omega L/c_{\mathrm{E}}$.
+
+The transverse-traceless projection in Equation~\eqref{eq:n8_far_zone_stress_field} is direction-dependent and belongs to the mapping from the localized source into the outgoing radiative channel. It is not an additional modification of the source-free propagation law.
+
+\subsection{Source-Conservation Identity}
+\label{subsec:n8_source_conservation}
+
+Let $\rho(\mathbf{x},t)$ denote the effective mass density of the localized source, $j_{i}(\mathbf{x},t)$ its momentum density, and $T_{ij}^{(\mathrm{src})}(\mathbf{x},t)$ its mechanical momentum-flux tensor.
+
+At the retained weak-field source order, local mass and momentum conservation are
+\begin{equation}
+    \frac{\partial\rho}{\partial t} + \partial_{k}j_{k} = 0,
+    \label{eq:n8_mass_conservation}
+\end{equation}
+and
+\begin{equation}
+    \frac{\partial j_{i}}{\partial t} + \partial_{k} T_{ik}^{(\mathrm{src})} = 0.
+    \label{eq:n8_momentum_conservation}
+\end{equation}
+
+Define the mass second moment
+\begin{equation}
+    I_{ij}(t) \equiv \int \rho(\mathbf{x},t) x_{i}x_{j} \,d^{3}x.
+    \label{eq:n8_mass_second_moment}
+\end{equation}
+Differentiating once and using Equation~\eqref{eq:n8_mass_conservation} gives
+\begin{equation}
+    \begin{aligned}
+        \dot{I}_{ij} &= - \int \partial_{k}j_{k} x_{i}x_{j} \,d^{3}x \\
+        &= \int \left( j_{i}x_{j} + j_{j}x_{i} \right) d^{3}x,
+    \end{aligned}
+    \label{eq:n8_first_moment_derivative}
+\end{equation}
+where the boundary term vanishes for a spatially localized source.
+
+Differentiating again and applying Equation~\eqref{eq:n8_momentum_conservation},
+\begin{equation}
+    \begin{aligned}
+        \ddot{I}_{ij} &= - \int \left[ \partial_{k} T_{ik}^{(\mathrm{src})} x_{j} + \partial_{k} T_{jk}^{(\mathrm{src})} x_{i} \right] d^{3}x \\
+        &= \int \left[ T_{ij}^{(\mathrm{src})} + T_{ji}^{(\mathrm{src})} \right] d^{3}x.
+    \end{aligned}
+\end{equation}
+For the symmetric mechanical source tensor, $T_{ij}^{(\mathrm{src})} = T_{ji}^{(\mathrm{src})}$, one obtains the exact localized-source identity
+\begin{equation}
+    \int T_{ij}^{(\mathrm{src})} \,d^{3}x = \frac{1}{2} \ddot{I}_{ij}.
+    \label{eq:n8_stress_quadrupole_identity}
+\end{equation}
+
+This identity follows from local conservation and spatial localization. It does not require geometric spacetime curvature.
+
+\subsection{Symmetric Trace-Free Mass Quadrupole}
+\label{subsec:n8_stf_quadrupole}
+
+Define the symmetric trace-free mass quadrupole by
+\begin{equation}
+    Q_{ij} \equiv I_{ij} - \frac{1}{3} \delta_{ij}I_{kk}.
+    \label{eq:n8_stf_quadrupole_definition}
+\end{equation}
+Equivalently,
+\begin{equation}
+    Q_{ij}(t) = \int \rho(\mathbf{x},t) \left( x_{i}x_{j} - \frac{1}{3} \delta_{ij}r^{2} \right) d^{3}x.
+    \label{eq:n8_quadrupole_integral}
+\end{equation}
+It satisfies $Q_{ij} = Q_{ji}$ and $Q_{ii} = 0$.
+
+The TT projector annihilates a pure trace: $\Lambda_{ij,kl}(\mathbf{n}) \delta_{kl} = 0$. Consequently,
+\begin{equation}
+    \Lambda_{ij,kl} \ddot{I}_{kl} = \Lambda_{ij,kl} \ddot{Q}_{kl}.
+    \label{eq:n8_trace_removal}
+\end{equation}
+
+Substituting Equation~\eqref{eq:n8_stress_quadrupole_identity} into Equation~\eqref{eq:n8_far_zone_stress_field} and using Equation~\eqref{eq:n8_trace_removal} gives
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} (\mathbf{x},t) = \frac{G}{ c_{\mathrm{E}}^{4}R } \Lambda_{ij,kl}(\mathbf{n}) \ddot{Q}_{kl} \left( t_{\mathrm{R}} \right).
+    \label{eq:n8_H_quadrupole_field}
+\end{equation}
+
+The observable transverse-traceless strain is normalized by $h_{ij}^{(\mathrm{TT})} = 2\mathsf{H}_{ij}^{(\mathrm{GW})}$. Therefore,
+\begin{equation}
+    h_{ij}^{(\mathrm{TT})} (\mathbf{x},t) = \frac{2G}{ c_{\mathrm{E}}^{4}R } \Lambda_{ij,kl}(\mathbf{n}) \ddot{Q}_{kl} \left( t_{\mathrm{R}} \right).
+    \label{eq:n8_observable_quadrupole_strain}
+\end{equation}
+
+Equation~\eqref{eq:n8_observable_quadrupole_strain} is the leading far-zone quadrupole field of the normalized State-I tensor sector. Its coefficient follows from the tensor-gradient normalization derived in Section~\ref{sec:n6_static_tensor_normalization}; it has not been fitted to a binary event.
+
+\subsection{Polarization Amplitudes}
+\label{subsec:n8_polarization_amplitudes}
+
+For the selected radiation direction $\mathbf{n}$, let $(\mathbf{E}_{+})_{ij}$ and $(\mathbf{E}_{\times})_{ij}$ be the normalized transverse tensor bases satisfying $\mathbf{E}_{A}:\mathbf{E}_{B} = 2\delta_{AB}$. The observable strain decomposes as
+\begin{equation}
+    h_{ij}^{(\mathrm{TT})} = h_{+} (\mathbf{E}_{+})_{ij} + h_{\times} (\mathbf{E}_{\times})_{ij}.
+    \label{eq:n8_polarization_decomposition}
+\end{equation}
+The individual amplitudes are extracted by $h_{A} = \frac{1}{2} (\mathbf{E}_{A})_{ij} h_{ij}^{(\mathrm{TT})}$ for $A\in\{+,\times\}$. Using Equation~\eqref{eq:n8_observable_quadrupole_strain},
+\begin{equation}
+    h_{A} (\mathbf{x},t) = \frac{G}{ c_{\mathrm{E}}^{4}R } (\mathbf{E}_{A})_{ij} \ddot{Q}_{ij} \left( t_{\mathrm{R}} \right), \qquad A\in\{+,\times\}.
+    \label{eq:n8_polarization_quadrupole}
+\end{equation}
+Because the polarization tensors already lie in the transverse-traceless subspace, the TT projector acts as the identity when contracted with them.
+
+The two polarization amplitudes are therefore different directional projections of the same conserved source quadrupole. Their common propagation speed and common normalization follow from the degenerate FCC tensor basis derived in Section~\ref{sec:n3_fcc_bond_dyad} and the normalized collective action derived in Sections~\ref{sec:n5_long_wavelength_tensor} and~\ref{sec:n6_static_tensor_normalization}.
+
+\subsection{Absence of Monopole and Dipole Radiation}
+\label{subsec:n8_no_monopole_dipole}
+
+The leading radiative source is quadrupolar because the lower multipole moments are constrained by conservation.
+
+The total source mass is $M = \int \rho\,d^{3}x$. Equation~\eqref{eq:n8_mass_conservation} gives $\dot{M} = 0$ for an isolated source. The monopole moment therefore cannot provide a time-dependent radiative degree of freedom at the retained order.
+
+The mass dipole is $D_{i} = \int \rho x_{i} \,d^{3}x$. Its first derivative is the total momentum, $\dot{D}_{i} = P_{i}$, and isolation gives $\dot{P}_{i} = 0$. Hence, $\ddot{D}_{i} = 0$. The dipole therefore represents uniform center-of-mass motion rather than an outgoing radiative tensor source.
+
+The first nontrivial time-dependent conserved source moment is consequently the symmetric trace-free quadrupole $Q_{ij}$.
+
+\subsection{Mechanical Interpretation and Scope}
+\label{subsec:n8_scope}
+
+The derivation in this section establishes the sequence
+\begin{equation}
+    T_{ij}^{(\mathrm{src})} \longrightarrow \Lambda_{ij,kl} T_{kl}^{(\mathrm{src})} \longrightarrow \mathsf{H}_{ij}^{(\mathrm{GW})} \longrightarrow h_{ij}^{(\mathrm{TT})},
+\end{equation}
+with
+\begin{equation}
+    h_{ij}^{(\mathrm{TT})} = \frac{2G}{ c_{\mathrm{E}}^{4}R } \Lambda_{ij,kl} \ddot{Q}_{kl}.
+\end{equation}
+
+The localized source excites the collective directional-tension tensor through the TT projection of its mechanical momentum flux. Once generated, the tensor state propagates through the source-free State-I Soft Floor according to
+\begin{equation}
+    \frac{1}{c_{\mathrm{E}}^{2}} \ddot{\mathsf{H}}_{ij}^{(\mathrm{GW})} - \nabla^{2} \mathsf{H}_{ij}^{(\mathrm{GW})} = 0.
+\end{equation}
+The factor $8\pi$ therefore belongs to source-to-tensor normalization, while the outgoing free field is governed by the ratio $\mathcal{T}_{\mathrm{TT}}^{(0)} / M_{\mathrm{TT}}^{(0)} = c_{\mathrm{E}}^{2}$.
+
+The present reduction assumes:
+\begin{enumerate}
+    \item a weak-field State-I exterior;
+    \item a spatially localized source;
+    \item local mass and momentum conservation;
+    \item an observation distance satisfying $R\gg L$;
+    \item a leading long-wavelength source limit satisfying $\omega L/c_{\mathrm{E}}\ll1$; and
+    \item propagation through the gravity-neutral far-zone reference medium.
+\end{enumerate}
+
+Within these conditions, no additional source-normalization coefficient, microscopic participation fraction, or event-dependent stiffness is required.
+
+The effective source quadrupole $Q_{ij}$ is the long-wavelength source moment seen by the exterior tensor field. Deriving this moment directly from the evolving microscopic FCC/SC live boundary during strong-field merger and ringdown remains a separate completion problem. In particular, the full map from the microscopic phase-boundary variables and Tension-Column transfer state to the effective far-zone quadrupole is not claimed to be closed here.
+
+The next section derives the conserved mechanical energy flux of the outgoing tensor field, performs the complete transverse-traceless angular projection over the radiation sphere, and obtains the total quadrupole luminosity.
+
+\section{Tensor Energy Flux and Total Quadrupole Luminosity}
+\label{sec:n9_tensor_energy_flux}
+
+The normalized tensor-gradient action derived in Section~\ref{sec:n6_static_tensor_normalization} determines not only the sourced field amplitude but also the mechanical energy carried by the outgoing transverse-traceless tensor state. The present section derives the local tensor-energy balance, obtains the far-zone gravitational-wave intensity, performs the complete angular transverse-traceless projection, and recovers the total quadrupole luminosity.
+
+The calculation is performed in the source-free gravity-neutral State-I exterior, where
+\begin{equation}
+    \frac{1}{c_{\mathrm{E}}^{2}} \ddot{\mathsf{H}}_{ij}^{(\mathrm{GW})} - \nabla^{2} \mathsf{H}_{ij}^{(\mathrm{GW})} = 0.
+    \label{eq:n9_source_free_wave_equation}
+\end{equation}
+The source enters only through the outgoing boundary data established in Section~\ref{sec:n8_source_quadrupole}.
+
+\subsection{Local Tensor-Energy Balance}
+\label{subsec:n9_local_energy_balance}
+
+The source-coupled tensor Lagrangian density is
+\begin{equation}
+    \mathcal{L}_{\mathrm{TT}} = \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{2} \left[ \frac{1}{c_{\mathrm{E}}^{2}} \dot{\mathsf{H}}_{ij} \dot{\mathsf{H}}_{ij} - \partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij} \right] + \mathsf{H}_{ij} T_{ij}^{(\mathrm{TT})},
+    \label{eq:n9_tensor_lagrangian}
+\end{equation}
+where
+\begin{equation}
+    \mathcal{T}_{\mathrm{TT}}^{(0)} = \frac{c_{\mathrm{E}}^{4}}{8\pi G}.
+    \label{eq:n9_tensor_gradient_coefficient}
+\end{equation}
+
+The corresponding tensor-field energy density is
+\begin{equation}
+    u_{\mathrm{GW}} = \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{ 2c_{\mathrm{E}}^{2} } \dot{\mathsf{H}}_{ij} \dot{\mathsf{H}}_{ij} + \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{2} \partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij}.
+    \label{eq:n9_tensor_energy_density}
+\end{equation}
+
+The associated mechanical energy-flux vector is
+\begin{equation}
+    \mathcal{F}_{k}^{(\mathrm{GW})} = - \mathcal{T}_{\mathrm{TT}}^{(0)} \dot{\mathsf{H}}_{ij} \partial_{k}\mathsf{H}_{ij}.
+    \label{eq:n9_tensor_energy_flux_vector}
+\end{equation}
+
+To verify the local balance law, multiply the sourced field equation
+\begin{equation}
+    \frac{1}{c_{\mathrm{E}}^{2}} \ddot{\mathsf{H}}_{ij} - \nabla^{2}\mathsf{H}_{ij} = \frac{1}{ \mathcal{T}_{\mathrm{TT}}^{(0)} } T_{ij}^{(\mathrm{TT})}
+\end{equation}
+by $\mathcal{T}_{\mathrm{TT}}^{(0)} \dot{\mathsf{H}}_{ij}$. Using the identity
+\begin{equation}
+    - \dot{\mathsf{H}}_{ij} \nabla^{2}\mathsf{H}_{ij} = - \partial_{k} \left( \dot{\mathsf{H}}_{ij} \partial_{k}\mathsf{H}_{ij} \right) + \frac{1}{2} \frac{\partial}{\partial t} \left( \partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij} \right),
+\end{equation}
+one obtains
+\begin{equation}
+    \frac{\partial u_{\mathrm{GW}}}{\partial t} + \partial_{k} \mathcal{F}_{k}^{(\mathrm{GW})} = \dot{\mathsf{H}}_{ij} T_{ij}^{(\mathrm{TT})}.
+    \label{eq:n9_sourced_energy_balance}
+\end{equation}
+
+The right-hand side is the mechanical power density transferred from the localized source into the collective tensor field. Outside the source region, $T_{ij}^{(\mathrm{TT})} = 0$, and Equation~\eqref{eq:n9_sourced_energy_balance} reduces to
+\begin{equation}
+    \frac{\partial u_{\mathrm{GW}}}{\partial t} + \partial_{k} \mathcal{F}_{k}^{(\mathrm{GW})} = 0.
+    \label{eq:n9_source_free_energy_conservation}
+\end{equation}
+
+The tensor-gradient action therefore carries a locally conserved positive quadratic energy in the source-free State-I exterior.
+
+\subsection{Outgoing Far-Zone Intensity}
+\label{subsec:n9_far_zone_intensity}
+
+For an outgoing radiation field,
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} = \frac{1}{R} \mathsf{A}_{ij} \left( t-\frac{R}{c_{\mathrm{E}}}, \mathbf{n} \right) + \mathcal{O} \left( \frac{1}{R^{2}} \right),
+    \label{eq:n9_outgoing_wave_form}
+\end{equation}
+where $\mathbf{n} = \mathbf{x}/R$.
+
+In the radiation zone, $kR \gg 1$, the leading radial derivative is
+\begin{equation}
+    \partial_{R} \mathsf{H}_{ij}^{(\mathrm{GW})} = - \frac{1}{c_{\mathrm{E}}} \dot{\mathsf{H}}_{ij}^{(\mathrm{GW})} + \mathcal{O} \left( \frac{1}{kR^{2}} \right).
+    \label{eq:n9_outgoing_derivative_relation}
+\end{equation}
+
+The outward radial intensity is $I_{\mathrm{GW}} \equiv n_{k} \mathcal{F}_{k}^{(\mathrm{GW})}$. Using Equations~\eqref{eq:n9_tensor_energy_flux_vector} and~\eqref{eq:n9_outgoing_derivative_relation},
+\begin{equation}
+    I_{\mathrm{GW}} = \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{ c_{\mathrm{E}} } \dot{\mathsf{H}}_{ij}^{(\mathrm{GW})} \dot{\mathsf{H}}_{ij}^{(\mathrm{GW})}.
+    \label{eq:n9_intensity_H}
+\end{equation}
+
+Substituting $\mathcal{T}_{\mathrm{TT}}^{(0)} = c_{\mathrm{E}}^{4} / (8\pi G)$ gives
+\begin{equation}
+    I_{\mathrm{GW}} = \frac{ c_{\mathrm{E}}^{3} }{ 8\pi G } \dot{\mathsf{H}}_{ij}^{(\mathrm{GW})} \dot{\mathsf{H}}_{ij}^{(\mathrm{GW})}.
+    \label{eq:n9_intensity_H_normalized}
+\end{equation}
+
+The observable transverse-traceless strain is $h_{ij}^{(\mathrm{TT})} = 2\mathsf{H}_{ij}^{(\mathrm{GW})}$. Therefore,
+\begin{equation}
+    I_{\mathrm{GW}} = \frac{ c_{\mathrm{E}}^{3} }{ 32\pi G } \dot{h}_{ij}^{(\mathrm{TT})} \dot{h}_{ij}^{(\mathrm{TT})}.
+    \label{eq:n9_intensity_tensor_strain}
+\end{equation}
+
+For the polarization decomposition
+\begin{equation}
+    h_{ij}^{(\mathrm{TT})} = h_{+}(\mathbf{E}_{+})_{ij} + h_{\times}(\mathbf{E}_{\times})_{ij},
+\end{equation}
+with $\mathbf{E}_{A}:\mathbf{E}_{B} = 2\delta_{AB}$, one has $\dot{h}_{ij}^{(\mathrm{TT})} \dot{h}_{ij}^{(\mathrm{TT})} = 2 \left( \dot{h}_{+}^{2} + \dot{h}_{\times}^{2} \right)$. Hence,
+\begin{equation}
+    I_{\mathrm{GW}} = \frac{ c_{\mathrm{E}}^{3} }{ 16\pi G } \left( \dot{h}_{+}^{2} + \dot{h}_{\times}^{2} \right).
+    \label{eq:n9_intensity_polarizations}
+\end{equation}
+
+For periodic radiation, the measured intensity is the time average
+\begin{equation}
+    \left\langle I_{\mathrm{GW}} \right\rangle = \frac{ c_{\mathrm{E}}^{3} }{ 16\pi G } \left\langle \dot{h}_{+}^{2} + \dot{h}_{\times}^{2} \right\rangle.
+    \label{eq:n9_average_intensity}
+\end{equation}
+
+\subsection{Consistency with the Spectral Response}
+\label{subsec:n9_spectral_flux_consistency}
+
+Consider monochromatic polarization amplitudes
+\begin{equation}
+    h_{A}(t) = h_{A}^{(0)} \cos \left( \omega t+\varphi_{A} \right), \qquad A\in\{+,\times\}.
+\end{equation}
+Their averaged squared time derivatives are $\left\langle \dot{h}_{A}^{2} \right\rangle = \frac{1}{2}\omega^{2} \left( h_{A}^{(0)} \right)^{2}$.
+
+Define $h_{\mathrm{eff}}^{2} \equiv \left( h_{+}^{(0)} \right)^{2} + \left( h_{\times}^{(0)} \right)^{2}$. Equation~\eqref{eq:n9_average_intensity} becomes
+\begin{equation}
+    \left\langle I_{\mathrm{GW}} \right\rangle = \frac{ c_{\mathrm{E}}^{3}\omega^{2} }{ 32\pi G } h_{\mathrm{eff}}^{2}.
+    \label{eq:n9_monochromatic_flux}
+\end{equation}
+
+Section~\ref{sec:n7_spectral_response} gives $K_{\mathrm{GW}}^{(\mathrm{eff})}(\omega) = c_{\mathrm{E}}^{2}\omega^{2} / (16\pi G)$. Therefore,
+\begin{equation}
+    \left\langle I_{\mathrm{GW}} \right\rangle = \frac{1}{2} K_{\mathrm{GW}}^{(\mathrm{eff})}(\omega) c_{\mathrm{E}} h_{\mathrm{eff}}^{2}.
+    \label{eq:n9_spectral_flux_relation}
+\end{equation}
+
+The effective spectral stiffness derived in Section~\ref{sec:n7_spectral_response} is thus exactly the pressure-equivalent coefficient inferred from the tensor energy flux. It is not an independently fitted modulus.
+
+\subsection{Angular Radiation Pattern}
+\label{subsec:n9_angular_radiation_pattern}
+
+The far-zone quadrupole strain derived in Section~\ref{sec:n8_source_quadrupole} is
+\begin{equation}
+    h_{ij}^{(\mathrm{TT})} = \frac{ 2G }{ c_{\mathrm{E}}^{4}R } \Lambda_{ij,kl}(\mathbf{n}) \ddot{Q}_{kl} \left( t_{\mathrm{R}} \right).
+    \label{eq:n9_quadrupole_strain}
+\end{equation}
+Differentiation gives
+\begin{equation}
+    \dot{h}_{ij}^{(\mathrm{TT})} = \frac{ 2G }{ c_{\mathrm{E}}^{4}R } \Lambda_{ij,kl}(\mathbf{n}) \dddot{Q}_{kl} \left( t_{\mathrm{R}} \right).
+    \label{eq:n9_quadrupole_strain_derivative}
+\end{equation}
+
+Define
+\begin{equation}
+    A_{ij} \equiv \dddot{Q}_{ij} \left( t_{\mathrm{R}} \right).
+    \label{eq:n9_A_definition}
+\end{equation}
+Because $Q_{ij}$ is symmetric and trace-free, $A_{ij} = A_{ji}$ and $A_{ii} = 0$. Its transverse-traceless projection is
+\begin{equation}
+    A_{ij}^{(\mathrm{TT})} \equiv \Lambda_{ij,kl}(\mathbf{n}) A_{kl}.
+    \label{eq:n9_A_TT_definition}
+\end{equation}
+Equation~\eqref{eq:n9_quadrupole_strain_derivative} becomes
+\begin{equation}
+    \dot{h}_{ij}^{(\mathrm{TT})} = \frac{ 2G }{ c_{\mathrm{E}}^{4}R } A_{ij}^{(\mathrm{TT})}.
+\end{equation}
+
+Substituting into Equation~\eqref{eq:n9_intensity_tensor_strain} gives the angular intensity
+\begin{equation}
+    I_{\mathrm{GW}}(\mathbf{n}) = \frac{ G }{ 8\pi c_{\mathrm{E}}^{5}R^{2} } A_{ij}^{(\mathrm{TT})} A_{ij}^{(\mathrm{TT})}.
+    \label{eq:n9_angular_intensity}
+\end{equation}
+For periodic or quasiperiodic radiation,
+\begin{equation}
+    \left\langle I_{\mathrm{GW}}(\mathbf{n}) \right\rangle = \frac{ G }{ 8\pi c_{\mathrm{E}}^{5}R^{2} } \left\langle A_{ij}^{(\mathrm{TT})} A_{ij}^{(\mathrm{TT})} \right\rangle.
+    \label{eq:n9_average_angular_intensity}
+\end{equation}
+
+The radiated power per unit solid angle is therefore
+\begin{equation}
+    \frac{dP_{\mathrm{GW}}}{d\Omega} = \frac{ G }{ 8\pi c_{\mathrm{E}}^{5} } \left\langle A_{ij}^{(\mathrm{TT})} A_{ij}^{(\mathrm{TT})} \right\rangle.
+    \label{eq:n9_power_per_solid_angle}
+\end{equation}
+
+\subsection{Complete Angular TT Projection}
+\label{subsec:n9_complete_angular_projection}
+
+The TT projector is
+\begin{equation}
+    \Lambda_{ij,kl}(\mathbf{n}) = \frac{1}{2} \left[ \mathcal{P}_{ik}\mathcal{P}_{jl} + \mathcal{P}_{il}\mathcal{P}_{jk} - \mathcal{P}_{ij}\mathcal{P}_{kl} \right],
+\end{equation}
+where $\mathcal{P}_{ij} = \delta_{ij}-n_{i}n_{j}$. For a symmetric trace-free tensor $A_{ij}$, direct contraction gives
+\begin{equation}
+    A_{ij}^{(\mathrm{TT})} A_{ij}^{(\mathrm{TT})} = A_{ij}A_{ij} - 2 \left( A_{ij}n_{j} \right) \left( A_{ik}n_{k} \right) + \frac{1}{2} \left( A_{ij}n_{i}n_{j} \right)^{2}.
+    \label{eq:n9_TT_norm_identity}
+\end{equation}
+
+The required angular identities over the unit sphere are $\int d\Omega = 4\pi$,
+\begin{equation}
+    \int n_{i}n_{j} \,d\Omega = \frac{4\pi}{3} \delta_{ij},
+    \label{eq:n9_second_angular_moment}
+\end{equation}
+and
+\begin{equation}
+    \int n_{i}n_{j}n_{k}n_{l} \,d\Omega = \frac{4\pi}{15} \left( \delta_{ij}\delta_{kl} + \delta_{ik}\delta_{jl} + \delta_{il}\delta_{jk} \right).
+    \label{eq:n9_fourth_angular_moment}
+\end{equation}
+
+The first term of Equation~\eqref{eq:n9_TT_norm_identity} gives
+\begin{equation}
+    \int A_{ij}A_{ij} \,d\Omega = 4\pi A_{ij}A_{ij}.
+    \label{eq:n9_first_angular_term}
+\end{equation}
+
+For the second term,
+\begin{equation}
+    \begin{aligned}
+        \int \left( A_{ij}n_{j} \right) \left( A_{ik}n_{k} \right) d\Omega &= A_{ij}A_{ik} \int n_{j}n_{k} \,d\Omega \\
+        &= \frac{4\pi}{3} A_{ij}A_{ij}.
+    \end{aligned}
+    \label{eq:n9_second_angular_term}
+\end{equation}
+
+For the final term,
+\begin{equation}
+    \begin{aligned}
+        \int \left( A_{ij}n_{i}n_{j} \right)^{2} d\Omega &= A_{ij}A_{kl} \int n_{i}n_{j}n_{k}n_{l} \,d\Omega \\
+        &= \frac{4\pi}{15} A_{ij}A_{kl} \left( \delta_{ij}\delta_{kl} + \delta_{ik}\delta_{jl} + \delta_{il}\delta_{jk} \right).
+    \end{aligned}
+\end{equation}
+Because $A_{ii} = 0$ and $A_{ij} = A_{ji}$, this reduces to
+\begin{equation}
+    \int \left( A_{ij}n_{i}n_{j} \right)^{2} d\Omega = \frac{8\pi}{15} A_{ij}A_{ij}.
+    \label{eq:n9_fourth_moment_contraction}
+\end{equation}
+
+Substitution into Equation~\eqref{eq:n9_TT_norm_identity} gives
+\begin{equation}
+    \begin{aligned}
+        \int A_{ij}^{(\mathrm{TT})} A_{ij}^{(\mathrm{TT})} d\Omega &= 4\pi A_{ij}A_{ij} - \frac{8\pi}{3} A_{ij}A_{ij} + \frac{4\pi}{15} A_{ij}A_{ij} \\
+        &= \frac{8\pi}{5} A_{ij}A_{ij}.
+    \end{aligned}
+\end{equation}
+Therefore,
+\begin{equation}
+    \int A_{ij}^{(\mathrm{TT})} A_{ij}^{(\mathrm{TT})} d\Omega = \frac{8\pi}{5} A_{ij}A_{ij}.
+    \label{eq:n9_complete_TT_integral}
+\end{equation}
+
+The factor $8\pi/5$ is a genuine angular result obtained by integrating the physical transverse-traceless radiation pattern over the complete sphere. It is conceptually distinct from the source normalization $\kappa_{\mathrm{TT}} = 8\pi$ derived in Section~\ref{sec:n6_static_tensor_normalization}.
+
+\subsection{Total Quadrupole Luminosity}
+\label{subsec:n9_total_quadrupole_luminosity}
+
+The total radiated power is $P_{\mathrm{GW}} = \int \frac{dP_{\mathrm{GW}}}{d\Omega} \,d\Omega$. Using Equations~\eqref{eq:n9_power_per_solid_angle} and~\eqref{eq:n9_complete_TT_integral},
+\begin{equation}
+    \begin{aligned}
+        P_{\mathrm{GW}} &= \frac{ G }{ 8\pi c_{\mathrm{E}}^{5} } \left\langle \int A_{ij}^{(\mathrm{TT})} A_{ij}^{(\mathrm{TT})} d\Omega \right\rangle \\
+        &= \frac{ G }{ 8\pi c_{\mathrm{E}}^{5} } \frac{8\pi}{5} \left\langle A_{ij}A_{ij} \right\rangle.
+    \end{aligned}
+\end{equation}
+Hence,
+\begin{equation}
+    P_{\mathrm{GW}} = \frac{ G }{ 5c_{\mathrm{E}}^{5} } \left\langle \dddot{Q}_{ij} \dddot{Q}_{ij} \right\rangle.
+    \label{eq:n9_quadrupole_luminosity}
+\end{equation}
+
+The source loses mechanical energy at the corresponding rate:
+\begin{equation}
+    \frac{dE_{\mathrm{src}}}{dt} = - P_{\mathrm{GW}}.
+    \label{eq:n9_source_energy_loss}
+\end{equation}
+
+Equation~\eqref{eq:n9_quadrupole_luminosity} is positive definite and contains no adjustable microscopic participation factor, event-specific stiffness, or additional angular coefficient. The tensor-source normalization, far-zone field amplitude, local wave intensity, and complete angular projection close into a single quadrupole luminosity.
+
+\subsection{Mechanical Interpretation and Scope}
+\label{subsec:n9_mechanical_interpretation}
+
+The energy carried by a gravitational wave is the finite mechanical energy of the propagating State-I directional-tension tensor. It is stored in two conjugate forms:
+\begin{equation}
+    \text{collective tensor-transfer inertia} \quad\longleftrightarrow\quad \dot{\mathsf{H}}_{ij} \dot{\mathsf{H}}_{ij},
+\end{equation}
+and
+\begin{equation}
+    \text{intercell directional-tension mismatch} \quad\longleftrightarrow\quad \partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij}.
+\end{equation}
+
+For a freely propagating far-zone wave, the time-averaged kinetic and gradient contributions are equal:
+\begin{equation}
+    \left\langle \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{ 2c_{\mathrm{E}}^{2} } \dot{\mathsf{H}}_{ij} \dot{\mathsf{H}}_{ij} \right\rangle = \left\langle \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{2} \partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij} \right\rangle.
+\end{equation}
+
+The Hard Floor remains the phase-locked reference and record of the completed structural state. It is not assigned an additional propagating tensor-energy term. The finite radiative energy resides in the active State-I Soft-Floor tensor carrier.
+
+The derivation in this section assumes:
+\begin{enumerate}
+    \item the normalized long-wavelength tensor-gradient action of Section~\ref{sec:n6_static_tensor_normalization};
+    \item a weak-field source-free State-I exterior;
+    \item an outgoing radiation-zone field satisfying $kR \gg 1$;
+    \item the far-zone quadrupole field derived in Section~\ref{sec:n8_source_quadrupole}; and
+    \item a localized source for which the boundary terms used in the conservation identities vanish.
+\end{enumerate}
+
+Within these conditions, the complete leading-order radiation chain is
+\begin{equation}
+    T_{ij}^{(\mathrm{src})} \longrightarrow Q_{ij} \longrightarrow h_{ij}^{(\mathrm{TT})} \longrightarrow I_{\mathrm{GW}} \longrightarrow P_{\mathrm{GW}}.
+\end{equation}
+
+The next section applies Equation~\eqref{eq:n9_quadrupole_luminosity} to a weak-field circular binary and derives the corresponding orbital power loss and leading gravitational-wave chirp relation.
+
+\section{Circular-Binary Radiation and the Leading Chirp Relation}
+\label{sec:n10_circular_binary_chirp}
+
+The total quadrupole luminosity derived in Section~\ref{sec:n9_tensor_energy_flux} is
+\begin{equation}
+    P_{\mathrm{GW}} = \frac{G}{5c_{\mathrm{E}}^{5}} \left\langle \dddot{Q}_{ij} \dddot{Q}_{ij} \right\rangle.
+    \label{eq:n10_general_quadrupole_luminosity}
+\end{equation}
+The present section applies this result to two compact masses in a weak-field, slowly evolving circular orbit. The calculation derives the leading orbital-energy loss, separation decay, gravitational-wave frequency evolution, and chirp-mass relation without introducing any additional tensor-response coefficient.
+
+The derivation assumes that the orbital motion remains within the weak-field State-I regime and that the orbital evolution is adiabatic:
+\begin{equation}
+    \left| \frac{\dot{\Omega}}{\Omega^{2}} \right| \ll 1.
+    \label{eq:n10_adiabatic_condition}
+\end{equation}
+The orbit may therefore be treated as circular over each individual radiation cycle while its separation and frequency evolve slowly through gravitational-wave energy loss.
+
+\subsection{Center-of-Mass Binary Kinematics}
+\label{subsec:n10_binary_kinematics}
+
+Let the two source masses be $m_{1}$ and $m_{2}$. Define the total mass
+\begin{equation}
+    M \equiv m_{1}+m_{2},
+    \label{eq:n10_total_mass}
+\end{equation}
+and the reduced mass
+\begin{equation}
+    \mu \equiv \frac{m_{1}m_{2}}{M}.
+    \label{eq:n10_reduced_mass}
+\end{equation}
+
+In the center-of-mass frame, $m_{1}\mathbf{x}_{1} + m_{2}\mathbf{x}_{2} = \mathbf{0}$. Let the relative separation vector be $\mathbf{r} \equiv \mathbf{x}_{1} - \mathbf{x}_{2}$. For a circular orbit in the $xy$-plane,
+\begin{equation}
+    \mathbf{r}(t) = r
+    \begin{pmatrix}
+        \cos\Omega t \\
+        \sin\Omega t \\
+        0
+    \end{pmatrix},
+    \label{eq:n10_circular_separation}
+\end{equation}
+where $r$ is the instantaneous binary separation and $\Omega$ is the orbital angular frequency.
+
+The center-of-mass positions are $\mathbf{x}_{1} = \frac{m_{2}}{M}\mathbf{r}$ and $\mathbf{x}_{2} = - \frac{m_{1}}{M}\mathbf{r}$.
+
+For two pointlike source masses, the symmetric trace-free mass quadrupole defined in Section~\ref{sec:n8_source_quadrupole} reduces to
+\begin{equation}
+    Q_{ij} = \mu \left( r_{i}r_{j} - \frac{1}{3} \delta_{ij}r^{2} \right).
+    \label{eq:n10_binary_quadrupole}
+\end{equation}
+
+The weak-field circular-orbit balance supplied by the static restorative gravitational sector is
+\begin{equation}
+    \Omega^{2} = \frac{GM}{r^{3}}.
+    \label{eq:n10_kepler_relation}
+\end{equation}
+This relation determines the conservative orbital motion. The tensor-radiation sector then determines the slow secular loss of orbital energy.
+
+\subsection{Time-Dependent Binary Quadrupole}
+\label{subsec:n10_binary_quadrupole}
+
+Using Equation~\eqref{eq:n10_circular_separation}, the nonzero quadrupole components are
+\begin{equation}
+    Q_{xx} = \mu r^{2} \left[ \frac{1}{6} + \frac{1}{2} \cos(2\Omega t) \right],
+    \label{eq:n10_Qxx}
+\end{equation}
+\begin{equation}
+    Q_{yy} = \mu r^{2} \left[ \frac{1}{6} - \frac{1}{2} \cos(2\Omega t) \right],
+    \label{eq:n10_Qyy}
+\end{equation}
+\begin{equation}
+    Q_{xy} = Q_{yx} = \frac{1}{2} \mu r^{2} \sin(2\Omega t),
+    \label{eq:n10_Qxy}
+\end{equation}
+and
+\begin{equation}
+    Q_{zz} = - \frac{1}{3} \mu r^{2}.
+    \label{eq:n10_Qzz}
+\end{equation}
+The trace vanishes: $Q_{xx} + Q_{yy} + Q_{zz} = 0$.
+
+At leading adiabatic order, $r$ and $\Omega$ are treated as constant during differentiation over one orbital cycle. The third derivatives of the time-dependent components are then
+\begin{align}
+    \dddot{Q}_{xx} &= 4\mu r^{2}\Omega^{3} \sin(2\Omega t), \\
+    \dddot{Q}_{yy} &= - 4\mu r^{2}\Omega^{3} \sin(2\Omega t), \\
+    \dddot{Q}_{xy} &= \dddot{Q}_{yx} = - 4\mu r^{2}\Omega^{3} \cos(2\Omega t).
+\end{align}
+The component $Q_{zz}$ is constant at this order and therefore gives $\dddot{Q}_{zz} = 0$.
+
+The complete contraction is
+\begin{equation}
+    \begin{aligned}
+        \dddot{Q}_{ij} \dddot{Q}_{ij} &= \left( \dddot{Q}_{xx} \right)^{2} + \left( \dddot{Q}_{yy} \right)^{2} + 2 \left( \dddot{Q}_{xy} \right)^{2} \\
+        &= 32 \mu^{2} r^{4} \Omega^{6}.
+    \end{aligned}
+\end{equation}
+Therefore,
+\begin{equation}
+    \left\langle \dddot{Q}_{ij} \dddot{Q}_{ij} \right\rangle = 32 \mu^{2} r^{4} \Omega^{6}.
+    \label{eq:n10_quadrupole_contraction}
+\end{equation}
+For an exactly circular orbit at the retained order, this contraction is already time independent, so the cycle average does not alter its value.
+
+\subsection{Circular-Binary Gravitational-Wave Power}
+\label{subsec:n10_binary_power}
+
+Substitution of Equation~\eqref{eq:n10_quadrupole_contraction} into the general luminosity Equation~\eqref{eq:n10_general_quadrupole_luminosity} gives
+\begin{equation}
+    P_{\mathrm{GW}} = \frac{32}{5} \frac{ G\mu^{2}r^{4}\Omega^{6} }{ c_{\mathrm{E}}^{5} }.
+    \label{eq:n10_binary_power_omega_r}
+\end{equation}
+
+Using the weak-field orbital relation $\Omega^{2} = GM/r^{3}$, one obtains $r^{4}\Omega^{6} = G^{3}M^{3}/r^{5}$. Hence,
+\begin{equation}
+    P_{\mathrm{GW}} = \frac{32}{5} \frac{ G^{4}\mu^{2}M^{3} }{ c_{\mathrm{E}}^{5}r^{5} }.
+    \label{eq:n10_binary_power_separation}
+\end{equation}
+
+The radiation power may also be expressed directly in terms of orbital angular frequency. From Equation~\eqref{eq:n10_kepler_relation}, $r = \left( GM/\Omega^{2} \right)^{1/3}$. Substitution into Equation~\eqref{eq:n10_binary_power_omega_r} gives
+\begin{equation}
+    P_{\mathrm{GW}} = \frac{32}{5} \frac{ G^{7/3} \mu^{2} M^{4/3} }{ c_{\mathrm{E}}^{5} } \Omega^{10/3}.
+    \label{eq:n10_binary_power_frequency_prechirp}
+\end{equation}
+
+No new tensor-projection coefficient appears in any of these forms. The normalization is inherited entirely from the collective tensor action and angular quadrupole calculation completed in Sections~\ref{sec:n6_static_tensor_normalization}--\ref{sec:n9_tensor_energy_flux}.
+
+\subsection{Orbital Energy and Separation Decay}
+\label{subsec:n10_orbital_decay}
+
+The conservative mechanical energy of the circular binary is
+\begin{equation}
+    E_{\mathrm{orb}} = \frac{1}{2} \mu r^{2}\Omega^{2} - \frac{GM\mu}{r}.
+    \label{eq:n10_orbital_energy_initial}
+\end{equation}
+Using the circular-orbit relation $r^{2}\Omega^{2} = GM/r$, the orbital energy becomes
+\begin{equation}
+    E_{\mathrm{orb}} = - \frac{ GM\mu }{ 2r }.
+    \label{eq:n10_orbital_energy}
+\end{equation}
+
+The local tensor-energy balance derived in Section~\ref{sec:n9_tensor_energy_flux} requires
+\begin{equation}
+    \frac{dE_{\mathrm{orb}}}{dt} = - P_{\mathrm{GW}}.
+    \label{eq:n10_energy_balance}
+\end{equation}
+Differentiating Equation~\eqref{eq:n10_orbital_energy}, we find $\frac{dE_{\mathrm{orb}}}{dt} = \frac{ GM\mu }{ 2r^{2} } \dot{r}$. Using Equation~\eqref{eq:n10_binary_power_separation}, $\frac{ GM\mu }{ 2r^{2} } \dot{r} = - \frac{32}{5} \frac{ G^{4}\mu^{2}M^{3} }{ c_{\mathrm{E}}^{5}r^{5} }$. Therefore,
+\begin{equation}
+    \dot{r} = - \frac{64}{5} \frac{ G^{3}\mu M^{2} }{ c_{\mathrm{E}}^{5}r^{3} }.
+    \label{eq:n10_separation_decay}
+\end{equation}
+
+The negative sign indicates a secular decrease in binary separation. The radiated tensor energy is supplied by the mechanical binding energy of the source, so the orbit contracts as the outgoing State-I tensor field carries positive energy away from the system.
+
+\subsection{Frequency Evolution and Chirp Mass}
+\label{subsec:n10_chirp_relation}
+
+Differentiating the circular-orbit relation
+\begin{equation}
+    \Omega^{2} = \frac{GM}{r^{3}},
+\end{equation}
+with $M$ constant gives $2\frac{\dot{\Omega}}{\Omega} = - 3\frac{\dot{r}}{r}$. Thus, $\dot{\Omega} = - \frac{3}{2} \Omega \frac{\dot{r}}{r}$. Using Equation~\eqref{eq:n10_separation_decay},
+\begin{equation}
+    \dot{\Omega} = \frac{96}{5} \frac{ G^{3}\mu M^{2} }{ c_{\mathrm{E}}^{5}r^{4} } \Omega.
+    \label{eq:n10_omega_dot_r}
+\end{equation}
+
+Eliminating $r$ through $r = \left( GM/\Omega^{2} \right)^{1/3}$ gives
+\begin{equation}
+    \dot{\Omega} = \frac{96}{5} \frac{ G^{5/3}\mu M^{2/3} }{ c_{\mathrm{E}}^{5} } \Omega^{11/3}.
+    \label{eq:n10_omega_chirp}
+\end{equation}
+
+Define the chirp mass by
+\begin{equation}
+    \mathcal{M} \equiv \mu^{3/5}M^{2/5}.
+    \label{eq:n10_chirp_mass}
+\end{equation}
+This definition gives $\mathcal{M}^{5/3} = \mu M^{2/3}$. Equation~\eqref{eq:n10_omega_chirp} therefore becomes
+\begin{equation}
+    \dot{\Omega} = \frac{96}{5} \frac{ \left( G\mathcal{M} \right)^{5/3} }{ c_{\mathrm{E}}^{5} } \Omega^{11/3}.
+    \label{eq:n10_omega_chirp_mass}
+\end{equation}
+
+The dominant quadrupole radiation oscillates at twice the orbital angular frequency: $\omega_{\mathrm{GW}} = 2\Omega$. The corresponding gravitational-wave cyclic frequency is
+\begin{equation}
+    f_{\mathrm{GW}} = \frac{ \omega_{\mathrm{GW}} }{ 2\pi } = \frac{\Omega}{\pi}.
+    \label{eq:n10_gw_frequency}
+\end{equation}
+
+For the remainder of this section, define $f \equiv f_{\mathrm{GW}}$. Then $\Omega = \pi f$, and $\dot{\Omega} = \pi\dot{f}$. Substitution into Equation~\eqref{eq:n10_omega_chirp_mass} gives
+\begin{equation}
+    \dot{f} = \frac{96}{5} \pi^{8/3} \frac{ \left( G\mathcal{M} \right)^{5/3} }{ c_{\mathrm{E}}^{5} } f^{11/3}.
+    \label{eq:n10_frequency_chirp}
+\end{equation}
+
+Equation~\eqref{eq:n10_frequency_chirp} is the leading circular-binary chirp relation. The increasing frequency follows mechanically from the sequence:
+\begin{equation}
+    \text{positive outgoing tensor-energy flux} \longrightarrow \text{loss of orbital binding energy} \longrightarrow \text{decreasing separation} \longrightarrow \text{increasing orbital frequency}.
+\end{equation}
+
+The mass combination controlling this frequency evolution is the chirp mass $\mathcal{M}$, not the total mass or reduced mass separately.
+
+\subsection{Time Remaining in the Leading Adiabatic Limit}
+\label{subsec:n10_time_to_coalescence}
+
+Equation~\eqref{eq:n10_frequency_chirp} may be written
+\begin{equation}
+    \frac{df}{dt} = \mathcal{A} f^{11/3},
+\end{equation}
+where $\mathcal{A} \equiv \frac{96}{5} \pi^{8/3} \left( G\mathcal{M} \right)^{5/3} / c_{\mathrm{E}}^{5}$. Separating variables gives $dt = \frac{1}{\mathcal{A}} f^{-11/3} df$. Integration from the instantaneous frequency $f$ to the formal endpoint of the leading adiabatic approximation gives $t_{\mathrm{c}}-t = \frac{3}{8\mathcal{A}} f^{-8/3}$. Therefore,
+\begin{equation}
+    t_{\mathrm{c}}-t = \frac{5}{256} \frac{ c_{\mathrm{E}}^{5} }{ \pi^{8/3} \left( G\mathcal{M} \right)^{5/3} } f^{-8/3}.
+    \label{eq:n10_time_to_coalescence}
+\end{equation}
+Equivalently,
+\begin{equation}
+    t_{\mathrm{c}}-t = \frac{5}{256} \left( \frac{ G\mathcal{M} }{ c_{\mathrm{E}}^{3} } \right)^{-5/3} \left( \pi f \right)^{-8/3}.
+    \label{eq:n10_time_to_coalescence_compact}
+\end{equation}
+
+The quantity $t_{\mathrm{c}}$ is the formal endpoint obtained by extrapolating the leading weak-field adiabatic law. It is not identified with the exact microscopic time of FCC-to-SC contact, merger, saturation, or ringdown. Those regimes require the nonlinear live-boundary dynamics excluded from the present approximation.
+
+\subsection{Frequency-Domain Power}
+\label{subsec:n10_frequency_domain_power}
+
+Using the chirp mass identity $\mu^{2}M^{4/3} = \mathcal{M}^{10/3}$, Equation~\eqref{eq:n10_binary_power_frequency_prechirp} becomes
+\begin{equation}
+    P_{\mathrm{GW}} = \frac{32}{5} \frac{ G^{7/3}\mathcal{M}^{10/3} }{ c_{\mathrm{E}}^{5} } \Omega^{10/3}.
+\end{equation}
+Using $\Omega = \pi f$, one obtains
+\begin{equation}
+    P_{\mathrm{GW}}(f) = \frac{32}{5} \frac{ G^{7/3}\mathcal{M}^{10/3} }{ c_{\mathrm{E}}^{5} } \left( \pi f \right)^{10/3}.
+    \label{eq:n10_frequency_domain_power}
+\end{equation}
+Equivalently,
+\begin{equation}
+    P_{\mathrm{GW}}(f) = \frac{32}{5} \frac{ c_{\mathrm{E}}^{5} }{ G } \left( \frac{ \pi G\mathcal{M}f }{ c_{\mathrm{E}}^{3} } \right)^{10/3}.
+    \label{eq:n10_dimensionless_frequency_power}
+\end{equation}
+
+The natural luminosity scale is therefore $c_{\mathrm{E}}^{5}/G$, multiplied by the dimensionless orbital-frequency factor $\left( \pi G\mathcal{M}f / c_{\mathrm{E}}^{3} \right)^{10/3}$.
+
+\subsection{Mechanical Interpretation}
+\label{subsec:n10_mechanical_interpretation}
+
+The leading circular-binary result closes the following mechanical chain:
+\begin{equation}
+    \text{restorative static orbital binding} \longrightarrow Q_{ij}(t) \longrightarrow \mathsf{H}_{ij}^{(\mathrm{GW})} \longrightarrow P_{\mathrm{GW}} \longrightarrow \dot{r}<0, \;\; \dot{f}>0.
+\end{equation}
+
+The conservative orbital relation and the radiative tensor relation occupy distinct but coupled sectors. The static tension field determines the instantaneous orbital binding, while the dynamic transverse-traceless State-I tensor carries energy away from the source. Their common dependence on $G$ follows from the single static-to-tensor normalization established in Section~\ref{sec:n6_static_tensor_normalization}.
+
+No additional dark-sector component, phenomenological radiation-reaction coefficient, microscopic participation factor, or event-calibrated vacuum stiffness is inserted into the leading chirp relation.
+
+\subsection{Domain of Validity and Completion Boundary}
+\label{subsec:n10_scope}
+
+The results of this section apply under the following conditions:
+\begin{enumerate}
+    \item the binary is spatially localized relative to the emitted wavelength;
+    \item the exterior remains in the weak-field State-I phase;
+    \item the source motion is nonrelativistic at the retained order;
+    \item the orbit is circular or has negligible eccentricity over the evaluated interval;
+    \item the radiation reaction is adiabatic;
+    \item the masses may be represented by an effective conserved source density; and
+    \item the strong-field FCC-to-SC live-boundary dynamics have not yet become dominant.
+\end{enumerate}
+
+The formulas
+\begin{equation}
+    P_{\mathrm{GW}} = \frac{32}{5} \frac{ G^{4}\mu^{2}M^{3} }{ c_{\mathrm{E}}^{5}r^{5} }, \qquad \text{and} \qquad \dot{f} = \frac{96}{5} \pi^{8/3} \frac{ \left( G\mathcal{M} \right)^{5/3} }{ c_{\mathrm{E}}^{5} } f^{11/3}
+\end{equation}
+are therefore the leading weak-field circular-binary limit of the TFT tensor sector.
+
+They do not by themselves describe the nonlinear merger, FCC-to-SC phase conversion, evolving saturation boundary, or ringdown spectrum. Completing those regimes requires deriving the effective quadrupole and its higher-order corrections directly from the evolving microscopic live-boundary variables.
+
+The next section uses the independently derived spectral response, quadrupole strain, energy flux, and chirp relation to evaluate GW150914 as an observational consistency check rather than as a calibration input.
+
+\section{GW150914 as an Observational Consistency Check}
+\label{sec:n11_gw150914_consistency}
+
+The preceding sections determine the gravity-neutral tensor-gradient normalization, spectral response, far-zone quadrupole strain, tensor-energy flux, total quadrupole luminosity, and leading circular-binary chirp relation without using a gravitational-wave event to define any constitutive coefficient. GW150914 may therefore be used as an observational consistency check rather than as a calibration of the State-I vacuum.
+
+The logical direction of the comparison is
+\begin{equation}
+    \left\{ c_{\mathrm{E}}, G, r_{\mathrm{D}}, \ell_{\mathrm{S}}, f \right\} \longrightarrow \left\{ K_{\mathrm{GW}}^{(\mathrm{eff})}, \rho_{\mathrm{GW}}^{(\mathrm{eff})}, Z_{\mathrm{GW}}^{(\mathrm{eff})}, \zeta_{\mathrm{GW}} \right\} \longrightarrow \text{event-band comparison}.
+    \label{eq:n11_logical_direction}
+\end{equation}
+It is not
+\begin{equation}
+    \text{event strain and inferred flux} \longrightarrow \text{definition of the vacuum response}.
+\end{equation}
+
+The event therefore tests the scale and leading form of quantities derived independently from the TFT tensor action. It does not define those quantities.
+
+\subsection{Representative Event-Band Spectral Response}
+\label{subsec:n11_event_band_response}
+
+Consider the representative gravitational-wave frequency $f_{\mathrm{ref}} = 150\,\mathrm{Hz}$. This value is used as a representative frequency within the event band. It is not interpreted as a unique monochromatic frequency of the complete transient waveform.
+
+The corresponding angular frequency and gravity-neutral wave number are $\omega_{\mathrm{ref}} = 2\pi f_{\mathrm{ref}}$, and $k_{\mathrm{ref}} = 2\pi f_{\mathrm{ref}} / c_{\mathrm{E}} \simeq 3.14\times10^{-6}\,\mathrm{m^{-1}}$.
+
+Section~\ref{sec:n7_spectral_response} gives the frequency-domain spectral coefficients:
+\begin{align}
+    K_{\mathrm{GW}}^{(\mathrm{eff})}(f) &= \frac{ \pi c_{\mathrm{E}}^{2}f^{2} }{ 4G }, \label{eq:n11_spectral_stiffness_frequency} \\
+    \rho_{\mathrm{GW}}^{(\mathrm{eff})}(f) &= \frac{ \pi f^{2} }{ 4G }, \label{eq:n11_spectral_density_frequency} \\
+    Z_{\mathrm{GW}}^{(\mathrm{eff})}(f) &= \frac{ \pi c_{\mathrm{E}}f^{2} }{ 4G }. \label{eq:n11_spectral_impedance_frequency}
+\end{align}
+
+The microscopic-to-collective response ratio is
+\begin{equation}
+    \zeta_{\mathrm{GW}}(f) = \frac{1}{\sqrt{2}} \left( \frac{ r_{\mathrm{D}} }{ \ell_{\mathrm{S}} } \right)^{2} \left( \frac{ fr_{\mathrm{D}} }{ c_{\mathrm{E}} } \right)^{2}.
+    \label{eq:n11_zeta_frequency}
+\end{equation}
+
+Using $r_{\mathrm{D}} \simeq 7.45\times10^{-27}\,\mathrm{m}$ and $\ell_{\mathrm{S}} \simeq 1.6163\times10^{-35}\,\mathrm{m}$, the resulting representative values are summarized in Table~\ref{tab:n11_event_band_response}.
+
+\begin{table}[H]
+    \centering
+    \caption{Derived State-I tensor-response quantities at the representative frequency $f_{\mathrm{ref}}=150\,\mathrm{Hz}$. The values follow from the independently normalized TFT tensor-gradient action and are not fitted to GW150914.}
+    \label{tab:n11_event_band_response}
+    \renewcommand{\arraystretch}{1.4}
+    \small
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Quantity} & \textbf{Derived expression} & \textbf{Representative value} \\
+        \midrule
+        $k_{\mathrm{ref}}$ & $2\pi f_{\mathrm{ref}}/c_{\mathrm{E}}$ & $3.14\times10^{-6}\,\mathrm{m^{-1}}$ \\
+        $K_{\mathrm{GW}}^{(\mathrm{eff})}$ & $\pi c_{\mathrm{E}}^{2}f_{\mathrm{ref}}^{2}/(4G)$ & $2.38\times10^{31}\,\mathrm{Pa}$ \\
+        $\rho_{\mathrm{GW}}^{(\mathrm{eff})}$ & $\pi f_{\mathrm{ref}}^{2}/(4G)$ & $2.65\times10^{14}\,\mathrm{kg\,m^{-3}}$ \\
+        $Z_{\mathrm{GW}}^{(\mathrm{eff})}$ & $\pi c_{\mathrm{E}}f_{\mathrm{ref}}^{2}/(4G)$ & $7.94\times10^{22}\,\mathrm{kg\,m^{-2}\,s^{-1}}$ \\
+        $\zeta_{\mathrm{GW}}$ & Equation~\eqref{eq:n11_zeta_frequency} & $2.1\times10^{-48}$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+For the established microscopic affine scaffold scale $K_{\mathrm{sh}}^{(\mathrm{micro},0)} \simeq 1.14\times10^{79}\,\mathrm{Pa}$, the same hierarchy is recovered directly:
+\begin{equation}
+    \frac{ K_{\mathrm{GW}}^{(\mathrm{eff})} \left( f_{\mathrm{ref}} \right) }{ K_{\mathrm{sh}}^{(\mathrm{micro},0)} } \simeq 2.1\times10^{-48}.
+    \label{eq:n11_direct_zeta_check}
+\end{equation}
+
+The large pressure- and density-dimensioned quantities in Table~\ref{tab:n11_event_band_response} are not universal equilibrium properties of the vacuum. They are spectral equivalents of the force-dimensioned tensor-gradient action evaluated at the selected frequency.
+
+The extremely small value of $\zeta_{\mathrm{GW}}$ does not imply that only a corresponding fraction of the FCC scaffold physically exists or participates in the wave. It measures the ratio between the pressure-equivalent response of a long-wavelength collective tensor-gradient mode and the local affine primitive-cell scaffold response.
+
+\subsection{Representative Strain--Flux Scale}
+\label{subsec:n11_strain_flux_scale}
+
+For a locally monochromatic tensor wave, define the total peak polarization amplitude by
+\begin{equation}
+    h_{\mathrm{eff}}^{2} \equiv \left( h_{+}^{(0)} \right)^{2} + \left( h_{\times}^{(0)} \right)^{2}.
+    \label{eq:n11_effective_polarization_amplitude}
+\end{equation}
+
+Section~\ref{sec:n9_tensor_energy_flux} gives the cycle-averaged intensity
+\begin{equation}
+    \left\langle I_{\mathrm{GW}} \right\rangle = \frac{1}{2} K_{\mathrm{GW}}^{(\mathrm{eff})}(f) c_{\mathrm{E}} h_{\mathrm{eff}}^{2}.
+    \label{eq:n11_spectral_intensity}
+\end{equation}
+
+For the representative total polarization amplitude $h_{\mathrm{eff}} = 10^{-21}$ at $f = 150\,\mathrm{Hz}$, the independently derived tensor response gives
+\begin{equation}
+    \left\langle I_{\mathrm{GW}} \right\rangle_{\mathrm{ref}} \simeq 3.57\times10^{-3}\,\mathrm{W\,m^{-2}}.
+    \label{eq:n11_reference_intensity}
+\end{equation}
+
+This value establishes a representative terrestrial flux scale associated with a total polarization amplitude of order $10^{-21}$ in the selected frequency band. It is not a direct reconstruction of GW150914 because an interferometer measures the detector-projected strain
+\begin{equation}
+    h_{\mathrm{det}}(t) = F_{+}h_{+}(t) + F_{\times}h_{\times}(t),
+    \label{eq:n11_detector_response}
+\end{equation}
+where $F_{+}$ and $F_{\times}$ are antenna-response factors determined by the source direction, detector orientation, and polarization basis.
+
+In general, $h_{\mathrm{det}} \neq h_{\mathrm{eff}}$. A detector-level strain--flux comparison must additionally include the source inclination, the relative polarization phase, the time-dependent waveform amplitude, the luminosity-distance inference, and the distinction among instantaneous, cycle-averaged, and band-integrated flux.
+
+Equation~\eqref{eq:n11_reference_intensity} is therefore an order-of-magnitude constitutive check rather than a substitute for a full detector-response analysis.
+
+\subsection{Relation to the Earlier Event-Derived Estimate}
+\label{subsec:n11_previous_event_estimate}
+
+An earlier event-based estimate used during the development of this appendix adopted the representative flux proxy $I_{\mathrm{proxy}} \simeq 1.41\times10^{-3}\,\mathrm{W\,m^{-2}}$, together with $h_{\mathrm{rep}} \simeq 10^{-21}$, and the monochromatic relation $I = \frac{1}{2} K_{\mathrm{GW}}^{(\mathrm{eff})} c_{\mathrm{E}} h^{2}$. Solving for the pressure-equivalent coefficient gave
+\begin{equation}
+    K_{\mathrm{GW}}^{(\mathrm{event})} = \frac{ 2I_{\mathrm{proxy}} }{ c_{\mathrm{E}}h_{\mathrm{rep}}^{2} } \simeq 9.4\times10^{30}\,\mathrm{Pa}.
+    \label{eq:n11_previous_event_stiffness}
+\end{equation}
+
+The independently derived spectral value at the representative frequency is $K_{\mathrm{GW}}^{(\mathrm{eff})} \left( 150\,\mathrm{Hz} \right) \simeq 2.38\times10^{31}\,\mathrm{Pa}$. Their ratio is
+\begin{equation}
+    \frac{ K_{\mathrm{GW}}^{(\mathrm{eff})} \left( 150\,\mathrm{Hz} \right) }{ K_{\mathrm{GW}}^{(\mathrm{event})} } \simeq 2.53.
+    \label{eq:n11_stiffness_comparison_ratio}
+\end{equation}
+
+The two estimates therefore occupy the same order of magnitude: $K_{\mathrm{GW}}^{(\mathrm{eff})} \sim 10^{31}\,\mathrm{Pa}$. The remaining numerical difference is not diagnostically significant because the earlier construction combined a detector-projected strain, a representative event frequency, and an inferred flux proxy as though they were the total polarization amplitude, monochromatic frequency, and cycle-averaged intensity of one matched Fourier component.
+
+Those quantities are not generally equivalent. In particular, the detector strain is filtered through Equation~\eqref{eq:n11_detector_response}, whereas the flux proxy is inferred from a source luminosity and distance model rather than measured independently as a local tensor-energy flux.
+
+The value $K_{\mathrm{GW}}^{(\mathrm{event})} \simeq 9.4\times10^{30}\,\mathrm{Pa}$ is therefore retained only as a retrospective order-of-magnitude comparison. It no longer defines $K_{\mathrm{GW}}^{(\mathrm{eff})}$.
+
+\subsection{Consistency of the Leading Chirp Structure}
+\label{subsec:n11_chirp_consistency}
+
+Section~\ref{sec:n10_circular_binary_chirp} derives the leading weak-field frequency evolution
+\begin{equation}
+    \dot{f} = \frac{96}{5} \pi^{8/3} \frac{ \left( G\mathcal{M} \right)^{5/3} }{ c_{\mathrm{E}}^{5} } f^{11/3}.
+    \label{eq:n11_chirp_relation}
+\end{equation}
+
+The relation predicts $\dot{f} > 0$ for a bound circular binary that loses positive mechanical energy through the outgoing tensor field.
+
+Equation~\eqref{eq:n11_chirp_relation} may be inverted to infer the chirp mass from a weak-field frequency track:
+\begin{equation}
+    \mathcal{M}_{\mathrm{chirp}} = \frac{1}{G} \left[ \frac{5}{96} \pi^{-8/3} c_{\mathrm{E}}^{5} \dot{f} f^{-11/3} \right]^{3/5}.
+    \label{eq:n11_inferred_chirp_mass}
+\end{equation}
+
+Within the leading adiabatic regime, a consistent compact-binary inspiral should yield an approximately constant value of $\mathcal{M}$ when Equation~\eqref{eq:n11_inferred_chirp_mass} is evaluated over the weak-field portion of the waveform.
+
+The rising-frequency character of GW150914 is compatible with the mechanical sequence:
+\begin{equation}
+    P_{\mathrm{GW}} > 0 \longrightarrow \dot{E}_{\mathrm{orb}} < 0 \longrightarrow \dot{r} < 0 \longrightarrow \dot{f} > 0.
+\end{equation}
+
+A numerical reconstruction of the event parameters requires the detector data, waveform conditioning, source orientation, cosmological redshift treatment, and higher-order orbital and strong-field corrections. The present comparison is restricted to the leading functional structure
+\begin{equation}
+    \dot{f} \propto \mathcal{M}^{5/3}f^{11/3}.
+    \label{eq:n11_leading_chirp_scaling}
+\end{equation}
+
+\subsection{Observational Status and Limits}
+\label{subsec:n11_event_test_scope}
+
+The comparison with GW150914 supports a limited consistency statement. The independently normalized TFT tensor sector produces:
+\begin{enumerate}
+    \item a positive far-zone tensor-energy flux;
+    \item a representative strain--flux scale compatible in order of magnitude with a compact-binary event in the selected frequency band; and
+    \item the leading circular-binary dependence $\dot{f} \propto \mathcal{M}^{5/3}f^{11/3}$.
+\end{enumerate}
+
+The event does not directly measure $K_{\mathrm{GW}}^{(\mathrm{eff})}$, $\rho_{\mathrm{GW}}^{(\mathrm{eff})}$, $Z_{\mathrm{GW}}^{(\mathrm{eff})}$, or $\zeta_{\mathrm{GW}}$. These are TFT spectral representations derived from the normalized tensor-gradient action and evaluated using the representative event-band frequency.
+
+The comparison also does not independently establish the microscopic FCC bond-dyad origin of the tensor basis, the directional-transfer interpretation of $\mathsf{H}_{ij}^{(\mathrm{GW})}$, the complete finite-wave-number FCC tensor eigenbranch, the loaded-background endpoint inheritance, the Hard-Floor record mechanism, the microscopic live-boundary map to $Q_{ij}$, or the nonlinear merger and ringdown dynamics.
+
+The defensible conclusion is therefore
+\begin{equation}
+    \begin{gathered}
+        \text{the independently derived TFT tensor response is consistent} \\
+        \text{in representative scale and leading inspiral form with GW150914}
+    \end{gathered}.
+    \label{eq:n11_consistency_conclusion}
+\end{equation}
+
+The event is not used to prove the microscopic FCC mechanism, and the proposed microscopic mechanism is not presented as a complete detector-level reanalysis of the event.
+
+The following section closes the appendix by separating static gravitational loading from dynamic tensor radiation, consolidating the roles of the Soft Floor, interstitial condensate, Hard Floor, and Tension-Column architecture, and stating the remaining microscopic and strong-field completion requirements once.
+
+\section{Sector Synthesis, Scope, and Conclusion}
+\label{sec:n12_static_dynamic_gravity}
+
+The preceding sections establish static gravitational loading and gravitational radiation as distinct dynamical sectors of the same active State-I mechanical architecture. They share the FCC Soft-Floor carrier, the interstitial-condensate constraint, the structural force scale $F_{\mathrm{S}}$, and the weak-field source normalization. They are not, however, the same constitutive coordinate.
+
+Static gravity is an equilibrated scalar loading of the active vacuum. Gravitational radiation is a propagating transverse-traceless redistribution of directional transfer within that vacuum. Their separation follows from the directional-tensor decomposition introduced in Section~\ref{sec:n4_collective_directional_tension}.
+
+\subsection{Scalar and Tensor Directional Sectors}
+\label{subsec:n12_scalar_tensor_separation}
+
+The six FCC directional-transfer amplitudes decompose as $\lambda_{a} = \overline{\lambda} + \lambda_{a}^{\circ}$, where $\overline{\lambda} = \frac{1}{6} \sum_{a=1}^{6} \lambda_{a}$ and $\sum_{a=1}^{6} \lambda_{a}^{\circ} = 0$.
+
+The corresponding directional-transfer tensor is $\mathsf{A}_{ij} = \sum_{a=1}^{6} \lambda_{a} (\mathbf{P}_{a})_{ij}$. Using the identity $\sum_{a=1}^{6} \mathbf{P}_{a} = 2\mathbf{I}$, one obtains
+\begin{equation}
+    \mathsf{A}_{ij} = 2\overline{\lambda}\,\delta_{ij} + \mathsf{A}_{ij}^{\circ},
+    \label{eq:n12_directional_decomposition}
+\end{equation}
+where $\mathsf{A}_{ij}^{\circ} = \sum_{a=1}^{6} \lambda_{a}^{\circ} (\mathbf{P}_{a})_{ij}$ and $\mathsf{A}_{ii}^{\circ} = 0$.
+
+The scalar term $2\overline{\lambda}\,\delta_{ij}$ changes the common directional loading and therefore belongs to the isotropic structural sector. The trace-free term $\mathsf{A}_{ij}^{\circ}$ redistributes directional transfer while preserving the first-order scalar capacity.
+
+For a selected propagation direction $\mathbf{s}$, the radiative tensor is
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} = \Lambda_{ij,kl}^{(\mathrm{TT})}(\mathbf{s}) \mathsf{A}_{kl}^{\circ}.
+    \label{eq:n12_radiative_projection}
+\end{equation}
+It satisfies
+\begin{equation}
+    \mathsf{H}_{ij}^{(\mathrm{GW})} = \mathsf{H}_{ji}^{(\mathrm{GW})}, \qquad s^{i} \mathsf{H}_{ij}^{(\mathrm{GW})} = 0, \qquad \mathsf{H}_{ii}^{(\mathrm{GW})} = 0.
+\end{equation}
+
+The structural distinction may therefore be summarized as:
+\begin{itemize}
+    \item \textbf{static gravitational loading} $\longleftrightarrow$ scalar directional sector
+    \item \textbf{gravitational radiation} $\longleftrightarrow$ transverse-traceless directional redistribution
+\end{itemize}
+
+\subsection{Static Restorative Gravity}
+\label{subsec:n12_static_gravity}
+
+The static gravitational sector is described by the specific tension potential $\Phi_{\tau}(\mathbf{x})$, which satisfies the weak-field source equation
+\begin{equation}
+    \nabla^{2}\Phi_{\tau} = 4\pi G\rho.
+    \label{eq:n12_static_poisson}
+\end{equation}
+
+The corresponding dimensionless structural loading is
+\begin{equation}
+    \alpha_{\mathrm{G}} = - \frac{ \Phi_{\tau} }{ c_{\mathrm{E}}^{2} }.
+    \label{eq:n12_alpha_static_relation}
+\end{equation}
+For an isolated point source, $\alpha_{\mathrm{G}}(R) = GM / (Rc_{\mathrm{E}}^{2})$.
+
+The static configuration is an equilibrated restorative state. It determines the local loading, propagation capacity, and effective optical response of the active State-I medium. In the endpoint-transfer construction of \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}, the corresponding completed local propagation capacity is
+\begin{equation}
+    c_{\mathrm{P}}(\mathbf{x}) = c_{\mathrm{E}} \left[ 1-\alpha_{\mathrm{G}}(\mathbf{x}) \right]^{2}.
+    \label{eq:n12_loaded_propagation_capacity}
+\end{equation}
+
+A static gravitational configuration may be nonzero without containing an outgoing gravitational wave: $\alpha_{\mathrm{G}} \neq 0$ and $\mathsf{H}_{ij}^{(\mathrm{GW})} = 0$. A time-independent monopole field therefore represents an equilibrated structural loading rather than a radiative tensor state.
+
+\subsection{Dynamic Tensor Radiation}
+\label{subsec:n12_dynamic_radiation}
+
+The radiative sector is governed by the normalized collective equation
+\begin{equation}
+    \frac{1}{ c_{\mathrm{E}}^{2} } \ddot{\mathsf{H}}_{ij}^{(\mathrm{GW})} - \nabla^{2} \mathsf{H}_{ij}^{(\mathrm{GW})} = \frac{ 8\pi G }{ c_{\mathrm{E}}^{4} } T_{ij}^{(\mathrm{TT})}.
+    \label{eq:n12_dynamic_tensor_equation}
+\end{equation}
+
+The source term is the transverse-traceless projection of the localized mechanical momentum-flux tensor. Once the tensor state leaves the source region, $T_{ij}^{(\mathrm{TT})} = 0$, and the propagation equation becomes
+\begin{equation}
+    \frac{1}{ c_{\mathrm{E}}^{2} } \ddot{\mathsf{H}}_{ij}^{(\mathrm{GW})} - \nabla^{2} \mathsf{H}_{ij}^{(\mathrm{GW})} = 0.
+    \label{eq:n12_free_tensor_equation}
+\end{equation}
+
+The factor $8\pi$ fixes the source-to-tensor normalization. It is not an additional free-propagation geometry or a local impedance inserted throughout the exterior medium.
+
+A gravitational wave may propagate through a locally gravity-neutral State-I region: $\alpha_{\mathrm{G}} = 0$ and $\mathsf{H}_{ij}^{(\mathrm{GW})} \neq 0$. The absence of static background loading does not remove the dynamic directional-tension perturbation.
+
+Conversely, a nonzero static field does not automatically radiate. Radiation requires a time-dependent transverse-traceless source moment. At leading weak-field order,
+\begin{equation}
+    h_{ij}^{(\mathrm{TT})} (\mathbf{x},t) = \frac{ 2G }{ c_{\mathrm{E}}^{4}R } \Lambda_{ij,kl}(\mathbf{n}) \ddot{Q}_{kl} \left( t-\frac{R}{c_{\mathrm{E}}} \right),
+    \label{eq:n12_quadrupole_strain}
+\end{equation}
+so a time-independent source quadrupole produces no outgoing tensor wave.
+
+\subsection{Mechanical Roles of the Dual-Phase Architecture}
+\label{subsec:n12_dual_phase_roles}
+
+The gravitational-wave construction assigns distinct mechanical roles to the components of the TFT vacuum architecture.
+
+\subsubsection{FCC Soft Floor}
+
+The FCC Soft Floor supplies the nearest-neighbor directional geometry, the local transverse scaffold carrier, the bond-dyad basis of the two tensor polarizations, the cell-centered directional-transfer coordinate, and the finite-speed tensor-gradient dynamics.
+
+The two polarization bases arise from the six undirected FCC nearest-neighbor dyads:
+\begin{equation}
+    \mathbf{E}_{\times} = \mathbf{P}_{1} - \mathbf{P}_{2}, \qquad \text{and} \qquad \mathbf{E}_{+} = \mathbf{P}_{3} + \mathbf{P}_{4} - \mathbf{P}_{5} - \mathbf{P}_{6}.
+\end{equation}
+
+The finite radiative energy resides in the active State-I carrier through the conjugate terms $\dot{\mathsf{H}}_{ij} \dot{\mathsf{H}}_{ij}$ and $\partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij}$. The radiative coordinate is therefore a collective directional-transfer tensor rather than an ordinary affine deformation of the FCC scaffold.
+
+\subsubsection{Interstitial Condensate}
+
+The interstitial condensate supplies the coherent incremental volume constraint developed in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}. For the selected conservative carrier, $\mathbf{v}_{\mathrm{rel}} = \mathbf{0}$ and $\nabla\cdot\mathbf{u} = 0$. The condensate is therefore entrained with the scaffold at the retained order and enforces the coherent incompressible branch. It is not assigned an independently additive tensor inertia after the primitive-cell carrier has already been normalized.
+
+\subsubsection{Hard Floor}
+
+The phase-locked Hard Floor supplies the structural reference and record of the completed State-I configuration. It is not assigned an independently propagating tensor stiffness or tensor inertia.
+
+A fixed local Hard-Floor restoring term proportional to $\mathsf{H}_{ij} \mathsf{H}_{ij}$ would create a finite zero-wave-number frequency and would therefore gap the selected radiative branch. Such a term is excluded from the leading long-wavelength gravitational-wave action.
+
+Accordingly:
+\begin{itemize}
+    \item \textbf{Hard Floor} = phase-locked reference and record.
+    \item \textbf{Soft Floor} = finite-energy propagating carrier.
+\end{itemize}
+
+\subsubsection{Tension-Column Architecture}
+
+The Tension-Column structure connects the active Soft-Floor state to the phase-locked structural reference and supplies the cross-floor transfer architecture used elsewhere in TFT.
+
+In the present appendix, it supports the completed static endpoint-transfer response and provides the structural path through which the directional State-I configuration is referenced and recorded.
+
+The full derivation of the collective rank-two directional-transfer action directly from the microscopic Tension-Column and contact variables remains open. The tensor-gradient action used here is the minimal long-wavelength closure consistent with gaplessness, FCC isotropy, source normalization, and the weak-field radiative sector.
+
+\subsection{Microscopic, Collective, and Spectral Coefficients}
+\label{subsec:n12_coefficient_hierarchy}
+
+The appendix introduces several related but noninterchangeable mechanical quantities.
+
+The microscopic interface pair is
+\begin{equation}
+    \tau_{\mathrm{D}} = \frac{ c_{\mathrm{E}}^{4} }{ Gr_{\mathrm{D}} }, \qquad \mu_{\mathrm{D}} = \frac{ c_{\mathrm{E}}^{2} }{ Gr_{\mathrm{D}} }.
+\end{equation}
+Their dimensions are $[\tau_{\mathrm{D}}] = \mathrm{N\,m^{-1}}$ and $[\mu_{\mathrm{D}}] = \mathrm{kg\,m^{-2}}$.
+
+The primitive-cell affine coefficients are
+\begin{equation}
+    K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \beta_{\mathrm{geo}} \rho_{\mathrm{D}} c_{\mathrm{E}}^{2}, \qquad \rho_{\mathrm{sh}}^{(\mathrm{micro},0)} = \beta_{\mathrm{geo}} \rho_{\mathrm{D}}.
+\end{equation}
+Their dimensions are $[K_{\mathrm{sh}}^{(\mathrm{micro},0)}] = \mathrm{Pa}$ and $[\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}] = \mathrm{kg\,m^{-3}}$.
+
+The collective tensor-gradient pair is
+\begin{equation}
+    \mathcal{T}_{\mathrm{TT}}^{(0)} = \frac{ c_{\mathrm{E}}^{4} }{ 8\pi G }, \qquad M_{\mathrm{TT}}^{(0)} = \frac{ c_{\mathrm{E}}^{2} }{ 8\pi G }.
+    \label{eq:n12_collective_coefficients}
+\end{equation}
+Their dimensions are $[\mathcal{T}_{\mathrm{TT}}^{(0)}] = \mathrm{N}$ and $[M_{\mathrm{TT}}^{(0)}] = \mathrm{kg\,m^{-1}}$. Their ratio gives $\mathcal{T}_{\mathrm{TT}}^{(0)} / M_{\mathrm{TT}}^{(0)} = c_{\mathrm{E}}^{2}$.
+
+The gravity-neutral collective action is
+\begin{equation}
+    S_{\mathrm{TT}}^{(2)} = \frac{ \mathcal{T}_{\mathrm{TT}}^{(0)} }{2} \int \left[ \frac{1}{ c_{\mathrm{E}}^{2} } \dot{\mathsf{H}}_{ij} \dot{\mathsf{H}}_{ij} - \partial_{k}\mathsf{H}_{ij} \partial_{k}\mathsf{H}_{ij} \right] d^{3}x\,dt.
+    \label{eq:n12_collective_action}
+\end{equation}
+
+The pressure-equivalent Fourier-mode coefficients are
+\begin{equation}
+    K_{\mathrm{GW}}^{(\mathrm{eff})}(k) = \frac{ c_{\mathrm{E}}^{4}k^{2} }{ 16\pi G }, \qquad \rho_{\mathrm{GW}}^{(\mathrm{eff})}(k) = \frac{ c_{\mathrm{E}}^{2}k^{2} }{ 16\pi G }, \qquad Z_{\mathrm{GW}}^{(\mathrm{eff})}(k) = \frac{ c_{\mathrm{E}}^{3}k^{2} }{ 16\pi G }.
+\end{equation}
+
+The corresponding microscopic-to-collective response ratio is
+\begin{equation}
+    \zeta_{\mathrm{GW}}(k) = \frac{ \sqrt{2} }{ 8\pi^{2} } \left( \frac{ r_{\mathrm{D}} }{ \ell_{\mathrm{S}} } \right)^{2} \left( kr_{\mathrm{D}} \right)^{2}.
+    \label{eq:n12_zeta}
+\end{equation}
+
+The constitutive hierarchy is therefore
+\begin{equation}
+    \{\tau_{\mathrm{D}},\mu_{\mathrm{D}}\} \longrightarrow \left\{ K_{\mathrm{sh}}^{(\mathrm{micro},0)}, \rho_{\mathrm{sh}}^{(\mathrm{micro},0)} \right\} \longrightarrow \left\{ \mathcal{T}_{\mathrm{TT}}^{(0)}, M_{\mathrm{TT}}^{(0)} \right\} \longrightarrow \left\{ K_{\mathrm{GW}}^{(\mathrm{eff})}(k), \rho_{\mathrm{GW}}^{(\mathrm{eff})}(k), Z_{\mathrm{GW}}^{(\mathrm{eff})}(k) \right\}.
+    \label{eq:n12_coefficient_hierarchy}
+\end{equation}
+
+No member of this sequence should be substituted for another solely because their ratios reproduce the same propagation speed.
+
+\subsection{Closed Long-Wavelength Relations}
+\label{subsec:n12_closed_relations}
+
+The central long-wavelength relations obtained in this appendix may be collected without repeating their derivations.
+
+The absolute source normalization is $\kappa_{\mathrm{TT}} = 8\pi$, which fixes $\mathcal{T}_{\mathrm{TT}}^{(0)} = c_{\mathrm{E}}^{4} / (8\pi G)$.
+
+The source-free gravity-neutral dispersion is $\omega^{2} = c_{\mathrm{E}}^{2}k^{2}$.
+
+For a localized conserved source, the far-zone strain is
+\begin{equation}
+    h_{ij}^{(\mathrm{TT})} (\mathbf{x},t) = \frac{ 2G }{ c_{\mathrm{E}}^{4}R } \Lambda_{ij,kl}(\mathbf{n}) \ddot{Q}_{kl} \left( t-\frac{R}{c_{\mathrm{E}}} \right).
+\end{equation}
+
+The corresponding cycle-averaged intensity is
+\begin{equation}
+    \left\langle I_{\mathrm{GW}} \right\rangle = \frac{ c_{\mathrm{E}}^{3} }{ 32\pi G } \left\langle \dot{h}_{ij}^{(\mathrm{TT})} \dot{h}_{ij}^{(\mathrm{TT})} \right\rangle.
+\end{equation}
+
+Complete angular TT projection gives the total quadrupole luminosity
+\begin{equation}
+    P_{\mathrm{GW}} = \frac{ G }{ 5c_{\mathrm{E}}^{5} } \left\langle \dddot{Q}_{ij} \dddot{Q}_{ij} \right\rangle.
+    \label{eq:n12_quadrupole_power}
+\end{equation}
+
+For a weak-field circular binary, $P_{\mathrm{GW}} = \frac{32}{5} \frac{ G^{4}\mu^{2}M^{3} }{ c_{\mathrm{E}}^{5}r^{5} }$, and the leading chirp relation is
+\begin{equation}
+    \dot{f} = \frac{96}{5} \pi^{8/3} \frac{ \left( G\mathcal{M} \right)^{5/3} }{ c_{\mathrm{E}}^{5} } f^{11/3}.
+    \label{eq:n12_chirp_relation}
+\end{equation}
+
+These relations follow from the FCC directional basis, the collective tensor-gradient action, the independently fixed static-to-tensor normalization, source conservation, and conservative weak-field orbital binding. No gravitational-wave event is used to determine the vacuum coefficient.
+
+\subsection{Status of the Loaded-Background Propagation Law}
+\label{subsec:n12_loaded_background_status}
+
+For the gravity-neutral collective branch, $c_{\mathrm{GW}} = c_{\mathrm{E}}$.
+
+Conditional on the collective transverse-traceless coordinate inheriting the same completed endpoint-transfer Jacobian as the coherent State-I carrier, Section~\ref{sec:n5_long_wavelength_tensor} gives
+\begin{equation}
+    c_{\mathrm{GW}}(\mathbf{x}) = c_{\mathrm{E}} \left[ 1-\alpha_{\mathrm{G}}(\mathbf{x}) \right]^{2}.
+    \label{eq:n12_loaded_gw_speed}
+\end{equation}
+
+This relation is consistent with the endpoint-transfer architecture but remains a constitutive inheritance condition rather than a separately derived eigenvalue of the complete rank-two microscopic parent system.
+
+A complete derivation must show that the directional-tension tensor coordinate acquires the referred inertia
+\begin{equation}
+    M_{\mathrm{TT}}(\alpha_{\mathrm{G}}) = \frac{ M_{\mathrm{TT}}^{(0)} }{ \left( 1-\alpha_{\mathrm{G}} \right)^{4} },
+\end{equation}
+while retaining the corresponding local tensor-gradient normalization at the retained order.
+
+Until that parent-action derivation is completed, Equation~\eqref{eq:n12_loaded_gw_speed} should be interpreted as the selected loaded-background closure rather than as an independently closed microscopic theorem.
+
+\subsection{Falsifiable Long-Wavelength Consequences}
+\label{subsec:n12_falsifiable_consequences}
+
+The long-wavelength construction produces several consequences that may be tested independently of the unresolved microscopic completion.
+
+The pressure-equivalent response satisfies $K_{\mathrm{GW}}^{(\mathrm{eff})} \propto f^{2}$. The equivalent continuum inertia and impedance obey the same quadratic spectral scaling:
+\begin{equation}
+    \rho_{\mathrm{GW}}^{(\mathrm{eff})} \propto f^{2}, \qquad Z_{\mathrm{GW}}^{(\mathrm{eff})} \propto f^{2}.
+\end{equation}
+
+The microscopic-to-collective response ratio also satisfies $\zeta_{\mathrm{GW}} \propto f^{2}$, and is therefore not a frequency-independent participation constant.
+
+The weak-field radiative sector contains two degenerate tensor polarizations constructed from the FCC bond-dyad basis. Source conservation excludes leading monopole and dipole tensor radiation, leaving the quadrupole as the first nontrivial radiative source moment.
+
+Under the loaded-background endpoint-inheritance closure, $c_{\mathrm{GW}} = c_{\mathrm{E}} \left( 1-\alpha_{\mathrm{G}} \right)^{2}$. A direct microscopic derivation or observational failure of this relation would test the proposed connection between static loading and dynamic tensor propagation.
+
+\subsection{Remaining Microscopic and Strong-Field Completion}
+\label{subsec:n12_remaining_completion}
+
+The leading weak-field, long-wavelength exterior sector is closed at the level developed in this appendix. The remaining completion requirements concern the microscopic origin of the collective action, its finite-wave-number extension, and the nonlinear strong-field source.
+
+\subsubsection{Full Parent Directional-Tension Action}
+The tensor-gradient action must ultimately be derived by integrating out or projecting the complete microscopic FCC contact, rotational, phase, condensate, and Tension-Column variables. That derivation must identify the microscopic work-conjugate coordinate corresponding to $\lambda_{a}^{\circ}$, and show explicitly how $\mathcal{T}_{\mathrm{TT}}^{(0)} = c_{\mathrm{E}}^{4} / (8\pi G)$ emerges from the parent action.
+
+\subsubsection{Complete Finite-Wave-Number Eigenbranch}
+Section~\ref{sec:n5_long_wavelength_tensor} derives the exact dispersion of the minimal collective link closure. The complete first-Brillouin-zone spectrum of the full FCC parent system remains to be calculated. That analysis must determine:
+\begin{enumerate}
+    \item whether the long-wavelength TT branch remains isolated from the phase, rotational, and relative-flow branches;
+    \item the leading cubic-anisotropy corrections beyond the isotropic $k^{2}$ limit;
+    \item the locations of avoided crossings or mode conversions;
+    \item the ultraviolet termination or transition of the collective tensor branch; and
+    \item the relation between the collective cell-centered tensor and the microscopic nodal eigenvectors.
+\end{enumerate}
+
+\subsubsection{Loaded-Background Tensor Inheritance}
+The relation $c_{\mathrm{GW}} = c_{\mathrm{E}} \left( 1-\alpha_{\mathrm{G}} \right)^{2}$ must be derived directly for the rank-two collective coordinate rather than inherited by constitutive analogy from the coherent carrier. This requires establishing the loaded-background transformation of both $M_{\mathrm{TT}}$ and $\mathcal{T}_{\mathrm{TT}}$ from the complete directional-transfer Jacobian.
+
+\subsubsection{Microscopic Source-to-Quadrupole Map}
+The weak-field exterior field depends on the effective STF source quadrupole $Q_{ij}$. For compact strong-field objects in TFT, the source is an evolving FCC/SC live boundary rather than an abstract point singularity. The remaining source problem is therefore:
+\begin{equation}
+    \text{FCC/SC live-boundary variables} \longrightarrow T_{ij}^{(\mathrm{src})} \longrightarrow Q_{ij}.
+    \label{eq:n12_live_boundary_map}
+\end{equation}
+This map must incorporate the evolving phase-boundary shape, boundary tension and rotational loading, redistribution of State-I directional capacity, Tension-Column transfer at the moving boundary, strong-field retardation across the source, nonlinear multipole corrections, and the transition from inspiral to merger and ringdown.
+
+\subsubsection{Merger and Ringdown}
+The leading chirp relation applies only while the binary remains weak-field and adiabatic. Merger and ringdown require the eigenmodes of the final saturated or partially saturated FCC/SC structure. A complete TFT ringdown calculation must derive the frequencies, damping rates, and polarization content from the mechanical relaxation spectrum of the final live-boundary configuration. These quantities are not determined by the exterior quadrupole law alone.
+
+\subsection{Conclusion}
+\label{subsec:n12_conclusion}
+
+Static gravity and gravitational radiation are neither unrelated phenomena nor identical field configurations. They are complementary scalar and tensor sectors of the same active State-I mechanical substrate:
+\begin{itemize}
+    \item \textbf{static gravity} = equilibrated scalar restorative loading
+    \item \textbf{gravitational radiation} = propagating transverse-traceless directional-tension redistribution
+\end{itemize}
+
+The FCC Soft Floor supplies the active carrier and directional geometry. The interstitial condensate enforces the coherent incremental constraint. The Hard Floor supplies the phase-locked reference and record. The Tension-Column architecture supplies the cross-floor transfer structure and the static endpoint-response framework.
+
+Within the stated weak-field and long-wavelength domain, the appendix establishes a mechanically normalized progression from FCC directional geometry to a gapless collective tensor field, a conserved positive energy flux, the far-zone quadrupole strain, the total quadrupole luminosity, and the leading compact-binary chirp.
+
+The remaining work is confined to deriving the collective tensor sector from the complete microscopic parent action, extending it through the full finite-wave-number spectrum, closing the loaded-background tensor inheritance, and constructing the nonlinear live-boundary source dynamics required for merger and ringdown.

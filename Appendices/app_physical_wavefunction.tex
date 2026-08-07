@@ -7,13 +7,13 @@
 \section{The Physical Wavefunction}
 In TFT, the universe is not a collection of isolated particles in a void, but a single, contiguous macroscopic quantum object. The state of this object is described by a complex scalar order parameter, $\Psi$:
 \begin{equation}
-    \Psi(x,t) = \sqrt{\rho} \cdot e^{i\phi}
+    \Psi(x,t) = \sqrt{\rho} \cdot e^{i\varphi}
 \end{equation}
 
 \noindent\textbf{Where:}
 \begin{itemize}
     \item $\sqrt{\rho}$ \textbf{represents the Amplitude:} the local physical density and structural stiffness of the lattice.
-    \item $e^{i\phi}$ \textbf{represents the Phase:} the mechanical phase angle of the lattice, governing time, rotation, and dynamic motion. \textit{(Note: As established in \hyperref[sec:quantum_action]{Section \ref*{sec:quantum_action}}, this phase angle $\phi$ scales to quantum action via $S = \hbar \cdot \phi$, and the imaginary operator $i$ represents harmonic lattice oscillation as defined in \hyperref[sec:imaginary_operator]{Section \ref*{sec:imaginary_operator}}).}
+    \item $e^{i\varphi}$ \textbf{represents the Phase:} the mechanical phase angle of the lattice, governing time, rotation, and dynamic motion. \textit{(Note: As established in \hyperref[sec:quantum_action]{Section \ref*{sec:quantum_action}}, this phase angle $\varphi$ scales to quantum action via $S = \hbar \cdot \varphi$, and the imaginary operator $i$ represents harmonic lattice oscillation as defined in \hyperref[sec:imaginary_operator]{Section \ref*{sec:imaginary_operator}}).}
 \end{itemize}
 
 \section{The Hard Floor Wavefunction (The Substrate)}
@@ -25,7 +25,7 @@ The ``Hard Floor'' is the absolute ground state of the universe. It is character
 \noindent\textbf{Physical Implications:}
 \begin{itemize}
     \item \textbf{Maximal Density ($\rho_{\mathrm{S}}$):} The amplitude is fixed at the absolute structural limit ($\ell_{\mathrm{S}}$). Because the bulk modulus is effectively infinite, it acts as an incompressible supersolid.
-    \item \textbf{Phase Lock ($\phi=0$):} The phase angle is zero everywhere. Because dynamic momentum is the spatial gradient of phase ($p \propto \nabla\phi$), and $\nabla\phi=0$, the Hard Floor possesses zero dynamic momentum and zero entropy.
+    \item \textbf{Phase Lock ($\varphi=0$):} The phase angle is zero everywhere. Because dynamic momentum is the spatial gradient of phase ($p \propto \nabla\varphi$), and $\nabla\varphi=0$, the Hard Floor possesses zero dynamic momentum and zero entropy.
     \item \textbf{The Arrest of Time:} Without phase rotation, time does not flow on the Hard Floor. It serves strictly as an instantaneous, non-local connection grid for quantum entanglement.
 \end{itemize}
 
@@ -37,7 +37,7 @@ The ``Soft Floor'' (Observable Universe) emerges when the infinite rigidity of t
 
 \noindent\textbf{Physical Implications:}
 \begin{itemize}
-    \item \textbf{Dynamic Phase ($\phi(t) \neq 0$):} The phase rotates with frequency $\omega$. This localized rotation is the mechanical origin of the flow of time.
+    \item \textbf{Dynamic Phase ($\varphi(t) \neq 0$):} The phase rotates with frequency $\omega$. This localized rotation is the mechanical origin of the flow of time.
     \item \textbf{Elastic Density ($\rho_{\mathrm{D}}$):} The structural density transitions to the Face--Centered Cubic (FCC) configuration. This provides the finite shear elasticity ($\tau_{\mathrm{D}}$) required to support transverse wave propagation (light).
     \item \textbf{Emergence of Gradients:} The dynamic variation of this wavefunction generates the macroscopic forces:
     \begin{itemize}
@@ -62,7 +62,7 @@ The dual-scale architecture of the SGF necessitates two distinct boundary condit
 \textbf{Metric} & \textbf{Hard Floor (Substrate)} & \textbf{Soft Floor (Active Vacuum)} \\
 \midrule
 \textbf{Wavefunction} & $\Psi_{\mathrm{S}} = \sqrt{\rho_{\mathrm{S}}} \cdot e^{i0}$ & $\Psi_{\mathrm{D}} = \sqrt{\rho_{\mathrm{D}}} \cdot e^{i(\mathbf{k} \cdot \mathbf{x} - \omega t)}$ \\
-\textbf{Phase ($\phi$)} & $0$ (topologically locked) & Dynamic ($\omega t$) \\
+\textbf{Phase ($\varphi$)} & $0$ (topologically locked) & Dynamic ($\omega t$) \\
 \textbf{Density ($\rho$)} & Latent / maximum ($\rho_{\mathrm{S}}$) & Active / elastic ($\rho_{\mathrm{D}}$) \\
 \textbf{Geometry} & Simple cubic (rigid) & Face--centered cubic (elastic) \\
 \textbf{Physics} & Non-local connectivity ($c_{\mathrm{S}}$) & Local causality ($c_{\mathrm{E}}$) \\
@@ -75,7 +75,7 @@ Because the active SGF is a contiguous macroscopic medium, standard atomic parti
 
 When a transverse wave locks into a chiral standing wave (such as an electron or atomic orbital), the linear phase gradient ($\mathbf{k} \cdot \mathbf{x}$) winds into a localized rotational gradient. To maintain topological continuity in the FCC lattice, the phase angle must complete an integer number of full cycles ($n$) around the defect core:
 \begin{equation}
-    \oint \nabla \phi \cdot \mathrm{d}\ell = 2\pi n
+    \oint \nabla \varphi \cdot \mathrm{d}\ell = 2\pi n
 \end{equation}
 This topological boundary condition mathematically enforces the quantization of atomic states. The atomic wavefunction ($\Psi_{\mathrm{atom}}$) is therefore a strict, localized solution of the Soft Floor order parameter:
 \begin{equation}

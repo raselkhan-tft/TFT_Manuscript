@@ -5,6 +5,15 @@ import os # Selected for robust directory management and path-specific file savi
 
 def create_kinematic_triangle():
     # Setup Figure (Minimalist Architectural Styling)
+    # UPDATED: Changed mathtext.fontset to 'stix' to support \varphi
+    plt.rcParams.update({
+        'savefig.pad_inches': 0.1,
+        'font.family': 'serif',
+        'font.serif': ['Computer Modern Roman', 'DejaVu Serif'],
+        'mathtext.fontset': 'stix', 
+        'font.size': 11
+    })
+
     fig, ax = plt.subplots(figsize=(10, 8), dpi=150)
     ax.set_facecolor('white')
     
@@ -73,7 +82,7 @@ def create_kinematic_triangle():
     # Tangent angle for a circle going downwards is theta - 90 degrees
     tangent_angle = np.degrees(phi_mid) - 90
     
-    ax.text(lbl_x, lbl_y, r"As $\Delta\phi \to 0$", color='#555555', 
+    ax.text(lbl_x, lbl_y, r"As $\Delta\varphi \to 0$", color='#555555', 
             fontsize=10, rotation=tangent_angle, ha='center', va='center')
 
     # -------------------------------------------------------
@@ -82,13 +91,13 @@ def create_kinematic_triangle():
     # 1. Horizontal Base (External Velocity) - Deep Navy Blue
     ax.plot([0, x_1], [0, 0], color='#000080', linestyle='-', linewidth=3.5, zorder=3)
     # Label Base
-    ax.text(x_1 / 2, -0.02, r"$v_{\mathrm{ext}} = c_{\mathrm{E}} \cos(\Delta\phi)$", color='#000080', 
+    ax.text(x_1 / 2, -0.02, r"$v_{\mathrm{ext}} = c_{\mathrm{E}} \cos(\Delta\varphi)$", color='#000080', 
             fontsize=14, fontweight='bold', ha='center', va='top')
 
     # 2. Vertical Leg (Internal Vibration/Time) - Maroon
     ax.plot([x_1, x_1], [0, y_1], color='#800000', linestyle='-', linewidth=3.5, zorder=3)
     # Label Vertical
-    ax.text(x_1 + 0.045, y_1 / 2, r"$v_{\mathrm{int}} = c_{\mathrm{E}} \sin(\Delta\phi)$", color='#800000', 
+    ax.text(x_1 + 0.045, y_1 / 2, r"$v_{\mathrm{int}} = c_{\mathrm{E}} \sin(\Delta\varphi)$", color='#800000', 
             fontsize=14, fontweight='bold', ha='center', va='bottom', rotation=90)
 
     # 3. The Hypotenuse (Total Budget)
@@ -107,7 +116,7 @@ def create_kinematic_triangle():
     # 4. The Angle (Phase Slip)
     arc = Arc((0, 0), 0.3, 0.3, angle=0, theta1=0, theta2=np.degrees(phi_1), color='black', lw=2, zorder=4)
     ax.add_patch(arc)
-    ax.text(0.20, 0.11, r"$\Delta\phi$", color='black', fontsize=16, fontweight='bold', ha='center', va='center')
+    ax.text(0.20, 0.11, r"$\Delta\varphi$", color='black', fontsize=16, fontweight='bold', ha='center', va='center')
 
     # -------------------------------------------------------
     # STYLING & FORMATTING

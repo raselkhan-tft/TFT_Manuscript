@@ -63,17 +63,15 @@ ax.text(0.97, 0.5, r"Event Horizon ($R_{\mathrm{QG}}$)", color='black', fontsize
 
 # 3. PLOTTING THE CAPACITY CURVE
 # Soft Floor Regime (Dark Blue) with rounded cap styling for smooth endpoints
-# Linewidth reduced by 25% (3.0 -> 2.25)
 ax.plot(rho_normalized_soft, capacity_soft, color='#003366', linewidth=2.25, zorder=4,
-        solid_capstyle='round', label=r'Active Curvature Capacity')
+        solid_capstyle='round', label=r'Remaining State-I Response Capacity')
 
 # 4. TERMINATION POINT
 # The Electric Blue line descends from Max Capacity and terminates in a hard, definitive point exactly at X=1.0, Y=0
 ax.plot(1.0, 0.0, marker='o', color='#8B0000', markersize=10, zorder=10, clip_on=False)
 
 # 5. EQUATION PLACEMENT ALONG THE CURVE
-# Removed \boldsymbol to ensure uniform, standard LaTeX rendering as requested
-eq_text = r'$|G_{\mu\nu}|_{\mathrm{active}} = \frac{\kappa G}{c_{\mathrm{E}}^4}(\tau_{\mathrm{QG}} - \tau_{\mathrm{L}})$'
+eq_text = r'$|G^{(\tau)}|_{\mathrm{cap}} = \frac{\kappa G}{c_{\mathrm{E}}^4}(\tau_{\mathrm{QG}} - \tau_{\mathrm{L}})$'
 ax.text(0.45, 0.58, eq_text, fontsize=12, rotation=-37, rotation_mode='anchor',
         color='black', ha='center', va='bottom', zorder=5)
 
@@ -106,7 +104,6 @@ ax.plot([1.11, 1.14], [-0.03, 0.03], color='black', lw=1.5, clip_on=False, path_
 # CUSTOM UNIFIED TICK MARKS (0.2 Intervals)
 # =======================================================
 # Calculated based on 10x6 figure ratio to ensure identical physical lengths for both axes
-# Reduced length by 50% for standard proportions
 tick_len_x = 0.0135  # Length mapping for Y-direction
 tick_len_y = 0.0105  # Length mapping for X-direction
 
@@ -114,22 +111,19 @@ tick_len_y = 0.0105  # Length mapping for X-direction
 for tx in [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]:
     ax.plot([tx, tx], [0.0, tick_len_x], color='black', lw=1.2, clip_on=False, zorder=10)
     if tx > 0: # Skip the origin label to leave room for the single shared zero
-        # Reduced gap by 50% (-0.04 -> -0.02)
         ax.text(tx, -0.02, f'${tx}$', ha='center', va='top', fontsize=12)
 
 # Custom Y Ticks (Inward pointing)
 for ty in [0.2, 0.4, 0.6, 0.8, 1.0]:
     ax.plot([0.0, tick_len_y], [ty, ty], color='black', lw=1.2, clip_on=False, zorder=10)
-    # Reduced gap by 50% (-0.03 -> -0.015)
     ax.text(-0.015, ty, f'${ty}$', ha='right', va='center', fontsize=12)
 
 # Single Shared Origin Zero (Straight under Y-axis)
 ax.text(0.0, -0.02, '$0$', ha='center', va='top', fontsize=12)
 
 # Axis Titles
-ax.set_xlabel(r'Normalized Load Density ($\rho_{\mathrm{L}} / \rho_{\mathrm{QG}}$)', fontsize=12, labelpad=12)
-# Increased labelpad from 12 to 25 to prevent overlap with the manual tick labels
-ax.set_ylabel(r'Normalized Elastic Capacity ($|G_{\mu\nu}|_{\mathrm{active}} / |G_{\mu\nu}|_{\mathrm{max}}$)', fontsize=12, labelpad=25)
+ax.set_xlabel(r'Normalized Local Converted-Capacity Density ($\rho_{\mathrm{L}} / \rho_{\mathrm{QG}}$)', fontsize=12, labelpad=12)
+ax.set_ylabel(r'Normalized Remaining Response Capacity ($|G^{(\tau)}|_{\mathrm{cap}} / |G^{(\tau)}|_{\max}$)', fontsize=12, labelpad=25)
 
 # 7. SUBSTRATE CORE LABEL
 # Placed inside the black zone, perfectly equidistant from the event horizon (1.0) and right boundary (1.4)

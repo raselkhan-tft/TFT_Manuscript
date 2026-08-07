@@ -1,0 +1,1462 @@
+\chapter[FCC Condensate Constraint and Defect Impedance]{Interstitial-Condensate Constraint and Defect Impedance}
+\label{app:condensate_impedance}
+
+\vspace{1em}
+\begin{center}
+    \textbf{Abstract}
+\end{center}
+\begin{quote}
+\noindent This appendix establishes the mechanical response of the interstitial condensate within the active FCC vacuum. It defines the incrementally incompressible coherent branch and separates the singular tangent volume constraint from the finite gravitational yield pressure. It then formulates the localized relative-flow action of a topological defect, constructs the mode-resolved added-inertia functional, and defines the microscopic impedance projection as a boundary-value functional with the dimensions of an inverse penetration length. The surface-to-volume relation is a reduced constitutive matching between the normal-coupled interface representation and the solved condensate response; it does not by itself establish a universal intrinsic condensate density. Canonical defect-flow solutions and the numerical evaluation of the projection remain open boundary-value problems.
+\end{quote}
+\vspace{2em}
+
+\section{Scope and Constitutive Setting}
+
+The active vacuum is a space-filling dual-phase medium composed of the solid FCC scaffold and the connected interstitial condensate. The primitive-cell volume is partitioned according to
+\begin{equation}
+    \beta_{\mathrm{geo}} = \frac{\pi}{3\sqrt{2}},
+\end{equation}
+and
+\begin{equation}
+    \beta_{\mathrm{IC}} = 1 - \beta_{\mathrm{geo}},
+\end{equation}
+so that
+\begin{equation}
+    \beta_{\mathrm{geo}} + \beta_{\mathrm{IC}} = 1.
+\end{equation}
+
+The FCC nodes occupy the close-packed solid fraction, while the interstitial condensate continuously fills the complementary octahedral and tetrahedral regions. No unoccupied third phase is introduced within the active FCC cell.
+
+The analysis is restricted to the active phase,
+\begin{equation}
+    0 \leq \alpha_{\mathrm{G}} < 1,
+\end{equation}
+and to perturbations about a gravitationally preloaded background that is quasistatic over the duration of the local disturbance,
+\begin{equation}
+    \dot{\alpha}_{\mathrm{G}} \approx 0.
+\end{equation}
+
+The loading parameter $\alpha_{\mathrm{G}}$ specifies the background state about which the incremental dynamics are constructed. It is not itself treated as a propagating perturbation in the coherent branch developed below.
+
+The interstitial condensate performs two distinct constitutive roles within the present reduction. In the coherent branch, it is carried with the FCC scaffold without relative flow and supplies the incremental pressure response that constrains local volumetric change. Under differential motion, it may redistribute relative to the scaffold and develop a conservative hydrodynamic reaction, together with any separately resolved dissipative impedance. These coherent and relative-flow roles must not be combined into a single undifferentiated density or kinetic coefficient.
+
+The coherent periodic branch is characterized by entrainment of the condensate with the FCC scaffold. In this branch, the condensate may be displaced, but it does not move relative to the scaffold. Entrainment therefore fixes the relative kinematics of the two phases; it does not by itself establish an independently additive condensate contribution to the coherent primitive-cell inertia.
+
+The localized defect branch is characterized by nonzero relative condensate motion around a moving or internally reconfiguring defect. The two branches correspond to different reductions of the same underlying dual-phase medium.
+
+Let $\mathbf{u}(\mathbf{x},t)$ denote the homogenized FCC scaffold displacement and $\mathbf{w}(\mathbf{x},t)$ the interstitial-condensate displacement. The relative condensate velocity is
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} = \dot{\mathbf{w}} - \dot{\mathbf{u}}.
+\end{equation}
+
+For the coherent active-vacuum branch,
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} = \mathbf{0},
+\end{equation}
+whereas for a localized defect response,
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} \neq \mathbf{0},
+\end{equation}
+within the condensate domain influenced by the defect.
+
+The present appendix first formulates the coherent condensate constraint and then develops the localized relative-flow action. The coherent sector determines the admissible translational acoustic polarizations and the incremental pressure field. The localized sector determines the mode-dependent hydrodynamic impedance entering the defect mass law.
+
+The finite gravitational loading of the active vacuum must also be distinguished from the incremental constitutive response. The background may sustain a finite pressure and may approach the FCC saturation threshold as $\alpha_{\mathrm{G}} \rightarrow 1^{-}$. The coherent perturbation about that background may nevertheless be incrementally volume preserving. Thus,
+\begin{equation}
+    \mathrm{finite\ background\ loading} \neq \mathrm{incremental\ volumetric\ wave}.
+\end{equation}
+
+The pressure constraint derived below applies to the low-energy coherent branch within the active phase. It does not prohibit quasistatic background compaction, nonlinear lattice rearrangement, or the FCC-to-SC phase transition at saturation.
+
+The incremental actions are written in the current gravitationally preloaded configuration. Finite-deformation geometric-stiffness and acoustoelastic corrections associated with a full small-on-large treatment are not retained at the present tangent order. Their derivation belongs to the nonlinear extension of the FCC constitutive theory.
+
+The localized construction developed later defines an equivalent mode-resolved impedance density associated with relative condensate motion. Its numerical value and possible universality require an explicit defect-flow solution and are not assumed in the coherent sector.
+
+\section{Coherent Scaffold--Condensate Kinematics}
+\label{sec:AP_coherent_kinematics}
+
+In the entrained coherent branch, $\mathbf{w} = \mathbf{u}$ up to an irrelevant time-independent reference displacement. Consequently,
+\begin{equation}
+    \dot{\mathbf{w}} = \dot{\mathbf{u}},
+\end{equation}
+and
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} = \mathbf{0}.
+\end{equation}
+The FCC scaffold and the interstitial condensate therefore share the same displacement kinematics in the selected coherent branch.
+
+The associated infinitesimal strain tensor is
+\begin{equation}
+    \varepsilon_{ij} = \frac{1}{2} \left( \partial_{i}u_{j} + \partial_{j}u_{i} \right).
+\end{equation}
+
+Its volumetric component is
+\begin{equation}
+    \varepsilon_{\mathrm{V}} = \operatorname{tr}\boldsymbol{\varepsilon} = \nabla\cdot\mathbf{u},
+\end{equation}
+and its deviatoric part is
+\begin{equation}
+    \varepsilon_{ij}^{(\mathrm{dev})} = \varepsilon_{ij} - \frac{1}{3}\varepsilon_{\mathrm{V}}\delta_{ij}.
+\end{equation}
+
+Let $\rho_{\mathrm{eff}}^{(0)}$ denote the unstrained inertia coefficient assigned to the selected coherent transfer coordinate. This notation is retained as a scale-neutral continuum coefficient. At the primitive-cell microscopic scale derived in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}, its presently established value is the FCC scaffold normalization
+\begin{equation}
+    \rho_{\mathrm{eff}}^{(0)} = \rho_{\mathrm{sh}}^{(\mathrm{micro},0)} = \beta_{\mathrm{geo}}\rho_{\mathrm{D}}.
+\end{equation}
+
+This microscopic identification contains the nodal scaffold mass averaged over the complete primitive-cell volume. Condensate entrainment fixes the coherent relative kinematics but does not introduce an independently additive condensate inertia into $\rho_{\mathrm{eff}}^{(0)}$ at the present constitutive order. Any additional coherent condensate kinetic coefficient would require an explicit coupled two-field kinetic action.
+
+The gravitational endpoint-transfer constraint modifies the referred inertia of the selected coherent coordinate according to
+\begin{equation}
+    \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}}) = \frac{\rho_{\mathrm{eff}}^{(0)}}{\left(1-\alpha_{\mathrm{G}}\right)^4}.
+\end{equation}
+
+The quantity $\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})$ is therefore a referred coordinate-level inertia coefficient. It is not interpreted as a literal equilibrium material density of the complete dual-phase vacuum.
+
+The coherent kinetic-energy density is
+\begin{equation}
+    \mathcal{T}_{\mathrm{coh}} = \frac{1}{2}\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})\dot{\mathbf{u}}\cdot\dot{\mathbf{u}}.
+\end{equation}
+
+The localized condensate impedance density introduced later belongs to a distinct relative-flow coordinate and must not be added to this coherent kinetic term merely because the condensate is entrained in the coherent branch. An independently additive coherent condensate kinetic contribution can arise only from an explicit coupled two-field derivation.
+
+Let $K_{\mathrm{sh}}^{(0)}$ denote the shear coefficient paired with $\rho_{\mathrm{eff}}^{(0)}$ at the same descriptive scale. The unstrained transverse normalization is
+\begin{equation}
+    K_{\mathrm{sh}}^{(0)} = \rho_{\mathrm{eff}}^{(0)}c_{\mathrm{E}}^2.
+\end{equation}
+
+At the primitive-cell microscopic scale,
+\begin{equation}
+    K_{\mathrm{sh}}^{(0)} = K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}c_{\mathrm{E}}^2.
+\end{equation}
+
+At the retained tangent order, gravitational loading changes the referred inertia while leaving the baseline shear coefficient unchanged:
+\begin{equation}
+    K_{\mathrm{sh}}(\alpha_{\mathrm{G}}) = K_{\mathrm{sh}}^{(0)}, \qquad 0 \leq \alpha_{\mathrm{G}} < 1.
+\end{equation}
+
+Before imposing the coherent volume constraint, introduce a finite volumetric regularization coefficient $B_{\mathrm{IC}}$. The regularized elastic-energy density is
+\begin{equation}
+    \mathcal{W}_{B} = K_{\mathrm{sh}}^{(0)}\varepsilon_{ij}\varepsilon_{ij} + \frac{1}{2}B_{\mathrm{IC}}\varepsilon_{\mathrm{V}}^2.
+\end{equation}
+
+The corresponding isotropic tangent tensor is
+\begin{equation}
+    C_{ijkl}^{(B)} = B_{\mathrm{IC}}\delta_{ij}\delta_{kl} + K_{\mathrm{sh}}^{(0)}\left(\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk}\right).
+\end{equation}
+
+Define the propagation direction by
+\begin{equation}
+    \hat{\mathbf{s}} = \frac{\mathbf{k}}{|\mathbf{k}|}.
+\end{equation}
+
+The corresponding long-wavelength acoustic tensor is
+\begin{equation}
+    \Gamma_{ij} = C_{ikjl}^{(B)}s_{k}s_{l}.
+\end{equation}
+
+Using the regularized isotropic tangent tensor gives
+\begin{equation}
+    \Gamma_{ij} = K_{\mathrm{sh}}^{(0)}\delta_{ij} + \left(B_{\mathrm{IC}}+K_{\mathrm{sh}}^{(0)}\right)s_{i}s_{j}.
+\end{equation}
+
+For a transverse polarization satisfying
+\begin{equation}
+    \hat{\mathbf{s}}\cdot\mathbf{e}_{\mathrm{T}} = 0,
+\end{equation}
+one obtains
+\begin{equation}
+    \Gamma_{ij}e_{\mathrm{T},j} = K_{\mathrm{sh}}^{(0)}e_{\mathrm{T},i}.
+\end{equation}
+
+For a longitudinal polarization satisfying
+\begin{equation}
+    \mathbf{e}_{\mathrm{L}}\parallel\hat{\mathbf{s}},
+\end{equation}
+one obtains
+\begin{equation}
+    \Gamma_{ij}e_{\mathrm{L},j} = \left(B_{\mathrm{IC}}+2K_{\mathrm{sh}}^{(0)}\right)e_{\mathrm{L},i}.
+\end{equation}
+
+Thus the finite-compressibility regularization contains two transverse acoustic eigenvalues
+\begin{equation}
+    \lambda_{\mathrm{T}} = K_{\mathrm{sh}}^{(0)},
+\end{equation}
+and one longitudinal acoustic eigenvalue
+\begin{equation}
+    \lambda_{\mathrm{L}} = B_{\mathrm{IC}} + 2K_{\mathrm{sh}}^{(0)}.
+\end{equation}
+
+This acoustic-tensor projection gives the direct bridge between the regularized constitutive law and the transverse and longitudinal dispersion relations derived below.
+
+The total bulk coefficient associated with this finite regularization is
+\begin{equation}
+    K_{\mathrm{bulk}}^{(B)} = B_{\mathrm{IC}} + \frac{2}{3}K_{\mathrm{sh}}^{(0)}.
+\end{equation}
+
+The coefficient $B_{\mathrm{IC}}$ is introduced only as a diagnostic regularization that exposes the structure of a hypothetical ordinary longitudinal acoustic branch. It is not identified with the finite FCC saturation-pressure scale. The singular tangent volume constraint and the finite nonlinear phase-transition pressure are distinct constitutive quantities.
+
+\section{Finite-Compressibility Regularization}
+\label{sec:AP_finite_regularization}
+
+The quadratic action of the regularized coherent branch is
+\begin{equation}
+    S_{B}^{(2)} = \int \left[ \frac{1}{2}\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})\dot{u}_{i}\dot{u}_{i} - K_{\mathrm{sh}}^{(0)}\varepsilon_{ij}\varepsilon_{ij} - \frac{1}{2}B_{\mathrm{IC}}\varepsilon_{\mathrm{V}}^2 \right] \mathrm{d}^3x\,\mathrm{d}t.
+\end{equation}
+
+The kinetic coefficient in this action belongs to the selected coherent transfer coordinate. Under the presently derived primitive-cell closure it reduces to the FCC scaffold inertia normalization $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$. The interstitial condensate enters the coherent reduction through the entrainment condition and the volumetric pressure response rather than through an independently calibrated additive kinetic density.
+
+Variation with respect to the displacement field gives the incremental stress
+\begin{equation}
+    \sigma_{ij} = 2K_{\mathrm{sh}}^{(0)}\varepsilon_{ij} + B_{\mathrm{IC}}\varepsilon_{\mathrm{V}}\delta_{ij}.
+\end{equation}
+
+The equation of motion is
+\begin{equation}
+    \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})\ddot{u}_{i} = \partial_{j}\sigma_{ij}.
+\end{equation}
+
+Using
+\begin{equation}
+    \partial_{j}\varepsilon_{ij} = \frac{1}{2}\left[\nabla^2u_{i}+\partial_{i}\left(\nabla\cdot\mathbf{u}\right)\right],
+\end{equation}
+the vector equation becomes
+\begin{equation}
+    \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})\ddot{\mathbf{u}} = K_{\mathrm{sh}}^{(0)}\nabla^2\mathbf{u} + \left(B_{\mathrm{IC}}+K_{\mathrm{sh}}^{(0)}\right)\nabla\left(\nabla\cdot\mathbf{u}\right).
+\end{equation}
+
+Consider a plane-wave perturbation,
+\begin{equation}
+    \mathbf{u} = \mathbf{e}\exp\left[i\left(\mathbf{k}\cdot\mathbf{x}-\omega t\right)\right].
+\end{equation}
+
+For a transverse polarization satisfying $\mathbf{k}\cdot\mathbf{e}_{\mathrm{T}}=0$, the dispersion relation is
+\begin{equation}
+    \omega_{\mathrm{T}}^2 = \frac{K_{\mathrm{sh}}^{(0)}}{\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})}k^2,
+\end{equation}
+and therefore
+\begin{equation}
+    c_{\mathrm{T}}^2(\alpha_{\mathrm{G}}) = \frac{K_{\mathrm{sh}}^{(0)}}{\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})}.
+\end{equation}
+
+For a longitudinal polarization satisfying $\mathbf{e}_{\mathrm{L}}\parallel\mathbf{k}$, the dispersion relation is
+\begin{equation}
+    \omega_{\mathrm{L}}^2 = \frac{B_{\mathrm{IC}}+2K_{\mathrm{sh}}^{(0)}}{\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})}k^2,
+\end{equation}
+and therefore
+\begin{equation}
+    c_{\mathrm{L}}^2(\alpha_{\mathrm{G}}) = \frac{B_{\mathrm{IC}}+2K_{\mathrm{sh}}^{(0)}}{\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})}.
+\end{equation}
+
+In the unstrained active vacuum, $\alpha_{\mathrm{G}}=0$, and
+\begin{equation}
+    \rho_{\mathrm{eff}}(0) = \rho_{\mathrm{eff}}^{(0)}.
+\end{equation}
+
+Using
+\begin{equation}
+    K_{\mathrm{sh}}^{(0)} = \rho_{\mathrm{eff}}^{(0)}c_{\mathrm{E}}^2,
+\end{equation}
+the transverse speed becomes
+\begin{equation}
+    c_{\mathrm{T}}(0) = c_{\mathrm{E}}.
+\end{equation}
+
+The hypothetical longitudinal speed is
+\begin{equation}
+    c_{\mathrm{L}}^2(0) = c_{\mathrm{E}}^2\left(\frac{B_{\mathrm{IC}}}{K_{\mathrm{sh}}^{(0)}}+2\right).
+\end{equation}
+
+Mechanical stability of the finite-compressibility regularization requires
+\begin{equation}
+    K_{\mathrm{bulk}}^{(B)} > 0,
+\end{equation}
+or equivalently
+\begin{equation}
+    B_{\mathrm{IC}} + \frac{2}{3}K_{\mathrm{sh}}^{(0)} > 0.
+\end{equation}
+
+Hence,
+\begin{equation}
+    \frac{B_{\mathrm{IC}}}{K_{\mathrm{sh}}^{(0)}} > -\frac{2}{3}.
+\end{equation}
+
+It follows that every mechanically stable finite ordinary longitudinal branch satisfies
+\begin{equation}
+    c_{\mathrm{L}}^2(0) > \frac{4}{3}c_{\mathrm{E}}^2,
+\end{equation}
+and hence
+\begin{equation}
+    c_{\mathrm{L}}(0) > \sqrt{\frac{4}{3}}\,c_{\mathrm{E}}.
+\end{equation}
+
+For a nonnegative regularizing compression coefficient, $B_{\mathrm{IC}}\geq0$, the stronger bound is
+\begin{equation}
+    c_{\mathrm{L}}(0) \geq \sqrt{2}\,c_{\mathrm{E}}.
+\end{equation}
+
+Accordingly, the following three conditions cannot be imposed simultaneously within an ordinary finite isotropic elastic model:
+\begin{itemize}
+    \item $c_{\mathrm{T}}=c_{\mathrm{E}}$;
+    \item $c_{\mathrm{E}}$ is the active-phase propagation ceiling;
+    \item $B_{\mathrm{IC}}$ produces an independent stable finite-frequency longitudinal acoustic branch.
+\end{itemize}
+
+The finite-$B_{\mathrm{IC}}$ theory therefore functions as a diagnostic regularization. It demonstrates that an ordinary scalar acoustic polarization is incompatible with the selected kinematic structure of the active Soft Floor once the transverse branch is normalized to $c_{\mathrm{E}}$.
+
+This incompatibility does not uniquely derive the incompressible limit from stability alone. Rather, it motivates the constitutive selection of a reduced coherent branch in which local volume fluctuations are excluded from the finite-energy acoustic spectrum.
+
+\section{Incrementally Incompressible Coherent Branch}
+\label{sec:AP_incompressible_branch}
+
+The coherent active-FCC branch is modeled by the singular constitutive reduction
+\begin{equation}
+    B_{\mathrm{IC}} \rightarrow \infty.
+\end{equation}
+
+For a finite-energy perturbation,
+\begin{equation}
+    \frac{1}{2}B_{\mathrm{IC}}\varepsilon_{\mathrm{V}}^2 < \infty.
+\end{equation}
+
+Consequently,
+\begin{equation}
+    \varepsilon_{\mathrm{V}} \rightarrow 0,
+\end{equation}
+and the admissible coherent displacement satisfies
+\begin{equation}
+    \nabla\cdot\mathbf{u} = 0.
+\end{equation}
+
+This is an incremental constraint about a prescribed gravitationally loaded background. It does not require the background FCC cell to possess zero finite compaction, nor does it prohibit approach to the nonlinear saturation boundary. The background state is encoded by $\alpha_{\mathrm{G}}$; the coherent perturbation about that state is volume preserving.
+
+Introduce the incremental condensate pressure $\delta p_{\mathrm{IC}}(\mathbf{x},t)$ as a Lagrange multiplier enforcing the volume constraint. The reduced coherent action is
+\begin{equation}
+    S_{\mathrm{coh}}^{(2)} = \int \left[ \frac{1}{2}\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})\dot{u}_{i}\dot{u}_{i} - K_{\mathrm{sh}}^{(0)}\varepsilon_{ij}\varepsilon_{ij} + \delta p_{\mathrm{IC}}\nabla\cdot\mathbf{u} \right] \mathrm{d}^3x\,\mathrm{d}t.
+\end{equation}
+
+The kinetic coefficient in this reduced action is the referred inertia of the selected coherent transfer coordinate. At the primitive-cell microscopic scale,
+\begin{equation}
+    \rho_{\mathrm{eff}}^{(0)} = \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}.
+\end{equation}
+The condensate enters this reduced coherent action through the entrainment condition and the pressure constraint. No independently additive coherent condensate kinetic density is introduced at the present constitutive order.
+
+A constituent-continuity check is consistent with the same constraint. Let $\varrho_{\mathrm{IC}}$ denote a formal local constituent-density field for the condensate, and let $\beta_{\mathrm{IC}}$ denote its local interstitial volume fraction. Define the apparent condensate density by
+\begin{equation}
+    \widetilde{\rho}_{\mathrm{IC}} = \beta_{\mathrm{IC}}\varrho_{\mathrm{IC}}.
+\end{equation}
+
+The quantity $\varrho_{\mathrm{IC}}$ is introduced here only for the local continuity construction. No independently calibrated equilibrium value of $\varrho_{\mathrm{IC}}$, and no additive contribution of $\widetilde{\rho}_{\mathrm{IC}}$ to the coherent inertia coefficient, is inferred from this argument.
+
+The local condensate conservation law is
+\begin{equation}
+    \frac{\partial\widetilde{\rho}_{\mathrm{IC}}}{\partial t} + \nabla\cdot\left(\widetilde{\rho}_{\mathrm{IC}}\mathbf{v}_{\mathrm{IC}}\right) = 0.
+\end{equation}
+
+In the coherent entrained branch,
+\begin{equation}
+    \mathbf{v}_{\mathrm{IC}} = \dot{\mathbf{u}}.
+\end{equation}
+
+At fixed active-phase packing fraction and fixed formal constituent density over the incremental disturbance,
+\begin{equation}
+    \frac{D\beta_{\mathrm{IC}}}{Dt} = 0,
+\end{equation}
+and
+\begin{equation}
+    \frac{D\varrho_{\mathrm{IC}}}{Dt} = 0.
+\end{equation}
+
+The conservation law then gives
+\begin{equation}
+    \nabla\cdot\dot{\mathbf{u}} = 0.
+\end{equation}
+
+For an initially volume-preserving incremental reference state, this integrates to
+\begin{equation}
+    \nabla\cdot\mathbf{u} = 0.
+\end{equation}
+
+This continuity argument is a kinematic consistency check, not an independent derivation of incompressibility. Constancy of both the formal constituent density and the interstitial packing fraction is the mixture-theoretic representation of the selected incompressible coherent branch. The notation $\varrho_{\mathrm{IC}}$ and $\widetilde{\rho}_{\mathrm{IC}}$ is kept distinct from the mode-resolved defect impedance density $\rho_{\mathrm{IC}}^{(\mathrm{imp})}$ introduced later.
+
+Variation with respect to $\delta p_{\mathrm{IC}}$ gives
+\begin{equation}
+    \nabla\cdot\mathbf{u} = 0.
+\end{equation}
+
+Variation with respect to $\mathbf{u}$ gives
+\begin{equation}
+    \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})\ddot{u}_{i} = \partial_{j}\delta\sigma_{ij},
+\end{equation}
+where
+\begin{equation}
+    \delta\sigma_{ij} = -\delta p_{\mathrm{IC}}\delta_{ij} + 2K_{\mathrm{sh}}^{(0)}\varepsilon_{ij}.
+\end{equation}
+
+Using the incompressibility condition, the equation of motion becomes
+\begin{equation}
+    \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})\ddot{\mathbf{u}} = K_{\mathrm{sh}}^{(0)}\nabla^2\mathbf{u} - \nabla\delta p_{\mathrm{IC}}.
+\end{equation}
+
+In a source-free homogeneous region, taking the divergence gives
+\begin{equation}
+    \nabla^2\delta p_{\mathrm{IC}} = 0.
+\end{equation}
+
+In the presence of an applied incremental force density $\mathbf{f}$,
+\begin{equation}
+    \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})\ddot{\mathbf{u}} = K_{\mathrm{sh}}^{(0)}\nabla^2\mathbf{u} - \nabla\delta p_{\mathrm{IC}} + \mathbf{f},
+\end{equation}
+and the pressure satisfies
+\begin{equation}
+    \nabla^2\delta p_{\mathrm{IC}} = \nabla\cdot\mathbf{f}.
+\end{equation}
+
+The elliptic pressure equation is the compatibility condition of the reduced constrained branch. It does not define an independently propagating field and does not represent an additional channel of instantaneous physical information. The pressure is determined jointly by the applied loading, the incompressibility constraint, and the boundary conditions.
+
+For a plane-wave perturbation, the constraint requires
+\begin{equation}
+    \mathbf{k}\cdot\mathbf{e} = 0.
+\end{equation}
+
+A longitudinal translational polarization is therefore excluded from the admissible finite-energy configuration space of the reduced coherent branch.
+
+The formal longitudinal frequency of the finite-$B_{\mathrm{IC}}$ regularization satisfies
+\begin{equation}
+    \omega_{\mathrm{L}}^2 = \frac{B_{\mathrm{IC}}+2K_{\mathrm{sh}}^{(0)}}{\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})}k^2.
+\end{equation}
+
+For fixed nonzero $k$,
+\begin{equation}
+    \omega_{\mathrm{L}} \rightarrow \infty
+\end{equation}
+as
+\begin{equation}
+    B_{\mathrm{IC}} \rightarrow \infty.
+\end{equation}
+
+The longitudinal translational excitation is therefore removed from the finite-frequency coherent spectrum. It is not converted into a superluminal propagating signal.
+
+For either admissible transverse polarization, the pressure term is orthogonal to the polarization vector, and
+\begin{equation}
+    \omega_{\mathrm{T}}^2 = \frac{K_{\mathrm{sh}}^{(0)}}{\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})}k^2 + \mathcal{O}\left(k^4d_{\mathrm{nn}}^2\right).
+\end{equation}
+
+Using
+\begin{equation}
+    K_{\mathrm{sh}}^{(0)} = \rho_{\mathrm{eff}}^{(0)}c_{\mathrm{E}}^2,
+\end{equation}
+and
+\begin{equation}
+    \rho_{\mathrm{eff}}(\alpha_{\mathrm{G}}) = \frac{\rho_{\mathrm{eff}}^{(0)}}{\left(1-\alpha_{\mathrm{G}}\right)^4},
+\end{equation}
+one obtains
+\begin{equation}
+    \omega_{\mathrm{T}}^2 = c_{\mathrm{E}}^2\left(1-\alpha_{\mathrm{G}}\right)^4k^2 + \mathcal{O}\left(k^4d_{\mathrm{nn}}^2\right).
+\end{equation}
+
+Hence,
+\begin{equation}
+    c_{\mathrm{P}} = c_{\mathrm{E}}\left(1-\alpha_{\mathrm{G}}\right)^2.
+\end{equation}
+
+The translational acoustic sector of the coherent active vacuum therefore contains two finite-frequency transverse polarizations. This statement does not classify the independent dynamical status of internal phase, microrotational, torsional, chiral, or localized-defect modes.
+
+\section{Static Longitudinal Pressure and the Finite FCC Yield Scale}
+\label{sec:AP_static_pressure_yield}
+
+Incremental incompressibility does not imply the absence of hydrostatic stress. The interstitial-condensate pressure is decomposed into a quasistatic background contribution and an incremental reaction field,
+\begin{equation}
+    p_{\mathrm{IC}}(\mathbf{x},t) = \overline{p}_{\mathrm{IC}}(\mathbf{x}) + \delta p_{\mathrm{IC}}(\mathbf{x},t).
+\end{equation}
+
+The background pressure $\overline{p}_{\mathrm{IC}}$ supports the prescribed gravitational preload. The incremental pressure $\delta p_{\mathrm{IC}}$ enforces the volume constraint of the coherent perturbation.
+
+The local gravitational loading is represented by
+\begin{equation}
+    \tau_L = \alpha_{\mathrm{G}}\tau_{\mathrm{D}},
+\end{equation}
+where $\tau_{\mathrm{D}}$ is the active Soft Floor surface-tension scale. The corresponding volumetric pressure scale is obtained through the node-radius projection,
+\begin{equation}
+    \tau_{\mathrm{D,bulk}} \equiv \frac{\tau_{\mathrm{D}}}{r_{\mathrm{D}}}.
+\end{equation}
+
+The quantity $\tau_{\mathrm{D,bulk}}$ has dimensions of pressure and is interpreted as the finite gravitational yield pressure of the active FCC phase. It is not the tangent bulk modulus of an ordinary compressible acoustic medium.
+
+The quasistatic condensate pressure is therefore
+\begin{equation}
+    \overline{p}_{\mathrm{IC}} = \frac{\tau_L}{r_{\mathrm{D}}},
+\end{equation}
+and hence
+\begin{equation}
+    \overline{p}_{\mathrm{IC}} = \alpha_{\mathrm{G}}\tau_{\mathrm{D,bulk}}.
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    \alpha_{\mathrm{G}} = \frac{\overline{p}_{\mathrm{IC}}}{\tau_{\mathrm{D,bulk}}}.
+\end{equation}
+
+Within the active phase,
+\begin{equation}
+    0 \leq \overline{p}_{\mathrm{IC}} < \tau_{\mathrm{D,bulk}}.
+\end{equation}
+
+At zero gravitational loading, $\alpha_{\mathrm{G}}=0$, and therefore $\overline{p}_{\mathrm{IC}}=0$.
+
+In the active-side saturation limit, $\alpha_{\mathrm{G}}\rightarrow1^{-}$, the background pressure approaches
+\begin{equation}
+    \overline{p}_{\mathrm{IC}} \rightarrow \tau_{\mathrm{D,bulk}}.
+\end{equation}
+
+At equality,
+\begin{equation}
+    \overline{p}_{\mathrm{IC}} = \tau_{\mathrm{D,bulk}},
+\end{equation}
+the active FCC constitutive coordinates terminate. The local structure enters the saturated phase-transition regime and can no longer be represented as a linearly perturbed active FCC cell.
+
+The tangent incompressibility condition and the finite saturation pressure perform distinct constitutive roles. The singular limit
+\begin{equation}
+    B_{\mathrm{IC}}\rightarrow\infty
+\end{equation}
+excludes finite coherent volume strain,
+\begin{equation}
+    \nabla\cdot\mathbf{u}=0,
+\end{equation}
+whereas
+\begin{equation}
+    \tau_{\mathrm{D,bulk}}<\infty
+\end{equation}
+sets the maximum quasistatic pressure sustainable by the active FCC phase. Consequently,
+\begin{equation}
+    \boxed{ B_{\mathrm{IC}} \neq \tau_{\mathrm{D,bulk}} }.
+\end{equation}
+The former is a tangent constraint parameter; the latter is a finite yield-pressure scale.
+
+The total incremental stress about the gravitationally preloaded state is
+\begin{equation}
+    \delta\sigma_{ij} = -\delta p_{\mathrm{IC}}\delta_{ij} + 2K_{\mathrm{sh}}^{(0)} \varepsilon_{ij}.
+\end{equation}
+
+The corresponding total stress may be represented as
+\begin{equation}
+    \sigma_{ij} = -\overline{p}_{\mathrm{IC}}\delta_{ij} - \delta p_{\mathrm{IC}}\delta_{ij} + 2K_{\mathrm{sh}}^{(0)} \varepsilon_{ij},
+\end{equation}
+with the background term satisfying the quasistatic equilibrium equations independently of the incremental disturbance.
+
+This is the current-configuration tangent representation retained here. A finite-deformation small-on-large expansion would add geometric-stiffness terms from the preload; those terms belong to the nonlinear FCC constitutive extension.
+
+The background pressure determines the available endpoint-transfer capacity. Since
+\begin{equation}
+    \alpha_{\mathrm{G}} = \frac{\overline{p}_{\mathrm{IC}}}{\tau_{\mathrm{D,bulk}}},
+\end{equation}
+the locally uniform endpoint-transfer factor becomes
+\begin{equation}
+    \mathcal{C} = \left( 1- \frac{\overline{p}_{\mathrm{IC}}}{\tau_{\mathrm{D,bulk}}} \right)^2.
+\end{equation}
+
+The gravitationally referred coherent inertia is therefore
+\begin{equation}
+    \rho_{\mathrm{eff}} = \frac{\rho_{\mathrm{eff}}^{(0)}}{ \left( 1- \overline{p}_{\mathrm{IC}} / \tau_{\mathrm{D,bulk}} \right)^4 }.
+\end{equation}
+
+The transverse propagation speed follows as
+\begin{equation}
+    \boxed{ c_P = c_{\mathrm{E}} \left( 1- \frac{\overline{p}_{\mathrm{IC}}}{\tau_{\mathrm{D,bulk}}} \right)^2 }.
+\end{equation}
+
+The static longitudinal pressure and the dynamic transverse propagation law are thereby coupled through the occupied active capacity, while remaining mechanically distinct sectors.
+
+\section{Phase-Sector Status and Translational Acoustic Mode Count}
+\label{sec:AP_phase_status}
+
+The objective contact action developed in Appendix~\ref{app:fcc_microphysics} contains the dimensionless internal phase difference
+\begin{equation}
+    \Delta\varphi_{ij}=\varphi_j-\varphi_i,
+\end{equation}
+with local phase energy
+\begin{equation}
+    \mathcal U_{\varphi}^{(ij)}
+    =
+    \kappa_{\varphi}r_{\mathrm D}^2
+    \left[1-\cos(\Delta\varphi_{ij})\right].
+\end{equation}
+In the harmonic regime,
+\begin{equation}
+    \mathcal U_{\varphi}^{(ij)}
+    =
+    \frac{1}{2}\kappa_{\varphi}r_{\mathrm D}^2
+    (\Delta\varphi_{ij})^2
+    +\mathcal O(\Delta\varphi_{ij}^4).
+\end{equation}
+
+Because the contact energy depends only on phase differences, a uniform phase shift,
+\begin{equation}
+    \varphi_i\rightarrow\varphi_i+\varphi_0,
+\end{equation}
+leaves every bond energy unchanged. The uniform phase direction is therefore a null direction of the phase-difference potential. This property does not by itself determine whether the internal phase is an independent propagating bulk degree of freedom; that determination requires a phase kinetic sector.
+
+If the phase possesses an independent continuum inertia density \(\mathcal I_{\varphi}\), a local phase action may be written as
+\begin{equation}
+    S_{\varphi}
+    =
+    \int
+    \left[
+    \frac{1}{2}\mathcal I_{\varphi}\dot\varphi^2
+    -\frac{1}{2}K_{\varphi}|\nabla\varphi|^2
+    -U_{\mathrm{lock}}(\varphi)
+    \right]
+    \mathrm d^3x\,\mathrm dt.
+\end{equation}
+For dimensionless \(\varphi\), the coefficients satisfy
+\begin{equation}
+    [\mathcal I_{\varphi}]=\mathrm{kg\,m^{-1}},
+    \qquad
+    [K_{\varphi}]=\mathrm N,
+    \qquad
+    [U_{\mathrm{lock}}]=\mathrm{J\,m^{-3}}.
+\end{equation}
+Define
+\begin{equation}
+    c_{\varphi}^2
+    \equiv
+    \frac{K_{\varphi}}{\mathcal I_{\varphi}},
+\end{equation}
+and, about a local phase equilibrium \(\varphi_0\),
+\begin{equation}
+    \omega_{\varphi,0}^2
+    \equiv
+    \frac{1}{\mathcal I_{\varphi}}
+    \left.
+    \frac{\mathrm d^2U_{\mathrm{lock}}}{\mathrm d\varphi^2}
+    \right|_{\varphi=\varphi_0}.
+\end{equation}
+The linearized phase branch then satisfies
+\begin{equation}
+    \omega_{\varphi}^2
+    =
+    c_{\varphi}^2k^2
+    +\omega_{\varphi,0}^2.
+\end{equation}
+When \(U_{\mathrm{lock}}=0\), the branch is gapless. A nonzero locking curvature produces a finite phase gap.
+
+Without an independent phase inertia, \(\varphi\) is instead a constrained, gauge-redundant, or defect-confined coordinate and does not define an additional bulk mode. The present appendix does not select among these alternatives.
+
+Its coherent-mode statement is restricted to the translational acoustic sector. Within that sector, the incompressibility constraint
+\begin{equation}
+    \nabla\cdot\mathbf u=0
+\end{equation}
+removes the longitudinal translational polarization and leaves two transverse translational acoustic polarizations. Accordingly, the statement that the coherent translational acoustic sector contains two finite-frequency transverse polarizations does not imply that the complete microscopic spectrum contains only two dynamical branches. Microrotational, torsional, internal-phase, chiral, and localized-defect branches remain outside the translational acoustic mode count.
+
+For either translational transverse polarization,
+\begin{equation}
+    \mathbf k\cdot\mathbf e_T=0,
+\end{equation}
+and
+\begin{equation}
+    \omega_T^2
+    =
+    c_{\mathrm E}^2(1-\alpha_{\mathrm G})^4k^2
+    +\mathcal O(k^4d_{\mathrm{nn}}^2).
+\end{equation}
+The two translational polarizations are degenerate at leading long-wavelength order under the constitutive isotropy condition
+\begin{equation}
+    \kappa_{\mathrm n}=\kappa_{\mathrm t}.
+\end{equation}
+Any splitting between them must arise from finite-wave-number cubic anisotropy, chiral polarization, nonuniform loading, higher-gradient contact terms, or additional phase--rotation coupling beyond the baseline parity-even constitutive order.
+
+\section{Localized Defect--Condensate Relative-Flow Kinematics}
+\label{sec:AP_localized_kinematics}
+
+The coherent branch satisfies
+\begin{equation}
+    \dot{\mathbf{w}} = \dot{\mathbf{u}},
+\end{equation}
+and therefore
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} = \dot{\mathbf{w}}-\dot{\mathbf{u}} = \mathbf{0}.
+\end{equation}
+
+A localized topological defect introduces a different kinematic sector. Translation, boundary deformation, or internal reconfiguration of the defect can induce condensate motion relative to the local FCC scaffold,
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} \neq \mathbf{0}.
+\end{equation}
+
+Let $\Omega_{\mathrm{IC}}^{(\mathrm{def})}$ denote the connected interstitial-condensate domain influenced by the defect, and let $\partial\Omega_{\mathrm{def}}$ denote the effective defect--condensate interface.
+
+A single localized defect mode is described by a generalized coordinate $q(t)$, restricted in the present construction to have dimensions of length,
+\begin{equation}
+    \boxed{ [q]=\mathrm{m} }.
+\end{equation}
+The restriction ensures that the boundary mode introduced below is dimensionless and that the associated surface-weighted measure has dimensions of area. Internal phase evolution or other dimensionless generalized coordinates require a separate coordinate metric and are not included in the present scalar translational normalization.
+
+Let a material point on the defect boundary be represented by
+\begin{equation}
+    \mathbf{X}_{\partial} = \mathbf{X}_{\partial}(\boldsymbol{s},q),
+\end{equation}
+where $\boldsymbol{s}$ labels the boundary point. The boundary mode is
+\begin{equation}
+    \mathbf{b}_{\partial} \equiv \frac{\partial\mathbf{X}_{\partial}}{\partial q}.
+\end{equation}
+
+Since both $\mathbf{X}_{\partial}$ and $q$ have dimensions of length,
+\begin{equation}
+    [\mathbf{b}_{\partial}]=1.
+\end{equation}
+
+The defect-boundary velocity relative to the local scaffold is
+\begin{equation}
+    \dot{\mathbf{X}}_{\partial}^{(\mathrm{rel})} = \dot{q}\mathbf{b}_{\partial}.
+\end{equation}
+
+For a linearized localized response, write the condensate velocity relative to the scaffold as
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}}(\mathbf{x},t) = \dot{q}(t) \boldsymbol{\Upsilon}(\mathbf{x}),
+\end{equation}
+where $\boldsymbol{\Upsilon}(\mathbf{x})$ is the dimensionless condensate response field generated by unit generalized defect velocity.
+
+The field $\boldsymbol{\Upsilon}$ depends on the defect geometry, the interstitial connectivity, the outer boundary conditions, and the selected defect mode. It is not assumed to be spatially uniform.
+
+At conservative inviscid order, the defect boundary and the condensate satisfy the no-penetration condition
+\begin{equation}
+    \boxed{ \boldsymbol{\Upsilon}\cdot\hat{\mathbf n}_{\mathrm d} = \mathbf b_{\partial}\cdot\hat{\mathbf n}_{\mathrm d} \qquad \text{on } \partial\Omega_{\mathrm{def}} },
+\end{equation}
+where $\hat{\mathbf n}_{\mathrm d}$ is directed from the defect into the condensate domain.
+
+The no-penetration condition transmits only the normal boundary velocity. Tangential defect motion does not drive the conservative inviscid condensate response unless an additional tangential traction, interfacial locking, or no-slip law is introduced. The localized impedance projection must therefore be weighted by the normal boundary mode rather than by the full boundary-vector norm.
+
+The coherent and localized sectors are consequently distinguished by
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} = \mathbf{0} \quad \text{for the entrained periodic branch,}
+\end{equation}
+and
+\begin{equation}
+    \mathbf{v}_{\mathrm{rel}} = \dot{q}\boldsymbol{\Upsilon} \quad \text{for the localized defect-induced branch.}
+\end{equation}
+
+The kinetic contribution generated by $\boldsymbol{\Upsilon}$ is an added inertia of the defect coordinate. It is not an additional independent contribution to the coherent acoustic inertia.
+
+\section[Defect-Flow Boundary-Value Problem]{Conservative Defect-Flow Boundary-Value Problem}
+\label{sec:AP_defect_boundary_value_problem}
+
+The interstitial condensate is incrementally incompressible within the active FCC phase. The localized response field therefore satisfies
+\begin{equation}
+    \nabla\cdot\boldsymbol\Upsilon=0
+\end{equation}
+throughout the defect-influenced condensate domain \(\Omega_{\mathrm{IC}}^{(\mathrm{def})}\).
+
+On the minimum-energy zero-circulation branch, the response is also irrotational,
+\begin{equation}
+    \nabla\times\boldsymbol\Upsilon=\mathbf0.
+\end{equation}
+It may then be represented by the reduced relative-flow potential
+\begin{equation}
+    \boldsymbol\Upsilon=\nabla\Phi_{\mathrm{rel}}.
+\end{equation}
+Since \([\boldsymbol\Upsilon]=1\) and \([\nabla]=\mathrm m^{-1}\),
+\begin{equation}
+    [\Phi_{\mathrm{rel}}]=\mathrm m.
+\end{equation}
+The physical velocity potential is \(\dot q\,\Phi_{\mathrm{rel}}\), with dimensions \(\mathrm{m^2\,s^{-1}}\).
+
+The incompressibility condition gives
+\begin{equation}
+    \nabla^2\Phi_{\mathrm{rel}}=0
+\end{equation}
+within \(\Omega_{\mathrm{IC}}^{(\mathrm{def})}\).
+
+Let \(\hat{\mathbf n}_{\mathrm d}\) denote the unit normal directed from the defect into the condensate. At the effective defect--condensate interface, the inviscid no-penetration condition is
+\begin{equation}
+    \frac{\partial\Phi_{\mathrm{rel}}}{\partial n_{\mathrm d}}
+    =
+    \mathbf b_{\partial}\cdot\hat{\mathbf n}_{\mathrm d}
+    \qquad
+    \text{on }\partial\Omega_{\mathrm{def}}.
+\end{equation}
+
+For an isolated defect in an unbounded condensate domain,
+\begin{equation}
+    \nabla\Phi_{\mathrm{rel}}\rightarrow\mathbf0
+    \qquad
+    \text{as }|\mathbf x|\rightarrow\infty.
+\end{equation}
+For a periodic FCC defect calculation, \(\Phi_{\mathrm{rel}}\) satisfies the corresponding periodic boundary conditions together with the prescribed cell-scale flux constraint.
+
+Let \(\partial\Omega_{\mathrm{out}}\) denote the outer boundary of the condensate domain and let \(\hat{\mathbf n}_{\mathrm{out}}\) be its outward normal. The outward normal of the condensate domain on the inner defect boundary is \(-\hat{\mathbf n}_{\mathrm d}\). Therefore, the divergence theorem gives the compatibility condition
+\begin{equation}
+    -
+    \int_{\partial\Omega_{\mathrm{def}}}
+    \mathbf b_{\partial}\cdot\hat{\mathbf n}_{\mathrm d}
+    \;\mathrm dA
+    +
+    \int_{\partial\Omega_{\mathrm{out}}}
+    \boldsymbol\Upsilon\cdot\hat{\mathbf n}_{\mathrm{out}}
+    \;\mathrm dA
+    =0.
+\end{equation}
+For an isolated defect with vanishing far-field flux, the admissible boundary mode must satisfy
+\begin{equation}
+    \boxed{
+    \int_{\partial\Omega_{\mathrm{def}}}
+    \mathbf b_{\partial}\cdot\hat{\mathbf n}_{\mathrm d}
+    \;\mathrm dA
+    =0 }.
+\end{equation}
+A rigid translation satisfies this condition because
+\begin{equation}
+    \int_{\partial\Omega_{\mathrm{def}}}
+    \hat{\mathbf n}_{\mathrm d}
+    \;\mathrm dA
+    =\mathbf0.
+\end{equation}
+A purely radial breathing mode that changes the enclosed defect volume does not satisfy the isolated-domain condition unless its flux is balanced by an outer-boundary flow, a compensating scaffold deformation, or a coupled phase-conversion process. Such a mode is not an admissible isolated perturbation of the strictly incompressible conservative branch.
+
+The conservative response may equivalently be obtained from
+\begin{equation}
+    \boldsymbol\Upsilon
+    =
+    \operatorname*{arg\,min}_{\mathbf v}
+    \int_{\Omega_{\mathrm{IC}}^{(\mathrm{def})}}
+    |\mathbf v|^2\,\mathrm dV,
+\end{equation}
+subject to
+\begin{equation}
+    \nabla\cdot\mathbf v=0,
+\end{equation}
+\begin{equation}
+    \mathbf v\cdot\hat{\mathbf n}_{\mathrm d}
+    =
+    \mathbf b_{\partial}\cdot\hat{\mathbf n}_{\mathrm d}
+    \qquad
+    \text{on }\partial\Omega_{\mathrm{def}},
+\end{equation}
+and the selected outer-boundary condition.
+
+The zero-circulation restriction selects the minimum-energy potential-flow branch. A defect carrying conserved circulation, vortex content, or chiral winding requires an additional solenoidal component,
+\begin{equation}
+    \boldsymbol\Upsilon
+    =
+    \nabla\Phi_{\mathrm{rel}}
+    +\boldsymbol\Upsilon_{\mathrm{circ}},
+\end{equation}
+with
+\begin{equation}
+    \nabla\cdot\boldsymbol\Upsilon_{\mathrm{circ}}=0,
+    \qquad
+    \nabla\times\boldsymbol\Upsilon_{\mathrm{circ}}\neq\mathbf0.
+\end{equation}
+Such circulation-carrying branches are not included in the baseline impedance projection.
+
+For a prescribed admissible geometry, boundary mode, and outer condition, the Neumann problem determines \(\Phi_{\mathrm{rel}}\) up to an additive constant on a simply connected zero-circulation domain. Multiply connected domains may additionally support harmonic circulation sectors, which must be fixed separately. The resulting field supplies the mode-weighted condensate participation volume used below.
+
+\section[Normal Boundary Impedance Projection]{Normal Boundary Weighting and Impedance Projection}
+\label{sec:AP_normal_boundary_impedance}
+
+The conservative boundary-value problem transmits the normal component of the defect-boundary velocity into the interstitial condensate. Define
+\begin{equation}
+    b_{\mathrm{n}}(\boldsymbol{s})\equiv\mathbf{b}_{\partial}(\boldsymbol{s})\cdot\hat{\mathbf{n}}_{\mathrm{d}}(\boldsymbol{s}).
+\end{equation}
+
+The mode-weighted normal interface area is
+\begin{equation}
+    A_{\mathrm{imp}}^{(\mathrm{n})}\equiv\int_{\partial\Omega_{\mathrm{def}}}|b_{\mathrm{n}}|^{2}\,\mathrm{d}A.
+\end{equation}
+
+Since $\mathbf{b}_{\partial}$ is dimensionless,
+\begin{equation}
+    [A_{\mathrm{imp}}^{(\mathrm{n})}]=\mathrm{m}^{2}.
+\end{equation}
+
+The quantity $A_{\mathrm{imp}}^{(\mathrm{n})}$ is not generally the total geometric area of the defect boundary, nor is it the complete kinetic area of arbitrary tangential boundary motion. It is the normal-coupled modal area transmitted by the inviscid no-penetration condition. Boundary regions with vanishing normal motion do not contribute.
+
+The condensate participation volume is
+\begin{equation}
+    V_{\mathrm{imp}}\equiv\int_{\Omega_{\mathrm{IC}}^{(\mathrm{def})}}|\boldsymbol{\Upsilon}|^{2}\,\mathrm{d}V,
+\end{equation}
+with
+\begin{equation}
+    [V_{\mathrm{imp}}]=\mathrm{m}^{3}.
+\end{equation}
+
+The quantity $V_{\mathrm{imp}}$ is an inertia-weighted participation volume rather than the geometric volume of the entire connected interstitial domain.
+
+Define the localized surface-to-volume impedance projection by
+\begin{equation}
+    \label{eq:AP_defect_projection}
+    \iota_{\mathrm{V}}^{(\mathrm{def})}\equiv\frac{A_{\mathrm{imp}}^{(\mathrm{n})}}{V_{\mathrm{imp}}}.
+\end{equation}
+
+Its dimensions are
+\begin{equation}
+    [\iota_{\mathrm{V}}^{(\mathrm{def})}]=\mathrm{m}^{-1}.
+\end{equation}
+
+This defect projection must be distinguished from the transverse modal projection of the periodic FCC scaffold transfer coordinate established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}},
+\begin{equation}
+    \iota_{\mathrm{tr}}^{(\mathrm{modal})}
+    =
+    \frac{A_{\mathrm{ct}}^{(\mathrm{modal})}}{V_{\mathrm{p}}}
+    =
+    \frac{\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}}{\mu_{\mathrm{D}}}.
+\end{equation}
+
+The two quantities represent different mechanical reductions:
+\begin{equation}
+    \label{eq:AP_projection_distinction}
+    \iota_{\mathrm{V}}^{(\mathrm{def})}\not\equiv\iota_{\mathrm{tr}}^{(\mathrm{modal})}.
+\end{equation}
+
+The quantity $\iota_{\mathrm{tr}}^{(\mathrm{modal})}$ belongs to the periodic scaffold contact normalization, whereas $\iota_{\mathrm{V}}^{(\mathrm{def})}$ belongs to a localized relative-condensate-flow boundary-value problem. They may be equated only if the corresponding periodic and localized mode functionals are independently shown to coincide. Equality of dimensions alone does not provide that identification.
+
+In terms of the solved fields,
+\begin{equation}
+    \iota_{\mathrm{V}}^{(\mathrm{def})}
+    =
+    \frac{\displaystyle\int_{\partial\Omega_{\mathrm{def}}}|\mathbf{b}_{\partial}\cdot\hat{\mathbf{n}}_{\mathrm{d}}|^{2}\,\mathrm{d}A}
+    {\displaystyle\int_{\Omega_{\mathrm{IC}}^{(\mathrm{def})}}|\boldsymbol{\Upsilon}|^{2}\,\mathrm{d}V}.
+\end{equation}
+
+This is a mode-weighted inverse length associated with the localized relative-flow solution.
+
+The projection is invariant under a dimensionless rescaling of the generalized coordinate. For $q'=a q$, with $a\neq0$ dimensionless,
+\begin{equation}
+    \mathbf{b}_{\partial}'=a^{-1}\mathbf{b}_{\partial},\qquad\boldsymbol{\Upsilon}'=a^{-1}\boldsymbol{\Upsilon}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    A_{\mathrm{imp}}^{(\mathrm{n})\prime}=a^{-2}A_{\mathrm{imp}}^{(\mathrm{n})},\qquad V_{\mathrm{imp}}'=a^{-2}V_{\mathrm{imp}},
+\end{equation}
+and
+\begin{equation}
+    \iota_{\mathrm{V}}^{(\mathrm{def})\prime}=\iota_{\mathrm{V}}^{(\mathrm{def})}.
+\end{equation}
+
+Define the associated impedance penetration length by
+\begin{equation}
+    \ell_{\mathrm{imp}}^{(\mathrm{def})}\equiv\frac{V_{\mathrm{imp}}}{A_{\mathrm{imp}}^{(\mathrm{n})}}.
+\end{equation}
+
+Then
+\begin{equation}
+    \iota_{\mathrm{V}}^{(\mathrm{def})}=\frac{1}{\ell_{\mathrm{imp}}^{(\mathrm{def})}}.
+\end{equation}
+
+The penetration length is an effective mode measure; it need not equal the defect radius, shell thickness, or lattice spacing.
+
+The empirical convention
+\begin{equation}
+    \iota_{\mathrm{V}}=1\ \mathrm{m}^{-1}
+\end{equation}
+corresponds, within this equivalent representation, to
+\begin{equation}
+    \ell_{\mathrm{imp}}=1\ \mathrm{m}.
+\end{equation}
+
+It remains an empirical calibration until a specified defect-flow boundary-value problem produces the same ratio of mode integrals.
+
+\section{Mode-Resolved Condensate Impedance Density}
+\label{sec:AP_mode_resolved_density}
+
+Adopt the reduced normal-coupled surface normalization
+\begin{equation}
+    T_{\partial}^{(\mathrm{n})}\equiv\frac{1}{2}\mu_{\mathrm{D}}A_{\mathrm{imp}}^{(\mathrm{n})}\dot{q}^{2}.
+\end{equation}
+
+This is a constitutive interface representation of the condensate-coupled normal mode. The coefficient $\mu_{\mathrm{D}}$ serves here as the baseline surface-inertia normalization of the coupled interface response. This construction is not the complete kinetic energy of arbitrary tangential defect motion and does not establish $\mu_{\mathrm{D}}$ as an intrinsic volumetric density of the interstitial condensate.
+
+Represent the same reduced kinetic coefficient in volumetric form as
+\begin{equation}
+    T_{\mathrm{vol}}\equiv\frac{1}{2}\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}\dot{q}^{2}.
+\end{equation}
+
+Equivalence of the two representations defines
+\begin{equation}
+    \mu_{\mathrm{D}}A_{\mathrm{imp}}^{(\mathrm{n})}=\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}},
+\end{equation}
+and hence
+\begin{equation}
+    \rho_{\mathrm{IC}}^{(\mathrm{imp})}\equiv\mu_{\mathrm{D}}\iota_{\mathrm{V}}^{(\mathrm{def})}.
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    \rho_{\mathrm{IC}}^{(\mathrm{imp})}=\frac{\mu_{\mathrm{D}}}{\ell_{\mathrm{imp}}^{(\mathrm{def})}}.
+\end{equation}
+
+The dimensions are
+\begin{equation}
+    [\rho_{\mathrm{IC}}^{(\mathrm{imp})}]=\mathrm{kg\,m}^{-3}.
+\end{equation}
+
+The quantity $\rho_{\mathrm{IC}}^{(\mathrm{imp})}$ is an equivalent mode-resolved impedance density associated with the localized relative-flow coordinate. It is not automatically the intrinsic equilibrium density of the interstitial condensate and is not an independently additive density of the coherent scaffold coordinate.
+
+Within the reduced matching above, the corresponding conservative added-inertia coefficient is
+\begin{equation}
+    m_{\mathrm{add}}=\mu_{\mathrm{D}}A_{\mathrm{imp}}^{(\mathrm{n})}=\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}.
+\end{equation}
+
+This coefficient belongs exclusively to the localized relative-condensate-flow coordinate. It must not be added to the primitive-cell scaffold inertia $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$ merely because the condensate is entrained with the scaffold in the coherent branch. Entrainment fixes the relative kinematics but does not independently establish an additive coherent condensate kinetic coefficient. Such a contribution can arise only from an explicit coupled two-field kinetic action.
+
+The projection may depend on geometry, topology, boundary mode, and outer condition:
+\begin{equation}
+    \iota_{\mathrm{V}}^{(\mathrm{def})}
+    =
+    \iota_{\mathrm{V}}^{(\mathrm{def})}
+    \left(
+    \mathrm{geometry},
+    \mathrm{topology},
+    \mathrm{boundary\ mode},
+    \mathrm{outer\ condition}
+    \right).
+\end{equation}
+
+In a conservative frequency-dependent calculation, the normalized response field may depend on $\omega$, giving a real nonnegative projection $\iota_{\mathrm{V}}^{(\mathrm{def})}(\omega)$ through the same ratio of squared mode norms. Its quasistatic limit is
+\begin{equation}
+    \iota_{\mathrm{V},0}^{(\mathrm{def})}\equiv\lim_{\omega\rightarrow0}\iota_{\mathrm{V}}^{(\mathrm{def})}(\omega),
+\end{equation}
+provided the limit exists.
+
+A dissipative complex impedance is a different response object. It must be defined through the generalized force--velocity relation, for example
+\begin{equation}
+    \widehat{Q}_{\mathrm{def}}(\omega)=\mathcal{Z}_{\mathrm{def}}(\omega)\widehat{\dot{q}}(\omega),
+\end{equation}
+and cannot be obtained merely by assigning an imaginary part to the positive norm ratio $A_{\mathrm{imp}}^{(\mathrm{n})}/V_{\mathrm{imp}}$. Dissipative and radiative corrections lie outside the conservative action retained here.
+
+A universal condensate impedance density may be introduced only if $\iota_{\mathrm{V},0}^{(\mathrm{def})}$ is shown to be common to a specified stable defect class. Otherwise the mode-resolved notation $\rho_{\mathrm{IC}}^{(\mathrm{imp})}$ must be retained. The construction therefore replaces an unspecified dimensional conversion by a definite boundary-value functional; it does not by itself establish universality, determine an intrinsic equilibrium condensate density, or supply a numerical value.
+
+\section{Reduced Swept-Volume Approximation for Localized Defects}
+\label{sec:AP_swept_volume}
+
+The exact localized participation volume is
+\begin{equation}
+    V_{\mathrm{imp}}
+    =
+    \int_{\Omega_{\mathrm{IC}}^{(\mathrm{def})}}
+    |\boldsymbol\Upsilon|^2\,\mathrm dV.
+\end{equation}
+For comparison with the existing thin-layer mass parametrization, consider a localized structural layer surrounding a spherical Soft Floor node of radius \(r_{\mathrm D}\). Let \(r_{\mathrm{amp}}\) denote the equilibrium radial thickness assigned to that defect structure. The geometric shell volume is
+\begin{equation}
+    V_{\mathrm{sweep}}
+    =
+    \frac{4\pi}{3}
+    \left[
+    (r_{\mathrm D}+r_{\mathrm{amp}})^3-r_{\mathrm D}^3
+    \right].
+\end{equation}
+Thus,
+\begin{equation}
+    V_{\mathrm{sweep}}
+    =
+    4\pi r_{\mathrm D}^2r_{\mathrm{amp}}
+    \left[
+    1+
+    \frac{r_{\mathrm{amp}}}{r_{\mathrm D}}
+    +
+    \frac{1}{3}
+    \left(
+    \frac{r_{\mathrm{amp}}}{r_{\mathrm D}}
+    \right)^2
+    \right].
+\end{equation}
+In the thin-layer regime,
+\begin{equation}
+    V_{\mathrm{sweep}}
+    =
+    4\pi r_{\mathrm D}^2r_{\mathrm{amp}}
+    \left[
+    1+\mathcal O
+    \left(
+    \frac{r_{\mathrm{amp}}}{r_{\mathrm D}}
+    \right)
+    \right].
+\end{equation}
+The familiar quantity
+\begin{equation}
+    V_{\mathrm{eff}}
+    \equiv
+    4\pi r_{\mathrm D}^2r_{\mathrm{amp}}
+\end{equation}
+is therefore the leading geometric shell volume.
+
+The kinetic participation volume need not equal this geometric comparison volume. Define
+\begin{equation}
+    \mathcal G_{\mathrm{imp}}
+    \equiv
+    \frac{V_{\mathrm{imp}}}{V_{\mathrm{sweep}}}.
+\end{equation}
+This is an identity once both volumes are specified, but the value of \(\mathcal G_{\mathrm{imp}}\) is a property of the solved mode. It may depend on defect geometry, boundary mode, and \(r_{\mathrm{amp}}/r_{\mathrm D}\). For the thin-layer reduction to possess a controlled leading coefficient, \(\mathcal G_{\mathrm{imp}}\) must approach a finite limit over the selected defect family as \(r_{\mathrm{amp}}/r_{\mathrm D}\rightarrow0\).
+
+Under that condition,
+\begin{equation}
+    V_{\mathrm{imp}}
+    =
+    4\pi\mathcal G_{\mathrm{imp}}
+    r_{\mathrm D}^2r_{\mathrm{amp}}
+    \left[
+    1+\mathcal O
+    \left(
+    \frac{r_{\mathrm{amp}}}{r_{\mathrm D}}
+    \right)
+    \right].
+\end{equation}
+The condition \(\mathcal G_{\mathrm{imp}}=1\) is not a geometric identity; it is a mode-specific closure asserting equality between the kinetic participation volume and the leading shell volume.
+
+Using \(m_{\mathrm{add}}=\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}\),
+\begin{equation}
+    m_{\mathrm{add}}
+    =
+    4\pi r_{\mathrm D}^2
+    \rho_{\mathrm{IC}}^{(\mathrm{imp})}
+    \mathcal G_{\mathrm{imp}}
+    r_{\mathrm{amp}}
+    \left[
+    1+\mathcal O
+    \left(
+    \frac{r_{\mathrm{amp}}}{r_{\mathrm D}}
+    \right)
+    \right].
+\end{equation}
+Define
+\begin{equation}
+    \boxed{
+    K_{\mathrm D}^{(\mathrm{def})}
+    \equiv
+    4\pi r_{\mathrm D}^2
+    \rho_{\mathrm{IC}}^{(\mathrm{imp})}
+    \mathcal G_{\mathrm{imp}} }.
+\end{equation}
+Then
+\begin{equation}
+    \boxed{
+    m_{\mathrm{add}}
+    =
+    K_{\mathrm D}^{(\mathrm{def})}r_{\mathrm{amp}}
+    \left[
+    1+\mathcal O
+    \left(
+    \frac{r_{\mathrm{amp}}}{r_{\mathrm D}}
+    \right)
+    \right] }.
+\end{equation}
+The coefficient has dimensions \([K_{\mathrm D}^{(\mathrm{def})}]=\mathrm{kg\,m^{-1}}\), and
+\begin{equation}
+    K_{\mathrm D}^{(\mathrm{def})}
+    =
+    4\pi r_{\mathrm D}^2
+    \mu_{\mathrm D}
+    \iota_V^{(\mathrm{def})}
+    \mathcal G_{\mathrm{imp}}.
+\end{equation}
+The existing relation \(K_{\mathrm D}=4\pi r_{\mathrm D}^2\rho_{\mathrm{IC}}\) is recovered only when the projected density is universal within the selected defect class and \(\mathcal G_{\mathrm{imp}}=1\).
+
+\section{Phase-Participation Function and Branch-Level Sine Closure}
+\label{sec:AP_phase_participation}
+
+The localized response developed above fixes the hydrodynamic inertia of a prescribed reference defect mode. A factorized phase law is obtained only when the phase dependence can be separated from the reference geometry and normalized flow field. Under that reduction, the fraction of the reference inertia activated by the phase structure is represented by
+\begin{equation}
+    f_{\varphi}(\Delta\varphi),
+\end{equation}
+normalized so that
+\begin{equation}
+    0\leq f_{\varphi}(\Delta\varphi)\leq1.
+\end{equation}
+Nonnegativity follows from its role as a coefficient of a quadratic kinetic term.
+
+For a spatially uniform phase mismatch and a fixed reference defect mode,
+\begin{equation}
+    T_{\mathrm{def}}
+    =
+    \frac{1}{2}
+    \mu_{\mathrm D}A_{\mathrm{imp}}^{(n)}
+    f_{\varphi}(\Delta\varphi)\dot q^2,
+\end{equation}
+or equivalently,
+\begin{equation}
+    T_{\mathrm{def}}
+    =
+    \frac{1}{2}
+    \rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}
+    f_{\varphi}(\Delta\varphi)\dot q^2.
+\end{equation}
+The phase-activated topological loading is therefore
+\begin{equation}
+    \boxed{
+    M_{\mathrm{top}}(\Delta\varphi)
+    =
+    \rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}
+    f_{\varphi}(\Delta\varphi) }.
+\end{equation}
+
+This factorization must not double-count phase dependence. If the defect boundary mode \(\mathbf b_{\partial}\), the domain, or the response \(\boldsymbol\Upsilon\) already depends explicitly on \(\Delta\varphi\), then the primary phase-dependent functional is
+\begin{equation}
+    M_{\mathrm{top}}(\Delta\varphi)
+    =
+    \mu_{\mathrm D}
+    \int_{\partial\Omega_{\mathrm{def}}(\Delta\varphi)}
+    |\mathbf b_{\partial}(\Delta\varphi)\cdot\hat{\mathbf n}_{\mathrm d}|^2
+    \;\mathrm dA,
+\end{equation}
+with the corresponding phase-dependent flow solution. An additional multiplicative \(f_{\varphi}\) may be introduced only after a nonredundant separation has been established.
+
+The participation function is periodic,
+\begin{equation}
+    f_{\varphi}(\Delta\varphi+2\pi)
+    =
+    f_{\varphi}(\Delta\varphi).
+\end{equation}
+Within an unpolarized reciprocal defect sector,
+\begin{equation}
+    f_{\varphi}(-\Delta\varphi)
+    =
+    f_{\varphi}(\Delta\varphi).
+\end{equation}
+This evenness condition is not imposed on an individual chiral branch.
+
+For a phase-created defect in the factorized reference-mode description, phase matching removes the activated topological loading, and
+\begin{equation}
+    f_{\varphi}(0)=0,
+    \qquad
+    M_{\mathrm{top}}(0)=0.
+\end{equation}
+If the physical defect boundary itself disappears as \(\Delta\varphi\rightarrow0\), the unfactorized boundary-value functional must be used to determine the limiting behavior of \(A_{\mathrm{imp}}^{(n)}\), \(V_{\mathrm{imp}}\), and their ratio. They should not simultaneously be assigned an additional vanishing factor without demonstrating that the two descriptions are nonredundant.
+
+A boundary that persists at phase matching possesses a phase-independent contribution,
+\begin{equation}
+    M_{\mathrm{add}}(\Delta\varphi)
+    =
+    M_{\mathrm{geom}}
+    +M_{\varphi}f_{\varphi}(\Delta\varphi),
+\end{equation}
+where \(M_{\mathrm{geom}}>0\).
+
+The sine closure used in the reduced topological mass law is admissible only branchwise. Introduce a phase-branch orientation
+\begin{equation}
+    \varsigma_{\varphi}=\pm1.
+\end{equation}
+The nonnegative branch representation is
+\begin{equation}
+    f_{\varphi,\varsigma}^{(\sin)}(\Delta\varphi)
+    =
+    \varsigma_{\varphi}\sin(\Delta\varphi),
+\end{equation}
+restricted by
+\begin{equation}
+    \varsigma_{\varphi}\sin(\Delta\varphi)\geq0.
+\end{equation}
+For \(0\leq\Delta\varphi\leq\pi\),
+\begin{equation}
+    f_{\varphi,+}^{(\sin)}=\sin(\Delta\varphi),
+\end{equation}
+whereas for \(-\pi\leq\Delta\varphi\leq0\),
+\begin{equation}
+    f_{\varphi,-}^{(\sin)}=-\sin(\Delta\varphi).
+\end{equation}
+The reciprocal envelope is
+\begin{equation}
+    f_{\varphi}^{(\mathrm{rec})}(\Delta\varphi)
+    =
+    |\sin(\Delta\varphi)|.
+\end{equation}
+The sign of \(\sin(\Delta\varphi)\) may encode orientation in a chiral force or circulation sector, but it cannot make the quadratic inertial coefficient negative.
+
+When the phase mismatch varies over the defect boundary, the participation factor remains inside the weighted integral:
+\begin{equation}
+    T_{\mathrm{def}}
+    =
+    \frac{1}{2}\mu_{\mathrm D}\dot q^2
+    \int_{\partial\Omega_{\mathrm{def}}}
+    |\mathbf b_{\partial}\cdot\hat{\mathbf n}_{\mathrm d}|^2
+    f_{\varphi}[\Delta\varphi(\boldsymbol s)]
+    \;\mathrm dA.
+\end{equation}
+The scalar factorization therefore assumes a phase mismatch that is uniform, or effectively uniform under the normal-mode weighting, over the active interface.
+
+\section{Recovery Conditions for the Hydrodynamic Mass Law}
+\label{sec:AP_recovery_mass_law}
+
+For a factorized reference defect mode, the topological loading is
+\begin{equation}
+    M_{\mathrm{top}} = \rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}f_{\varphi}(\Delta\varphi).
+\end{equation}
+
+Using the thin-layer relation developed above,
+\begin{equation}
+    M_{\mathrm{top}} = 4\pi r_{\mathrm{D}}^2\rho_{\mathrm{IC}}^{(\mathrm{imp})}\mathcal{G}_{\mathrm{imp}}r_{\mathrm{amp}}f_{\varphi}(\Delta\varphi)\left[1+\mathcal{O}\left(\frac{r_{\mathrm{amp}}}{r_{\mathrm{D}}}\right)\right].
+\end{equation}
+
+With
+\begin{equation}
+    K_{\mathrm{D}}^{(\mathrm{def})} = 4\pi r_{\mathrm{D}}^2\rho_{\mathrm{IC}}^{(\mathrm{imp})}\mathcal{G}_{\mathrm{imp}},
+\end{equation}
+this becomes
+\begin{equation}
+    M_{\mathrm{top}} = K_{\mathrm{D}}^{(\mathrm{def})}r_{\mathrm{amp}}f_{\varphi}(\Delta\varphi)\left[1+\mathcal{O}\left(\frac{r_{\mathrm{amp}}}{r_{\mathrm{D}}}\right)\right].
+\end{equation}
+
+The previously employed hydrodynamic mass law is recovered at leading thin-layer order only under the simultaneous closures
+\begin{equation}
+    r_{\mathrm{amp}} \ll r_{\mathrm{D}}, \qquad \mathcal{G}_{\mathrm{imp}} = 1, \qquad \rho_{\mathrm{IC}}^{(\mathrm{imp})} = \rho_{\mathrm{IC}},
+\end{equation}
+together with a uniform factorized phase mismatch and, on the positive branch,
+\begin{equation}
+    f_{\varphi}(\Delta\varphi) = \sin(\Delta\varphi), \qquad 0 \leq \Delta\varphi \leq \pi.
+\end{equation}
+
+Here the identification $\rho_{\mathrm{IC}}^{(\mathrm{imp})} = \rho_{\mathrm{IC}}$ is a universality closure for the projected defect impedance density. It does not identify $\rho_{\mathrm{IC}}$ with an independently derived intrinsic equilibrium density of the interstitial condensate.
+
+Then
+\begin{equation}
+    V_{\mathrm{imp}} = V_{\mathrm{eff}}\left[1+\mathcal{O}\left(\frac{r_{\mathrm{amp}}}{r_{\mathrm{D}}}\right)\right], \qquad V_{\mathrm{eff}} = 4\pi r_{\mathrm{D}}^2 r_{\mathrm{amp}},
+\end{equation}
+and
+\begin{equation}
+    M_{\mathrm{top}} = \rho_{\mathrm{IC}}V_{\mathrm{eff}}\sin(\Delta\varphi)\left[1+\mathcal{O}\left(\frac{r_{\mathrm{amp}}}{r_{\mathrm{D}}}\right)\right].
+\end{equation}
+
+Defining
+\begin{equation}
+    K_{\mathrm{D}} = 4\pi r_{\mathrm{D}}^2\rho_{\mathrm{IC}},
+\end{equation}
+the same leading reduction is
+\begin{equation}
+    M_{\mathrm{top}} = K_{\mathrm{D}}r_{\mathrm{amp}}\sin(\Delta\varphi)\left[1+\mathcal{O}\left(\frac{r_{\mathrm{amp}}}{r_{\mathrm{D}}}\right)\right].
+\end{equation}
+
+Thus the historical formula is not the unrestricted microscopic law. It is the leading thin-layer reduction of the mode-resolved boundary-value formulation under uniform phase, universal projection, and unit geometry factor.
+
+For the reciprocal negative phase branch,
+\begin{equation}
+    M_{\mathrm{top}} = -\rho_{\mathrm{IC}}V_{\mathrm{eff}}\sin(\Delta\varphi), \qquad -\pi \leq \Delta\varphi \leq 0,
+\end{equation}
+at the same leading order. The reciprocal envelope is
+\begin{equation}
+    M_{\mathrm{top}} = \rho_{\mathrm{IC}}V_{\mathrm{eff}}|\sin(\Delta\varphi)|.
+\end{equation}
+
+When a persistent impermeable boundary remains at phase matching, the total inertia instead has the form
+\begin{equation}
+    M_{\mathrm{add}} = M_{\mathrm{geom}} + \rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}f_{\varphi}(\Delta\varphi).
+\end{equation}
+
+The coefficient $M_{\mathrm{add}}$ belongs to the localized defect-induced relative-flow problem. It is not an independently additive contribution to the coherent primitive-cell scaffold inertia.
+
+Under the TFT identification that the same mode-resolved topological loading is both the inertial coefficient and the coefficient of the restorative tension potential,
+\begin{equation}
+    m_{\mathrm{i}} = M_{\mathrm{top}}, \qquad \mathbf{F}_{\mathrm{grav}} = -M_{\mathrm{top}}\nabla\Phi_{\tau},
+\end{equation}
+one obtains the conditional identity
+\begin{equation}
+    \mathbf{a} = \frac{\mathbf{F}_{\mathrm{grav}}}{m_{\mathrm{i}}} = -\nabla\Phi_{\tau}.
+\end{equation}
+
+The cancellation is valid only when the same loading functional and normalization are used in both operations. It is not an independent derivation of that identification.
+
+\section[Empirical Projection and Calibration]{Empirical Projection and Defect-Flow Calibration}
+\label{sec:AP_empirical_projection}
+
+The localized projection is the boundary-value functional
+\begin{equation}
+    \iota_{\mathrm{V}}^{(\mathrm{def})} = \frac{\displaystyle\int_{\partial\Omega_{\mathrm{def}}}|\mathbf{b}_{\partial}\cdot\hat{\mathbf{n}}_{\mathrm{d}}|^2\,\mathrm{d}A} {\displaystyle\int_{\Omega_{\mathrm{IC}}^{(\mathrm{def})}}|\boldsymbol{\Upsilon}|^2\,\mathrm{d}V}.
+\end{equation}
+
+Its value depends on the defect boundary, boundary mode, connected interstitial domain, outer condition, and topological class. On the zero-circulation conservative branch,
+\begin{equation}
+    \boldsymbol{\Upsilon} = \nabla\Phi_{\mathrm{rel}}, \qquad \nabla^2\Phi_{\mathrm{rel}} = 0,
+\end{equation}
+with
+\begin{equation}
+    \frac{\partial\Phi_{\mathrm{rel}}}{\partial n_{\mathrm{d}}} = \mathbf{b}_{\partial}\cdot\hat{\mathbf{n}}_{\mathrm{d}}
+\end{equation}
+on $\partial\Omega_{\mathrm{def}}$.
+
+The functional is therefore defined, but no numerical value follows until the corresponding defect-flow problem is solved.
+
+The equivalent mode-resolved density is
+\begin{equation}
+    \rho_{\mathrm{IC}}^{(\mathrm{imp})} = \mu_{\mathrm{D}}\iota_{\mathrm{V}}^{(\mathrm{def})}.
+\end{equation}
+
+The numerical assignment
+\begin{equation}
+    \iota_{\mathrm{V}} = 1\ \mathrm{m}^{-1}
+\end{equation}
+remains empirical and corresponds, in the equivalent penetration-length representation, to
+\begin{equation}
+    \ell_{\mathrm{imp}} = 1\ \mathrm{m}.
+\end{equation}
+
+Under that convention,
+\begin{equation}
+    \rho_{\mathrm{IC}}^{(\mathrm{emp})} = \mu_{\mathrm{D}}\left(1\ \mathrm{m}^{-1}\right).
+\end{equation}
+
+For the additional closure $\mathcal{G}_{\mathrm{imp}}=1$,
+\begin{equation}
+    K_{\mathrm{D}}^{(\mathrm{emp})} = 4\pi r_{\mathrm{D}}^2\mu_{\mathrm{D}}\left(1\ \mathrm{m}^{-1}\right).
+\end{equation}
+
+The particle-amplitude calibration developed separately depends explicitly on the projection scale. With the existing interstitial-volume coefficient, it has the form
+\begin{equation}
+    r_{\mathrm{D}}(\iota_{\mathrm{V}}) = \left(\frac{Gm_{\mathrm{VEV}}}{5.8722\,c_{\mathrm{E}}^2\iota_{\mathrm{V}}}\right)^{1/2},
+\end{equation}
+so that
+\begin{equation}
+    r_{\mathrm{D}} \propto \iota_{\mathrm{V}}^{-1/2}.
+\end{equation}
+
+Consequently, every calibration using the conditional identification $\rho_{\mathrm{IC}} = \mu_{\mathrm{D}}\iota_{\mathrm{V}}$ remains dependent on the adopted $\iota_{\mathrm{V}}$. A revised microscopic projection generally propagates into $r_{\mathrm{D}}$, $\mu_{\mathrm{D}}$, $\rho_{\mathrm{IC}}$, $K_{\mathrm{D}}$, $M_{\mathrm{top}}$, and all downstream quantities depending on those calibrations.
+
+A complete calculation must represent the connected tetrahedral and octahedral interstitial channels of the FCC cell, derive the defect boundary mode from the localized topology, and solve the normal-flow problem with controlled outer conditions. Convergence must be established with respect to domain size, lattice resolution, and numerical discretization. The conservative low-frequency limit must satisfy
+\begin{equation}
+    \lim_{\omega\rightarrow0}\iota_{\mathrm{V}}^{(\mathrm{def})}(\omega) = \iota_{\mathrm{V},0}^{(\mathrm{def})},
+\end{equation}
+provided the limit exists, and the result must be tested across defect geometries and topological branches.
+
+A universal projected impedance density may be defined only when the projection is invariant across a specified stable defect class:
+\begin{equation}
+    \iota_{\mathrm{V},0}^{(\mathrm{def})} = \iota_{\mathrm{V},0}.
+\end{equation}
+
+Then
+\begin{equation}
+    \rho_{\mathrm{IC}} \equiv \mu_{\mathrm{D}}\iota_{\mathrm{V},0}.
+\end{equation}
+
+Under this closure, $\rho_{\mathrm{IC}}$ denotes a universal projected impedance density for the specified defect class, not an independently established intrinsic equilibrium density of the condensate.
+
+A universal reduced impedance coefficient additionally requires a common geometry factor,
+\begin{equation}
+    \mathcal{G}_{\mathrm{imp}} = \mathcal{G}_{0},
+\end{equation}
+which gives
+\begin{equation}
+    K_{\mathrm{D}} = 4\pi r_{\mathrm{D}}^2\mu_{\mathrm{D}}\iota_{\mathrm{V},0}\mathcal{G}_{0}.
+\end{equation}
+
+The historical expression $K_{\mathrm{D}} = 4\pi r_{\mathrm{D}}^2\rho_{\mathrm{IC}}$ is recovered only for
+\begin{equation}
+    \mathcal{G}_{0} = 1.
+\end{equation}
+
+If either the projection or geometry factor varies among defect classes, the mode-resolved notation must be retained:
+\begin{equation}
+    \rho_{\mathrm{IC}}^{(\mathrm{imp,def})} = \mu_{\mathrm{D}}\iota_{\mathrm{V}}^{(\mathrm{def})},
+\end{equation}
+\begin{equation}
+    K_{\mathrm{D}}^{(\mathrm{def})} = 4\pi r_{\mathrm{D}}^2\mu_{\mathrm{D}}\iota_{\mathrm{V}}^{(\mathrm{def})}\mathcal{G}_{\mathrm{imp}}.
+\end{equation}
+
+The final localized-defect constitutive structure is therefore
+\begin{equation}
+    \iota_{\mathrm{V}}^{(\mathrm{def})} = \frac{A_{\mathrm{imp}}^{(\mathrm{n})}}{V_{\mathrm{imp}}},
+\end{equation}
+\begin{equation}
+    \rho_{\mathrm{IC}}^{(\mathrm{imp})} = \mu_{\mathrm{D}}\iota_{\mathrm{V}}^{(\mathrm{def})},
+\end{equation}
+and, for the controlled thin-layer factorization,
+\begin{equation}
+    M_{\mathrm{top}} = 4\pi r_{\mathrm{D}}^2\mu_{\mathrm{D}}\iota_{\mathrm{V}}^{(\mathrm{def})}\mathcal{G}_{\mathrm{imp}}r_{\mathrm{amp}}f_{\varphi}(\Delta\varphi)\left[1+\mathcal{O}\left(\frac{r_{\mathrm{amp}}}{r_{\mathrm{D}}}\right)\right].
+\end{equation}
+
+The coherent and localized branches are thereby separated at the level of their kinetic reductions. The coherent branch satisfies $\mathbf{v}_{\mathrm{rel}} = \mathbf{0}$ and supports two finite-frequency translational transverse polarizations under the incremental volume constraint. Condensate entrainment fixes the relative kinematics of this branch but does not, at the present constitutive order, establish an independently additive condensate contribution to the primitive-cell scaffold inertia. The localized branch satisfies $\mathbf{v}_{\mathrm{rel}} \neq \mathbf{0}$ and acquires a mode-resolved conservative hydrodynamic added inertia determined by the defect boundary, phase structure, and induced condensate flow. The numerical projection, its possible universality, and the canonical defect-flow solutions remain open calculations.
