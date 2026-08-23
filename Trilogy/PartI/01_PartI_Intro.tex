@@ -11,9 +11,9 @@ This paper proposes a paradigm shift from continuous geometry to discrete contin
 By modeling the observable vacuum as a Face--Centered Cubic (FCC) lattice, we demonstrate that the ``Dark Sector'' is simply the physical manifestation of the universe's baseline geometric architecture. Specifically, Dark Energy is reinterpreted as the volumetric packing fraction of the solid lattice phase (roughly 74\%), representing the stored elastic potential of the field. Dark Matter is reinterpreted as the visco-elastic damping of the interstitial condensate phase (roughly 26\%), representing the hydrodynamic impedance to motion through the geometric voids.
 
 \section{Objectives of Part I}
-To support this framework, we define a strict dual-scale architecture. The foundational ``Hard Floor'' is the Tension Substrate---a Simple Cubic (SC) lattice operating at the absolute limit of vacuum strain ($\ell_{\mathrm{S}} \approx 10^{-35}$ m). Emerging from this substrate at the characteristic microscopic boundary is the "Soft Floor"---a Face--Centered Cubic (FCC) lattice of resonant nodes ($r_{\mathrm{D}} \approx 10^{-26}$ m) that acts as the elastic carrier for transverse waves (light). 
+To support this framework, we define a strict dual-scale architecture. The foundational ``Hard Floor'' is the Tension Substrate---a Simple Cubic (SC) lattice defined at the irreducible substrate scale associated with the absolute structural limit ($\ell_{\mathrm{S}} \approx 10^{-35}$ m). Emerging from this substrate at the characteristic microscopic boundary is the "Soft Floor"---a Face--Centered Cubic (FCC) lattice of resonant nodes ($r_{\mathrm{D}} \approx 10^{-26}$ m) that acts as the elastic carrier for transverse waves (light). 
 
-\textit{*Note: $\ell_{\mathrm{S}}$ is numerically identical to the Planck Length ($\ell_{\mathrm{P}}$) but derived mechanically from the limit of vacuum strain saturation ($\alpha_{\mathrm{G}} = 1$). See \hyperref[app:substrate_units]{Appendix \ref*{app:substrate_units}}.}
+\textit{*Note: $\ell_{\mathrm{S}}$ is numerically identical to the Planck Length ($\ell_{\mathrm{P}}$) but recovered mechanically from the limit of vacuum strain saturation ($\alpha_{\mathrm{G}} = 1$). See \hyperref[app:substrate_units]{Appendix \ref*{app:substrate_units}}.}
 
 In this first installment of the Tension Field Theory trilogy, we establish the exact mechanical constitution of this vacuum. We will derive the cosmic energy budget directly from the Kepler Conjecture, mechanize the origins of mass, light, and time, resolve the invisibility of the Dark Sector via acoustic impedance mismatch, and calculate the strict mechanical origins of the fundamental constants ($h$, $c_{\mathrm{E}}$, and $\mu_{\mathrm{D}}$). This structural derivation provides the necessary foundation to integrate macroscopic gravity and cosmic evolution in \hyperref[part:two]{Part II} and \hyperref[part:three]{Part III}.
 
@@ -289,26 +289,27 @@ Information is the permanent, mechanical ledger of the universe. It is defined a
 
 Mechanically, as Energy dynamically propagates across the active FCC Soft Floor, it exerts a localized downward mechanical stress upon the substrate, registering as a discrete longitudinal strain defect.
 
-For any dynamic state---whether a propagating wave (Photon) or a localized resonant knot (Matter)---the total information content \(N\) is fundamentally defined as the ratio of the Carrier's total dynamic energy (\(E_{\mathrm{carrier}}\)) to the static strain energy of a single continuous record (\(E_{\mathrm{record}}\)).
+For any dynamic state---whether a propagating wave (Photon) or a localized resonant knot (Matter)---the total information content $N$ is fundamentally defined as the ratio of the Carrier's total dynamic energy ($E_{\mathrm{carrier}}$) to the static strain energy of a single continuous record ($E_{\mathrm{record}}$). The reduced mathematical normalization of this ratio is branch-dependent based on the topology of the state:
 
 \begin{itemize}
     \item \textbf{The Kinematic (Wave) Identity:}
     \begin{equation}
-        N_{\gamma} = \frac{1}{2\pi} \left(\frac{\lambda}{\ell_{\mathrm{S}}}\right)^2
+        N_{\gamma} = \frac{1}{\alpha_{\mathrm{G},\gamma}} = \frac{1}{2\pi} \left(\frac{\lambda}{\ell_{\mathrm{S}}}\right)^2
     \end{equation}
     
     \item \textbf{The Inertial (Matter) Identity:}
     \begin{equation}
-        N_{\mathrm{m}} = 2\pi\left(\frac{m_{\mathrm{S}}}{m_{\mathrm i}}\right)^2
+        N_{\mathrm{m}} = \frac{2\pi}{\alpha_{\mathrm{G},m}} = 2\pi\left(\frac{m_{\mathrm{S}}}{m_{\mathrm i}}\right)^2
     \end{equation}
 \end{itemize}
 
 Where:
 \begin{itemize}
-    \item \(N_{\gamma}, N_{\mathrm{m}}\): The total count of discrete longitudinal strain bits (formally derived in \hyperref[app:graviton]{Appendix \ref*{app:graviton}}) anchoring the dynamic Soft Floor state to the static Hard Floor Substrate.
+    \item $N_{\gamma}, N_{\mathrm{m}}$: The total count of discrete longitudinal strain bits (formally derived in \hyperref[app:graviton]{Appendix \ref*{app:graviton}}) anchoring the dynamic Soft Floor state to the static Hard Floor Substrate.
     \item $\lambda$: The macroscopic wavelength of the propagating Soft Floor carrier (Photon).
     \item $m_{\mathrm i} = M_{\mathrm{top}}$: The localized invariant inertial loading of the Soft Floor carrier (Matter).
-    \item \(\ell_{\mathrm{S}}, m_{\mathrm{S}}\): The fundamental Lattice Spacing and Mass Potential of the Substrate (See \hyperref[app:substrate_units]{Appendix \ref*{app:substrate_units}}).
+    \item $\ell_{\mathrm{S}}, m_{\mathrm{S}}$: The fundamental Lattice Spacing and Mass Potential of the Substrate (See \hyperref[app:substrate_units]{Appendix \ref*{app:substrate_units}}).
+    \item $\alpha_{\mathrm{G},\gamma}, \alpha_{\mathrm{G},m}$: The corresponding dimensionless gravitational strain of the carrier state.
 \end{itemize}
 
 \chapter{The Dual-Scale Architecture of the Vacuum}
@@ -395,50 +396,165 @@ Rather than an independent derivation, this identity serves as a rigorous struct
 \end{figure}
 
 \section{The Constitution of the SC Phase Hard Floor Substrate}
-As established in \hyperref[postulate:one]{Postulate I}, the Latent Substrate acts as the absolute mechanical foundation of the universe. Operating at the terminal boundary of physical compression, its mechanical properties are defined by strict mathematical limits:
-\begin{itemize}
-    \item \textbf{The Irreducible Node Spacing:} This is the Substrate Lattice Spacing ($\ell_{\mathrm{S}}$)---the terminal structural boundary where geometric compression halts and gravitational saturation is absolute. It is defined by the vacuum yield limit: $F_{\mathrm{S}} = c_{\mathrm{E}}^4/G$.
-    \item \textbf{Latent State Energy:} In this absolute vacuum state, the substrate possesses maximal latent structural energy ($E_{\mathrm{S}} = c_{\mathrm{E}}^4 \ell_{\mathrm{S}}/G$) but strictly zero intrinsic inertial density ($\mu_{\mathrm{S}} \to 0$).
-    \item \textbf{Longitudinal Transmission:} The absolute structural stiffness of the unit cell ($F_{\mathrm{S}}/\ell_{\mathrm{S}}^2$) combined with its zero intrinsic inertia allows for instantaneous stress transfer through longitudinal transmission without the localized transfer of energy.
-\end{itemize}
+
+As established in Postulate I, the Latent Substrate forms the spatially contiguous mechanical foundation of the field. It possesses a topologically locked Simple Cubic (SC) structure at the irreducible substrate scale ($\ell_{\mathrm{S}}$) and provides the absolute structural reference from which the active vacuum is defined. Its mechanical constitution is specified by the following limiting properties.
+
+\noindent\textbf{The Irreducible Node Spacing:} The Substrate Lattice Spacing ($\ell_{\mathrm{S}}$) defines the smallest structural interval admitted by the Hard Floor. The corresponding maximum substrate force scale is
+\begin{equation}
+    F_{\mathrm{S}} = \frac{c_{\mathrm{E}}^4}{G}.
+\end{equation}
+
+Distributed over the substrate cell area, this defines the finite volumetric yield-pressure scale
+\begin{equation}
+    \tau_{\mathrm{S}} = \frac{F_{\mathrm{S}}}{\ell_{\mathrm{S}}^2} = \frac{c_{\mathrm{E}}^4}{G\ell_{\mathrm{S}}^2}.
+\end{equation}
+Thus, $\tau_{\mathrm{S}}$ specifies the limiting stress capacity of the Hard Floor.
+
+\noindent\textbf{Latent State Energy:} At the irreducible substrate scale, the structural energy associated with one fundamental cell is
+\begin{equation}
+    E_{\mathrm{S}} = F_{\mathrm{S}}\ell_{\mathrm{S}} = \frac{c_{\mathrm{E}}^4\ell_{\mathrm{S}}}{G}.
+\end{equation}
+The Hard Floor therefore retains latent structural capacity while its intrinsic inertial response approaches
+\begin{equation}
+    \mu_{\mathrm{S}} \rightarrow 0.
+\end{equation}
+The corresponding substrate density characterizes the structural content of this latent configuration rather than the ordinary inertial dynamics of the active vacuum.
+
+\noindent\textbf{Phase Locking and Longitudinal Connectivity:} The unperturbed Hard Floor defines the equilibrium phase reference of the field. The convention
+\begin{equation}
+    \varphi_{\mathrm{S}} = 0
+\end{equation}
+fixes this reference, while the physical condition of internal phase locking is
+\begin{equation}
+    \Delta\varphi = 0.
+\end{equation}
+In its homogeneous equilibrium condition,
+\begin{equation}
+    \frac{\partial\varphi}{\partial t} = 0, \qquad \nabla\tau = 0.
+\end{equation}
+The incremental rigidity of the phase-locked substrate is denoted by $K_{\mathrm{S}}$. At the irreducible structural limit,
+\begin{equation}
+    K_{\mathrm{S}} \rightarrow \infty.
+\end{equation}
+The distinction between $\tau_{\mathrm{S}}$ and $K_{\mathrm{S}}$ is fundamental: $\tau_{\mathrm{S}}$ is the finite limiting stress capacity of the Hard Floor, whereas $K_{\mathrm{S}} \rightarrow \infty$ expresses its vanishing incremental deformability in the phase-locked limit.
+
+Together with
+\begin{equation}
+    \mu_{\mathrm{S}} \rightarrow 0,
+\end{equation}
+this locked constitution provides longitudinal constraint connectivity represented by
+\begin{equation}
+    c_{\mathrm{S}} \rightarrow \infty.
+\end{equation}
+The limit $c_{\mathrm{S}} \rightarrow \infty$ denotes zero-delay longitudinal constraint equilibration through the connected Hard Floor, rather than an independently propagating finite-energy mode. Localized loading may nevertheless leave a static longitudinal strain configuration in the substrate. Such a configuration is a persistent deformation of the structural record, not a continuing propagating excitation.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Fig02_PartI_Substrate.pdf}
-  \caption{\textbf{The Latent Substrate ($\tau = \tau_{\mathrm{S}}$).} The fundamental vacuum architecture is a rigid Simple Cubic (SC) lattice at the structural limit $\ell_{\mathrm{S}} \approx 10^{-35}$ m. \textbf{(a) The Volumetric Core (Equilibrium Phase):} A 3D illustration of the topologically locked phase ($\varphi_{\mathrm{S}} = 0$). This visualizes the field's maximum rigidity ($F_{\mathrm{S}} = c_{\mathrm{E}}^4/G$), which maintains the structural integrity of the absolute vacuum in its equilibrium state. \textbf{(b) The Lattice Projection (Reference Frame):} A 2D depiction of the absolute reference frame---an incompressible grid ($K_{\mathrm{S}} \to \infty$) with zero intrinsic effective inertia ($\mu_{\mathrm{S}} \to 0$) that strictly defines the coordinate system for the maximal tension field.}
-\label{fig:substrate}
+    \caption{\textbf{The Latent Substrate ($\tau=\tau_{\mathrm{S}}$).} The fundamental substrate architecture is a topologically locked Simple Cubic (SC) lattice at the irreducible scale ($\ell_{\mathrm{S}} \approx 10^{-35} \, \mathrm{m}$). \textbf{(a) The Volumetric Core (Equilibrium Phase):} A three-dimensional representation of the equilibrium Hard Floor. The convention ($\varphi_{\mathrm{S}} = 0$) establishes the substrate phase reference, while ($\Delta\varphi = 0$) specifies internal phase locking. The maximum substrate force scale is ($F_{\mathrm{S}} = c_{\mathrm{E}}^4/G$), corresponding to the finite yield-pressure scale ($\tau_{\mathrm{S}} = F_{\mathrm{S}}/\ell_{\mathrm{S}}^2$). \textbf{(b) The Lattice Projection (Reference Frame):} A two-dimensional representation of the absolute structural reference, characterized by the limiting rigidity ($K_{\mathrm{S}} \rightarrow \infty$) and vanishing intrinsic inertial response ($\mu_{\mathrm{S}} \rightarrow 0$). The associated limit ($c_{\mathrm{S}} \rightarrow \infty$) represents longitudinal constraint equilibration through the connected phase-locked Hard Floor.}
+    \label{fig:substrate}
 \end{figure}
 
-\subsection{The Three Topological States of the Field}
-While this foundational substrate is an invariant continuum, the field operates in three distinct topological states relative to its equilibrium:
-\begin{itemize}
-    \item \textbf{State 0: The Latent Substrate (Equilibrium, $\tau = \tau_{\mathrm{S}}$):} The invisible ``Hard Floor'' of reality. The lattice remains in its fundamental SC configuration with zero intrinsic inertial density ($\mu_{\mathrm{S}} \to 0$), providing instantaneous mechanical connectivity ($c_{\mathrm{S}} \to \infty$) of the universe.
-    \item \textbf{State I: The Active Vacuum (Expansion, $\tau = \tau_{\mathrm{D}}$):} The dynamic ``FCC Soft Floor'' (Spacetime). Acting as an elastic skin over the rigid substrate, the nodes reconfigure into a Face--Centered Cubic (FCC) geometry, enabling transverse waves (Light) and interstitial inertia (Mass).
-    \item \textbf{State II: The Saturated Core (Compression, $\alpha_{\mathrm{G}} \to 1$):} The ``Frozen Phase'' (Black Holes). When gravitational saturation occurs, the active FCC skin undergoes a structural phase transition to the underlying internally phase-locked Substrate floor, eliminating interstitial voids and mechanically arresting time.
-\end{itemize}
+\subsubsection{The Three Topological States of the Field}
+
+The contiguous field admits three topological states distinguished by their structural organization, phase freedom, and mechanical response.
+
+\noindent\textbf{State 0: The Latent Substrate (Equilibrium; $\Delta\varphi=0,\ \nabla\tau=0$):} State 0 denotes the Hard Floor defined above in its unperturbed equilibrium condition. It is the persistent phase-locked SC foundation of the field and supplies the absolute structural reference and static longitudinal record. Because State 0 constitutes the foundational substrate rather than an alternative coarse structure occupying the same scale, the Hard Floor remains structurally present beneath the active and saturated configurations defined below.
+
+\noindent\textbf{State I: The Active Vacuum (Expansion/Elastic; $0 \leq \alpha_{\mathrm{G}} < 1$):} At the characteristic active-vacuum scale ($r_{\mathrm{D}}$), the persistent Hard Floor supports a dynamic Face-Centered Cubic (FCC) organization of resonant nodes and a connected interstitial condensate. The FCC scaffold possesses the finite surface-tension scale ($\tau_{\mathrm{D}}$) and finite inertial response required for active elastic dynamics.
+
+Unlike the phase-locked Hard Floor, State I possesses finite phase freedom: local phase differences and temporal phase evolution are mechanically permitted. This active freedom enables elastic deformation, transverse coherent propagation, localized topological defects, and interstitial inertial response. The full State-I constitutive domain is
+\begin{equation}
+    0 \leq \alpha_{\mathrm{G}} < 1,
+\end{equation}
+from the unstrained active vacuum through gravitationally loaded configurations below saturation.
+
+\noindent\textbf{State II: The Saturated Core (Compression/Saturation; $\Delta\varphi=0,\ \alpha_{\mathrm{G}}=1$):} State II is reached when gravitational loading exhausts the available reconfiguration capacity of the active FCC organization. At saturation, the active FCC degrees of freedom can no longer sustain their interstitial and phase freedom. The active organization collapses to the substrate-limited SC structural condition and becomes locally phase locked.
+
+The loss of interstitial freedom eliminates the active oscillation and state transfer supported by State I, mechanically arresting the corresponding local dynamical evolution.
+
+Although State 0 and State II both possess phase-locked SC character, they represent different mechanical conditions: \textbf{State 0 is the equilibrium foundational substrate, whereas State II is the compressed, saturated configuration produced from State I.}
 
 \begin{table}[H]
 \centering
 \caption{Summary of the SC Phase Substrate Constants (See \hyperref[app:substrate_units]{Appendix \ref*{app:substrate_units}} for the mechanical definitions of these values)}
 \label{tab:substrate_constants}
-\renewcommand{\arraystretch}{1.4}
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular}{@{}ll l p{6.5cm}@{}}
 \toprule
 \textbf{Property} & \textbf{Symbol} & \textbf{Mathematical Relation} & \textbf{Mechanical Definition} \\
 \midrule
-Phase State & $\varphi_{\mathrm{S}}$ & $0$ & Absolute Vacuum Equilibrium \\
-Coherence & $\Psi_{\mathrm{S}}$ & $\sqrt{n_0} \cdot e^{i0} \quad (n_0 = \ell_{\mathrm{S}}^{-3})$ & Single Macroscopic Wave Function \\
-Lattice Spacing & $\ell_{\mathrm{S}}$ & $\sqrt{\hbar G / c_{\mathrm{E}}^3}$ & The 1D Spacing of the SC Lattice \\
-Structural Mass Moment & $J_{\mathrm{S}}$ & $\rho_{\mathrm{S}} \ell_{\mathrm{S}}^4$ & Source of $\hbar$ and $G$ \\
-Bond Force & $F_{\mathrm{S}}$ & $c_{\mathrm{E}}^4 / G$ & Maximal Lattice Yield Strength \\
-Max Tension & $\tau_{\mathrm{S}}$ & $F_{\mathrm{S}} / \ell_{\mathrm{S}}^2$ & The Absolute Stress Limit \\
-Latent Energy & $E_{\mathrm{S}}$ & $F_{\mathrm{S}} \cdot \ell_{\mathrm{S}}$ & Latent structural energy per cell \\
-Stiffness & $K_{\mathrm{S}}$ & $\to \infty$ & Topologically Locked Phase \\
-Wave Mode & --- & \text{Longitudinal Only} & Stress Update (No Energy Transfer) \\
-Inertia & $\mu_{\mathrm{S}}$ & $\to 0$ & Massless Transmission Medium \\
-Entropy & $S_{\mathrm{S}}$ & $0$ & Perfect Geometric Order \\
-Speed & $c_{\mathrm{S}}$ & $\to \infty$ & Instantaneous State Correlation (Entanglement) \\
-Absolute Substrate Index & $N_{\mathrm{S}}$ & $R_{\mathrm{Res}} / \ell_{\mathrm{S}}$ & Total dimensionless radial nodes ($\approx 3.827 \times 10^{69}$). Derived in \hyperref[sec:unified_phase_summary]{the Unified Phase Map Summary}. \\
+
+Reference Phase
+& $\varphi_{\mathrm{S}}$
+& $0$
+& Equilibrium phase-reference convention of the Hard Floor \\
+
+Phase Locking
+& $\Delta\varphi$
+& $0$
+& Internal phase-locked condition of the unperturbed substrate \\
+
+Coherence
+& $\Psi_{\mathrm{S}}$
+& $\sqrt{n_0}\cdot e^{i0} \quad (n_0=\ell_{\mathrm{S}}^{-3})$
+& Uniform equilibrium coherence of the phase-locked substrate \\
+
+Lattice Spacing
+& $\ell_{\mathrm{S}}$
+& $\sqrt{\hbar G/c_{\mathrm{E}}^3}$
+& Irreducible structural interval of the SC Hard Floor \\
+
+Structural Mass Moment
+& $J_{\mathrm{S}}$
+& $\rho_{\mathrm{S}}\ell_{\mathrm{S}}^4$
+& Substrate realization of the conserved structural mass moment underlying $\hbar$ and $G$ \\
+
+Bond Force
+& $F_{\mathrm{S}}$
+& $c_{\mathrm{E}}^4/G$
+& Maximum substrate force scale \\
+
+Yield Pressure
+& $\tau_{\mathrm{S}}$
+& $F_{\mathrm{S}}/\ell_{\mathrm{S}}^2$
+& Finite limiting volumetric stress capacity of the Hard Floor \\
+
+Latent Energy
+& $E_{\mathrm{S}}$
+& $F_{\mathrm{S}}\ell_{\mathrm{S}}$
+& Latent structural energy associated with one substrate cell \\
+
+Incremental Rigidity
+& $K_{\mathrm{S}}$
+& $\to\infty$
+& Vanishing incremental deformability of the phase-locked substrate \\
+
+Active Wave Mode
+& ---
+& \text{None}
+& No ordinary independently propagating active-phase mode in the Hard Floor \\
+
+Intrinsic Inertial Response
+& $\mu_{\mathrm{S}}$
+& $\to0$
+& Vanishing intrinsic inertial response of the bare Hard Floor \\
+
+Equilibrium Entropy
+& $S_{\mathrm{S}}$
+& $0$
+& Perfect geometric order of the unperturbed substrate \\
+
+Longitudinal Connectivity
+& $c_{\mathrm{S}}$
+& $\to\infty$
+& Zero-delay longitudinal constraint equilibration through the connected phase-locked substrate \\
+
+Absolute Substrate Index
+& $N_{\mathrm{S}}$
+& $R_{\mathrm{Res}}/\ell_{\mathrm{S}}$
+& Total dimensionless radial node count ($\approx 3.827\times10^{69}$). Derived in \hyperref[sec:unified_phase_summary]{the Unified Phase Map Summary}. \\
+
 \bottomrule
 \end{tabular}
 \end{table}
@@ -640,7 +756,7 @@ The geometric partition alone does not determine every constitutive coefficient.
 \small \textbf{Note:} The vacuum-impedance acceleration is $a_{\mathrm{D}} = c_{\mathrm{E}}\Gamma_{\mathrm{D}} = c_{\mathrm{E}}^2/R_{\mathrm{U}}$, as developed in \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}. The galactic low-acceleration comparison scale used in the TFT response law is $a_{\mathrm{gal}} = a_{\mathrm{D}}/(2\pi)$. The damping rate $\Gamma_{\mathrm{D}}$ is developed in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}. The quantities $\rho_{\mathrm{IC}}^{(\mathrm{emp})}$ and $K_{\mathrm{D}}^{(\mathrm{def})}$ describe projected localized defect response and must not be interpreted as independently established intrinsic condensate density or universal defect coupling without the corresponding microscopic projection and geometry closures.} \\
 \endlastfoot
 
-Phase State & $\varphi(t)$ & $\varphi\neq0$ & Dynamic internal phase coordinate of the active Soft Floor \\
+Phase Freedom & $\varphi(t)$ & $\Delta\varphi\ \text{permitted}$ & Dynamic phase freedom of the active Soft Floor; local phase differences and temporal phase evolution are mechanically permitted \\
 Geometry & --- & $\mathrm{FCC}$ & Cubic close-packed active-phase architecture \\
 FCC Node Radius & $r_{\mathrm{D}}$ & $h c_{\mathrm{E}}/(2E_{\mathrm{D}})$ & Fundamental geometric resolution scale of the SGF \\
 Kinematic Lattice Index & $N_{\mathrm{D}}$ & $R_{\mathrm{U}}/(2r_{\mathrm{D}})$ & Total dimensionless radial node count, approximately $8.508\times10^{51}$ \\

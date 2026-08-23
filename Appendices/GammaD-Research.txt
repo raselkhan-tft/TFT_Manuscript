@@ -1,0 +1,958 @@
+\section*{TFT $\Gamma_{\mathrm{D}}$ Microscopic Derivation Program}
+\addcontentsline{toc}{section}{TFT $\Gamma_{\mathrm{D}}$ Microscopic Derivation Program}
+
+\noindent\textbf{Research Baseline — Version 1.0} \\
+\textbf{Baseline date:} August 22, 2026 \\
+\textbf{Status:} $\Gamma_{\mathrm{D}}$ derivation temporarily suspended at the microscopic-completion boundary pending a unified Hard-Floor/Tension-Column/entanglement audit.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{1. Purpose of This Baseline}
+This document records the results of the microscopic investigation of the TFT photon relaxation constant $\Gamma_{\mathrm{D}}$ before research shifts to the mechanical origin of quantum entanglement. 
+
+The purpose is to ensure that future work does not:
+\begin{itemize}
+    \item Repeat mechanisms already shown to fail;
+    \item Accidentally convert conditional constructions into TFT derivations;
+    \item Use the phenomenological value of $\Gamma_{\mathrm{D}}$ upstream;
+    \item Alter the Hard-Floor/Tension-Column ontology merely to reproduce the desired relaxation law;
+    \item Introduce dissipative terms into the fundamental conservative TFT action without deriving them;
+    \item Lose the distinction between the active-vacuum propagation scale $c_{\mathrm{E}}$ and the deeper Hard-Floor longitudinal constraint response.
+\end{itemize}
+
+The $\Gamma_{\mathrm{D}}$ problem is not abandoned. It has reached a dependency on deeper TFT microphysics.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{2. Microscopic Target}
+The phenomenological photon relaxation law requires a carrier self-energy satisfying, on the photon branch:
+\begin{equation}
+    \boxed{ -\operatorname{Im}\Sigma_\gamma^R(k_\gamma,\omega) = M_\gamma\Gamma_{\mathrm{D}}\omega }
+\end{equation}
+
+Therefore:
+\begin{equation}
+    \boxed{ \Gamma_{\mathrm{D}} = \frac{-\operatorname{Im}\Sigma_\gamma^R(k_\gamma,\omega)}{M_\gamma\omega} }
+\end{equation}
+
+A frequency-independent $\Gamma_{\mathrm{D}}$ consequently requires an effectively Ohmic carrier-projected reservoir response:
+\begin{equation}
+    \boxed{ -\operatorname{Im}\Sigma_\gamma^R \propto \omega }
+\end{equation}
+
+The fundamental microscopic object is therefore not $\Gamma_{\mathrm{D}}$ itself but the carrier-projected spectral measure:
+\begin{equation}
+    \boxed{ d\mu_{\gamma R}(\Omega) = \rho_R(\Omega) \left|V_{\gamma R}(\Omega)\right|^2 d\Omega }
+\end{equation}
+
+A successful TFT derivation must determine both:
+\begin{enumerate}
+    \item The spectral dependence of $d\mu_{\gamma R}$;
+    \item Its absolute normalization.
+\end{enumerate}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{3. Fundamental Conservative-Mode Result}
+A perfectly periodic conservative lattice with a finite number of generalized coordinates per primitive cell does not generate irreversible attenuation of one of its exact Bloch eigenmodes.
+
+At fixed $\mathbf{k}$:
+\begin{equation}
+    \mathbf{D}(\mathbf{k})\mathbf{e}_s = \omega_s^2(\mathbf{k})\mathbf{e}_s
+\end{equation}
+
+The exact photon is one such dressed eigenmode, $\mathbf{e}_\gamma(\mathbf{k})$, which may contain translational, rotational, phase, condensate, or other primitive-cell components. Under lattice translation:
+\begin{equation}
+    \Psi_\gamma \rightarrow e^{i\mathbf{k}\cdot\mathbf{d}}\Psi_\gamma
+\end{equation}
+Its norm remains unchanged. Therefore, finite conservative coupling between microscopic coordinates produces:
+\begin{equation*}
+    \boxed{ \text{mode dressing / hybridization / dispersion} }
+\end{equation*}
+rather than:
+\begin{equation*}
+    \boxed{ \text{irreversible photon relaxation} }
+\end{equation*}
+
+This establishes the general no-go result:
+\begin{equation*}
+    \boxed{ \text{finite conservative internal degrees of freedom alone cannot derive nonzero } \Gamma_{\mathrm{D}}. }
+\end{equation*}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{4. Single-Handoff Interpretation}
+An earlier useful effective relation was obtained by imagining a small action-transfer fraction $\epsilon_{\mathrm{D}}$ during each microscopic carrier handoff over characteristic distance $r_{\mathrm{D}}$. For weak transfer:
+\begin{equation}
+    \boxed{ \Gamma_{\mathrm{D}} \simeq \frac{c_{\mathrm{E}}}{2r_{\mathrm{D}}}\epsilon_{\mathrm{D}} }
+\end{equation}
+
+However, subsequent analysis established that $\epsilon_{\mathrm{D}}$ cannot represent permanent loss into a finite collection of conservative internal FCC coordinates. Such amplitudes remain within the total unitary system and eventually interfere or recur.
+
+Therefore, the relation remains valid only after a genuine continuum has been eliminated:
+\begin{equation*}
+    \boxed{ \epsilon_{\mathrm{D}} = \text{coarse-grained action-transfer probability into nonrecurring continuum states}. }
+\end{equation*}
+It is not presently a primitive FCC handoff probability.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{5. Finite-Mode Rejection Result}
+For a finite conservative microscopic system:
+\begin{equation}
+    \mathbf{G}^R(\mathbf{k},\omega) = \sum_s \frac{|\mathbf{e}_s\rangle\langle\mathbf{e}_s|}{\omega_s^2(\mathbf{k})-(\omega+i0)^2}
+\end{equation}
+
+Its spectral response at fixed $\mathbf{k}$ consists of discrete poles:
+\begin{equation}
+    -\operatorname{Im}\mathbf{G}^R \propto \sum_s \delta[\omega-\omega_s(\mathbf{k})]
+\end{equation}
+This is a pure-point spectrum. It does not provide the smooth low-frequency spectral response $-\operatorname{Im}\Sigma_\gamma^R \propto \omega$ required for constant $\Gamma_{\mathrm{D}}$. This result subsumes several previously investigated mechanisms.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{6. Rejected or Closed Microscopic Routes}
+The following mechanisms should not be reopened unless genuinely new microscopic physics changes the assumptions under which they were rejected.
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{5cm} l p{7cm}@{}}
+\toprule
+\textbf{Candidate mechanism} & \textbf{Status} & \textbf{Reason} \\
+\midrule
+Finite FCC internal oscillator bath & Rejected & Pure-point spectrum; coherent recurrence \\
+Ordinary FCC microrotation alone & Rejected & Conservative finite internal branch \\
+Finite structural-phase oscillator & Rejected as reservoir & Pure-point spectrum \\
+Structural $T_{2g}$ critical mode & Rejected & Requires independent criticality not derived by TFT \\
+SC--FCC wall translation mode & Rejected & Wrong spectral behavior / pinning issues \\
+Simple scale-normal axialization & Rejected & $Z$ is not an ordinary spatial $T_{1u}$ direction \\
+Spatial-gradient phase axialization & Rejected for constant $\Gamma_{\mathrm{D}}$ & Wrong frequency dependence \\
+Structural-phase Berry coupling & Rejected & Time-parity conflict under retained interpretation \\
+Photon $2\pi$ rolling holonomy & Rejected & Flat connection; no irreversible action transfer \\
+Fixed leakage at every FCC node & Rejected microscopically & Finite conservative channels recur \\
+Coherent interstitial condensate & Rejected at retained order & $\mathbf{v}_{\mathrm{rel}}=0$ \\
+Localized defect--Condensate impedance & Rejected for photon relaxation & Defect-specific reduction; cannot be reused \\
+Existing static Hard-Floor constraint & Rejected as $\Gamma_{\mathrm{D}}$ reservoir & Constraint response has no required dynamical continuum \\
+Photon gravitational strain wake alone & Rejected for $\Gamma_{\mathrm{D}}$ & Coherent/slaved and gives chromatic scaling \\
+Maxwell phenomenology alone & Rejected as microscopic explanation & Already presupposes an Ohmic continuum \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{7. Condensate Result}
+For the coherent photon carrier, the current TFT construction imposes entrainment:
+\begin{equation}
+    \boxed{ \mathbf{v}_{\mathrm{rel}} = \mathbf{v}_{\mathrm{IC}} - \dot{\mathbf{u}} = 0 }
+\end{equation}
+
+Therefore, the coherent Condensate does not presently supply an independent photon relaxation coordinate. Nonzero relative flow derived for localized defects produces a different generalized impedance and cannot be transferred to the photon sector without a new derivation.
+
+Thus:
+\begin{equation*}
+    \boxed{ \text{coherent Condensate dressing} \neq \text{photon reservoir relaxation}. }
+\end{equation*}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{8. Maxwell-Relaxation Investigation}
+A Maxwell response was investigated because its high-frequency loss tangent has precisely the desired scaling:
+\begin{equation}
+    \tan\delta \sim \frac{1}{\omega\tau_R}
+\end{equation}
+This would suggest $\Gamma_{\mathrm{D}} \sim \tau_R^{-1}$.
+
+However, a finite conservative internal variable produces resonances, not Maxwell relaxation. A conservative microscopic realization of a Maxwell kernel requires elimination of a continuum whose spectral density is Ohmic:
+\begin{equation}
+    \boxed{ J_R(\Omega) \propto \Omega }
+\end{equation}
+
+Thus, Maxwell behavior does not derive the missing physics. It merely rewrites it:
+\begin{equation*}
+    \text{continuum} \rightarrow \eta_R \rightarrow \tau_R \rightarrow \Gamma_{\mathrm{D}}
+\end{equation*}
+
+Furthermore, because the FCC vacuum must retain nonzero equilibrium shear rigidity, any Maxwell sector could only be a correction:
+\begin{equation}
+    G_{\mathrm{total}}^* = G_0 + \Delta G \frac{i\omega\tau_R}{1+i\omega\tau_R}
+\end{equation}
+Then:
+\begin{equation}
+    \boxed{ \Gamma_\gamma = \frac{\Delta G}{G_0+\Delta G} \frac{1}{\tau_R} }
+\end{equation}
+
+This introduces both an unknown relaxation time and an unknown spectral weight. Therefore, the Maxwell route does not close $\Gamma_{\mathrm{D}}$.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{9. Formal Incompleteness Result}
+The presently completed TFT conservative microscopic equations do not uniquely determine the carrier-reservoir spectral measure. One can construct a conservative completion consistent with the established photon carrier for which $\Gamma_{\mathrm{D}}=0$. One can also append an independently specified conservative continuum that produces $\Gamma_{\mathrm{D}} \neq 0$.
+
+Therefore:
+\begin{equation*}
+    \boxed{ \text{current TFT does not uniquely derive } \Gamma_{\mathrm{D}}. }
+\end{equation*}
+
+More specifically, current TFT does not yet determine:
+\begin{equation*}
+    \boxed{ \text{existence of the required non-entrained continuum}, } \quad \boxed{ \text{its spectral exponent}, } \quad \text{or} \quad \boxed{ \text{its absolute spectral normalization}. }
+\end{equation*}
+
+This is a constitutive/spectral incompleteness, not an algebraic failure.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{10. Most Important Positive Result: Tension-Column Continuum}
+The final investigation considered a conservative semi-infinite scale-depth chain:
+\begin{equation}
+    L_Z = \frac{1}{2}\sum_{n=0}^{\infty} m_Z\dot{\chi}_n^2 - \frac{1}{2}\sum_{n=0}^{\infty} K_Z(\chi_{n+1}-\chi_n)^2
+\end{equation}
+
+Its dispersion relation is:
+\begin{equation}
+    \omega^2 = 4\frac{K_Z}{m_Z} \sin^2\frac{q}{2}
+\end{equation}
+
+The low-frequency endpoint impedance approaches:
+\begin{equation}
+    \boxed{ Z_Z(0) = \sqrt{K_Z m_Z} }
+\end{equation}
+
+Consequently, an outgoing semi-infinite chain produces:
+\begin{equation}
+    \boxed{ -\operatorname{Im}\Sigma_Z^R = \sqrt{K_Z m_Z}\,\omega + \mathcal{O}(\omega^3) }
+\end{equation}
+
+Therefore:
+\begin{equation}
+    \boxed{ J_Z(\omega) \propto \omega }
+\end{equation}
+
+This is precisely the spectral exponent required for constant $\Gamma_{\mathrm{D}}$. If the photon projection onto this sector is $C_{\gamma Z}$, then the conditional microscopic result is:
+\begin{equation}
+    \boxed{ \Gamma_{\mathrm{D}}^{\mathrm{micro}} = \frac{C_{\gamma Z}^2 \sqrt{K_Z m_Z}}{M_\gamma} }
+\end{equation}
+
+This is the strongest surviving result of the entire $\Gamma_{\mathrm{D}}$ investigation.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{11. Why This Is Not Yet a TFT Derivation}
+Current TFT does not independently derive:
+\begin{equation*}
+    \boxed{ m_Z, \qquad K_Z, \qquad C_{\gamma Z} }
+\end{equation*}
+nor does it presently establish that the physical Tension Column is a semi-infinite outgoing dynamical chain. 
+
+The existing scale law $\rho(r) \propto r^{-4}$ does not uniquely determine the scale-depth kinetic coefficients. To obtain $m_n$, one would additionally need quantities such as $r(Z)$, $A(Z)$, and $\Delta Z$. Likewise, determination of $K_n$ requires an independently derived scale-depth restoring/tension law.
+
+Even specifying a scale-depth propagation velocity would not solve the normalization problem because $c_Z^2 \sim K_Z/m_Z$ fixes a ratio, whereas $Z_Z \sim \sqrt{K_Z m_Z}$ depends on the product. Hence the endpoint impedance---and therefore $\Gamma_{\mathrm{D}}$---remains underdetermined.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{12. Important Hard-Floor Qualification}
+The failure of the present Hard-Floor constraint to act as the $\Gamma_{\mathrm{D}}$ reservoir must not be interpreted as a rejection of TFT's instantaneous Hard-Floor longitudinal response.
+
+TFT distinguishes:
+\begin{equation*}
+    \boxed{ \text{Soft Floor: active finite-speed transverse propagation} }
+\end{equation*}
+from
+\begin{equation*}
+    \boxed{ \text{Hard Floor: longitudinal constraint / strain-memory substrate}. }
+\end{equation*}
+
+The active-vacuum invariant speed $c_{\mathrm{E}}$ therefore does not automatically constrain the deeper Hard-Floor longitudinal constraint response. The current Hard-Floor limit:
+\begin{equation}
+    \mu_{\mathrm{S}} \rightarrow 0, \qquad K_{\mathrm{S}} \rightarrow \infty, \qquad c_{\mathrm{S}} \rightarrow \infty
+\end{equation}
+may remain a legitimate part of TFT's deeper ontology. 
+
+The $\Gamma_{\mathrm{D}}$ result establishes only:
+\begin{equation*}
+    \boxed{ \text{an exactly zero-inertia constraint by itself cannot provide the required Ohmic dynamical spectral measure.} }
+\end{equation*}
+
+This leaves open the possibility that the same vertical architecture contains distinct sectors:
+\begin{equation*}
+    \boxed{ \text{Hard-Floor constraint sector} } \quad \text{and} \quad \boxed{ \text{finite-frequency interface/scale-depth dynamical sector}. }
+\end{equation*}
+This possibility has not yet been derived or rejected.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{13. Hard-Floor Information Concept Must Be Preserved for the Next Investigation}
+Under the present TFT ontology, information associated with the deeper substrate is represented mechanically as an extremely small longitudinal strain wake/record on the Hard Floor. The relevant conceptual distinction for future research is therefore:
+\begin{equation*}
+    \boxed{ \text{instantaneous longitudinal constraint equilibration} \neq \text{transverse active-vacuum energy propagation}. }
+\end{equation*}
+
+Consequently, an instantaneous Hard-Floor response should not automatically be interpreted as propagation at $v > c_{\mathrm{E}}$ within the active vacuum. Whether this architecture can quantitatively reproduce quantum entanglement remains to be derived. This question must be resolved before modifying the Hard-Floor/Tension-Column ontology for the sole purpose of deriving $\Gamma_{\mathrm{D}}$.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{14. Why $\Gamma_{\mathrm{D}}$ Research Is Being Suspended Here}
+Continuing directly from the conditional chain result by choosing $m_Z, K_Z, C_{\gamma Z}$ would risk constructing the vertical sector specifically to obtain the desired answer. That would violate the blind microscopic-derivation principle.
+
+The same Hard-Floor/Tension-Column architecture is already invoked by TFT for deeper phenomena including:
+\begin{itemize}
+    \item Longitudinal stress equilibration
+    \item Substrate strain memory
+    \item Entanglement connectivity
+    \item Global response associated with catastrophic rupture/decompression
+\end{itemize}
+
+Therefore, the vertical ontology should be determined holistically, not fitted to $\Gamma_{\mathrm{D}}$.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{15. Next Independent Constraint: Quantum Entanglement}
+The next research program will therefore investigate mechanical quantum entanglement. Its purpose is not merely to explain entanglement. It will independently constrain:
+\begin{equation*}
+    \boxed{ \text{Hard-Floor topology}, } \quad \boxed{ \text{Tension-Column dynamics}, } \quad \text{and} \quad \boxed{ \text{the physical meaning of scale depth } Z. }
+\end{equation*}
+
+The entanglement investigation must begin from the observable joint statistics rather than assume instantaneous information transfer. For a singlet-like state, the central quantitative target is:
+\begin{equation}
+    \boxed{ E(\mathbf{a},\mathbf{b}) = -\mathbf{a}\cdot\mathbf{b} = -\cos\theta_{ab} }
+\end{equation}
+
+The TFT mechanism must derive the corresponding joint probabilities and Bell/CHSH behavior. Merely obtaining $2\sqrt{2}$ from FCC geometry is not sufficient.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{16. Three-Way Constraint on the Future Vertical Architecture}
+Any proposed deeper architecture should ultimately satisfy three independent requirements.
+
+\noindent\textbf{A. Hard-Floor constraint requirement} \\
+It must preserve TFT's deeper longitudinal constraint behavior, potentially including:
+\begin{equation*}
+    \boxed{ c_{\mathrm{S}} \rightarrow \infty }
+\end{equation*}
+without interpreting this as ordinary transverse Soft-Floor propagation.
+
+\noindent\textbf{B. Quantum requirement} \\
+It must produce the correct joint measurement statistics:
+\begin{equation*}
+    \boxed{ E_{\mathrm{TFT}}(\mathbf{a},\mathbf{b}) = -\mathbf{a}\cdot\mathbf{b} }
+\end{equation*}
+
+\noindent\textbf{C. Photon-relaxation requirement} \\
+Without being constructed specifically for this purpose, its finite-frequency projected spectrum must be calculated and tested against:
+\begin{equation*}
+    \boxed{ -\operatorname{Im}\Sigma_\gamma^R \stackrel{?}{\propto} \omega }
+\end{equation*}
+
+Only after A and B independently determine the architecture should C be evaluated.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{17. Research Rule Established by the $\Gamma_{\mathrm{D}}$ Program}
+The following principle should govern subsequent TFT microscopic development:
+\begin{equation*}
+    \boxed{
+    \begin{array}{c}
+    \textbf{Do not postulate an observed effective law}\\
+    \textbf{when a deeper mechanical variable can be identified.}\\[2mm]
+    \textbf{Postulate only the minimum microscopic ontology,}\\
+    \textbf{derive the effective law, and permit the derivation to fail.}
+    \end{array}
+    }
+\end{equation*}
+
+Accordingly, TFT should not fundamentally postulate $\Gamma_{\mathrm{D}} = \text{constant}$. Instead, it should derive the microscopic spectral measure from which a constant $\Gamma_{\mathrm{D}}$, if correct, emerges.
+
+Likewise, the entanglement investigation should not begin by postulating either instantaneous communication or a measurement artifact. It should derive the mechanical joint-state response and determine what interpretation follows.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{18. Reopening Rule}
+A rejected $\Gamma_{\mathrm{D}}$ mechanism may be reconsidered only if the entanglement/vertical-architecture investigation introduces genuinely new physics that invalidates the premise under which the mechanism was rejected.
+
+For example, if the future analysis derives a true continuous phase-depth coordinate, then the previous rejection of a finite phase oscillator does not reject that new continuum. Likewise, rejection of the zero-inertia Hard Floor as the direct $\Gamma_{\mathrm{D}}$ bath does not reject a newly derived finite-action Soft-Floor/Hard-Floor interface mode. 
+
+This distinction must be maintained.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{19. Current Status Classification}
+
+\noindent\textbf{Derived:}
+\begin{equation*}
+    \boxed{ \text{finite conservative microscopic modes do not generate irreversible } \Gamma_{\mathrm{D}} }
+\end{equation*}
+\begin{equation}
+    \boxed{ \Gamma_{\mathrm{D}} = \frac{-\operatorname{Im}\Sigma_\gamma^R}{M_\gamma\omega} }
+\end{equation}
+and, conditionally for a semi-infinite uniform scale-depth chain:
+\begin{equation}
+    \boxed{ \Gamma_{\mathrm{D}} = \frac{C_{\gamma Z}^2\sqrt{K_Z m_Z}}{M_\gamma} }
+\end{equation}
+
+\noindent\textbf{Not derived:}
+\begin{equation*}
+    \boxed{ m_Z, \quad K_Z, \quad C_{\gamma Z} }
+\end{equation*}
+and the existence of the required physical outgoing continuum.
+
+\noindent\textbf{Current conclusion:}
+\begin{equation*}
+    \boxed{ \textbf{The presently completed TFT constitutive equations do not uniquely predict } \Gamma_{\mathrm{D}}. }
+\end{equation*}
+
+\noindent\textbf{Important qualification:} \\
+This does not establish that TFT cannot derive $\Gamma_{\mathrm{D}}$. It establishes that:
+\begin{equation*}
+    \boxed{ \textbf{a deeper vertical-substrate constitutive derivation is required first.} }
+\end{equation*}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{20. Exact Restart Point After the Entanglement Program}
+When the mechanical entanglement/Hard-Floor investigation is sufficiently complete, do not restart the $\Gamma_{\mathrm{D}}$ search from the beginning. Resume directly with:
+\begin{equation*}
+    \boxed{ \textbf{$\Gamma_{\mathrm{D}}$ Restart — Spectral Projection of the Independently Derived Vertical Architecture} }
+\end{equation*}
+
+\noindent The first calculation will be:
+\begin{enumerate}
+    \item Take the independently derived vertical action;
+    \item Diagonalize its scale-depth spectrum;
+    \item Calculate the endpoint retarded Green function;
+    \item Derive the carrier coupling $V_{\gamma Z}$;
+    \item Calculate $d\mu_{\gamma Z}$;
+    \item Evaluate $-\operatorname{Im}\Sigma_\gamma^R(k_\gamma,\omega)$;
+    \item Determine its frequency exponent without imposing the desired result;
+    \item Only if the result is Ohmic, identify $\Gamma_{\mathrm{D}} = \frac{-\operatorname{Im}\Sigma_\gamma^R}{M_\gamma\omega}$;
+    \item Derive its absolute normalization exclusively from TFT microscopic quantities;
+    \item Only after symbolic microscopic closure compare the result with phenomenology.
+\end{enumerate}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{21. Baseline Summary}
+\begin{equation*}
+    \boxed{
+    \begin{array}{c}
+    \textbf{$\Gamma_{\mathrm{D}}$ BASELINE — 22 AUGUST 2026}\\[3mm]
+    \text{The photon carrier itself is conservative.}\\
+    \text{Finite internal FCC degrees of freedom cannot irreversibly damp it.}\\[2mm]
+    \text{A nonzero constant } \Gamma_{\mathrm{D}} \text{ requires a carrier-projected}\\
+    \text{continuous spectral sector with an Ohmic low-frequency response.}\\[2mm]
+    \text{A semi-infinite finite-inertia scale-depth chain}\\
+    \text{would produce exactly the required spectral exponent,}\\
+    \text{but current TFT does not derive its inertia, stiffness,}\\
+    \text{carrier coupling, or outgoing-continuum boundary condition.}\\[2mm]
+    \text{The existing instantaneous Hard-Floor constraint should therefore}\\
+    \text{not be replaced merely to manufacture } \Gamma_{\mathrm{D}}.\\[2mm]
+    \text{The Hard-Floor/Tension-Column ontology must first be constrained}\\
+    \text{independently by mechanical quantum entanglement and the other}\\
+    \text{phenomena for which TFT requires global longitudinal equilibration.}\\[3mm]
+    \boxed{ \textbf{NEXT: MECHANICAL ENTANGLEMENT / VERTICAL-ARCHITECTURE DERIVATION} }\\[3mm]
+    \boxed{ \textbf{THEN: RETURN DIRECTLY TO THE } \Gamma_{\mathrm{D}} \textbf{ SPECTRAL PROJECTION.} }
+    \end{array}
+    }
+\end{equation*}
+
+\vspace{1em}
+\noindent\textit{End of Baseline Version 1.0.}
+
+
+\section*{TFT $\Gamma_{\mathrm{D}}$ Microscopic Derivation Program}
+\addcontentsline{toc}{section}{TFT $\Gamma_{\mathrm{D}}$ Microscopic Derivation Program}
+
+\noindent\textbf{Research Baseline — Version 2.0} \\
+\textbf{Baseline date:} August 22, 2026 \\
+\textbf{Status:} Post-entanglement restart completed through Passes $\Gamma_{\mathrm{D}}$-3A–3K. Direct $\Gamma_{\mathrm{D}}$-targeted reservoir search is suspended. Next phase is an independent Active-to-Latent Interface Microphysics derivation. \\
+\textit{This baseline supersedes the earlier Version 1.0 checkpoint, while retaining all of its no-go results and anti-fitting rules.}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{1. Microscopic target}
+The required photon self-energy remains
+\begin{equation}
+    \boxed{ -\operatorname{Im}\Sigma_\gamma^R(k_\gamma,\omega) = M_\gamma\Gamma_{\mathrm{D}}\omega + \mathcal{O}(\omega) }
+\end{equation}
+and therefore
+\begin{equation}
+    \boxed{ \Gamma_{\mathrm{D}} = \lim_{\omega\rightarrow 0} \frac{-\operatorname{Im}\Sigma_\gamma^R}{M_\gamma\omega} }
+\end{equation}
+The preferred invariant microscopic quantity is now
+\begin{equation}
+    \boxed{ \eta_{\gamma R} \equiv \lim_{\omega\rightarrow 0} \frac{-\operatorname{Im}\Sigma_\gamma^R}{\omega} }
+\end{equation}
+so that
+\begin{equation}
+    \boxed{ \Gamma_{\mathrm{D}} = \frac{\eta_{\gamma R}}{M_\gamma} }
+\end{equation}
+This replaces the earlier tendency to treat $m_Z$, $K_Z$, and $C_{\gamma Z}$ as independently fundamental unknowns. They are merely one possible parameterization of the physically invariant projected impedance.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{2. Current microscopic verdict}
+If no new interface dynamics are added to the presently completed TFT parent theory,
+\begin{equation*}
+    \boxed{ \eta_{\gamma R} = 0 }
+\end{equation*}
+and therefore
+\begin{equation*}
+    \boxed{ \Gamma_{\mathrm{D}}^{\mathrm{current\ micro}} = 0 }
+\end{equation*}
+This means:
+\begin{equation*}
+    \boxed{ \text{current TFT does not microscopically derive the phenomenological nonzero } \Gamma_{\mathrm{D}}. }
+\end{equation*}
+It does not establish that every future TFT completion must have $\Gamma_{\mathrm{D}}=0$.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{3. Hard-Floor ontology remains unchanged}
+The entanglement audit independently strengthened the need to preserve
+\begin{equation}
+    \boxed{ \mu_{\mathrm{S}} \rightarrow 0, \qquad K_{\mathrm{S}} \rightarrow \infty, \qquad c_{\mathrm{S}} \rightarrow \infty }
+\end{equation}
+The Hard Floor remains the
+\begin{equation*}
+    \boxed{ \text{constraint / phase-reference / strain-memory sector}, }
+\end{equation*}
+not an ordinary finite-energy propagating reservoir. The important separation is
+\begin{equation*}
+    \boxed{ \text{Hard-Floor zero-delay compatibility} \neq \text{finite active/interface work}. }
+\end{equation*}
+No future $\Gamma_{\mathrm{D}}$ construction should sacrifice this distinction merely to generate damping.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{4. Post-entanglement vertical architecture}
+The entanglement program independently supports a three-role decomposition:
+\begin{equation*}
+    \boxed{ \text{Soft Floor: finite-energy active dynamics} }
+\end{equation*}
+\begin{equation*}
+    \boxed{ \text{active-to-latent interface: possible finite work-bearing dynamics} }
+\end{equation*}
+\begin{equation*}
+    \boxed{ \text{Hard Floor: zero-delay constraint and persistent information} }
+\end{equation*}
+This resolves the earlier apparent conflict between a finite dynamical interface and an instantaneous Hard Floor. However, entanglement does not determine the photon coupling, continuum spectrum, or impedance of that interface.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{5. General finite-mode no-go survives}
+A pristine periodic conservative system with a finite number of regular generalized coordinates per Bloch momentum has
+\begin{equation}
+    G^R(\mathbf{k},\omega) = \sum_s \frac{|\mathbf{e}_s\rangle\langle\mathbf{e}_s|}{\omega_s^2(\mathbf{k})-(\omega+i0)^2}
+\end{equation}
+Hence $-\operatorname{Im}G^R$ contains discrete poles rather than a smooth Ohmic spectral measure. Therefore,
+\begin{equation*}
+    \boxed{ \text{finite conservative modes} \rightarrow \text{dressing / hybridization / recurrence} }
+\end{equation*}
+not
+\begin{equation*}
+    \boxed{ \text{irreversible constant } \Gamma_{\mathrm{D}}. }
+\end{equation*}
+This remains one of the core no-go theorems.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{6. Coordinate-invariant vertical formulation}
+Pass 3A replaced arbitrary scale-depth coefficients with physically invariant quantities. For a temporary interface field $\chi(Z,t)$,
+\begin{equation}
+    S_I = \frac{1}{2} \int dt\, dZ \left[ \mathcal{M}(Z)\dot{\chi}^2 - \mathcal{K}(Z)(\partial_Z\chi)^2 - \mathcal{P}(Z)\chi^2 \right]
+\end{equation}
+Define acoustic depth
+\begin{equation}
+    \boxed{ d\xi = \sqrt{\frac{\mathcal{M}}{\mathcal{K}}} dZ }
+\end{equation}
+characteristic impedance
+\begin{equation}
+    \boxed{ \mathcal{Z}_I = \sqrt{\mathcal{M}\mathcal{K}} }
+\end{equation}
+and local gap
+\begin{equation}
+    \boxed{ \Omega_I^2 = \frac{\mathcal{P}}{\mathcal{M}} }
+\end{equation}
+Then
+\begin{equation}
+    S_I = \frac{1}{2} \int dt\, d\xi\, \mathcal{Z}_I(\xi) \left[ \dot{\chi}^2 - (\partial_\xi\chi)^2 - \Omega_I^2(\xi)\chi^2 \right]
+\end{equation}
+The physically decisive quantities are therefore
+\begin{equation*}
+    \boxed{ \mathcal{Z}_I(\xi), \qquad \Omega_I(\xi), \qquad \Xi_I. }
+\end{equation*}
+Current TFT does not derive them for the active-to-latent interface.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{7. Finite vertical column theorem}
+For a finite gapless column with acoustic depth $0 \le \xi \le \Xi_I$, the endpoint response has the representative form
+\begin{equation}
+    \boxed{ D_I(\omega) = \mathcal{Z}_I\omega\cot(\omega\Xi_I) }
+\end{equation}
+Its low-frequency expansion is
+\begin{equation}
+    D_I(\omega) = \frac{\mathcal{Z}_I}{\Xi_I} - \frac{\mathcal{Z}_I\Xi_I}{3}\omega^2 + \mathcal{O}(\omega^4)
+\end{equation}
+There is no smooth $-i\eta\omega$ term. Thus
+\begin{equation*}
+    \boxed{ \Xi_I < \infty \quad\Rightarrow\quad \Gamma_{\mathrm{D}} = 0 }
+\end{equation*}
+for a regular conservative finite interface. This result is independent of whether the finite column is uniform.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{8. Hard-Floor zero-delay limit does not generate infinite acoustic depth}
+The deep limit $\mathcal{M} \rightarrow 0$, $\mathcal{K} \rightarrow \infty$ generically gives
+\begin{equation*}
+    \sqrt{\frac{\mathcal{M}}{\mathcal{K}}} \rightarrow 0
+\end{equation*}
+Therefore the Hard-Floor constraint tends to compress acoustic depth. It does not naturally produce
+\begin{equation*}
+    \Xi_I \rightarrow \infty
+\end{equation*}
+This is consistent with entanglement and global equilibration but works against using the Hard Floor itself as the outgoing $\Gamma_{\mathrm{D}}$ reservoir.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{9. Closed microscopic routes after Pass 3K}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{6cm} p{9cm}@{}}
+\toprule
+\textbf{Candidate} & \textbf{Final status} \\
+\midrule
+Finite FCC oscillator bath & Rejected \\
+Ordinary microrotation & Rejected \\
+Compact internal phase & Rejected \\
+Finite torsional branch & Rejected \\
+Photon $2\pi$ rolling holonomy & Rejected \\
+Coherent condensate drag & Rejected; $\mathbf{v}_{\mathrm{rel}}=0$ \\
+Localized defect--condensate impedance & Rejected (reused for photons) \\
+Static Hard-Floor constraint & Rejected as reservoir \\
+Photon gravitational strain wake & Rejected; slaved/chromatic \\
+Linear lateral interface continuum & Rejected at fixed conserved momentum \\
+Generic nonlinear 3D continuum & Generally super-Ohmic \\
+Compact $N_\gamma$ footprint & Does not create infrared continuum \\
+Permanent record multiplicity & May provide nonrecurrence, not normalization \\
+FCC phase-slip alone & Conservative; no retained action \\
+Direct scale-ratio leakage $(\ell_{\mathrm{S}}/r_{\mathrm{D}})^n$ & Not derived \\
+Modal area as leakage fraction & Rejected as double use of carrier normalization \\
+Finite fixed-address transverse Tension Column & Discrete; no smooth damping \\
+Pure flexural outgoing branch & Wrong scaling, $\sim\omega^{3/2}$ endpoint loss \\
+Maxwell element inserted phenomenologically & Not microscopic closure \\
+\bottomrule
+\end{tabular}
+\end{table}
+These mechanisms should not be reopened unless genuinely new interface physics changes the assumptions under which they were rejected.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{10. The 2D result remains a structural clue}
+A gapless two-dimensional continuum with linear dispersion has
+\begin{equation}
+    \boxed{ \rho_{\mathrm{2D}}(\Omega) \propto \Omega }
+\end{equation}
+Therefore, with an unsuppressed low-frequency projection $|V_{\gamma I}(0)|^2 \neq 0$, it would naturally produce an Ohmic spectral measure. But neither the existing photon footprint nor current interface dynamics establishes the required independent internal continuum and coupling. Thus:
+\begin{equation*}
+    \boxed{ d_{\mathrm{eff}} = 2 }
+\end{equation*}
+is retained only as a diagnostic clue, not a $\Gamma_{\mathrm{D}}$ derivation.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{11. Permanent Hard-Floor records}
+The record-history investigation supplied one genuinely new positive result. A propagating photon may continually encounter fresh substrate states, $R_1, R_2, R_3, \dots$, so persistent records could provide effective nonrecurrence. However,
+\begin{equation*}
+    \boxed{ \text{nonrecurrence} \neq \text{Ohmic spectral weight}. }
+\end{equation*}
+Static degenerate records can preserve information with no photon energy loss. Positive-energy records require a write-energy law. The current information ontology does not determine that law.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{12. Fixed-action insight}
+The handoff relation $\Gamma_{\mathrm{D}} \simeq \frac{c_{\mathrm{E}}}{2r_{\mathrm{D}}}\epsilon_{\mathrm{D}}$ now has a sharper possible interpretation:
+\begin{equation}
+    \boxed{ \epsilon_{\mathrm{D}} = \frac{I_{\mathrm{ret}}}{I_\gamma} }
+\end{equation}
+For a photon,
+\begin{equation}
+    I_\gamma = \frac{E_\gamma}{\omega} = \hbar
+\end{equation}
+Therefore a frequency-independent retained microscopic action $I_{\mathrm{ret}}$ would naturally give a frequency-independent handoff fraction. But present TFT does not derive $I_{\mathrm{ret}}$. Neither the FCC phase-slip barrier nor the scale ratios determine it.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{13. Scale conservation does not determine channel branching}
+The topology-normalized structural invariant gives $\hat{J}_{\mathrm{S}} = \hat{J}_{\mathrm{D}}$ and $I_\gamma = \hat{J}c_{\mathrm{E}} = \hbar$. This fixes total action normalization. It does not determine a reservoir branch fraction. If
+\begin{equation}
+    I_{\mathrm{in}} = I_{\gamma,\mathrm{out}} + I_R,
+\end{equation}
+conservation gives only
+\begin{equation}
+    1 = \frac{I_{\gamma,\mathrm{out}}}{I_{\mathrm{in}}} + \frac{I_R}{I_{\mathrm{in}}}
+\end{equation}
+It does not determine
+\begin{equation*}
+    \boxed{ \frac{I_R}{I_{\mathrm{in}}} }
+\end{equation*}
+Therefore
+\begin{equation*}
+    \boxed{ \text{cross-scale conservation} \neq \text{cross-channel branching law}. }
+\end{equation*}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{14. Existing geometric factors cannot be repurposed}
+Current TFT contains, among other quantities,
+\begin{equation*}
+    \left(\frac{\ell_{\mathrm{S}}}{r_{\mathrm{D}}}\right)^2, \qquad \left(\frac{\ell_{\mathrm{S}}}{r_{\mathrm{D}}}\right)^4, \qquad \text{and} \qquad A_{\mathrm{ct}}^{(\mathrm{modal})} = 2\pi\ell_{\mathrm{S}}^2.
+\end{equation*}
+These quantities have already-derived roles in density scaling and coherent photon-mode normalization. They do not independently determine
+\begin{equation*}
+    \Pi_{D\rightarrow S} = \frac{I_{\mathrm{ret}}}{I_\gamma}.
+\end{equation*}
+In particular, $A_{\mathrm{ct}}^{(\mathrm{modal})}$ must not be reinterpreted as a literal leakage area or damping fraction without an independent projection theorem.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{15. Important correction concerning $C=1$}
+The pristine endpoint relation
+\begin{equation*}
+    \boxed{ C(0) = 1 }
+\end{equation*}
+must not be interpreted as forbidding all dynamic radiation. A system can have exact static endpoint continuity while possessing a finite-frequency retarded impedance satisfying
+\begin{equation}
+    D_I^R(\omega) = -i\mathcal{Z}_I\omega + \dots
+\end{equation}
+Since $D_I^R(0) = 0$, the static relation remains intact. Thus a future interface continuum could coexist with the established pristine endpoint transfer. What current TFT lacks is the finite-frequency boundary dynamics.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{16. Transverse Tension-Column result}
+Photon endpoint motion does not by itself force the desired reservoir. The relevant relative displacement is
+\begin{equation}
+    \boxed{ \Delta_T = X_\gamma - X_H }
+\end{equation}
+If the Hard-Floor address follows the active endpoint, $X_H = X_\gamma$, then $\Delta_T = 0$ and there is no transverse column deformation. If the address is fixed, $\Delta_T \neq 0$, transverse deformation can occur. But a finite transverse column has a discrete spectrum. Axial stiffness without pre-tension gives only a quartic transverse restoring energy, $U \propto u^4$, and therefore no linear branch. A pre-tensioned finite-inertia string-like branch gives
+\begin{equation}
+    c_I = \sqrt{\frac{T_0}{\mu_I}} \qquad \text{and} \qquad \mathcal{Z}_I = \sqrt{T_0\mu_I},
+\end{equation}
+but TFT does not derive $T_0$, $\mu_I$, or an outgoing infinite acoustic domain.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{17. Unique simple conditional success}
+The one simple structure that repeatedly produces the required law is:
+\begin{equation*}
+    \boxed{ \text{finite-inertia} + \text{transverse-polar} + \text{gapless} + \text{linear acoustic dispersion} + \text{outgoing continuum}. }
+\end{equation*}
+Let $Q_T(0,t) = X_\gamma(t)$ and suppose $\Xi_I \rightarrow \infty$. Then the retarded outgoing solution gives
+\begin{equation}
+    \boxed{ -\operatorname{Im}\Sigma_\gamma^R = \mathcal{Z}_{I0}\omega }
+\end{equation}
+Therefore
+\begin{equation}
+    \boxed{ \Gamma_{\mathrm{D}} = \frac{\mathcal{Z}_{I0}}{M_\gamma} }
+\end{equation}
+This is the strongest conditional result after the entire post-entanglement audit.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{18. Why this cannot yet be adopted}
+Current TFT does not independently derive:
+\begin{equation*}
+    \boxed{ Q_T, } \qquad \boxed{ \Xi_I = \infty, } \qquad \text{or} \qquad \boxed{ \mathcal{Z}_{I0}. }
+\end{equation*}
+Moreover, adopting a field specifically because it is transverse, gapless, acoustic, finite-inertia, and semi-infinite would reproduce every feature needed to obtain Ohmic damping. That would be too close to reverse engineering $\Gamma_{\mathrm{D}}$. Therefore this continuum must not be promoted to a TFT axiom solely to save the cosmological damping law.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{19. Manuscript status of $\Gamma_{\mathrm{D}}$}
+Until the interface microphysics is independently closed, a nonzero $\Gamma_{\mathrm{D}}$ may be retained only as an explicitly phenomenological/open parameter. The manuscript should not state that it is already microscopically derived from:
+\begin{equation*}
+    \text{FCC friction}, \quad \text{condensate drag}, \quad \text{Hard-Floor leakage}, \quad \text{or} \quad \text{photon strain-wake dissipation}.
+\end{equation*}
+The defensible status is:
+\begin{equation*}
+    \boxed{ \text{$\Gamma_{\mathrm{D}}$ is an effective photon-relaxation coefficient whose microscopic spectral origin remains open.} }
+\end{equation*}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{20. Prohibited upstream inputs remain prohibited}
+The next phase must not use: $H_0$, $R_U$, cosmic age, CMB data, observed redshift, the phenomenological value of $\Gamma_{\mathrm{D}}$, or any cosmological calibration to determine interface quantities. The microscopic derivation must remain blind to the desired numerical result.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{21. New exact restart point}
+The next phase is not
+\begin{equation*}
+    \boxed{ \Gamma_{\mathrm{D}} \text{ Pass 3L}. }
+\end{equation*}
+The research program should now be renamed:
+\begin{equation*}
+    \boxed{ \textbf{TFT Active-to-Latent Interface Microphysics} }
+\end{equation*}
+with the primary question:
+\begin{equation*}
+    \boxed{ \textbf{What conservative mechanical action is independently required between the active FCC Soft Floor and the phase-locked SC Hard Floor?} }
+\end{equation*}
+The derivation must determine, without reference to $\Gamma_{\mathrm{D}}$:
+\begin{equation*}
+    \begin{aligned}
+    &\text{interface generalized coordinates}, \\
+    &\text{their symmetry classes}, \\
+    &\text{kinetic terms}, \\
+    &\text{restoring terms}, \\
+    &\text{scale-depth domain}, \\
+    &\text{boundary conditions}, \\
+    &\text{whether the spectrum is discrete or continuous}, \\
+    &\text{and its invariant endpoint impedance}.
+    \end{aligned}
+\end{equation*}
+Only after that parent theory is established do we return to the photon and evaluate
+\begin{equation}
+    \boxed{ \eta_{\gamma R} = \lim_{\omega\rightarrow 0} \frac{-\operatorname{Im}\Sigma_\gamma^R}{\omega}. }
+\end{equation}
+Then:
+\begin{equation*}
+    \eta_{\gamma R} = 0
+\end{equation*}
+must remain an acceptable outcome.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\subsection*{Baseline Version 2.0 — Final Checkpoint}
+\begin{equation*}
+    \boxed{
+    \begin{array}{c}
+    \textbf{$\Gamma_{\mathrm{D}}$ POST-ENTANGLEMENT BASELINE}\\[3mm]
+    \text{The established TFT photon parent branch is conservative.}\\
+    \text{Finite FCC/internal/vertical modes cannot irreversibly damp it.}\\[2mm]
+    \text{The Hard Floor remains a zero-inertia constraint and memory sector;}\\
+    \text{entanglement independently requires that this ontology be preserved.}\\[2mm]
+    \text{A finite active-to-latent interface is physically plausible,}\\
+    \text{but its complete conservative dynamics are not presently derived.}\\[2mm]
+    \text{Permanent records may supply effective nonrecurrence,}\\
+    \text{but do not determine an Ohmic spectral weight or retained action.}\\[2mm]
+    \text{The unique simple conditional Ohmic completion is an outgoing,}\\
+    \text{gapless, finite-inertia transverse acoustic interface satisfying}\\
+    Q_T(0) = X_\gamma,
+    \end{array}
+    }
+\end{equation*}
+\begin{equation}
+    \boxed{ -\operatorname{Im}\Sigma_\gamma^R = \mathcal{Z}_{I0}\omega, \qquad \Gamma_{\mathrm{D}} = \frac{\mathcal{Z}_{I0}}{M_\gamma}. }
+\end{equation}
+But
+\begin{equation*}
+    \boxed{ \mathcal{Z}_{I0} \text{ and the required continuum are not derived by current TFT.} }
+\end{equation*}
+Therefore,
+\begin{equation*}
+    \boxed{ \Gamma_{\mathrm{D}}^{\mathrm{current\ microscopic}} = 0, }
+\end{equation*}
+while
+\begin{equation*}
+    \boxed{ \Gamma_{\mathrm{D}}^{\mathrm{phenomenological}} \neq 0 }
+\end{equation*}
+remains an explicitly unresolved bridge. And the exact next research program is
+\begin{equation*}
+    \boxed{ \textbf{ACTIVE-TO-LATENT INTERFACE MICROPHYSICS} }
+\end{equation*}
+followed—only after independent constitutive closure—by
+\begin{equation*}
+    \boxed{ \textbf{PHOTON SPECTRAL PROJECTION BACK ONTO } \Gamma_{\mathrm{D}}. }
+\end{equation*}
+This is now baselined as the restart point.
+
+

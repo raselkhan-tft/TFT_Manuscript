@@ -1,40 +1,52 @@
-\chapter{The Mechanics of Cosmic Redshift and Vacuum Damping}
+\chapter{The Mechanics of Cosmic Redshift and Vacuum Relaxation}
 \label{chap:cosmic_redshift}
 
-In standard cosmology, the observation that distant galaxies appear redshifted is universally interpreted as a Doppler-like effect caused by the continuous stretching of the spacetime metric. To sustain this expanding geometry against observational data, standard physics was forced to invent ``Dark Energy'' to explain nonlinear redshift anomalies.
+In standard cosmology, the observation that distant galaxies appear redshifted is attributed to the evolution of the FLRW scale factor, and dark energy is invoked to account for late-time accelerated distance-redshift behavior.
 
-Tension Field Theory (TFT) resolves this without invoking metric expansion. Instead, we demonstrate that cosmic redshift is strictly a kinematic phenomenon: it is the inevitable thermodynamic energy dissipation of a wave propagating through a visco-elastic medium.
+Tension Field Theory (TFT) resolves this without invoking metric expansion. Instead, within the TFT constitutive closure, cosmic redshift arises as the nonconservative consequence of coherent-action-preserving frequency transport through a visco-elastic medium.
 
-\section{The Mechanism of the Viscous Cosmic Horizon: Vacuum Viscosity ($\Gamma_{\mathrm{D}}$)}
+\section{The Mechanism of the Viscous Cosmic Horizon: Vacuum Relaxation ($\Gamma_{\mathrm{D}}$)}
 \label{sec:vacuum_viscosity}
 
 \subsection{The Viscosity of Spacetime}
 In previous sections, we established the Viscous Cosmic Horizon ($R_{\mathrm{U}}$) as a boundary of ``Causal Saturation'' rather than geometric expansion. We now define the physical mechanism responsible for this limit.
 
-TFT postulates that the Face--Centered Cubic (FCC) active vacuum possesses a finite kinematic viscosity. Standard cosmology interprets the redshift of distant galaxies as a kinematic recession velocity (Metric Expansion). TFT categorically rejects this interpretation. Instead, we model light strictly as a transverse shear wave propagating through a visco-elastic lattice.
+TFT postulates that the Face--Centered Cubic (FCC) active vacuum possesses a finite weak-loss visco-elastic response. Standard cosmology attributes cosmological redshift to evolution of the FLRW scale factor. TFT categorically rejects this interpretation. Instead, we model light strictly as a transverse shear wave propagating through a visco-elastic lattice.
 
-Like any wave traveling through a physical medium, the photon must perform work against the structural resistance of the lattice nodes. This continuous mechanical work results in a simultaneous exponential vertical compression (amplitude loss) and longitudinal elongation (wavelength stretching) of the wave, bleeding its active transverse energy into the lattice as latent longitudinal strain.
+Like any wave traveling through a physical medium, the photon must perform work against the structural resistance of the lattice nodes. However, as rigorously proven by the Amplitude-Attenuation No-Go theorem in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}, ordinary linear damping causes amplitude decay but leaves the real oscillation frequency completely fixed. Therefore, simple boundary friction cannot physically force the wavelength to stretch.
 
-\subsection{The Vacuum Damping Rate ($\Gamma_{\mathrm{D}}$)}
-We define this cosmic energy loss not as a kinematic Doppler shift, but as a macroscopic acoustic damping interaction resulting from the internal visco-elasticity of the Soft Floor. The mathematical rate of transverse energy decay is strictly proportional to the wave's total energy ($E$) and the Vacuum Damping Rate ($\Gamma_{\mathrm{D}}$):
+To achieve true frequency evolution, the photon must undergo Coherent-Action-Preserving Frequency Transport. As the wave bleeds its active transverse energy into the accessible reservoir modes of the FCC--Condensate reservoir, it strictly preserves its coherent modal action ($\mathcal{I}_\gamma \equiv E/\omega = \text{constant}$). This preservation and the direction-preserving wave-vector drag are two distinct constitutive closures acting together. The direction-preserving wave-vector drag mechanically pulls the wave number down, while action preservation links this resulting $\omega$-change directly to the energy loss, forcing the wave to continuously shift through the real-frequency eigenbranch.
+
+\subsection{The Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}$)}
+We define this cosmic energy loss not as a kinematic Doppler shift, but as a macroscopic acoustic damping interaction resulting from the internal visco-elasticity of the Soft Floor. The mathematical rate of transverse energy decay is strictly proportional to the wave's total energy ($E$) and the Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}$):
 \begin{equation}
     \frac{dE}{dt} = -\Gamma_{\mathrm{D}} \cdot E
 \end{equation}
 
-For cosmic distances ($r$), this integrates to a linear relationship mathematically identical to the Hubble Law, but physically inverted. The observed redshift ($z$) is a measurement of the cumulative structural friction encountered by the photon over its journey:
+Because coherent modal action is preserved, this energy decay is accompanied by an identical decay in the real frequency ($\frac{d\omega}{dt} = -\Gamma_{\mathrm{D}} \omega$). For an arbitrary propagation path, this yields the general TFT redshift law:
 \begin{equation}
-    c_{\mathrm{E}} \cdot z = \Gamma_{\mathrm{D}} \cdot r
+    \ln(1+z) = \int_{\mathrm{path}} \frac{\Gamma_{\mathrm{D}}(\ell)}{v_{\mathrm{ray}}\left[\omega(\ell), \alpha_{\mathrm{G}}(\ell)\right]} \,d\ell
 \end{equation}
 
-\subsection{Identity with the Hubble Parameter}
-The ``Expansion of the Universe'' is a kinematic illusion caused by this continuous visco-elastic damping. The empirical Hubble parameter ($H_0$) is mechanically equivalent to the theoretical Vacuum Damping Rate ($\Gamma_{\mathrm{D}}$).
-
-Using the causal saturation limit derived previously, where cumulative damping perfectly exhausts the photon's transverse energy budget at the Geometric Cosmic Horizon ($R_{\mathrm{U}}$), we find that $\Gamma_{\mathrm{D}}$ is numerically identical to the observed value of $H_0$:
+In the weak-loading, constant-rate limit ($\alpha_{\mathrm{G}} \to 0$, $v_{\mathrm{ray}} \simeq c_{\mathrm{E}}$, $\Gamma_{\mathrm{D}} \simeq \mathrm{constant}$), this reduces to the exact exponential distance law:
 \begin{equation}
-    \Gamma_{\mathrm{D}} \equiv H_0 \approx 2.36 \times 10^{-18} \text{ s}^{-1}
+    1+z = \exp\left(\frac{\Gamma_{\mathrm{D}} r}{c_{\mathrm{E}}}\right)
 \end{equation}
 
-\textit{(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} for the full derivation of the damping rate, the energy dissipation equation, and the calculation of $\Gamma_{\mathrm{D}}$ from the vacuum saturation limit).}
+Only at low redshift does this yield the linear approximation mechanically mimicking the Hubble law:
+\begin{equation}
+    c_{\mathrm{E}} z \simeq \Gamma_{\mathrm{D}} r
+\end{equation}
+
+\subsection{Empirical Calibration to the Hubble Parameter}
+The ``Expansion of the Universe'' is a kinematic illusion caused by this continuous vacuum relaxation. From the low-redshift linear approximation ($c_{\mathrm{E}} z \simeq \Gamma_{\mathrm{D}} r$), we empirically calibrate the theoretical Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}$) directly to the observed Hubble parameter:
+\begin{equation}
+    \Gamma_{\mathrm{D}}^{(\mathrm{cal})} = H_0^{(\mathrm{obs})} \approx 2.36 \times 10^{-18} \text{ s}^{-1}
+\end{equation}
+
+The characteristic relaxation length ($R_{\mathrm{U}} = c_{\mathrm{E}} / \Gamma_{\mathrm{D}}$) then defines the corresponding scale at which cumulative damping reduces the photon's transverse energy by one $e$-fold.
+
+\textit{(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} for the full derivation of the nonconservative relaxation sector, the coherent-action preservation law, and the exact redshift distance formulation).}
 
 \section{The Friction of Space (A Proposed Visco-Elastic Phase-Lag Mechanism)}
 
@@ -47,100 +59,96 @@ The conservative phase velocity $c_{\mathrm{P}}$ of light through this medium is
     c_{\mathrm{P}} = c_{\mathrm{E}} \sqrt{\frac{\mu_{\mathrm{D}}}{\mu_{\mathrm{eff}}}} = c_{\mathrm{E}} \left(1-\alpha_{\mathrm{G}}\right)^{2}.
 \end{equation}
 
-This relation determines the local conservative propagation capacity of the coherent transverse branch within the active FCC phase. The effective inertia ratio $\sqrt{\mu_{\mathrm{D}}/\mu_{\mathrm{eff}}}$ governs the gravitational reduction of the local propagation speed in the mass potentials of stars and Black Holes. In the relatively weakly loaded regions of the Cosmic Voids, $\alpha_{\mathrm{G}}\to0$, so that $\mu_{\mathrm{eff}}\approx\mu_{\mathrm{D}}$ and $c_{\mathrm{P}}\approx c_{\mathrm{E}}$. In this limit, any additional reduction of the optical amplitude must arise from a separate dissipative mechanism rather than from the conservative endpoint-transfer closure.
+In the relatively weakly loaded regions of the Cosmic Voids, $\alpha_{\mathrm{G}}\to0$, so that $\mu_{\mathrm{eff}}\approx\mu_{\mathrm{D}}$ and $c_{\mathrm{P}}\approx c_{\mathrm{E}}$. In this limit, any additional reduction of the optical amplitude must arise from a separate nonconservative dissipative mechanism.
 
 \vspace{0.5em}
-\noindent\textbf{The Proposed Microscopic Origin of $\Gamma_{\mathrm{D}}$:} In the conservative coherent limit, the lattice and interstitial Condensate remain entrained, stress and strain remain in phase, $\Delta\varphi=0$, and the optical energy is conserved. A finite phase lag, $\Delta\varphi>0$, represents a small nonconservative departure from this entrained limit, permitting boundary drag between the vibrating FCC nodes and the surrounding Condensate. The resulting out-of-phase response does not modify the conservative propagation law above, but removes a small fraction of the wave energy during each oscillation cycle. This phase-lagged Condensate--lattice interaction therefore provides the proposed microscopic mechanism underlying the macroscopic Lattice Damping Rate $\Gamma_{\mathrm{D}}$. The corresponding energy-decay law, cosmic-redshift relation, and cosmological normalization of $\Gamma_{\mathrm{D}}$ are developed in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.
+\noindent\textbf{The Proposed Microscopic Origin of $\Gamma_{\mathrm{D}}$:} In the conservative coherent limit, the lattice and interstitial Condensate remain entrained, stress and strain remain in phase, $\Delta\varphi=0$, and the optical energy is conserved. A finite phase lag, $\Delta\varphi>0$, represents a small nonconservative departure from this entrained limit, permitting boundary drag between the vibrating FCC nodes and the surrounding Condensate. 
 
-\section{Supernova Time Dilation and the Topological Invariant ($N$)}
-The primary argument utilized by standard cosmology to reject visco-elastic models of redshift is Supernova Time Dilation. Observations confirm that distant supernova explosions appear to happen in ``slow motion,'' taking longer to brighten and fade \cite{Goldhaber_2001}. Standard physics claims this proves metric expansion, as the stretching of space physically stretches the arrival time of the photons.
-
-Tension Field Theory mathematically guarantees this exact time dilation without metric expansion by enforcing the Topological Invariant ($N$) of the photon packet. A photon is a finite soliton wave characterized by a strict integer count of phase cycles ($N$). This topological integrity cannot be destroyed or truncated by linear propagation.
-
-The total cycle count ($N$) is the product of the wave's frequency ($f$) and its temporal duration ($\Delta t$):
+Crucially, to maintain a Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}$) that is achromatic (frequency-independent across the spectrum), the active vacuum must exhibit a highly specific inverse-frequency loss tangent:
 \begin{equation}
-    N = f \cdot \Delta t
+    \tan\left[\Delta\varphi(\omega)\right] \simeq \frac{\Gamma_{\mathrm{D}}}{\omega}
+\end{equation}
+This relationship is a required constitutive closure that remains to be microscopically derived from the complete FCC--Condensate response. It provides the slow modal-energy transfer rate required for coherent-action-preserving frequency transport, as developed in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
+
+\section{Finite-Packet Cycle Dilation and the Topological Invariant ($N$)}
+A major observational constraint on non-expanding redshift models is Supernova Time Dilation. Observations confirm that distant supernova explosions appear to happen in ``slow motion,'' taking longer to brighten and fade \cite{Goldhaber_2001}.
+
+Tension Field Theory mathematically guarantees this exact time dilation for individual coherent wave packets without metric expansion under the fixed-cycle coherent-packet closure by enforcing the Topological Invariant ($N$). A photon is a finite soliton wave characterized by a strict integer count of phase cycles ($N$). Under the fixed-cycle coherent-packet closure, this cycle count is preserved throughout coherent propagation.
+
+The total cycle count ($N$) is the product of the wave's frequency ($f$) and its temporal duration ($\Delta t_{\mathrm{pkt}}$):
+\begin{equation}
+    N = f \cdot \Delta t_{\mathrm{pkt}}
 \end{equation}
 
-As the wave packet propagates through the viscous SGF, it performs physical work against the lattice boundary friction (\hyperref[sec:vacuum_viscosity]{Section \ref*{sec:vacuum_viscosity}}). This causes its kinetic energy to drop, which manifests directly as a drop in the observed frequency ($f_{\mathrm{obs}} < f_{\mathrm{emit}}$). Because the topological cycle count must be strictly conserved upon observation ($N_{\mathrm{obs}} = N_{\mathrm{emit}}$), the physical duration of the wave packet must proportionally increase to accommodate the lower frequency:
+As the narrowband wave packet propagates through the viscous SGF, it performs physical work against the lattice boundary friction (\hyperref[sec:vacuum_viscosity]{Section \ref*{sec:vacuum_viscosity}}). This causes its kinetic energy to drop, which, under coherent-action preservation, is accompanied by a drop in the observed frequency ($f_{\mathrm{obs}} < f_{\mathrm{emit}}$). Because the topological cycle count must be strictly conserved upon observation ($N_{\mathrm{obs}} = N_{\mathrm{emit}}$) for a coherent finite packet, the physical duration of the wave packet must proportionally increase to accommodate the lower frequency:
 \begin{equation}
-    \Delta t_{\mathrm{obs}} = \frac{N}{f_{\mathrm{obs}}} = \Delta t_{\mathrm{emit}} (1+z)
+    \Delta t_{\mathrm{pkt,obs}} = \frac{N}{f_{\mathrm{obs}}} = \Delta t_{\mathrm{pkt,emit}} (1+z)
 \end{equation}
 
-This topological conservation strictly restores the First Law of Thermodynamics globally, resolving the missing energy paradox of standard cosmology. Total wave energy ($E$) is physically defined as the product of instantaneous power ($P$) and temporal duration ($\Delta t$):
+\textbf{Macroscopic Scope and Envelope Dilation:} It is critical to distinguish between the kinematic dilation of a single coherent wave packet and the macroscopic dilation of an arbitrary astronomical light curve. As demonstrated in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}, cycle conservation strictly dictates conditional packet-duration dilation for a single narrowband packet. It does not automatically cause the macroscopic dilation of a multi-day supernova envelope, which consists of a sequence of independently emitted packets traveling at identical speeds. The macroscopic stretching of transient light curves remains a separate transport-completion requirement, necessitating an explicit source-to-envelope transport law. 
 
-\begin{itemize}
-    \item \textbf{Standard General Relativity:} Observes that the energy drops by $(1+z)$ and the duration increases by $(1+z)$, resulting in a power drop of $(1+z)^2$. However, because GR claims the duration increase is an artifact of ``expanding geometry,'' the missing energy is assumed to permanently vanish into the void, violating global thermodynamic conservation.
-    \item \textbf{Tension Field Theory:} The total emitted energy is strictly partitioned between the surviving wave packet and the thermodynamic heating of the SGF lattice. The photon's observed energy drops precisely because that energy was deposited into the vacuum as phonon heat (the CMB).
-\end{itemize}
-
+However, for the surviving coherent wave packets, local carrier-reservoir energy bookkeeping is closed. The photon's observed energy drops precisely because that energy was deposited into the vacuum reservoir:
 \begin{equation}
     E_{\mathrm{obs}} = \frac{E_{\mathrm{emit}}}{1+z}
 \end{equation}
 
-Because the surviving energy drops by $(1+z)$, and the wave packet physically stretches in time by $(1+z)$ to conserve its topological knot ($N$), the observed instantaneous power strictly drops by the square:
+Because the surviving energy drops by $(1+z)$, and the wave packet physically stretches in time by $(1+z)$ to preserve the topological cycle invariant ($N$), the observed coherent packet power strictly drops by the square:
 \begin{equation}
-    P_{\mathrm{obs}} = \frac{E_{\mathrm{obs}}}{\Delta t_{\mathrm{obs}}} = \frac{\left( \frac{E_{\mathrm{emit}}}{1+z} \right)}{\Delta t_{\mathrm{emit}} (1+z)} = \frac{P_{\mathrm{emit}}}{(1+z)^2}
+    P_{\mathrm{obs}} = \frac{E_{\mathrm{obs}}}{\Delta t_{\mathrm{pkt,obs}}} = \frac{\left( \frac{E_{\mathrm{emit}}}{1+z} \right)}{\Delta t_{\mathrm{pkt,emit}} (1+z)} = \frac{P_{\mathrm{emit}}}{(1+z)^2}
 \end{equation}
 
-Therefore, a distant supernova appears to happen in slow motion not because space is expanding, but because the observer is experiencing the visco-elastic relaxation of the wave packet. The cycles arrive with less energy, and because the wave has physically elongated to conserve its topology against the vacuum damping, the cycles arrive more slowly. The time dilation scales precisely with distance, perfectly matching the $(1+z)$ observational data through strict classical wave mechanics (See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}} for the algebraic proof of conservation).
-
-\section{Volumetric Relaxation and Geometric Symmetry}
+\section{Volumetric Relaxation: A Proposed Geometric Closure}
 \label{sec:photonic_relaxation}
 
-Because the Spacetime Gravitational Floor (SGF) is an isotropic Face--Centered Cubic (FCC) lattice, the thermodynamic dissipation of a propagating wave packet cannot be strictly one-dimensional.
+Because the Spacetime Gravitational Floor (SGF) is an isotropic Face--Centered Cubic (FCC) lattice, the thermodynamic dissipation of a propagating wave packet may not be strictly one-dimensional. 
 
-The photon soliton is a geometric deformation spanning four degrees of freedom: three spatial dimensions (the physical volume of the wavefront) and one kinematic dimension (the arrival rate of the topological cycles). As the wave packet performs work against the boundary viscosity of the SGF, it undergoes strictly isotropic Volumetric Relaxation. To maintain the topological integrity of the transverse wave within the FCC grid, every dimension of the wave must relax symmetrically.
+While longitudinal energy decay and conditional packet-duration dilation are governed directly by action preservation, the response of the macroscopic wave packet in the transverse directions requires an additional TFT geometric closure. FCC isotropy permits, but does not autonomously derive, a transverse closure. We propose that the wave undergoes strictly isotropic volumetric relaxation to maintain the topological integrity of the transverse wave within the FCC grid.
 
-This relaxation scales exactly by the redshift factor $(1+z)$ across all four degrees of freedom, systematically reducing the total observed power density (surface brightness):
+If this closure introduces one energy factor, one packet-timing factor, and two transverse geometric factors, each scaling with the corresponding redshift dependence, it systematically reduces the total observed power density (surface brightness):
 
 \begin{itemize}
-    \item \textbf{1st Degree (Energy/Longitudinal):} The internal energy of the wave drops by a factor of $(1+z)$ due to lattice hysteresis.
-    \item \textbf{2nd Degree (Kinematic):} The arrival rate of the topological cycles ($N$) slows by a factor of $(1+z)$ due to temporal stretching. Because in free space (untwisted FCC lattice) the kinematic energy of the wave is strictly governed by the invariant structural limit ($c_{\mathrm{E}}$), the thermodynamic drop in energy ($E = hf$, where $h$ is the invariant lattice rotational momentum) dictates a proportional drop in frequency. To maintain $c_{\mathrm{E}} = \lambda f$, the longitudinal wavelength ($\lambda$) physically elongates. Consequently, a spatially longer wave packet crossing a detector at a constant speed takes proportionally longer to arrive, manifesting observationally as cosmic time dilation.
-    \item \textbf{3rd \& 4th Degrees (Transverse Divergence):} The macroscopic optical divergence is strictly the spatial integral of the microscopic thermodynamic decay. As the wave loses energy to node friction, its microscopic transverse amplitude undergoes strict vertical compression. This loss of kinetic energy weakens the soliton's internal transverse holding tension. When integrated over macroscopic cosmic distances, this continuous structural yielding forces the geometric ray paths (the wave normals) to optically diverge. This macroscopic diverging lens effect broadens the apparent angular area of the source galaxy by a strictly proportional factor of $(1 + z)^2$.
+    \item \textbf{1st Component (Energy/Longitudinal):} The internal energy of the wave drops by a factor of $(1+z)$ due to lattice hysteresis.
+    \item \textbf{2nd Component (Kinematic):} The arrival rate of the topological cycles ($N$) slows by a factor of $(1+z)$ due to conditional packet-duration dilation. Because the kinematic energy of the wave is strictly governed by the invariant structural limit ($c_{\mathrm{E}}$), the thermodynamic drop in energy is accompanied by a proportional drop in frequency to preserve the modal action. To maintain $c_{\mathrm{E}} = \lambda f$, the longitudinal wavelength ($\lambda$) physically elongates. 
+    \item \textbf{3rd \& 4th Components (Transverse Divergence):} As a proposed secondary geometric response, the macroscopic optical divergence is treated as the spatial integral of the microscopic thermodynamic decay. As the wave loses energy to node friction, this loss of kinetic energy weakens the soliton's internal transverse holding tension. When integrated over macroscopic cosmic distances, this continuous structural yielding forces the bounding geometric ray paths to optically diverge. This macroscopic diverging lens effect broadens the apparent angular area of the source galaxy by a proportional factor of $(1 + z)^2$.
 \end{itemize}
 
-Combining the kinematic power drop $(1 + z)^{-2}$ (derived from the energy loss and time dilation) with the optical area magnification $(1 + z)^2$ yields a total apparent surface brightness dimming proportional to exactly $(1 + z)^{-4}$.
-
-By rooting the macroscopic optical divergence directly in the microscopic solid-state friction, the framework flawlessly satisfies the Tolman Surface Brightness Test \cite{Tolman_1930} through continuous visco-elastic dissipation, completely eliminating the need for a kinematic expansion of the underlying coordinate geometry, as the apparent spatial dilation is strictly a refractive optical illusion generated by the visco-elastic medium.
+If macroscopic source-envelope timing inherits the packet factor and if the transverse magnification closure yields an apparent area $\propto (1 + z)^2$, then a total apparent surface brightness dimming proportional to exactly $(1 + z)^{-4}$ follows, combining the kinematic power drop $(1 + z)^{-2}$ with the optical area magnification $(1 + z)^2$.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Fig21_PartIII_PhotonRelaxation.pdf}
-    \caption{\textbf{Visco-Elastic Volumetric Relaxation.} A propagating photon wave packet (soliton) dissipates active energy against the visco-elastic friction of the static SGF lattice. This thermodynamic decay is strictly governed by the exponential dissipation rate ($\Gamma_{\mathrm{D}}$), which physically defines the observational redshift parameter ($1+z$). Microscopically, this continuous loss of internal kinetic energy forces the wave to undergo simultaneous longitudinal elongation and vertical compression, weakening the soliton's transverse holding tension. Macroscopically, this structural yielding forces the bounding geometric ray paths to optically flare outward, causing the bulk medium to act as a continuous diverging lens. The geometric combination of the longitudinal and temporal stretching (kinematic power drop) with the transverse spread (optical divergence) strictly yields a total apparent surface brightness dimming of $(1+z)^{-4}$, completely satisfying the Tolman test without requiring a kinematically expanding spatial metric.}
+    \caption{\textbf{Proposed Geometric Completion of the Carrier-Relaxation Mechanism.} A propagating photon wave packet dissipates active energy against the visco-elastic friction of the static SGF lattice. Microscopically, continuous loss of internal kinetic energy alongside coherent-action preservation forces the wave to undergo longitudinal elongation. As a proposed secondary geometric closure, the macroscopic structural yielding forces the bounding geometric ray paths to optically flare outward, causing the bulk medium to act as a continuous diverging lens. The geometric combination of the longitudinal and temporal stretching (kinematic power drop) with the transverse spread (optical divergence) would strictly yield a total apparent surface brightness dimming of $(1+z)^{-4}$.}
 \label{fig:photon_relaxation}
 \end{figure}
 
-\section{The Geometric Mirror of Gravity}
-This $(1+z)^{-4}$ volumetric relaxation exposes a profound mathematical symmetry within the Tension Field Theory framework, linking the macroscopic fading of the cosmos directly to the local mechanics of gravity derived in \hyperref[part:two]{Part II}.
+\section{The Geometric Mirror of Gravity (An Interpretive Structural Analogy)}
+This $(1+z)^{-4}$ conditional volumetric relaxation presents an interpretive structural analogy linking the macroscopic fading of the cosmos to the local mechanics of gravity derived in \hyperref[part:two]{Part II}.
 
-In \hyperref[part:two]{Part II}, we established that local gravity induces a unitary lattice strain ($\alpha_{\mathrm{G}}$) that suppresses the kinematic energy of the vacuum. This imposes a double penalty on wave propagation (temporal damping and spatial damping). Because this spatial and temporal strain acts isotropically across the exact same four degrees of freedom, the effective optical inertia spikes by the fourth power:
+In \hyperref[part:two]{Part II}, we established that local gravity induces a unitary lattice strain ($\alpha_{\mathrm{G}}$) that suppresses the kinematic energy of the vacuum. Because this spatial and temporal strain acts isotropically across four relaxation factors, the effective optical inertia spikes by the fourth power:
 \begin{equation}
     \mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{(1-\alpha_{\mathrm{G}})^4}
 \end{equation}
 
-Furthermore, this four-dimensional impedance perfectly aligns with the $4\alpha_{\mathrm{G}}$ deflection angle of gravitational lensing derived in \hyperref[part:two]{Part II}. These macroscopic phenomena represent the exact same mechanical interaction operating in opposing states:
+Furthermore, this four-dimensional impedance mirrors the $4\alpha_{\mathrm{G}}$ deflection angle of gravitational lensing. While the numerical appearance of four in two independently derived formulas does not establish a common four-degree relaxation law, the analogy is profound:
 
 \begin{itemize}
-    \item \textbf{The Squeeze (Local Lensing):} When a wave passes a massive object, the local tension gradient compresses its optical inertia ($\mu_{\mathrm{eff}} \propto (1-\alpha_{\mathrm{G}})^{-4}$). The lattice actively fights the wave's propagation across all four degrees of freedom simultaneously, creating the steep $4\alpha_{\mathrm{G}}$ refractive steering.
-    \item \textbf{The Release (Cosmic Dimming):} As the wave travels through the baseline cosmic vacuum, it performs work against fundamental lattice hysteresis. Without a local mass to compress it, the wave packet isotropically relaxes across those exact same four degrees of freedom, resulting in the $(1+z)^{-4}$ Tolman surface brightness dropping.
+    \item \textbf{The Squeeze (Local Lensing):} When a wave passes a massive object, the local tension gradient compresses its optical inertia ($\mu_{\mathrm{eff}} \propto (1-\alpha_{\mathrm{G}})^{-4}$), creating the steep $4\alpha_{\mathrm{G}}$ refractive steering.
+    \item \textbf{The Release (Cosmic Dimming):} Under the proposed geometric closure, as the wave travels through the baseline cosmic vacuum, it performs work against fundamental lattice hysteresis. Without a local mass to compress it, the wave packet isotropically relaxes, resulting in the $(1+z)^{-4}$ Tolman surface brightness dropping.
 \end{itemize}
 
 \section{The Macroscopic Diverging Lens and the Angular Diameter Turnover}
 \label{sec:angular_diameter_turnover}
 
-In standard cosmology, the observation that the angular size of distant galaxies shrinks, reaches a minimum at $z \approx 1.5$, and then paradoxically grows larger at higher redshifts is heavily cited as proof of an expanding metric. Tension Field Theory (TFT) natively derives this exact turnover mathematically through solid-state optics.
+In standard cosmology, the standard FLRW angular-diameter relation exhibits a turnover at cosmological redshift $z \approx 1.5$.
 
-As established in \hyperref[sec:photonic_relaxation]{Section \ref*{sec:photonic_relaxation}}, the continuous volumetric relaxation of the wave packet forces the bulk medium of the cosmos to act as a macroscopic diverging lens. 
-
-In a purely static Euclidean space, angular size ($\theta$) is strictly the physical size of the galaxy ($S$) divided by the coordinate distance ($d_{\mathrm{coord}}$). However, due to the continuous transverse optical magnification induced by this lattice damping, the observed angular size in TFT is magnified by $(1+z)$:
+If the continuous volumetric relaxation of the wave packet forces the bulk medium of the cosmos to act as a macroscopic diverging lens, TFT natively derives this exact turnover mathematically through solid-state optics. In a purely static Euclidean space, angular size ($\theta$) is strictly the physical size of the galaxy ($S$) divided by the coordinate distance ($d_{\mathrm{coord}}$). However, due to the conditional transverse optical magnification induced by this vacuum relaxation, the observed angular size in TFT is magnified by $(1+z)$:
 \begin{equation}
     \theta_{\mathrm{TFT}} = \left( \frac{S}{d_{\mathrm{coord}}} \right) (1+z)
 \end{equation}
 
-Substituting the logarithmic visco-elastic coordinate distance ($d_{\mathrm{coord}} = \frac{c_{\mathrm{E}}}{H_0} \ln(1+z)$) derived in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} yields the complete TFT Angular Diameter function:
+Substituting the logarithmic visco-elastic coordinate distance ($d_{\mathrm{coord}} = R_{\mathrm{U}} \ln(1+z) = \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}^{(\mathrm{cal})}} \ln(1+z)$) derived in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} yields the complete TFT Angular Diameter function:
 \begin{equation}
-    \theta_{\mathrm{TFT}} = \frac{S \cdot H_0}{c_{\mathrm{E}}} \left[ \frac{1+z}{\ln(1+z)} \right]
+    \theta_{\mathrm{TFT}} = \frac{S \cdot \Gamma_{\mathrm{D}}^{(\mathrm{cal})}}{c_{\mathrm{E}}} \left[ \frac{1+z}{\ln(1+z)} \right]
 \end{equation}
 
 To determine the minimum angular size, we take the derivative with respect to redshift ($z$) and set it to zero:
@@ -152,18 +160,27 @@ To determine the minimum angular size, we take the derivative with respect to re
 \end{equation}
 
 \vspace{0.5em}
-\noindent\textbf{Conclusion:} Without invoking an expanding geometry, the visco-elastic mechanics of TFT natively dictate that the angular size of galaxies will shrink logarithmically before reaching a mathematical minimum at $z \approx 1.718$, after which the transverse optical magnification overpowers the distance, causing the image to physically diverge and grow larger. This derives the exact observational turnover claimed by $\Lambda$CDM using only solid-state optics.
+\noindent\textbf{Conclusion:} Under the proposed transverse-relaxation closure, TFT predicts that the angular size of galaxies will shrink logarithmically before reaching a mathematical minimum at $z \approx 1.718$, after which the transverse optical magnification overpowers the distance, causing the image to physically diverge and grow larger. This offers a strictly solid-state optical explanation for the observational turnover claimed by $\Lambda$CDM.
 
-\section{Validation: The Tolman Surface Brightness Test}
-Standard cosmology utilizes the Tolman Surface Brightness Test---which observes that distant galaxies dim precisely by a factor of $(1+z)^{-4}$---as its ultimate proof of a physically expanding universe.
+\section{Conditional Tolman Surface-Brightness Correspondence}
+In an expanding FLRW framework, the Tolman relation predicts a bolometric surface-brightness scaling proportional to $(1+z)^{-4}$.
 
-However, as demonstrated by the combined kinematic power drop and macroscopic transverse divergence, this observation is not an artifact of an expanding metric. It is the strict geometric proof that the photon wave packet undergoes isotropic volumetric relaxation as it dissipates energy into the vacuum. The Tolman dimming of the cosmos is simply the exact macroscopic, thermodynamic mirror of local gravitational impedance.
+However, as demonstrated by the combined kinematic power drop and proposed macroscopic transverse divergence, this observation need not be an artifact of an expanding metric. If the wave packet undergoes isotropic volumetric relaxation as it dissipates energy into the vacuum, the Tolman dimming of the cosmos is achieved purely as the exact macroscopic, thermodynamic mirror of local gravitational impedance.
 
-\section{The Relativity of the Viscous Cosmic Horizon and Topological Dissolution}
-Because the vacuum lattice is a continuous, isotropic medium, the apparent ``wall'' of microwave radiation arises purely from the finite propagation distance over which a photon's energy is gradually dissipated by lattice hysteresis.
+\section{Threshold Assimilation into the Thermal Reservoir}
+Because the vacuum lattice is a continuous, isotropic medium, the exponential transport law does not drive the coherent carrier to zero energy at any finite universal distance. Instead, the apparent ``wall'' of microwave radiation is modeled as Threshold Assimilation.
 
-Over a propagation distance of approximately $13.39$ billion light-years (See \hyperref[sec:euclidean_acoustic_resolution]{Section~\ref*{sec:euclidean_acoustic_resolution}}) the lattice damping continuously bleeds an incoming photon's coherent optical energy into the ambient phonon bath. As the photon loses energy, its wavelength physically elongates to conserve its topological cycle count ($N$).
+As the lattice damping continuously bleeds an incoming photon's coherent optical energy into the ambient phonon bath, the photon's frequency mechanically drops. The CMB is modeled as an ambient broadband thermal reservoir characterized by an effective coherence-loss frequency ($\omega_{\mathrm{CMB}}^{(\mathrm{eff})}$). The assimilation boundary is not a static Euclidean radius; it is defined as a frequency-dependent threshold.
 
-When the photon's ordered transverse energy degrades to match the ambient equilibrium temperature of $2.725$ K (the baseline longitudinal phonon vibration of the SGF), the transverse amplitude of the wave packet drops entirely below the threshold of the random longitudinal thermal vibration of the lattice itself. The topological knot physically unties. The photon does not travel forever; its coherent structural shape completely dissolves into the thermal noise floor. This strict mechanical threshold defines the effective Viscous Cosmic Horizon for electromagnetic causality.
+Terminal assimilation is defined to occur exactly when the photon's redshifted carrier frequency drops to match this effective thermal coherence threshold:
+\begin{equation}
+    \omega(r_{\mathrm{assim}}) = \omega_{\mathrm{CMB}}^{(\mathrm{eff})}
+\end{equation}
+Using the frequency distance law, the corresponding assimilation radius depends strictly on the emission frequency of the original photon:
+\begin{equation}
+    r_{\mathrm{assim}} = R_{\mathrm{U}} \ln \left( \frac{\omega_{\mathrm{emit}}}{\omega_{\mathrm{CMB}}^{(\mathrm{eff})}} \right)
+\end{equation}
 
-Consequently, the microwave background does not correspond to a unique cosmological boundary. If a theoretical detector were placed $13.39$ billion light-years away---exactly on our current Viscous Cosmic Horizon---that detector would not see a wall of primordial fire. Instead, looking back at us, that detector would perceive our local galactic neighborhood as its own $2.725$ K Viscous Cosmic Horizon. In this sense, the CMB is spatially continuous, while the apparent horizon associated with it is strictly a local observational limit rather than a universal emission surface.
+For standard optical photons, the emission frequency is roughly $10^3$ to $10^4$ times higher than the CMB frequency. Consequently, an optical photon must travel a distance of approximately $7$ to $9$ characteristic relaxation lengths ($R_{\mathrm{U}}$), utilizing a representative effective CMB-band threshold. Because $\omega_{\mathrm{CMB}}^{(\mathrm{eff})}$ is not yet microscopically derived, this places the effective optical-to-thermal assimilation scale at roughly $\sim 10^{27}\text{ m}$.
+
+When the photon reaches this threshold, under the threshold-assimilation closure, the coherent transverse state loses its independent identity, and its remaining energy enters accessible reservoir modes. Within the TFT CMB-reservoir interpretation, this permits a spatially continuous CMB rather than requiring the assimilation threshold to be a unique geometric emission surface.

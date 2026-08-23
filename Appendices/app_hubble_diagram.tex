@@ -2,37 +2,250 @@
 \label{app:hubble_diagram}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Abstract:} Standard cosmology evaluates the dimming of distant supernovae using a complex integral of the expansion history containing the Dark Energy density parameter ($\Omega_{\Lambda}$). Tension Field Theory derives a mathematically degenerate curve strictly from the mechanics of visco-elastic damping, without invoking negative pressure.
+\noindent\textbf{Abstract:} Standard cosmology evaluates the luminosity distance of distant supernovae through the expansion history of the FLRW metric. Tension Field Theory instead derives a nonlinear coordinate-distance law from coherent-action-preserving visco-elastic frequency relaxation. Under an additional macroscopic source-envelope timing closure, this yields a conditional TFT luminosity-distance relation and a directly testable non-expanding Hubble diagram. This appendix also states the Euclidean acoustic-projection closure used in Part III.
 
 \section{The Two Factors of Viscous Luminosity Distance ($d_{\mathrm{L}}$)}
-While \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}} derives the raw kinematic coordinate distance, the observational Distance Modulus requires integrating the temporal broadening factor. The luminosity distance in TFT is therefore governed by two mechanical phenomena:
+
+As derived in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}, the general TFT redshift law is
+\begin{equation}
+    \ln(1+z)
+    =
+    \int_{\mathrm{path}}
+    \frac{\Gamma_{\mathrm{D}}(\ell)}
+    {v_{\mathrm{ray}}\!\left[\omega(\ell),\alpha_{\mathrm{G}}(\ell)\right]}
+    \,\mathrm{d}\ell .
+\end{equation}
+
+In the weak-loading, constant-rate Euclidean limit,
+\begin{equation}
+    \alpha_{\mathrm{G}}\to0,
+    \qquad
+    v_{\mathrm{ray}}\simeq c_{\mathrm{E}},
+    \qquad
+    \Gamma_{\mathrm{D}}\simeq\Gamma_{\mathrm{D}}^{(\mathrm{cal})},
+\end{equation}
+the coordinate distance becomes
+\begin{equation}
+    d_{\mathrm{coord}}
+    =
+    \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}^{(\mathrm{cal})}}
+    \ln(1+z).
+\end{equation}
+
+Using the empirical low-redshift calibration
+\begin{equation}
+    \Gamma_{\mathrm{D}}^{(\mathrm{cal})}
+    =
+    H_0^{(\mathrm{obs})},
+\end{equation}
+this may be written
+\begin{equation}
+    d_{\mathrm{coord}}
+    =
+    \frac{c_{\mathrm{E}}}{H_0^{(\mathrm{obs})}}
+    \ln(1+z).
+\end{equation}
+
+The observational luminosity distance requires a second transport statement. The two relevant factors are:
 
 \begin{itemize}
-    \item \textbf{Factor A (Spatial Damping):} As established, the coordinate distance of a wave propagating through a medium with Lattice Damping ($\Gamma_{\mathrm{D}} \equiv H_0$) follows a logarithmic decay law: 
+    \item \textbf{Factor A (Coherent Energy Relaxation):} Coherent-action preservation gives
     \begin{equation}
-        d_{\mathrm{coord}} = \frac{c_{\mathrm{E}}}{H_0} \ln(1+z)
+        \frac{E_{\mathrm{obs}}}{E_{\mathrm{emit}}}
+        =
+        \frac{\omega_{\mathrm{obs}}}{\omega_{\mathrm{emit}}}
+        =
+        \frac{1}{1+z}.
     \end{equation}
-    \item \textbf{Factor B (Kinematic Power Drop):} The observed flux of the wave packet is diminished by two compounding visco-elastic factors: the fractional energy loss of the wave $(1+z)$ derived in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}}, and the temporal dilation of the wave's arrival rate $(1+z)$ derived in \hyperref[app:time_dilation]{Appendix \ref*{app:time_dilation}}. Together, the observed instantaneous power drops by exactly $(1+z)^2$. Because luminosity distance operates on an inverse-square relation ($F \propto 1/d_{\mathrm{L}}^2$), this $(1+z)^2$ kinematic power drop scales the base coordinate distance by a multiplicative factor of $(1+z)$.
+
+    \item \textbf{Factor B (Conditional Macroscopic Arrival-Rate Dilation):} For a fixed-cycle coherent packet,
+    \begin{equation}
+        \Delta t_{\mathrm{pkt,obs}}
+        =
+        (1+z)\Delta t_{\mathrm{pkt,emit}}.
+    \end{equation}
+    As emphasized in \hyperref[chap:cosmic_redshift]{Chapter~\ref*{chap:cosmic_redshift}}, this packet result does not automatically establish the dilation of an arbitrary astronomical source envelope. If the macroscopic source-to-envelope transport closure inherits the same $(1+z)$ arrival-rate factor, then the received bolometric power satisfies
+    \begin{equation}
+        \frac{P_{\mathrm{obs}}}{P_{\mathrm{emit}}}
+        =
+        \frac{1}{(1+z)^2}.
+    \end{equation}
 \end{itemize}
 
-Combining spatial damping and temporal broadening yields the exact TFT Luminosity Distance:
+Under this macroscopic envelope-dilation closure, the inverse-square flux relation converts the two power factors into one multiplicative factor of $(1+z)$ in the effective luminosity distance:
 \begin{equation}
-    d_{\mathrm{L(TFT)}} = \frac{c_{\mathrm{E}}}{H_0} (1+z)\ln(1+z)
+    d_{\mathrm{L(TFT)}}
+    =
+    d_{\mathrm{coord}}(1+z).
 \end{equation}
+
+Therefore,
+\begin{equation}
+    d_{\mathrm{L(TFT)}}
+    =
+    \frac{c_{\mathrm{E}}}
+    {\Gamma_{\mathrm{D}}^{(\mathrm{cal})}}
+    (1+z)\ln(1+z),
+\end{equation}
+or, using the present empirical calibration,
+\begin{equation}
+    d_{\mathrm{L(TFT)}}
+    =
+    \frac{c_{\mathrm{E}}}
+    {H_0^{(\mathrm{obs})}}
+    (1+z)\ln(1+z).
+\end{equation}
+
+This luminosity-distance law is therefore a conditional TFT prediction: the coordinate-distance component follows from the coherent-relaxation sector, whereas the additional $(1+z)$ factor requires completion of the macroscopic source-envelope transport law.
 
 \section{The Distance Modulus}
-Astronomers measure the distance modulus ($\mu$), relating apparent brightness ($m$) to absolute magnitude ($M$) via the formula $\mu = 5\log_{10}(d_{\mathrm{L}}) + 25$. Substituting the TFT luminosity distance provides the precise, testable alternative to the $\Lambda$CDM model:
+
+Astronomical observations commonly express luminosity distance through the distance modulus,
 \begin{equation}
-    \mu_{\mathrm{TFT}} = 5\log_{10} \left[ \frac{c_{\mathrm{E}}}{H_0} (1+z)\ln(1+z) \right] + 25
+    \mu = m-M
+    =
+    5\log_{10}
+    \left(
+        \frac{d_{\mathrm{L}}}{\mathrm{Mpc}}
+    \right)
+    +25.
 \end{equation}
 
-\section{Taylor Expansion and the Illusion of Acceleration}
-To demonstrate why this logarithmic friction mimics Dark Energy at moderate redshifts ($z < 1$), we apply the Taylor series expansion to the natural logarithm ($\ln(1+z) \approx z - \frac{z^2}{2}$):
+Substituting the conditional TFT luminosity distance gives
 \begin{equation}
-    d_{\mathrm{L(TFT)}} \approx \frac{c_{\mathrm{E}}}{H_0} (1+z)\left( z - \frac{z^2}{2} \right) \approx \frac{c_{\mathrm{E}}}{H_0} \left( z + \frac{z^2}{2} \right)
+    \mu_{\mathrm{TFT}}
+    =
+    5\log_{10}
+    \left[
+        \frac{c_{\mathrm{E}}}
+        {H_0^{(\mathrm{obs})}\,\mathrm{Mpc}}
+        (1+z)\ln(1+z)
+    \right]
+    +25.
 \end{equation}
 
-\vspace{0.5em}
-\noindent\textit{(Note: Higher-order terms are truncated for approximation).}
+This expression defines the TFT Hubble-diagram prediction to be tested directly against supernova distance-modulus data under the stated constant-rate and macroscopic envelope-dilation closures.
 
-In standard cosmology, a positive second-order term ($+\frac{z^2}{2}$) in the luminosity distance is strictly interpreted as kinematic acceleration. In TFT, this positive term emerges naturally and inevitably from the algebraic expansion of $(1+z)\ln(1+z)$. The universe is not accelerating; the mathematical signature of Dark Energy is fully explained by the geometry of logarithmic attenuation.
+\section{Taylor Expansion and Cosmographic Comparison}
+
+The exact nonlinear factor appearing in the conditional TFT luminosity distance has the Taylor expansion
+\begin{equation}
+    (1+z)\ln(1+z)
+    =
+    z
+    +
+    \frac{z^2}{2}
+    -
+    \frac{z^3}{6}
+    +
+    \frac{z^4}{12}
+    +\mathcal{O}(z^5).
+\end{equation}
+
+Therefore,
+\begin{equation}
+    d_{\mathrm{L(TFT)}}
+    =
+    \frac{c_{\mathrm{E}}}{H_0^{(\mathrm{obs})}}
+    \left[
+        z
+        +
+        \frac{z^2}{2}
+        -
+        \frac{z^3}{6}
+        +
+        \mathcal{O}(z^4)
+    \right].
+\end{equation}
+
+At low redshift, the leading term recovers the linear Hubble relation. For comparison, the standard cosmographic luminosity-distance expansion begins as
+\begin{equation}
+    d_{\mathrm{L}}
+    \simeq
+    \frac{c_{\mathrm{E}}}{H_0}
+    \left[
+        z
+        +
+        \frac{1-q_0}{2}z^2
+        +\cdots
+    \right].
+\end{equation}
+
+Matching only the quadratic coefficient of the TFT expansion gives
+\begin{equation}
+    \frac{1-q_0}{2}
+    =
+    \frac{1}{2}
+    \qquad\Longrightarrow\qquad
+    q_0=0.
+\end{equation}
+
+Consequently, the positive $\frac{1}{2}z^2$ term is not by itself a mathematical derivation of the negative-$q_0$ acceleration inferred within standard cosmography. TFT instead proposes a distinct non-expanding nonlinear distance law. Its ability to reproduce the observed supernova Hubble diagram must therefore be assessed by fitting the complete expression
+\begin{equation}
+    d_{\mathrm{L(TFT)}}
+    =
+    \frac{c_{\mathrm{E}}}{H_0^{(\mathrm{obs})}}
+    (1+z)\ln(1+z)
+\end{equation}
+directly to the observational data rather than identifying individual Taylor coefficients with FLRW kinematic parameters.
+
+\section{Euclidean Acoustic Projection Closure}
+\label{sec:euclidean_acoustic_projection_closure}
+
+The characteristic Viscoelastic Vacuum Relaxation length is
+\begin{equation}
+    R_{\mathrm{U}}
+    =
+    \frac{c_{\mathrm{E}}}
+    {\Gamma_{\mathrm{D}}^{(\mathrm{cal})}}.
+\end{equation}
+
+As established in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}, $R_{\mathrm{U}}$ is the characteristic one-$e$-fold coherent-relaxation length. It is not a universal photon stopping radius, and the frequency-dependent CMB assimilation threshold may occur at substantially larger distances.
+
+For the Euclidean reinterpretation of the observed CMB acoustic angular scale developed in \hyperref[chap:cosmological_anomalies]{Chapter~\ref*{chap:cosmological_anomalies}}, TFT introduces the additional constitutive projection closure
+\begin{equation}
+    D_{\mathrm{proj}}
+    \equiv
+    R_{\mathrm{U}}.
+\end{equation}
+
+This identification is presently a cosmological geometric closure rather than a microscopic consequence of the photon-relaxation derivation. Under this closure, the effective TFT acoustic scale associated with an observed angular scale $\theta_*$ is
+\begin{equation}
+    r_{\mathrm{s(TFT)}}
+    =
+    D_{\mathrm{proj}}\theta_*
+    =
+    R_{\mathrm{U}}\theta_*.
+\end{equation}
+
+Using
+\begin{equation}
+    R_{\mathrm{U}}
+    \approx
+    4104.498\ \mathrm{Mpc},
+    \qquad
+    \theta_*
+    \approx
+    0.01041,
+\end{equation}
+gives
+\begin{equation}
+    r_{\mathrm{s(TFT)}}
+    \approx
+    42.73\ \mathrm{Mpc}.
+\end{equation}
+
+The dimensional consistency is immediate:
+\begin{equation}
+    [D_{\mathrm{proj}}]
+    =
+    [R_{\mathrm{U}}]
+    =
+    [r_{\mathrm{s(TFT)}}]
+    =
+    \mathrm{m},
+    \qquad
+    [\theta_*]=1.
+\end{equation}
+
+The numerical $42.73$ Mpc scale is therefore a well-defined consequence of the proposed closure $D_{\mathrm{proj}}=R_{\mathrm{U}}$, but it is not yet an independent parameter-free prediction. Closing this branch requires a microscopic or percolative derivation showing why the relevant CMB projection distance must coincide with the one-$e$-fold vacuum-relaxation scale.

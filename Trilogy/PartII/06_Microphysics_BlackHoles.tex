@@ -130,10 +130,11 @@ Standard physics struggles to explain why the entropy of a Black Hole scales wit
 Standard black hole thermodynamics historically conflated physical capacity (Entropy) with the actual localized mass footprint (Occupancy), and further conflated both with the underlying topological record (Information). TFT structurally separates them based on the scale of the lattice:
 
 \begin{itemize}
-    \item \textbf{Geometric Capacity ($S_{\mathrm{geo}}$):} This measures the maximum physical capacity of the boundary layer to hold segregated baryonic defects. Because these defects require the interstitial voids of the active vacuum, the physical shell has an absolute minimum thickness of one FCC node ($r_{\mathrm{D}}$). Dividing the macroscopic boundary volume by the volume of a single FCC node yields the absolute geometric capacity limit:
+    \item \textbf{Geometric Capacity ($S_{\mathrm{geo}}/k_{\mathrm{B}}$):} This measures the maximum physical capacity of the boundary layer to hold segregated baryonic defects. Because these defects require the interstitial voids of the active vacuum, the physical shell has an absolute minimum thickness of one FCC node ($r_{\mathrm{D}}$). Dividing the macroscopic boundary volume by the volume of a single FCC node yields the absolute dimensionless geometric capacity limit:
     \begin{equation}
-        S_{\mathrm{geo}} = k_{\mathrm{B}} \frac{4\pi R_{\mathrm{QG}}^2}{r_{\mathrm{D}}^2}
+        \frac{S_{\mathrm{geo}}}{k_{\mathrm{B}}} = \frac{4\pi R_{\mathrm{QG}}^2}{r_{\mathrm{D}}^2}
     \end{equation}
+    For comparison with entropy-valued quantities, TFT denotes the corresponding Boltzmann-scaled capacity by $S_{\mathrm{geo}} \equiv k_{\mathrm{B}} (4\pi R_{\mathrm{QG}}^2 / r_{\mathrm{D}}^2)$. This is a geometric slot-capacity measure, not by itself a thermodynamic entropy.
     
     \item \textbf{Information Capacity Limit ($N_{\mathrm{QG}}$):} Information is the dimensionless topological strain footprint that the segregated mass imposes upon the underlying phase-locked SC core. Because every fundamental SC tile on the saturated boundary can sustain a maximum of $2\pi$ radians of longitudinal strain, the absolute informational capacity of the core scales strictly with the SC substrate length ($\ell_{\mathrm{S}}$):
     \begin{equation}
@@ -145,13 +146,13 @@ Standard black hole thermodynamics historically conflated physical capacity (Ent
 
 Information is never destroyed, nor is it swallowed into an inaccessible singular volume. 100\% of the mass, energy, and structural debris of everything that has ever fallen into the Black Hole is mechanically trapped on the phase boundary as a topological condensate.
 
-However, by rigorously deriving these limits in \hyperref[app:information_paradox]{Appendix \ref*{app:information_paradox}}, TFT demonstrates that standard physics evaluates the $R^2$ geometric capacity of an empty boundary, not the actual $R^1$ physical occupancy of the mass. As a Black Hole expands, it generates structural capacity ($R^2$) exponentially faster than it accumulates inertial mass ($R^1$).
+However, by rigorously deriving these limits in \hyperref[app:information_paradox]{Appendix \ref*{app:information_paradox}}, TFT interprets the $R^2$ area scaling as a boundary-capacity scale rather than the actual occupancy of the structural information ledger ($R^1$). As a Black Hole expands, it generates structural capacity ($R^2$) exponentially faster than it accumulates inertial mass ($R^1$).
 
-Consequently, the physical matter dilutes across the Event Horizon ($\Phi_{\mathrm{kin}} \propto R^{-1}$), while its true coherent information footprint condenses to a singularity of phase ($\Phi_{\mathrm{info}} \propto R^{-4}$). The standard Bekenstein--Hawking area law ($S_{\mathrm{holo}}$) \cite{Bekenstein_1973, Hawking_1975} generated a paradox by mistakenly assuming this exponentially expanding, overwhelmingly empty ledger was operating at 100\% thermodynamic capacity.
+Consequently, the physical matter dilutes across the Event Horizon ($\Phi_{\mathrm{kin}} \propto R^{-1}$), while its true coherent information footprint condenses to a singularity of phase ($\Phi_{\mathrm{info}} \propto R^{-4}$). TFT interprets the standard Bekenstein--Hawking area law ($S_{\mathrm{holo}}$) \cite{Bekenstein_1973, Hawking_1975} as a maximal boundary-state measure rather than as the actual occupancy of the TFT strain ledger.
 
 \subsection{Numerical Proof and the Vacuum Safety Margin}
 
-We can quantify the magnitude of this historical dimensional discrepancy by comparing the absolute Geometric Capacity of the FCC Soft Floor against the maximum Information Capacity on the SC Hard Floor for a standard stellar-mass Black Hole ($R_{\mathrm{QG}} \approx 10^4$ m):
+We can quantify the magnitude of this dimensional distinction by comparing the absolute Geometric Capacity of the FCC Soft Floor against the maximum Information Capacity on the SC Hard Floor for a standard stellar-mass Black Hole ($R_{\mathrm{QG}} \approx 10^4$ m):
 
 \begin{itemize}
     \item \textbf{The Information Capacity ($S_{\mathrm{holo}}/k_{\mathrm{B}}$):} Utilizing the SC substrate scale ($\ell_{\mathrm{S}} \approx 1.6163 \times 10^{-35}$ m), the standard equation yields $\approx 1.20 \times 10^{78}$ nodes of topological strain capacity.
@@ -163,7 +164,7 @@ The ratio between the maximal Information Capacity and the maximal Geometric Cap
     \text{Ratio} = \frac{1}{4}\left(\frac{r_{\mathrm{D}}}{\ell_{\mathrm{S}}}\right)^2 \approx 10^{17}
 \end{equation}
 
-Therefore, standard models do not miscalculate the scale of the topological ledger; rather, they erroneously attribute the $10^{78}$ node capacity of the SC underlying continuum to the physical FCC boundary shell, which is fundamentally limited to $10^{61}$ physical capacity states. This 17-order-of-magnitude distinction precisely matches the Vacuum Safety Margin ($\rho_{\mathrm{G}} / \rho_{\mathrm{D}}$) required for lattice stability. A singular physical defect state on the active Soft Floor necessitates a highly stable structural strain capacity footprint spanning $\approx 10^{17}$ fundamental tiles on the phase-locked SC Substrate.
+Therefore, standard models isolate the correct topological ledger metric, but attribute the $10^{78}$ node capacity of the SC underlying continuum to the physical FCC boundary shell, which is fundamentally limited to $10^{61}$ physical capacity states. This 17-order-of-magnitude distinction precisely matches the Vacuum Safety Margin ($\rho_{\mathrm{G}} / \rho_{\mathrm{D}}$) required for lattice stability. A singular physical defect state on the active Soft Floor necessitates a highly stable structural strain capacity footprint spanning $\approx 10^{17}$ fundamental tiles on the phase-locked SC Substrate.
 
 \subsection{The Topological Invariant and Absolute Unitarity}
 

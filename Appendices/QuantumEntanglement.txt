@@ -1,0 +1,979 @@
+\chapter{The Mechanical Topology of Entanglement and the Bell Correlation Law}
+\label{app:entanglement}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\noindent\textbf{Abstract:} Standard quantum mechanics represents entanglement through a nonseparable state and correctly predicts Bell--CHSH correlations, but it does not assign those correlations a substrate-level mechanical mechanism. Tension Field Theory (TFT) interprets the corresponding pair state through the Vertical Tension-Column architecture: two localized Soft-Floor defects remain referenced to a common phase-locked Hard-Floor constraint through a residual relational strain connection. This appendix develops the minimum mechanical singlet closure compatible with that architecture. The pair is first shown to form a constrained, nonseparable torsional state. A purely Bell-local predetermined-orientation model is then tested and rejected because it yields a linear angular correlation rather than the singlet law. The analyzer boundary problem instead resolves into the orthogonal sum and difference channels of the two analyzer axes. Under the harmonic-action closure of the active lattice and an unbiased stationary detector-threshold phase, these channels carry the normalized modal-action fractions $\cos^2(\theta_{\mathrm{AB}}/2)$ and $\sin^2(\theta_{\mathrm{AB}}/2)$, yielding the singlet joint probabilities, the correlation $E_{\mathrm{Bell}}=-\cos\theta_{\mathrm{AB}}$, and the CHSH maximum $2\sqrt{2}$. The Hard Floor is treated throughout as a zero-delay constraint and information-memory sector rather than as an ordinary finite-energy propagating mode. Measurement energy is supplied and dissipated locally in the active detector system; decoherence removes active access to the pair constraint without requiring fracture or erasure of the underlying Hard-Floor record. The detailed finite dynamics of the active-to-latent interface remain a separate microscopic-completion problem.
+
+\section{Constitutive Scope and Existing TFT Inputs}
+\label{sec:entanglement_scope}
+
+The derivation developed here uses only the vertical architecture already assigned to the Spacetime Gravitational Floor (SGF). The observable State-I vacuum is the finite-inertia FCC Soft Floor, while the State-0 Hard Floor is the phase-locked SC substrate. The two sectors perform different mechanical functions.
+
+The Soft Floor supports finite-energy active propagation governed by the finite dynamic speed $c_P$, with unstrained limit $c_P=c_{\mathrm{E}}$. The Hard Floor instead approaches the singular phase-locked constraint limit
+\begin{equation}
+    \mu_{\mathrm{S}} \rightarrow 0,
+\end{equation}
+\begin{equation}
+    K_{\mathrm{S}} \rightarrow \infty,
+\end{equation}
+and is represented by the longitudinal-connectivity limit
+\begin{equation}
+    \boxed{c_{\mathrm{S}} \rightarrow \infty.}
+    \label{eq:entanglement_hardfloor_limit}
+\end{equation}
+The quantity $K_{\mathrm{S}}$ is the incremental rigidity of the phase-locked substrate, whereas the finite yield-pressure scale $\tau_{\mathrm{S}}$ retains its separate constitutive meaning. Equation~\eqref{eq:entanglement_hardfloor_limit} therefore denotes zero-delay constraint equilibration through the connected Hard Floor; it is not interpreted as an independently propagating finite-energy acoustic branch.
+
+The scale-depth label $Z$ is used only to distinguish the active Soft-Floor endpoint from its deeper Hard-Floor reference. It is not treated in this appendix as an additional ordinary Euclidean spatial coordinate. The detailed finite-inertia dynamics that may exist between the active endpoint and the ideal Hard-Floor constraint are deliberately not postulated here.
+
+For the pair-creation branch considered below, an entangled pair is represented by two localized Soft-Floor torsional defects, denoted A and B, with corresponding Hard-Floor anchors $g_{\mathrm{A}}$ and $g_{\mathrm{B}}$. Their common creation history leaves a residual relational strain configuration connecting the two anchor records. This configuration is the mechanical content of the Goalpost Topology.
+
+The objective of the present appendix is restricted to the ideal singlet branch. It must determine whether this topology can reproduce the experimentally required analyzer-angle correlation without inserting that correlation as a postulate.
+
+\section{The Goalpost Topology and the Mechanical Singlet Constraint}
+\label{sec:entanglement_goalpost}
+
+Let the localized torsional orientations of the two endpoint defects be represented by the axial generalized coordinates
+\begin{equation}
+    \boldsymbol{\Theta}_{\mathrm{A}},
+    \qquad
+    \boldsymbol{\Theta}_{\mathrm{B}}.
+\end{equation}
+For a singlet-like pair with zero total torsional loading, the residual Hard-Floor relation imposes the compatibility condition
+\begin{equation}
+    \boxed{
+    \boldsymbol{\Theta}_{\mathrm{A}}
+    +
+    \boldsymbol{\Theta}_{\mathrm{B}}
+    =
+    \mathbf{0}.
+    }
+    \label{eq:entanglement_vector_singlet_constraint}
+\end{equation}
+Along any common selected axis this reduces to
+\begin{equation}
+    \Theta_{\mathrm{A}}+\Theta_{\mathrm{B}}=0.
+    \label{eq:entanglement_scalar_singlet_constraint}
+\end{equation}
+
+Equation~\eqref{eq:entanglement_vector_singlet_constraint} has an immediate mechanical consequence. The admissible pair state does not occupy the unrestricted product of two independent endpoint configuration spaces. Instead,
+\begin{equation}
+    \mathcal{Q}_{\mathrm{ent}}
+    =
+    \left\{
+    \left(
+    \boldsymbol{\Theta}_{\mathrm{A}},
+    \boldsymbol{\Theta}_{\mathrm{B}}
+    \right)
+    \;\middle|\;
+    \boldsymbol{\Theta}_{\mathrm{A}}
+    +
+    \boldsymbol{\Theta}_{\mathrm{B}}
+    =
+    \mathbf{0}
+    \right\}.
+    \label{eq:entanglement_constrained_configuration_space}
+\end{equation}
+Thus the two Soft-Floor endpoints are distinct localized manifestations of one constrained torsional state. In this precise sense, the Goalpost state is mechanically nonseparable.
+
+It is important, however, not to confuse nonseparability with a predetermined pair of opposite classical vectors. Equation~\eqref{eq:entanglement_vector_singlet_constraint} constrains the allowed pair state, but it does not by itself determine the statistics observed when the two endpoints are interrogated along different analyzer axes. That distinction is tested next.
+
+\section{Failure of Bell-Local Predetermined Readout}
+\label{sec:entanglement_local_nogo}
+
+Let $\hat{\mathbf{n}}_{\mathrm{A}}$ and $\hat{\mathbf{n}}_{\mathrm{B}}$ denote the unit analyzer axes at the two detectors, and define their relative angle by
+\begin{equation}
+    \boxed{
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    \cdot
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    =
+    \cos\theta_{\mathrm{AB}},
+    \qquad
+    0\leq\theta_{\mathrm{AB}}\leq\pi.
+    }
+    \label{eq:entanglement_analyzer_angle}
+\end{equation}
+
+Before constructing the shared boundary response, consider the simplest Bell-local mechanical interpretation. Let $\hat{\mathbf{u}}$ be an isotropically distributed predetermined torsional direction, with the second endpoint carrying the opposite direction. A local threshold readout would then assign the binary outcomes
+\begin{equation}
+    s_{\mathrm{A}}
+    =
+    \operatorname{sgn}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    \cdot
+    \hat{\mathbf{u}}
+    \right),
+    \label{eq:entanglement_local_A}
+\end{equation}
+\begin{equation}
+    s_{\mathrm{B}}
+    =
+    -
+    \operatorname{sgn}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \cdot
+    \hat{\mathbf{u}}
+    \right),
+    \label{eq:entanglement_local_B}
+\end{equation}
+where
+\begin{equation}
+    s_{\mathrm{A}},s_{\mathrm{B}}
+    \in
+    \{-1,+1\}.
+\end{equation}
+
+For isotropically distributed $\hat{\mathbf{u}}$, the two hemisphere classifications disagree over the fractional solid angle $\theta_{\mathrm{AB}}/\pi$ and agree over the complementary fraction. The resulting correlation is therefore
+\begin{equation}
+    \boxed{
+    E_{\mathrm{local}}(\theta_{\mathrm{AB}})
+    =
+    -1+
+    \frac{2\theta_{\mathrm{AB}}}{\pi}.
+    }
+    \label{eq:entanglement_local_correlation}
+\end{equation}
+This model correctly gives perfect anticorrelation at $\theta_{\mathrm{AB}}=0$, zero correlation at $\theta_{\mathrm{AB}}=\pi/2$, and perfect positive correlation at $\theta_{\mathrm{AB}}=\pi$. It nevertheless fails at intermediate angles. For example,
+\begin{equation}
+    E_{\mathrm{local}}
+    \left(
+    \frac{\pi}{4}
+    \right)
+    =
+    -\frac{1}{2},
+\end{equation}
+whereas the singlet correlation requires
+\begin{equation}
+    -\cos
+    \left(
+    \frac{\pi}{4}
+    \right)
+    =
+    -\frac{1}{\sqrt{2}}.
+\end{equation}
+
+The minimal predetermined-orientation interpretation is therefore rejected. More generally, a Bell-local factorization of the form
+\begin{equation}
+    P
+    \left(
+    s_{\mathrm{A}},s_{\mathrm{B}}
+    \middle|
+    \hat{\mathbf{n}}_{\mathrm{A}},
+    \hat{\mathbf{n}}_{\mathrm{B}},
+    \lambda
+    \right)
+    =
+    P
+    \left(
+    s_{\mathrm{A}}
+    \middle|
+    \hat{\mathbf{n}}_{\mathrm{A}},
+    \lambda
+    \right)
+    P
+    \left(
+    s_{\mathrm{B}}
+    \middle|
+    \hat{\mathbf{n}}_{\mathrm{B}},
+    \lambda
+    \right)
+    \label{eq:entanglement_bell_factorization}
+\end{equation}
+cannot reproduce the singlet Bell correlations under the usual Bell assumptions. TFT therefore cannot treat the residual tether as a passive record of two independently readable hidden spin vectors. The shared Hard-Floor constraint must participate in the analyzer boundary-value problem itself.
+
+\section{Objective Analyzer Coupling}
+\label{sec:entanglement_analyzer_coupling}
+
+An ideal spin analyzer defines an axis rather than a preferred signed direction. The detector interaction must therefore be invariant under
+\begin{equation}
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    \rightarrow
+    -
+    \hat{\mathbf{n}}_{\mathrm{A}},
+    \qquad
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \rightarrow
+    -
+    \hat{\mathbf{n}}_{\mathrm{B}}.
+\end{equation}
+The lowest-order rotationally objective coupling of a unit torsional orientation $\widehat{\boldsymbol{\Theta}}$ to such an analyzer is quadratic in the directional projection. For the two endpoints, the minimal symmetric analyzer energy may therefore be written locally as
+\begin{equation}
+    U_{\mathrm{an}}
+    =
+    -U_0
+    \left[
+    \left(
+    \widehat{\boldsymbol{\Theta}}_{\mathrm{A}}
+    \cdot
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    \right)^2
+    +
+    \left(
+    \widehat{\boldsymbol{\Theta}}_{\mathrm{B}}
+    \cdot
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right)^2
+    \right],
+    \qquad
+    U_0>0.
+    \label{eq:entanglement_analyzer_energy}
+\end{equation}
+Here $U_0$ is only a local positive energy scale; it cancels from the normalized correlation law and is not introduced as a new TFT constant.
+
+Using the singlet constraint
+\begin{equation}
+    \widehat{\boldsymbol{\Theta}}_{\mathrm{B}}
+    =
+    -
+    \widehat{\boldsymbol{\Theta}}_{\mathrm{A}}
+    \equiv
+    -
+    \widehat{\boldsymbol{\Theta}},
+\end{equation}
+Equation~\eqref{eq:entanglement_analyzer_energy} reduces to
+\begin{equation}
+    U_{\mathrm{an}}
+    =
+    -U_0
+    \widehat{\boldsymbol{\Theta}}^{\mathsf T}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    \hat{\mathbf{n}}_{\mathrm{A}}^{\mathsf T}
+    +
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \hat{\mathbf{n}}_{\mathrm{B}}^{\mathsf T}
+    \right)
+    \widehat{\boldsymbol{\Theta}}.
+    \label{eq:entanglement_shared_quadratic_form}
+\end{equation}
+
+The two nontrivial principal directions of this quadratic form are the analyzer sum and difference directions,
+\begin{equation}
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    +
+    \hat{\mathbf{n}}_{\mathrm{B}},
+\end{equation}
+and
+\begin{equation}
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    -
+    \hat{\mathbf{n}}_{\mathrm{B}}.
+\end{equation}
+Their corresponding eigenvalues are
+\begin{equation}
+    \boxed{
+    \lambda_{+}
+    =
+    1+\cos\theta_{\mathrm{AB}},
+    \qquad
+    \lambda_{-}
+    =
+    1-\cos\theta_{\mathrm{AB}}.
+    }
+    \label{eq:entanglement_analyzer_eigenvalues}
+\end{equation}
+Equivalently,
+\begin{equation}
+    \left|
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    +
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right|^2
+    =
+    4
+    \cos^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right),
+    \label{eq:entanglement_sum_channel}
+\end{equation}
+\begin{equation}
+    \left|
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    -
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right|^2
+    =
+    4
+    \sin^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right).
+    \label{eq:entanglement_difference_channel}
+\end{equation}
+
+The half-angle structure is therefore generated by the common analyzer boundary geometry of the constrained pair. No Bell probability law has yet been inserted at this stage.
+
+\section{Analyzer-Resolved Modal-Action Partition}
+\label{sec:entanglement_action_partition}
+
+TFT represents the active carrier as a physical harmonic mode. For a harmonic degree of freedom at fixed angular frequency $\omega$, the cycle-averaged mechanical energy is quadratic in its mode amplitude. The corresponding modal action is
+\begin{equation}
+    I
+    =
+    \frac{E}{\omega},
+    \label{eq:entanglement_modal_action_definition}
+\end{equation}
+so, for channels at the same $\omega$,
+\begin{equation}
+    I
+    \propto
+    |\text{mode amplitude}|^2.
+    \label{eq:entanglement_action_amplitude_square}
+\end{equation}
+The symbol $I$ is used here in the same modal-action sense as in the photon transport sector and is distinct from the structural mass moment $J_i=\rho_i r_i^4$ used elsewhere in TFT.
+
+The sum and difference channels in Equations~\eqref{eq:entanglement_sum_channel} and \eqref{eq:entanglement_difference_channel} therefore define the minimal quadratic analyzer-resolved action partition. Normalizing by the total quadratic weight gives
+\begin{equation}
+    \boxed{
+    \frac{I_{\mathrm{opp}}}{I_{\mathrm{tot}}}
+    =
+    \frac{1}{4}
+    \left|
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    +
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right|^2
+    =
+    \cos^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right).
+    }
+    \label{eq:entanglement_action_opp}
+\end{equation}
+\begin{equation}
+    \boxed{
+    \frac{I_{\mathrm{same}}}{I_{\mathrm{tot}}}
+    =
+    \frac{1}{4}
+    \left|
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    -
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right|^2
+    =
+    \sin^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right).
+    }
+    \label{eq:entanglement_action_same}
+\end{equation}
+The labels are fixed by the equal-axis singlet limit. When $\theta_{\mathrm{AB}}=0$, the singlet pair must produce opposite signed outcomes with unit frequency; Equation~\eqref{eq:entanglement_action_opp} is then unity while Equation~\eqref{eq:entanglement_action_same} vanishes.
+
+The two action fractions satisfy
+\begin{equation}
+    \boxed{
+    I_{\mathrm{opp}}
+    +
+    I_{\mathrm{same}}
+    =
+    I_{\mathrm{tot}}.
+    }
+    \label{eq:entanglement_action_normalization}
+\end{equation}
+Equations~\eqref{eq:entanglement_action_opp}--\eqref{eq:entanglement_action_normalization} are a quadratic mechanical action partition. They are not yet, by themselves, a probability postulate. A detector event law is still required to convert the continuous action partition into discrete outcome frequencies.
+
+\section{Quantized Detector Threshold}
+\label{sec:entanglement_detector_capture}
+
+The TFT measurement sector treats a macroscopic detector as a high-topological-density region in which coherent motion is arrested by localized sinks. The local Quantum Damping Rate is
+\begin{equation}
+    \Gamma
+    =
+    \sigma c_P n_K,
+    \label{eq:entanglement_quantum_damping}
+\end{equation}
+where $\sigma$ is the microscopic interaction cross section and $n_K$ is the local density of topological sinks. This localized rate is distinct from the defect-free vacuum relaxation rate $\Gamma_{\mathrm{D}}$.
+
+For two symmetry-equivalent analyzer outcome channels, the same local detector material supplies the same $\Gamma$. At common mode frequency, linear absorption therefore gives the positive absorbed modal-action flux
+\begin{equation}
+    \left(
+    \frac{\mathrm{d}I_i}{\mathrm{d}t}
+    \right)_{\!\mathrm{abs}}
+    =
+    \Gamma I_i,
+    \qquad
+    i
+    \in
+    \{\mathrm{opp},\mathrm{same}\}.
+    \label{eq:entanglement_action_absorption}
+\end{equation}
+Thus linear damping fixes the relative absorbed action, but it does not by itself explain why one run terminates in one discrete detector outcome. The discrete event requires the quantized detector threshold.
+
+Let $I_{\mathrm{th}}$ denote the local modal action still required to complete one detector topological transition, and let $R_s$ denote the residual action capacity of a microscopic detector sink $s$ before its next transition. For an unbiased stationary detector, the threshold phase is cyclic and has no preferred origin. The invariant stationary measure on that cycle is therefore
+\begin{equation}
+    p(R_s)
+    =
+    \frac{1}{I_{\mathrm{th}}},
+    \qquad
+    0<R_s\leq I_{\mathrm{th}}.
+    \label{eq:entanglement_uniform_threshold_phase}
+\end{equation}
+This step is the explicit stationary/ergodic detector-phase condition of the present closure.
+
+During a short interval $\mathrm{d}t$, channel $i$ deposits the action
+\begin{equation}
+    \mathrm{d}I_i
+    =
+    \Gamma I_i\,\mathrm{d}t.
+\end{equation}
+A sink crosses its next topological threshold during that interval when $R_s\leq\mathrm{d}I_i$. For $\mathrm{d}I_i\ll I_{\mathrm{th}}$, Equation~\eqref{eq:entanglement_uniform_threshold_phase} gives
+\begin{equation}
+    \mathrm{d}P_i
+    =
+    \frac{\mathrm{d}I_i}{I_{\mathrm{th}}}
+    =
+    \frac{\Gamma I_i}{I_{\mathrm{th}}}
+    \,\mathrm{d}t.
+    \label{eq:entanglement_threshold_crossing}
+\end{equation}
+The corresponding coarse-grained capture rate is
+\begin{equation}
+    \gamma_i^{(\mathrm{cap})}
+    =
+    \frac{\Gamma I_i}{I_{\mathrm{th}}}.
+    \label{eq:entanglement_capture_rate}
+\end{equation}
+
+For competing mutually exclusive channels sampling the same stationary detector ensemble, the common factors cancel from the branching ratio:
+\begin{equation}
+\begin{aligned}
+    P_i
+    &=
+    \frac{
+    \gamma_i^{(\mathrm{cap})}
+    }{
+    \gamma_{\mathrm{opp}}^{(\mathrm{cap})}
+    +
+    \gamma_{\mathrm{same}}^{(\mathrm{cap})}
+    }
+    \\[2pt]
+    &=
+    \frac{I_i}{I_{\mathrm{tot}}}.
+\end{aligned}
+    \label{eq:entanglement_action_to_probability}
+\end{equation}
+Hence the detector-threshold closure gives
+\begin{equation}
+    \boxed{
+    P_{\mathrm{opp}}
+    =
+    \cos^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right).
+    }
+    \label{eq:entanglement_probability_opp}
+\end{equation}
+\begin{equation}
+    \boxed{
+    P_{\mathrm{same}}
+    =
+    \sin^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right).
+    }
+    \label{eq:entanglement_probability_same}
+\end{equation}
+
+The probabilities in Equations~\eqref{eq:entanglement_probability_opp} and \eqref{eq:entanglement_probability_same} are therefore not introduced as primitive amplitudes. Within the present TFT closure they arise through the mechanical sequence
+\begin{equation}
+    \boxed{
+    \begin{array}{c}
+    \text{shared analyzer geometry}
+    \\[2pt]
+    \downarrow
+    \\[2pt]
+    \text{quadratic modal action}
+    \\[2pt]
+    \downarrow
+    \\[2pt]
+    \text{quantized threshold capture}
+    \\[2pt]
+    \downarrow
+    \\[2pt]
+    \text{ensemble outcome frequency}
+    \end{array}
+    }
+    \label{eq:entanglement_probability_chain}
+\end{equation}
+The last step remains conditional on stationary/ergodic sampling of the detector threshold phase. At complete substrate resolution, $R_s$ is treated as a definite microscopic state variable; the probability description enters only after coarse-graining over unresolved detector microstates.
+
+\section{Joint Probabilities and the Singlet Correlation}
+\label{sec:entanglement_singlet_correlation}
+
+The ideal singlet has no preferred absolute signed orientation, and the two analyzer outlets are assumed mechanically symmetric. Therefore the opposite-outcome class divides equally between $(+,-)$ and $(-,+)$, while the same-outcome class divides equally between $(+,+)$ and $(-,-)$. The four joint probabilities are
+\begin{equation}
+    \boxed{
+    P_{+-}
+    =
+    P_{-+}
+    =
+    \frac{1}{2}
+    \cos^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right).
+    }
+    \label{eq:entanglement_joint_opposite}
+\end{equation}
+\begin{equation}
+    \boxed{
+    P_{++}
+    =
+    P_{--}
+    =
+    \frac{1}{2}
+    \sin^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right).
+    }
+    \label{eq:entanglement_joint_same}
+\end{equation}
+The normalization is exact:
+\begin{equation}
+    P_{++}
+    +
+    P_{+-}
+    +
+    P_{-+}
+    +
+    P_{--}
+    =
+    1.
+\end{equation}
+
+Within this appendix, let $E_{\mathrm{Bell}}$ denote the dimensionless Bell correlation function, distinct from mechanical energy. Using $s_{\mathrm{A}}s_{\mathrm{B}}=+1$ for equal signed outcomes and $s_{\mathrm{A}}s_{\mathrm{B}}=-1$ for opposite signed outcomes,
+\begin{equation}
+\begin{aligned}
+    E_{\mathrm{Bell}}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{A}},
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right)
+    &=
+    P_{\mathrm{same}}
+    -
+    P_{\mathrm{opp}}
+    \\[2pt]
+    &=
+    \sin^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right)
+    -
+    \cos^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right)
+    \\[2pt]
+    &=
+    -\cos\theta_{\mathrm{AB}}.
+\end{aligned}
+\end{equation}
+Therefore,
+\begin{equation}
+    \boxed{
+    E_{\mathrm{Bell}}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{A}},
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right)
+    =
+    -
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    \cdot
+    \hat{\mathbf{n}}_{\mathrm{B}}.
+    }
+    \label{eq:entanglement_singlet_correlation}
+\end{equation}
+
+The local marginals are independent of the remote analyzer orientation. For example,
+\begin{equation}
+\begin{aligned}
+    P(s_{\mathrm{A}}=+1)
+    &=
+    P_{++}
+    +
+    P_{+-}
+    \\[2pt]
+    &=
+    \frac{1}{2}
+    \left[
+    \sin^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right)
+    +
+    \cos^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right)
+    \right]
+    \\[2pt]
+    &=
+    \frac{1}{2}.
+\end{aligned}
+\end{equation}
+Thus
+\begin{equation}
+    \boxed{
+    P(s_{\mathrm{A}}=\pm1)
+    =
+    P(s_{\mathrm{B}}=\pm1)
+    =
+    \frac{1}{2}.
+    }
+    \label{eq:entanglement_no_signalling_marginals}
+\end{equation}
+The remote analyzer setting changes the joint correlation structure but does not create a controllable bias in either local outcome distribution.
+
+\section{CHSH Combination and the Tsirelson Value}
+\label{sec:entanglement_chsh}
+
+For two analyzer choices at each endpoint, denote the unit axes by
+\begin{equation}
+    \hat{\mathbf{n}}_{\mathrm{A}},
+    \qquad
+    \hat{\mathbf{n}}_{\mathrm{A}}^{\prime},
+    \qquad
+    \hat{\mathbf{n}}_{\mathrm{B}},
+    \qquad
+    \hat{\mathbf{n}}_{\mathrm{B}}^{\prime}.
+\end{equation}
+The CHSH combination is
+\begin{equation}
+\begin{aligned}
+    S_{\mathrm{CHSH}}
+    ={}&
+    E_{\mathrm{Bell}}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{A}},
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right)
+    +
+    E_{\mathrm{Bell}}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{A}},
+    \hat{\mathbf{n}}_{\mathrm{B}}^{\prime}
+    \right)
+    \\
+    &+
+    E_{\mathrm{Bell}}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{A}}^{\prime},
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right)
+    -
+    E_{\mathrm{Bell}}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{A}}^{\prime},
+    \hat{\mathbf{n}}_{\mathrm{B}}^{\prime}
+    \right).
+\end{aligned}
+    \label{eq:entanglement_chsh_definition}
+\end{equation}
+Using Equation~\eqref{eq:entanglement_singlet_correlation} and the standard coplanar optimal settings
+\begin{equation}
+    \theta_{\mathrm{A}}
+    =
+    0,
+    \qquad
+    \theta_{\mathrm{A}^{\prime}}
+    =
+    \frac{\pi}{2},
+    \qquad
+    \theta_{\mathrm{B}}
+    =
+    \frac{\pi}{4},
+    \qquad
+    \theta_{\mathrm{B}^{\prime}}
+    =
+    -\frac{\pi}{4},
+\end{equation}
+one obtains
+\begin{equation}
+    \boxed{
+    \left|
+    S_{\mathrm{CHSH}}
+    \right|_{\max}
+    =
+    2\sqrt{2}.
+    }
+    \label{eq:entanglement_tsirelson}
+\end{equation}
+
+The value $2\sqrt{2}$ is therefore obtained here from the full analyzer-angle correlation law. The independent FCC geometric identity
+\begin{equation}
+    a
+    =
+    2\sqrt{2}\,r_{\mathrm{D}}
+\end{equation}
+remains part of the lattice geometry, but it is not used as the derivation of Equation~\eqref{eq:entanglement_tsirelson}. Any deeper relation between the FCC diagonal factor and the Bell bound would require a separate microscopic mapping and is not assumed in this appendix.
+
+\section{Hard-Floor Constraint Work}
+\label{sec:entanglement_constraint_work}
+
+The Hard-Floor role must be distinguished from an ordinary propagating signal. Consider one torsional component of the ideal singlet constraint,
+\begin{equation}
+    \Theta_{\mathrm{A}}
+    +
+    \Theta_{\mathrm{B}}
+    =
+    0.
+\end{equation}
+Introduce a local Lagrange multiplier $\lambda_C$ only for the purpose of evaluating the ideal constraint reaction:
+\begin{equation}
+    L_C
+    =
+    -\lambda_C
+    \left(
+    \Theta_{\mathrm{A}}
+    +
+    \Theta_{\mathrm{B}}
+    \right).
+\end{equation}
+The generalized constraint torques are
+\begin{equation}
+    Q_{\mathrm{A}}^{(C)}
+    =
+    Q_{\mathrm{B}}^{(C)}
+    =
+    -\lambda_C.
+\end{equation}
+The total instantaneous power of the ideal constraint on the complete pair is
+\begin{equation}
+\begin{aligned}
+    P_C
+    &=
+    Q_{\mathrm{A}}^{(C)}
+    \dot{\Theta}_{\mathrm{A}}
+    +
+    Q_{\mathrm{B}}^{(C)}
+    \dot{\Theta}_{\mathrm{B}}
+    \\[2pt]
+    &=
+    -\lambda_C
+    \left(
+    \dot{\Theta}_{\mathrm{A}}
+    +
+    \dot{\Theta}_{\mathrm{B}}
+    \right).
+\end{aligned}
+\end{equation}
+Differentiating the holonomic constraint gives
+\begin{equation}
+    \dot{\Theta}_{\mathrm{A}}
+    +
+    \dot{\Theta}_{\mathrm{B}}
+    =
+    0,
+\end{equation}
+and therefore
+\begin{equation}
+    \boxed{P_C=0.}
+    \label{eq:entanglement_constraint_zero_net_work}
+\end{equation}
+
+Equation~\eqref{eq:entanglement_constraint_zero_net_work} means that the ideal Hard-Floor constraint has no independent net work ledger for the complete constrained pair. It does not imply that the endpoint reaction torques vanish, nor does it by itself forbid instantaneous redistribution of generalized endpoint power. What it excludes is the need to model the ideal Hard Floor as an independent finite-energy wave packet carrying the Bell correlation from A to B.
+
+The finite work associated with measurement is supplied by the local analyzer and detector interactions on the active side. The Hard Floor determines the compatibility condition of the shared Goalpost state. In this sense the TFT mechanism is nonlocal with respect to the three-dimensional Soft-Floor description---the joint boundary problem depends on both analyzer settings---but it is represented ontologically as a physically contiguous deeper constraint rather than as action across an empty manifold.
+
+The distinction between the two causal sectors is therefore
+\begin{equation}
+    \boxed{
+    \begin{array}{c}
+    \text{Soft Floor: finite-energy active propagation,}
+    \\[-1pt]
+    c_P\leq c_{\mathrm{E}},
+    \\[4pt]
+    \text{Hard Floor: zero-delay constraint equilibration,}
+    \\[-1pt]
+    c_{\mathrm{S}}\rightarrow\infty.
+    \end{array}
+    }
+    \label{eq:entanglement_two_causal_sectors}
+\end{equation}
+Together with Equation~\eqref{eq:entanglement_no_signalling_marginals}, this prevents the Bell correlation channel from becoming a controllable superluminal Soft-Floor communication channel within the present closure.
+
+\section{Measurement and Decoherence}
+\label{sec:entanglement_decoherence}
+
+The measurement sequence must also distinguish constraint equilibration from irreversible local capture. The mechanically consistent sequence is:
+\begin{enumerate}
+    \item the two analyzers impose the local Soft-Floor boundary axes $\hat{\mathbf{n}}_{\mathrm{A}}$ and $\hat{\mathbf{n}}_{\mathrm{B}}$;
+    \item the shared Goalpost constraint establishes the compatible global analyzer response represented by the sum and difference channels;
+    \item local detector sinks absorb the analyzer-resolved action and produce discrete threshold events according to the detector closure of Section~\ref{sec:entanglement_detector_capture};
+    \item the active phase-coherent relation supporting the pair correlation is destroyed by the irreversible measurement environment.
+\end{enumerate}
+
+The fourth step should not be interpreted as literal fracture of the phase-locked SC Hard Floor. TFT assigns the Hard Floor a persistent longitudinal strain-memory role, and ordinary active-vacuum detector energies do not erase that substrate record. The relational information written during pair creation may therefore remain as a static Hard-Floor strain record after the pair has decohered.
+
+What decoherence removes is the active coherent accessibility of the shared pair constraint. The individual vertical anchors may remain, preserving their gravitational and information-reference roles, while the pair no longer participates in the common analyzer boundary problem. Thus,
+\begin{equation}
+    \boxed{
+    \text{decoherence}
+    \neq
+    \text{Hard-Floor information erasure}.
+    }
+    \label{eq:entanglement_decoherence_not_erasure}
+\end{equation}
+
+A complete microscopic model of the finite correlation-supporting interface must eventually determine the energy barrier, phase-slip process, or continuum coupling by which this active coherence is lost. No new interface inertia, stiffness, or coherence constant is introduced in this appendix because those quantities are not yet independently derived by the TFT parent dynamics.
+
+\section{Gravitational Loading and the Status of a Modified CHSH Bound}
+\label{sec:entanglement_gravity_status}
+
+The local gravitational strain $\alpha_{\mathrm{G}}$ modifies active Soft-Floor reconfiguration and propagation through the already derived gravitational endpoint-transfer mechanics. It is therefore reasonable to expect sufficiently strong gravitational loading to influence the finite active coupling that supports an experimentally accessible entangled pair. The present appendix, however, does not derive a universal mapping from $\alpha_{\mathrm{G}}$ to Bell-correlation visibility.
+
+In particular, the ideal singlet derivation above does not establish an identity of the form
+\begin{equation}
+    \alpha_{\mathrm{Q}}
+    =
+    1-\alpha_{\mathrm{G}},
+\end{equation}
+nor does it establish a universal gravity-dependent bound of the form
+\begin{equation}
+    S_{\mathrm{CHSH}}
+    \leq
+    2
+    \sqrt{
+    1+\alpha_{\mathrm{Q}}^2
+    }.
+\end{equation}
+Such relations would require an independently derived constitutive law connecting gravitational loading to the finite correlation-supporting interface, followed by a recalculation of the analyzer-resolved action partition and detector visibility. They are therefore not adopted as results of the present appendix.
+
+The mechanically established ideal-limit result remains
+\begin{equation}
+    \boxed{
+    E_{\mathrm{Bell}}
+    =
+    -\cos\theta_{\mathrm{AB}},
+    \qquad
+    \left|
+    S_{\mathrm{CHSH}}
+    \right|_{\max}
+    =
+    2\sqrt{2}.
+    }
+    \label{eq:entanglement_ideal_summary}
+\end{equation}
+Any future gravitational-decoherence correction must reduce continuously to Equation~\eqref{eq:entanglement_ideal_summary} as the relevant active-interface perturbation vanishes.
+
+\section{Constitutive Status, Falsifiability, and Microscopic Completion}
+\label{sec:entanglement_status}
+
+The results of this appendix fall into three distinct categories.
+
+\subsection*{Established TFT Inputs}
+
+The derivation adopts the existing TFT architecture:
+\begin{itemize}
+    \item a finite-inertia FCC Soft Floor supporting active transverse dynamics;
+    \item a phase-locked SC Hard Floor in the singular constraint limit, with $\mu_{\mathrm{S}}\rightarrow0$, $K_{\mathrm{S}}\rightarrow\infty$, and $c_{\mathrm{S}}\rightarrow\infty$; this is not an ordinary finite-energy propagating branch;
+    \item vertical Tension-Column anchoring of localized Soft-Floor states to Hard-Floor records;
+    \item mechanical action quantization and detector-induced wave arrest through the localized damping rate
+    \begin{equation*}
+        \Gamma
+        =
+        \sigma c_P n_K.
+    \end{equation*}
+\end{itemize}
+
+\subsection*{Derived Within the Present Appendix}
+
+Given the ideal singlet Goalpost constraint and the minimal objective analyzer coupling, the following results are obtained:
+\begin{itemize}
+    \item a predetermined opposite-orientation local readout gives
+    \begin{equation*}
+        E_{\mathrm{local}}
+        =
+        -1+
+        \frac{2\theta_{\mathrm{AB}}}{\pi}
+    \end{equation*}
+    and is rejected;
+    \item the shared analyzer quadratic form resolves into sum and difference channels with half-angle weights;
+    \item quadratic harmonic action gives the normalized channel partition in Equations~\eqref{eq:entanglement_action_opp} and \eqref{eq:entanglement_action_same};
+    \item the ideal holonomic Hard-Floor constraint performs zero net work on the complete pair, as shown in Equation~\eqref{eq:entanglement_constraint_zero_net_work};
+    \item the resulting joint probabilities satisfy the no-signalling marginals of Equation~\eqref{eq:entanglement_no_signalling_marginals} once the detector-threshold closure is imposed.
+\end{itemize}
+
+\subsection*{Conditional Microscopic Closure}
+
+The conversion from modal-action fraction to ensemble outcome frequency requires the stationary/ergodic threshold-phase condition defined in Section~\ref{sec:entanglement_detector_capture}. Under that condition,
+\begin{equation}
+    P_i
+    =
+    \frac{I_i}{I_{\mathrm{tot}}},
+\end{equation}
+and the singlet correlation and CHSH maximum follow. A complete microscopic detector model must ultimately demonstrate this stationary sampling from the detailed detector topology rather than impose it phenomenologically.
+
+The appendix therefore does not claim that all quantum probability has been reduced to a completed microscopic detector Hamiltonian. It identifies the exact additional detector condition under which the deterministic TFT substrate reproduces the observed singlet ensemble law.
+
+\subsection*{Required Vertical-Dynamics Completion}
+
+The present analysis also constrains the still-open vertical constitutive theory. The ideal Hard Floor itself must remain a constraint/memory sector, while finite measurement work belongs to the active endpoints, detectors, and any finite active-to-latent interface degrees of freedom. If such interface degrees of freedom possess an extended spectrum, their action must be derived independently from the underlying TFT scale architecture rather than introduced solely to reproduce a desired dissipative law.
+
+This distinction is important for subsequent vacuum-relaxation work: the entanglement mechanism requires the deep zero-delay constraint, while any finite-frequency dissipative reservoir must belong to a different dynamical projection of the vertical architecture. The present appendix therefore supplies boundary conditions on that future microscopic completion without assuming its spectrum.
+
+\subsection*{Falsifiability}
+
+At the ideal-correlation level, the present closure is falsified if its completed detector dynamics fails to recover
+\begin{equation}
+    E_{\mathrm{Bell}}
+    \left(
+    \hat{\mathbf{n}}_{\mathrm{A}},
+    \hat{\mathbf{n}}_{\mathrm{B}}
+    \right)
+    =
+    -
+    \hat{\mathbf{n}}_{\mathrm{A}}
+    \cdot
+    \hat{\mathbf{n}}_{\mathrm{B}}
+\end{equation}
+while preserving the unbiased marginals. Conversely, agreement with the ideal singlet law is a correspondence requirement rather than a unique empirical discriminator of TFT, because standard quantum mechanics already predicts the same correlation. Distinctive TFT tests require a separately derived finite-interface correction---for example a gravitational, structural, or coherence-dependent departure from the ideal limit---before a new quantitative prediction can be claimed.
+
+\section{Conclusion}
+\label{sec:entanglement_conclusion}
+
+The minimum TFT entanglement mechanism is not a pair of classical spins carrying predetermined opposite answers through ordinary three-dimensional space. Such a Bell-local realization fails quantitatively. Instead, the Goalpost Topology represents the two localized Soft-Floor endpoints as one constrained torsional state. Its admissible configuration is fixed by a common Hard-Floor relational boundary condition.
+
+When two analyzer axes are applied to this shared state, the objective quadratic boundary problem resolves into the sum and difference channels of the analyzer directions. Harmonic mechanics converts those channel amplitudes into the modal-action fractions
+\begin{equation}
+    \frac{I_{\mathrm{opp}}}{I_{\mathrm{tot}}}
+    =
+    \cos^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right),
+    \qquad
+    \frac{I_{\mathrm{same}}}{I_{\mathrm{tot}}}
+    =
+    \sin^2
+    \left(
+    \frac{\theta_{\mathrm{AB}}}{2}
+    \right).
+\end{equation}
+Under the explicitly stated stationary detector-threshold closure, these action fractions become the observed outcome frequencies, yielding
+\begin{equation}
+    \boxed{
+    E_{\mathrm{Bell}}
+    =
+    -\cos\theta_{\mathrm{AB}},
+    \qquad
+    \left|
+    S_{\mathrm{CHSH}}
+    \right|_{\max}
+    =
+    2\sqrt{2}.
+    }
+\end{equation}
+
+The Hard Floor enters this construction as a zero-delay constraint and information-memory substrate, not as an ordinary finite-energy signal carrier. The local analyzers and detectors supply the finite work of measurement, while decoherence removes active access to the shared pair constraint without requiring destruction of the underlying substrate record. The remaining microscopic task is therefore sharply defined: derive the finite active-to-latent interface dynamics compatible with this constraint architecture, and only then determine whether that same independently derived vertical sector also supplies the finite-frequency spectral response required elsewhere in TFT.
+

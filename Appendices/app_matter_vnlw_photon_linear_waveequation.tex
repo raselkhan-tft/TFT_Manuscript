@@ -2,160 +2,474 @@
 \label{app:matter_vnlw_photon_linear_waveequation}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Abstract:} Tension Field Theory (TFT) treats the Spacetime Gravitational Floor (SGF) as a physical, dual-phase continuum. Consequently, quantum interactions are strictly subject to the fluid-dynamic laws of visco-elastic friction. This appendix provides the mechanical derivations from first principles for the two fundamental damping operators in TFT: the non-linear logarithmic term governing the wave arrest of topological knots (matter), and the linear viscous term governing the attenuation of untethered shear waves (light).
+\noindent\textbf{Abstract:} Tension Field Theory (TFT) treats the Spacetime Gravitational Floor (SGF) as a physical, dual-phase continuum. Consequently, quantum interactions are subject to the visco-elastic response of the FCC--Condensate vacuum. This appendix develops two constitutive manifestations of the same underlying relaxation mechanism: the non-linear logarithmic term governing the wave arrest of topological knots (matter), and the ordinary linear viscous term governing attenuation of untethered shear waves (light). The latter establishes the conventional attenuation branch; coherent-action-preserving photon frequency transport and the corresponding Viscoelastic Vacuum Relaxation Rate $\Gamma_{\mathrm{D}}$ are developed separately in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
 
 \section{Derivation of Non-Linear Damping for Matter (The VNLW Term)}
-When a localized topological knot (a Fermion) moves through the active vacuum, it physically displaces the Face--Centered Cubic (FCC) lattice. In the presence of dense macroscopic matter (a detector), the lattice behaves as an open quantum system, draining kinetic energy from the wave into the matter sink as thermal exhaust.
+
+When a localized topological knot (a Fermion) moves through the active vacuum, it physically displaces the Face--Centered Cubic (FCC) lattice. In the presence of dense macroscopic matter (a detector), the lattice behaves as an open quantum system, draining kinetic energy from the wave into matter-coupled FCC--Condensate reservoir degrees of freedom.
 
 To derive the governing equation, we begin with the standard time-dependent Schr\"{o}dinger equation and introduce an unknown non-Hermitian dissipative potential $W(\mathbf{x},t)$ to mathematically model this thermodynamic sink:
 \begin{equation}
-    i\hbar \frac{\partial\Psi}{\partial t} = \left[ -\frac{\hbar^2}{2m} \nabla^2 + V + W \right]\Psi
+    i\hbar \frac{\partial\Psi}{\partial t}
+    =
+    \left[
+        -\frac{\hbar^2}{2m}\nabla^2
+        + V
+        + W
+    \right]\Psi.
 \end{equation}
 
 \subsection{Kinetic Derivation of the Constitutive Law ($\Gamma$)}
-To define the non-Hermitian potential $W$, the physical damping rate ($\Gamma$) is first derived from fundamental kinetic collision theory. As the pilot wave propagates, it sweeps through a geometric volume of space containing localized structural defects (the atomic lattice of the dense matter sink).
 
-The differential volume ($\mathrm{d}V$) swept by a wave interface of interaction area $\sigma$ moving at local kinematic velocity $c_{\mathrm{P}}$ in time $\mathrm{d}t$ is:
+To define the non-Hermitian potential $W$, the localized physical damping rate ($\Gamma$) is first derived from kinetic collision theory. As the pilot wave propagates, it sweeps through a geometric volume of space containing localized structural defects (the atomic lattice of the dense matter sink).
+
+The differential volume ($\mathrm{d}V$) swept by a wave interface of interaction area $\sigma$ moving at local kinematic velocity $c_{\mathrm{P}}$ in time $\mathrm{d}t$ is
 \begin{equation}
-    \mathrm{d}V = \sigma \cdot c_{\mathrm{P}} \cdot \mathrm{d}t
+    \mathrm{d}V
+    =
+    \sigma
+    \cdot
+    c_{\mathrm{P}}
+    \cdot
+    \mathrm{d}t.
 \end{equation}
 
-If the local medium possesses a topological knot density $n_K(x)$ (number of defects per unit volume), the number of physical lattice collisions ($\mathrm{d}N$) occurring in that timeframe is:
+If the local medium possesses a topological knot density $n_K(x)$ (number of defects per unit volume), the number of physical lattice collisions ($\mathrm{d}N$) occurring in that timeframe is
 \begin{equation}
-    \mathrm{d}N = n_K(x) \cdot \mathrm{d}V = n_K(x) \cdot \sigma \cdot c_{\mathrm{P}} \cdot \mathrm{d}t
+    \mathrm{d}N
+    =
+    n_K(x)
+    \cdot
+    \mathrm{d}V
+    =
+    n_K(x)
+    \cdot
+    \sigma
+    \cdot
+    c_{\mathrm{P}}
+    \cdot
+    \mathrm{d}t.
 \end{equation}
 
-The local Quantum Damping Rate ($\Gamma$) is defined as the collision frequency (fractional energy loss events per unit time, $\mathrm{d}N/\mathrm{d}t$). Rearranging the kinetic equation yields the constitutive law for localized vacuum friction:
+The local Quantum Damping Rate ($\Gamma$) is defined as the collision frequency (fractional energy-loss events per unit time, $\mathrm{d}N/\mathrm{d}t$). Rearranging the kinetic equation yields the constitutive law for localized vacuum friction:
 \begin{equation}
-    \Gamma(x) = \sigma \cdot c_{\mathrm{P}} \cdot n_K(x)
+    \Gamma(x)
+    =
+    \sigma
+    \cdot
+    c_{\mathrm{P}}
+    \cdot
+    n_K(x).
 \end{equation}
+
+Here $\Gamma(x)$ denotes the localized defect-induced Quantum Damping Rate. It vanishes as $n_K\rightarrow0$ and is therefore not identified with the nonzero defect-free Viscoelastic Vacuum Relaxation Rate $\Gamma_{\mathrm{D}}$. The two rates represent distinct constitutive limits of the same underlying FCC--Condensate visco-elastic relaxation mechanism.
 
 \subsection{The Madelung Form and the Topological Sink}
-To translate this friction into the quantum potential $W$, we utilize the macroscopic physical order parameter of the SGF established in \hyperref[app:physical_wavefunction]{Appendix \ref*{app:physical_wavefunction}}. Defining the wavefunction by its physical amplitude ($\sqrt{\rho}$) and its mechanical phase action ($S$):
+
+To translate this friction into the quantum potential $W$, we utilize the macroscopic physical order parameter of the SGF established in \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}. Defining the wavefunction by its physical amplitude ($\sqrt{\rho}$) and its mechanical phase action ($S$):
 \begin{equation}
-    \Psi = \sqrt{\rho} e^{iS/\hbar}
+    \Psi
+    =
+    \sqrt{\rho}
+    e^{iS/\hbar}.
 \end{equation}
 
 Taking the natural logarithm of both sides isolates the real amplitude from the imaginary phase:
 \begin{equation}
-    \ln(\Psi) = \ln(\sqrt{\rho}) + \frac{iS}{\hbar} = \frac{1}{2}\ln(\rho) + \frac{iS}{\hbar}
+    \ln(\Psi)
+    =
+    \ln(\sqrt{\rho})
+    +
+    \frac{iS}{\hbar}
+    =
+    \frac{1}{2}\ln(\rho)
+    +
+    \frac{iS}{\hbar}.
 \end{equation}
 
 In TFT, absolute kinematic localization (wave arrest) is defined as the physical collapse of the wave's spatial volume. The matter sink acts exclusively on the probability density ($\rho$). Therefore, to model an open system where the spatial extent of the wave rapidly decays into a delta function, we must isolate the real amplitude term:
 \begin{equation}
-    2 \left[ \ln(\Psi) - \frac{iS}{\hbar} \right] = \ln(\rho)
+    2
+    \left[
+        \ln(\Psi)
+        -
+        \frac{iS}{\hbar}
+    \right]
+    =
+    \ln(\rho).
 \end{equation}
 
-Because probability density $\rho$ is the absolute square of the wavefunction ($\rho = |\Psi|^2$), we have:
+Because probability density $\rho$ is the absolute square of the wavefunction ($\rho=|\Psi|^2$), we have
 \begin{equation}
-    \ln(\rho) = \ln(|\Psi|^2)
+    \ln(\rho)
+    =
+    \ln(|\Psi|^2).
 \end{equation}
 
 \subsection{The Logarithmic Resolution}
+
 In non-Hermitian quantum mechanics, the rapid collapse of probability density is driven by an imaginary potential. We define the dissipative sink potential $W$ as strictly proportional to this density distribution, scaled by the localized Quantum Damping Rate ($\Gamma$) and the quantum of action ($\hbar$):
 \begin{equation}
-    W = -i\hbar\Gamma \ln(\rho) \quad \implies \quad W = -i\hbar\Gamma \ln(|\Psi|^2)
+    W
+    =
+    -i\hbar\Gamma\ln(\rho)
+    \quad
+    \implies
+    \quad
+    W
+    =
+    -i\hbar\Gamma\ln(|\Psi|^2).
 \end{equation}
 
-Substituting this derived potential $W$ back into the master equation yields the exact Viscous Non-Linear Wave Equation (VNLW). This proves that macroscopic wave arrest is mathematically guaranteed by the localized knot density of the matter sink:
+Substituting this potential $W$ back into the master equation yields the Viscous Non-Linear Wave Equation (VNLW). Within the retained TFT constitutive model, the localized knot density therefore controls the strength of the nonconservative wave-arrest term:
 \begin{equation}
-    i\hbar \frac{\partial\Psi}{\partial t} = \left[-\frac{\hbar^2}{2m} \nabla^2 + V\right]\Psi - \left[i(\hbar\Gamma)\ln(|\Psi|^2)\right]\Psi
+    i\hbar \frac{\partial\Psi}{\partial t}
+    =
+    \left[
+        -\frac{\hbar^2}{2m}\nabla^2
+        + V
+    \right]\Psi
+    -
+    \left[
+        i(\hbar\Gamma)\ln(|\Psi|^2)
+    \right]\Psi.
 \end{equation}
 
-\section{Derivation of Linear Shear Damping for Light (The Damped Wave Equation)}
-Unlike Fermions, the photon is an untethered transverse shear wave possessing zero rest mass ($m = 0$). It does not drag a topological core through the bulk volume; it strictly shears the 2D surface interface of the FCC nodes. We derive its propagation directly from the classical continuum mechanics of the TFT substrate.
+\section{Derivation of Linear Shear Attenuation for Light (The Damped-Wave Comparator)}
+
+Unlike Fermions, the photon is an untethered transverse shear wave possessing zero rest mass ($m = 0$). It does not drag a topological core through the bulk volume; it strictly shears the 2D surface interface of the FCC nodes. We first derive the corresponding ordinary linear attenuation branch directly from the classical continuum mechanics of the TFT substrate. This branch provides the visco-elastic attenuation comparator; the completed coherent photon-transport law is developed separately in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
 
 \subsection{The Newtonian Continuum}
+
 For the continuous 2D surface interface of the SGF, we apply Newton's second law to a differential lattice element undergoing transverse phase displacement $\mathbf{A}$.
 
-Natively employing $\mu_{\mathrm{D}}$ (the effective 2D interface inertia) and $\tau_{\mathrm{D}}$ (the baseline lattice surface tension), the local equation of motion per unit area is:
+Natively employing $\mu_{\mathrm{D}}$ (the effective 2D interface inertia) and $\tau_{\mathrm{D}}$ (the baseline lattice surface tension), the local equation of motion per unit area is
 \begin{equation}
-    \mu_{\mathrm{D}} \frac{\partial^2 \mathbf{A}}{\partial t^2} = \tau_{\mathrm{D}} \frac{\partial^2 \mathbf{A}}{\partial x^2} + F_{\mathrm{fr}}
+    \mu_{\mathrm{D}}
+    \frac{\partial^2 \mathbf{A}}{\partial t^2}
+    =
+    \tau_{\mathrm{D}}
+    \frac{\partial^2 \mathbf{A}}{\partial x^2}
+    +
+    F_{\mathrm{fr}}.
 \end{equation}
 
 \subsection{The Visco-Elastic Damping Force ($F_{\mathrm{fr}}$)}
-As the solid FCC nodes oscillate transversely, they experience visco-elastic friction ($F_{\mathrm{fr}}$) against the interstitial condensate. In fluid dynamics, this shear friction is proportional to the transverse velocity of the node ($\frac{\partial \mathbf{A}}{\partial t}$). The kinematic frictional force per unit interface area is defined strictly using the generalized local damping rate ($\Gamma$):
+
+As the solid FCC nodes oscillate transversely, a nonconservative FCC--Condensate response may produce an out-of-phase visco-elastic force $F_{\mathrm{fr}}$. At the retained linear-response order, represent the defect-free vacuum contribution and the localized defect-induced contribution by the effective rate
 \begin{equation}
-    F_{\mathrm{fr}} = -\mu_{\mathrm{D}} \Gamma \frac{\partial \mathbf{A}}{\partial t}
+    \Gamma_{\mathrm{eff}}(x)
+    =
+    \Gamma_{\mathrm{D}}
+    +
+    \Gamma(x),
+\end{equation}
+where
+\begin{equation}
+    \Gamma(x)
+    =
+    \sigma
+    c_{\mathrm{P}}
+    n_K(x)
+\end{equation}
+is the localized Quantum Damping Rate derived above and $\Gamma_{\mathrm{D}}$ is the defect-free Viscoelastic Vacuum Relaxation Rate developed in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
+
+The ordinary linear damping force per unit interface area is then represented as
+\begin{equation}
+    F_{\mathrm{fr}}
+    =
+    -\mu_{\mathrm{D}}
+    \Gamma_{\mathrm{eff}}
+    \frac{\partial \mathbf{A}}{\partial t}.
 \end{equation}
 
-Substituting this explicitly into the continuum equation yields:
+Substituting this explicitly into the continuum equation yields
 \begin{equation}
-    \mu_{\mathrm{D}} \frac{\partial^2 \mathbf{A}}{\partial t^2} = \tau_{\mathrm{D}} \frac{\partial^2 \mathbf{A}}{\partial x^2} - \mu_{\mathrm{D}} \Gamma \frac{\partial \mathbf{A}}{\partial t}
+    \mu_{\mathrm{D}}
+    \frac{\partial^2 \mathbf{A}}{\partial t^2}
+    =
+    \tau_{\mathrm{D}}
+    \frac{\partial^2 \mathbf{A}}{\partial x^2}
+    -
+    \mu_{\mathrm{D}}
+    \Gamma_{\mathrm{eff}}
+    \frac{\partial \mathbf{A}}{\partial t}.
 \end{equation}
 
 \subsection{Generalization to 3D and the Base Wave Equation}
-Dividing the entire equation by the interface inertia $\mu_{\mathrm{D}}$ gives:
+
+Dividing the entire equation by the interface inertia $\mu_{\mathrm{D}}$ gives
 \begin{equation}
-    \frac{\partial^2 \mathbf{A}}{\partial t^2} = \left(\frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}}\right) \frac{\partial^2 \mathbf{A}}{\partial x^2} - \Gamma \frac{\partial \mathbf{A}}{\partial t}
+    \frac{\partial^2 \mathbf{A}}{\partial t^2}
+    =
+    \left(
+        \frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}}
+    \right)
+    \frac{\partial^2 \mathbf{A}}{\partial x^2}
+    -
+    \Gamma_{\mathrm{eff}}
+    \frac{\partial \mathbf{A}}{\partial t}.
 \end{equation}
 
-Recognizing the TFT identity for the squared elastic wave speed ($c_{\mathrm{E}}^2 = \tau_{\mathrm{D}} / \mu_{\mathrm{D}}$) and generalizing the 1D spatial derivative ($\frac{\partial^2}{\partial x^2}$) to the 3D Laplacian operator ($\nabla^2$), the general damped wave equation for the vacuum continuum is established as:
+Recognizing the TFT identity for the squared elastic wave speed,
 \begin{equation}
-    \frac{\partial^2 \mathbf{A}}{\partial t^2} = c_{\mathrm{E}}^2 \nabla^2 \mathbf{A} - \Gamma \frac{\partial \mathbf{A}}{\partial t}
+    c_{\mathrm{E}}^2
+    =
+    \frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}},
 \end{equation}
+and generalizing the 1D spatial derivative to the 3D Laplacian operator, the ordinary damped-wave equation becomes
+\begin{equation}
+    \frac{\partial^2 \mathbf{A}}{\partial t^2}
+    =
+    c_{\mathrm{E}}^2
+    \nabla^2\mathbf{A}
+    -
+    \Gamma_{\mathrm{eff}}
+    \frac{\partial \mathbf{A}}{\partial t}.
+\end{equation}
+
+This equation defines the ordinary linear attenuation comparator. It is not identified with the completed finite-wave-number photon eigenbranch or with the coherent frequency-transport closure.
 
 \subsection{Analytical Solution for Temporal Amplitude Decay}
-The temporal amplitude evolution governed by the visco-elastic differential equation is isolated via the standard separation of variables, assuming the plane wave solution can be factored into independent spatial and temporal components:
+
+The temporal amplitude evolution governed by the ordinary visco-elastic differential equation is isolated via standard separation of variables, assuming
 \begin{equation}
-    \mathbf{A}(\mathbf{x}, t) = X(\mathbf{x}) T(t)
+    \mathbf{A}(\mathbf{x},t)
+    =
+    X(\mathbf{x})T(t).
 \end{equation}
 
-Substituting this into the generalized damped wave equation and dividing through by $c_{\mathrm{E}}^2 X(\mathbf{x}) T(t)$ yields:
+Substituting this into the generalized damped-wave equation and dividing through by $c_{\mathrm{E}}^2X(\mathbf{x})T(t)$ yields
 \begin{equation}
-    \frac{\nabla^2 X}{X} = \frac{1}{c_{\mathrm{E}}^2 T} \frac{\mathrm{d}^2 T}{\mathrm{d}t^2} + \frac{\Gamma}{c_{\mathrm{E}}^2 T} \frac{\mathrm{d}T}{\mathrm{d}t}
+    \frac{\nabla^2 X}{X}
+    =
+    \frac{1}{c_{\mathrm{E}}^2T}
+    \frac{\mathrm{d}^2T}{\mathrm{d}t^2}
+    +
+    \frac{\Gamma_{\mathrm{eff}}}{c_{\mathrm{E}}^2T}
+    \frac{\mathrm{d}T}{\mathrm{d}t}.
 \end{equation}
 
-Setting both sides to the spatial separation constant ($-k^2$) and substituting the standard continuum dispersion relation ($\omega = k c_{\mathrm{E}}$) reduces the temporal system to a standard second-order linear differential equation:
+Setting both sides to the spatial separation constant $-k^2$ and using the continuum relation
 \begin{equation}
-    \frac{\mathrm{d}^2 T}{\mathrm{d}t^2} + \Gamma \frac{\mathrm{d}T}{\mathrm{d}t} + \omega^2 T = 0
+    \omega
+    =
+    kc_{\mathrm{E}}
+\end{equation}
+for this comparator reduces the temporal system to
+\begin{equation}
+    \frac{\mathrm{d}^2T}{\mathrm{d}t^2}
+    +
+    \Gamma_{\mathrm{eff}}
+    \frac{\mathrm{d}T}{\mathrm{d}t}
+    +
+    \omega^2T
+    =
+    0.
 \end{equation}
 
-Assuming an ansatz of the form $T(t) = e^{rt}$ yields the characteristic polynomial:
+Assuming an ansatz of the form
 \begin{equation}
-    r^2 + \Gamma r + \omega^2 = 0
+    T(t)
+    =
+    e^{rt}
+\end{equation}
+yields the characteristic polynomial
+\begin{equation}
+    r^2
+    +
+    \Gamma_{\mathrm{eff}}r
+    +
+    \omega^2
+    =
+    0.
 \end{equation}
 
-Applying the quadratic formula provides the roots for $r$:
+Applying the quadratic formula gives
 \begin{equation}
-    r = \frac{-\Gamma \pm \sqrt{\Gamma^2 - 4\omega^2}}{2} = -\frac{\Gamma}{2} \pm \sqrt{\left(\frac{\Gamma}{2}\right)^2 - \omega^2}
+    r
+    =
+    \frac{
+        -\Gamma_{\mathrm{eff}}
+        \pm
+        \sqrt{
+            \Gamma_{\mathrm{eff}}^2
+            -
+            4\omega^2
+        }
+    }{2}
+    =
+    -\frac{\Gamma_{\mathrm{eff}}}{2}
+    \pm
+    \sqrt{
+        \left(
+            \frac{\Gamma_{\mathrm{eff}}}{2}
+        \right)^2
+        -
+        \omega^2
+    }.
 \end{equation}
 
-Because the intrinsic visco-elastic friction of the vacuum is infinitesimally weak compared to the angular frequency of a propagating photon ($\Gamma \ll \omega$), the system is fundamentally underdamped. The expression under the radical is strictly negative, yielding complex roots:
+For the weakly attenuating branch,
 \begin{equation}
-    r \approx -\frac{\Gamma}{2} \pm i\omega
+    \Gamma_{\mathrm{eff}}
+    \ll
+    \omega,
+\end{equation}
+so the system is underdamped and
+\begin{equation}
+    r
+    \approx
+    -\frac{\Gamma_{\mathrm{eff}}}{2}
+    \pm
+    i\omega.
 \end{equation}
 
-The general temporal solution $T(t)$ is formed by the linear combination of these roots, introducing $C_1$ and $C_2$ as the complex integration constants dictated by the initial boundary conditions of the photon's emission:
+The general temporal solution is therefore
 \begin{equation}
-    T(t) = C_1 e^{\left(-\frac{\Gamma}{2} + i\omega\right)t} + C_2 e^{\left(-\frac{\Gamma}{2} - i\omega\right)t}
+    T(t)
+    =
+    C_1
+    e^{\left(
+        -\frac{\Gamma_{\mathrm{eff}}}{2}
+        +
+        i\omega
+    \right)t}
+    +
+    C_2
+    e^{\left(
+        -\frac{\Gamma_{\mathrm{eff}}}{2}
+        -
+        i\omega
+    \right)t},
+\end{equation}
+where $C_1$ and $C_2$ are local complex integration constants fixed by the initial conditions.
+
+Factoring out the shared real exponential gives
+\begin{equation}
+    T(t)
+    =
+    e^{-\frac{\Gamma_{\mathrm{eff}}}{2}t}
+    \left(
+        C_1e^{i\omega t}
+        +
+        C_2e^{-i\omega t}
+    \right).
 \end{equation}
 
-Factoring out the shared real exponential isolates the harmonic oscillation from the generalized visco-elastic decay:
+Thus, within the ordinary linear attenuation model, the amplitude envelope obeys
 \begin{equation}
-    T(t) = e^{-\frac{\Gamma}{2} t} \left( C_1 e^{i\omega t} + C_2 e^{-i\omega t} \right)
+    \mathbf{A}(t)
+    =
+    \mathbf{A}_0
+    e^{-\frac{\Gamma_{\mathrm{eff}}}{2}t}.
 \end{equation}
 
-This integration rigorously proves that the amplitude envelope of a transverse shear wave intrinsically decays according to the general function $\mathbf{A}(t) = \mathbf{A}_0 e^{-\frac{\Gamma}{2} t}$ when subjected to lattice friction.
+This result establishes what a conventional velocity-proportional visco-elastic damping operator does: it produces amplitude attenuation of the retained harmonic carrier. It does not by itself establish coherent transport of the real carrier frequency.
 
-\subsection{The Cosmological Boundary Limit ($\Gamma \to \Gamma_{\mathrm{D}}$)}
-Having established the general mechanics of wave attenuation, we now apply the macroscopic limits of the physical universe.
+\subsection{The Defect-Free Vacuum Limit and the Photon Relaxation Sector}
 
-For a photon propagating through deep intergalactic space, the local macroscopic matter density drops to zero. Consequently, the localized topological knot density vanishes ($n_K \to 0$). Per the constitutive law derived in Section 1.1, the localized friction term $\Gamma(x)$ drops strictly to its fundamental, non-zero geometric baseline: the Vacuum Damping Rate ($\Gamma \to \Gamma_{\mathrm{D}}$).
-
-Applying this absolute boundary limit to our derived field equations yields the foundational differential equation for cosmological propagation:
+Having established the ordinary linear attenuation comparator, consider the defect-free intergalactic limit. As the local macroscopic matter density approaches zero,
 \begin{equation}
-    \nabla^2 \mathbf{A} - \frac{1}{c_{\mathrm{E}}^2} \frac{\partial^2 \mathbf{A}}{\partial t^2} - \left( \frac{\Gamma_{\mathrm{D}}}{c_{\mathrm{E}}^2} \right) \frac{\partial \mathbf{A}}{\partial t} = 0
+    n_K
+    \rightarrow
+    0,
+\end{equation}
+the localized Quantum Damping Rate satisfies
+\begin{equation}
+    \Gamma(x)
+    =
+    \sigma
+    c_{\mathrm{P}}
+    n_K(x)
+    \rightarrow
+    0.
 \end{equation}
 
-Simultaneously, the physical amplitude envelope of the wave is dictated strictly by the baseline decay limit:
+The effective attenuation rate therefore approaches the nonzero vacuum baseline,
 \begin{equation}
-    \mathbf{A}(t) = \mathbf{A}_0 e^{-\frac{\Gamma_{\mathrm{D}}}{2} t}
+    \Gamma_{\mathrm{eff}}
+    =
+    \Gamma_{\mathrm{D}}
+    +
+    \Gamma
+    \rightarrow
+    \Gamma_{\mathrm{D}}.
 \end{equation}
 
-Because the total mechanical energy of any classical wave is directly proportional to the square of its amplitude ($E \propto |\mathbf{A}|^2$), substituting the decayed amplitude immediately resolves the half-fraction, yielding the pristine macroscopic energy loss rate:
+If the same rate is inserted into the ordinary damped-wave comparator, one obtains
 \begin{equation}
-    E(t) \propto \left( \mathbf{A}_0 e^{-\frac{\Gamma_{\mathrm{D}}}{2} t} \right)^2 = E_0 e^{-\Gamma_{\mathrm{D}} t}
+    \nabla^2\mathbf{A}
+    -
+    \frac{1}{c_{\mathrm{E}}^2}
+    \frac{\partial^2\mathbf{A}}{\partial t^2}
+    -
+    \left(
+        \frac{\Gamma_{\mathrm{D}}}{c_{\mathrm{E}}^2}
+    \right)
+    \frac{\partial\mathbf{A}}{\partial t}
+    =
+    0,
+\end{equation}
+with amplitude envelope
+\begin{equation}
+    \mathbf{A}_{\mathrm{att}}(t)
+    =
+    \mathbf{A}_0
+    e^{-\frac{\Gamma_{\mathrm{D}}}{2}t}.
 \end{equation}
 
-This explicit derivation establishes the physical mechanism for continuous amplitude attenuation, providing the mathematical foundation for the macroscopic cosmological energy decay ($\frac{\mathrm{d}E}{\mathrm{d}t} = -\Gamma_{\mathrm{D}} E$) derived in Part III.
+Because the mechanical energy of the ordinary linear wave is proportional to the square of its amplitude,
+\begin{equation}
+    E_{\mathrm{att}}(t)
+    \propto
+    \left|
+        \mathbf{A}_{\mathrm{att}}(t)
+    \right|^2,
+\end{equation}
+the corresponding energy law is
+\begin{equation}
+    E_{\mathrm{att}}(t)
+    =
+    E_0
+    e^{-\Gamma_{\mathrm{D}}t},
+\end{equation}
+or
+\begin{equation}
+    \frac{\mathrm{d}E_{\mathrm{att}}}{\mathrm{d}t}
+    =
+    -\Gamma_{\mathrm{D}}
+    E_{\mathrm{att}}.
+\end{equation}
+
+This ordinary attenuation calculation therefore reproduces the same fractional coherent-energy transfer rate characterized by $\Gamma_{\mathrm{D}}$, but it does not determine the evolution of the real photon carrier frequency. In particular,
+\begin{equation}
+    \frac{\mathrm{d}E}{\mathrm{d}t}
+    =
+    -\Gamma_{\mathrm{D}}E
+\end{equation}
+does not by itself imply
+\begin{equation}
+    \frac{\mathrm{d}\omega}{\mathrm{d}t}
+    =
+    -\Gamma_{\mathrm{D}}\omega.
+\end{equation}
+
+The completed cosmological photon branch therefore requires the additional coherent-action-preserving condition
+\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    \left(
+        \frac{E}{\omega}
+    \right)
+    =a
+    0.
+\end{equation}
+Together with the modal-energy transfer law, this gives
+\begin{equation}
+    \frac{\mathrm{d}\omega}{\mathrm{d}t}
+    =
+    -\Gamma_{\mathrm{D}}\omega,
+\end{equation}
+as developed in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
+
+Accordingly, $\Gamma$ and $\Gamma_{\mathrm{D}}$ are two constitutive manifestations of the same underlying FCC--Condensate visco-elastic relaxation mechanism: $\Gamma$ is the localized defect-induced Quantum Damping Rate governing wave arrest, whereas $\Gamma_{\mathrm{D}}$ is the defect-free Viscoelastic Vacuum Relaxation Rate governing weak coherent photon-energy relaxation. The ordinary damped-wave solution derived here establishes the attenuation comparator and the associated energy-transfer scale; it is not imposed as an additional amplitude-extinction law on the coherent cosmological photon branch.

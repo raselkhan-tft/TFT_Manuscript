@@ -2,242 +2,1090 @@
 \label{app:energy_and_chronology}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Abstract:} This appendix provides the strict mathematical derivations for the macroscopic geometric limits and the thermodynamic timeline of the universe. By modeling the active Spacetime Gravitational Floor (SGF) as a dual-phase visco-elastic Face-Centered Cubic (FCC) medium undergoing localized phase transitions, the exact volumetric capacity of the interstitial voids, the global percolation threshold for Catastrophic Decompression, and the absolute structural lifespan of the cosmic oscillator are derived as invariant mechanical boundaries.
+\noindent\textbf{Abstract:} This appendix develops the macroscopic geometric limits and thermodynamic chronology of the Tension Field Theory (TFT) cosmic oscillator. Modeling the active Spacetime Gravitational Floor (SGF) as a dual-phase visco-elastic Face-Centered Cubic (FCC) medium undergoing localized FCC$\rightarrow$SC phase transitions, we derive the local Octahedral accommodation limit, construct the global mass-weighted percolation threshold for Catastrophic Decompression, and formulate the Global Phase Avalanche governed by the macroscopic Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}$). The framework distinguishes the aggregate inertial mass carried by live FCC/SC phase boundaries from the physical volume of the saturated SC cores. Under an explicit single-rate phase-avalanche closure, the same macroscopic relaxation rate that governs coherent optical relaxation sets the fractional compounding rate of the self-sustaining FCC$\rightarrow$SC boundary network, producing a synchronized optical and thermodynamic clock without requiring direct conversion of photon energy into Black Hole mass.
 
 \section{The Local Volumetric Yield Limit (Phase Condensation)}
-As established in Part I, the active vacuum (State I) is an FCC lattice with an invariant geometric packing fraction of $\beta_{\mathrm{geo}} \approx 0.7405$. Mass creation requires the localized kinematic excitation of the lattice, which reduces the effective structural tension to $\approx 69\%$. This localized mass-energy condenses specifically within the primary pockets of the interstitial condensate: the Octahedral voids.
 
-To determine the absolute maximum mass the universe can locally sustain before the active vacuum geometrically exhausts and collapses into the frozen Simple Cubic core (State II), we calculate the precise volumetric fraction of these Octahedral voids relative to the FCC unit cell.
+As established in Part I, the active vacuum (State I) is an FCC lattice with an invariant geometric packing fraction of
+\begin{equation}
+    \beta_{\mathrm{geo}} \approx 0.7405.
+\end{equation}
+
+Mass formation requires localized kinematic excitation of the active lattice and is supported by the interstitial degrees of freedom between the FCC nodes. The primary isotropic accommodation pockets are the Octahedral voids.
+
+To determine the maximum local geometric accommodation associated with these sites, we calculate the precise volumetric fraction of the inscribed Octahedral regions relative to the FCC unit cell.
 
 \begin{itemize}
-    \item \textbf{Deriving the Octahedral Void Radius ($r_{\mathrm{O}}$):} 
-    In an FCC lattice formed by nodes of radius $r_{\mathrm{D}}$, the nodes touch along the face diagonal. The face diagonal is therefore $4r_{\mathrm{D}}$. By the Pythagorean theorem, the edge length of the unit cell ($a$) is:
+
+    \item \textbf{Deriving the Octahedral Void Radius ($r_{\mathrm{O}}$):}
+
+    In an FCC lattice formed by nodes of radius $r_{\mathrm{D}}$, neighboring nodes touch along the face diagonal. The face diagonal is therefore $4r_{\mathrm{D}}$. By the Pythagorean theorem, the edge length of the conventional unit cell is
     \begin{equation}
-        a = \sqrt{\frac{(4r_{\mathrm{D}})^2}{2}} = 2\sqrt{2} r_{\mathrm{D}}
-    \end{equation}
-    An Octahedral void is located perfectly at the midpoint of each edge of the unit cell. Looking along this edge, the distance from the center of a corner node to the center of the edge void is exactly half the edge length ($a/2$). Therefore, the radius of the node ($r_{\mathrm{D}}$) plus the inscribed radius of the void ($r_{\mathrm{O}}$) must equal $a/2$:
-    \begin{equation}
-        r_{\mathrm{D}} + r_{\mathrm{O}} = \frac{a}{2} = \frac{2\sqrt{2} r_{\mathrm{D}}}{2} = \sqrt{2} r_{\mathrm{D}}
-    \end{equation}
-    Isolating the void radius yields:
-    \begin{equation}
-        r_{\mathrm{O}} = \sqrt{2} r_{\mathrm{D}} - r_{\mathrm{D}} = (\sqrt{2}-1)r_{\mathrm{D}}
+        a
+        =
+        \sqrt{\frac{(4r_{\mathrm{D}})^2}{2}}
+        =
+        2\sqrt{2}\,r_{\mathrm{D}}.
     \end{equation}
 
-    \item \textbf{Deriving the Volumetric Fraction:} 
-    The total volume of the unit cell is $V_{\mathrm{cell}} = a^3 = 16\sqrt{2} r_{\mathrm{D}}^3$. Because there are exactly 4 total Octahedral voids per FCC unit cell (1 in the center, plus 12 shared quarter-voids on the edges), the maximum available void volume ($V_{\mathrm{oct}}$) is:
+    One class of FCC Octahedral sites lies at the midpoint of the unit-cell edges, with the symmetry-equivalent body-center site completing the Octahedral-site population of the conventional cell. Along an edge, the distance from the center of a corner node to the center of the Octahedral site is $a/2$. Therefore,
     \begin{equation}
-        V_{\mathrm{oct}} = 4 \left( \frac{4}{3} \pi r_{\mathrm{O}}^3 \right) = \frac{16\pi}{3}(\sqrt{2}-1)^3 r_{\mathrm{D}}^3
+        r_{\mathrm{D}}+r_{\mathrm{O}}
+        =
+        \frac{a}{2}
+        =
+        \sqrt{2}\,r_{\mathrm{D}}.
     \end{equation}
-    Dividing this specific void volume by the total cell volume yields the Octahedral Volumetric Fraction ($\beta_{\mathrm{oct}}$):
+
+    Isolating the inscribed radius gives
     \begin{equation}
-        \beta_{\mathrm{oct}} = \frac{V_{\mathrm{oct}}}{V_{\mathrm{cell}}} = \frac{\frac{16\pi}{3}(\sqrt{2}-1)^3 r_{\mathrm{D}}^3}{16\sqrt{2} r_{\mathrm{D}}^3} = \frac{\pi(\sqrt{2}-1)^3}{3\sqrt{2}} \approx 0.0526
+        r_{\mathrm{O}}
+        =
+        (\sqrt{2}-1)r_{\mathrm{D}}.
     \end{equation}
+
+    \item \textbf{Deriving the Volumetric Fraction:}
+
+    The total conventional-cell volume is
+    \begin{equation}
+        V_{\mathrm{cell}}
+        =
+        a^3
+        =
+        16\sqrt{2}\,r_{\mathrm{D}}^3.
+    \end{equation}
+
+    There are four Octahedral sites per conventional FCC unit cell: one body-center site and twelve edge sites, each shared by four neighboring cells. The total inscribed Octahedral volume is therefore
+    \begin{equation}
+        V_{\mathrm{oct}}
+        =
+        4
+        \left(
+            \frac{4}{3}\pi r_{\mathrm{O}}^3
+        \right)
+        =
+        \frac{16\pi}{3}
+        (\sqrt{2}-1)^3r_{\mathrm{D}}^3.
+    \end{equation}
+
+    Dividing by the unit-cell volume gives the Octahedral Volumetric Fraction,
+    \begin{equation}
+        \beta_{\mathrm{oct}}
+        =
+        \frac{V_{\mathrm{oct}}}{V_{\mathrm{cell}}}
+        =
+        \frac{\pi(\sqrt{2}-1)^3}{3\sqrt{2}}
+        \approx
+        0.0526.
+    \end{equation}
+
 \end{itemize}
 
-The local volumetric capacity for macroscopic mass formation ($\beta_{\mathrm{b}}$) is strictly bounded at 5.26\% ($\beta_{\mathrm{b}} \leq \beta_{\mathrm{oct}}$). Condensation beyond this limit mathematically exhausts the interstitial capacity, triggering the $\rho_{\mathrm{QG}}$ phase transition (Black Hole formation).
+Within the TFT structural-capacity interpretation, this $5.26\%$ fraction provides the local isotropic Octahedral accommodation ceiling,
+\begin{equation}
+    \beta_{\mathrm{b}}
+    \leq
+    \beta_{\mathrm{oct}}
+    \approx
+    0.0526.
+\end{equation}
+
+This quantity is a local geometric capacity benchmark. It is not the physical volume fraction of saturated State II SC cores. Black Hole formation occurs when the local active FCC state reaches gravitational saturation,
+\begin{equation}
+    \alpha_{\mathrm{G}}
+    \rightarrow
+    1,
+\end{equation}
+forcing the FCC$\rightarrow$SC phase transition and creating a live FCC/SC phase boundary.
 
 \section{The Global Topological Limit (Percolation Theory and The Big Rupture)}
 
-While the volumetric limit bounds the local structural capacity for mass condensation, Percolation Theory bounds the ultimate global stability of the macroscopic cosmic reservoir. A crystalline tension field completely ruptures only when its topological defects---the frozen State II Black Hole cores left behind after local phase collapses---mechanically connect to form a contiguous, macroscopic fault line. 
+The local Octahedral limit constrains the geometric accommodation of localized matter defects. The ultimate global stability of the macroscopic reservoir is instead governed by connectivity of the distributed State II phase-boundary network.
+
+In TFT, the inertial mass of a Black Hole is phase-segregated onto its live FCC/SC boundary. The global quantity relevant to percolation is therefore the Aggregate Percolating Mass ($M_{\mathrm{p}}$), defined as the combined inertial mass carried by the participating live phase boundaries:
+\begin{equation}
+    M_{\mathrm{p}}(t)
+    \equiv
+    \sum_i
+    \int_{\partial\Omega_i(t)}
+    \Sigma_{\partial}\,
+    \mathrm{d}A,
+\end{equation}
+where $\Sigma_{\partial}$ is the local surface mass density and the sum is taken over the distinct live FCC/SC boundary domains. Once initially separate boundaries merge through a saturated bridge, the resulting common boundary is treated as one connected phase-boundary domain.
+
+For separated approximately spherical Black Holes, this reduces to
+\begin{equation}
+    M_{\mathrm{p}}(t)
+    =
+    \sum_i M_i(t).
+\end{equation}
+
+Thus, $M_{\mathrm{p}}$ is an aggregate boundary-mass measure. It is not the summed geometrical volume of the SC interiors.
 
 \begin{itemize}
-    \item \textbf{The Interwoven Sub-Lattice:} In standard crystallography, the spatial coordinates of the primary interstitial voids within an FCC matrix arrange themselves into a secondary, interwoven geometric pattern known as a sub-lattice. This is not a physical barrier, but a strict coordinate map of the available interstitial condensate capacity. State II structural defects (hyper-dense SC nodes) form exclusively at these specific geometric sites.
-    
-    \item \textbf{Site Percolation Threshold ($p_{\mathrm{c}}$):} The established mathematical constant for site percolation (the threshold for global structural connectivity) in an FCC lattice is $p_{\mathrm{c}} \approx 0.199$.
-    
-    \item \textbf{Total Interstitial Fraction ($\beta_{\mathrm{IC}}$):} As established in Section 6, the total available interstitial condensate capacity in the active vacuum is $\beta_{\mathrm{IC}} = 1 - \beta_{\mathrm{geo}} \approx 0.2595$.
+
+    \item \textbf{The Interwoven Interstitial Network:}
+
+    The interstitial regions of the FCC Soft Floor form a connected geometric network through which localized phase saturation and boundary coupling can develop. State II cores nucleate locally, while their exterior strain fields and live phase boundaries can subsequently couple across this network.
+
+    \item \textbf{Site Percolation Threshold ($p_{\mathrm{c}}$):}
+
+    TFT adopts the FCC site-percolation value
+    \begin{equation}
+        p_{\mathrm{c}}
+        \approx
+        0.199
+    \end{equation}
+    as the baseline coarse-grained connectivity threshold for the distributed defect network. Because the actual cosmological phase domains grow and interact through correlated strain fields, a complete nonlinear correlated-percolation calculation remains a future microscopic refinement of this baseline closure.
+
+    \item \textbf{Total Interstitial Fraction ($\beta_{\mathrm{IC}}$):}
+
+    The total geometrical interstitial fraction of the active FCC vacuum is
+    \begin{equation}
+        \beta_{\mathrm{IC}}
+        =
+        1-\beta_{\mathrm{geo}}
+        \approx
+        0.2595.
+    \end{equation}
+
 \end{itemize}
 
-To find the absolute global threshold for defect density ($\beta_{\mathrm{rup}}$) before the cosmic reservoir suffers Catastrophic Decompression, we multiply the sub-lattice percolation threshold by the total interstitial capacity:
+To connect the site-occupation probability to the macroscopic boundary-mass fraction, TFT adopts an equal-capacity coarse-graining of the interstitial network. Let $N_{\mathrm{cap}}$ denote the number of equivalent coarse-grained interstitial capacity elements and let $m_{\mathrm{cap}}$ denote the structural mass-equivalent capacity assigned to each element. Then
 \begin{equation}
-    \beta_{\mathrm{rup}} = p_{\mathrm{c}} \times \beta_{\mathrm{IC}} = 0.199 \times 0.2595 \approx 0.0516
+    \beta_{\mathrm{IC}}M_{\mathrm{Res}}
+    =
+    N_{\mathrm{cap}}m_{\mathrm{cap}}.
 \end{equation}
-Because the global percolation limit ($5.16\%$) is mathematically lower than the local void limit ($5.26\%$), the universe is structurally guaranteed to shatter globally before it can ever exhaust its local mass-generation capacity.
+
+If $N_{\mathrm{occ}}$ of these elements participate in the connected State II boundary network, their aggregate boundary mass is
+\begin{equation}
+    M_{\mathrm{p}}
+    =
+    N_{\mathrm{occ}}m_{\mathrm{cap}}.
+\end{equation}
+
+Dividing these relations gives
+\begin{equation}
+    \frac{M_{\mathrm{p}}}
+    {\beta_{\mathrm{IC}}M_{\mathrm{Res}}}
+    =
+    \frac{N_{\mathrm{occ}}}
+    {N_{\mathrm{cap}}}.
+\end{equation}
+
+Defining the coarse-grained occupation fraction
+\begin{equation}
+    p
+    \equiv
+    \frac{N_{\mathrm{occ}}}
+    {N_{\mathrm{cap}}},
+\end{equation}
+we therefore obtain
+\begin{equation}
+    p
+    =
+    \frac{M_{\mathrm{p}}}
+    {\beta_{\mathrm{IC}}M_{\mathrm{Res}}}.
+\end{equation}
+
+Under this equal-capacity FCC percolation closure, global connectivity occurs when
+\begin{equation}
+    p=p_{\mathrm{c}}.
+\end{equation}
+
+The corresponding Global Rupture Trigger Mass is therefore
+\begin{equation}
+    M_{\mathrm{trg}}
+    =
+    p_{\mathrm{c}}
+    \beta_{\mathrm{IC}}
+    M_{\mathrm{Res}}.
+\end{equation}
+
+Defining the rupture fraction relative to the total reservoir mass,
+\begin{equation}
+    \beta_{\mathrm{rup}}
+    \equiv
+    \frac{M_{\mathrm{trg}}}
+    {M_{\mathrm{Res}}},
+\end{equation}
+gives
+\begin{equation}
+    \beta_{\mathrm{rup}}
+    =
+    p_{\mathrm{c}}\beta_{\mathrm{IC}}
+    =
+    0.199\times0.2595
+    \approx
+    0.0516.
+\end{equation}
+
+The physical meaning of this $5.16\%$ threshold is therefore
+\begin{equation}
+    \frac{M_{\mathrm{p}}}{M_{\mathrm{Res}}}
+    \rightarrow
+    0.0516,
+\end{equation}
+not
+\begin{equation}
+    \frac{V_{\mathrm{SC}}}{V_{\mathrm{Res}}}
+    \rightarrow
+    0.0516.
+\end{equation}
+
+The global rupture threshold is an aggregate live-boundary mass threshold expressed in the common structural-capacity normalization of the reservoir.
+
+Within that same structural-capacity normalization,
+\begin{equation}
+    \beta_{\mathrm{rup}}
+    \approx
+    0.0516
+    <
+    \beta_{\mathrm{oct}}
+    \approx
+    0.0526.
+\end{equation}
+
+Thus, under the baseline equal-capacity percolation closure, the global connectivity threshold lies slightly below the local Octahedral accommodation ceiling: the distributed phase-boundary network reaches the global fracture condition before the local structural-capacity benchmark is exhausted.
 
 \subsection{Derivation of the Deflation Parameters}
 \label{subsec:deflation_parameters}
 
-Once the absolute threshold of $5.16\%$ is established, we can derive the strict physical boundary limits of the deflating cosmic reservoir at the exact moment of this rupture. As active Face-Centered Cubic (FCC) vacuum is consumed and converted into zero-void SC cores, the macroscopic reservoir must physically deflate to maintain the contiguous tension of the field.
+The $5.16\%$ rupture threshold is a boundary-mass fraction and must not be interpreted as a $5.16\%$ physical SC-core volume fraction. The macroscopic deflation law instead follows from depletion of the active FCC reservoir.
 
-\begin{itemize}
-    \item \textbf{Global Rupture Trigger Mass ($M_{\mathrm{trg}}$):} The absolute mass threshold at which Catastrophic Decompression occurs. The rupture triggers strictly when the Aggregate Percolating Mass ($M_{\mathrm{p}}$) reaches $5.16\%$ of the total macroscopic reservoir mass ($M_{\mathrm{Res}}$).
-    \begin{equation}
-        M_{\mathrm{trg}} = 0.0516 \cdot (1.6707 \times 10^{79} \text{ kg}) \approx 8.6208 \times 10^{77} \text{ kg}
-    \end{equation}
-    
-    \item \textbf{Volumetric Deflation Limit ($V_{\mathrm{rup}}$):} The active FCC volume shrinks by exactly $5.16\%$, leaving $94.84\%$ of the initial volume intact at the moment of structural failure.
-    \begin{equation}
-        V_{\mathrm{rup}} = 0.9484 \cdot V_{\mathrm{Res}} \approx 7.9058 \times 10^{104} \text{ m}^3
-    \end{equation}
-    
-    \item \textbf{Deflated Rupture Radius ($R_{\mathrm{rup}}$):} The physical contraction of the bounding reservoir boundary at the moment the fault line snaps is derived from the cube root of the final volume. 
-    \begin{equation}
-        R_{\mathrm{rup}} = R_{\mathrm{Res}} \times (0.9484)^{1/3} \approx 5.7361 \times 10^{34} \text{ m}
-    \end{equation}
-\end{itemize}
-The boundary of the Geometric Cosmic Horizon physically shrinks inward by $\approx 1.0220 \times 10^{33}$ m prior to catastrophic failure.
+As State I structural capacity is transferred into live State II phase boundaries, the active-reservoir mass is
+\begin{equation}
+    M_{\mathrm{FCC}}(t)
+    =
+    M_{\mathrm{Res}}
+    -
+    M_{\mathrm{p}}(t).
+\end{equation}
+
+For the quasi-static pre-rupture branch, TFT adopts the reservoir-density closure that the remaining active FCC domain preserves its reference mean structural density during global contraction:
+\begin{equation}
+    \frac{M_{\mathrm{FCC}}(t)}
+    {V(t)}
+    =
+    \frac{M_{\mathrm{Res}}}
+    {V_{\mathrm{Res}}}.
+\end{equation}
+
+It follows that
+\begin{equation}
+    \frac{V(t)}{V_{\mathrm{Res}}}
+    =
+    1-
+    \frac{M_{\mathrm{p}}(t)}
+    {M_{\mathrm{Res}}}.
+\end{equation}
+
+At the global rupture threshold,
+\begin{equation}
+    \frac{M_{\mathrm{p}}}
+    {M_{\mathrm{Res}}}
+    =
+    \beta_{\mathrm{rup}}
+    \approx
+    0.0516,
+\end{equation}
+so
+\begin{equation}
+    V_{\mathrm{rup}}
+    =
+    (1-\beta_{\mathrm{rup}})
+    V_{\mathrm{Res}}
+    =
+    0.9484V_{\mathrm{Res}}.
+\end{equation}
+
+Using the established reservoir volume,
+\begin{equation}
+    V_{\mathrm{rup}}
+    \approx
+    7.9058\times10^{104}
+    \text{ m}^3.
+\end{equation}
+
+The corresponding spherical reservoir radius satisfies
+\begin{equation}
+    R_{\mathrm{rup}}
+    =
+    R_{\mathrm{Res}}
+    (1-\beta_{\mathrm{rup}})^{1/3},
+\end{equation}
+giving
+\begin{equation}
+    R_{\mathrm{rup}}
+    \approx
+    5.7361\times10^{34}
+    \text{ m}.
+\end{equation}
+
+The pre-rupture contraction of the macroscopic structural reservoir is therefore
+\begin{equation}
+    \Delta R
+    =
+    R_{\mathrm{Res}}-R_{\mathrm{rup}}
+    \approx
+    1.0220\times10^{33}
+    \text{ m}.
+\end{equation}
+
+These deflation values follow from the quasi-static mean-reservoir-density closure of the remaining active FCC domain. They do not require, and must not be interpreted as, a $5.16\%$ physical filling of the reservoir by zero-void SC cores.
+
+The Global Rupture Trigger Mass itself is
+\begin{equation}
+    M_{\mathrm{trg}}
+    =
+    0.0516
+    \left(
+        1.6707\times10^{79}
+        \text{ kg}
+    \right)
+    \approx
+    8.6208\times10^{77}
+    \text{ kg}.
+\end{equation}
 
 \subsection{The Spanning Cluster and Topological Continuity}
 
-In statistical mechanics, the percolation threshold ($p_{\mathrm{c}}$) marks the geometric phase transition from isolated local clusters to a single macroscopic ``Spanning Cluster.'' It may seem counterintuitive that a volumetric fill of only $5.16\%$ is mathematically sufficient to form a continuous physical chain stretching across the entire deflated diameter of $5.7361 \times 10^{34}$ m. To prove this geometric capacity, we analyze the available linear span of the saturated phase network.
+In percolation theory, the critical threshold marks the transition from isolated clusters to a reservoir-spanning connected network. In TFT, this connectivity does not require the physical SC interiors of individual Black Holes to touch shoulder-to-shoulder.
 
-Let the total rupture volume of the universe be $V_{\mathrm{rup}} = \frac{4}{3}\pi R_{\mathrm{rup}}^3$. The total volume of all State II Saturated Cores (Black Holes) is exactly $V_{\mathrm{BH}} = 0.0516 \cdot V_{\mathrm{rup}}$.
-
-Assuming this saturated volume is distributed into $N$ identical macroscopic Black Holes, each bounded by the phase transition radius ($R_{\mathrm{QG}}$), the total number of Black Holes is the total State II volume divided by the individual boundary volume:
+The live-boundary merger mechanics instead permit two initially separated State II domains to become mechanically connected when the strained FCC region between them reaches saturation. The local bridge condition is represented schematically by
 \begin{equation}
-    N = \frac{V_{\mathrm{BH}}}{\frac{4}{3}\pi R_{\mathrm{QG}}^3}
+    \alpha_{\mathrm{bridge}}
+    =
+    \alpha_{\mathrm{G},1}
+    +
+    \alpha_{\mathrm{G},2}
+    +
+    \alpha_{\mathrm{dyn}}
+    \geq
+    1,
+\end{equation}
+where $\alpha_{\mathrm{G},1}$ and $\alpha_{\mathrm{G},2}$ are the quasi-static gravitational strain contributions and $\alpha_{\mathrm{dyn}}$ represents additional dynamical loading of the intervening region.
+
+When this condition is satisfied across a connected path, the intermediate active FCC region undergoes the same local saturation transition that defines an individual Black Hole boundary:
+\begin{equation}
+    \mathrm{FCC}
+    \rightarrow
+    \mathrm{SC}.
 \end{equation}
 
-The total maximum linear length ($L_{\mathrm{tot}}$) available to construct the fault line, if these $N$ saturated cores were aligned shoulder-to-shoulder, is their total count multiplied by their diameter ($2R_{\mathrm{QG}}$):
+The global connectivity sequence is therefore
 \begin{equation}
-    L_{\mathrm{tot}} = N(2R_{\mathrm{QG}}) = \left( \frac{V_{\mathrm{BH}}}{\frac{4}{3}\pi R_{\mathrm{QG}}^3} \right)(2R_{\mathrm{QG}}) = \frac{3 V_{\mathrm{BH}}}{2\pi R_{\mathrm{QG}}^2}
+\begin{array}{c}
+    \text{isolated State II domains}
+    \\
+    \Downarrow
+    \\
+    \text{overlapping exterior strain fields}
+    \\
+    \Downarrow
+    \\
+    \text{saturated FCC/SC bridges}
+    \\
+    \Downarrow
+    \\
+    \text{connected live-boundary network}
+    \\
+    \Downarrow
+    \\
+    \text{reservoir-spanning phase-boundary cluster}.
+\end{array}
 \end{equation}
 
-\textbf{Geometric Proof:} Because the individual phase boundary radius ($R_{\mathrm{QG}}$) is squared in the denominator, the total linear length of the spanning material scales inversely with the square of the macroscopic black hole size ($L_{\mathrm{tot}} \propto R_{\mathrm{QG}}^{-2}$). By distributing $5.16\%$ of the universe's volume into stellar-mass State II cores, the resulting linear geometry is immensely vast. It provides orders of magnitude more physical length than is required to span the reservoir. Consequently, the distributed black holes possess more than enough structural material to form a highly tortuous, unbroken fractal web.
+The object that percolates is therefore the combined network of State II cores, live FCC/SC boundaries, and saturated connecting bridges. The physical SC interiors themselves need not occupy $5.16\%$ of the reservoir volume, nor must individual Black Hole cores be in direct geometric contact.
+
+The familiar term ``fault line'' is retained as an intuitive description of this global fracture path. In the full three-dimensional reservoir, the critical object is more properly a tortuous spanning fracture network or manifold.
 
 \subsection{The Phase Trigger Unification}
 
-This topological limit provides the exact mechanical cause for the Big Rupture criteria. As the universe ages, it accumulates frozen State II cores. When this distributed network of rigid defects reaches $5.16\%$ of the reservoir's capacity, the network globally percolates. 
+As the universe evolves, self-sustaining FCC$\rightarrow$SC phase domains accumulate boundary mass and become increasingly interconnected. Under the equal-capacity percolation closure, the baseline topological trigger is reached when
+\begin{equation}
+    M_{\mathrm{p}}
+    =
+    M_{\mathrm{trg}},
+\end{equation}
+equivalently,
+\begin{equation}
+    \frac{M_{\mathrm{p}}}
+    {\beta_{\mathrm{IC}}M_{\mathrm{Res}}}
+    =
+    p_{\mathrm{c}}.
+\end{equation}
 
-This mechanically contiguous fault line physically shatters the structural integrity of the active vacuum, forcing the containment pressure gradient to vanish ($\Delta P \to 0$). Without this stabilizing pressure, the hyper-compressed fault line violently yields, triggering the martensitic snap-back (Catastrophic Decompression) that restores the macroscopic Face-Centered Cubic (FCC) geometry for the next cosmic cycle. The cosmic energy budget is therefore governed strictly by the invariant geometric packing limit of the active vacuum.
+At this threshold the live-boundary and saturated-bridge system forms a reservoir-spanning cluster. TFT adopts the global rupture condition that the critical spanning cluster becomes a load-severing fault network for the active FCC containment structure. Consequently,
+\begin{equation}
+    \Delta P
+    \rightarrow
+    0.
+\end{equation}
+
+Loss of the stabilizing global pressure differential removes the mechanical confinement of the phase-locked network. The hyper-compressed State II structure then undergoes rapid martensitic snap-back,
+\begin{equation}
+    \mathrm{SC}
+    \rightarrow
+    \mathrm{FCC},
+\end{equation}
+producing Catastrophic Decompression and restoring the active State I geometry for the next cosmic cycle.
+
+The Big Rupture is therefore controlled by a mass-weighted topological connectivity threshold, not by exhaustion of physical SC-core volume.
 
 \section{The Chronology of the Global Phase Avalanche}
 
-Because the topological limit ($\beta_{\mathrm{rup}} \approx 0.0516$) dictates the ultimate structural failure of the active vacuum, it simultaneously governs the thermodynamic timeline of the macroscopic oscillator.
+The percolation threshold determines the endpoint of the structural cycle. To determine the corresponding macroscopic clock, TFT tracks the aggregate live-boundary mass $M_{\mathrm{p}}$ generated by the self-sustaining FCC$\rightarrow$SC phase-conversion network.
 
 \subsection{The Global Phase Avalanche Equation}
 
-To isolate the absolute thermodynamic lifespan of the universe, we mathematically evaluate the macroscopic phase clock by tracking the exponential growth required to scale the fundamental Micro-Black Hole Seed ($M_{\mathrm{D,G}}$) to the global defect limit. 
+Black Hole formation in TFT is a nucleated phase transition. The initial localized mass provides the trigger required to drive the active FCC vacuum to saturation. Once the FCC$\rightarrow$SC boundary is established, continued Black Hole growth proceeds through advancement of the crystallization front: newly converted regions extend the live boundary and expose additional active FCC material to phase conversion.
 
-Because Black Holes act as the ultimate thermodynamic sinks of the universe, this global mass-energy growth is strictly driven by the fundamental energy dissipation rate of the contiguous FCC field ($\Gamma_{\mathrm{D}}$). We define the Global Phase Avalanche Equation as:
+The cosmological chronology adopts the single-rate macroscopic relaxation closure
 \begin{equation}
-    M_{\mathrm{p}}(t) = M_{\mathrm{D,G}} \cdot e^{\Gamma_{\mathrm{D}} t}
+    \frac{1}{M_{\mathrm{p}}}
+    \frac{\mathrm{d}M_{\mathrm{p}}}{\mathrm{d}t}
+    =
+    \Gamma_{\mathrm{D}}.
 \end{equation}
 
+Equivalently,
+\begin{equation}
+    \frac{\mathrm{d}M_{\mathrm{p}}}{\mathrm{d}t}
+    =
+    \Gamma_{\mathrm{D}}M_{\mathrm{p}}.
+\end{equation}
+
+This equality is a constitutive macroscopic closure of the present TFT chronology: the fractional compounding rate of the self-sustaining FCC$\rightarrow$SC phase-boundary network is taken to equal the macroscopic Viscoelastic Vacuum Relaxation Rate. A microscopic derivation of this equality from the underlying phase-front dynamics remains a separate completion requirement.
+
+Integration gives the Global Phase Avalanche Equation,
+\begin{equation}
+    M_{\mathrm{p}}(t)
+    =
+    M_{\mathrm{p}}(0)
+    e^{\Gamma_{\mathrm{D}}t}.
+\end{equation}
+
+No direct conversion of coherently relaxed photon energy into Black Hole mass is assumed. The optical-relaxation channel and the FCC$\rightarrow$SC phase-avalanche channel are distinct mechanical processes. Their common appearance of $\Gamma_{\mathrm{D}}$ represents the single-rate macroscopic relaxation closure of the active FCC--Condensate system.
+
+At the present cosmological epoch, the numerical value of $\Gamma_{\mathrm{D}}$ is empirically calibrated by the observed low-redshift Hubble slope,
+\begin{equation}
+    \Gamma_{\mathrm{D}}
+    =
+    H_0^{(\mathrm{obs})}.
+\end{equation}
+
+The calibration supplies the current macroscopic value of $\Gamma_{\mathrm{D}}$; it does not replace the unresolved microscopic derivation of the relaxation rate.
+
+For the kinematic-length representation used in the unified cosmic phase diagram,
+\begin{equation}
+    x=c_{\mathrm{E}}t.
+\end{equation}
+
+The Global Phase Avalanche may therefore be written in length form as
+\begin{equation}
+    M_{\mathrm{p}}(x)
+    =
+    M_{\mathrm{p}}(0)
+    \exp\left(
+        \frac{\Gamma_{\mathrm{D}}x}
+        {c_{\mathrm{E}}}
+    \right).
+\end{equation}
+
+This is the growing phase-avalanche counterpart of the coherent optical relaxation law
+\begin{equation}
+    E_{\mathrm{obs}}(x)
+    =
+    E_{\mathrm{emit}}
+    \exp\left(
+        -\frac{\Gamma_{\mathrm{D}}x}
+        {c_{\mathrm{E}}}
+    \right),
+\end{equation}
+within the constant-rate weak-loading optical branch.
+
+The two exponentials therefore evolve oppositely along the same macroscopic relaxation scale while representing physically distinct processes.
+
 \textbf{Variable Definitions:}
+
 \begin{itemize}
-    \item \textbf{$M_{\mathrm{p}}(t)$ (The Aggregate Percolating Mass):} The total combined mass-energy segregated onto the static State II phase boundaries by the entire global network of Black Holes at time $t$. This equation models the macroscopic thermodynamic accumulation of the entire reservoir leading strictly toward the global percolation threshold.
-    \item \textbf{$M_{\mathrm{D,G}}$ (The Micro-Black Hole Seed):} $\approx 10.033$ kg. The absolute minimum kinematic threshold required to fracture a localized void and nucleate a State II core.
-    \item \textbf{$\Gamma_{\mathrm{D}}$ (The Vacuum Damping Rate):} The visco-elastic compounding rate driving the exponential mass accumulation. The inverse of this constant ($1/\Gamma_{\mathrm{D}}$) defines the fundamental visco-elastic decay time.
+
+    \item \textbf{$M_{\mathrm{p}}(t)$ (Aggregate Percolating Mass):} The total inertial mass phase-segregated onto the distributed live FCC/SC boundaries participating in the global State II network.
+
+    \item \textbf{$M_{\mathrm{p}}(0)$ (Primordial Aggregate Boundary Mass):} The effective aggregate live-boundary mass established during the short primordial State II nucleation interval immediately following Catastrophic Decompression.
+
+    \item \textbf{$M_{\mathrm{D,G}}$ (Micro-Black Hole Seed):} Approximately $10.033$ kg. This is the minimum localized kinematic mass threshold required to nucleate one stable State II phase domain. Therefore,
+    \begin{equation}
+        M_{\mathrm{p}}(0)
+        \geq
+        M_{\mathrm{D,G}}.
+    \end{equation}
+
+    \item \textbf{$\Gamma_{\mathrm{D}}$ (Viscoelastic Vacuum Relaxation Rate):} The macroscopic fractional relaxation rate of the FCC--Condensate system. Under the single-rate phase-avalanche closure, it also sets the fractional compounding rate of the self-sustaining State II boundary network.
+
 \end{itemize}
 
-\textbf{The Initialization Boundary ($t \approx 0$)}
+\textbf{The Initialization Boundary ($t\approx0$)}
 
-Because State II cores are strictly geometric lattice collapses rather than atomic structures, their formation does not require the universe to cool. In the immediate, highly chaotic aftermath of Catastrophic Decompression ($t \approx 0$), overlapping extreme acoustic shockwaves instantly push localized regions of the active vacuum beyond their kinematic saturation limit ($E_{\mathrm{max}}$). 
+Because State II domains are lattice phase transitions rather than atomic structures, their nucleation does not require the formation of neutral matter. In the immediate aftermath of Catastrophic Decompression, overlapping longitudinal acoustic shockwaves can produce regions of extreme localized compression.
 
-This triggers the immediate formation of the first generation of State II cores (Primordial Black Holes) at $t \approx 0$, preceding the formation of stable atomic structures by 386,000 years (\hyperref[app:lattice_annealing]{Appendix~\ref*{app:lattice_annealing}}). Therefore, the exponential avalanche clock initiates at the exact moment the active vacuum is restored, functionally predating both atomic recombination and mature galactic evolution.
+Wherever the active FCC vacuum reaches the saturation condition
+\begin{equation}
+    \alpha_{\mathrm{G}}
+    \rightarrow
+    1,
+\end{equation}
+the local Soft Floor becomes phase-locked,
+\begin{equation}
+    \mathrm{FCC}
+    \rightarrow
+    \mathrm{SC},
+\end{equation}
+creating primordial State II nuclei.
+
+A potentially large population of primordial nuclei may therefore form during the short post-rupture transient. Their exact number is not required to determine the long-time exponential form of the Global Phase Avalanche. Primordial nucleation occurring over a time interval negligible compared with $1/\Gamma_{\mathrm{D}}$ is absorbed into the effective initialization $M_{\mathrm{p}}(0)$.
+
+The minimum possible initialization is the single-seed limit,
+\begin{equation}
+    M_{\mathrm{p}}(0)
+    =
+    M_{\mathrm{D,G}},
+\end{equation}
+while any distributed primordial population satisfies
+\begin{equation}
+    M_{\mathrm{p}}(0)
+    >
+    M_{\mathrm{D,G}}.
+\end{equation}
+
+The phase-avalanche clock therefore begins with restoration of the active FCC vacuum and precedes the later lattice-annealing epoch required for stable neutral hydrogen.
 
 \subsection{Integration of the Macroscopic Lifespan ($T_{\mathrm{cyc}}$)}
 
-As derived in \hyperref[sec:reservoir_mass]{Section~\ref*{sec:reservoir_mass}}, the exact mass of the total cosmic reservoir is $M_{\mathrm{Res}} \approx 1.6707 \times 10^{79}$ kg. The macroscopic cycle terminates when the defect network achieves the 19.9 percent site percolation threshold, requiring the conversion of exactly 5.16 percent of this total reservoir into rigid cores.
-
-As derived in \hyperref[subsec:deflation_parameters]{Section~\ref*{subsec:deflation_parameters}}, the Global Rupture Trigger ($M_{\mathrm{trg}}$) occurs at this precise topological limit ($8.6208 \times 10^{77}$ kg). Integrating the phase avalanche from the fundamental nucleation seed ($M_{\mathrm{D,G}}$) to this rupture limit yields the total oscillation time ($T_{\mathrm{cyc}}$):
+As derived in \hyperref[sec:reservoir_mass]{Section~\ref*{sec:reservoir_mass}}, the total structural reservoir mass is
 \begin{equation}
-    8.6208 \times 10^{77} \text{ kg} = 10.033 \text{ kg} \cdot e^{\Gamma_{\mathrm{D}} T_{\mathrm{cyc}}}
-\end{equation}
-\begin{equation}
-    e^{\Gamma_{\mathrm{D}} T_{\mathrm{cyc}}} \approx 8.5924 \times 10^{76}
-\end{equation}
-\begin{equation}
-    \Gamma_{\mathrm{D}} T_{\mathrm{cyc}} = \ln(8.5924 \times 10^{76}) \approx 177.15
+    M_{\mathrm{Res}}
+    \approx
+    1.6707\times10^{79}
+    \text{ kg}.
 \end{equation}
 
-Multiplying by the visco-elastic decay time ($1/\Gamma_{\mathrm{D}} \approx 13.387$ billion years) establishes the absolute structural lifespan:
+Under the equal-capacity percolation closure, the cycle terminates when the aggregate live-boundary mass reaches
 \begin{equation}
-    T_{\mathrm{cyc}} = 177.15 \cdot 13.387 \text{ Billion Years} \approx 2.3715 \text{ Trillion Years}
+    M_{\mathrm{trg}}
+    \approx
+    8.6208\times10^{77}
+    \text{ kg}.
 \end{equation}
+
+Applying the Global Phase Avalanche Equation at the rupture time gives
+\begin{equation}
+    M_{\mathrm{trg}}
+    =
+    M_{\mathrm{p}}(0)
+    e^{\Gamma_{\mathrm{D}}T_{\mathrm{cyc}}}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \Gamma_{\mathrm{D}}T_{\mathrm{cyc}}
+    =
+    \ln\left(
+        \frac{M_{\mathrm{trg}}}
+        {M_{\mathrm{p}}(0)}
+    \right),
+\end{equation}
+and
+\begin{equation}
+    T_{\mathrm{cyc}}
+    =
+    \frac{1}{\Gamma_{\mathrm{D}}}
+    \ln\left(
+        \frac{M_{\mathrm{trg}}}
+        {M_{\mathrm{p}}(0)}
+    \right).
+\end{equation}
+
+Because
+\begin{equation}
+    M_{\mathrm{p}}(0)
+    \geq
+    M_{\mathrm{D,G}},
+\end{equation}
+the minimum-seed initialization produces the maximum possible cycle duration under the present phase-avalanche closure:
+\begin{equation}
+    T_{\mathrm{cyc}}
+    \leq
+    \frac{1}{\Gamma_{\mathrm{D}}}
+    \ln\left(
+        \frac{M_{\mathrm{trg}}}
+        {M_{\mathrm{D,G}}}
+    \right).
+\end{equation}
+
+For the minimum-seed branch,
+\begin{equation}
+    M_{\mathrm{p}}(0)
+    =
+    M_{\mathrm{D,G}}
+    \approx
+    10.033
+    \text{ kg},
+\end{equation}
+and therefore
+\begin{equation}
+    8.6208\times10^{77}
+    =
+    10.033\,
+    e^{\Gamma_{\mathrm{D}}T_{\mathrm{cyc}}}.
+\end{equation}
+
+Thus,
+\begin{equation}
+    e^{\Gamma_{\mathrm{D}}T_{\mathrm{cyc}}}
+    \approx
+    8.5924\times10^{76},
+\end{equation}
+and
+\begin{equation}
+    \Gamma_{\mathrm{D}}T_{\mathrm{cyc}}
+    =
+    \ln\left(
+        8.5924\times10^{76}
+    \right)
+    \approx
+    177.15.
+\end{equation}
+
+Using
+\begin{equation}
+    \frac{1}{\Gamma_{\mathrm{D}}}
+    \approx
+    13.387
+    \text{ billion years},
+\end{equation}
+the minimum-seed branch gives
+\begin{equation}
+    T_{\mathrm{cyc}}
+    \approx
+    177.15
+    \times
+    13.387
+    \text{ billion years}
+    \approx
+    2.3715
+    \text{ trillion years}.
+\end{equation}
+
+The value $2.3715$ trillion years is therefore the maximum structural-cycle duration obtained under the minimum-seed normalization and the single-rate phase-avalanche closure. A larger primordial aggregate $M_{\mathrm{p}}(0)$ shortens the absolute elapsed cycle time logarithmically but does not alter the rupture mass or the exponential growth law.
+
+The corresponding kinematic cycle length is
+\begin{equation}
+    L_{\mathrm{max}}
+    \equiv
+    c_{\mathrm{E}}T_{\mathrm{cyc}},
+\end{equation}
+so generally
+\begin{equation}
+    L_{\mathrm{max}}
+    =
+    \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}}
+    \ln\left(
+        \frac{M_{\mathrm{trg}}}
+        {M_{\mathrm{p}}(0)}
+    \right).
+\end{equation}
+
+Using
+\begin{equation}
+    R_{\mathrm{U}}
+    =
+    \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}},
+\end{equation}
+this becomes
+\begin{equation}
+    L_{\mathrm{max}}
+    =
+    R_{\mathrm{U}}
+    \ln\left(
+        \frac{M_{\mathrm{trg}}}
+        {M_{\mathrm{p}}(0)}
+    \right).
+\end{equation}
+
+For the minimum-seed normalization,
+\begin{equation}
+    L_{\mathrm{max}}
+    \approx
+    2.24\times10^{28}
+    \text{ m}.
+\end{equation}
+
+At the endpoint,
+\begin{equation}
+    x=L_{\mathrm{max}}
+    \qquad\Longleftrightarrow\qquad
+    t=T_{\mathrm{cyc}}
+    \qquad\Longleftrightarrow\qquad
+    M_{\mathrm{p}}=M_{\mathrm{trg}}.
+\end{equation}
+
+Thus, $L_{\mathrm{max}}$ is the kinematic length corresponding to the complete structural cycle. It is not an independent material boundary or causal boundary of the substrate.
 
 \subsection{Integration of the Current Epoch ($t_{\mathrm{cur}}$)}
 
-To calculate the current elapsed time ($t_{\mathrm{cur}}$), we evaluate the equation against the aggregate mass of the currently existing State II defect network ($M_{\mathrm{cur}}$).
+To estimate the current elapsed phase time, the Global Phase Avalanche is evaluated against the present aggregate State II boundary mass $M_{\mathrm{cur}}$.
 
-Current astrophysical census data bounds the inertial mass of all Black Holes within our causal horizon ($R_{\mathrm{U}}$) at $M_{\mathrm{obs}} \approx 1.000 \times 10^{50}$ kg. This observable inertia strictly represents the mass-energy already harvested from the active vacuum and frozen into State II defects locally. 
+Adopting the current observational Black Hole mass inventory over the reference observable domain as
+\begin{equation}
+    M_{\mathrm{obs}}
+    \approx
+    1.000\times10^{50}
+    \text{ kg},
+\end{equation}
+TFT presently extrapolates this inventory across the full structural reservoir using the volumetric reservoir multiplier
+\begin{equation}
+    9.7957\times10^{25},
+\end{equation}
+under the statistical-homogeneity closure that the observed State II abundance is representative of the corresponding larger structural domain.
 
-To determine the current global aggregate mass, we scale this local harvested volume across the entire structural reservoir using the exact volumetric multiplier ($9.7957 \times 10^{25}$) established in \hyperref[sec:reservoir_mass]{Section~\ref*{sec:reservoir_mass}}:
+This gives
 \begin{equation}
-    M_{\mathrm{cur}} = (1.000 \times 10^{50} \text{ kg}) \cdot (9.7957 \times 10^{25}) = 9.7957 \times 10^{75} \text{ kg}
+    M_{\mathrm{cur}}
+    =
+    \left(
+        1.000\times10^{50}
+        \text{ kg}
+    \right)
+    \left(
+        9.7957\times10^{25}
+    \right)
+    =
+    9.7957\times10^{75}
+    \text{ kg}.
 \end{equation}
 
-Integrating the clock backward from this current aggregate mass establishes the present epoch:
+The Global Phase Avalanche then gives
 \begin{equation}
-    9.7957 \times 10^{75} \text{ kg} = 10.033 \text{ kg} \cdot e^{\Gamma_{\mathrm{D}} t_{\mathrm{cur}}}
+    M_{\mathrm{cur}}
+    =
+    M_{\mathrm{p}}(0)
+    e^{\Gamma_{\mathrm{D}}t_{\mathrm{cur}}},
 \end{equation}
+and hence
 \begin{equation}
-    e^{\Gamma_{\mathrm{D}} t_{\mathrm{cur}}} \approx 9.7635 \times 10^{74}
+    t_{\mathrm{cur}}
+    =
+    \frac{1}{\Gamma_{\mathrm{D}}}
+    \ln\left(
+        \frac{M_{\mathrm{cur}}}
+        {M_{\mathrm{p}}(0)}
+    \right).
 \end{equation}
+
+For the minimum-seed normalization,
 \begin{equation}
-    \Gamma_{\mathrm{D}} t_{\mathrm{cur}} = \ln(9.7635 \times 10^{74}) \approx 172.67
+    9.7957\times10^{75}
+    =
+    10.033\,
+    e^{\Gamma_{\mathrm{D}}t_{\mathrm{cur}}},
 \end{equation}
+so
 \begin{equation}
-    t_{\mathrm{cur}} = 172.67 \cdot 13.387 \text{ Billion Years} \approx 2.3116 \text{ Trillion Years}
+    e^{\Gamma_{\mathrm{D}}t_{\mathrm{cur}}}
+    \approx
+    9.7635\times10^{74},
 \end{equation}
+and
+\begin{equation}
+    \Gamma_{\mathrm{D}}t_{\mathrm{cur}}
+    \approx
+    172.67.
+\end{equation}
+
+Thus,
+\begin{equation}
+    t_{\mathrm{cur}}
+    \approx
+    172.67
+    \times
+    13.387
+    \text{ billion years}
+    \approx
+    2.3116
+    \text{ trillion years}.
+\end{equation}
+
+As with $T_{\mathrm{cyc}}$, this absolute elapsed-time value corresponds to the minimum-seed normalization and the adopted statistical-homogeneity extrapolation. A larger primordial aggregate shifts both $t_{\mathrm{cur}}$ and $T_{\mathrm{cyc}}$ downward by the same logarithmic initialization term.
 
 \subsection{The Expiration Timer and Remaining Lifespan}
 
-To find the exact differential time remaining ($\Delta t = T_{\mathrm{cyc}} - t_{\mathrm{cur}}$) before Catastrophic Decompression, we evaluate the ratio of the global rupture limit to the current aggregate mass. Dividing the two phase states cancels the fundamental nucleation seed ($M_{\mathrm{D,G}}$) and isolates the temporal difference:
+The differential time remaining before global percolation does not depend on the primordial normalization $M_{\mathrm{p}}(0)$.
+
+From
 \begin{equation}
-    \frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}} = \frac{M_{\mathrm{D,G}} \cdot e^{\Gamma_{\mathrm{D}} T_{\mathrm{cyc}}}}{M_{\mathrm{D,G}} \cdot e^{\Gamma_{\mathrm{D}} t_{\mathrm{cur}}}} = e^{\Gamma_{\mathrm{D}} (T_{\mathrm{cyc}} - t_{\mathrm{cur}})} = e^{\Gamma_{\mathrm{D}} \Delta t}
+    M_{\mathrm{trg}}
+    =
+    M_{\mathrm{p}}(0)
+    e^{\Gamma_{\mathrm{D}}T_{\mathrm{cyc}}},
+\end{equation}
+and
+\begin{equation}
+    M_{\mathrm{cur}}
+    =
+    M_{\mathrm{p}}(0)
+    e^{\Gamma_{\mathrm{D}}t_{\mathrm{cur}}},
+\end{equation}
+their ratio is
+\begin{equation}
+    \frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}}
+    =
+    e^{\Gamma_{\mathrm{D}}
+    (T_{\mathrm{cyc}}-t_{\mathrm{cur}})}.
 \end{equation}
 
-Taking the natural logarithm of both sides allows us to strictly bound the remaining lifespan:
+Defining
 \begin{equation}
-    \ln\left(\frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}}\right) = \Gamma_{\mathrm{D}} \Delta t
+    \Delta t
+    =
+    T_{\mathrm{cyc}}
+    -
+    t_{\mathrm{cur}},
 \end{equation}
+gives
 \begin{equation}
-    \Delta t = \frac{1}{\Gamma_{\mathrm{D}}} \ln\left(\frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}}\right)
-\end{equation}
-
-Evaluating the exact mass ratio:
-\begin{equation}
-    \frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}} = \frac{8.6208 \times 10^{77} \text{ kg}}{9.7957 \times 10^{75} \text{ kg}} \approx 88.006
-\end{equation}
-
-Substituting this ratio into the differential time equation reveals the exact physical time remaining on the macroscopic clock:
-\begin{equation}
-    \Delta t = \frac{1}{\Gamma_{\mathrm{D}}} \ln(88.006) \approx 4.4774 \cdot \frac{1}{\Gamma_{\mathrm{D}}}
+    \frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}}
+    =
+    e^{\Gamma_{\mathrm{D}}\Delta t}.
 \end{equation}
 
-This mathematically guarantees that the active vacuum has approximately $4.4774$ visco-elastic decay cycles ($e$-foldings) remaining before the topological defect network achieves global percolation. By multiplying by the decay constant, the remaining lifespan of the macroscopic universe is mechanically determined to be precisely $59.938$ billion years.
-
-\subsection{The Macroscopic Phase Symmetry (Optical and Thermodynamic Equivalence)}
-
-As established in the main text \hyperref[sec:causal_distance]{Section \ref*{sec:causal_distance}}, the absolute structural lifespan of the active vacuum ($T_{\mathrm{cyc}}$) defines the Maximum Causal Length ($L_{\mathrm{max}} = T_{\mathrm{cyc}} \cdot c_{\mathrm{E}}$). While a transverse wave mathematically thermalizes into the CMB noise floor earlier at the Extinction Length ($L_{\mathrm{ext}}$), evaluating the decay equation strictly at the absolute kinematic boundary ($L_{\mathrm{max}}$) reveals the exact analytical symmetry of the macroscopic oscillator.
-
-The visco-elastic decay of a maximum-energy excitation ($E_{\mathrm{max}}$) evaluated at the absolute causal boundary is:
+Therefore,
 \begin{equation}
-    E(L_{\mathrm{max}}) = E_{\mathrm{max}} \cdot e^{-L_{\mathrm{max}}/R_{\mathrm{U}}}
+    \Delta t
+    =
+    \frac{1}{\Gamma_{\mathrm{D}}}
+    \ln\left(
+        \frac{M_{\mathrm{trg}}}
+        {M_{\mathrm{cur}}}
+    \right).
 \end{equation}
 
-Because $L_{\mathrm{max}} = c_{\mathrm{E}} T_{\mathrm{cyc}}$ and the viscous horizon is $R_{\mathrm{U}} = c_{\mathrm{E}} / \Gamma_{\mathrm{D}}$, we substitute these kinematics into the exponent, isolating the exact dimensionless phase constant ($\Gamma_{\mathrm{D}} T_{\mathrm{cyc}}$) derived in the temporal timeline:
+Using
 \begin{equation}
-    \frac{L_{\mathrm{max}}}{R_{\mathrm{U}}} = \frac{c_{\mathrm{E}} T_{\mathrm{cyc}}}{c_{\mathrm{E}} / \Gamma_{\mathrm{D}}} = \Gamma_{\mathrm{D}} T_{\mathrm{cyc}}
+    \frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}}
+    =
+    \frac{
+        8.6208\times10^{77}
+    }{
+        9.7957\times10^{75}
+    }
+    \approx
+    88.006,
 \end{equation}
+we obtain
 \begin{equation}
-    \frac{E(L_{\mathrm{max}})}{E_{\mathrm{max}}} = e^{-\Gamma_{\mathrm{D}} T_{\mathrm{cyc}}}
-\end{equation}
-
-Simultaneously, the Global Phase Avalanche equation dictates that the accumulation of State II defect mass to the rupture threshold ($M_{\mathrm{trg}}$) from the localized nucleation seed ($M_{\mathrm{D,G}}$) is defined by the exact reciprocal of this phase constant:
-\begin{equation}
-    \frac{M_{\mathrm{trg}}}{M_{\mathrm{D,G}}} = e^{+\Gamma_{\mathrm{D}} T_{\mathrm{cyc}}}
-\end{equation}
-\begin{equation}
-    e^{-\Gamma_{\mathrm{D}} T_{\mathrm{cyc}}} = \frac{M_{\mathrm{D,G}}}{M_{\mathrm{trg}}}
-\end{equation}
-
-By substituting the inverted mass ratio directly into the energy fraction, the exponential decay constant is completely eliminated, yielding a pure, invariant scaling identity:
-\begin{equation}
-    \frac{E(L_{\mathrm{max}})}{E_{\mathrm{max}}} = \frac{M_{\mathrm{D,G}}}{M_{\mathrm{trg}}}
-\end{equation}
-
-Isolating the final absolute energy state yields:
-\begin{equation}
-    E(L_{\mathrm{max}}) = E_{\mathrm{max}} \cdot \left( \frac{M_{\mathrm{D,G}}}{M_{\mathrm{trg}}} \right)
+    \Delta t
+    =
+    \frac{1}{\Gamma_{\mathrm{D}}}
+    \ln(88.006)
+    \approx
+    4.4774
+    \frac{1}{\Gamma_{\mathrm{D}}}.
 \end{equation}
 
-Evaluating this identity using the established framework constants ($E_{\mathrm{max}} \approx 13.331$ J, $M_{\mathrm{D,G}} \approx 10.033$ kg, $M_{\mathrm{trg}} \approx 8.6208 \times 10^{77}$ kg):
+With the present empirically calibrated value of $\Gamma_{\mathrm{D}}$,
 \begin{equation}
-    E(L_{\mathrm{max}}) = 13.331 \text{ J} \cdot \left( \frac{10.033 \text{ kg}}{8.6208 \times 10^{77} \text{ kg}} \right) \approx 1.5515 \times 10^{-76} \text{ Joules}
+    \Delta t
+    \approx
+    59.94
+    \text{ billion years}.
 \end{equation}
 
-This analytical identity proves the scale-invariant geometric closure of Tension Field Theory. The fractional energy remaining in the universe's most powerful excitation exactly at the expiration of the macroscopic clock is geometrically identical to the mass fraction of a single microscopic Black Hole compared to the entire ruptured cosmic reservoir. The energy decay and the mass accumulation are exact mathematical inverses.
+The cancellation of $M_{\mathrm{p}}(0)$ is exact within the Global Phase Avalanche law. The numerical $59.94$-billion-year value remains a conditional model estimate because it depends on the adopted phase-avalanche closure, the percolation-derived rupture mass, and especially the statistical-homogeneity extrapolation used to determine $M_{\mathrm{cur}}$.
+
+\subsection{The Macroscopic Phase Symmetry (Optical and Thermodynamic Clock Equivalence)}
+
+The shared appearance of $\Gamma_{\mathrm{D}}$ in coherent optical relaxation and in the Global Phase Avalanche produces a macroscopic synchronization identity.
+
+For a coherent transverse excitation propagating through the constant-rate weak-loading vacuum,
+\begin{equation}
+    E_{\mathrm{obs}}(x)
+    =
+    E_{\mathrm{emit}}
+    \exp\left(
+        -\frac{\Gamma_{\mathrm{D}}x}
+        {c_{\mathrm{E}}}
+    \right).
+\end{equation}
+
+Using
+\begin{equation}
+    R_{\mathrm{U}}
+    =
+    \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}},
+\end{equation}
+this is equivalently
+\begin{equation}
+    E_{\mathrm{obs}}(x)
+    =
+    E_{\mathrm{emit}}
+    e^{-x/R_{\mathrm{U}}}.
+\end{equation}
+
+The scale $R_{\mathrm{U}}$ is the characteristic one-$e$-fold coherent-relaxation length:
+\begin{equation}
+    E_{\mathrm{obs}}(R_{\mathrm{U}})
+    =
+    \frac{E_{\mathrm{emit}}}{e}.
+\end{equation}
+
+It is not a universal stopping radius. A coherent carrier can continue beyond $R_{\mathrm{U}}$ until its frequency approaches the effective CMB-reservoir assimilation threshold. Because this threshold is frequency dependent, physical coherent assimilation may occur before the complete structural-cycle length $L_{\mathrm{max}}$.
+
+The exponential optical law may nevertheless be formally continued to the structural endpoint as the mathematical relaxation clock associated with the same $\Gamma_{\mathrm{D}}$. Denoting this formal continuation at $L_{\mathrm{max}}$ by
+\begin{equation}
+    E_{\mathrm{obs}}^{(\mathrm{formal})}(L_{\mathrm{max}})
+    =
+    E_{\mathrm{emit}}
+    \exp\left(
+        -\frac{\Gamma_{\mathrm{D}}L_{\mathrm{max}}}
+        {c_{\mathrm{E}}}
+    \right),
+\end{equation}
+and using
+\begin{equation}
+    L_{\mathrm{max}}
+    =
+    c_{\mathrm{E}}T_{\mathrm{cyc}},
+\end{equation}
+we obtain
+\begin{equation}
+    \frac{
+        E_{\mathrm{obs}}^{(\mathrm{formal})}(L_{\mathrm{max}})
+    }{
+        E_{\mathrm{emit}}
+    }
+    =
+    e^{-\Gamma_{\mathrm{D}}T_{\mathrm{cyc}}}.
+\end{equation}
+
+At the same structural endpoint, the Global Phase Avalanche gives
+\begin{equation}
+    \frac{
+        M_{\mathrm{trg}}
+    }{
+        M_{\mathrm{p}}(0)
+    }
+    =
+    e^{+\Gamma_{\mathrm{D}}T_{\mathrm{cyc}}}.
+\end{equation}
+
+Inverting this relation,
+\begin{equation}
+    e^{-\Gamma_{\mathrm{D}}T_{\mathrm{cyc}}}
+    =
+    \frac{
+        M_{\mathrm{p}}(0)
+    }{
+        M_{\mathrm{trg}}
+    }.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \frac{
+        E_{\mathrm{obs}}^{(\mathrm{formal})}(L_{\mathrm{max}})
+    }{
+        E_{\mathrm{emit}}
+    }
+    =
+    \frac{
+        M_{\mathrm{p}}(0)
+    }{
+        M_{\mathrm{trg}}
+    }.
+\end{equation}
+
+This is the general reciprocal clock identity generated by the single-rate macroscopic closure.
+
+For the minimum-seed normalization,
+\begin{equation}
+    M_{\mathrm{p}}(0)
+    =
+    M_{\mathrm{D,G}},
+\end{equation}
+the relation reduces to
+\begin{equation}
+    \frac{
+        E_{\mathrm{obs}}^{(\mathrm{formal})}(L_{\mathrm{max}})
+    }{
+        E_{\mathrm{emit}}
+    }
+    =
+    \frac{
+        M_{\mathrm{D,G}}
+    }{
+        M_{\mathrm{trg}}
+    }.
+\end{equation}
+
+If the emitted excitation is additionally normalized to the established maximum-energy scale,
+\begin{equation}
+    E_{\mathrm{emit}}
+    =
+    E_{\mathrm{max}}
+    \approx
+    13.331
+    \text{ J},
+\end{equation}
+then
+\begin{equation}
+    E_{\mathrm{obs}}^{(\mathrm{formal})}(L_{\mathrm{max}})
+    =
+    E_{\mathrm{max}}
+    \left(
+        \frac{
+            M_{\mathrm{D,G}}
+        }{
+            M_{\mathrm{trg}}
+        }
+    \right).
+\end{equation}
+
+Using
+\begin{equation}
+    M_{\mathrm{D,G}}
+    \approx
+    10.033
+    \text{ kg},
+\end{equation}
+and
+\begin{equation}
+    M_{\mathrm{trg}}
+    \approx
+    8.6208\times10^{77}
+    \text{ kg},
+\end{equation}
+gives
+\begin{equation}
+    E_{\mathrm{obs}}^{(\mathrm{formal})}(L_{\mathrm{max}})
+    \approx
+    1.5515\times10^{-76}
+    \text{ J}.
+\end{equation}
+
+This formal endpoint value should not be interpreted as requiring an individual coherent photon to remain physically observable to $L_{\mathrm{max}}$. If the carrier reaches the CMB-reservoir assimilation threshold at a shorter distance, its identifiable coherent state terminates there. The continuation to $L_{\mathrm{max}}$ represents the underlying exponential relaxation factor used to compare the optical and structural clocks.
+
+The reciprocal identity likewise does not imply that coherently relaxed photon energy is converted directly into Black Hole boundary mass. The optical-relaxation channel and the self-sustaining FCC$\rightarrow$SC phase-avalanche channel are mechanically distinct. Their reciprocal exponentials arise because both are parameterized by the same macroscopic rate $\Gamma_{\mathrm{D}}$ under the single-rate closure.
+
+The synchronized structural endpoint is
+\begin{equation}
+    x=L_{\mathrm{max}}
+    \qquad\Longleftrightarrow\qquad
+    t=T_{\mathrm{cyc}}
+    \qquad\Longleftrightarrow\qquad
+    M_{\mathrm{p}}=M_{\mathrm{trg}}.
+\end{equation}
+
+In this sense, the formally continued optical-relaxation clock and the global phase-avalanche clock provide complementary measures of the same macroscopic relaxation timescale: coherent carrier energy decreases as $e^{-\Gamma_{\mathrm{D}}t}$, while aggregate live-boundary mass increases as $e^{+\Gamma_{\mathrm{D}}t}$ under the adopted phase-avalanche closure, until the global percolation threshold is reached and Catastrophic Decompression resets the active vacuum.

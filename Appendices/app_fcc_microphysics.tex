@@ -4,7 +4,7 @@
 \section{Scope, Status of Results, and Constitutive Limits}
 \label{sec:fcc_microphysics_scope}
 
-This appendix develops the baseline contact mechanics and long-wavelength homogenization of the active FCC Soft Floor. It establishes the gravity-independent FCC scaffold carrier on which the later gravitational, condensate, and localized-defect constitutive sectors act.
+This appendix develops the baseline contact mechanics and long-wavelength homogenization of the active FCC Soft Floor. It establishes the gravity-independent FCC scaffold carrier on which the later gravitational, condensate, localized-defect, and photon-transport constitutive sectors act.
 
 The analysis is restricted to small perturbations about a fixed active-phase equilibrium. The retained contact coefficients are tangent coefficients of that state and are not assumed to remain valid through the nonlinear FCC-to-SC phase transition. The interstitial-condensate pressure constraint and localized defect-induced relative-flow response are developed separately in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.
 
@@ -12,7 +12,7 @@ The gravity-specific endpoint-transfer map, gravitationally referred inertia, an
 
 The mechanical sequence developed in this appendix proceeds from FCC contact geometry through objective bond kinematics, the parity-even contact action, primitive-cell assembly, and the long-wavelength acoustic tensor.
 
-The full finite-wave-number Bloch spectrum is not completed here. The FCC stiffness assembly is defined formally, while the explicit dynamical matrix, its eigenvalue branches throughout the first Brillouin zone, and the corresponding global lattice-stability proof remain open microscopic calculations.
+The full finite-wave-number Bloch spectrum is not completed here. The FCC stiffness assembly is defined formally, while the explicit dynamical matrix, its eigenvalue branches throughout the first Brillouin zone, and the corresponding global lattice-stability proof remain open microscopic calculations. A selected positive reduced transverse photon branch, including its dispersion-suppressed finite-wave-number closure and observational screening, is developed separately in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}. That reduced branch does not constitute a derivation of the complete FCC dynamic matrix or its full multi-branch spectrum.
 
 The status of the principal results is summarized below.
 
@@ -34,6 +34,7 @@ FCC cubic elastic constants & derived in the affine $k\rightarrow0$ limit \\
 $\kappa_{\mathrm{n}}=\kappa_{\mathrm{t}}$ & condition for exact long-wavelength isotropy \\
 $A_{\mathrm{ct}}^{(\mathrm{modal})}$ & constitutive surface-to-cell normalization \\
 $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$ and $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$ & microscopic scaffold coefficients derived from primitive-cell normalization \\
+selected dispersion-suppressed transverse photon branch & developed separately in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} \\
 full finite-$k$ spectrum and global stability & formally posed but not completed \\
 \hline
 \end{tabular}
@@ -41,14 +42,14 @@ full finite-$k$ spectrum and global stability & formally posed but not completed
 
 The active Soft Floor is treated as a dual mechanical structure. The solid FCC scaffold supplies the baseline microscopic contact rigidity and primitive-cell inertia normalization. In the conservative coherent branch, the interstitial condensate is carried with the scaffold without relative flow and supplies the pressure constraint developed in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}. Entrainment fixes the relative kinematics of the two phases but does not, at the present constitutive order, establish an independently additive condensate contribution to the primitive-cell inertia normalization. The Hard Floor supplies the phase-locked structural address of the active node and is not introduced here as an independent finite-frequency oscillator.
 
-The present appendix therefore establishes the reference FCC scaffold contact action and its long-wavelength continuum limit. Later constitutive sectors act on this baseline while preserving the objective contact kinematics, primitive-cell bookkeeping, and stability requirements developed below.
+The present appendix therefore establishes the reference FCC scaffold contact action and its long-wavelength continuum limit. The gravitational endpoint-transfer, condensate, localized-defect, and reduced photon-transport sectors act on this baseline while preserving the objective contact kinematics, primitive-cell bookkeeping, and stability requirements developed below.
 
-\section{Baseline Transverse FCC Contact Action}
+\section{Baseline Nearest-Neighbor Transverse FCC Contact Action}
 \label{sec:fcc_baseline_transverse_action}
 
 Consider a representative nearest-neighbor sequence in the active FCC Soft Floor. The nearest-neighbor separation is
 \begin{equation}
-    d_{\mathrm{nn}}=2r_{\mathrm{D}}.
+    d_{\mathrm{nn}} = 2r_{\mathrm{D}}.
 \end{equation}
 
 Let $u_n(t)$ denote the transverse displacement of the $n$-th active FCC node along one selected polarization orthogonal to the bond direction. For the contact between neighboring nodes $n$ and $n+1$, the transverse strain is
@@ -58,7 +59,7 @@ Let $u_n(t)$ denote the transverse displacement of the $n$-th active FCC node al
 
 The baseline surface shear tension is $\tau_{\mathrm{D}}$. The corresponding transverse contact energy per unit participating interface area is
 \begin{equation}
-    \mathcal{U}_{n,n+1}^{\perp} = \frac{\tau_{\mathrm{D}}}{2d_{\mathrm{nn}}^2} \left(u_{n+1}-u_n\right)^2.
+    \mathcal{U}_{n,n+1}^{\perp} = \frac{\tau_{\mathrm{D}}}{2d_{\mathrm{nn}}^2} \left( u_{n+1}-u_n \right)^2.
 \end{equation}
 
 The two-node potential Hessian is
@@ -72,26 +73,26 @@ The two-node potential Hessian is
 
 This Hessian is positive semidefinite, with the uniform-translation mode as its null direction. The baseline scaffold surface inertia is $\mu_{\mathrm{D}}$, so the directional Lagrangian per unit participating interface area is
 \begin{equation}
-    \mathcal{L}_{\perp}^{(0)} = \sum_n \left[ \frac{1}{2}\mu_{\mathrm{D}}\dot{u}_n^2 - \frac{\tau_{\mathrm{D}}}{2d_{\mathrm{nn}}^2} \left(u_{n+1}-u_n\right)^2 \right].
+    \mathcal{L}_{\perp}^{(0)} = \sum_n \left[ \frac{1}{2} \mu_{\mathrm{D}} \dot{u}_n^2 - \frac{\tau_{\mathrm{D}}}{2d_{\mathrm{nn}}^2} \left( u_{n+1}-u_n \right)^2 \right].
 \end{equation}
 
 Variation with respect to $u_n$ gives
 \begin{equation}
-    \mu_{\mathrm{D}}\ddot{u}_n = \frac{\tau_{\mathrm{D}}}{d_{\mathrm{nn}}^2} \left( u_{n+1}-2u_n+u_{n-1} \right).
+    \mu_{\mathrm{D}} \ddot{u}_n = \frac{\tau_{\mathrm{D}}}{d_{\mathrm{nn}}^2} \left( u_{n+1} - 2u_n + u_{n-1} \right).
 \end{equation}
 
 For a plane-wave mode,
 \begin{equation}
-    u_n(t) = u_0 \exp\left[ i\left(knd_{\mathrm{nn}}-\omega t\right) \right],
+    u_n(t) = u_0 \exp \left[ i \left( knd_{\mathrm{nn}} - \omega t \right) \right],
 \end{equation}
 the nearest-neighbor difference is
 \begin{equation}
-    u_{n+1}-2u_n+u_{n-1} = -4u_n \sin^2\left( \frac{kd_{\mathrm{nn}}}{2} \right).
+    u_{n+1} - 2u_n + u_{n-1} = -4u_n \sin^2 \left( \frac{kd_{\mathrm{nn}}}{2} \right).
 \end{equation}
 
 The baseline directional dispersion relation is therefore
 \begin{equation}
-    \omega^2(k) = \frac{4\tau_{\mathrm{D}}} {\mu_{\mathrm{D}}d_{\mathrm{nn}}^2} \sin^2\left( \frac{kd_{\mathrm{nn}}}{2} \right).
+    \omega^2(k) = \frac{4\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}d_{\mathrm{nn}}^2} \sin^2 \left( \frac{kd_{\mathrm{nn}}}{2} \right).
 \end{equation}
 
 Using the baseline surface stiffness--inertia identity
@@ -100,37 +101,43 @@ Using the baseline surface stiffness--inertia identity
 \end{equation}
 the dispersion becomes
 \begin{equation}
-    \omega^2(k) = \frac{4c_{\mathrm{E}}^2}{d_{\mathrm{nn}}^2} \sin^2\left( \frac{kd_{\mathrm{nn}}}{2} \right).
+    \omega^2(k) = \frac{4c_{\mathrm{E}}^2}{d_{\mathrm{nn}}^2} \sin^2 \left( \frac{kd_{\mathrm{nn}}}{2} \right).
 \end{equation}
 
 In the local continuum limit,
 \begin{equation}
-    kd_{\mathrm{nn}}\ll1,
+    kd_{\mathrm{nn}} \ll 1,
 \end{equation}
 so
 \begin{equation}
-    \omega^2 = c_{\mathrm{E}}^2k^2 + \mathcal{O}\left( k^4d_{\mathrm{nn}}^2 \right).
+    \omega^2 = c_{\mathrm{E}}^2k^2 + \mathcal{O} \left( k^4d_{\mathrm{nn}}^2 \right).
 \end{equation}
 
 Hence the long-wavelength phase velocity is
 \begin{equation}
-    c_T^{(0)} = \lim_{k\rightarrow0}\frac{\omega}{k} = c_{\mathrm{E}}.
+    c_T^{(0)} = \lim_{k\rightarrow0} \frac{\omega}{k} = c_{\mathrm{E}}.
 \end{equation}
 
-On the first monotonic branch, the positive-frequency dispersion and group velocity are
+On the positive-frequency monotonic branch,
 \begin{equation}
-    \omega(k) = \frac{2c_{\mathrm{E}}}{d_{\mathrm{nn}}} \left| \sin\left( \frac{kd_{\mathrm{nn}}}{2} \right) \right|,
+    0 \leq kd_{\mathrm{nn}} \leq \pi,
+\end{equation}
+the dispersion and group velocity are
+\begin{equation}
+    \omega(k) = \frac{2c_{\mathrm{E}}}{d_{\mathrm{nn}}} \sin \left( \frac{kd_{\mathrm{nn}}}{2} \right),
 \end{equation}
 and
 \begin{equation}
-    v_g = c_{\mathrm{E}} \cos\left( \frac{kd_{\mathrm{nn}}}{2} \right),
+    v_g = \frac{\mathrm{d}\omega}{\mathrm{d}k} = c_{\mathrm{E}} \cos \left( \frac{kd_{\mathrm{nn}}}{2} \right),
 \end{equation}
 so
 \begin{equation}
-    \lim_{k\rightarrow0}v_g = c_{\mathrm{E}}.
+    \lim_{k\rightarrow0} v_g = c_{\mathrm{E}}.
 \end{equation}
 
 This one-dimensional sequence is a directional reduction used to establish the baseline transverse normalization. In the full FCC assembly, six undirected nearest-neighbor bonds contribute stiffness to the primitive-cell potential, while the generalized scaffold inertial coefficients associated with the retained node coordinates are assigned once through the primitive-cell mass matrix. The coherent condensate constraint is introduced separately in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}; condensate entrainment is not counted here as an independently additive bond or primitive-cell inertia. The directional derivation must therefore not be interpreted as assigning an independent complete nodal mass to every bond.
+
+The nearest-neighbor branch derived here is the baseline normalization branch and is not identified with the completed physical photon eigenbranch. The selected positive dispersion-suppressed transverse photon branch, its higher-gradient closure, and its observational screening are developed in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
 
 \section{Objective Nearest-Neighbor FCC Contact Kinematics}
 
@@ -422,38 +429,40 @@ For a Bloch mode,
 \end{equation}
 so
 \begin{equation}
-    \mathbf{q}_{\mathbf{R}+\mathbf{d}_a} =e^{i\mathbf{k}\cdot\mathbf{d}_a}\mathbf{q}_{\mathbf{R}}.
+    \mathbf{q}_{\mathbf{R}+\mathbf{d}_a} = e^{i\mathbf{k}\cdot\mathbf{d}_a} \mathbf{q}_{\mathbf{R}}.
 \end{equation}
 For contact $a$, the objective contact-strain vector is
 \begin{equation}
-    \boldsymbol{\xi}_a=\mathbf{B}_a(\mathbf{k})\mathbf{q}_0,
+    \boldsymbol{\xi}_a = \mathbf{B}_a(\mathbf{k})\mathbf{q}_0,
 \end{equation}
 where $\mathbf{B}_a(\mathbf{k})$ contains the Bloch phase, normal and tangential projectors, microrotation terms, and internal phase difference.
 
 Because $\mathbf{H}_{\mathrm{c}}$ is the contact tangent matrix per unit participating area, the corresponding generalized stiffness per unit area is
 \begin{equation}
-    \overline{\mathbf{K}}_a(\mathbf{k}) =\mathbf{B}_a^{\dagger}(\mathbf{k}) \mathbf{H}_{\mathrm{c}} \mathbf{B}_a(\mathbf{k}).
+    \overline{\mathbf{K}}_a(\mathbf{k}) = \mathbf{B}_a^{\dagger}(\mathbf{k}) \mathbf{H}_{\mathrm{c}} \mathbf{B}_a(\mathbf{k}).
 \end{equation}
 The integrated stiffness contribution is
 \begin{equation}
-    \mathbf{K}_a(\mathbf{k}) =A_{\mathrm{ct}}\overline{\mathbf{K}}_a(\mathbf{k}).
+    \mathbf{K}_a(\mathbf{k}) = A_{\mathrm{ct}} \overline{\mathbf{K}}_a(\mathbf{k}).
 \end{equation}
 Hence the primitive-cell Bloch stiffness is
 \begin{equation}
-    \mathbf{K}_{\mathrm{FCC}}(\mathbf{k}) =A_{\mathrm{ct}} \sum_{a=1}^{6} \mathbf{B}_a^{\dagger}(\mathbf{k}) \mathbf{H}_{\mathrm{c}} \mathbf{B}_a(\mathbf{k}).
+    \mathbf{K}_{\mathrm{FCC}}(\mathbf{k}) = A_{\mathrm{ct}} \sum_{a=1}^{6} \mathbf{B}_a^{\dagger}(\mathbf{k}) \mathbf{H}_{\mathrm{c}} \mathbf{B}_a(\mathbf{k}).
 \end{equation}
 The factor $A_{\mathrm{ct}}$ is required for dimensional consistency between the surface contact law and the primitive-cell mass matrix.
 
 This expression defines the nearest-neighbor FCC stiffness assembly. It is not a completed full dynamic-matrix calculation. The explicit matrices $\mathbf{B}_a(\mathbf{k})$, the complete finite-$\mathbf{k}$ spectrum, the rotational and phase branches, and the stability proof over the full first Brillouin zone remain open calculations.
 
+The positive centered-second-difference contribution with coefficient $1/12$ used in the reduced photon action of \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} is a higher-gradient constitutive augmentation of the selected transverse branch. It is not derived by the nearest-neighbor stiffness assembly above alone. A complete microscopic derivation must show whether this effective term emerges from the rotational or internal-phase sectors, elimination of auxiliary coordinates, extended contact interactions, or another structure within the full FCC dynamic matrix.
+
 The baseline generalized eigenvalue problem is
 \begin{equation}
-    \det\!\left[ \mathbf{K}_{\mathrm{FCC}}(\mathbf{k}) -\omega^2\mathbf{M}_{\mathrm{cell}}^{(0)} \right]=0.
+    \det\!\left[ \mathbf{K}_{\mathrm{FCC}}(\mathbf{k}) - \omega^2\mathbf{M}_{\mathrm{cell}}^{(0)} \right] = 0.
 \end{equation}
 
 At $\mathbf{k}=\mathbf{0}$, uniform translation gives three translational null directions. A uniform internal phase shift also gives zero bond energy because every $\Delta\varphi_{ij}$ vanishes. A rigid-body rotation is a null motion of a finite body or an affine continuum field, but it is not represented by a spatially uniform periodic Bloch amplitude: the compatible displacement $\mathbf{u}=\boldsymbol{\Omega}\times\mathbf{x}$ varies linearly with position. It therefore appears in the affine $\mathbf{k}\rightarrow\mathbf{0}$ objectivity test, not as an additional uniform $\mathbf{k}=\mathbf{0}$ Bloch eigenvector.
 
-The only spectral statement established here is that the translational acoustic sector contains two long-wavelength transverse branches governed by the homogenized scaffold shear tensor derived below. No claim is made that the full active-vacuum spectrum contains only two branches.
+The spectral statement established here is that the translational acoustic sector contains two long-wavelength transverse branches governed by the homogenized scaffold shear tensor derived below. A selected positive dispersion-suppressed realization of these transverse photon components is developed in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}. No claim is made that the full active-vacuum spectrum contains only two branches or that the selected reduced photon action completes the full FCC eigenvalue problem.
 
 \section{FCC Long-Wavelength Homogenization and Cubic Elasticity}
 
@@ -846,7 +855,7 @@ The associated inverse-length projection is $\iota_{\mathrm{tr}}^{(\mathrm{modal
 
 This appendix establishes the baseline contact mechanics and long-wavelength acoustic tensor of the active FCC Soft Floor. The results define the gravity-independent FCC scaffold carrier but do not constitute a complete finite-wave-number microscopic elastodynamic theory.
 
-The first completed result is the baseline directional transverse scaffold action,
+The first completed result is the baseline nearest-neighbor directional transverse scaffold action,
 \begin{equation}
     \omega^2(k) = \frac{4c_{\mathrm{E}}^2}{d_{\mathrm{nn}}^2} \sin^2 \left( \frac{kd_{\mathrm{nn}}}{2} \right),
 \end{equation}
@@ -854,6 +863,8 @@ with long-wavelength limit
 \begin{equation}
     c_{\mathrm{T}}^{(0)} = c_{\mathrm{E}}.
 \end{equation}
+
+This branch establishes the nearest-neighbor transverse normalization only. The selected positive dispersion-suppressed photon branch is developed separately in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}. Its effective higher-gradient coefficient $1/12$ is not derived here from the complete FCC dynamic matrix.
 
 The second completed result is the objective nearest-neighbor contact kinematics. The local contact deformation is determined by the contact-point displacement
 \begin{equation}
@@ -922,4 +933,4 @@ The mapping from the primitive-cell FCC dynamics derived here to a macroscopic g
 
 The interstitial-condensate pressure constraint, the absence of an ordinary finite-frequency longitudinal acoustic scalar branch in the coherent sector, and the localized defect-induced relative-flow impedance are developed separately in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}. The gravitational endpoint-transfer map and its referred-inertia specialization are developed separately in \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.
 
-The status of the present appendix is therefore precise: it establishes the baseline FCC scaffold contact action, objective bond kinematics, primitive-cell kinetic bookkeeping, affine acoustic tensor, isotropy condition, modal normalization, and microscopic scaffold coefficient scale. It does not include the gravity-specific endpoint closure, the complete finite-wave-number spectrum, the independent phase-sector dynamics, an independently additive coherent condensate inertia, or the collective projection from microscopic FCC dynamics to the macroscopic gravitational-wave tensor sector.
+The status of the present appendix is therefore precise: it establishes the baseline FCC scaffold contact action, objective bond kinematics, primitive-cell kinetic bookkeeping, affine acoustic tensor, isotropy condition, modal normalization, and microscopic scaffold coefficient scale. It does not include the gravity-specific endpoint closure, the complete parent finite-wave-number spectrum, the independent phase-sector dynamics, an independently additive coherent condensate inertia, or the collective projection from microscopic FCC dynamics to the macroscopic gravitational-wave tensor sector.

@@ -904,7 +904,7 @@ The retained response is weak and adiabatic:
 \end{equation}
 A nonzero phase lag can therefore establish a slow modal-energy transfer rate, but it does not by itself determine whether the response produces attenuation, absorption, mode conversion, or coherent frequency evolution.
 
-\section{Modal Phase Lag and the Weak-Loss Energy-Transfer Rate}
+\section{Modal Phase Lag and the Viscoelastic Vacuum Relaxation Rate}
 \label{sec:photon_relaxation_phase_lag_rate}
 
 Let \(\mathcal{V}_{\gamma}\) denote the instantaneous spatial support of the coherent mode. Over one optical cycle, the modal amplitudes and support may be treated as fixed. The positive energy transferred out of the carrier is
@@ -1022,6 +1022,7 @@ Let the slowly varying coherent modal energy obey
     -\Gamma_{\mathrm{D}}E.
     \label{eq:photon_relaxation_energy_decay_reintroduced}
 \end{equation}
+The coefficient $\Gamma_{\mathrm{D}}$ is termed the \emph{Viscoelastic Vacuum Relaxation Rate}, or equivalently the \emph{FCC--Condensate relaxation rate}. It is the macroscopic fractional coherent-energy relaxation rate associated with the weak out-of-phase viscoelastic response of the FCC--Condensate vacuum to the propagating transverse photon mode. The corresponding stress--strain phase lag provides the nonconservative work channel through which energy is transferred from the coherent carrier into non-coherent FCC--Condensate reservoir degrees of freedom.
 In the weak-loss regime,
 \begin{equation}
     E
@@ -1948,6 +1949,38 @@ so
 \end{equation}
 is only the leading low-redshift approximation.
 
+The absolute magnitude of \(\Gamma_{\mathrm{D}}\) is not yet derived from the FCC--Condensate microphysics. At the present level of TFT, it is fixed empirically by matching Equation~\eqref{eq:photon_relaxation_linear_redshift_limit} to the observed local Hubble slope,
+\begin{equation}
+    c_{\mathrm{E}}z
+    \simeq
+    H_{0}^{(\mathrm{obs})}r.
+\end{equation}
+Therefore, within the TFT low-redshift calibration,
+\begin{equation}
+    \Gamma_{\mathrm{D}}^{(\mathrm{cal})}
+    =
+    H_{0}^{(\mathrm{obs})}.
+    \label{eq:photon_relaxation_gamma_calibration}
+\end{equation}
+Using the adopted local value
+\begin{equation}
+    H_{0}^{(\mathrm{obs})}
+    =
+    73.04\,
+    \mathrm{km\,s^{-1}\,Mpc^{-1}},
+\end{equation}
+gives
+\begin{equation}
+    \Gamma_{\mathrm{D}}^{(\mathrm{cal})}
+    \approx
+    2.3671
+    \times
+    10^{-18}
+    \ \mathrm{s}^{-1}.
+    \label{eq:photon_relaxation_gamma_numerical}
+\end{equation}
+Thus, the equality between \(\Gamma_{\mathrm{D}}\) and the observed low-redshift Hubble slope is an empirical normalization of the TFT relaxation coefficient, not an independent microscopic derivation. A first-principles determination of \(\Gamma_{\mathrm{D}}\) from the causal FCC--Condensate response remains a theory-completion requirement.
+
 Preservation of coherent modal action also gives
 \begin{equation}
     \frac{
@@ -1968,6 +2001,7 @@ Preservation of coherent modal action also gives
 This is the energy reduction of the surviving coherent carrier under the selected transport closure. It must not be supplemented by an independent amplitude-extinction factor unless a separate absorption or incoherent-loss channel is introduced.
 
 Equation~\eqref{eq:photon_relaxation_exact_euclidean_distance} is exact within the constant-\(\Gamma_{\mathrm{D}}\), weak-loading, stationary Euclidean-path closure. The general result remains Equation~\eqref{eq:photon_relaxation_general_path_redshift}. Moreover, \(R_{\mathrm{U}}\) is an \(e\)-folding length, not a universal stopping radius or zero-energy boundary.
+
 
 \section{Observational Screening and Self-Consistent Path Integration}
 \label{sec:photon_relaxation_observational_screening}
@@ -2276,17 +2310,7 @@ For GRB~221009A, use
     \ \mathrm{TeV},
     \label{eq:photon_relaxation_lhaaso_screening_inputs}
 \end{equation}
-together with the empirical TFT calibration
-\begin{equation}
-    \Gamma_{\mathrm{D}}
-    \approx
-    2.3671
-    \times
-    10^{-18}
-    \ \mathrm{s}^{-1}.
-    \label{eq:photon_relaxation_gamma_numerical}
-\end{equation}
-Equation~\eqref{eq:photon_relaxation_integrated_delay_general} then gives
+together with the empirical TFT calibration in Equation~\eqref{eq:photon_relaxation_gamma_numerical}. Equation~\eqref{eq:photon_relaxation_integrated_delay_general} then gives
 \begin{equation}
     \Delta t_2^{(\mathrm{base})}
     \approx

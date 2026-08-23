@@ -301,41 +301,118 @@ The term $\Delta x$ represents the transverse physical displacement of the node,
 \label{fig:energy_paradox}
 \end{figure}
 
-\subsection{Quantum Tunneling as Acoustic Transparency}
-Standard Quantum Mechanics describes tunneling as a probabilistic event where a particle ``borrows'' energy from the future---via the Heisenberg uncertainty principle---to leak through a potential barrier greater than its own energy ($V > E$). Rather than requiring a temporary violation of energy conservation, TFT resolves this as a deterministic mechanical resonance phenomenon: specifically, acoustic transparency.
+\subsection{Quantum Tunneling: Evanescent Coupling, Coherent Boundary Control, and Active Knot Transport}
+
+Standard Quantum Mechanics describes tunneling as finite wave transmission through a classically forbidden region ($E<V_{\mathrm{B}}$), where the barrier solution is evanescent while total energy remains conserved. Tension Field Theory (TFT) retains this boundary-value structure but assigns it a mechanical interpretation: tunneling is finite coupling of the physical matter order parameter through an evanescent region of the active vacuum.
 
 \begin{itemize}
-    \item \textbf{The Resonance Effect:} In TFT, a particle is a topological knot surfing a continuous pilot wave. As the particle approaches a high-impedance barrier, its extended pilot wave hits the wall first. While much of the wave reflects, an evanescent strain field penetrates the barrier, exciting the lattice inside.
-    \item \textbf{The Phase Lock:} If the barrier's natural lattice frequency aligns with the frequency of the pilot wave, a standing wave mode is established inside the barrier. At resonance, the mechanical impedance of the wall effectively vanishes. Just as an opera singer shatters a glass not by punching through it, but by vibrating its structure until it yields, the pilot wave loosens the barrier's local lattice. The heavy lattice links vibrate in perfect synchronization (phase alignment) with the incoming knot.
+    \item \textbf{Passive Evanescent Coupling:} A material barrier represents an effective mechanical work threshold $V_{\mathrm{B}}$. When $E<V_{\mathrm{B}}$, the extended matter-wave field cannot sustain a freely propagating branch inside the barrier and instead becomes an evanescent active-vacuum deformation. For finite barrier thickness $L$, this field remains nonzero at the exit boundary and therefore supports finite transmitted current.
+
+    \item \textbf{Coherent Boundary Control:} A downstream coherent input can modify the complete barrier boundary state. Treating the barrier as a two-port scatterer, incident-side reflection is canceled when the downstream input is matched in both amplitude and phase to the barrier's complex scattering coefficients.
+
+    \item \textbf{Active Knot Transport:} For the uniform rectangular barrier, the reflection-cancelled field possesses a finite forward phase-action current throughout the barrier. Under the TFT phase-action guidance closure, this controlled matter-order-parameter state determines the corresponding continuous trajectory of the localized topological knot.
 \end{itemize}
 
-The barrier becomes entirely transparent to the stress field. The particle does not teleport or borrow energy; it simply slides through the barrier because the lattice links mechanically open and close in perfect synchronization to let the topology pass.
+Structured barriers may additionally support resonantly enhanced passive transmission when an internal phase-matching condition is satisfied. The full passive, resonant, coherently driven, and active knot-transport constructions are developed in
+\hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.
+
+The barrier therefore need not disappear mechanically. The extended matter order parameter couples the entrance and exit boundaries through the evanescent active-vacuum region. Passive wave transmission alone does not determine a localized defect trajectory; however, under coherent reflection cancellation, the TFT phase-action guidance closure yields an explicit forward topological-knot transport law.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Fig15_PartII_QuantumTunneling.pdf}
-    \caption{\textbf{Quantum Tunneling as Acoustic Transparency.} In the TFT framework, quantum tunneling is governed by deterministic mechanical resonance rather than stochastic probability. As the topological knot (the particle) approaches a high-stiffness lattice barrier, its extended pilot wave interacts with the local substrate. When an external driver ($Z_{\mathrm{drive}}$) provides a stabilizing frequency ($\omega_0$) that phase-matches the incoming wave, a resonant standing wave bridge is established across the geometric gap. By pinning a zero-displacement node at the barrier boundary, the mechanical impedance of the wall ($Z_{\mathrm{wall}}$) is effectively canceled. The barrier's lattice links vibrate in phase synchronization, rendering the structure acoustically transparent and permitting the particle to propagate with near 100\% transmission efficiency.}
-\label{fig:quantum_tunneling}
+    \caption{\textbf{Quantum tunneling as evanescent coupling and coherent boundary control.}
+    The same effective barrier is shown under passive and coherently driven boundary conditions.
+    \textbf{Passive:} For $E<V_{\mathrm{B}}$, the matter order parameter becomes evanescent within the finite barrier, producing exponentially suppressed but nonzero transmitted current.
+    \textbf{Active:} A coherent downstream input $a_{\mathrm{R}}$ is adjusted so that its contribution cancels the incident-side reflected amplitude $b_{\mathrm{L}}$. The resulting boundary-matched, coherently driven evanescent field provides the controlled state to which the TFT phase-action guidance closure is applied, yielding the transmitted topological-knot state shown. The barrier remains present in both regimes; coherent control modifies the boundary state rather than removing the barrier.}
+    \label{fig:quantum_tunneling}
 \end{figure}
 
-\subsubsection*{The Active Transmission Law}
-By treating tunneling as an active impedance-matching process rather than a stochastic probability, TFT introduces the Active Transmission Law ($T_{\mathrm{active}}$). This converts tunneling from a random quantum anomaly into a tunable engineering parameter. (The full derivation of passive versus active transmission and the engineering control parameters are detailed in \hyperref[app:quantum_tunneling]{Appendix \ref*{app:quantum_tunneling}}).
+\subsubsection*{Transmission Regimes}
+
+The tunneling problem is therefore expressed in TFT as a mechanical boundary-value problem with distinct passive and coherently controlled limits.
+
+\vspace{0.5em}
+\noindent\textbf{1. Passive Transmission Scale} \\
+
+For an undriven opaque barrier, the leading transmission suppression is controlled by the dimensionless evanescence depth $\kappa_{\mathrm{B}}L$:
 \begin{equation}
-    T_{\mathrm{active}} = \frac{\exp(-2DL)}{1 + \left(\frac{Z_{\mathrm{wall}}}{Z_{\mathrm{drive}}}\right)^2 \cdot \left[\sin^2(kL+\varphi) + \left(\frac{\omega-\omega_0}{\omega_0}\right)^2\right]}
+    T_{\mathrm{pass}}
+    \propto
+    \exp\left(-2\kappa_{\mathrm{B}}L\right),
+    \qquad
+    \kappa_{\mathrm{B}}
+    \equiv
+    \frac{\sqrt{2m(V_{\mathrm{B}}-E)}}{\hbar}.
 \end{equation}
 
-\noindent\textbf{Where:}
-\begin{itemize}
-    \item $L$: The physical thickness of the barrier gap.
-    \item $D$: The baseline vacuum cosmological damping coefficient.
-    \item $Z_{\mathrm{wall}}$: The mechanical impedance of the barrier lattice.
-    \item $Z_{\mathrm{drive}}$: The amplitude of the external driving pilot wave.
-    \item $k$: The angular wavenumber of the pilot wave.
-    \item $\omega$ and $\omega_0$: The driving frequency and the barrier's natural resonant frequency.
-    \item $\varphi$: The phase angle of the standing wave.
-\end{itemize}
+Thus, passive transmission decreases exponentially as the barrier becomes thicker or as the excess barrier energy $V_{\mathrm{B}}-E$ increases. This reproduces the standard opaque-barrier exponential dependence while assigning the evanescent branch a physical active-vacuum interpretation.
 
-When an external driver ($Z_{\mathrm{drive}}$) properly tunes the phase ($\varphi$) and frequency ($\omega \to \omega_0$) to create a standing wave bridge across the gap ($L$), the barrier impedance ($Z_{\mathrm{wall}}$) is mechanically canceled, and transmission approaches 100\%.
+\vspace{0.5em}
+\noindent\textbf{2. Active Reflection-Cancellation Condition} \\
+
+For a reciprocal symmetric barrier driven coherently from both sides, incident-side reflection vanishes when
+\begin{equation}
+    \frac{a_{\mathrm{R}}}{a_{\mathrm{L}}}
+    =
+    -\frac{r_{\mathrm{B}}}{t_{\mathrm{B}}}.
+\end{equation}
+
+Here $a_{\mathrm{L}}$ and $a_{\mathrm{R}}$ are the incoming complex amplitudes from the source and downstream driver, while $r_{\mathrm{B}}$ and $t_{\mathrm{B}}$ are the complex reflection and transmission coefficients of the barrier. Because this condition is complex, it fixes both the required drive magnitude and relative phase.
+
+When the condition is satisfied, the downstream input destructively cancels the incident-side reflected field and establishes a coherently controlled scattering state. The right-side output contains contributions from both incident inputs and therefore represents externally assisted boundary control rather than intrinsic removal of the barrier.
+
+\vspace{0.5em}
+\noindent\textbf{3. Active Topological-Knot Transport} \\
+
+For the uniform rectangular barrier, the reflection-cancellation condition gives the explicit downstream drive
+\begin{equation}
+    \frac{a_{\mathrm{R}}}{a_{\mathrm{L}}}
+    =
+    i
+    \frac{
+        V_{\mathrm{B}}
+    }{
+        2\sqrt{
+            E(V_{\mathrm{B}}-E)
+        }
+    }
+    \sinh
+    \left(
+        \kappa_{\mathrm{B}}L
+    \right).
+\end{equation}
+
+The resulting boundary-matched field carries a finite forward phase-action current throughout the barrier. Under the TFT guidance closure, the localized topological-knot coordinate $x_K(t)$ obeys
+\begin{equation}
+    \frac{\mathrm{d}x_K}{\mathrm{d}t}
+    =
+    \frac{
+        \hbar k/m
+    }{
+        \cosh^2(\kappa_{\mathrm{B}}x_K)
+        +
+        \dfrac{k^2}{\kappa_{\mathrm{B}}^2}
+        \sinh^2(\kappa_{\mathrm{B}}x_K)
+    },
+    \qquad
+    0\leq x_K\leq L,
+\end{equation}
+where
+\begin{equation}
+    k
+    =
+    \frac{\sqrt{2mE}}{\hbar}.
+\end{equation}
+
+Every term in the denominator is nonnegative, so the controlled state satisfies
+\begin{equation}
+    \frac{\mathrm{d}x_K}{\mathrm{d}t}>0
+\end{equation}
+throughout the barrier. Within the stationary conservative rectangular-barrier model and the TFT phase-action guidance closure, coherent reflection cancellation therefore determines both the controlled matter-wave state and a continuous forward topological-knot trajectory.
+
+The complete downstream-drive requirement, matter-order-parameter current, traversal time, energy-current balance, weak-relaxation limit, and constitutive regime map are derived in
+\hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.
 
 \subsection{The Illusion of the Photonic Particle (The Threshold Gate Mechanism)}
 

@@ -1,66 +1,1168 @@
-\chapter{Quantum Tunneling: Resonant Transparency and Impedance Matching}
+\chapter{Quantum Tunneling as Evanescent Active-Vacuum Coupling and Coherent Boundary Control}
 \label{app:quantum_tunneling}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Abstract:} Standard Quantum Mechanics (SQM) describes tunneling as a probabilistic event where a particle briefly violates energy conservation to leak through a potential barrier ($V>E$). Tension Field Theory (TFT) rejects this violation, redefining tunneling as a deterministic mechanical resonance phenomenon. We demonstrate that a high-impedance barrier can be rendered transparent naturally via geometric resonance, or artificially if an active driver creates a standing wave bridge, dropping the barrier's effective impedance to zero. This formulation converts tunneling from a stochastic quantum anomaly into a tunable engineering parameter.
+\noindent\textbf{Abstract:}
+Tension Field Theory (TFT) interprets quantum tunneling as finite mechanical coupling of the matter order parameter through a region of the active vacuum in which the freely propagating branch is unavailable. At the continuum order retained here, a barrier is represented by an effective mechanical potential energy $V_{\mathrm{B}}$. For a stationary matter mode with $E<V_{\mathrm{B}}$, the real exterior wavenumber becomes an imaginary barrier wavenumber, producing an evanescent active-vacuum response with penetration coefficient $\kappa_{\mathrm{B}}$. Boundary matching across a barrier of finite thickness then gives a nonzero passive transmission current. Localized Quantum Damping $\Gamma$ constitutes a separate nonconservative response and is not part of the conservative evanescence scale. Structured barriers may additionally support resonantly enhanced transmission, while a coherent input applied from the downstream side modifies the two-port boundary conditions and can cancel the incident-side reflected amplitude. The resulting construction provides a unified mechanical description of passive tunneling, resonant enhancement, coherent boundary control, and active topological-knot transport within the TFT matter-wave framework.
 
-\section{The Definition Shift: SQM vs. TFT}
 
-\begin{itemize}
-    \item \textbf{The SQM View (Probabilistic Leakage):} The wavefunction decays exponentially inside a static barrier. The particle ``tunnels'' by briefly borrowing energy via the Heisenberg uncertainty principle, appearing on the other side without physically traversing the intervening space.
-    \item \textbf{The TFT View (Resonant Transparency):} The barrier is a physical region of high gravitational strain and effective inertia (high mechanical impedance, $Z_{\mathrm{wall}}$). In nature, tunneling occurs when a particle's pilot wave geometrically resonates with the barrier's internal boundaries, temporarily dropping its effective impedance. The particle does not teleport; it slides through the intervening space because the lattice links are mechanically forced to open and close in perfect synchronization with the topology's arrival.
-\end{itemize}
+\section{Mechanical Barrier Representation}
+\label{sec:tunneling_mechanical_barrier}
 
-\section{The Core Concept: Passive vs. Active Standing Wave Bridges}
-To open a potential wall without breaching it with high energy, TFT utilizes mechanical impedance matching via standing waves.
+The physical wavefunction developed in
+\hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}
+represents the extended order parameter associated with a matter excitation of the active vacuum. A localized massive particle is correspondingly represented by a topological defect coupled to this extended field.
 
-\begin{itemize}
-    \item \textbf{Natural (Passive) Tunneling:} As a particle's extended pilot wave hits a barrier, the evanescent strain field penetrates the wall. A fraction of that wave reflects off the internal boundaries of the wall. If the barrier's thickness ($L$) naturally matches a harmonic of the pilot wave's frequency, the wave interferes with its own reflection, establishing a temporary, passive standing wave. The particle slips through this momentary natural resonance. Because it relies on strict geometric coincidence, it is rare and probabilistic, perfectly mirroring standard SQM observations (e.g., alpha decay).
-    
-    \item \textbf{Engineered (Active) Tunneling:} Instead of waiting for a natural, probabilistic geometric match, TFT allows an engineer to force the gate open.
-    \begin{itemize}
-        \item \textbf{The Setup:} A source emits a pilot wave toward the front face of the barrier. On the opposite side of the barrier thickness ($L$), an active receiver is mechanically or electronically vibrated.
-        \item \textbf{The Interference:} The receiver emits a ``suction wave'' (rarefaction) traveling backward into the barrier. This interferes with the incoming source wave to form an engineered standing wave bridge.
-        \item \textbf{The Phase Lock:} By tuning the phase of the receiver so that a geometric node (a point of zero displacement) sits exactly on the front face of the barrier, the barrier feels zero net wave pressure.
-        \item \textbf{The Result:} The barrier's reflection coefficient drops strictly to zero. The pilot wave flows freely through the barrier, carried by the standing wave, pulling the topological knot through the dense lattice.
-    \end{itemize}
-\end{itemize}
-
-\section{Derivation of the Tunneling Equations}
-We present the evolution from the natural (passive) state to the engineered (active) state.
-
-\subsection{The Passive Law (Natural Attenuation)}
-If there is no active downstream driver and the geometry does not naturally resonate, the pilot wave simply pushes against the internal friction of the barrier, resulting in standard exponential decay:
+A material barrier changes the local mechanical state through which the defect-associated field must propagate. At the continuum order used here, that change is represented by the potential-energy function
 \begin{equation}
-    T_{\mathrm{passive}} \approx \exp(-2\Gamma_{\mathrm{wall}} L)
+    V(\mathbf{x}),
 \end{equation}
-Where $\Gamma_{\mathrm{wall}}$ is the strict Quantum Damping Rate of the barrier lattice (Derived in \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix \ref*{app:matter_vnlw_photon_linear_waveequation}}), and $L$ is the physical thickness of the barrier. Under natural conditions, thick walls or highly damped lattices remain thoroughly opaque to the stress wave.
-
-\subsection{The Active Physics Law (Resonant Transmission)}
-When an active driver is introduced, transmission is governed by the mechanical cancellation of impedance:
+with dimensions
 \begin{equation}
-    T_{\mathrm{active}} = \frac{\exp(-2\Gamma_{\mathrm{D}} L)}{1 + \left(\frac{Z_{\mathrm{wall}}}{Z_{\mathrm{drive}}}\right)^2 \cdot \left[ \sin^2(kL + \varphi) + \left(\frac{\omega - \omega_0}{\omega_0}\right)^2 \right]}
+    [V] = \mathrm{J}.
 \end{equation}
 
-\noindent\textbf{Term Analysis:}
-\begin{itemize}
-    \item $\exp(-2\Gamma_{\mathrm{D}} L)$ \textbf{(The Range Limit):} Ensures tunneling cannot occur across infinite distances. The vacuum cosmological damping ($\Gamma_{\mathrm{D}}$) eventually attenuates the standing wave bridge over extreme barrier thicknesses. \textit{(Note: Updated from $D$ to $\Gamma_{\mathrm{D}}$ for absolute consistency with Appendix \ref*{app:vacuumdamping_cosmicredshift}).}
-    \item $\left(Z_{\mathrm{wall}}/Z_{\mathrm{drive}}\right)^2$ \textbf{(The Sensitivity):} The ratio of the barrier's static mechanical impedance to the active drive impedance of the receiver. If the active drive ($Z_{\mathrm{drive}}$) vastly exceeds the wall impedance ($Z_{\mathrm{wall}}$), this dimensionless term shrinks, forcing the gate open even if phase tuning is imperfect.
-    \item $\sin^2(kL + \varphi)$ \textbf{(The Geometric Lock):} Checks if the standing wave geometrically fits inside the barrier, where $k$ is the standard angular wavenumber ($2\pi/\lambda$). Transmission maximizes when the node condition is met ($kL + \varphi = n\pi$).
-    \item $\left(\frac{\omega - \omega_0}{\omega_0}\right)^2$ \textbf{(The Frequency Key):} Ensures the active receiver ($\omega_0$) is strictly tuned to the specific frequency ($\omega$) of the incoming wave.
-\end{itemize}
-
-\section{Engineering Control Parameters}
-For practical macroscopic engineering applications across short gaps, the baseline cosmological damping becomes negligible ($\exp(-2\Gamma_{\mathrm{D}} L) \approx 1$), and the complex visco-elastic physics reduces to three primary macroscopic control parameters:
+For a uniform one-dimensional barrier of thickness $L$, define
 \begin{equation}
-    T_{\mathrm{device}} \approx \frac{1}{1 + \left(\frac{Z_{\mathrm{wall}}}{Z_{\mathrm{drive}}}\right)^2 (\Delta\varphi^2 + \Delta f^2)}
+    V(x)
+    =
+    \begin{cases}
+        0,
+        &
+        x<0,
+        \\[1mm]
+        V_{\mathrm{B}},
+        &
+        0\leq x\leq L,
+        \\[1mm]
+        0,
+        &
+        x>L.
+    \end{cases}
+    \label{eq:tunneling_barrier_profile}
 \end{equation}
 
-\begin{itemize}
-    \item \textbf{Active Drive Impedance ($Z_{\mathrm{drive}}$):} The active coupling power of the receiver. Maximizing this overpowers the static mechanical impedance of the wall.
-    \item \textbf{Frequency Detuning ($\Delta f$):} The normalized difference between the source and receiver frequencies. Tuning must minimize this to zero.
-    \item \textbf{Phase Offset ($\Delta\varphi$):} The timing delay of the receiver. This is adjusted until the standing wave geometrically locks into the gap.
-\end{itemize}
+The quantity $V_{\mathrm{B}}$ is the effective mechanical energy threshold associated with the barrier environment. In TFT it represents the additional local work required to sustain the matter excitation through that active-vacuum state.
 
-\vspace{0.4cm}
-\noindent \textbf{Final Result:} When the active drive impedance is extremely high and tuning errors are zero, the denominator reduces to 1. The barrier becomes 100\% transparent, and the particle tunnels deterministically.
+The stationary energy $E$ is conserved across the time-independent barrier. The distinction
+\begin{equation}
+    E>V_{\mathrm{B}}
+\end{equation}
+corresponds to an available propagating branch inside the barrier, whereas
+\begin{equation}
+    E<V_{\mathrm{B}}
+    \label{eq:tunneling_subbarrier_condition}
+\end{equation}
+produces an evanescent barrier branch.
+
+The tunneling problem is therefore a boundary-value problem for a physical matter order parameter of the active vacuum under a local mechanical energy constraint.
+
+
+\section{Evanescent Matter-Wave Branch}
+\label{sec:tunneling_evanescent_branch}
+
+The Viscous Non-Linear Wave Equation developed in
+\hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}
+contains the conservative matter-wave sector
+\begin{equation}
+    i\hbar
+    \frac{\partial\Psi}{\partial t}
+    =
+    \left[
+        -\frac{\hbar^2}{2m}\nabla^2
+        +
+        V
+    \right]\Psi.
+    \label{eq:tunneling_conservative_wave_equation}
+\end{equation}
+
+Here $m=m_i=M_{\mathrm{top}}$ is the invariant inertial loading of the localized TFT defect.
+
+For a stationary one-dimensional state,
+\begin{equation}
+    \Psi(x,t)
+    =
+    \psi(x)
+    e^{-iEt/\hbar},
+    \label{eq:tunneling_stationary_ansatz}
+\end{equation}
+Equation~\eqref{eq:tunneling_conservative_wave_equation} reduces to
+\begin{equation}
+    -\frac{\hbar^2}{2m}
+    \frac{\mathrm{d}^2\psi}{\mathrm{d}x^2}
+    +
+    V(x)\psi
+    =
+    E\psi.
+    \label{eq:tunneling_stationary_equation}
+\end{equation}
+
+For the exterior regions,
+\begin{equation}
+    V=0,
+\end{equation}
+and the stationary equation becomes
+\begin{equation}
+    \frac{\mathrm{d}^2\psi}{\mathrm{d}x^2}
+    +
+    k^2\psi
+    =
+    0,
+\end{equation}
+with
+\begin{equation}
+    k
+    =
+    \frac{\sqrt{2mE}}{\hbar}.
+    \label{eq:tunneling_exterior_wavenumber}
+\end{equation}
+
+Inside the barrier, Equation~\eqref{eq:tunneling_subbarrier_condition} gives
+\begin{equation}
+    \frac{\mathrm{d}^2\psi}{\mathrm{d}x^2}
+    -
+    \kappa_{\mathrm{B}}^2\psi
+    =
+    0,
+    \label{eq:tunneling_barrier_wave_equation}
+\end{equation}
+where the barrier evanescence coefficient is
+\begin{equation}
+    \kappa_{\mathrm{B}}
+    \equiv
+    \frac{
+        \sqrt{
+            2m
+            \left(
+                V_{\mathrm{B}}-E
+            \right)
+        }
+    }{
+        \hbar
+    }.
+    \label{eq:tunneling_barrier_evanescence}
+\end{equation}
+
+Its dimensions are
+\begin{equation}
+    [\kappa_{\mathrm{B}}]
+    =
+    \mathrm{m}^{-1}.
+\end{equation}
+
+The barrier wavenumber can therefore be written
+\begin{equation}
+    k_{\mathrm{B}}
+    =
+    i\kappa_{\mathrm{B}}.
+    \label{eq:tunneling_imaginary_wavenumber}
+\end{equation}
+
+The corresponding penetration length is
+\begin{equation}
+    \ell_{\mathrm{ev}}
+    \equiv
+    \frac{1}{\kappa_{\mathrm{B}}}.
+    \label{eq:tunneling_penetration_length}
+\end{equation}
+
+Mechanically, the transition
+\begin{equation}
+    k
+    \longrightarrow
+    i\kappa_{\mathrm{B}}
+\end{equation}
+means that the barrier does not support the same freely propagating matter-wave branch as the exterior region at the conserved energy $E$. The extended active-vacuum deformation nevertheless remains finite inside the barrier and varies over the characteristic distance $\ell_{\mathrm{ev}}$.
+
+For a finite barrier, the field reaching the second interface is therefore nonzero. The exit boundary can consequently couple that evanescent deformation back into a propagating exterior mode.
+
+
+\section{Passive Transmission Through a Finite Barrier}
+\label{sec:tunneling_passive_transmission}
+
+For the barrier profile in Equation~\eqref{eq:tunneling_barrier_profile}, the passive problem corresponds to
+\begin{equation}
+    a_{\mathrm{R}}=0.
+\end{equation}
+
+The stationary solutions are
+\begin{equation}
+    \psi_{\mathrm{I}}(x)
+    =
+    a_{\mathrm{L}}e^{ikx}
+    +
+    b_{\mathrm{L}}e^{-ikx},
+    \qquad
+    x<0,
+    \label{eq:tunneling_region_I}
+\end{equation}
+\begin{equation}
+    \psi_{\mathrm{II}}(x)
+    =
+    B e^{\kappa_{\mathrm{B}}x}
+    +
+    C e^{-\kappa_{\mathrm{B}}x},
+    \qquad
+    0\leq x\leq L,
+    \label{eq:tunneling_region_II}
+\end{equation}
+and
+\begin{equation}
+    \psi_{\mathrm{III}}(x)
+    =
+    b_{\mathrm{R}}
+    e^{ik(x-L)},
+    \qquad
+    x>L.
+    \label{eq:tunneling_region_III}
+\end{equation}
+
+The coefficients are fixed by continuity of the order parameter and its spatial derivative,
+\begin{equation}
+    \psi_{\mathrm{I}}(0)
+    =
+    \psi_{\mathrm{II}}(0),
+\end{equation}
+\begin{equation}
+    \left.
+    \frac{\mathrm{d}\psi_{\mathrm{I}}}{\mathrm{d}x}
+    \right|_{x=0}
+    =
+    \left.
+    \frac{\mathrm{d}\psi_{\mathrm{II}}}{\mathrm{d}x}
+    \right|_{x=0},
+\end{equation}
+\begin{equation}
+    \psi_{\mathrm{II}}(L)
+    =
+    \psi_{\mathrm{III}}(L),
+\end{equation}
+and
+\begin{equation}
+    \left.
+    \frac{\mathrm{d}\psi_{\mathrm{II}}}{\mathrm{d}x}
+    \right|_{x=L}
+    =
+    \left.
+    \frac{\mathrm{d}\psi_{\mathrm{III}}}{\mathrm{d}x}
+    \right|_{x=L}.
+\end{equation}
+
+The conserved stationary matter-order-parameter current associated with Equation~\eqref{eq:tunneling_stationary_equation} is
+\begin{equation}
+    j_{\Psi}
+    =
+    \frac{\hbar}{2mi}
+    \left(
+        \psi^{*}
+        \frac{\mathrm{d}\psi}{\mathrm{d}x}
+        -
+        \psi
+        \frac{\mathrm{d}\psi^{*}}{\mathrm{d}x}
+    \right).
+    \label{eq:tunneling_stationary_flux}
+\end{equation}
+
+Define the passive transmission coefficient by
+\begin{equation}
+    T_{\mathrm{pass}}
+    \equiv
+    \frac{
+        j_{\mathrm{tr}}
+    }{
+        j_{\mathrm{in}}
+    }.
+    \label{eq:tunneling_transmission_definition}
+\end{equation}
+
+For identical exterior media and the same invariant defect loading $m$ across the three regions, boundary matching gives
+\begin{equation}
+    T_{\mathrm{pass}}
+    =
+    \left[
+        1
+        +
+        \frac{
+            V_{\mathrm{B}}^2
+        }{
+            4E
+            \left(
+                V_{\mathrm{B}}-E
+            \right)
+        }
+        \sinh^2
+        \left(
+            \kappa_{\mathrm{B}}L
+        \right)
+    \right]^{-1}.
+    \label{eq:tunneling_passive_exact}
+\end{equation}
+
+The transmission is therefore controlled by the dimensionless barrier depth and thickness through
+\begin{equation}
+    \frac{V_{\mathrm{B}}-E}{E}
+\end{equation}
+and
+\begin{equation}
+    \kappa_{\mathrm{B}}L.
+\end{equation}
+
+For an opaque barrier,
+\begin{equation}
+    \kappa_{\mathrm{B}}L
+    \gg
+    1,
+\end{equation}
+Equation~\eqref{eq:tunneling_passive_exact} reduces to
+\begin{equation}
+    T_{\mathrm{pass}}
+    \simeq
+    16
+    \frac{E}{V_{\mathrm{B}}}
+    \left(
+        1-\frac{E}{V_{\mathrm{B}}}
+    \right)
+    \exp
+    \left(
+        -2\kappa_{\mathrm{B}}L
+    \right).
+    \label{eq:tunneling_opaque_limit}
+\end{equation}
+
+The characteristic spatial suppression is therefore
+\begin{equation}
+    T_{\mathrm{pass}}
+    \propto
+    e^{-2\kappa_{\mathrm{B}}L}.
+    \label{eq:tunneling_exponential_scaling}
+\end{equation}
+
+The finite transmission arises because the evanescent field generated at the entrance boundary retains a nonzero amplitude at the exit boundary. The transmitted exterior branch is reconstructed from that boundary amplitude.
+
+Within TFT, the same calculation therefore has a direct mechanical interpretation:
+\begin{equation}
+    \begin{aligned}
+    &\text{propagating matter-order parameter}
+    \\
+    &\quad\longrightarrow
+    \text{evanescent active-vacuum deformation}
+    \\
+    &\quad\longrightarrow
+    \text{finite coupling across the barrier}
+    \\
+    &\quad\longrightarrow
+    \text{propagating transmitted branch}.
+    \end{aligned}
+    \label{eq:tunneling_mechanical_sequence}
+\end{equation}
+
+
+\section{Localized Relaxation Within the Barrier}
+\label{sec:tunneling_localized_relaxation}
+
+The conservative barrier response characterized by $\kappa_{\mathrm{B}}$ is distinct from the localized nonconservative response of the material environment.
+
+The Localized Quantum Damping Rate established in
+\hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}
+is denoted by
+\begin{equation}
+    \Gamma(x),
+    \label{eq:tunneling_quantum_damping_rate}
+\end{equation}
+with
+\begin{equation}
+    [\Gamma]
+    =
+    \mathrm{s}^{-1}.
+\end{equation}
+
+For a uniform barrier region, define the barrier-localized damping rate
+\begin{equation}
+    \Gamma_{\mathrm{B}}
+    \equiv
+    \left.
+    \Gamma(x)
+    \right|_{0\leq x\leq L}.
+    \label{eq:tunneling_barrier_damping}
+\end{equation}
+
+The microscopic dependence of $\Gamma_{\mathrm{B}}$ on the local knot-density and interaction sector is inherited from the Localized Quantum Damping construction developed in
+\hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.
+
+The two coefficients therefore characterize different parts of the barrier mechanics:
+\begin{equation}
+    \kappa_{\mathrm{B}}
+    \quad
+    \text{controls spatial evanescence},
+\end{equation}
+whereas
+\begin{equation}
+    \Gamma_{\mathrm{B}}
+    \quad
+    \text{controls localized nonconservative relaxation}.
+\end{equation}
+
+Equation~\eqref{eq:tunneling_passive_exact} describes the conservative barrier-transmission problem. When localized relaxation is dynamically relevant, the barrier state is governed by the full matter-wave equation containing both $V(x)$ and $\Gamma(x)$. The resulting transmission coefficient is then obtained from that dissipative boundary-value problem rather than by changing the conservative evanescence coefficient.
+
+This separation preserves the constitutive hierarchy
+\begin{equation}
+    V_{\mathrm{B}}-E
+    \longrightarrow
+    \kappa_{\mathrm{B}}
+    \longrightarrow
+    \text{evanescent penetration},
+\end{equation}
+while
+\begin{equation}
+    \Gamma_{\mathrm{B}}
+    \longrightarrow
+    \text{localized energy relaxation}.
+\end{equation}
+
+A barrier may therefore be strongly evanescent, strongly dissipative, both, or neither, depending on its local mechanical state.
+
+
+\section{Resonantly Enhanced Passive Transmission}
+\label{sec:tunneling_resonant_transmission}
+
+Finite transmission through a single barrier follows directly from evanescent coupling and does not require a resonance condition.
+
+Resonant enhancement arises when the barrier system contains additional internal structure capable of supporting a propagating or quasi-bound mode. Examples include an internal well bounded by two evanescent regions or a multilayer structure with repeated partially reflecting interfaces.
+
+Let an internal propagating region have effective length $L_{\mathrm{c}}$ and real wavenumber $k_{\mathrm{c}}$. Let the two confining interfaces contribute reflection phase shifts $\delta_{\mathrm{L}}$ and $\delta_{\mathrm{R}}$.
+
+A round trip through the internal region accumulates the phase
+\begin{equation}
+    \Theta_{\mathrm{rt}}
+    =
+    2k_{\mathrm{c}}L_{\mathrm{c}}
+    +
+    \delta_{\mathrm{L}}
+    +
+    \delta_{\mathrm{R}}.
+\end{equation}
+
+A resonant internal mode occurs when
+\begin{equation}
+    2k_{\mathrm{c}}L_{\mathrm{c}}
+    +
+    \delta_{\mathrm{L}}
+    +
+    \delta_{\mathrm{R}}
+    =
+    2\pi n,
+    \qquad
+    n\in\mathbb{Z}.
+    \label{eq:tunneling_resonance_condition}
+\end{equation}
+
+At such a condition, multiply reflected components within the structured barrier add coherently. The net incident-side reflection may be strongly reduced while the transmitted current is correspondingly enhanced.
+
+In TFT this resonance has a direct mechanical interpretation: the barrier structure supports an internal active-vacuum matter-wave mode whose round-trip phase is compatible with the incident matter-wave field.
+
+The passive sector therefore contains two distinct regimes:
+\begin{equation}
+    \text{single-barrier evanescent transmission},
+\end{equation}
+and
+\begin{equation}
+    \text{structured-barrier resonant enhancement}.
+\end{equation}
+
+The latter modifies the magnitude of transmission but does not replace the evanescent mechanism that permits finite sub-barrier coupling.
+
+
+\section{Coherent Two-Port Boundary Control}
+\label{sec:tunneling_coherent_boundary_control}
+
+An externally driven downstream boundary produces a different physical problem because the barrier is then illuminated coherently from both sides.
+
+Represent the barrier as a linear two-port scatterer. Let
+\begin{equation}
+    a_{\mathrm{L}},
+    \qquad
+    a_{\mathrm{R}}
+\end{equation}
+denote the incoming complex amplitudes from the left and right, and let
+\begin{equation}
+    b_{\mathrm{L}},
+    \qquad
+    b_{\mathrm{R}}
+\end{equation}
+denote the corresponding outgoing amplitudes.
+
+The scattering relation is
+\begin{equation}
+    \begin{pmatrix}
+        b_{\mathrm{L}}
+        \\
+        b_{\mathrm{R}}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        r_{\mathrm{L}}
+        &
+        t_{\mathrm{R}}
+        \\
+        t_{\mathrm{L}}
+        &
+        r_{\mathrm{R}}
+    \end{pmatrix}
+    \begin{pmatrix}
+        a_{\mathrm{L}}
+        \\
+        a_{\mathrm{R}}
+    \end{pmatrix}.
+    \label{eq:tunneling_scattering_matrix_general}
+\end{equation}
+
+For a reciprocal mirror-symmetric barrier,
+\begin{equation}
+    r_{\mathrm{L}}
+    =
+    r_{\mathrm{R}}
+    \equiv
+    r_{\mathrm{B}},
+    \qquad
+    t_{\mathrm{L}}
+    =
+    t_{\mathrm{R}}
+    \equiv
+    t_{\mathrm{B}},
+\end{equation}
+so
+\begin{equation}
+    \begin{pmatrix}
+        b_{\mathrm{L}}
+        \\
+        b_{\mathrm{R}}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        r_{\mathrm{B}}
+        &
+        t_{\mathrm{B}}
+        \\
+        t_{\mathrm{B}}
+        &
+        r_{\mathrm{B}}
+    \end{pmatrix}
+    \begin{pmatrix}
+        a_{\mathrm{L}}
+        \\
+        a_{\mathrm{R}}
+    \end{pmatrix}.
+    \label{eq:tunneling_scattering_matrix_symmetric}
+\end{equation}
+
+For passive illumination from the left,
+\begin{equation}
+    a_{\mathrm{R}}
+    =
+    0,
+\end{equation}
+and
+\begin{equation}
+    b_{\mathrm{L}}
+    =
+    r_{\mathrm{B}}a_{\mathrm{L}}.
+\end{equation}
+
+If a coherent downstream driver supplies a nonzero right-side input, the reflected field becomes
+\begin{equation}
+    b_{\mathrm{L}}
+    =
+    r_{\mathrm{B}}a_{\mathrm{L}}
+    +
+    t_{\mathrm{B}}a_{\mathrm{R}}.
+    \label{eq:tunneling_active_reflected_amplitude}
+\end{equation}
+
+Incident-side reflection is canceled when
+\begin{equation}
+    b_{\mathrm{L}}
+    =
+    0.
+\end{equation}
+
+For
+\begin{equation}
+    t_{\mathrm{B}}\neq0,
+\end{equation}
+the required coherent-drive condition is
+\begin{equation}
+    \frac{
+        a_{\mathrm{R}}
+    }{
+        a_{\mathrm{L}}
+    }
+    =
+    -
+    \frac{
+        r_{\mathrm{B}}
+    }{
+        t_{\mathrm{B}}
+    }.
+    \label{eq:tunneling_reflection_cancellation}
+\end{equation}
+
+Equation~\eqref{eq:tunneling_reflection_cancellation} fixes both the amplitude and relative phase of the downstream drive.
+
+Its magnitude condition is
+\begin{equation}
+    \left|
+        \frac{
+            a_{\mathrm{R}}
+        }{
+            a_{\mathrm{L}}
+        }
+    \right|
+    =
+    \frac{
+        |r_{\mathrm{B}}|
+    }{
+        |t_{\mathrm{B}}|
+    },
+    \label{eq:tunneling_drive_amplitude_condition}
+\end{equation}
+and its phase condition is
+\begin{equation}
+    \arg
+    \left(
+        \frac{
+            a_{\mathrm{R}}
+        }{
+            a_{\mathrm{L}}
+        }
+    \right)
+    =
+    \pi
+    +
+    \arg(r_{\mathrm{B}})
+    -
+    \arg(t_{\mathrm{B}})
+    \qquad
+    (\mathrm{mod}\ 2\pi).
+    \label{eq:tunneling_drive_phase_condition}
+\end{equation}
+
+The downstream input therefore changes the complete boundary state through coherent interference. Under the cancellation condition, the outgoing left-moving components destructively interfere while the barrier supports a coherently driven evanescent field.
+
+The resulting driven internal field may contain interference structure determined by the complete boundary-matched solution; reflection cancellation does not require a zero-displacement node.
+
+The right-side output is
+\begin{equation}
+    b_{\mathrm{R}}
+    =
+    t_{\mathrm{B}}a_{\mathrm{L}}
+    +
+    r_{\mathrm{B}}a_{\mathrm{R}}.
+    \label{eq:tunneling_active_right_output}
+\end{equation}
+
+Because both $a_{\mathrm{L}}$ and $a_{\mathrm{R}}$ are incoming fields, the driven system has two energy inputs. Consequently, $b_{\mathrm{R}}$ generally contains contributions supplied from both sides.
+
+The coherent-control condition therefore represents reflection cancellation under two-sided boundary driving, not a change in the intrinsic value of $V_{\mathrm{B}}$. By itself, Equation~\eqref{eq:tunneling_reflection_cancellation} establishes a controlled matter-wave field state; the corresponding topological-knot transport is derived separately from the TFT phase-action guidance law.
+
+\section{Active Topological-Knot Transport Engineering Law}
+\label{sec:tunneling_active_knot_transport}
+
+The coherent-control condition in
+Equation~\eqref{eq:tunneling_reflection_cancellation}
+fixes the general downstream input required to cancel the incident-side reflected amplitude. For the uniform rectangular barrier defined in
+Equation~\eqref{eq:tunneling_barrier_profile},
+the corresponding driven barrier state can be obtained explicitly.
+
+Under the reflection-cancellation condition
+\begin{equation}
+    b_{\mathrm{L}}=0,
+    \label{eq:tunneling_active_zero_reflection}
+\end{equation}
+the left exterior field reduces to
+\begin{equation}
+    \psi_{\mathrm{I}}(x)
+    =
+    a_{\mathrm{L}}e^{ikx},
+    \qquad
+    x<0.
+    \label{eq:tunneling_active_left_field}
+\end{equation}
+
+Inside the barrier,
+\begin{equation}
+    \psi_{\mathrm{II}}(x)
+    =
+    B e^{\kappa_{\mathrm{B}}x}
+    +
+    C e^{-\kappa_{\mathrm{B}}x}.
+\end{equation}
+
+Continuity of $\psi$ and $\mathrm{d}\psi/\mathrm{d}x$ at $x=0$ gives
+\begin{equation}
+    B+C
+    =
+    a_{\mathrm{L}},
+\end{equation}
+and
+\begin{equation}
+    \kappa_{\mathrm{B}}(B-C)
+    =
+    ik a_{\mathrm{L}}.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    B
+    =
+    \frac{a_{\mathrm{L}}}{2}
+    \left(
+        1+i\frac{k}{\kappa_{\mathrm{B}}}
+    \right),
+\end{equation}
+and
+\begin{equation}
+    C
+    =
+    \frac{a_{\mathrm{L}}}{2}
+    \left(
+        1-i\frac{k}{\kappa_{\mathrm{B}}}
+    \right).
+\end{equation}
+
+The reflection-cancelled barrier field is consequently
+\begin{equation}
+    \psi_{\mathrm{II}}(x)
+    =
+    a_{\mathrm{L}}
+    \left[
+        \cosh(\kappa_{\mathrm{B}}x)
+        +
+        i
+        \frac{k}{\kappa_{\mathrm{B}}}
+        \sinh(\kappa_{\mathrm{B}}x)
+    \right].
+    \label{eq:tunneling_active_barrier_field}
+\end{equation}
+
+On the downstream side,
+\begin{equation}
+    \psi_{\mathrm{III}}(x)
+    =
+    b_{\mathrm{R}}e^{ik(x-L)}
+    +
+    a_{\mathrm{R}}e^{-ik(x-L)},
+    \qquad
+    x>L.
+    \label{eq:tunneling_active_right_field}
+\end{equation}
+
+Matching the field and its derivative at $x=L$ gives the required downstream drive,
+\begin{equation}
+    \frac{a_{\mathrm{R}}}{a_{\mathrm{L}}}
+    =
+    \frac{i}{2}
+    \left(
+        \frac{k}{\kappa_{\mathrm{B}}}
+        +
+        \frac{\kappa_{\mathrm{B}}}{k}
+    \right)
+    \sinh(\kappa_{\mathrm{B}}L).
+    \label{eq:tunneling_active_drive_exact}
+\end{equation}
+
+Using
+Equations~\eqref{eq:tunneling_exterior_wavenumber}
+and~\eqref{eq:tunneling_barrier_evanescence},
+this becomes
+\begin{equation}
+    \frac{a_{\mathrm{R}}}{a_{\mathrm{L}}}
+    =
+    i
+    \frac{
+        V_{\mathrm{B}}
+    }{
+        2\sqrt{
+            E(V_{\mathrm{B}}-E)
+        }
+    }
+    \sinh(\kappa_{\mathrm{B}}L).
+    \label{eq:tunneling_active_drive_engineering}
+\end{equation}
+
+For the phase convention used here, the required downstream drive is therefore in quadrature with the left incident amplitude. The general phase relation remains that of
+Equation~\eqref{eq:tunneling_drive_phase_condition}.
+
+The corresponding right-side outgoing amplitude is
+\begin{equation}
+    \frac{b_{\mathrm{R}}}{a_{\mathrm{L}}}
+    =
+    \cosh(\kappa_{\mathrm{B}}L)
+    +
+    \frac{i}{2}
+    \left(
+        \frac{k}{\kappa_{\mathrm{B}}}
+        -
+        \frac{\kappa_{\mathrm{B}}}{k}
+    \right)
+    \sinh(\kappa_{\mathrm{B}}L).
+    \label{eq:tunneling_active_output_exact}
+\end{equation}
+
+The magnitude of the required drive follows directly from
+Equation~\eqref{eq:tunneling_active_drive_engineering}:
+\begin{equation}
+    \left|
+        \frac{a_{\mathrm{R}}}{a_{\mathrm{L}}}
+    \right|^2
+    =
+    \frac{
+        V_{\mathrm{B}}^2
+    }{
+        4E(V_{\mathrm{B}}-E)
+    }
+    \sinh^2(\kappa_{\mathrm{B}}L).
+    \label{eq:tunneling_active_drive_magnitude}
+\end{equation}
+
+Comparison with the exact passive coefficient in
+Equation~\eqref{eq:tunneling_passive_exact}
+gives the engineering relation
+\begin{equation}
+    \left|
+        \frac{a_{\mathrm{R}}}{a_{\mathrm{L}}}
+    \right|^2
+    =
+    \frac{
+        1-T_{\mathrm{pass}}
+    }{
+        T_{\mathrm{pass}}
+    }.
+    \label{eq:tunneling_active_drive_vs_passive}
+\end{equation}
+
+Thus, increasingly opaque passive barriers require correspondingly larger coherent downstream drive. The controlled state does not remove the barrier or change $V_{\mathrm{B}}$; it changes the boundary-matched matter-wave field.
+
+The matter-order-parameter current defined in
+Equation~\eqref{eq:tunneling_stationary_flux}
+evaluated for
+Equation~\eqref{eq:tunneling_active_barrier_field}
+is
+\begin{equation}
+    j_{\Psi}
+    =
+    \frac{\hbar k}{m}
+    \left|
+        a_{\mathrm{L}}
+    \right|^2,
+    \qquad
+    0\leq x\leq L.
+    \label{eq:tunneling_active_barrier_current}
+\end{equation}
+
+The corresponding barrier-field magnitude is
+\begin{equation}
+    \left|
+        \psi_{\mathrm{II}}(x)
+    \right|^2
+    =
+    \left|
+        a_{\mathrm{L}}
+    \right|^2
+    \left[
+        \cosh^2(\kappa_{\mathrm{B}}x)
+        +
+        \frac{k^2}{\kappa_{\mathrm{B}}^2}
+        \sinh^2(\kappa_{\mathrm{B}}x)
+    \right].
+    \label{eq:tunneling_active_barrier_density}
+\end{equation}
+
+Using the TFT Madelung form
+\begin{equation}
+    \Psi
+    =
+    \sqrt{\rho}\,
+    e^{iS/\hbar},
+\end{equation}
+the order-parameter current satisfies
+\begin{equation}
+    j_{\Psi}
+    =
+    \rho
+    \frac{1}{m}
+    \frac{\partial S}{\partial x}
+    =
+    \rho v_{\Psi}.
+    \label{eq:tunneling_active_madelung_current}
+\end{equation}
+
+The local phase-action velocity inside the barrier is therefore
+\begin{equation}
+    v_{\Psi}(x)
+    =
+    \frac{
+        \hbar k/m
+    }{
+        \cosh^2(\kappa_{\mathrm{B}}x)
+        +
+        \dfrac{k^2}{\kappa_{\mathrm{B}}^2}
+        \sinh^2(\kappa_{\mathrm{B}}x)
+    }.
+    \label{eq:tunneling_active_phase_velocity}
+\end{equation}
+
+TFT identifies the localized topological knot with the defect guided by this physical matter-order-parameter flow. Denoting its one-dimensional coordinate by $x_K(t)$, the corresponding guidance closure is
+\begin{equation}
+    \frac{\mathrm{d}x_K}{\mathrm{d}t}
+    =
+    v_{\Psi}\!\left(x_K\right).
+    \label{eq:tunneling_knot_guidance}
+\end{equation}
+
+Substitution of
+Equation~\eqref{eq:tunneling_active_phase_velocity}
+gives the Active Topological-Knot Transport Engineering Law:
+\begin{equation}
+    \frac{\mathrm{d}x_K}{\mathrm{d}t}
+    =
+    \frac{
+        \hbar k/m
+    }{
+        \cosh^2(\kappa_{\mathrm{B}}x_K)
+        +
+        \dfrac{k^2}{\kappa_{\mathrm{B}}^2}
+        \sinh^2(\kappa_{\mathrm{B}}x_K)
+    },
+    \qquad
+    0\leq x_K\leq L.
+    \label{eq:tunneling_active_knot_transport}
+\end{equation}
+
+Every term in the denominator of
+Equation~\eqref{eq:tunneling_active_knot_transport}
+is nonnegative, while $k>0$. Hence
+\begin{equation}
+    \frac{\mathrm{d}x_K}{\mathrm{d}t}
+    >
+    0
+\end{equation}
+throughout the barrier. Within the TFT guidance closure, a knot entering the controlled barrier therefore follows a continuous forward streamline from the entrance toward the exit.
+
+The corresponding traversal time is
+\begin{equation}
+    t_{\mathrm{tr}}^{(\mathrm{act})}
+    =
+    \frac{m}{\hbar k}
+    \int_0^L
+    \left[
+        \cosh^2(\kappa_{\mathrm{B}}x)
+        +
+        \frac{k^2}{\kappa_{\mathrm{B}}^2}
+        \sinh^2(\kappa_{\mathrm{B}}x)
+    \right]
+    \mathrm{d}x.
+    \label{eq:tunneling_active_traversal_integral}
+\end{equation}
+
+Evaluating the integral gives
+\begin{equation}
+    t_{\mathrm{tr}}^{(\mathrm{act})}
+    =
+    \frac{m}{\hbar k}
+    \left[
+        \frac{
+            1+k^2/\kappa_{\mathrm{B}}^2
+        }{
+            4\kappa_{\mathrm{B}}
+        }
+        \sinh(2\kappa_{\mathrm{B}}L)
+        +
+        \frac{
+            1-k^2/\kappa_{\mathrm{B}}^2
+        }{2}
+        L
+    \right].
+    \label{eq:tunneling_active_traversal_time}
+\end{equation}
+
+The two-port solution also preserves the stationary current balance. Equations~\eqref{eq:tunneling_active_drive_exact}
+and~\eqref{eq:tunneling_active_output_exact}
+give
+\begin{equation}
+    \left|
+        b_{\mathrm{R}}
+    \right|^2
+    =
+    \left|
+        a_{\mathrm{L}}
+    \right|^2
+    +
+    \left|
+        a_{\mathrm{R}}
+    \right|^2.
+    \label{eq:tunneling_active_amplitude_balance}
+\end{equation}
+
+Accordingly,
+\begin{equation}
+    j_{\mathrm{R}}^{(\mathrm{out})}
+    -
+    j_{\mathrm{R}}^{(\mathrm{in})}
+    =
+    j_{\mathrm{L}}^{(\mathrm{in})},
+    \label{eq:tunneling_active_current_balance}
+\end{equation}
+where $j_{\mathrm{R}}^{(\mathrm{in})}$ denotes the magnitude of the left-moving downstream input current. Since all three exterior components have the same stationary energy $E$, the corresponding energy-flux balance follows by multiplication by $E$.
+
+The derivation above assumes the conservative barrier problem. When localized relaxation is present but weak, the controlled solution remains a valid leading approximation provided
+\begin{equation}
+    \int_0^{t_{\mathrm{tr}}^{(\mathrm{act})}}
+    \Gamma\!\left[x_K(t)\right]
+    \mathrm{d}t
+    \ll
+    1.
+    \label{eq:tunneling_active_weak_relaxation}
+\end{equation}
+
+For a uniform barrier-localized rate,
+\begin{equation}
+    \Gamma_{\mathrm{B}}
+    t_{\mathrm{tr}}^{(\mathrm{act})}
+    \ll
+    1.
+    \label{eq:tunneling_active_uniform_relaxation}
+\end{equation}
+
+If this condition fails, the full dissipative VNLW boundary-value problem must be solved and the conservative active-transport law is no longer sufficient.
+
+The resulting engineering hierarchy is
+\begin{equation}
+    \begin{aligned}
+    E,\;V_{\mathrm{B}},\;L,\;m
+    &\longrightarrow
+    k,\;\kappa_{\mathrm{B}},\;T_{\mathrm{pass}}
+    \\
+    &\longrightarrow
+    \frac{a_{\mathrm{R}}}{a_{\mathrm{L}}}
+    \longrightarrow
+    \psi_{\mathrm{II}}
+    \longrightarrow
+    v_{\Psi}
+    \longrightarrow
+    x_K(t).
+    \end{aligned}
+    \label{eq:tunneling_active_engineering_hierarchy}
+\end{equation}
+
+Thus, within the stationary conservative rectangular-barrier model and the TFT phase-action guidance closure, coherent reflection cancellation yields an explicit controllable matter-wave state together with a deterministic forward knot-transport law. The remaining microscopic engineering requirement is to specify how a physical actuator generates the required coherent downstream matter-order-parameter input $a_{\mathrm{R}}$ without introducing an independent localized topological defect.
+
+\section{TFT Constitutive Closure and Regime Map}
+\label{sec:tunneling_constitutive_closure}
+
+The tunneling construction separates the matter-wave problem into distinct mechanical regimes.
+
+For a passive barrier,
+\begin{equation}
+    E<V_{\mathrm{B}}
+\end{equation}
+produces the evanescent branch
+\begin{equation}
+    k_{\mathrm{B}}
+    =
+    i\kappa_{\mathrm{B}},
+    \qquad
+    \kappa_{\mathrm{B}}
+    =
+    \frac{
+        \sqrt{
+            2m
+            \left(
+                V_{\mathrm{B}}-E
+            \right)
+        }
+    }{
+        \hbar
+    }.
+\end{equation}
+Boundary matching then gives the finite passive transmission coefficient
+$T_{\mathrm{pass}}$ of
+Equation~\eqref{eq:tunneling_passive_exact}.
+
+Localized nonconservative response constitutes a separate constitutive sector characterized by the barrier-localized rate
+\begin{equation}
+    \Gamma_{\mathrm{B}},
+\end{equation}
+which does not modify the conservative definition of $\kappa_{\mathrm{B}}$.
+
+For a structured barrier, resonantly enhanced passive transmission occurs when
+\begin{equation}
+    2k_{\mathrm{c}}L_{\mathrm{c}}
+    +
+    \delta_{\mathrm{L}}
+    +
+    \delta_{\mathrm{R}}
+    =
+    2\pi n.
+\end{equation}
+
+For coherent two-sided driving, incident-side reflection is canceled when
+\begin{equation}
+    \frac{
+        a_{\mathrm{R}}
+    }{
+        a_{\mathrm{L}}
+    }
+    =
+    -
+    \frac{
+        r_{\mathrm{B}}
+    }{
+        t_{\mathrm{B}}
+    },
+\end{equation}
+while the barrier itself retains the same intrinsic potential-energy threshold $V_{\mathrm{B}}$.
+
+For the uniform rectangular barrier, the reflection-cancelled state further yields the explicit drive condition of
+Equation~\eqref{eq:tunneling_active_drive_engineering}. Through the TFT phase-action relation and topological-knot guidance closure, this controlled field determines the knot motion according to
+Equation~\eqref{eq:tunneling_active_knot_transport}, with traversal time given by
+Equation~\eqref{eq:tunneling_active_traversal_time}.
+
+The resulting regime hierarchy is therefore
+\begin{equation}
+    \begin{aligned}
+    &\text{passive evanescence}
+    \\
+    &\quad\longrightarrow
+    \text{localized relaxation}
+    \\
+    &\quad\longrightarrow
+    \text{structured-barrier resonance}
+    \\
+    &\quad\longrightarrow
+    \text{coherent two-port boundary control}
+    \\
+    &\quad\longrightarrow
+    \text{active topological-knot transport}.
+    \end{aligned}
+    \label{eq:tunneling_regime_hierarchy}
+\end{equation}
+
+The first three regimes characterize passive or material-dependent barrier response. The fourth specifies externally imposed coherent boundary control. The fifth converts that controlled matter-order-parameter state into deterministic knot transport within the TFT phase-action guidance closure.
+
+Two microscopic reductions remain external to the present continuum treatment. The first is the constitutive derivation
+\begin{equation}
+    V_{\mathrm{B}}
+    \longleftarrow
+    \text{local FCC--Condensate active-vacuum barrier microphysics},
+    \label{eq:tunneling_barrier_microphysical_bridge}
+\end{equation}
+which determines the effective barrier energy from the underlying material state. The second is the actuator realization
+\begin{equation}
+    \text{physical coherent actuator}
+    \longrightarrow
+    a_{\mathrm{R}},
+    \label{eq:tunneling_actuator_bridge}
+\end{equation}
+which must generate the required downstream matter-order-parameter input without introducing an independent localized topological defect.
+
+Within these stated closures, quantum tunneling is represented as finite coupling of a physical matter order parameter through an evanescent region of the active vacuum. Passive transmission, localized relaxation, resonant enhancement, coherent reflection cancellation, and active knot transport are therefore distinct limits of one boundary-value framework rather than separate tunneling mechanisms.
