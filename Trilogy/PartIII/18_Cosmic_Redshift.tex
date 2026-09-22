@@ -1,186 +1,1204 @@
 \chapter{The Mechanics of Cosmic Redshift and Vacuum Relaxation}
 \label{chap:cosmic_redshift}
 
-In standard cosmology, the observation that distant galaxies appear redshifted is attributed to the evolution of the FLRW scale factor, and dark energy is invoked to account for late-time accelerated distance-redshift behavior.
+In standard cosmology, the observation that distant galaxies appear redshifted is attributed to the evolution of the FLRW scale factor, and dark energy is invoked to account for the late-time accelerated expansion inferred from the distance--redshift relation.
 
-Tension Field Theory (TFT) resolves this without invoking metric expansion. Instead, within the TFT constitutive closure, cosmic redshift arises as the nonconservative consequence of coherent-action-preserving frequency transport through a visco-elastic medium.
+Tension Field Theory (TFT) resolves this without invoking metric expansion. Instead, the observed cosmic spectral shift emerges from the combined action of source--observer kinematics, gravitational endpoint loading, and coherent-action-preserving photon scale relaxation through the coupled FCC-condensate Active Vacuum.
 
-\section{The Mechanism of the Viscous Cosmic Horizon: Vacuum Relaxation ($\Gamma_{\mathrm{D}}$)}
+\section{Coherent Photon Scale Relaxation}
 \label{sec:vacuum_viscosity}
 
-\subsection{The Viscosity of Spacetime}
-In previous sections, we established the Viscous Cosmic Horizon ($R_{\mathrm{U}}$) as a boundary of ``Causal Saturation'' rather than geometric expansion. We now define the physical mechanism responsible for this limit.
+To isolate the propagation contribution before incorporating source and observer endpoint effects, we first consider the coherent scale-relaxation channel of the Active Vacuum.
 
-TFT postulates that the Face--Centered Cubic (FCC) active vacuum possesses a finite weak-loss visco-elastic response. Standard cosmology attributes cosmological redshift to evolution of the FLRW scale factor. TFT categorically rejects this interpretation. Instead, we model light strictly as a transverse shear wave propagating through a visco-elastic lattice.
+\subsection{Coherent Scale Transfer Through the Active Vacuum}
 
-Like any wave traveling through a physical medium, the photon must perform work against the structural resistance of the lattice nodes. However, as rigorously proven by the Amplitude-Attenuation No-Go theorem in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}, ordinary linear damping causes amplitude decay but leaves the real oscillation frequency completely fixed. Therefore, simple boundary friction cannot physically force the wavelength to stretch.
-
-To achieve true frequency evolution, the photon must undergo Coherent-Action-Preserving Frequency Transport. As the wave bleeds its active transverse energy into the accessible reservoir modes of the FCC--Condensate reservoir, it strictly preserves its coherent modal action ($\mathcal{I}_\gamma \equiv E/\omega = \text{constant}$). This preservation and the direction-preserving wave-vector drag are two distinct constitutive closures acting together. The direction-preserving wave-vector drag mechanically pulls the wave number down, while action preservation links this resulting $\omega$-change directly to the energy loss, forcing the wave to continuously shift through the real-frequency eigenbranch.
-
-\subsection{The Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}$)}
-We define this cosmic energy loss not as a kinematic Doppler shift, but as a macroscopic acoustic damping interaction resulting from the internal visco-elasticity of the Soft Floor. The mathematical rate of transverse energy decay is strictly proportional to the wave's total energy ($E$) and the Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}$):
+In TFT, a photon is an elementary transverse tension ripple of the State-I FCC Active Vacuum---a coherent transverse eigenmode of the active lattice. Its electromagnetic identity is carried by an ordered collective deformation of the lattice rather than by an independent massless particle traversing empty space. For a quantum-normalized surviving photon, the coherent modal action is
 \begin{equation}
-    \frac{dE}{dt} = -\Gamma_{\mathrm{D}} \cdot E
+    \mathcal I_\gamma
+    \equiv
+    \frac{E_\gamma}{\omega_\gamma}
+    =
+    \hbar.
 \end{equation}
 
-Because coherent modal action is preserved, this energy decay is accompanied by an identical decay in the real frequency ($\frac{d\omega}{dt} = -\Gamma_{\mathrm{D}} \omega$). For an arbitrary propagation path, this yields the general TFT redshift law:
+When a finite-energy receiving channel of the Active Vacuum is dynamically accessible, the coherent photon branch can transfer a minute fraction of its organized propagating energy into that receiving sector. In this relaxation branch, cosmic propagation includes a coherent scale-transfer process: energy is progressively transferred from the propagating mode while the surviving photon remains on the same eigenbranch and preserves its quantum action.
+
+Because $\mathcal I_\gamma$ remains invariant, a reduction of coherent photon energy requires a proportional reduction of its real frequency. The propagating state therefore moves continuously toward lower-energy, lower-frequency configurations of the same photon eigenbranch.
+
+The essential TFT mechanism is
 \begin{equation}
-    \ln(1+z) = \int_{\mathrm{path}} \frac{\Gamma_{\mathrm{D}}(\ell)}{v_{\mathrm{ray}}\left[\omega(\ell), \alpha_{\mathrm{G}}(\ell)\right]} \,d\ell
+    \text{coherent energy transfer}
+    +
+    \text{modal-action preservation}
+    \longrightarrow
+    \text{real-frequency scale relaxation}.
 \end{equation}
 
-In the weak-loading, constant-rate limit ($\alpha_{\mathrm{G}} \to 0$, $v_{\mathrm{ray}} \simeq c_{\mathrm{E}}$, $\Gamma_{\mathrm{D}} \simeq \mathrm{constant}$), this reduces to the exact exponential distance law:
+The photon remains a photon; its coherent scale relaxes. The corresponding carrier-level transport construction is developed in
+\hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
+
+\subsection{The Vacuum Relaxation Rate ($\Gamma_{\mathrm D}$)}
+
+We denote the fractional coherent scale-transfer rate by the Vacuum Relaxation Rate $\Gamma_{\mathrm D}$. Its operational definition on the surviving coherent photon branch is
 \begin{equation}
-    1+z = \exp\left(\frac{\Gamma_{\mathrm{D}} r}{c_{\mathrm{E}}}\right)
+    \frac{\dot E_\gamma}{E_\gamma}
+    =
+    -\Gamma_{\mathrm D}.
 \end{equation}
 
-Only at low redshift does this yield the linear approximation mechanically mimicking the Hubble law:
+Because the coherent modal action is preserved,
 \begin{equation}
-    c_{\mathrm{E}} z \simeq \Gamma_{\mathrm{D}} r
+    \frac{d}{dt}
+    \left(
+        \frac{E_\gamma}{\omega_\gamma}
+    \right)
+    =
+    0,
+\end{equation}
+the real frequency obeys the identical fractional transport law,
+\begin{equation}
+    \frac{\dot E_\gamma}{E_\gamma}
+    =
+    \frac{\dot\omega_\gamma}{\omega_\gamma}
+    =
+    -\Gamma_{\mathrm D}.
 \end{equation}
 
-\subsection{Empirical Calibration to the Hubble Parameter}
-The ``Expansion of the Universe'' is a kinematic illusion caused by this continuous vacuum relaxation. From the low-redshift linear approximation ($c_{\mathrm{E}} z \simeq \Gamma_{\mathrm{D}} r$), we empirically calibrate the theoretical Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}$) directly to the observed Hubble parameter:
+For constant $\Gamma_{\mathrm D}$,
 \begin{equation}
-    \Gamma_{\mathrm{D}}^{(\mathrm{cal})} = H_0^{(\mathrm{obs})} \approx 2.36 \times 10^{-18} \text{ s}^{-1}
+    E_\gamma(t)
+    =
+    E_{\mathrm{emit}}
+    e^{-\Gamma_{\mathrm D}(t-t_{\mathrm{emit}})},
+    \qquad
+    \omega_\gamma(t)
+    =
+    \omega_{\mathrm{emit}}
+    e^{-\Gamma_{\mathrm D}(t-t_{\mathrm{emit}})}.
 \end{equation}
 
-The characteristic relaxation length ($R_{\mathrm{U}} = c_{\mathrm{E}} / \Gamma_{\mathrm{D}}$) then defines the corresponding scale at which cumulative damping reduces the photon's transverse energy by one $e$-fold.
-
-\textit{(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} for the full derivation of the nonconservative relaxation sector, the coherent-action preservation law, and the exact redshift distance formulation).}
-
-\section{The Friction of Space (A Proposed Visco-Elastic Phase-Lag Mechanism)}
-
-As established in \hyperref[part:one]{Part I}, the Spacetime Gravitational Floor (SGF) is not an empty void; it is a physical Face--Centered Cubic (FCC) structure permeated by an interstitial fluid Condensate. Light is a transverse shear wave---a topological twist---whose restoring action is carried by the solid nodes of this Soft Floor.
-
-As established in \hyperref[sec:impedance_mismatch]{Section~\ref*{sec:impedance_mismatch}}, the Infinite Impedance Mismatch prevents the irrotational fluid Condensate from carrying the photon's transverse shear polarization as an independent propagating mode. The transverse restoring energy therefore remains confined to the FCC contact network, while the Condensate remains coherently entrained with the lattice and supplies the accompanying incremental pressure constraint.
-
-The conservative phase velocity $c_{\mathrm{P}}$ of light through this medium is governed by the universal visco-elastic wave relation rooted in the invariant elastic kinematic budget of the vacuum, $c_{\mathrm{E}}$:
+At the effective weak-loss harmonic-response level, the same relaxation is represented by the inverse-frequency phase-lag signature
 \begin{equation}
-    c_{\mathrm{P}} = c_{\mathrm{E}} \sqrt{\frac{\mu_{\mathrm{D}}}{\mu_{\mathrm{eff}}}} = c_{\mathrm{E}} \left(1-\alpha_{\mathrm{G}}\right)^{2}.
+    \tan\!\left[
+        \Delta\varphi(\omega)
+    \right]
+    \simeq
+    \frac{\Gamma_{\mathrm D}}{\omega}.
 \end{equation}
 
-In the relatively weakly loaded regions of the Cosmic Voids, $\alpha_{\mathrm{G}}\to0$, so that $\mu_{\mathrm{eff}}\approx\mu_{\mathrm{D}}$ and $c_{\mathrm{P}}\approx c_{\mathrm{E}}$. In this limit, any additional reduction of the optical amplitude must arise from a separate nonconservative dissipative mechanism.
+For an approximately frequency-independent $\Gamma_{\mathrm D}$, higher-frequency carriers undergo a smaller fractional energy transfer per oscillation while accumulating the same fractional scale relaxation per unit time. The inverse-frequency phase lag is therefore the harmonic-response signature of the leading achromatic relaxation branch.
 
-\vspace{0.5em}
-\noindent\textbf{The Proposed Microscopic Origin of $\Gamma_{\mathrm{D}}$:} In the conservative coherent limit, the lattice and interstitial Condensate remain entrained, stress and strain remain in phase, $\Delta\varphi=0$, and the optical energy is conserved. A finite phase lag, $\Delta\varphi>0$, represents a small nonconservative departure from this entrained limit, permitting boundary drag between the vibrating FCC nodes and the surrounding Condensate. 
-
-Crucially, to maintain a Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}$) that is achromatic (frequency-independent across the spectrum), the active vacuum must exhibit a highly specific inverse-frequency loss tangent:
+True frequency evolution also requires motion through wave-vector space. Let
 \begin{equation}
-    \tan\left[\Delta\varphi(\omega)\right] \simeq \frac{\Gamma_{\mathrm{D}}}{\omega}
+    \mathbf{k}
+    =
+    k\hat{\mathbf{k}}
 \end{equation}
-This relationship is a required constitutive closure that remains to be microscopically derived from the complete FCC--Condensate response. It provides the slow modal-energy transfer rate required for coherent-action-preserving frequency transport, as developed in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
-
-\section{Finite-Packet Cycle Dilation and the Topological Invariant ($N$)}
-A major observational constraint on non-expanding redshift models is Supernova Time Dilation. Observations confirm that distant supernova explosions appear to happen in ``slow motion,'' taking longer to brighten and fade \cite{Goldhaber_2001}.
-
-Tension Field Theory mathematically guarantees this exact time dilation for individual coherent wave packets without metric expansion under the fixed-cycle coherent-packet closure by enforcing the Topological Invariant ($N$). A photon is a finite soliton wave characterized by a strict integer count of phase cycles ($N$). Under the fixed-cycle coherent-packet closure, this cycle count is preserved throughout coherent propagation.
-
-The total cycle count ($N$) is the product of the wave's frequency ($f$) and its temporal duration ($\Delta t_{\mathrm{pkt}}$):
+denote the photon wave vector, where $k=|\mathbf{k}|$ is its magnitude and $\hat{\mathbf{k}}$ its propagation direction. Let $\omega_{\mathrm c}(\mathbf{x},\mathbf{k})$ denote the local conservative photon eigenbranch and let
 \begin{equation}
-    N = f \cdot \Delta t_{\mathrm{pkt}}
+    \mathbf{v}_{\mathrm g}
+    =
+    \nabla_{\mathbf{k}}
+    \omega_{\mathrm c}
 \end{equation}
-
-As the narrowband wave packet propagates through the viscous SGF, it performs physical work against the lattice boundary friction (\hyperref[sec:vacuum_viscosity]{Section \ref*{sec:vacuum_viscosity}}). This causes its kinetic energy to drop, which, under coherent-action preservation, is accompanied by a drop in the observed frequency ($f_{\mathrm{obs}} < f_{\mathrm{emit}}$). Because the topological cycle count must be strictly conserved upon observation ($N_{\mathrm{obs}} = N_{\mathrm{emit}}$) for a coherent finite packet, the physical duration of the wave packet must proportionally increase to accommodate the lower frequency:
+be the corresponding group velocity. Defining the forward group-speed component
 \begin{equation}
-    \Delta t_{\mathrm{pkt,obs}} = \frac{N}{f_{\mathrm{obs}}} = \Delta t_{\mathrm{pkt,emit}} (1+z)
+    v_{\mathrm{g},\parallel}
+    =
+    \mathbf{v}_{\mathrm g}
+    \cdot
+    \hat{\mathbf{k}},
 \end{equation}
-
-\textbf{Macroscopic Scope and Envelope Dilation:} It is critical to distinguish between the kinematic dilation of a single coherent wave packet and the macroscopic dilation of an arbitrary astronomical light curve. As demonstrated in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}, cycle conservation strictly dictates conditional packet-duration dilation for a single narrowband packet. It does not automatically cause the macroscopic dilation of a multi-day supernova envelope, which consists of a sequence of independently emitted packets traveling at identical speeds. The macroscopic stretching of transient light curves remains a separate transport-completion requirement, necessitating an explicit source-to-envelope transport law. 
-
-However, for the surviving coherent wave packets, local carrier-reservoir energy bookkeeping is closed. The photon's observed energy drops precisely because that energy was deposited into the vacuum reservoir:
+the direction-preserving relaxation transport developed in
+\hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}
+is
 \begin{equation}
-    E_{\mathrm{obs}} = \frac{E_{\mathrm{emit}}}{1+z}
+    \left.
+        \dot{\mathbf{k}}
+    \right|_{\mathrm D}
+    =
+    -\Gamma_{\mathrm D}
+    \frac{\omega_{\mathrm c}}
+    {v_{\mathrm{g},\parallel}}
+    \hat{\mathbf{k}}.
 \end{equation}
 
-Because the surviving energy drops by $(1+z)$, and the wave packet physically stretches in time by $(1+z)$ to preserve the topological cycle invariant ($N$), the observed coherent packet power strictly drops by the square:
+On the long-wavelength nearly linear photon branch,
+$\omega_{\mathrm c}\simeq v_{\mathrm{g},\parallel}k$,
+and therefore
 \begin{equation}
-    P_{\mathrm{obs}} = \frac{E_{\mathrm{obs}}}{\Delta t_{\mathrm{pkt,obs}}} = \frac{\left( \frac{E_{\mathrm{emit}}}{1+z} \right)}{\Delta t_{\mathrm{pkt,emit}} (1+z)} = \frac{P_{\mathrm{emit}}}{(1+z)^2}
+    \left.
+        \dot{\mathbf{k}}
+    \right|_{\mathrm D}
+    \simeq
+    -\Gamma_{\mathrm D}
+    k
+    \hat{\mathbf{k}}.
 \end{equation}
 
-\section{Volumetric Relaxation: A Proposed Geometric Closure}
+The relaxation acts parallel to the existing wave vector,
+\begin{equation}
+    \dot{\hat{\mathbf{k}}}
+    =
+    0,
+\end{equation}
+so it changes the scale of the photon without producing a deterministic angular deflection. Consequently,
+\begin{equation}
+    \frac{\dot k}{k}
+    \simeq
+    -\Gamma_{\mathrm D},
+    \qquad
+    \frac{\dot\lambda}{\lambda}
+    \simeq
+    \Gamma_{\mathrm D}.
+\end{equation}
+
+The real-frequency drift, wavelength elongation, and coherent energy transfer are therefore three representations of the same scale-relaxation process.
+
+
+\subsection{Photon Speed Under Coherent Scale Relaxation}
+
+Coherent scale relaxation changes the photon's energy, real frequency, wave number, and wavelength without introducing an independent frictional slowing of the carrier. The physical photon propagates on the dispersion-suppressed transverse eigenbranch of the granular FCC Active Vacuum,
+\begin{equation}
+    \omega_\gamma
+    =
+    \omega_{\mathrm c}(k),
+\end{equation}
+with group velocity
+\begin{equation}
+    v_{\mathrm g,\parallel}
+    \equiv
+    \frac{\partial\omega_{\mathrm c}}{\partial k}.
+\end{equation}
+
+In the long-wavelength limit the lattice approaches its continuum propagation law,
+\begin{equation}
+    \omega_{\mathrm c}(k)
+    \simeq
+    c_{\mathrm P}k,
+    \qquad
+    \lim_{k\rightarrow0}
+    v_{\mathrm g,\parallel}
+    =
+    c_{\mathrm P},
+\end{equation}
+and in an unstrained gravity-neutral Active Vacuum,
+\begin{equation}
+    c_{\mathrm P}
+    =
+    c_{\mathrm E}.
+\end{equation}
+
+At finite wave number, however, the discrete FCC structure produces a residual dispersion even on the selected dispersion-suppressed photon branch. To leading surviving order,
+\begin{equation}
+    v_{\mathrm g,\parallel}
+    =
+    c_{\mathrm P}
+    \left[
+        1
+        -
+        \frac{k^4d_{\mathrm{nn}}^4}{72}
+        \sum_{a=1}^{6}
+        \left(
+            \hat{\mathbf{k}}
+            \cdot
+            \mathbf n_a
+        \right)^6
+        +
+        \mathcal O\!\left(
+            k^6d_{\mathrm{nn}}^6
+        \right)
+    \right].
+\end{equation}
+
+Here $d_{\mathrm{nn}}$ is the FCC nearest-neighbor spacing and $\mathbf n_a$ denotes the six undirected nearest-neighbor FCC axes.
+
+Thus $c_{\mathrm E}$ is the gravity-neutral long-wavelength propagation capacity, while the actual finite-$k$ photon group speed is infinitesimally smaller and becomes increasingly sensitive to FCC granularity as the wavelength approaches the microscopic lattice scale.
+
+Coherent scale relaxation acts on this eigenbranch according to
+\begin{equation}
+    \frac{\dot\omega_\gamma}{\omega_\gamma}
+    =
+    -\Gamma_{\mathrm D},
+\end{equation}
+while the corresponding wave-number evolution is
+\begin{equation}
+    \dot k
+    =
+    -\Gamma_{\mathrm D}
+    \frac{\omega_{\mathrm c}}
+    {v_{\mathrm g,\parallel}}.
+\end{equation}
+
+For the long-wavelength approximately linear branch,
+$\omega_{\mathrm c}\simeq v_{\mathrm g,\parallel}k$,
+and therefore
+\begin{equation}
+    \frac{\dot k}{k}
+    \simeq
+    -\Gamma_{\mathrm D},
+    \qquad
+    \frac{\dot\lambda}{\lambda}
+    \simeq
+    \Gamma_{\mathrm D}.
+\end{equation}
+
+The photon consequently evolves toward lower energy, lower frequency, smaller wave number, and longer wavelength while remaining on the same transverse eigenbranch,
+\begin{equation}
+    E_\gamma\downarrow,
+    \qquad
+    \omega_\gamma\downarrow,
+    \qquad
+    k\downarrow,
+    \qquad
+    \lambda\uparrow.
+\end{equation}
+
+Because the finite-$k$ dispersive correction decreases as $k$ relaxes, the carrier approaches the continuum propagation speed rather than being progressively slowed by the loss of coherent energy. The minute energy-dependent propagation delay of sufficiently high-energy photons instead arises from the intrinsic granularity of the FCC dispersion relation.
+
+Gravitational loading produces a separate modification of the local continuum propagation scale,
+\begin{equation}
+    c_{\mathrm P}
+    =
+    c_{\mathrm E}
+    (1-\alpha_{\mathrm G})^2,
+\end{equation}
+upon which the finite-$k$ lattice correction is superposed. Photon scale relaxation, FCC dispersion, and gravitational propagation delay therefore remain mechanically distinct effects: $\Gamma_{\mathrm D}$ governs coherent scale evolution, lattice granularity governs the residual energy dependence of $v_{\mathrm g,\parallel}$, and $\alpha_{\mathrm G}$ governs the local gravitational modification of $c_{\mathrm P}$. The detailed finite-$k$ carrier construction is derived in
+\hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
+
+
+\subsection{The Propagation-Relaxation Redshift ($z_{\mathrm D}$)}
+
+The accumulated photon relaxation along an arbitrary physical ray defines the propagation component of cosmic redshift. As derived in
+\hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}},
+if $v_{\mathrm{ray}}$ denotes the local physical ray speed,
+\begin{equation}
+    \ln(1+z_{\mathrm D})
+    =
+    \int_{\mathrm{path}}
+    \frac{
+        \Gamma_{\mathrm D}(\ell)
+    }{
+        v_{\mathrm{ray}}
+        \!\left[
+            \omega(\ell),
+            \alpha_{\mathrm G}(\ell)
+        \right]
+    }
+    \,d\ell.
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    \ln(1+z_{\mathrm D})
+    =
+    \int
+    \Gamma_{\mathrm D}
+    \,dt.
+\end{equation}
+
+In the gravity-neutral, constant-rate limit,
+\begin{equation}
+    \alpha_{\mathrm G}
+    \rightarrow
+    0,
+    \qquad
+    v_{\mathrm{ray}}
+    \rightarrow
+    c_{\mathrm E},
+    \qquad
+    \Gamma_{\mathrm D}
+    \simeq
+    \mathrm{constant},
+\end{equation}
+the propagation law becomes
+\begin{equation}
+    1+z_{\mathrm D}
+    =
+    \exp\!\left(
+        \frac{
+            \Gamma_{\mathrm D}r
+        }{
+            c_{\mathrm E}
+        }
+    \right).
+\end{equation}
+
+The corresponding relaxation-only coordinate relation is
+\begin{equation}
+    r
+    =
+    \frac{
+        c_{\mathrm E}
+    }{
+        \Gamma_{\mathrm D}
+    }
+    \ln(1+z_{\mathrm D}).
+\end{equation}
+
+At low propagation redshift,
+\begin{equation}
+    z_{\mathrm D}
+    \ll
+    1,
+\end{equation}
+the exponential law reduces to the locally linear form
+\begin{equation}
+    c_{\mathrm E}
+    z_{\mathrm D}
+    \simeq
+    \Gamma_{\mathrm D}r.
+\end{equation}
+
+Thus the familiar linear frequency--distance behavior appears as the first-order limit of the underlying exponential scale transport.
+
+
+\subsection{Microscopic Scale-Transfer Closure and the Hubble-Scale Correspondence}
+
+The preceding equations define what $\Gamma_{\mathrm D}$ does. The Active-Vacuum scale-transfer construction developed in
+\hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}
+gives
+\begin{equation}
+    \Gamma_{\mathrm D}
+    =
+    \frac{9}{16}
+    F_{\mathrm R}
+    \frac{c_{\mathrm E}}{r_{\mathrm D}}
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \right)^6.
+\end{equation}
+
+Here $F_{\mathrm R}$ is the dimensionless carrier-projected Active-Vacuum response factor.
+
+For the unit-reference closure
+\begin{equation}
+    F_{\mathrm R}
+    =
+    1,
+\end{equation}
+the presently adopted microscopic TFT scales give
+\begin{equation}
+    \Gamma_{\mathrm D}^{(0)}
+    \simeq
+    2.36\times10^{-18}\ \mathrm{s}^{-1}.
+\end{equation}
+
+The corresponding reference relaxation length,
+\begin{equation}
+    \frac{
+        c_{\mathrm E}
+    }{
+        \Gamma_{\mathrm D}^{(0)}
+    },
+\end{equation}
+is approximately
+\begin{equation}
+    1.27\times10^{26}\ \mathrm{m},
+\end{equation}
+placing the unit-reference scale essentially at the observed local Hubble-rate length scale and near the observationally normalized Photon Energy-Relaxation Length $R_{\mathrm U}$ introduced in Section~3.2.1.
+
+The correspondence is striking because the two scales enter from different constructions. The observational quantity $H_0^{\mathrm{obs}}$ summarizes the measured low-redshift distance--redshift slope, whereas $\Gamma_{\mathrm D}^{(0)}$ follows from the microscopic Active-Vacuum scale hierarchy under the unit-reference response closure. Their near coincidence links the internal lattice scale-transfer architecture to the characteristic macroscopic redshift scale of the observable cosmos.
+
+
+\section{The Full Cosmic Redshift: Kinematics, Gravitational Endpoint Loading, and Vacuum Relaxation}
+
+The TFT universe is globally static at the Structural-Reservoir level yet locally dynamic. Galaxies, sources, observers, and the matter field can therefore possess real relative motion within the Active Vacuum. The observed cosmic spectral shift combines this source--observer kinematics with gravitational endpoint loading and the propagation-relaxation contribution developed above.
+
+
+\subsection{The Kinematic Redshift}
+
+The locally dynamic sector of the TFT universe inherits the same kinematic velocity budget established in
+\hyperref[sec:velocity_budget]{Section~\ref*{sec:velocity_budget}},
+\begin{equation}
+    c_{\mathrm E}^2
+    =
+    v_{\mathrm{ext}}^2
+    +
+    v_{\mathrm{int}}^2.
+\end{equation}
+
+At the microscopic level, $v_{\mathrm{ext}}$ is the external translational component of the kinematic capacity of a localized state. At the macroscopic level, its radial projection becomes the physical source--observer velocity of matter moving through the Active Vacuum. Cosmic recession and approach are therefore large-scale manifestations of the same translational degree of freedom already present in the microscopic TFT kinematics.
+
+From the velocity budget,
+\begin{equation}
+    v_{\mathrm{int}}
+    =
+    c_{\mathrm E}
+    \sqrt{
+        1-
+        \frac{v_{\mathrm{ext}}^2}
+        {c_{\mathrm E}^2}
+    },
+\end{equation}
+so the corresponding mechanical Lorentz factor is
+\begin{equation}
+    \gamma
+    =
+    \frac{c_{\mathrm E}}{v_{\mathrm{int}}}
+    =
+    \frac{1}{
+        \sqrt{
+            1-v_{\mathrm{ext}}^2/c_{\mathrm E}^2
+        }
+    }.
+\end{equation}
+
+For the radial specialization used here, $v_{\mathrm{ext}}$ is taken as the signed radial source--observer velocity: positive values denote recession and negative values denote approach. In addition to the direction-independent reduction of the source's internal clock rate, successive emissions acquire the changing-path factor
+\begin{equation}
+    1+\frac{v_{\mathrm{ext}}}{c_{\mathrm E}}.
+\end{equation}
+
+The resulting kinematic frequency ratio is therefore
+\begin{equation}
+    1+z_{\mathrm{kin}}
+    =
+    \gamma
+    \left(
+        1+\frac{v_{\mathrm{ext}}}{c_{\mathrm E}}
+    \right).
+\end{equation}
+
+Substituting the mechanical Lorentz factor gives
+\begin{equation}
+    1+z_{\mathrm{kin}}
+    =
+    \sqrt{
+        \frac{
+            1+v_{\mathrm{ext}}/c_{\mathrm E}
+        }{
+            1-v_{\mathrm{ext}}/c_{\mathrm E}
+        }
+    }.
+\end{equation}
+
+For the kinematic contribution alone, or equivalently for gravity-neutral endpoint conditions, if $\Delta t_{\mathrm p}$ is the proper separation between two source events,
+\begin{equation}
+    \Delta t_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    \Delta t_{\mathrm p}.
+\end{equation}
+
+Thus the microscopic translational variable $v_{\mathrm{ext}}$ projects directly into the macroscopic kinematics of astronomical sources, carrying both a spectral and a source-clock signature.
+
+
+\subsection{The Factorized Redshift Law}
+
+Spectroscopy directly measures the shift of a known atomic or molecular transition relative to its laboratory frequency or wavelength. Defining the rest-frame wavelength and frequency by $\lambda_0$ and $\nu_0$,
+\begin{equation}
+    1+z_{\mathrm{obs}}
+    \equiv
+    \frac{\lambda_{\mathrm{obs}}}{\lambda_0}
+    =
+    \frac{\nu_0}{\nu_{\mathrm{obs}}}.
+\end{equation}
+
+This measured ratio specifies the net spectral shift; its mechanical origin is resolved in TFT through the contributing kinematic, gravitational, and propagation channels.
+
+The gravitational contribution arises from the difference between the emitter and observer endpoint clock conditions. Using the TFT static clock relation
+\begin{equation}
+    dt_{\mathrm p}
+    =
+    (1-\alpha_{\mathrm G})dt,
+\end{equation}
+the corresponding gravitational frequency factor is
+\begin{equation}
+    1+z_{\mathrm{grav}}
+    =
+    \frac{
+        1-\alpha_{\mathrm G,o}
+    }{
+        1-\alpha_{\mathrm G,e}
+    },
+\end{equation}
+where the subscripts $\mathrm e$ and $\mathrm o$ denote emitter and observer.
+
+The complete cosmological frequency ratio therefore factorizes as
+\begin{equation}
+    1+z_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm{grav}})
+    (1+z_{\mathrm D}).
+\end{equation}
+
+Substituting the explicit kinematic, gravitational, and propagation-relaxation factors gives the fully resolved TFT spectroscopic relation,
+\begin{equation}
+    1+z_{\mathrm{obs}}
+    =
+    \sqrt{
+        \frac{
+            1+v_{\mathrm{ext}}/c_{\mathrm E}
+        }{
+            1-v_{\mathrm{ext}}/c_{\mathrm E}
+        }
+    }
+    \,
+    \frac{
+        1-\alpha_{\mathrm G,o}
+    }{
+        1-\alpha_{\mathrm G,e}
+    }
+    \,
+    \exp\left(
+        \int_{t_{\mathrm e}}^{t_{\mathrm o}}
+        \Gamma_{\mathrm D}(t)\,dt
+    \right).
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    \ln(1+z_{\mathrm{obs}})
+    =
+    \ln(1+z_{\mathrm{kin}})
+    +
+    \ln(1+z_{\mathrm{grav}})
+    +
+    \ln(1+z_{\mathrm D}).
+\end{equation}
+
+This is the central TFT cosmic spectral-shift relation. Matter motion through the locally dynamic Active Vacuum generates $z_{\mathrm{kin}}$, the difference between emitter and observer gravitational clock conditions generates $z_{\mathrm{grav}}$, and coherent photon scale relaxation accumulated during propagation generates $z_{\mathrm D}$. The observed spectrum records all three in a single measurable frequency ratio.
+
+For nested radial sources observed from a fixed observer, differentiating the combined law gives
+\begin{equation}
+    \frac{1}{1+z_{\mathrm{obs}}}
+    \frac{dz_{\mathrm{obs}}}{dr}
+    =
+    \frac{\gamma^2}{c_{\mathrm E}}
+    \frac{dv_{\mathrm{ext}}}{dr}
+    +
+    \frac{1}{1-\alpha_{\mathrm G,e}}
+    \frac{d\alpha_{\mathrm G,e}}{dr}
+    +
+    \frac{\Gamma_{\mathrm D}}{v_{\mathrm{ray}}}.
+\end{equation}
+
+Here $v_{\mathrm{ray}}$ is the local physical ray speed defined by the photon propagation branch above.
+
+In the weak-velocity, weak-loading, long-wavelength, and low-redshift limit,
+\begin{equation}
+    z_{\mathrm{obs}}
+    \simeq
+    z_{\mathrm{kin}}
+    +
+    z_{\mathrm{grav}}
+    +
+    z_{\mathrm D},
+\end{equation}
+and
+\begin{equation}
+    c_{\mathrm E}
+    \frac{dz_{\mathrm{obs}}}{dr}
+    \simeq
+    \frac{dv_{\mathrm{ext}}}{dr}
+    +
+    c_{\mathrm E}
+    \frac{d\alpha_{\mathrm G,e}}{dr}
+    +
+    \Gamma_{\mathrm D}.
+\end{equation}
+
+Defining the observational low-redshift slope by
+\begin{equation}
+    H_0^{(\mathrm{slope})}
+    \equiv
+    c_{\mathrm E}
+    \left(
+        \frac{dz_{\mathrm{obs}}}{dr}
+    \right)_{z\rightarrow0},
+\end{equation}
+the TFT decomposition becomes
+\begin{equation}
+    H_0^{(\mathrm{slope})}
+    \simeq
+    \left(
+        \frac{dv_{\mathrm{ext}}}{dr}
+    \right)_0
+    +
+    c_{\mathrm E}
+    \left(
+        \frac{d\alpha_{\mathrm G,e}}{dr}
+    \right)_0
+    +
+    \Gamma_{\mathrm D}.
+\end{equation}
+
+The observed low-redshift Hubble slope therefore combines the macroscopic gradient of matter motion, the systematic gravitational-loading gradient of the emitting population, and the propagation-relaxation contribution. The observational Hubble parameter consequently characterizes their combined astronomical projection rather than defining a fundamental expansion rate.
+
+In the relaxation-dominated low-redshift specialization, where the systematic kinematic and gravitational gradients are negligible and
+$v_{\mathrm{ray}}\simeq c_{\mathrm P}\simeq c_{\mathrm E}$,
+the relation reduces to
+\begin{equation}
+    \Gamma_{\mathrm D}
+    \simeq
+    H_0^{(\mathrm{slope})}.
+\end{equation}
+
+
+\section{Finite-Packet Cycle Dilation and Astronomical Time Dilation}
+
+A major observational signature of cosmic redshift is temporal dilation. Distant supernova light curves evolve more slowly than comparable local events \cite{Goldhaber_2001}. TFT resolves the temporal problem by distinguishing the internal duration of a coherent photon packet from the temporal separation between independently generated source events.
+
+A finite narrowband photon packet contains an ordered number of carrier cycles. Defining this cycle count by
+\begin{equation}
+    N
+    =
+    \int_{t_-}^{t_+}
+    f(t)\,dt,
+\end{equation}
+the narrowband limit gives
+\begin{equation}
+    N
+    \simeq
+    f_{\mathrm c}
+    \Delta t_{\mathrm{pkt}}.
+\end{equation}
+
+Under the fixed-cycle coherent-packet closure,
+\begin{equation}
+    N_{\mathrm{obs}}
+    =
+    N_{\mathrm{emit}}.
+\end{equation}
+
+For the propagation-relaxation component alone,
+\begin{equation}
+    \frac{f_{\mathrm{emit}}}{f_{\mathrm{obs}}}
+    =
+    1+z_{\mathrm D},
+\end{equation}
+and therefore
+\begin{equation}
+    \Delta t_{\mathrm{pkt,obs}}
+    =
+    (1+z_{\mathrm D})
+    \Delta t_{\mathrm{pkt,emit}}.
+\end{equation}
+
+The coherent packet therefore elongates as its carrier frequency decreases: the same ordered phase content occupies a longer temporal support.
+
+A macroscopic astronomical transient is a different object. A supernova light curve consists of a sequence of independently generated emission events rather than one continuous coherent packet. In the stationary factorized regime used here, the observed temporal separation of those source events is governed by the combined kinematic and gravitational endpoint clock factors,
+\begin{equation}
+    \Delta t_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm{grav}})
+    \Delta t_{\mathrm p,e},
+\end{equation}
+where $\Delta t_{\mathrm p,e}$ is the proper separation between the emission events at the source.
+
+The distinction is fundamental. Photon relaxation dilates the internal support of a surviving coherent packet, while source--observer kinematics and gravitational endpoint loading govern the observed separation between independently generated source events.
+
+Combining the spectral shift with the measured source-event timing therefore separates the propagation-relaxation contribution:
+\begin{equation}
+    1+z_{\mathrm D}
+    =
+    \frac{
+        1+z_{\mathrm{obs}}
+    }{
+        (1+z_{\mathrm{kin}})
+        (1+z_{\mathrm{grav}})
+    }
+    =
+    \frac{
+        1+z_{\mathrm{obs}}
+    }{
+        \Delta t_{\mathrm{obs}}/
+        \Delta t_{\mathrm p,e}
+    }.
+\end{equation}
+
+Time dilation is consequently not an auxiliary correction to the TFT redshift law. It is an independent observational probe of how the total spectral shift is partitioned between endpoint clock effects and photon propagation relaxation. The complete observational projection is developed in
+\hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.
+
+
+\section{Photometric Projection: Energy, Flux, and Luminosity Distance}
 \label{sec:photonic_relaxation}
 
-Because the Spacetime Gravitational Floor (SGF) is an isotropic Face--Centered Cubic (FCC) lattice, the thermodynamic dissipation of a propagating wave packet may not be strictly one-dimensional. 
-
-While longitudinal energy decay and conditional packet-duration dilation are governed directly by action preservation, the response of the macroscopic wave packet in the transverse directions requires an additional TFT geometric closure. FCC isotropy permits, but does not autonomously derive, a transverse closure. We propose that the wave undergoes strictly isotropic volumetric relaxation to maintain the topological integrity of the transverse wave within the FCC grid.
-
-If this closure introduces one energy factor, one packet-timing factor, and two transverse geometric factors, each scaling with the corresponding redshift dependence, it systematically reduces the total observed power density (surface brightness):
-
-\begin{itemize}
-    \item \textbf{1st Component (Energy/Longitudinal):} The internal energy of the wave drops by a factor of $(1+z)$ due to lattice hysteresis.
-    \item \textbf{2nd Component (Kinematic):} The arrival rate of the topological cycles ($N$) slows by a factor of $(1+z)$ due to conditional packet-duration dilation. Because the kinematic energy of the wave is strictly governed by the invariant structural limit ($c_{\mathrm{E}}$), the thermodynamic drop in energy is accompanied by a proportional drop in frequency to preserve the modal action. To maintain $c_{\mathrm{E}} = \lambda f$, the longitudinal wavelength ($\lambda$) physically elongates. 
-    \item \textbf{3rd \& 4th Components (Transverse Divergence):} As a proposed secondary geometric response, the macroscopic optical divergence is treated as the spatial integral of the microscopic thermodynamic decay. As the wave loses energy to node friction, this loss of kinetic energy weakens the soliton's internal transverse holding tension. When integrated over macroscopic cosmic distances, this continuous structural yielding forces the bounding geometric ray paths to optically diverge. This macroscopic diverging lens effect broadens the apparent angular area of the source galaxy by a proportional factor of $(1 + z)^2$.
-\end{itemize}
-
-If macroscopic source-envelope timing inherits the packet factor and if the transverse magnification closure yields an apparent area $\propto (1 + z)^2$, then a total apparent surface brightness dimming proportional to exactly $(1 + z)^{-4}$ follows, combining the kinematic power drop $(1 + z)^{-2}$ with the optical area magnification $(1 + z)^2$.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{Fig21_PartIII_PhotonRelaxation.pdf}
-    \caption{\textbf{Proposed Geometric Completion of the Carrier-Relaxation Mechanism.} A propagating photon wave packet dissipates active energy against the visco-elastic friction of the static SGF lattice. Microscopically, continuous loss of internal kinetic energy alongside coherent-action preservation forces the wave to undergo longitudinal elongation. As a proposed secondary geometric closure, the macroscopic structural yielding forces the bounding geometric ray paths to optically flare outward, causing the bulk medium to act as a continuous diverging lens. The geometric combination of the longitudinal and temporal stretching (kinematic power drop) with the transverse spread (optical divergence) would strictly yield a total apparent surface brightness dimming of $(1+z)^{-4}$.}
-\label{fig:photon_relaxation}
-\end{figure}
-
-\section{The Geometric Mirror of Gravity (An Interpretive Structural Analogy)}
-This $(1+z)^{-4}$ conditional volumetric relaxation presents an interpretive structural analogy linking the macroscopic fading of the cosmos to the local mechanics of gravity derived in \hyperref[part:two]{Part II}.
-
-In \hyperref[part:two]{Part II}, we established that local gravity induces a unitary lattice strain ($\alpha_{\mathrm{G}}$) that suppresses the kinematic energy of the vacuum. Because this spatial and temporal strain acts isotropically across four relaxation factors, the effective optical inertia spikes by the fourth power:
+The redshift of the photon is simultaneously an energy shift. Since the coherent photon satisfies
 \begin{equation}
-    \mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{(1-\alpha_{\mathrm{G}})^4}
+    E_\gamma
+    =
+    \hbar\omega_\gamma,
+\end{equation}
+the observed frequency ratio gives
+\begin{equation}
+    \frac{E_{\mathrm{obs}}}{E_{\mathrm{emit}}}
+    =
+    \frac{1}{1+z_{\mathrm{obs}}}.
 \end{equation}
 
-Furthermore, this four-dimensional impedance mirrors the $4\alpha_{\mathrm{G}}$ deflection angle of gravitational lensing. While the numerical appearance of four in two independently derived formulas does not establish a common four-degree relaxation law, the analogy is profound:
+For the photometric construction below, gravitational endpoint shifts and gravitational ray-bundle effects are treated separately. We therefore specialize to the gravity-neutral, no-lensing radial reference geometry, for which
+\begin{equation}
+    1+z_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm D}).
+\end{equation}
 
-\begin{itemize}
-    \item \textbf{The Squeeze (Local Lensing):} When a wave passes a massive object, the local tension gradient compresses its optical inertia ($\mu_{\mathrm{eff}} \propto (1-\alpha_{\mathrm{G}})^{-4}$), creating the steep $4\alpha_{\mathrm{G}}$ refractive steering.
-    \item \textbf{The Release (Cosmic Dimming):} Under the proposed geometric closure, as the wave travels through the baseline cosmic vacuum, it performs work against fundamental lattice hysteresis. Without a local mass to compress it, the wave packet isotropically relaxes, resulting in the $(1+z)^{-4}$ Tolman surface brightness dropping.
-\end{itemize}
+The photon-energy ratio is then
+\begin{equation}
+    \frac{E_{\mathrm{obs}}}{E_{\mathrm{emit}}}
+    =
+    \frac{1}{
+        (1+z_{\mathrm{kin}})
+        (1+z_{\mathrm D})
+    }.
+\end{equation}
 
-\section{The Macroscopic Diverging Lens and the Angular Diameter Turnover}
+Astronomical flux contains more than the energy of an individual photon. The arrival rate of independent source events contributes
+\begin{equation}
+    \frac{\Delta t_{\mathrm p,e}}{\Delta t_{\mathrm{obs}}}
+    =
+    \frac{1}{1+z_{\mathrm{kin}}},
+\end{equation}
+while radial source motion also transforms the observed ray bundle. The moving-source solid-angle Jacobian derived in
+\hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}
+is
+\begin{equation}
+    \frac{d\Omega_{\mathrm{emit}}}{d\Omega_{\mathrm{obs}}}
+    =
+    \frac{1}{(1+z_{\mathrm{kin}})^2}.
+\end{equation}
+
+The energy factor, source-event timing factor, and moving-source angular factor therefore combine to give the gravity-neutral radial bolometric flux
+\begin{equation}
+    F_{\mathrm{obs}}
+    =
+    \frac{L_{\mathrm{emit}}}{4\pi r^2}
+    \frac{1}{
+        (1+z_{\mathrm{obs}})
+        (1+z_{\mathrm{kin}})^3
+    }.
+\end{equation}
+
+Using
+\begin{equation}
+    1+z_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm D}),
+\end{equation}
+this becomes
+\begin{equation}
+    F_{\mathrm{obs}}
+    =
+    \frac{L_{\mathrm{emit}}}{4\pi r^2}
+    \frac{1}{
+        (1+z_{\mathrm{kin}})^4
+        (1+z_{\mathrm D})
+    }.
+\end{equation}
+
+Defining the luminosity distance operationally by
+\begin{equation}
+    F_{\mathrm{obs}}
+    \equiv
+    \frac{L_{\mathrm{emit}}}{4\pi d_{\mathrm L}^2},
+\end{equation}
+gives
+\begin{equation}
+    d_{\mathrm L}
+    =
+    r
+    (1+z_{\mathrm{kin}})^2
+    \sqrt{1+z_{\mathrm D}}.
+\end{equation}
+
+Eliminating $z_{\mathrm{kin}}$ in favor of the total observed redshift within this gravity-neutral reference geometry,
+\begin{equation}
+    1+z_{\mathrm{kin}}
+    =
+    \frac{1+z_{\mathrm{obs}}}{1+z_{\mathrm D}},
+\end{equation}
+yields
+\begin{equation}
+    d_{\mathrm L}
+    =
+    r
+    \frac{
+        (1+z_{\mathrm{obs}})^2
+    }{
+        (1+z_{\mathrm D})^{3/2}
+    }.
+\end{equation}
+
+The standard distance modulus then follows directly:
+\begin{equation}
+    \mu
+    =
+    m-M
+    =
+    5\log_{10}
+    \left(
+        \frac{d_{\mathrm L}}{\mathrm{Mpc}}
+    \right)
+    +
+    25.
+\end{equation}
+
+The photometric projection is therefore closed once the macroscopic TFT matter-flow solution supplies the retarded coordinate distance $r$ corresponding to the observed source state. Within the gravity-neutral reference geometry, spectral redshift, event timing, angular transformation, and apparent flux are distinct measurable projections of the same mechanical system.
+
+
+\section{Angular Projection and the Tolman Surface-Brightness Signature}
 \label{sec:angular_diameter_turnover}
 
-In standard cosmology, the standard FLRW angular-diameter relation exhibits a turnover at cosmological redshift $z \approx 1.5$.
-
-If the continuous volumetric relaxation of the wave packet forces the bulk medium of the cosmos to act as a macroscopic diverging lens, TFT natively derives this exact turnover mathematically through solid-state optics. In a purely static Euclidean space, angular size ($\theta$) is strictly the physical size of the galaxy ($S$) divided by the coordinate distance ($d_{\mathrm{coord}}$). However, due to the conditional transverse optical magnification induced by this vacuum relaxation, the observed angular size in TFT is magnified by $(1+z)$:
+The direction-preserving character of the relaxation channel has a direct geometric consequence. Since
 \begin{equation}
-    \theta_{\mathrm{TFT}} = \left( \frac{S}{d_{\mathrm{coord}}} \right) (1+z)
+    \dot{\hat{\mathbf{k}}}
+    =
+    0,
+\end{equation}
+at leading isotropic order, coherent photon scale relaxation changes the magnitude of the wave vector without imposing a universal transverse flare on the ray bundle.
+
+Continuing in the gravity-neutral, no-lensing radial reference geometry adopted in the preceding photometric construction, consider a small physical source element of transverse size $S_\perp$ at the retarded emission event. Its observed angular size is
+\begin{equation}
+    \theta_{\mathrm{obs}}
+    =
+    \frac{S_\perp}{r}.
 \end{equation}
 
-Substituting the logarithmic visco-elastic coordinate distance ($d_{\mathrm{coord}} = R_{\mathrm{U}} \ln(1+z) = \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}^{(\mathrm{cal})}} \ln(1+z)$) derived in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} yields the complete TFT Angular Diameter function:
+Defining the angular-diameter distance,
 \begin{equation}
-    \theta_{\mathrm{TFT}} = \frac{S \cdot \Gamma_{\mathrm{D}}^{(\mathrm{cal})}}{c_{\mathrm{E}}} \left[ \frac{1+z}{\ln(1+z)} \right]
+    d_{\mathrm A}
+    \equiv
+    \frac{S_\perp}{\theta_{\mathrm{obs}}},
+\end{equation}
+gives
+\begin{equation}
+    d_{\mathrm A}
+    =
+    r.
 \end{equation}
 
-To determine the minimum angular size, we take the derivative with respect to redshift ($z$) and set it to zero:
+Gravitational refraction and nonspherical ray-bundle dynamics enter through the separate TFT optical sector. The baseline cosmic relaxation itself therefore redshifts the photon without mechanically smearing or expanding its propagation direction.
+
+Let $A_\perp$ denote the projected physical emitting area. The observed angular area is
 \begin{equation}
-    \frac{d}{dz} \left[ \frac{1+z}{\ln(1+z)} \right] = \frac{\ln(1+z) - 1}{\ln^2(1+z)} = 0
-\end{equation}
-\begin{equation}
-    \ln(1+z) = 1 \implies z = e - 1 \approx 1.718
-\end{equation}
-
-\vspace{0.5em}
-\noindent\textbf{Conclusion:} Under the proposed transverse-relaxation closure, TFT predicts that the angular size of galaxies will shrink logarithmically before reaching a mathematical minimum at $z \approx 1.718$, after which the transverse optical magnification overpowers the distance, causing the image to physically diverge and grow larger. This offers a strictly solid-state optical explanation for the observational turnover claimed by $\Lambda$CDM.
-
-\section{Conditional Tolman Surface-Brightness Correspondence}
-In an expanding FLRW framework, the Tolman relation predicts a bolometric surface-brightness scaling proportional to $(1+z)^{-4}$.
-
-However, as demonstrated by the combined kinematic power drop and proposed macroscopic transverse divergence, this observation need not be an artifact of an expanding metric. If the wave packet undergoes isotropic volumetric relaxation as it dissipates energy into the vacuum, the Tolman dimming of the cosmos is achieved purely as the exact macroscopic, thermodynamic mirror of local gravitational impedance.
-
-\section{Threshold Assimilation into the Thermal Reservoir}
-Because the vacuum lattice is a continuous, isotropic medium, the exponential transport law does not drive the coherent carrier to zero energy at any finite universal distance. Instead, the apparent ``wall'' of microwave radiation is modeled as Threshold Assimilation.
-
-As the lattice damping continuously bleeds an incoming photon's coherent optical energy into the ambient phonon bath, the photon's frequency mechanically drops. The CMB is modeled as an ambient broadband thermal reservoir characterized by an effective coherence-loss frequency ($\omega_{\mathrm{CMB}}^{(\mathrm{eff})}$). The assimilation boundary is not a static Euclidean radius; it is defined as a frequency-dependent threshold.
-
-Terminal assimilation is defined to occur exactly when the photon's redshifted carrier frequency drops to match this effective thermal coherence threshold:
-\begin{equation}
-    \omega(r_{\mathrm{assim}}) = \omega_{\mathrm{CMB}}^{(\mathrm{eff})}
-\end{equation}
-Using the frequency distance law, the corresponding assimilation radius depends strictly on the emission frequency of the original photon:
-\begin{equation}
-    r_{\mathrm{assim}} = R_{\mathrm{U}} \ln \left( \frac{\omega_{\mathrm{emit}}}{\omega_{\mathrm{CMB}}^{(\mathrm{eff})}} \right)
+    \Omega_{\mathrm{obs}}
+    =
+    \frac{A_\perp}{d_{\mathrm A}^2}.
 \end{equation}
 
-For standard optical photons, the emission frequency is roughly $10^3$ to $10^4$ times higher than the CMB frequency. Consequently, an optical photon must travel a distance of approximately $7$ to $9$ characteristic relaxation lengths ($R_{\mathrm{U}}$), utilizing a representative effective CMB-band threshold. Because $\omega_{\mathrm{CMB}}^{(\mathrm{eff})}$ is not yet microscopically derived, this places the effective optical-to-thermal assimilation scale at roughly $\sim 10^{27}\text{ m}$.
+Using the operational luminosity and angular-diameter distances, the surface-brightness ratio is
+\begin{equation}
+    \frac{\mathrm{SB}_{\mathrm{obs}}}
+    {\mathrm{SB}_{\mathrm{emit}}}
+    =
+    \frac{d_{\mathrm A}^2}{d_{\mathrm L}^2}.
+\end{equation}
 
-When the photon reaches this threshold, under the threshold-assimilation closure, the coherent transverse state loses its independent identity, and its remaining energy enters accessible reservoir modes. Within the TFT CMB-reservoir interpretation, this permits a spatially continuous CMB rather than requiring the assimilation threshold to be a unique geometric emission surface.
+Substitution of the TFT luminosity-distance law gives
+\begin{equation}
+    \frac{\mathrm{SB}_{\mathrm{obs}}}
+    {\mathrm{SB}_{\mathrm{emit}}}
+    =
+    \frac{1}
+    {(1+z_{\mathrm{kin}})^4(1+z_{\mathrm D})}.
+\end{equation}
+
+Within the same gravity-neutral reference geometry,
+\begin{equation}
+    1+z_{\mathrm{kin}}
+    =
+    \frac{1+z_{\mathrm{obs}}}
+    {1+z_{\mathrm D}},
+\end{equation}
+and therefore
+\begin{equation}
+    \frac{\mathrm{SB}_{\mathrm{obs}}}
+    {\mathrm{SB}_{\mathrm{emit}}}
+    =
+    \frac{(1+z_{\mathrm D})^4}
+    {(1+z_{\mathrm{obs}})^4(1+z_{\mathrm D})}
+    =
+    \frac{(1+z_{\mathrm D})^3}
+    {(1+z_{\mathrm{obs}})^4}.
+\end{equation}
+
+In the pure local-kinematic branch,
+\begin{equation}
+    z_{\mathrm D}
+    \rightarrow
+    0,
+\end{equation}
+the result becomes
+\begin{equation}
+    \frac{\mathrm{SB}_{\mathrm{obs}}}
+    {\mathrm{SB}_{\mathrm{emit}}}
+    =
+    (1+z_{\mathrm{obs}})^{-4}.
+\end{equation}
+
+The familiar Tolman four-power therefore emerges in TFT from the combined transformation of photon energy, source-event timing, and the moving-source ray-direction Jacobian. When propagation relaxation contributes to the observed redshift within this reference geometry, the specific correction is
+\begin{equation}
+    \mathrm{SB}_{\mathrm{obs}}
+    =
+    \mathrm{SB}_{\mathrm{emit}}
+    (1+z_{\mathrm{obs}})^{-4}
+    (1+z_{\mathrm D})^3.
+\end{equation}
+
+Surface brightness consequently becomes a direct observational probe of the partition between $z_{\mathrm{kin}}$ and $z_{\mathrm D}$ within the gravity-neutral, no-lensing reference geometry.
+
+
+\section{The Geometric Mirror of Gravity: The Four-Power Optical Structure}
+
+The optical mechanics of TFT reveal a recurring four-fold structure connecting local gravitational refraction and cosmological photometry.
+
+In a gravitationally strained State-I region, the completed photon propagation speed is
+\begin{equation}
+    c_{\mathrm P}
+    =
+    c_{\mathrm E}(1-\alpha_{\mathrm G})^2.
+\end{equation}
+
+The corresponding refractive index is
+\begin{equation}
+    n_\tau
+    =
+    \frac{c_{\mathrm E}}{c_{\mathrm P}}
+    =
+    \frac{1}{(1-\alpha_{\mathrm G})^2}.
+\end{equation}
+
+In the weak-field limit,
+\begin{equation}
+    n_\tau
+    \simeq
+    1+2\alpha_{\mathrm G}.
+\end{equation}
+
+The same endpoint-transfer law may be represented through the effective optical inertia,
+\begin{equation}
+    \mu_{\mathrm{eff}}
+    =
+    \frac{\mu_{\mathrm D}}
+    {(1-\alpha_{\mathrm G})^4}.
+\end{equation}
+
+The fourth power therefore appears locally because the two-endpoint propagation factor enters the speed quadratically and the equivalent inertia through the square of that speed relation.
+
+Gravitational lensing provides the corresponding path-integrated optical signature. For a spherical source and impact parameter $b$, the photon accumulates transverse steering through the refractive-index gradient,
+\begin{equation}
+    \theta_{\mathrm{lens}}
+    =
+    \left|
+        \int_{-\infty}^{+\infty}
+        \nabla_\perp n_\tau\,dz
+    \right|.
+\end{equation}
+
+Using the weak-field index
+$n_\tau\simeq1+2GM/(rc_{\mathrm E}^2)$
+gives
+\begin{equation}
+    \theta_{\mathrm{lens}}
+    =
+    \frac{4GM}{bc_{\mathrm E}^2}
+    =
+    4\alpha_{\mathrm G}(b).
+\end{equation}
+
+The local factor of two in the refractive index is therefore accumulated over the full path geometry to produce the familiar factor of four in the total deflection.
+
+At cosmological scale, the photometric projection derived above within the gravity-neutral, no-lensing reference geometry generates another four-fold signature,
+\begin{equation}
+    \mathrm{SB}_{\mathrm{obs}}
+    \propto
+    (1+z_{\mathrm{obs}})^{-4}
+\end{equation}
+for the pure kinematic branch, with the propagation-relaxation correction entering as $(1+z_{\mathrm D})^3$ when the photometric redshift in this reference geometry contains both the kinematic and relaxation contributions.
+
+The structural mirror is therefore exact in its architecture even though the physical projections are different. Local gravitational loading produces a fourth-power effective optical inertia and a path-integrated $4\alpha_{\mathrm G}$ lensing response; cosmic source kinematics produces the four-power bolometric surface-brightness law in the gravity-neutral reference branch. In each case, the observable is built from repeated projections of the same Active-Vacuum kinematic structure.
+
+Gravity squeezes the local optical capacity through strain. Cosmic redshift records the accumulated evolution of the carrier and the source. The same lattice speaks through different projections.
+
+
+\section{Beyond the Photon Energy-Relaxation Length: Coherence and Thermal Handoff}
+
+The Photon Energy-Relaxation Length $R_{\mathrm U}$ is a macroscopic coherent-relaxation scale, not a material boundary of the universe. For a specified constant physical Vacuum Relaxation Rate,
+\begin{equation}
+    R_{\mathrm U}
+    =
+    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}}.
+\end{equation}
+
+Under the relaxation-dominated low-redshift reference specialization developed above,
+\begin{equation}
+    \Gamma_{\mathrm D}
+    \simeq
+    H_0^{(\mathrm{slope})},
+\end{equation}
+so the corresponding reference scale is
+\begin{equation}
+    R_{\mathrm U}
+    \simeq
+    \frac{c_{\mathrm E}}
+    {H_0^{(\mathrm{slope})}}
+    \simeq
+    1.2665\times10^{26}\ \mathrm{m}.
+\end{equation}
+
+The unit-reference microscopic scale-transfer closure likewise gives
+\begin{equation}
+    \Gamma_{\mathrm D}^{(0)}
+    \simeq
+    2.36\times10^{-18}\ \mathrm{s}^{-1},
+\end{equation}
+placing its corresponding reference relaxation length
+\begin{equation}
+    \frac{c_{\mathrm E}}
+    {\Gamma_{\mathrm D}^{(0)}}
+\end{equation}
+at essentially the same macroscopic distance scale.
+
+A coherent photon can propagate through multiple such relaxation lengths while its eigenbranch remains mechanically stable. Its surviving energy and real frequency continue to evolve according to
+\begin{equation}
+    E_\gamma
+    =
+    E_{\mathrm{emit}}
+    \exp\!\left[
+        -\int
+        \Gamma_{\mathrm D}\,dt
+    \right],
+\end{equation}
+and
+\begin{equation}
+    \omega_\gamma
+    =
+    \omega_{\mathrm{emit}}
+    \exp\!\left[
+        -\int
+        \Gamma_{\mathrm D}\,dt
+    \right].
+\end{equation}
+
+When the coherent relaxation channel is active, energy removed from the photon branch is received by the dynamically accessible finite-energy receiving sector,
+\begin{equation}
+    \dot E_{\mathrm{rec}}
+    =
+    -\dot E_\gamma
+    =
+    \Gamma_{\mathrm D}E_\gamma.
+\end{equation}
+
+The photon nevertheless remains on the coherent eigenbranch while that branch remains mechanically stable.
+
+A useful spectral comparison distance may be defined by asking when an initially higher-frequency photon reaches a representative microwave frequency
+$\omega_{\mathrm{CMB}}^{(\mathrm{cmp})}$:
+\begin{equation}
+    \omega\!\left(
+        r_{\mathrm{CMB}}^{(\mathrm{cmp})}
+    \right)
+    =
+    \omega_{\mathrm{CMB}}^{(\mathrm{cmp})}.
+\end{equation}
+
+In the constant-rate gravity-neutral limit,
+\begin{equation}
+    r_{\mathrm{CMB}}^{(\mathrm{cmp})}
+    =
+    \frac{c_{\mathrm E}}
+    {\Gamma_{\mathrm D}}
+    \ln\!\left(
+        \frac{\omega_{\mathrm{emit}}}
+        {\omega_{\mathrm{CMB}}^{(\mathrm{cmp})}}
+    \right).
+\end{equation}
+
+This identifies a spectral crossing, while the physical termination of the coherent photon branch is determined by its own microscopic stability condition. The carrier can therefore pass through the microwave band without that frequency crossing itself defining a stopping surface.
+
+If the coherent branch reaches a terminal stability condition, the remaining organized carrier energy is transferred into finite-energy receiving degrees of freedom. Thermal exchange with the photon population then proceeds through the absorption--emission and detailed-balance mechanics developed in
+\hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.
+
+The cosmic propagation chain is therefore
+\begin{equation}
+    \text{coherent photon}
+    \longrightarrow
+    \text{scale relaxation}
+    \longrightarrow
+    \text{receiving-sector energy uptake}
+    \longrightarrow
+    \text{thermal exchange}.
+\end{equation}
+
+
+\section{Conclusion: The Mechanical Origin of Cosmic Redshift}
+
+TFT replaces the single expanding-metric interpretation of cosmological redshift with three physically resolved mechanisms. The first is real source--observer motion through a locally dynamic universe,
+\begin{equation}
+    1+z_{\mathrm{kin}}
+    =
+    \sqrt{
+        \frac{
+            1+v_{\mathrm{ext}}/c_{\mathrm E}
+        }{
+            1-v_{\mathrm{ext}}/c_{\mathrm E}
+        }
+    },
+\end{equation}
+the second is the gravitational endpoint shift produced by the difference between emitter and observer clock loading,
+\begin{equation}
+    1+z_{\mathrm{grav}}
+    =
+    \frac{
+        1-\alpha_{\mathrm G,o}
+    }{
+        1-\alpha_{\mathrm G,e}
+    },
+\end{equation}
+and the third is coherent photon scale relaxation through the Active Vacuum,
+\begin{equation}
+    \ln(1+z_{\mathrm D})
+    =
+    \int_{\mathrm{path}}
+    \frac{
+        \Gamma_{\mathrm D}
+    }{
+        v_{\mathrm{ray}}
+    }
+    \,d\ell.
+\end{equation}
+
+Together they produce the observed astronomical spectral shift,
+\begin{equation}
+    1+z_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm{grav}})
+    (1+z_{\mathrm D}).
+\end{equation}
+
+The same mechanical architecture propagates into observable timing and photon energy, while the gravity-neutral, no-lensing reference projection developed above determines the corresponding flux, luminosity distance, angular projection, and surface brightness. Source-event time dilation constrains the combined kinematic and gravitational endpoint clock factor; photon energy records the complete spectral shift; direction-preserving relaxation protects the ray geometry; and the gravity-neutral photometric projection generates the corresponding cosmic dimming law.
+
+At the microscopic level, the Active-Vacuum scale-transfer closure gives, under the unit-reference specialization $F_{\mathrm R}=1$,
+\begin{equation}
+    \Gamma_{\mathrm D}^{(0)}
+    \simeq
+    2.36\times10^{-18}\ \mathrm{s}^{-1},
+\end{equation}
+placing the reference microscopic scale-transfer rate naturally near the characteristic observed Hubble-rate scale.
+
+The mechanics of cosmic redshift are therefore unified by a simple physical hierarchy:
+\begin{equation}
+\begin{aligned}
+    \text{matter motion}
+    &+
+    \text{gravitational endpoint loading}
+    +
+    \text{photon scale relaxation}
+    \\
+    &\longrightarrow
+    \text{cosmic spectral shift}
+    \\
+    &\longrightarrow
+    \text{astronomical observables}.
+\end{aligned}
+\end{equation}
+
+\hyperref[chap:cosmological_anomalies]{Chapter~\ref*{chap:cosmological_anomalies}}
+applies this mechanical redshift architecture to the apparent acceleration of the distance--redshift relation, the Hubble discrepancy, the acoustic scale, and the dark-sector phenomenology.
+
+The redshift of the cosmos is not the stretching of empty space. In TFT, it is the accumulated record of \textbf{matter in motion, clocks under gravitational loading, and light in relaxation}.

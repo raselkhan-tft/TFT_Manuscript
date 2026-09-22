@@ -1,103 +1,670 @@
-\chapter{The Topology of Entanglement and the Modified CHSH Bound}
+\chapter{The Goalpost Topology and Gravitational Coupling of Quantum Entanglement}
 \label{app:entanglement}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Abstract:} In standard Quantum Mechanics, entanglement is described by a non-local wavefunction that instantly correlates distant particles, offering no physical mechanism and violating local realism. Tension Field Theory resolves this by introducing the Vertical Dimension $Z$ of scale. We derive entanglement not as a mysterious link across empty space, but as a Goalpost Topology where two active surface particles maintain independent vertical gravitational anchors on the SC Hard Floor, linked horizontally by a Residual Phase-Tether. This framework establishes the modified CHSH inequality, recovers the geometric limits of Quantum Mechanics, and preserves the mechanical causality of the topologically locked phase.
+\noindent\textbf{Abstract:}
+Tension Field Theory represents an ideal correlated pair through the Goalpost topology: two localized Active-Vacuum excitations retain a shared relational constraint through their vertical Tension Columns and Hard-Floor references. This appendix constructs the active torsional coordinates, their projected inertia and restoring response, and the work balance of the ideal pair constraint. Gravitational loading is introduced through the remaining-capacity construction established in \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}. Its exact endpoint identity is distinguished from the additional constitutive identification required to obtain an entanglement coupling. A proposed work-based definition of coupling action gives a dimensionally consistent formulation of $\alpha_{\mathrm Q}$. Under a specified linear torsional-capacity response and a fixed comparison protocol, it yields $\alpha_{\mathrm Q}+\alpha_{\mathrm G}=1$. The two-endpoint generalization, action normalization, saturation limit, and relationship to detector measurements are developed explicitly. The conversion from this mechanical coupling to Bell correlations is assigned to the analyzer construction in \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.
 
 \section{The Geometry of the Topological Tether}
-In Tension Field Theory, a particle is not a zero-dimensional point on a two-dimensional sheet. It is a composite mechanical structure: a localized dynamic excitation on the State I Active Vacuum (the FCC Soft Floor with characteristic radius $r_{\mathrm{D}} \approx 7.45 \times 10^{-27}$ m), mechanically tethered to the State 0 Latent Substrate (the SC Hard Floor with lattice spacing $\ell_{\mathrm{S}} \approx 1.6163 \times 10^{-35}$ m) via a topological Vertical Tension Column.
 
-Let a particle coordinate be defined as $(x, y, z, Z)$, where $Z$ represents the scale depth.
-\begin{itemize}
-    \item \textbf{Particle A:} $(x_{\mathrm{A}}, y_{\mathrm{A}}, z_{\mathrm{A}}, Z_{\mathrm{soft}})$
-    \item \textbf{Particle B:} $(x_{\mathrm{B}}, y_{\mathrm{B}}, z_{\mathrm{B}}, Z_{\mathrm{soft}})$
-    \item \textbf{Anchor $g_{\mathrm{A}}$:} $(x_{g\mathrm{A}}, y_{g\mathrm{A}}, z_{g\mathrm{A}}, Z_{\mathrm{hard}})$
-    \item \textbf{Anchor $g_{\mathrm{B}}$:} $(x_{g\mathrm{B}}, y_{g\mathrm{B}}, z_{g\mathrm{B}}, Z_{\mathrm{hard}})$
-\end{itemize}
+A localized excitation in TFT belongs to the Active Vacuum: its topology, contact deformation, and condensate participation together determine its physical state. Its vertical Tension Column establishes the relationship between that active configuration and its Hard-Floor reference.
 
-Two particles are entangled if and only if they originate from a single coherent topological event (such as parametric down-conversion at a beam waist, $A_{\mathrm{root}}$) that creates a shared locus on the substrate. As the particles separate on the Soft Floor, their independent vertical Tension Columns separate on the Hard Floor, leaving behind a continuous line of microscopic longitudinal strain.
+For the ideal pair-preparation branch considered here, two active endpoints $A$ and $B$ emerge from a common coherent configuration. Their respective substrate references are $g_{\mathrm A}$ and $g_{\mathrm B}$. The retained relationship between these references, together with the two vertical columns, forms the \textbf{Goalpost topology}.
 
-The mathematical condition for entanglement is the existence of this Residual Phase-Tether: While the spatial metric distance between their anchors on the SC Substrate is strictly non-zero ($L > 0$), the transit time across this distance is strictly zero ($\Delta t \to 0$). This is because the SC Hard Floor operates with zero intrinsic inertial density ($\mu_{\mathrm{S}} \to 0$) and infinite stiffness ($\tau_{\mathrm{S}} \to \infty$). Therefore, the stress transmission speed is effectively infinite:
+The scale-depth coordinate $Z$ distinguishes the structural level of an active endpoint from that of its latent reference. It is not an additional ordinary Euclidean displacement coordinate. The two endpoints can therefore be widely separated through the Soft Floor while remaining subject to a common deeper compatibility condition. The vertical architecture and its Goalpost representation are developed in \hyperref[chap:vertical_topology]{Chapter~\ref*{chap:vertical_topology}}, particularly \hyperref[sec:quantum_entanglement]{Section~\ref*{sec:quantum_entanglement}} and \hyperref[fig:goalpost_topology]{Figure~\ref*{fig:goalpost_topology}}.
+
+The Hard Floor retains the constitution established in \hyperref[part:one]{Part~\ref*{part:one}}:
 \begin{equation}
-    c_{\mathrm{S}} = \sqrt{\frac{\tau_{\mathrm{S}}}{\mu_{\mathrm{S}}}} \to \infty
+    \boxed{
+    \mu_{\mathrm S}\rightarrow0,
+    \qquad
+    K_{\mathrm S}\rightarrow\infty,
+    \qquad
+    c_{\mathrm S}\rightarrow\infty
+    }.
 \end{equation}
+Here $K_{\mathrm S}$ denotes limiting incremental rigidity, while $\tau_{\mathrm S}$ remains the finite volumetric yield-pressure scale. The zero-delay connectivity limit represents ideal constraint equilibration, rather than an independently propagating finite-energy acoustic mode.
 
-In TFT, true non-locality does not exist. The interaction is spatially separated across the three-dimensional Soft Floor, but strictly mechanically coupled via the instantaneous phase-tether along the Hard Floor.
+The \textbf{Residual Phase-Tether} describes the retained relational compatibility of the prepared pair. Its active accessibility depends on how the finite endpoint configurations remain coupled to that relationship. A persistent record of the preparation and a pair that can still participate in a common analyzer interaction are consequently different physical conditions.
 
-\section{Spin Conservation via Torsion Constraint}
-We now derive standard quantum behavior, such as spin conservation in a Bell state, using strict lattice mechanics.
+The finite deformation, kinetic energy, and measurement work reside in the active endpoints and their coupled surroundings. The ideal substrate supplies their structural reference and compatibility condition.
 
-Let $\Theta$ represent the twist or spin of the vertical Tension Column. The substrate itself is a topologically locked phase governed by the ultimate yield tension $F_{\mathrm{S}} = c_{\mathrm{E}}^4/G$, rendering it a perfectly rigid, absolute reference frame. However, the continuous phase-tether connecting $g_{\mathrm{A}}$ and $g_{\mathrm{B}}$ across this substrate is microscopic and highly fragile, governed only by the residual local tension ($\tau_{\mathrm{local}}$).
+\section{Torsional Coordinates and the FCC Contact Projection}
 
-For a singlet state with total spin zero, the continuous phase-tether acts as a perfectly rigid mechanical driveshaft. The mechanical constraint equation is:
+\subsection{The Physical Coordinate}
+
+Let $\Theta_i$, with $i\in\{A,B\}$, describe a selected axial torsional reconfiguration of endpoint $i$. It is dimensionless and measured as an angular coordinate. It is neither a binary detector label nor, by itself, the measured spin of the particle.
+
+The coordinate must be realized through the actual nodal and contact motion. The objective contact displacement established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} is
 \begin{equation}
-    \Theta_{\mathrm{A}} + \Theta_{\mathrm{B}} = 0
+    \Delta\mathbf u^{\mathrm c}_{ij}
+    =\mathbf u_j-\mathbf u_i
+    -r_{\mathrm D}(\boldsymbol\vartheta_i+\boldsymbol\vartheta_j)
+    \times\widehat{\mathbf n}_{ij}.
 \end{equation}
+In this contact expression, $i,j$ label neighboring nodes. Nodal translation $\mathbf u_i$, mechanical microrotation $\boldsymbol\vartheta_i$, and internal contact phase $\phi_i$ remain distinct constituents. A collective torsional coordinate specifies how these constituents move together.
 
-Because the latent SC Substrate transmits stress with $c_{\mathrm{S}} \to \infty$, any tension reconfiguration across the tether occurs instantly. To an observer on the Soft Floor, the phase-locking event resolves exactly at the fundamental quantization limit $t_{\mathrm{S}}$.
-
-\section{Measurement as Torque Resolution (The Severing Sequence)}
-Standard physics treats measurement as the abstract instantaneous collapse of a probability wave. TFT redefines measurement as a mechanical event: torque resolution.
-
-Before measurement, entangled particles A and B exist as a Goalpost Topology, possessing independent perpendicular gravitational columns ($g_{\mathrm{A}}$ and $g_{\mathrm{B}}$) mechanically linked by the horizontal phase-tether.
-
-\begin{itemize}
-    \item \textbf{The Injection (Soft Floor):} A macroscopic detector applies a rigid boundary condition---a physical torque---to Particle A on the FCC Soft Floor, forcing it into a specific mechanical eigenstate (e.g., $\Theta_{\mathrm{A}} \to +1/2$).
-    \item \textbf{The Downward Strike ($Z$-Dimension):} Because the latent SC Substrate operates with zero inertial density, the Tension Column has no rotational impedance. The torque transmits instantly straight down Column A to its anchor $g_{\mathrm{A}}$.
-    \item \textbf{The Horizontal Transfer (Phase-Tether):} The mechanical stress shoots across the fragile phase-tether on the flat Hard Floor. Because $c_{\mathrm{S}} \to \infty$, the signal reaches $g_{\mathrm{B}}$ instantaneously ($\Delta t \to 0$).
-    \item \textbf{The Upward Snap (Phase-Lock Resolution):} To satisfy the absolute structural constraint ($\Theta_{\mathrm{A}} + \Theta_{\mathrm{B}} = 0$), the anchor $g_{\mathrm{B}}$ instantly deflects the torsion up the second column, forcing Particle B on the Soft Floor to snap into the exact opposite orientation ($\Theta_{\mathrm{B}} = -1/2$).
-    \item \textbf{The Severing (Decoherence):} The macroscopic energy injected by the detector torque immediately exceeds the structural tension limit of the delicate phase-tether. The horizontal connection mechanically fractures. Particle A and Particle B retain their independent gravitational anchors ($g_{\mathrm{A}}$ and $g_{\mathrm{B}}$), but the entanglement is permanently destroyed.
-\end{itemize}
-
-\section{The FCC Geometric Derivation of $2\sqrt{2}$}
-In standard quantum statistics, the CHSH correlation is capped at Tsirelson's bound of $2\sqrt{2}$. In TFT, this is not a statistical anomaly. It is the physical structural footprint of the active vacuum lattice.
-
-When a detector applies a boundary constraint to the Soft Floor, the correlation must mechanically project across the discrete links of the face-centered cubic lattice.
-\begin{itemize}
-    \item \textbf{The Classical Limit ($2$):} Represents a structural projection along strictly orthogonal axes of a square or cubic grid.
-    \item \textbf{The Quantum Limit ($2\sqrt{2}$):} In the FCC active vacuum, adjacent nodes touch strictly along the face diagonal, not the orthogonal edges. The fundamental geometric edge length $a$ of the FCC unit cell relative to the node radius $r_{\mathrm{D}}$ is exactly $a = 2\sqrt{2} r_{\mathrm{D}}$.
-\end{itemize}
-
-Because the correlation torque must physically propagate across the nearest-neighbor diagonal links of the FCC lattice, the absolute maximum contiguous distance the wave can perfectly couple across a single fundamental unit cell is geometrically capped by this ratio. Tsirelson's bound is the literal diagonal parameter of the FCC Soft Floor.
-
-\section{The Modified CHSH Inequality and Gravitational Decoherence}
-Because entanglement is physically mediated by the Hard Floor, the correlation strength is a function of the available structural slack required to maintain the phase-tether.
-
-We define the modified TFT CHSH bound as:
+After expressing the angular constituents through their associated arc displacements, write the retained length-valued displacement vector near a stationary configuration as
 \begin{equation}
-    S_{\mathrm{CHSH}} \leq 2\sqrt{1 + \alpha_{\mathrm{Q}}^2}
+    \boldsymbol\zeta=\mathbf b_{\Theta i}\Theta_i,
+    \qquad
+    \mathbf b_{\Theta i}
+    =\frac{\partial\boldsymbol\zeta}{\partial\Theta_i}.
 \end{equation}
-where $\alpha_{\mathrm{Q}} \leq 1$ is the dimensionless quantum topological coupling factor. It measures the ratio of the localized mechanical constraint action to the fundamental quantum action $\hbar$:
-\begin{equation}
-    \alpha_{\mathrm{Q}} = \frac{\xi_{\mathrm{E}} (\tau_{\mathrm{local}} \cdot A_{\mathrm{root}} \cdot \Delta t)}{\hbar}
-\end{equation}
-Here, $\xi_{\mathrm{E}}$ is the dimensionless topological correlation constant (analytically constrained by the flat-space quantum limit, $\xi_{\mathrm{E}} = \hbar / (\tau_{\mathrm{S}} A_{\mathrm{root}} \Delta t)$), $\tau_{\mathrm{local}}$ is the available two-dimensional surface tension of the local field, and $A_{\mathrm{root}}$ is the cross-sectional area of the initial topological fusion defined by the experimental beam waist ($A_{\mathrm{root}} \approx \pi w_0^2$).
+Here $i$ again denotes the selected endpoint. The vector $\mathbf b_{\Theta i}$ has dimensions of length and describes the participating contact and nodal displacement produced by one unit of the endpoint angle.
 
-\vspace{0.5em}
-\noindent\textbf{The Kinematic Budget (Gravity versus Entanglement):} The substrate operates on a strictly finite invariant tension budget ($\tau_{\mathrm{S}}$). Macroscopic mass consumes this budget via the gravitational coupling $\alpha_{\mathrm{G}} = GM / (r c_{\mathrm{E}}^2)$. Therefore, the available local tension $\tau_{\mathrm{local}}$ required to sustain the horizontal phase-tether is strictly the residual slack left over from gravity:
-\begin{equation}
-    \tau_{\mathrm{local}} = \tau_{\mathrm{S}} (1 - \alpha_{\mathrm{G}})
-\end{equation}
+\subsection{Inertia and Restoring Response}
 
-Substituting $\tau_{\mathrm{local}}$ into the topological coupling equation yields:
+Using the conservative kinetic matrix and potential-energy Hessian of the same configuration, as defined in Equation~\eqref{eq:X_tangent_energy},
 \begin{equation}
-    \alpha_{\mathrm{Q}} = \left[ \frac{\xi_{\mathrm{E}} \tau_{\mathrm{S}} A_{\mathrm{root}} \Delta t}{\hbar} \right] (1 - \alpha_{\mathrm{G}})
+    \boxed{
+    \begin{aligned}
+    M_{\Theta i}
+    &=\mathbf b_{\Theta i}^{\mathsf T}
+      \mathsf M\mathbf b_{\Theta i},\\
+    k_{\Theta i}
+    &=\mathbf b_{\Theta i}^{\mathsf T}
+      \mathsf K\mathbf b_{\Theta i}.
+    \end{aligned}
+    }
 \end{equation}
-
-In perfectly flat space where macroscopic gravity is negligible ($\alpha_{\mathrm{G}} \to 0$), the standard quantum mechanical limit is strictly preserved. To recover the geometric Tsirelson bound of $2\sqrt{2}$, the topological coupling must be perfectly sustained ($\alpha_{\mathrm{Q}} = 1$). For this to hold true, the entire bracketed constant must equal exactly 1:
+Their dimensions are
 \begin{equation}
-    \frac{\xi_{\mathrm{E}} \tau_{\mathrm{S}} A_{\mathrm{root}} \Delta t}{\hbar} = 1
+    [M_{\Theta i}]=\mathrm{kg\,m^2},
+    \qquad
+    [k_{\Theta i}]=\mathrm J.
 \end{equation}
-
-This drops the proportionality constant entirely, revealing the exact, zero-sum identity for Gravitational Decoherence:
+Thus $M_{\Theta i}$ is a rotational kinetic coefficient, while $k_{\Theta i}$ is the restoring coefficient conjugate to the dimensionless angle. The corresponding tangent energies are
 \begin{equation}
-    \alpha_{\mathrm{Q}} = 1 - \alpha_{\mathrm{G}}
+    T_i^{(2)}=\frac12M_{\Theta i}\dot\Theta_i^2,
+    \qquad
+    U_i^{(2)}=\frac12k_{\Theta i}\Theta_i^2.
 \end{equation}
+These expressions are the angular-coordinate projection of the conservative construction in \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}. They do not introduce a new universal inertia or stiffness.
 
-\vspace{0.5em}
+For the gravity-neutral contact tangent model, the restoring coefficient can be evaluated directly from the contact strains:
+\begin{equation}
+    \boxed{
+    k_{\Theta i}
+    =\sum_{\langle mn\rangle}A_{\mathrm{ct}}
+    \left(\frac{\partial\boldsymbol\xi_{mn}}{\partial\Theta_i}\right)^{\mathsf T}
+    \mathbf H_{\mathrm c}
+    \left(\frac{\partial\boldsymbol\xi_{mn}}{\partial\Theta_i}\right)
+    }.
+\end{equation}
+Each undirected contact is counted once. The contact-strain vector contains translational deformation and the arc-length forms of bending, twist, and internal phase, so all its entries have length units. The matrix $\mathbf H_{\mathrm c}$ and its component stiffnesses are those of the contact action in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.
+
+For a preloaded or geometrically changing defect, $k_{\Theta i}$ is obtained from the full Hessian of the loaded configuration. Changes of contact geometry and prestress then contribute alongside changes of the tangent coefficients.
+
+\subsection{Condensate Participation}
+
+The kinetic projection includes only motions that physically participate in the selected torsional mode. The localized condensate construction in \hyperref[sec:AP_localized_kinematics]{Section~\ref*{sec:AP_localized_kinematics}} and \hyperref[sec:AP_defect_boundary_value_problem]{Section~\ref*{sec:AP_defect_boundary_value_problem}} transmits normal boundary velocity through its baseline inviscid condition. Tangential motion requires its own traction or interfacial-locking law.
+
+A torsional deformation that produces normal boundary motion can therefore induce the corresponding conservative condensate flow. Pure tangential rotation does not acquire that same added inertia merely by being called a defect motion.
+
+The complete $M_{\Theta i}$ includes the calculated participating motion once, without duplicating condensate inertia already eliminated into the reduced coordinate. The normal-mode weighting is specified in \hyperref[sec:AP_normal_boundary_impedance]{Section~\ref*{sec:AP_normal_boundary_impedance}}.
+
+\section{The Shared Pair Constraint and Its Mechanical Response}
+
+For the selected ideal singlet-like sector, retain the compatibility condition
+\begin{equation}
+    \boxed{\Theta_{\mathrm A}+\Theta_{\mathrm B}=0}.
+\end{equation}
+This is the axial specialization of the Goalpost relation. It defines an admissible pair configuration; the identification with a measured singlet additionally requires the full angular-momentum and readout projections. The compatibility equation alone does not assign spin eigenvalues or analyzer probabilities.
+
+\subsection{A Minimal Separated-Endpoint Reduction}
+
+Consider two active endpoint modes whose explicit local energies are separable before the shared constraint is imposed. Their minimal tangent Lagrangian is
+\begin{equation}
+    \begin{aligned}
+    L_{\mathrm{pair}}
+    ={}&\frac12M_{\Theta\mathrm A}\dot\Theta_{\mathrm A}^{\,2}
+       +\frac12M_{\Theta\mathrm B}\dot\Theta_{\mathrm B}^{\,2}\\
+       &-\frac12k_{\Theta\mathrm A}\Theta_{\mathrm A}^{\,2}
+       -\frac12k_{\Theta\mathrm B}\Theta_{\mathrm B}^{\,2}
+       -\lambda_{\mathrm C}(\Theta_{\mathrm A}+\Theta_{\mathrm B}).
+    \end{aligned}
+\end{equation}
+This is a specified reduced model. Any additional finite active cross-coupling must be included in the projected kinetic and restoring matrices when the actual pair configuration requires it. The coefficients are held constant over the tangent motion considered here.
+
+Let $\mathcal T_{\mathrm A}$ and $\mathcal T_{\mathrm B}$ be the externally applied generalized torques. Variation gives
+\begin{align}
+    M_{\Theta\mathrm A}\ddot\Theta_{\mathrm A}
+    +k_{\Theta\mathrm A}\Theta_{\mathrm A}
+    &=\mathcal T_{\mathrm A}-\lambda_{\mathrm C},\\
+    M_{\Theta\mathrm B}\ddot\Theta_{\mathrm B}
+    +k_{\Theta\mathrm B}\Theta_{\mathrm B}
+    &=\mathcal T_{\mathrm B}-\lambda_{\mathrm C}.
+\end{align}
+The same sign of the two constraint reactions follows from the sum convention used for the endpoint coordinates.
+
+Set
+\begin{equation}
+    \Theta_{\mathrm A}=\Theta,
+    \qquad
+    \Theta_{\mathrm B}=-\Theta.
+\end{equation}
+Subtracting the endpoint equations produces
+\begin{equation}
+    \boxed{
+    (M_{\Theta\mathrm A}+M_{\Theta\mathrm B})\ddot\Theta
+    +(k_{\Theta\mathrm A}+k_{\Theta\mathrm B})\Theta
+    =\mathcal T_{\mathrm A}-\mathcal T_{\mathrm B}
+    }.
+\end{equation}
+The ideal compatibility is instantaneous, but the accessible pair coordinate evolves according to finite inertia and restoring response. For the unforced stable tangent mode,
+\begin{equation}
+    \boxed{
+    \omega_{\mathrm{pair}}^2
+    =\frac{k_{\Theta\mathrm A}+k_{\Theta\mathrm B}}
+    {M_{\Theta\mathrm A}+M_{\Theta\mathrm B}}
+    }.
+\end{equation}
+This frequency is determined by the active mechanical projection, not by an assigned propagation time through the bare Hard Floor.
+
+\subsection{Constraint Work}
+
+The ideal constraint contributes the total power
+\begin{equation}
+    P_{\mathrm C}
+    =-\lambda_{\mathrm C}\dot\Theta_{\mathrm A}
+     -\lambda_{\mathrm C}\dot\Theta_{\mathrm B}.
+\end{equation}
+Differentiating the compatibility condition gives
+\begin{equation}
+    \dot\Theta_{\mathrm A}+\dot\Theta_{\mathrm B}=0,
+\end{equation}
+and hence
+\begin{equation}
+    \boxed{P_{\mathrm C}=0}.
+\end{equation}
+The retained pair energy is
+\begin{equation}
+    E_{\mathrm{pair}}
+    =\frac12(M_{\Theta\mathrm A}+M_{\Theta\mathrm B})\dot\Theta^2
+     +\frac12(k_{\Theta\mathrm A}+k_{\Theta\mathrm B})\Theta^2,
+\end{equation}
+with balance
+\begin{equation}
+    \boxed{
+    \begin{aligned}
+    \frac{\mathrm dE_{\mathrm{pair}}}{\mathrm dt}
+    &=(\mathcal T_{\mathrm A}-\mathcal T_{\mathrm B})\dot\Theta\\
+    &=\mathcal T_{\mathrm A}\dot\Theta_{\mathrm A}
+      +\mathcal T_{\mathrm B}\dot\Theta_{\mathrm B}.
+    \end{aligned}
+    }
+\end{equation}
+The constraint does not absorb net energy from the complete compatible pair. Individual endpoint reactions and endpoint power transfers can remain nonzero.
+
+This calculation establishes the mechanical response and energy balance of the specified linkage. Its relation to observable detector records remains a separate requirement. In particular, a controllable remote displacement would itself constitute an operational signal; the ideal constraint-work identity does not prove that such access is excluded. The analyzer and record calculation is assigned to \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.
+
+\section{Gravitational Loading and the Remaining Active Capacity}
+
+The local capacity balance is inherited from \hyperref[sec:grav_active_capacity]{Section~\ref*{sec:grav_active_capacity}}. For endpoint $i$,
+\begin{equation}
+    \alpha_{\mathrm G}^{(i)}
+    =\frac{\tau_{\mathrm L}^{(i)}}{\tau_{\mathrm D}},
+\end{equation}
+where both $\tau_{\mathrm L}^{(i)}$ and $\tau_{\mathrm D}$ are expressed in the same active surface-tension normalization.
+
+The adopted remaining-capacity relation is
+\begin{equation}
+    \tau_{\mathrm{av}}^{(i)}
+    =\tau_{\mathrm D}-\tau_{\mathrm L}^{(i)}.
+\end{equation}
+Therefore,
+\begin{equation}
+    \boxed{
+    \tau_{\mathrm{av}}^{(i)}
+    =\tau_{\mathrm D}(1-\alpha_{\mathrm G}^{(i)})
+    }.
+\end{equation}
+Using the single-endpoint factor of Equation~\eqref{eq:single_endpoint_capacity},
+\begin{equation}
+    C_i\equiv\frac{\tau_{\mathrm{av}}^{(i)}}{\tau_{\mathrm D}},
+\end{equation}
+gives
+\begin{equation}
+    \boxed{
+    C_i=1-\alpha_{\mathrm G}^{(i)},
+    \qquad
+    \alpha_{\mathrm G}^{(i)}+C_i=1
+    }.
+\end{equation}
+This is an exact identity within the adopted linear capacity-subtraction model. Its linear dependence is inherited from that constitutive subtraction, rather than inferred from the unstrained and saturated limits alone.
+
+The work-conjugate endpoint map in Equations~\eqref{eq:endpoint_work_conjugacy} and~\eqref{eq:single_endpoint_coordinate_map} is
+\begin{equation}
+    \tau_{\mathrm D}\,\delta\widehat u_i
+    =\tau_{\mathrm{av}}^{(i)}\,\delta\widehat y_i,
+\end{equation}
+so that
+\begin{equation}
+    \delta\widehat u_i=C_i\,\delta\widehat y_i,
+    \qquad
+    u_i=C_i y_i
+\end{equation}
+for quasistatic loading and a common reference configuration. Here $y_i$ is the presented active reconfiguration and $u_i$ its completed coordinate; hats denote the normalization by the nearest-neighbor separation used in \hyperref[sec:grav_work_conjugate_endpoint]{Section~\ref*{sec:grav_work_conjugate_endpoint}}. The factor $C_i$ therefore has a defined mechanical role in local state transfer.
+
+The equation partitions available active reconfiguration capacity. It is not, by itself, a partition of stored photon energy, a loss of the action quantum, or a detector correlation law.
+
+The Hard-Floor pressure $\tau_{\mathrm S}$ remains distinct from this surface-capacity balance. Its relation to an active endpoint uses an explicit geometric and work-conjugate projection.
+
+\section[Projection of Gravitational Loading onto the Torsional Mode]{Projection of Gravitational Loading\\onto the Torsional Mode}
+
+The remaining-capacity factor acquires observable meaning through the coordinate on which it acts.
+
+For the coherent nearest-neighbor transfer sector, Equations~\eqref{eq:two_endpoint_factor} and~\eqref{eq:uniform_two_endpoint_factor} give
+\begin{equation}
+    C_{ij}=C_iC_j,
+    \qquad
+    C=(1-\alpha_{\mathrm G})^2
+    \quad\text{under locally uniform loading}.
+\end{equation}
+Here $C$ is the locally uniform two-endpoint translational factor. Its primitive-cell operator is
+\begin{equation}
+    \mathsf T_{\mathrm{cell}}
+    =\mathbf I+(C-1)\mathsf P_{\mathrm{tr}},
+\end{equation}
+where $\mathsf P_{\mathrm{tr}}$ projects onto the coherent translational transfer sector. The corresponding referred kinetic matrix is
+\begin{equation}
+    \boxed{
+    \mathsf M_{\mathrm{cell}}^{(\mathrm{eff})}
+    =\mathsf T_{\mathrm{cell}}^{-\mathsf T}
+     \mathsf M_{\mathrm{cell}}^{(0)}
+     \mathsf T_{\mathrm{cell}}^{-1}
+    }.
+\end{equation}
+The operator and mass-matrix congruence are established in Equations~\eqref{eq:cell_transfer_operator} and~\eqref{eq:effective_cell_mass_matrix}. At their retained order, the complementary coordinates are not multiplied by the same transfer factor.
+
+\subsection{The Torsional Participation Test}
+
+For a specified endpoint mode, the scaffold contribution to its loaded torsional inertia is obtained by contraction with its displacement pattern:
+\begin{equation}
+    \boxed{
+    \left(M_{\Theta i}^{(\mathrm{eff})}\right)_{\mathrm{scaffold}}
+    =\sum_{\mathrm{cells}}
+    \mathbf b_{\Theta i}^{\mathsf T}
+    \mathsf M_{\mathrm{cell}}^{(\mathrm{eff})}
+    \mathbf b_{\Theta i}
+    }.
+\end{equation}
+Within each term, $\mathbf b_{\Theta i}$ denotes the restriction of the endpoint mode to that cell. Any additional localized condensate contribution is calculated through its own boundary response. It is not generated by reusing the scaffold congruence.
+
+For a fixed mode pattern and the block-decoupled kinetic structure retained in \hyperref[sec:grav_mass_matrix_congruence]{Section~\ref*{sec:grav_mass_matrix_congruence}}, the scaffold projection can be expanded as
+\begin{equation}
+    \begin{aligned}
+    \left(M_{\Theta i}^{(\mathrm{eff})}\right)_{\mathrm{scaffold}}
+    ={}&\left(M_{\Theta i}^{(0)}\right)_{\mathrm{scaffold}}\\
+    &+\sum_{\mathrm{cells}}(C^{-2}-1)
+      (\mathsf P_{\mathrm{tr}}\mathbf b_{\Theta i})^{\mathsf T}
+      \mathsf M_{\mathrm{cell}}^{(0)}
+      (\mathsf P_{\mathrm{tr}}\mathbf b_{\Theta i}).
+    \end{aligned}
+\end{equation}
+This is a direct projection of the inherited mass-matrix transformation, with the applicable locally uniform factor evaluated in each cell.
+
+A mixed torsional mode with translational participation samples the referred-inertia change through the displayed term. A mode satisfying
+\begin{equation}
+    \mathsf P_{\mathrm{tr}}\mathbf b_{\Theta i}=0
+\end{equation}
+has no such correction from this operator. That result concerns the specified translational loading map; other loaded contact or localized-flow effects require their own calculation.
+
+The restoring coefficient likewise comes from the loaded contact Hessian. A reduction of available capacity does not automatically imply the same reduction of every tangent stiffness. The coherent translational construction in Equation~\eqref{eq:reduced_directional_lagrangian} retains its baseline stiffness while referring the loading into its kinetic coefficient.
+
+Thus the loaded pair frequency is determined by
+\begin{equation}
+    \omega_{\mathrm{pair}}^2
+    =\frac{
+        k_{\Theta\mathrm A}(\alpha_{\mathrm G}^{(\mathrm A)})
+        +k_{\Theta\mathrm B}(\alpha_{\mathrm G}^{(\mathrm B)})
+    }{
+        M_{\Theta\mathrm A}(\alpha_{\mathrm G}^{(\mathrm A)})
+        +M_{\Theta\mathrm B}(\alpha_{\mathrm G}^{(\mathrm B)})
+    },
+\end{equation}
+after the participating modes and constitutive coefficients have been calculated.
+
+This establishes the route from gravitational loading to the actual torsional response. It does not yet identify that response with a normalized Bell-correlation strength.
+
+\section{The Coupling Action and Its Normalization}
+
+\subsection{A Work-Based Specification of the Coupling}
+
+The normalized mechanical coupling is specified through the following \textbf{proposed operational definition}.
+
+Select the positive elastic interaction energy $U_Q$ in the finite active contact sector through which the endpoint accesses the shared relation. Its participating contacts and deformation pattern must be specified independently of the desired correlation law. It is part of the active system's energy, not an additional energy stored in the ideal zero-work constraint.
+
+For a single stable tangent coordinate,
+\begin{equation}
+    U_Q(\Theta)-U_Q(0)
+    =\frac12k_Q\Theta^2,
+    \qquad k_Q>0.
+\end{equation}
+The required quasistatic loading torque is
+\begin{equation}
+    \mathcal T_Q^{(\mathrm{load})}
+    =\frac{\partial U_Q}{\partial\Theta}
+    =k_Q\Theta,
+\end{equation}
+and the restoring torque exerted by this interaction is its negative. The energy can therefore be obtained from physical work:
+\begin{equation}
+    U_Q(\Theta)-U_Q(0)
+    =\int_0^\Theta
+    \mathcal T_Q^{(\mathrm{load})}(\vartheta)\,\mathrm d\vartheta.
+\end{equation}
+For a specified finite active interaction protocol of duration $\Delta t$, define
+\begin{equation}
+    \boxed{
+    \mathcal A_Q
+    =\int_0^{\Delta t}
+    \left[U_Q(\Theta(t))-U_Q(0)\right]\mathrm dt
+    }.
+\end{equation}
+The quantity $\mathcal A_Q$ has action units, $\mathrm{J\,s}$. It is an interaction-energy--time measure, not an absorbed-work integral, an angular impulse, or the canonical cycle action $\oint\pi\,\mathrm dq$.
+
+The interval $\Delta t$ belongs to the active protocol. It is not the ideal Hard-Floor compatibility delay.
+
+Retain the normalized form
+\begin{equation}
+    \boxed{
+    \alpha_{\mathrm Q}
+    =\frac{\xi_{\mathrm E}\mathcal A_Q}{\hbar}
+    }.
+\end{equation}
+For a nonzero gravity-neutral reference interaction using the same normalization, impose
+\begin{equation}
+    \alpha_{\mathrm Q}(0)=1,
+    \qquad
+    \xi_{\mathrm E}
+    =\frac{\hbar}{\mathcal A_Q^{(0)}}.
+\end{equation}
+Then
+\begin{equation}
+    \boxed{
+    \alpha_{\mathrm Q}
+    =\frac{\mathcal A_Q}{\mathcal A_Q^{(0)}}
+    }.
+\end{equation}
+This fixes the reference normalization for the specified interaction family. It does not establish $\xi_{\mathrm E}$ as a universal constant across different preparations, detector geometries, or observation intervals.
+
+Nor does a general interaction-action ratio automatically lie below unity. The interval $0\leq\alpha_{\mathrm Q}\leq1$ follows in the decreasing-capacity specialization developed below.
+
+\subsection{Contact-Level Evaluation}
+
+Within the selected stable contact sector, the coupling energy is evaluated using the same objective strains and tangent coefficients as the active mechanics:
+\begin{equation}
+    U_Q
+    =\frac12\sum_{c\in Q}
+    A_{\mathrm{ct},c}\,
+    \boldsymbol\xi_c^{\mathsf T}
+    \mathbf H_{Q,c}\boldsymbol\xi_c.
+\end{equation}
+The index $c\in Q$ denotes the physical active contacts included in the specified coupling sector. Each contribution is counted once. $\mathbf H_{Q,c}$ is the corresponding restricted contact tangent matrix, not a newly assigned substrate modulus.
+
+This expression evaluates the deformation energy of a declared contact configuration. The general contact-energy structure is inherited from \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}; the selection and loading dependence of the entanglement-coupling sector remain to be established.
+
+\section{The Conditional Zero-Sum Coupling Law}
+
+\subsection{Linear Torsional-Capacity Closure}
+
+To determine when the remaining-capacity identity becomes the same identity for $\alpha_{\mathrm Q}$, consider the following \textbf{proposed constitutive specialization}:
+
+\begin{quote}
+At fixed reference geometry, the selected finite active coupling samples the residual endpoint capacity linearly.
+\end{quote}
+
+For a single endpoint $i$ under uniform loading $\alpha_{\mathrm G}^{(i)}=\alpha_{\mathrm G}$, this means
+\begin{equation}
+    \boxed{
+    k_Q(\alpha_{\mathrm G})
+    =C_i k_Q^{(0)}
+    =(1-\alpha_{\mathrm G})k_Q^{(0)}
+    }.
+\end{equation}
+The factor $C_i$ is the single-endpoint capacity from Equation~\eqref{eq:single_endpoint_capacity}. It is distinct from the two-endpoint translational factor $C$ in Equation~\eqref{eq:uniform_two_endpoint_factor}.
+
+This is an additional torsional-coupling law to test against the loaded contact problem. It is not obtained by extending the translational projector to every active coordinate.
+
+Compare the loaded and unloaded configurations under the same imposed angular history, geometry, and active duration:
+\begin{equation}
+    \Theta(t;\alpha_{\mathrm G})=\Theta(t;0),
+    \qquad 0\leq t\leq\Delta t.
+\end{equation}
+Then
+\begin{equation}
+    \begin{aligned}
+    \mathcal A_Q(\alpha_{\mathrm G})
+    &=\frac12\int_0^{\Delta t}
+      k_Q(\alpha_{\mathrm G})\Theta(t)^2\,\mathrm dt\\
+    &=(1-\alpha_{\mathrm G})
+      \frac12\int_0^{\Delta t}
+      k_Q^{(0)}\Theta(t)^2\,\mathrm dt\\
+    &=(1-\alpha_{\mathrm G})\mathcal A_Q^{(0)}.
+    \end{aligned}
+\end{equation}
+Using the reference normalization gives
+\begin{equation}
+    \boxed{
+    \alpha_{\mathrm Q}=1-\alpha_{\mathrm G},
+    \qquad
+    \alpha_{\mathrm Q}+\alpha_{\mathrm G}=1
+    }.
+\end{equation}
+This is the zero-sum coupling result within the stated torsional-capacity closure and fixed comparison protocol.
+
+The reference normalization fixes the overall scale. The linear gravitational dependence comes from the additional coupling law. Its microscopic proof requires the loaded torsional contact calculation to produce that law.
+
+\subsection{The General Protocol Dependence}
+
+Without fixing the trajectory and interval, the same definition gives
+\begin{equation}
+    \boxed{
+    \alpha_{\mathrm Q}
+    =\frac{
+        \displaystyle
+        \int_0^{\Delta t(\alpha_{\mathrm G})}
+        k_Q(\alpha_{\mathrm G},t)
+        \Theta(\alpha_{\mathrm G},t)^2\,\mathrm dt
+    }{
+        \displaystyle
+        \int_0^{\Delta t(0)}
+        k_Q^{(0)}(t)\Theta(0,t)^2\,\mathrm dt
+    }
+    }.
+\end{equation}
+Even when the instantaneous coupling stiffness scales linearly with remaining capacity, the actual action ratio can change through the torsional trajectory, interaction time, or evolving mode shape. Those quantities follow from the pair dynamics and the imposed boundary conditions.
+
+The zero-sum formula is therefore a candidate constitutive limit of a specified interaction, not an identity obtained solely by setting the flat-space value to unity.
+
+\subsection{Two Active Endpoints}
+
+For a pair whose selected coupling action is the sum of independently counted endpoint contributions,
+\begin{equation}
+    \mathcal A_Q=\mathcal A_{Q,\mathrm A}+\mathcal A_{Q,\mathrm B},
+\end{equation}
+the same local linear closure and fixed endpoint protocols give
+\begin{equation}
+    \boxed{
+    \alpha_{\mathrm Q}
+    =\frac{
+        C_{\mathrm A}\mathcal A_{Q,\mathrm A}^{(0)}
+        +C_{\mathrm B}\mathcal A_{Q,\mathrm B}^{(0)}
+    }{
+        \mathcal A_{Q,\mathrm A}^{(0)}
+        +\mathcal A_{Q,\mathrm B}^{(0)}
+    }
+    }.
+\end{equation}
+Equivalently,
+\begin{equation}
+    \alpha_{\mathrm Q}
+    =1-
+    \frac{
+        \alpha_{\mathrm G}^{(\mathrm A)}\mathcal A_{Q,\mathrm A}^{(0)}
+        +\alpha_{\mathrm G}^{(\mathrm B)}\mathcal A_{Q,\mathrm B}^{(0)}
+    }{
+        \mathcal A_{Q,\mathrm A}^{(0)}
+        +\mathcal A_{Q,\mathrm B}^{(0)}
+    }.
+\end{equation}
+For equivalent endpoints with equal loading, this reduces to the single-parameter zero-sum expression. For unequal loading, the result is weighted by the reference coupling action of each endpoint.
+
+This additive interaction-action construction differs from a serial transfer, whose two endpoint maps compose multiplicatively as in Equation~\eqref{eq:gravity_endpoint_product}. The physical Goalpost response must determine which composition applies; topology alone does not select between them.
+
+\section[Complete-Cycle Action and the Meaning of Reduced Coupling]{Complete-Cycle Action and the Meaning\\of Reduced Coupling}
+
+The action normalization of an elementary excitation is distinct from the interaction-action measure defined above.
+
+For a harmonic mechanical mode, Equations~\eqref{eq:X_mode_action} and~\eqref{eq:X_complete_cycle} give
+\begin{equation}
+    I=\frac{E}{\omega},
+    \qquad
+    \oint\pi\,\mathrm dq=2\pi I.
+\end{equation}
+The elementary completed-cycle condition gives
+\begin{equation}
+    I=\hbar,
+    \qquad
+    \oint\pi\,\mathrm dq=h.
+\end{equation}
+These action identities are developed in \hyperref[sec:X_cycles_and_phase]{Section~\ref*{sec:X_cycles_and_phase}}. A reduced coupling does not replace the fundamental $h$ by $h(1-\alpha_{\mathrm G})$.
+
+The distinction also follows directly from the work-conjugate coordinate transformation. In a given quasistatically loaded system, let
+\begin{equation}
+    u=Cy,
+    \qquad C>0,
+\end{equation}
+with $C$ fixed during the motion, as in Equation~\eqref{eq:directional_holonomic_constraint}. The corresponding canonical momenta obey
+\begin{equation}
+    p_y=Cp_u,
+\end{equation}
+and therefore
+\begin{equation}
+    \boxed{
+    p_u\,\mathrm du=p_y\,\mathrm dy,
+    \qquad
+    \oint p_u\,\mathrm du=\oint p_y\,\mathrm dy
+    }.
+\end{equation}
+Changing the coordinate representation does not destroy canonical action.
+
+A further example shows why the comparison protocol matters. For a harmonic mode evaluated over one complete period $T=2\pi/\omega$,
+\begin{equation}
+    \overline U=\frac E2,
+\end{equation}
+so
+\begin{equation}
+    \boxed{
+    \int_0^T U(t)\,\mathrm dt
+    =\frac{ET}{2}=\pi I
+    }.
+\end{equation}
+If the compared states have the same modal action $I$, this full-cycle elastic-energy--time integral is unchanged, even when their frequencies differ.
+
+Thus a fixed-duration torsional probe and a full-cycle comparison of action-normalized states need not produce the same $\alpha_{\mathrm Q}$. The mechanical coupling law must specify what is being compared. A finite reduction in response capacity can coexist with an unchanged elementary cycle action.
+
+\section{Measurement, Decoherence, and the Persistent Record}
+
+Measurement begins when the analyzers impose local boundary interactions on the active endpoints. The common Goalpost constraint restricts their compatible response; the endpoint inertia, contact forces, and receiving modes determine its finite evolution.
+
+When the detector receives energy, the relevant force and work balances are those in Equations~\eqref{eq:Y_mechanical_memory} and~\eqref{eq:Y_coupled_energy_balance}. Exported energy remains in the complete active system through receiving motion, binding changes, and subsequent redistribution. It is not assigned to an unmodeled dissipative Hard-Floor oscillator.
+
+A stable recording event also requires an accessible bound detector configuration, as developed with Equation~\eqref{eq:Y_capture_energy_balance}. Incident-field attenuation and entry into that configuration are separate stages.
+
+The pair can lose active coherent accessibility when the interaction changes the configuration that supported the common boundary response. The required phase-slip process, coupling change, or receiving dynamics must be calculated for that interface. The bare Hard-Floor record need not fracture:
+\begin{equation}
+    \boxed{
+    \begin{gathered}
+    \text{loss of active coherent accessibility}\\[-1mm]
+    \neq\\[-1mm]
+    \text{destruction of the structural record}.
+    \end{gathered}
+    }
+\end{equation}
+A conservative change of inertia, frequency, or coupling is not by itself an irreversible decoherence law. It may change the time required for the endpoints to respond without changing normalized outcome fractions. Decoherence, dephasing, loss of detection efficiency, and slower conservative evolution must therefore be distinguished in the measurement calculation.
+
+\hyperref[app:graviton]{Appendix~\ref*{app:graviton}} addresses the persistent record. The analyzer construction in \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}} determines whether the remaining active coupling produces observable pair correlations.
+
+\section{Connection to the Modified CHSH Program}
+
+The mechanically defined $\alpha_{\mathrm Q}$ is an input to an analyzer calculation, not automatically the coefficient of an observed correlation function.
+
+The proposed square-root relation
+\begin{equation}
+    |S_{\mathrm{CHSH}}|\leq2\sqrt{1+\alpha_{\mathrm Q}^{2}}
+\end{equation}
+requires an additional derivation connecting the coupling action to the direction-dependent analyzer response and detector outcomes. It does not follow from the capacity identity alone.
+
+The required sequence is
+\begin{equation}
+    \boxed{
+    \begin{gathered}
+    \text{endpoint capacity}
+    \longrightarrow\text{torsional coupling}\\
+    \longrightarrow\text{populated analyzer modes}\\
+    \longrightarrow\text{detector records}
+    \longrightarrow S_{\mathrm{CHSH}}.
+    \end{gathered}
+    }
+\end{equation}
+The gravitational-to-interface relation and its conversion to observable correlations are separate steps, as identified in \hyperref[sec:entanglement_gravity_status]{Section~\ref*{sec:entanglement_gravity_status}}.
+
+Similarly, approaching $C_i=0$ terminates the corresponding active endpoint-transfer description at the phase boundary of \hyperref[sec:grav_saturation_appendix]{Section~\ref*{sec:grav_saturation_appendix}}. It does not by itself establish that a functioning Bell experiment approaches $S_{\mathrm{CHSH}}=2$. A measurement requires active analyzers, receiving channels, and recorded outcomes, all of which must remain within their applicable constitutive regime.
+
+\section{Derivation Status and Mechanical Conclusion}
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.22}
+\setlength{\tabcolsep}{5pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{\dimexpr0.60\textwidth-10pt\relax}@{}}
+\toprule
+\textbf{Result} & \textbf{Constitutive status}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Result} & \textbf{Constitutive status}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Goalpost topology and $\Theta_{\mathrm A}+\Theta_{\mathrm B}=0$
+& Adopted ideal pair-state construction.\\
+\addlinespace
+Projected torsional inertia, stiffness, constrained force equations, and zero-total-constraint-work identity
+& Derived for the specified retained mechanical coordinates and pair reduction.\\
+\addlinespace
+$C_i=1-\alpha_{\mathrm G}^{(i)}$ and $\alpha_{\mathrm G}^{(i)}+C_i=1$
+& Inherited exact identities within the active-capacity subtraction model.\\
+\addlinespace
+Gravitational contribution to a torsional mode through its translational participation
+& Derived by projecting the existing kinetic congruence onto a specified mode shape.\\
+\addlinespace
+$\mathcal A_Q=\int[U_Q-U_Q(0)]\,\mathrm dt$ and its reference-normalized $\alpha_{\mathrm Q}$
+& Proposed operational completion of the coupling-action definition.\\
+\addlinespace
+$k_Q=(1-\alpha_{\mathrm G})k_Q^{(0)}$
+& Proposed torsional-capacity closure requiring a loaded contact derivation.\\
+\addlinespace
+$\alpha_{\mathrm Q}+\alpha_{\mathrm G}=1$
+& Derived conditionally from that closure under a fixed comparison protocol.\\
+\addlinespace
+Universal gravitational loss of Bell correlations or a universal modified CHSH bound
+& Not established by the present mechanical calculation.\\
+\end{longtable}
+\endgroup
+
 \noindent\textbf{Conclusion:}
-\begin{itemize}
-    \item \textbf{If $\alpha_{\mathrm{Q}} \approx 1$ (Pristine Tether in Flat Space):} Where gravity is negligible ($\alpha_{\mathrm{G}} \to 0$), the vacuum has its full kinematic budget available. The phase-tether is perfectly sustained, and TFT cleanly recovers the standard FCC geometric quantum bound of $2\sqrt{2}$.
-    \item \textbf{If $\alpha_{\mathrm{Q}} < 1$ (Gravitational Decoherence):} In regimes of extreme background mass ($\alpha_{\mathrm{G}} \to 1$), the local tension budget is exhausted by the vertical gravitational potential. Because the lattice loses the kinematic slack required to sustain the microscopic horizontal phase-tether, $\alpha_{\mathrm{Q}}$ degrades precisely linearly with the gravitational coupling. The allowable correlation limit strictly shrinks from the quantum Tsirelson bound of $2\sqrt{2}$ down toward the classical Bell limit of $2$.
-\end{itemize}
-This provides a strictly falsifiable prediction: strong gravitational fields physically consume the structural slack required for phase-locking, mechanically destroying quantum entanglement."
+The Goalpost topology provides a shared constraint, but its observable operation depends on finite active mechanics. The contact projection determines torsional inertia and restoring forces; gravitational loading determines the remaining local capacity; and the actual boundary interaction determines how that capacity is used.
+
+The capacity identity
+\begin{equation}
+    \boxed{\alpha_{\mathrm G}^{(i)}+C_i=1}
+\end{equation}
+is supported by the adopted endpoint-transfer construction. The entanglement identity
+\begin{equation}
+    \boxed{\alpha_{\mathrm Q}+\alpha_{\mathrm G}=1}
+\end{equation}
+follows when the selected torsional interaction samples that capacity linearly under the specified comparison protocol. Establishing this identification from the loaded Goalpost configuration---not from normalization alone---is the remaining mechanical requirement. The subsequent analyzer and detector calculation must determine what the resulting coupling means for recorded quantum correlations.

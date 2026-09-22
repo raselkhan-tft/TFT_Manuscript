@@ -136,7 +136,7 @@ def create_causal_hierarchy_visual():
 
     # 1. Viscous Cosmic Horizon Line (R_U)
     ax2.plot([9.0, 9.0], [1.0, 10.8], color='gray', linestyle='--', linewidth=2, zorder=5)
-    ax2.text(8.75, 8.5, r'$\mathbf{Viscous\ Cosmic\ Horizon}$ ($R_{\mathrm{U}}$)', color='black', rotation=90, ha='center', va='center', fontsize=12, zorder=10)
+    ax2.text(9.25, 8.5, r'$\mathbf{Photon\ Energy\ -\ Relaxation\ Length}$ ($R_{\mathrm{U}}$)', color='black', rotation=90, ha='center', va='center', fontsize=12, zorder=10)
 
     # 2. Fading Light Cones (Left to Right - 4 Cones)
     positions_B = [2.0, 4.3, 6.6, 8.8]
@@ -147,13 +147,13 @@ def create_causal_hierarchy_visual():
         draw_light_cone(ax2, x, 5, scale=1.6, width_scale=1.0, angle_deg=0, 
                         facecolor='#4682B4', alpha=alp, arrow_color='black', arrow_alpha=1.0)
 
-    # Energy Decay Equation (Upper)
-    ax2.text(5.5, 7.6, r"$E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$", 
-             fontsize=16, color='black', ha='center', va='center', zorder=10)
+    # Energy Decay Equation (Upper) - EXACTLY MATCHES IMAGE_6D26A5
+    eq_decay = r"$\frac{E_{\mathrm{obs}}(R_{\mathrm{U}})}{E_{\mathrm{emit}}} = \exp\left( -\frac{\Gamma_{\mathrm{D}} R_{\mathrm{U}}}{c_{\mathrm{E}}} \right) = \frac{1}{e}$"
+    ax2.text(5.5, 7.6, eq_decay, fontsize=16, color='black', ha='center', va='center', zorder=10)
 
-    # Universal Potential Equation (Lower)
-    ax2.text(5.5, 2.4, r"$\Phi_{\tau,\mathrm{G,U}} = -\int_{0}^{R_{\mathrm{U}}} \frac{G \, \mathrm{d}m}{r} = -c_{\mathrm{E}}^2$", 
-             fontsize=16, color='black', ha='center', va='center', zorder=10)
+    # Universal Potential Equation (Lower) - EXACTLY MATCHES INTEGRAL FORM
+    eq_potential = r"$\Phi_{\tau,\mathrm{G,U}}(R_{\mathrm{U}}) = -\frac{G}{R_{\mathrm{U}}} \int_{0}^{R_{\mathrm{U}}} dm = -c_{\mathrm{E}}^{2}$"
+    ax2.text(5.5, 2.4, eq_potential, fontsize=16, color='black', ha='center', va='center', zorder=10)
 
     # =======================================================
     # FINAL RENDER & PDF EXPORT

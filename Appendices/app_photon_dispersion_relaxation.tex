@@ -3,19 +3,54 @@
 \label{app:photon_dispersion_relaxation}
 
 \noindent\textbf{Abstract.}
-This appendix develops a finite-wave-number propagation closure for the transverse optical branch of the active Face--Centered Cubic vacuum and separates conservative lattice dispersion from nonconservative vacuum relaxation. It inherits the objective FCC contact scaffold, primitive-cell inertia, and long-wavelength transverse normalization established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}; the coherent Condensate constraint and localized impedance hierarchy established in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}; and the gravitational endpoint-transfer law established in \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.
+This appendix develops a finite-wave-number propagation closure for the
+transverse optical branch of the active Face--Centered Cubic vacuum and
+separates conservative lattice dispersion from nonconservative vacuum
+relaxation. It inherits the objective FCC contact scaffold, primitive-cell
+inertia, and long-wavelength transverse normalization established in
+\hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}; the
+coherent Condensate constraint and localized impedance hierarchy established
+in
+\hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}};
+and the gravitational endpoint-transfer law established in
+\hyperref[app:gravitational_endpoint_transfer]
+{Appendix~\ref*{app:gravitational_endpoint_transfer}}.
 
-A positive reduced lattice action is constructed on the divergence-free transverse constraint manifold by adding the smallest centered-second-difference term that removes the leading quadratic correction to the photon group velocity. Within the selected two-term stencil, the required coefficient is \(1/12\). The resulting branch preserves
-\(c_{\mathrm{P}}=c_{\mathrm{E}}(1-\alpha_{\mathrm{G}})^2\), remains gapless and spectrally nonnegative, and shifts the leading group-speed correction from order \(k^2d_{\mathrm{nn}}^2\) to order \(k^4d_{\mathrm{nn}}^4\).
+A reduced lattice action with nonnegative potential energy is constructed on
+the divergence-free transverse constraint manifold by adding the smallest
+centered-second-difference term that removes the leading quadratic correction
+to the photon group velocity. Within the selected two-term stencil, the
+required coefficient is \(1/12\). The resulting branch preserves
+\(c_{\mathrm P}=c_{\mathrm E}(1-\alpha_{\mathrm G})^2\), remains gapless and
+spectrally nonnegative, and shifts the leading group-speed correction from
+order \(k^2d_{\mathrm{nn}}^2\) to order \(k^4d_{\mathrm{nn}}^4\).
 
-The nonconservative construction then distinguishes ordinary amplitude attenuation from coherent frequency transport. Frequency evolution requires both modal-energy transfer and preservation of coherent modal action, together with a direction-preserving transport law in wave-vector space. The finite-wave-number loading inheritance, inverse-frequency loss tangent, and coherent-action-preserving transport law are explicit constitutive closures whose recovery from the complete FCC--Condensate parent dynamics remains open.
+The nonconservative construction then distinguishes ordinary amplitude
+attenuation from coherent frequency transport. Frequency evolution requires
+both modal-energy transfer and preservation of coherent modal action, together
+with a direction-preserving transport law in wave-vector space. The
+finite-wave-number loading inheritance, inverse-frequency loss tangent, and
+coherent-action-preserving transport law are explicit constitutive closures
+whose recovery from the complete FCC--Condensate parent dynamics remains open.
+The conditional microscopic scale-transfer closure for the magnitude of
+\(\Gamma_{\mathrm D}\) is developed separately in
+Appendix~\ref{app:vacuumdamping_cosmicredshift}.
+
 
 \section{Purpose, State Domain, and Logical Status}
 \label{sec:photon_relaxation_scope}
 
-The active TFT vacuum is a dual-phase mechanical medium composed of the solid FCC Soft Floor and the connected interstitial Condensate. The gravity-neutral FCC contact action, primitive-cell inertia, affine acoustic tensor, and baseline directional branch are developed in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}. That construction does not complete the full finite-wave-number spectrum or its rotational and internal-phase branches.
+The active TFT vacuum is a dual-phase mechanical medium composed of the solid
+FCC Soft Floor and the connected interstitial Condensate. The gravity-neutral
+FCC contact action, primitive-cell inertia, affine acoustic tensor, and
+baseline directional branch are developed in
+\hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}. That
+construction does not complete the full finite-wave-number spectrum or its
+rotational and internal-phase branches.
 
-The conservative coherent sector established in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}} satisfies
+The conservative coherent sector established in
+\hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}
+satisfies
 \begin{equation}
     \mathbf{v}_{\mathrm{rel}}
     =
@@ -30,9 +65,14 @@ The conservative coherent sector established in \hyperref[app:condensate_impedan
     0.
     \label{eq:photon_relaxation_coherent_limit}
 \end{equation}
-The Condensate is therefore entrained with the FCC scaffold at the retained carrier order and supplies the pressure response enforcing the transverse constraint. Relative flow, dissipative impedance, and irreversible reservoir transfer belong to a separate nonconservative sector and are not duplicated as carrier inertia.
+The Condensate is therefore entrained with the FCC scaffold at the retained
+carrier order and supplies the pressure response enforcing the transverse
+constraint. Relative flow, dissipative impedance, and irreversible transfer
+into noncoherent Active-Vacuum degrees of freedom belong to a separate
+nonconservative sector and are not duplicated as carrier inertia.
 
-The carrier action developed below is restricted to the divergence-free coherent subspace. Its admissible fields and variations obey
+The carrier action developed below is restricted to the divergence-free
+coherent subspace. Its admissible fields and variations obey
 \begin{equation}
     \nabla\cdot\mathbf{u}
     =
@@ -43,28 +83,33 @@ The carrier action developed below is restricted to the divergence-free coherent
     0.
     \label{eq:photon_relaxation_transverse_variation}
 \end{equation}
-Its Euler--Lagrange equation therefore governs only the selected transverse sector; it is not an unconstrained three-polarization lattice theory.
+Its Euler--Lagrange equation therefore governs only the selected transverse
+sector; it is not an unconstrained three-polarization lattice theory.
 
-The analysis is restricted to a locally uniform active FCC background satisfying
+The analysis is restricted to a locally uniform active FCC background
+satisfying
 \begin{equation}
     0
     \leq
-    \alpha_{\mathrm{G}}
+    \alpha_{\mathrm G}
     <
     1,
     \qquad
-    \dot{\alpha}_{\mathrm{G}}
+    \dot{\alpha}_{\mathrm G}
     \approx
     0.
     \label{eq:photon_relaxation_state_domain}
 \end{equation}
-The gravitational loading is quasistatic during the local optical disturbance. The corresponding long-wavelength propagation capacity inherited from \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}} is
+The gravitational loading is quasistatic during the local optical disturbance.
+The corresponding long-wavelength propagation capacity inherited from
+\hyperref[app:gravitational_endpoint_transfer]
+{Appendix~\ref*{app:gravitational_endpoint_transfer}} is
 \begin{equation}
-    c_{\mathrm{P}}
+    c_{\mathrm P}
     =
-    c_{\mathrm{E}}
+    c_{\mathrm E}
     \left(
-        1-\alpha_{\mathrm{G}}
+        1-\alpha_{\mathrm G}
     \right)^2,
     \label{eq:photon_relaxation_loaded_capacity}
 \end{equation}
@@ -72,34 +117,64 @@ and the FCC nearest-neighbor separation is
 \begin{equation}
     d_{\mathrm{nn}}
     =
-    2r_{\mathrm{D}}.
+    2r_{\mathrm D}.
     \label{eq:photon_relaxation_neighbor_spacing}
 \end{equation}
 
-The first objective is to construct a positive reduced lattice closure that preserves the continuum capacity \(c_{\mathrm{P}}\) while cancelling the leading quadratic group-speed correction of the nearest-neighbor branch. The second is to identify the additional constitutive conditions under which weak reservoir coupling produces coherent frequency transport rather than ordinary attenuation.
+The coefficient \(\Gamma_{\mathrm D}\) used in the nonconservative sector
+denotes the coherent photon-relaxation rate defined in
+Appendix~\ref{app:vacuumdamping_cosmicredshift}. It does not include
+source--observer Doppler shifts, gravitational endpoint clock differences, or
+conservative frequency conversion caused by an explicitly time-dependent
+background.
+
+The first objective is to construct a reduced lattice closure with
+nonnegative potential energy that preserves the continuum capacity
+\(c_{\mathrm P}\) while cancelling the leading quadratic group-speed
+correction of the nearest-neighbor branch. The second is to identify the
+additional constitutive conditions under which weak nonconservative coupling
+produces coherent frequency transport rather than ordinary attenuation.
 
 The logical status is:
 
 \begin{enumerate}
-    \item FCC geometry, primitive-cell inertia, coherent Condensate entrainment, and the long-wavelength endpoint-transfer capacity are inherited TFT structures.
+    \item FCC geometry, primitive-cell inertia, coherent Condensate
+    entrainment, and the long-wavelength endpoint-transfer capacity are
+    inherited TFT structures.
 
-    \item The dispersion-suppressed transverse branch is derived from the positive reduced action selected in this appendix.
+    \item The dispersion-suppressed transverse branch is derived from the
+    reduced action selected in this appendix.
 
-    \item Uniform extension of the endpoint-transfer factor to finite wave number, the inverse-frequency loss tangent, modal-action preservation, and wave-vector transport are constitutive closures.
+    \item Uniform extension of the endpoint-transfer factor to finite wave
+    number, the inverse-frequency loss tangent, modal-action preservation, and
+    wave-vector transport are constitutive closures.
 
-    \item Their recovery from the complete contact Hessian, rotational variables, internal phases, Condensate response, and Tension-Column dynamics remains a microscopic completion requirement.
+    \item Their recovery from the complete contact Hessian, rotational
+    variables, internal phases, Condensate response, and Tension-Column
+    dynamics remains a microscopic completion requirement. The separate
+    conditional microscopic scale-transfer closure for \(\Gamma_{\mathrm D}\)
+    is developed in
+    Appendix~\ref{app:vacuumdamping_cosmicredshift}.
 \end{enumerate}
 
-Accordingly, neither the coefficient \(1/12\) nor the nonconservative relaxation kernel is claimed to be uniquely derived from the complete FCC--Condensate parent theory. The conservative carrier branch is developed first; relaxation is introduced only after its finite-wave-number structure has been specified.
+Accordingly, neither the coefficient \(1/12\) nor the nonconservative
+relaxation response is claimed to be uniquely derived from the complete
+FCC--Condensate parent theory. The conservative carrier branch is developed
+first; relaxation is introduced only after its finite-wave-number structure
+has been specified.
+
 
 \section{Baseline Directional Branch}
 \label{sec:photon_relaxation_baseline_branch}
 
-Consider the reduced nearest-neighbor transfer chain associated with one FCC bond direction, with scalar wave number \(k\) measured along that direction. The gravity-neutral branch established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} is
+Consider the reduced nearest-neighbor transfer chain associated with one FCC
+bond direction, with scalar wave number \(k\) measured along that direction.
+The gravity-neutral branch established in
+\hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} is
 \begin{equation}
     \omega^2
     =
-    \frac{4c_{\mathrm{E}}^2}{d_{\mathrm{nn}}^2}
+    \frac{4c_{\mathrm E}^2}{d_{\mathrm{nn}}^2}
     \sin^2
     \left(
         \frac{kd_{\mathrm{nn}}}{2}
@@ -111,21 +186,23 @@ Applying the finite-wave-number loading inheritance stated above gives
 \begin{equation}
     \omega^2
     =
-    \frac{4c_{\mathrm{P}}^2}{d_{\mathrm{nn}}^2}
+    \frac{4c_{\mathrm P}^2}{d_{\mathrm{nn}}^2}
     \sin^2
     \left(
         \frac{kd_{\mathrm{nn}}}{2}
     \right).
     \label{eq:photon_relaxation_baseline_dispersion}
 \end{equation}
-This substitution extends the established long-wavelength endpoint-transfer capacity to the reduced finite-\(k\) branch; it is not yet derived from the fully loaded FCC dynamic matrix.
+This substitution extends the established long-wavelength endpoint-transfer
+capacity to the reduced finite-\(k\) branch; it is not yet derived from the
+fully loaded FCC dynamic matrix.
 
 For the positive-frequency branch with
 \(0\leq kd_{\mathrm{nn}}\leq\pi\),
 \begin{equation}
     \omega
     =
-    \frac{2c_{\mathrm{P}}}{d_{\mathrm{nn}}}
+    \frac{2c_{\mathrm P}}{d_{\mathrm{nn}}}
     \sin
     \left(
         \frac{kd_{\mathrm{nn}}}{2}
@@ -134,11 +211,11 @@ For the positive-frequency branch with
 \end{equation}
 and the directional group velocity is
 \begin{equation}
-    v_{\mathrm{g}}
+    v_{\mathrm g}
     =
-    \frac{\mathrm{d}\omega}{\mathrm{d}k}
+    \frac{\mathrm d\omega}{\mathrm dk}
     =
-    c_{\mathrm{P}}
+    c_{\mathrm P}
     \cos
     \left(
         \frac{kd_{\mathrm{nn}}}{2}
@@ -150,7 +227,7 @@ For \(kd_{\mathrm{nn}}\ll1\),
 \begin{equation}
     \omega^2
     =
-    c_{\mathrm{P}}^2k^2
+    c_{\mathrm P}^2k^2
     \left[
         1
         -
@@ -158,7 +235,7 @@ For \(kd_{\mathrm{nn}}\ll1\),
         +
         \frac{k^4d_{\mathrm{nn}}^4}{360}
         +
-        \mathcal{O}
+        \mathcal O
         \left(
             k^6d_{\mathrm{nn}}^6
         \right)
@@ -167,9 +244,9 @@ For \(kd_{\mathrm{nn}}\ll1\),
 \end{equation}
 while
 \begin{equation}
-    v_{\mathrm{g}}
+    v_{\mathrm g}
     =
-    c_{\mathrm{P}}
+    c_{\mathrm P}
     \left[
         1
         -
@@ -177,7 +254,7 @@ while
         +
         \frac{k^4d_{\mathrm{nn}}^4}{384}
         +
-        \mathcal{O}
+        \mathcal O
         \left(
             k^6d_{\mathrm{nn}}^6
         \right)
@@ -191,138 +268,153 @@ The continuum limit is
     \frac{\omega}{k}
     =
     \lim_{k\rightarrow0}
-    v_{\mathrm{g}}
+    v_{\mathrm g}
     =
-    c_{\mathrm{P}}.
+    c_{\mathrm P}.
     \label{eq:photon_relaxation_baseline_continuum_limit}
 \end{equation}
-The nearest-neighbor chain therefore recovers the required local propagation capacity but retains a leading group-speed correction proportional to \(k^2d_{\mathrm{nn}}^2\).
+The nearest-neighbor chain therefore recovers the required local propagation
+capacity but retains a leading group-speed correction proportional to
+\(k^2d_{\mathrm{nn}}^2\).
 
-Equation~\eqref{eq:photon_relaxation_baseline_dispersion} is exact only for the selected directional reduction. It is not the completed three-dimensional photon eigenbranch and does not contain the rotational, internal-phase, or auxiliary transfer structures that may modify the finite-wave-number spectrum.
+Equation~\eqref{eq:photon_relaxation_baseline_dispersion} is exact only for
+the selected directional reduction. It is not the completed
+three-dimensional photon eigenbranch and does not contain the rotational,
+internal-phase, or auxiliary transfer structures that may modify the
+finite-wave-number spectrum.
+
 
 \section{Dimensionally Closed Reduced Transverse Cell Action}
 \label{sec:photon_relaxation_minimal_closure}
 
-Let \(\widehat{\mathbf{n}}_a\), \(a=1,\ldots,6\), denote the six undirected FCC nearest-neighbor directions defined in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}. One representative is retained from each opposite-direction pair, so summation over \(\mathbf{R}\) and \(a\) counts every nearest-neighbor bond once. These directions satisfy
+Let \(\widehat{\mathbf n}_a\), \(a=1,\ldots,6\), denote the six undirected FCC
+nearest-neighbor directions defined in
+\hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}. One
+representative is retained from each opposite-direction pair, so summation
+over \(\mathbf R\) and \(a\) counts every nearest-neighbor bond once. These
+directions satisfy
 \begin{equation}
     \sum_{a=1}^{6}
-    \widehat{n}_{a,i}
-    \widehat{n}_{a,j}
+    \widehat n_{a,i}
+    \widehat n_{a,j}
     =
     2\delta_{ij}.
     \label{eq:photon_relaxation_fcc_second_moment}
 \end{equation}
 
 For the divergence-free scaffold displacement
-\(\mathbf{u}(\mathbf{R},t)\), define the forward nearest-neighbor difference
+\(\mathbf u(\mathbf R,t)\), define the forward nearest-neighbor difference
 \begin{equation}
-    \Delta_a\mathbf{u}(\mathbf{R},t)
+    \Delta_a\mathbf u(\mathbf R,t)
     =
-    \mathbf{u}
+    \mathbf u
     \left(
-        \mathbf{R}
+        \mathbf R
         +
         d_{\mathrm{nn}}
-        \widehat{\mathbf{n}}_a,
+        \widehat{\mathbf n}_a,
         t
     \right)
     -
-    \mathbf{u}(\mathbf{R},t),
+    \mathbf u(\mathbf R,t),
     \label{eq:photon_relaxation_first_difference}
 \end{equation}
 and the centered second difference
 \begin{align}
     \Delta_a^{(2)}
-    \mathbf{u}(\mathbf{R},t)
+    \mathbf u(\mathbf R,t)
     &=
-    \mathbf{u}
+    \mathbf u
     \left(
-        \mathbf{R}
+        \mathbf R
         +
         d_{\mathrm{nn}}
-        \widehat{\mathbf{n}}_a,
+        \widehat{\mathbf n}_a,
         t
     \right)
     -
-    2\mathbf{u}(\mathbf{R},t)
+    2\mathbf u(\mathbf R,t)
     \nonumber\\
     &\quad
     +
-    \mathbf{u}
+    \mathbf u
     \left(
-        \mathbf{R}
+        \mathbf R
         -
         d_{\mathrm{nn}}
-        \widehat{\mathbf{n}}_a,
+        \widehat{\mathbf n}_a,
         t
     \right).
     \label{eq:photon_relaxation_second_difference}
 \end{align}
 The notation
-\(\bigl(\Delta_a^{(2)}\bigr)^2\mathbf{u}\)
-denotes repeated action of the centered operator, not the square of the forward difference.
+\(\bigl(\Delta_a^{(2)}\bigr)^2\mathbf u\)
+denotes repeated action of the centered operator, not the square of the
+forward difference.
 
 The unstrained primitive-cell scaffold mass is
 \begin{equation}
     \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
-    V_{\mathrm{p}},
+    V_{\mathrm p},
     \label{eq:photon_relaxation_cell_mass}
 \end{equation}
 where
 \(\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}\)
-and \(V_{\mathrm{p}}\) are inherited from
+and \(V_{\mathrm p}\) are inherited from
 \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.
-Under the finite-wave-number endpoint-transfer inheritance, the referred translational inertia of the loaded transverse branch is
+Under the finite-wave-number endpoint-transfer inheritance, the referred
+translational inertia of the loaded transverse branch is
 \begin{equation}
     \frac{
         \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
-        V_{\mathrm{p}}
+        V_{\mathrm p}
     }{
         \left(
-            1-\alpha_{\mathrm{G}}
+            1-\alpha_{\mathrm G}
         \right)^4
     }.
     \label{eq:photon_relaxation_loaded_cell_inertia}
 \end{equation}
-This is an effective modal inertia, not a change in the underlying primitive-cell mass.
+This is an effective modal inertia, not a change in the underlying
+primitive-cell mass.
 
 The reduced transverse lattice Lagrangian is
 \begin{align}
-    L_{\gamma}^{(\mathrm{T})}
+    L_{\gamma}^{(\mathrm T)}
     &=
-    \sum_{\mathbf{R}}
+    \sum_{\mathbf R}
     \Bigg\{
         \frac{1}{2}
         \frac{
             \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
-            V_{\mathrm{p}}
+            V_{\mathrm p}
         }{
             \left(
-                1-\alpha_{\mathrm{G}}
+                1-\alpha_{\mathrm G}
             \right)^4
         }
         \left|
-            \dot{\mathbf{u}}(\mathbf{R},t)
+            \dot{\mathbf u}(\mathbf R,t)
         \right|^2
     \nonumber\\
     &\qquad
         -
         \frac{
             \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
-            V_{\mathrm{p}}
-            c_{\mathrm{E}}^2
+            V_{\mathrm p}
+            c_{\mathrm E}^2
         }{
             4d_{\mathrm{nn}}^2
         }
         \sum_{a=1}^{6}
         \left[
             \left|
-                \Delta_a\mathbf{u}
+                \Delta_a\mathbf u
             \right|^2
             +
             \frac{1}{12}
             \left|
-                \Delta_a^{(2)}\mathbf{u}
+                \Delta_a^{(2)}\mathbf u
             \right|^2
         \right]
     \Bigg\}.
@@ -330,127 +422,132 @@ The reduced transverse lattice Lagrangian is
 \end{align}
 The corresponding action is
 \begin{equation}
-    S_{\gamma}^{(\mathrm{T})}
+    S_{\gamma}^{(\mathrm T)}
     =
     \int
-    L_{\gamma}^{(\mathrm{T})}
-    \,\mathrm{d}t.
+    L_{\gamma}^{(\mathrm T)}
+    \,\mathrm dt.
     \label{eq:photon_relaxation_reduced_action}
 \end{equation}
 Its variation is restricted to the coherent transverse subspace:
 \begin{equation}
-    \delta S_{\gamma}^{(\mathrm{T})}
+    \delta S_{\gamma}^{(\mathrm T)}
     =
     0,
     \qquad
-    \nabla\cdot\mathbf{u}
+    \nabla\cdot\mathbf u
     =
     0,
     \qquad
-    \nabla\cdot\delta\mathbf{u}
+    \nabla\cdot\delta\mathbf u
     =
     0.
     \label{eq:photon_relaxation_restricted_variation}
 \end{equation}
-Thus, Equation~\eqref{eq:photon_relaxation_cell_lagrangian} defines a reduced transverse carrier action rather than an unconstrained three-polarization lattice action.
+Thus, Equation~\eqref{eq:photon_relaxation_cell_lagrangian} defines a reduced
+transverse carrier action rather than an unconstrained three-polarization
+lattice action.
 
 Because both difference operators have dimensions of displacement,
 \[
     \left[
         \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
-        V_{\mathrm{p}}
+        V_{\mathrm p}
         \left|
-            \dot{\mathbf{u}}
+            \dot{\mathbf u}
         \right|^2
     \right]
     =
     \left[
         \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
-        V_{\mathrm{p}}
-        \frac{c_{\mathrm{E}}^2}{d_{\mathrm{nn}}^2}
+        V_{\mathrm p}
+        \frac{c_{\mathrm E}^2}{d_{\mathrm{nn}}^2}
         \left|
-            \Delta_a\mathbf{u}
+            \Delta_a\mathbf u
         \right|^2
     \right]
     =
     \left[
         \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
-        V_{\mathrm{p}}
-        \frac{c_{\mathrm{E}}^2}{d_{\mathrm{nn}}^2}
+        V_{\mathrm p}
+        \frac{c_{\mathrm E}^2}{d_{\mathrm{nn}}^2}
         \left|
-            \Delta_a^{(2)}\mathbf{u}
+            \Delta_a^{(2)}\mathbf u
         \right|^2
     \right]
     =
-    \mathrm{J}.
+    \mathrm J.
 \]
 Hence
-\([L_{\gamma}^{(\mathrm{T})}]=\mathrm{J}\)
+\([L_{\gamma}^{(\mathrm T)}]=\mathrm J\)
 and
-\([S_{\gamma}^{(\mathrm{T})}]=\mathrm{J\,s}\).
+\([S_{\gamma}^{(\mathrm T)}]=\mathrm{J\,s}\).
 
-The potential energy is nonnegative and vanishes under uniform translation. Together with
-\(0\leq\alpha_{\mathrm{G}}<1\),
-this ensures positive modal inertia and excludes a negative-stiffness sector within the selected transverse reduction.
+The potential energy is nonnegative and vanishes under uniform translation.
+Together with
+\(0\leq\alpha_{\mathrm G}<1\),
+this ensures positive modal inertia and excludes a negative-stiffness sector
+within the selected transverse reduction.
 
-Restricted variation of Equation~\eqref{eq:photon_relaxation_cell_lagrangian} gives
+Restricted variation of
+Equation~\eqref{eq:photon_relaxation_cell_lagrangian} gives
 \begin{align}
-    \ddot{\mathbf{u}}(\mathbf{R},t)
+    \ddot{\mathbf u}(\mathbf R,t)
     &=
     \frac{
-        c_{\mathrm{E}}^2
+        c_{\mathrm E}^2
         \left(
-            1-\alpha_{\mathrm{G}}
+            1-\alpha_{\mathrm G}
         \right)^4
     }{
         2d_{\mathrm{nn}}^2
     }
     \sum_{a=1}^{6}
     \left[
-        \Delta_a^{(2)}\mathbf{u}
+        \Delta_a^{(2)}\mathbf u
         -
         \frac{1}{12}
         \left(
             \Delta_a^{(2)}
         \right)^2
-        \mathbf{u}
+        \mathbf u
     \right]
     \nonumber\\
     &=
     \frac{
-        c_{\mathrm{P}}^2
+        c_{\mathrm P}^2
     }{
         2d_{\mathrm{nn}}^2
     }
     \sum_{a=1}^{6}
     \left[
-        \Delta_a^{(2)}\mathbf{u}
+        \Delta_a^{(2)}\mathbf u
         -
         \frac{1}{12}
         \left(
             \Delta_a^{(2)}
         \right)^2
-        \mathbf{u}
+        \mathbf u
     \right].
     \label{eq:photon_relaxation_extended_lattice_equation}
 \end{align}
 
 For the transverse Bloch mode
 \begin{equation}
-    \mathbf{u}(\mathbf{R},t)
+    \mathbf u(\mathbf R,t)
     =
-    \mathbf{u}_0
+    \mathbf u_0
     \exp
     \left[
         i
         \left(
-            \mathbf{k}\cdot\mathbf{R}
+            \mathbf k\cdot\mathbf R
             -
             \omega t
         \right)
     \right],
     \qquad
-    \mathbf{k}\cdot\mathbf{u}_0
+    \mathbf k\cdot\mathbf u_0
     =
     0,
     \label{eq:photon_relaxation_extended_bloch_mode}
@@ -458,20 +555,20 @@ For the transverse Bloch mode
 the centered-difference symbol is
 \begin{equation}
     \Delta_a^{(2)}
-    \mathbf{u}
+    \mathbf u
     =
     -4
     \sin^2
     \left(
         \frac{
             d_{\mathrm{nn}}
-            \mathbf{k}\cdot
-            \widehat{\mathbf{n}}_a
+            \mathbf k\cdot
+            \widehat{\mathbf n}_a
         }{
             2
         }
     \right)
-    \mathbf{u}.
+    \mathbf u.
     \label{eq:photon_relaxation_second_difference_symbol}
 \end{equation}
 
@@ -480,13 +577,14 @@ Writing
     x
     =
     d_{\mathrm{nn}}
-    \mathbf{k}\cdot
-    \widehat{\mathbf{n}}_a,
+    \mathbf k\cdot
+    \widehat{\mathbf n}_a,
 \]
 the forward- and centered-difference contributions are proportional to
 \(4\sin^2(x/2)\)
 and
-\(16\sin^4(x/2)\), respectively. The normalized directional stiffness symbol is therefore
+\(16\sin^4(x/2)\), respectively. The normalized directional stiffness
+symbol is therefore
 \begin{equation}
     \sin^2
     \left(
@@ -505,7 +603,7 @@ and
     +
     \frac{x^8}{4032}
     +
-    \mathcal{O}
+    \mathcal O
     \left(
         x^{10}
     \right).
@@ -513,28 +611,35 @@ and
 \end{equation}
 The \(x^4\) term cancels exactly.
 
-The real-space coefficient \(1/12\) is required because the squared centered difference contributes four times the normalized
+The real-space coefficient \(1/12\) is required because the squared centered
+difference contributes four times the normalized
 \(\sin^4(x/2)\) symbol:
 \[
     \frac{1}{12}\times4
     =
     \frac{1}{3}.
 \]
-This coefficient is unique within the selected positive two-term stencil. Longer-range contacts, rotational variables, internal-phase transfer, or eliminated auxiliary modes may reproduce the same low-wave-number cancellation through a different microscopic action.
+This coefficient is unique within the selected positive two-term stencil.
+Longer-range contacts, rotational variables, internal-phase transfer, or
+eliminated auxiliary modes may reproduce the same low-wave-number
+cancellation through a different microscopic action.
+
 
 \section{Exact Reduced Transverse Bloch Branch}
 \label{sec:photon_relaxation_exact_branch}
 
-Substitution of Equation~\eqref{eq:photon_relaxation_extended_bloch_mode} into Equation~\eqref{eq:photon_relaxation_extended_lattice_equation} gives
+Substitution of
+Equation~\eqref{eq:photon_relaxation_extended_bloch_mode} into
+Equation~\eqref{eq:photon_relaxation_extended_lattice_equation} gives
 \begin{align}
     \omega^2
     \left(
-        \mathbf{k},
-        \alpha_{\mathrm{G}}
+        \mathbf k,
+        \alpha_{\mathrm G}
     \right)
     &=
     \frac{
-        2c_{\mathrm{P}}^2
+        2c_{\mathrm P}^2
     }{
         d_{\mathrm{nn}}^2
     }
@@ -544,8 +649,8 @@ Substitution of Equation~\eqref{eq:photon_relaxation_extended_bloch_mode} into E
         \left(
             \frac{
                 d_{\mathrm{nn}}
-                \mathbf{k}\cdot
-                \widehat{\mathbf{n}}_a
+                \mathbf k\cdot
+                \widehat{\mathbf n}_a
             }{
                 2
             }
@@ -558,8 +663,8 @@ Substitution of Equation~\eqref{eq:photon_relaxation_extended_bloch_mode} into E
         \left(
             \frac{
                 d_{\mathrm{nn}}
-                \mathbf{k}\cdot
-                \widehat{\mathbf{n}}_a
+                \mathbf k\cdot
+                \widehat{\mathbf n}_a
             }{
                 2
             }
@@ -568,24 +673,29 @@ Substitution of Equation~\eqref{eq:photon_relaxation_extended_bloch_mode} into E
     \label{eq:photon_relaxation_exact_bloch_branch}
 \end{align}
 
-Every term in Equation~\eqref{eq:photon_relaxation_exact_bloch_branch} is nonnegative. The selected transverse branch is therefore spectrally nonnegative, gapless at
-\(\mathbf{k}=\mathbf{0}\), and invariant under
-\(\mathbf{k}\rightarrow-\mathbf{k}\).
-Because its scalar Bloch symbol acts identically on both displacement components orthogonal to \(\mathbf{k}\), the two transverse components remain degenerate within the selected reduction.
+Every term in
+Equation~\eqref{eq:photon_relaxation_exact_bloch_branch} is nonnegative. The
+selected transverse branch is therefore spectrally nonnegative, gapless at
+\(\mathbf k=\mathbf 0\), and invariant under
+\(\mathbf k\rightarrow-\mathbf k\).
+Because its scalar Bloch symbol acts identically on both displacement
+components orthogonal to \(\mathbf k\), the two transverse components remain
+degenerate within the selected reduction.
 
 For \(\omega>0\), the group-velocity vector is
 \begin{equation}
-    \mathbf{v}_{\mathrm{g}}
+    \mathbf v_{\mathrm g}
     =
-    \nabla_{\mathbf{k}}\omega.
+    \nabla_{\mathbf k}\omega.
     \label{eq:photon_relaxation_group_velocity_definition}
 \end{equation}
-Differentiating Equation~\eqref{eq:photon_relaxation_exact_bloch_branch} gives
+Differentiating
+Equation~\eqref{eq:photon_relaxation_exact_bloch_branch} gives
 \begin{align}
-    \mathbf{v}_{\mathrm{g}}
+    \mathbf v_{\mathrm g}
     &=
     \frac{
-        c_{\mathrm{P}}^2
+        c_{\mathrm P}^2
     }{
         2\omega d_{\mathrm{nn}}
     }
@@ -593,8 +703,8 @@ Differentiating Equation~\eqref{eq:photon_relaxation_exact_bloch_branch} gives
     \sin
     \left(
         d_{\mathrm{nn}}
-        \mathbf{k}\cdot
-        \widehat{\mathbf{n}}_a
+        \mathbf k\cdot
+        \widehat{\mathbf n}_a
     \right)
     \nonumber\\
     &\qquad\times
@@ -606,42 +716,44 @@ Differentiating Equation~\eqref{eq:photon_relaxation_exact_bloch_branch} gives
         \left(
             \frac{
                 d_{\mathrm{nn}}
-                \mathbf{k}\cdot
-                \widehat{\mathbf{n}}_a
+                \mathbf k\cdot
+                \widehat{\mathbf n}_a
             }{
                 2
             }
         \right)
     \right]
-    \widehat{\mathbf{n}}_a.
+    \widehat{\mathbf n}_a.
     \label{eq:photon_relaxation_exact_group_velocity_vector}
 \end{align}
 At finite wave number, FCC anisotropy permits
-\(\mathbf{v}_{\mathrm{g}}\) to deviate from the direction of
-\(\mathbf{k}\); this deviation vanishes in the continuum limit.
+\(\mathbf v_{\mathrm g}\) to deviate from the direction of
+\(\mathbf k\); this deviation vanishes in the continuum limit.
 
 Define
 \begin{equation}
     k
     =
     \left|
-        \mathbf{k}
+        \mathbf k
     \right|,
     \qquad
-    \widehat{\mathbf{k}}
+    \widehat{\mathbf k}
     =
     \frac{
-        \mathbf{k}
+        \mathbf k
     }{
         k
     }.
     \label{eq:photon_relaxation_wavevector_direction}
 \end{equation}
-Using Equation~\eqref{eq:photon_relaxation_suppressed_symbol_expansion}, the long-wavelength expansion is
+Using
+Equation~\eqref{eq:photon_relaxation_suppressed_symbol_expansion}, the
+long-wavelength expansion is
 \begin{align}
     \omega^2
     &=
-    c_{\mathrm{P}}^2
+    c_{\mathrm P}^2
     \Bigg[
         k^2
         -
@@ -652,8 +764,8 @@ Using Equation~\eqref{eq:photon_relaxation_suppressed_symbol_expansion}, the lon
         }
         \sum_{a=1}^{6}
         \left(
-            \mathbf{k}\cdot
-            \widehat{\mathbf{n}}_a
+            \mathbf k\cdot
+            \widehat{\mathbf n}_a
         \right)^6
     \nonumber\\
     &\hspace{6em}
@@ -665,11 +777,11 @@ Using Equation~\eqref{eq:photon_relaxation_suppressed_symbol_expansion}, the lon
         }
         \sum_{a=1}^{6}
         \left(
-            \mathbf{k}\cdot
-            \widehat{\mathbf{n}}_a
+            \mathbf k\cdot
+            \widehat{\mathbf n}_a
         \right)^8
         +
-        \mathcal{O}
+        \mathcal O
         \left(
             k^{10}d_{\mathrm{nn}}^8
         \right)
@@ -684,7 +796,7 @@ Taking the positive square root gives
 \begin{equation}
     \omega
     =
-    c_{\mathrm{P}}k
+    c_{\mathrm P}k
     \left[
         1
         -
@@ -695,12 +807,12 @@ Taking the positive square root gives
         }
         \sum_{a=1}^{6}
         \left(
-            \widehat{\mathbf{k}}
+            \widehat{\mathbf k}
             \cdot
-            \widehat{\mathbf{n}}_a
+            \widehat{\mathbf n}_a
         \right)^6
         +
-        \mathcal{O}
+        \mathcal O
         \left(
             k^6d_{\mathrm{nn}}^6
         \right)
@@ -718,18 +830,18 @@ For a fixed propagation direction, define the radial group speed by
         }{
             \partial k
         }
-    \right|_{\widehat{\mathbf{k}}}
+    \right|_{\widehat{\mathbf k}}
     =
-    \mathbf{v}_{\mathrm{g}}
+    \mathbf v_{\mathrm g}
     \cdot
-    \widehat{\mathbf{k}}.
+    \widehat{\mathbf k}.
     \label{eq:photon_relaxation_radial_group_speed}
 \end{equation}
 Its expansion is
 \begin{equation}
     v_{\mathrm{g},\parallel}
     =
-    c_{\mathrm{P}}
+    c_{\mathrm P}
     \left[
         1
         -
@@ -740,12 +852,12 @@ Its expansion is
         }
         \sum_{a=1}^{6}
         \left(
-            \widehat{\mathbf{k}}
+            \widehat{\mathbf k}
             \cdot
-            \widehat{\mathbf{n}}_a
+            \widehat{\mathbf n}_a
         \right)^6
         +
-        \mathcal{O}
+        \mathcal O
         \left(
             k^6d_{\mathrm{nn}}^6
         \right)
@@ -753,15 +865,16 @@ Its expansion is
     \label{eq:photon_relaxation_suppressed_group_velocity}
 \end{equation}
 
-For the six undirected FCC nearest-neighbor directions, the cubic directional factor satisfies
+For the six undirected FCC nearest-neighbor directions, the cubic directional
+factor satisfies
 \begin{equation}
     \frac{1}{2}
     \leq
     \sum_{a=1}^{6}
     \left(
-        \widehat{\mathbf{k}}
+        \widehat{\mathbf k}
         \cdot
-        \widehat{\mathbf{n}}_a
+        \widehat{\mathbf n}_a
     \right)^6
     \leq
     \frac{17}{16}.
@@ -784,7 +897,8 @@ Its principal-direction values are
 
 The leading correction to the radial group speed is therefore proportional to
 \(k^4d_{\mathrm{nn}}^4\), replacing the
-\(k^2d_{\mathrm{nn}}^2\) correction of the baseline chain. The continuum limits remain
+\(k^2d_{\mathrm{nn}}^2\) correction of the baseline chain. The continuum
+limits remain
 \begin{equation}
     \lim_{k\rightarrow0}
     \frac{
@@ -796,66 +910,97 @@ The leading correction to the radial group speed is therefore proportional to
     \lim_{k\rightarrow0}
     v_{\mathrm{g},\parallel}
     =
-    c_{\mathrm{P}}.
+    c_{\mathrm P}.
     \label{eq:photon_relaxation_suppressed_continuum_limit}
 \end{equation}
 
-The selected action thus suppresses the leading nearest-neighbor dispersion without changing the endpoint-transfer capacity, opening a spectral gap, or introducing negative stiffness. These conclusions apply to the reduced transverse branch and do not constitute a stability proof for the complete multi-branch FCC spectrum.
+The selected action thus suppresses the leading nearest-neighbor dispersion
+without changing the endpoint-transfer capacity, opening a spectral gap, or
+introducing negative stiffness. These conclusions apply to the reduced
+transverse branch and do not constitute a stability proof for the complete
+multi-branch FCC spectrum.
+
 
 \section{Conservative Condensate Limit and Separate Nonconservative Response}
 \label{sec:photon_relaxation_condensate_completion}
 
-The dispersion-suppressed branch derived in Section~\ref{sec:photon_relaxation_exact_branch} belongs to the conservative coherent sector of the dual-phase vacuum. The constraint inherited from \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}} requires
+The dispersion-suppressed branch derived in
+Section~\ref{sec:photon_relaxation_exact_branch} belongs to the conservative
+coherent sector of the dual-phase vacuum. The constraint inherited from
+\hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}
+requires
 \begin{equation}
-    \mathbf{v}_{\mathrm{rel}}
+    \mathbf v_{\mathrm{rel}}
     =
-    \mathbf{v}_{\mathrm{IC}}
+    \mathbf v_{\mathrm{IC}}
     -
-    \dot{\mathbf{u}}
+    \dot{\mathbf u}
     =
-    \mathbf{0}
+    \mathbf 0
     \label{eq:photon_relaxation_zero_relative_velocity}
 \end{equation}
-at the retained carrier order. The FCC scaffold and interstitial Condensate therefore share the same incremental velocity, while the Condensate supplies the pressure response enforcing the transverse constraint.
+at the retained carrier order. The FCC scaffold and interstitial Condensate
+therefore share the same incremental velocity, while the Condensate supplies
+the pressure response enforcing the transverse constraint.
 
-Equation~\eqref{eq:photon_relaxation_zero_relative_velocity} excludes relative flow and dissipation from the leading conservative action but does not prohibit a weaker irreversible response at higher order. Vacuum relaxation must therefore enter through a distinct nonconservative sector rather than through additional carrier inertia or a multiplicative correction to \(c_{\mathrm{P}}\).
+Equation~\eqref{eq:photon_relaxation_zero_relative_velocity} excludes
+relative flow and dissipation from the leading conservative action but does
+not prohibit a weaker irreversible response at higher order. Vacuum
+relaxation must therefore enter through a distinct nonconservative sector
+rather than through additional carrier inertia or a multiplicative correction
+to \(c_{\mathrm P}\).
 
-Let \(\widehat{\mathbf{e}}_{\mathrm{T}}\) be a normalized transverse polarization:
+Let \(\widehat{\mathbf e}_{\mathrm T}\) be a normalized transverse
+polarization and define the wave-vector direction by
 \begin{equation}
-    \widehat{\mathbf{e}}_{\mathrm{T}}
+    \widehat{\mathbf e}_{\mathrm T}
     \cdot
-    \mathbf{k}
+    \widehat{\mathbf k}
     =
     0,
     \qquad
     \left|
-        \widehat{\mathbf{e}}_{\mathrm{T}}
+        \widehat{\mathbf e}_{\mathrm T}
     \right|
     =
-    1.
+    1,
+    \qquad
+    \widehat{\mathbf k}
+    =
+    \frac{\mathbf k}{|\mathbf k|}.
     \label{eq:photon_relaxation_transverse_polarization}
 \end{equation}
-Define the work-conjugate projected strain and stress by
+
+For symmetric strain and stress tensors, define the work-conjugate transverse
+engineering shear and shear traction by
 \begin{equation}
-    \varepsilon_{\mathrm{T}}
+    \varepsilon_{\mathrm T}
     =
-    \widehat{e}_{\mathrm{T},i}
-    \widehat{e}_{\mathrm{T},j}
+    2
+    \widehat e_{\mathrm T,i}
+    \widehat k_j
     \varepsilon_{ij},
     \qquad
-    \sigma_{\mathrm{T}}
+    \sigma_{\mathrm T}
     =
-    \widehat{e}_{\mathrm{T},i}
-    \widehat{e}_{\mathrm{T},j}
+    \widehat e_{\mathrm T,i}
+    \widehat k_j
     \sigma_{ij}.
     \label{eq:photon_relaxation_modal_projection}
 \end{equation}
+With these definitions,
+\(\sigma_{\mathrm T}\dot{\varepsilon}_{\mathrm T}\)
+is the power density of the selected transverse shear component. The
+projection
+\(\widehat e_{\mathrm T,i}\widehat e_{\mathrm T,j}\varepsilon_{ij}\)
+is not used because it vanishes for an ideal plane transverse shear with
+\(\widehat{\mathbf e}_{\mathrm T}\perp\widehat{\mathbf k}\).
 
 For a locally harmonic component, adopt
 \begin{equation}
-    \varepsilon_{\mathrm{T}}(\mathbf{x},t)
+    \varepsilon_{\mathrm T}(\mathbf x,t)
     =
-    \varepsilon_{\mathrm{T}}^{(0)}(\mathbf{x})
+    \varepsilon_{\mathrm T}^{(0)}(\mathbf x)
     \cos
     \left(
         \omega t
@@ -864,9 +1009,9 @@ For a locally harmonic component, adopt
 \end{equation}
 and
 \begin{equation}
-    \sigma_{\mathrm{T}}(\mathbf{x},t)
+    \sigma_{\mathrm T}(\mathbf x,t)
     =
-    \sigma_{\mathrm{T}}^{(0)}(\mathbf{x})
+    \sigma_{\mathrm T}^{(0)}(\mathbf x)
     \cos
     \left(
         \omega t
@@ -882,19 +1027,22 @@ Under this convention,
     0
     \label{eq:photon_relaxation_positive_phase_lag}
 \end{equation}
-means that the projected stress leads the strain and transfers positive work from the coherent mode to the reservoir. The conservative limit is
+means that the projected stress leads the strain and transfers positive work
+from the coherent mode into noncoherent Active-Vacuum degrees of freedom. The
+conservative limit is
 \begin{equation}
     \Delta\varphi
     =
     0,
     \label{eq:photon_relaxation_zero_phase_lag}
 \end{equation}
-for which the stress--strain loop encloses no area and the net irreversible work per cycle vanishes.
+for which the stress--strain loop encloses no area and the net irreversible
+work per cycle vanishes.
 
 The retained response is weak and adiabatic:
 \begin{equation}
     \frac{
-        \Gamma_{\mathrm{D}}
+        \Gamma_{\mathrm D}
     }{
         \omega
     }
@@ -902,43 +1050,48 @@ The retained response is weak and adiabatic:
     1.
     \label{eq:photon_relaxation_weak_loss_condition}
 \end{equation}
-A nonzero phase lag can therefore establish a slow modal-energy transfer rate, but it does not by itself determine whether the response produces attenuation, absorption, mode conversion, or coherent frequency evolution.
+A nonzero phase lag can therefore establish a slow modal-energy transfer rate,
+but it does not by itself determine whether the response produces attenuation,
+absorption, mode conversion, or coherent frequency evolution.
 
-\section{Modal Phase Lag and the Viscoelastic Vacuum Relaxation Rate}
+\section{Modal Phase Lag and the Coherent Photon Energy-Relaxation Rate}
 \label{sec:photon_relaxation_phase_lag_rate}
 
-Let \(\mathcal{V}_{\gamma}\) denote the instantaneous spatial support of the coherent mode. Over one optical cycle, the modal amplitudes and support may be treated as fixed. The positive energy transferred out of the carrier is
+Let \(\mathcal{V}_{\gamma}\) denote the instantaneous spatial support of the
+coherent mode. Over one optical cycle, the modal amplitudes and support may be
+treated as fixed. The positive energy transferred out of the carrier is
 \begin{equation}
     \Delta E_{\mathrm{cycle}}
     =
     \int_{\mathcal{V}_{\gamma}}
     \oint_{\mathrm{cycle}}
-    \sigma_{\mathrm{T}}\,
-    \mathrm{d}\varepsilon_{\mathrm{T}}\,
+    \sigma_{\mathrm T}\,
+    \mathrm{d}\varepsilon_{\mathrm T}\,
     \mathrm{d}V.
     \label{eq:photon_relaxation_cycle_work_definition}
 \end{equation}
 Because strain is dimensionless,
 \[
     \left[
-        \sigma_{\mathrm{T}}\,
-        \mathrm{d}\varepsilon_{\mathrm{T}}\,
+        \sigma_{\mathrm T}\,
+        \mathrm{d}\varepsilon_{\mathrm T}\,
         \mathrm{d}V
     \right]
     =
     \mathrm{Pa\,m^3}
     =
-    \mathrm{J}.
+    \mathrm J.
 \]
 
-Using Equations~\eqref{eq:photon_relaxation_modal_strain} and~\eqref{eq:photon_relaxation_modal_stress},
+Using Equations~\eqref{eq:photon_relaxation_modal_strain}
+and~\eqref{eq:photon_relaxation_modal_stress},
 \begin{equation}
     \Delta E_{\mathrm{cycle}}
     =
     \pi
     \int_{\mathcal{V}_{\gamma}}
-    \sigma_{\mathrm{T}}^{(0)}
-    \varepsilon_{\mathrm{T}}^{(0)}
+    \sigma_{\mathrm T}^{(0)}
+    \varepsilon_{\mathrm T}^{(0)}
     \sin
     \left(
         \Delta\varphi
@@ -952,8 +1105,8 @@ The maximum recoverable energy associated with the in-phase response is
     =
     \frac{1}{2}
     \int_{\mathcal{V}_{\gamma}}
-    \sigma_{\mathrm{T}}^{(0)}
-    \varepsilon_{\mathrm{T}}^{(0)}
+    \sigma_{\mathrm T}^{(0)}
+    \varepsilon_{\mathrm T}^{(0)}
     \cos
     \left(
         \Delta\varphi
@@ -961,7 +1114,7 @@ The maximum recoverable energy associated with the in-phase response is
     \mathrm{d}V.
     \label{eq:photon_relaxation_stored_modal_energy}
 \end{equation}
-For a spatially uniform phase lag,
+For a spatially uniform phase offset,
 \begin{equation}
     \frac{
         \Delta E_{\mathrm{cycle}}
@@ -987,8 +1140,8 @@ For a nonuniform response, define the effective modal loss tangent by
     \frac{
         \displaystyle
         \int_{\mathcal{V}_{\gamma}}
-        \sigma_{\mathrm{T}}^{(0)}
-        \varepsilon_{\mathrm{T}}^{(0)}
+        \sigma_{\mathrm T}^{(0)}
+        \varepsilon_{\mathrm T}^{(0)}
         \sin
         \left(
             \Delta\varphi
@@ -997,8 +1150,8 @@ For a nonuniform response, define the effective modal loss tangent by
     }{
         \displaystyle
         \int_{\mathcal{V}_{\gamma}}
-        \sigma_{\mathrm{T}}^{(0)}
-        \varepsilon_{\mathrm{T}}^{(0)}
+        \sigma_{\mathrm T}^{(0)}
+        \varepsilon_{\mathrm T}^{(0)}
         \cos
         \left(
             \Delta\varphi
@@ -1007,25 +1160,36 @@ For a nonuniform response, define the effective modal loss tangent by
     }.
     \label{eq:photon_relaxation_effective_loss_tangent}
 \end{equation}
-Equation~\eqref{eq:photon_relaxation_fractional_cycle_loss} then remains valid with
-\(\Delta\varphi_{\mathrm{eff}}\), denoted simply by
+Equation~\eqref{eq:photon_relaxation_fractional_cycle_loss} then remains
+valid with \(\Delta\varphi_{\mathrm{eff}}\), denoted simply by
 \(\Delta\varphi\) below.
 
-Let the slowly varying coherent modal energy obey
+Let \(E_\gamma\) denote the slowly varying coherent modal energy and write
 \begin{equation}
+    \left.
     \frac{
-        \mathrm{d}E
+        \mathrm{d}E_\gamma
     }{
         \mathrm{d}t
     }
+    \right|_{\mathrm{rel}}
     =
-    -\Gamma_{\mathrm{D}}E.
+    -\Gamma_{\mathrm D}E_\gamma.
     \label{eq:photon_relaxation_energy_decay_reintroduced}
 \end{equation}
-The coefficient $\Gamma_{\mathrm{D}}$ is termed the \emph{Viscoelastic Vacuum Relaxation Rate}, or equivalently the \emph{FCC--Condensate relaxation rate}. It is the macroscopic fractional coherent-energy relaxation rate associated with the weak out-of-phase viscoelastic response of the FCC--Condensate vacuum to the propagating transverse photon mode. The corresponding stress--strain phase lag provides the nonconservative work channel through which energy is transferred from the coherent carrier into non-coherent FCC--Condensate reservoir degrees of freedom.
+The coefficient \(\Gamma_{\mathrm D}\) is the coherent-photon Vacuum
+Relaxation Rate defined in
+Appendix~\ref{app:vacuumdamping_cosmicredshift}. It is the fractional
+coherent-energy transfer rate associated with the selected weak
+out-of-phase Active-Vacuum response. The stress--strain phase offset provides
+a possible nonconservative work representation through which energy leaves
+the coherent carrier. It does not by itself identify the physical receiver,
+derive the microscopic magnitude of \(\Gamma_{\mathrm D}\), or establish
+thermalization.
+
 In the weak-loss regime,
 \begin{equation}
-    E
+    E_\gamma
     =
     E_{\mathrm{st}}
     \left[
@@ -1034,22 +1198,25 @@ In the weak-loss regime,
         \mathcal{O}
         \left(
             \frac{
-                \Gamma_{\mathrm{D}}^2
+                \Gamma_{\mathrm D}^{2}
             }{
-                \omega^2
+                \omega^{2}
             }
         \right)
     \right],
     \label{eq:photon_relaxation_total_stored_energy_relation}
 \end{equation}
-so replacing \(E_{\mathrm{st}}\) by \(E\) does not change the leading-order result.
+so replacing \(E_{\mathrm{st}}\) by \(E_\gamma\) does not change the
+leading-order result.
 
-Over one period \(2\pi/\omega\), Equation~\eqref{eq:photon_relaxation_energy_decay_reintroduced} gives
+Treating \(\Gamma_{\mathrm D}\) and \(\omega\) as locally constant over one
+period \(2\pi/\omega\),
+Equation~\eqref{eq:photon_relaxation_energy_decay_reintroduced} gives
 \begin{equation}
     \frac{
         \Delta E_{\mathrm{cycle}}
     }{
-        E
+        E_\gamma
     }
     =
     1
@@ -1058,23 +1225,24 @@ Over one period \(2\pi/\omega\), Equation~\eqref{eq:photon_relaxation_energy_dec
     \left(
         -
         \frac{
-            2\pi\Gamma_{\mathrm{D}}
+            2\pi\Gamma_{\mathrm D}
         }{
             \omega
         }
     \right).
     \label{eq:photon_relaxation_exact_cycle_decay}
 \end{equation}
-Expanding under Equation~\eqref{eq:photon_relaxation_weak_loss_condition},
+Expanding under
+Equation~\eqref{eq:photon_relaxation_weak_loss_condition},
 \begin{equation}
     \frac{
         \Delta E_{\mathrm{cycle}}
     }{
-        E
+        E_\gamma
     }
     =
     \frac{
-        2\pi\Gamma_{\mathrm{D}}
+        2\pi\Gamma_{\mathrm D}
     }{
         \omega
     }
@@ -1082,9 +1250,9 @@ Expanding under Equation~\eqref{eq:photon_relaxation_weak_loss_condition},
     \mathcal{O}
     \left(
         \frac{
-            \Gamma_{\mathrm{D}}^2
+            \Gamma_{\mathrm D}^{2}
         }{
-            \omega^2
+            \omega^{2}
         }
     \right).
     \label{eq:photon_relaxation_cycle_decay_expansion}
@@ -1092,7 +1260,7 @@ Expanding under Equation~\eqref{eq:photon_relaxation_weak_loss_condition},
 
 Equating the stress--strain work with the temporal energy loss yields
 \begin{equation}
-    \Gamma_{\mathrm{D}}
+    \Gamma_{\mathrm D}
     =
     \omega
     \tan
@@ -1103,7 +1271,7 @@ Equating the stress--strain work with the temporal energy loss yields
     \mathcal{O}
     \left(
         \frac{
-            \Gamma_{\mathrm{D}}^2
+            \Gamma_{\mathrm D}^{2}
         }{
             \omega
         }
@@ -1112,7 +1280,7 @@ Equating the stress--strain work with the temporal energy loss yields
 \end{equation}
 and therefore
 \begin{equation}
-    \Gamma_{\mathrm{D}}
+    \Gamma_{\mathrm D}
     \simeq
     \omega
     \tan
@@ -1130,18 +1298,18 @@ An approximately frequency-independent fractional transfer rate requires
     \right]
     \simeq
     \frac{
-        \Gamma_{\mathrm{D}}
+        \Gamma_{\mathrm D}
     }{
         \omega
     },
     \label{eq:photon_relaxation_inverse_frequency_phase_lag}
 \end{equation}
-or, for a small lag,
+or, for a small phase offset,
 \begin{equation}
     \Delta\varphi(\omega)
     \simeq
     \frac{
-        \Gamma_{\mathrm{D}}
+        \Gamma_{\mathrm D}
     }{
         \omega
     }.
@@ -1152,57 +1320,75 @@ The corresponding fractional transfer per cycle is
     \frac{
         \Delta E_{\mathrm{cycle}}
     }{
-        E
+        E_\gamma
     }
     \simeq
     \frac{
-        2\pi\Gamma_{\mathrm{D}}
+        2\pi\Gamma_{\mathrm D}
     }{
         \omega
     }.
     \label{eq:photon_relaxation_cycle_loss_inverse_frequency}
 \end{equation}
-Higher-frequency modes lose a smaller fraction during each cycle but complete proportionally more cycles per unit time.
+Higher-frequency modes lose a smaller fraction during each cycle but complete
+proportionally more cycles per unit time.
 
-A frequency-independent phase lag would instead imply
+A frequency-independent phase offset would instead imply
 \begin{equation}
-    \Gamma_{\mathrm{D}}
+    \Gamma_{\mathrm D}
     \propto
     \omega,
     \label{eq:photon_relaxation_constant_phase_chromatic}
 \end{equation}
-and hence a chromatic transfer rate. The inverse-frequency loss tangent is therefore necessary for the proposed achromatic relaxation law.
+and hence a chromatic transfer rate. The inverse-frequency loss tangent is
+therefore necessary for the proposed achromatic relaxation law.
 
 This section determines the response required by a prescribed constant
-\(\Gamma_{\mathrm{D}}\); it does not derive that response from FCC--Condensate microphysics. The parent theory must provide a causal susceptibility whose reactive and dissipative components satisfy the corresponding Kramers--Kronig relations and whose reservoir coupling remains consistent with phase noise, line broadening, and fluctuation--dissipation constraints.
+\(\Gamma_{\mathrm D}\); it does not derive its microscopic magnitude. The
+conditional microscopic scale-transfer closure for that magnitude is
+developed in Appendix~\ref{app:vacuumdamping_cosmicredshift}. The complete
+parent dynamics must provide a causal susceptibility whose reactive and
+dissipative components satisfy the corresponding Kramers--Kronig relations
+and whose coupling to finite-energy noncoherent Active-Vacuum degrees of
+freedom remains consistent with phase noise, line broadening, recoil, and
+fluctuation--dissipation constraints.
 
-Most importantly, the phase lag establishes an energy-transfer rate only. In a stationary linear medium, such a response ordinarily produces attenuation or a complex wave number, not secular motion through the real-frequency eigenbranch.
+Most importantly, a phase offset establishes an energy-transfer rate only.
+In a stationary linear medium, such a response ordinarily produces
+attenuation or a complex wave number, not secular motion through the
+real-frequency eigenbranch.
+
 
 \section{Ordinary Linear Damping and the Amplitude-Attenuation No-Go}
 \label{sec:photon_relaxation_attenuation_no_go}
 
-To isolate this distinction, consider one fixed transverse Fourier mode with normal coordinate \(q_{\mathbf{k}}(t)\) and conservative eigenfrequency
-\(\omega_{\mathrm{c}}(\mathbf{k})\) from Equation~\eqref{eq:photon_relaxation_exact_bloch_branch}. Conventional linear damping gives
+To isolate this distinction, consider one fixed transverse Fourier mode with
+normal coordinate \(q_{\mathbf k}(t)\) and conservative eigenfrequency
+\(\omega_{\mathrm c}(\mathbf k)\) from
+Equation~\eqref{eq:photon_relaxation_exact_bloch_branch}. Conventional
+linear damping gives
 \begin{equation}
-    \ddot{q}_{\mathbf{k}}
+    \ddot q_{\mathbf k}
     +
-    \Gamma_{\mathrm{D}}
-    \dot{q}_{\mathbf{k}}
+    \gamma_{\mathrm A}
+    \dot q_{\mathbf k}
     +
-    \omega_{\mathrm{c}}^2(\mathbf{k})
-    q_{\mathbf{k}}
+    \omega_{\mathrm c}^{2}(\mathbf k)
+    q_{\mathbf k}
     =
-    0.
+    0,
     \label{eq:photon_relaxation_linearly_damped_mode}
 \end{equation}
-This equation is a diagnostic of ordinary damping, not the completed TFT transport law.
+where \(\gamma_{\mathrm A}\) is an ordinary amplitude-damping coefficient.
+This equation is a diagnostic of conventional damping, not the completed
+TFT scale-transport law.
 
 For
 \begin{equation}
-    \omega_{\mathrm{c}}^2(\mathbf{k})
+    \omega_{\mathrm c}^{2}(\mathbf k)
     >
     \frac{
-        \Gamma_{\mathrm{D}}^2
+        \gamma_{\mathrm A}^{2}
     }{
         4
     },
@@ -1210,33 +1396,33 @@ For
 \end{equation}
 the solution is
 \begin{equation}
-    q_{\mathbf{k}}(t)
+    q_{\mathbf k}(t)
     =
-    q_{\mathbf{k}}^{(0)}
+    q_{\mathbf k}^{(0)}
     \exp
     \left(
         -
         \frac{
-            \Gamma_{\mathrm{D}}t
+            \gamma_{\mathrm A}t
         }{
             2
         }
     \right)
     \exp
     \left(
-        -i\Omega_{\mathbf{k}}t
+        -i\Omega_{\mathbf k}t
     \right),
     \label{eq:photon_relaxation_damped_mode_solution}
 \end{equation}
 where
 \begin{equation}
-    \Omega_{\mathbf{k}}
+    \Omega_{\mathbf k}
     =
     \sqrt{
-        \omega_{\mathrm{c}}^2(\mathbf{k})
+        \omega_{\mathrm c}^{2}(\mathbf k)
         -
         \frac{
-            \Gamma_{\mathrm{D}}^2
+            \gamma_{\mathrm A}^{2}
         }{
             4
         }
@@ -1247,14 +1433,14 @@ where
 The amplitude and cycle-averaged energy therefore scale as
 \begin{equation}
     \left|
-        q_{\mathbf{k}}(t)
+        q_{\mathbf k}(t)
     \right|
     \propto
     \exp
     \left(
         -
         \frac{
-            \Gamma_{\mathrm{D}}t
+            \gamma_{\mathrm A}t
         }{
             2
         }
@@ -1263,47 +1449,48 @@ The amplitude and cycle-averaged energy therefore scale as
 \end{equation}
 and
 \begin{equation}
-    E_{\mathbf{k}}(t)
+    E_{\mathbf k}(t)
     \propto
     \exp
     \left(
         -
-        \Gamma_{\mathrm{D}}t
+        \gamma_{\mathrm A}t
     \right).
     \label{eq:photon_relaxation_linear_attenuation}
 \end{equation}
 
 The real oscillation frequency is
 \begin{align}
-    \Omega_{\mathbf{k}}
+    \Omega_{\mathbf k}
     &=
-    \omega_{\mathrm{c}}(\mathbf{k})
+    \omega_{\mathrm c}(\mathbf k)
     -
     \frac{
-        \Gamma_{\mathrm{D}}^2
+        \gamma_{\mathrm A}^{2}
     }{
-        8\omega_{\mathrm{c}}(\mathbf{k})
+        8\omega_{\mathrm c}(\mathbf k)
     }
     +
     \mathcal{O}
     \left(
         \frac{
-            \Gamma_{\mathrm{D}}^4
+            \gamma_{\mathrm A}^{4}
         }{
-            \omega_{\mathrm{c}}^3(\mathbf{k})
+            \omega_{\mathrm c}^{3}(\mathbf k)
         }
     \right).
     \label{eq:photon_relaxation_damped_real_frequency}
 \end{align}
-For fixed \(\mathbf{k}\), this is a constant second-order shift, not a secular law of the form
+For fixed \(\mathbf k\), this is a constant second-order shift, not a secular
+law of the form
 \begin{equation}
     \frac{
-        \mathrm{d}\omega
+        \mathrm d\omega
     }{
-        \mathrm{d}t
+        \mathrm dt
     }
     =
-    -\Gamma_{\mathrm{D}}\omega.
+    -\Gamma_{\mathrm D}\omega.
     \label{eq:photon_relaxation_frequency_drift_target}
 \end{equation}
 
@@ -1311,13 +1498,11 @@ The equivalent spatial description uses a complex wave number,
 \begin{equation}
     k
     =
-    k_{\mathrm{R}}
+    k_{\mathrm R}
     +
-    ik_{\mathrm{I}},
+    ik_{\mathrm I},
     \qquad
-    k_{\mathrm{I}}
-    >
-    0,
+    k_{\mathrm I}>0,
     \label{eq:photon_relaxation_complex_wave_number}
 \end{equation}
 giving
@@ -1327,13 +1512,13 @@ giving
     \exp
     \left(
         -
-        k_{\mathrm{I}}\ell
+        k_{\mathrm I}\ell
     \right)
     \exp
     \left[
         i
         \left(
-            k_{\mathrm{R}}\ell
+            k_{\mathrm R}\ell
             -
             \omega t
         \right)
@@ -1342,53 +1527,72 @@ giving
 \end{equation}
 The amplitude decreases while the imposed real frequency remains fixed.
 
-Ordinary linear damping can therefore describe amplitude decay, intensity attenuation, absorption, or loss of coherent-mode survival probability. None of these outcomes alone establishes a continuous redshift of the surviving coherent carrier. Consequently,
+Ordinary linear damping can therefore describe amplitude decay, intensity
+attenuation, absorption, or loss of coherent-mode survival probability. None
+of these outcomes alone establishes a continuous redshift of the surviving
+coherent carrier. Consequently,
 \begin{equation}
     \frac{
-        \mathrm{d}E
+        \mathrm dE
     }{
-        \mathrm{d}t
+        \mathrm dt
     }
     =
-    -\Gamma_{\mathrm{D}}E
+    -\gamma_{\mathrm A}E
     \quad
     \not\Rightarrow
     \quad
     \frac{
-        \mathrm{d}\omega
+        \mathrm d\omega
     }{
-        \mathrm{d}t
+        \mathrm dt
     }
     =
-    -\Gamma_{\mathrm{D}}\omega
+    -\gamma_{\mathrm A}\omega
     \label{eq:photon_relaxation_attenuation_no_go}
 \end{equation}
-without an additional condition that moves the coherent mode through the real-frequency eigenstate family.
+without an additional condition that moves the coherent mode through the
+real-frequency eigenstate family.
 
-The required completion must therefore be a coherent inelastic transport channel distinct from ordinary linear attenuation. It must change the real carrier frequency and wave vector while suppressing incoherent absorption, transverse diffusion, polarization scrambling, phase noise, and secondary-mode radiation.
+The required completion must therefore be a coherent scale-transfer channel
+distinct from ordinary linear attenuation. It must change the real carrier
+frequency and wave vector while suppressing incoherent absorption, transverse
+diffusion, polarization scrambling, phase noise, and secondary-mode radiation.
+
 
 \section{Coherent-Action-Preserving Frequency Transport}
 \label{sec:photon_relaxation_frequency_transport}
 
-Section~\ref{sec:photon_relaxation_attenuation_no_go} shows that the modal-energy law
+Section~\ref{sec:photon_relaxation_attenuation_no_go} shows that the
+modal-energy law
 \begin{equation}
-    \frac{\mathrm{d}E}{\mathrm{d}t}
+    \left.
+    \frac{
+        \mathrm dE_\gamma
+    }{
+        \mathrm dt
+    }
+    \right|_{\mathrm{rel}}
     =
-    -\Gamma_{\mathrm{D}}E
+    -\Gamma_{\mathrm D}E_\gamma
     \label{eq:photon_relaxation_transport_energy_law}
 \end{equation}
-does not determine the evolution of the real carrier frequency. The additional constitutive condition adopted here is preservation of the coherent modal action
+does not by itself determine the evolution of the real carrier frequency. The
+additional constitutive condition adopted here is preservation of the coherent
+modal action
 \begin{equation}
-    \mathcal{I}_{\gamma}
+    I_\gamma
     \equiv
-    \frac{E}{\omega},
+    \frac{
+        E_\gamma
+    }{
+        \omega_\gamma
+    },
     \label{eq:photon_relaxation_coherent_modal_action}
 \end{equation}
 with
 \begin{equation}
-    \left[
-        \mathcal{I}_{\gamma}
-    \right]
+    [I_\gamma]
     =
     \mathrm{J\,s}.
     \label{eq:photon_relaxation_coherent_modal_action_dimensions}
@@ -1396,44 +1600,96 @@ with
 
 During the weak coherent-relaxation interval,
 \begin{equation}
-    \frac{\mathrm{d}\mathcal{I}_{\gamma}}{\mathrm{d}t}
+    \left.
+    \frac{
+        \mathrm dI_\gamma
+    }{
+        \mathrm dt
+    }
+    \right|_{\mathrm{rel}}
     =
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \frac{\mathrm d}{\mathrm dt}
     \left(
-        \frac{E}{\omega}
-    \right)
+        \frac{
+            E_\gamma
+        }{
+            \omega_\gamma
+        }
+    \right)_{\mathrm{rel}}
     =
     0.
     \label{eq:photon_relaxation_wave_action_invariance}
 \end{equation}
-This condition applies to a coherent finite packet and includes a quantum-normalized excitation as the special case
-\(\mathcal{I}_{\gamma}=\hbar\). It requires preservation of the selected modal identity and excludes incoherent conversion into other branches at the retained order.
+This condition applies to a coherent finite packet and includes a
+quantum-normalized excitation as the special case \(I_\gamma=\hbar\). It
+requires preservation of the selected modal identity and excludes incoherent
+conversion into other branches at the retained order. The differential
+transport law is a coarse-grained modal statement and does not imply
+fractional action stored on individual receiving nodes.
 
-Expanding Equation~\eqref{eq:photon_relaxation_wave_action_invariance} gives
+Expanding
+Equation~\eqref{eq:photon_relaxation_wave_action_invariance} gives
 \begin{equation}
-    \frac{1}{\omega}
-    \frac{\mathrm{d}E}{\mathrm{d}t}
+    \frac{1}{\omega_\gamma}
+    \left.
+    \frac{
+        \mathrm dE_\gamma
+    }{
+        \mathrm dt
+    }
+    \right|_{\mathrm{rel}}
     -
-    \frac{E}{\omega^2}
-    \frac{\mathrm{d}\omega}{\mathrm{d}t}
+    \frac{
+        E_\gamma
+    }{
+        \omega_\gamma^{2}
+    }
+    \left.
+    \frac{
+        \mathrm d\omega_\gamma
+    }{
+        \mathrm dt
+    }
+    \right|_{\mathrm{rel}}
     =
     0,
     \label{eq:photon_relaxation_wave_action_expansion}
 \end{equation}
 or
 \begin{equation}
-    \frac{1}{E}
-    \frac{\mathrm{d}E}{\mathrm{d}t}
+    \frac{1}{E_\gamma}
+    \left.
+    \frac{
+        \mathrm dE_\gamma
+    }{
+        \mathrm dt
+    }
+    \right|_{\mathrm{rel}}
     =
-    \frac{1}{\omega}
-    \frac{\mathrm{d}\omega}{\mathrm{d}t}.
+    \frac{1}{\omega_\gamma}
+    \left.
+    \frac{
+        \mathrm d\omega_\gamma
+    }{
+        \mathrm dt
+    }
+    \right|_{\mathrm{rel}}.
     \label{eq:photon_relaxation_equal_fractional_rates}
 \end{equation}
-Combining this relation with Equation~\eqref{eq:photon_relaxation_transport_energy_law} yields
+Combining this relation with
+Equation~\eqref{eq:photon_relaxation_transport_energy_law} yields
 \begin{equation}
-    \frac{\mathrm{d}\omega}{\mathrm{d}t}
+    \boxed{
+    \left.
+    \frac{
+        \mathrm d\omega_\gamma
+    }{
+        \mathrm dt
+    }
+    \right|_{\mathrm{rel}}
     =
-    -\Gamma_{\mathrm{D}}\omega.
+    -\Gamma_{\mathrm D}\omega_\gamma.
+    }
     \label{eq:photon_relaxation_frequency_transport_law}
 \end{equation}
 
@@ -1450,17 +1706,19 @@ The conditional transport logic is
     \end{aligned}
     \label{eq:photon_relaxation_frequency_transport_logic}
 \end{equation}
-Thus, Equation~\eqref{eq:photon_relaxation_frequency_transport_law} follows from the combined closure, not from ordinary linear damping alone.
+Thus,
+Equation~\eqref{eq:photon_relaxation_frequency_transport_law} follows from
+the combined closure, not from ordinary linear damping alone.
 
-For constant \(\Gamma_{\mathrm{D}}\),
+For constant \(\Gamma_{\mathrm D}\),
 \begin{equation}
-    \omega(t)
+    \omega_\gamma(t)
     =
     \omega_{\mathrm{emit}}
     \exp
     \left[
         -
-        \Gamma_{\mathrm{D}}
+        \Gamma_{\mathrm D}
         \left(
             t-t_{\mathrm{emit}}
         \right)
@@ -1469,13 +1727,13 @@ For constant \(\Gamma_{\mathrm{D}}\),
 \end{equation}
 and
 \begin{equation}
-    E(t)
+    E_\gamma(t)
     =
     E_{\mathrm{emit}}
     \exp
     \left[
         -
-        \Gamma_{\mathrm{D}}
+        \Gamma_{\mathrm D}
         \left(
             t-t_{\mathrm{emit}}
         \right)
@@ -1484,32 +1742,46 @@ and
 \end{equation}
 Their ratio remains invariant:
 \begin{equation}
-    \frac{E(t)}{\omega(t)}
+    \frac{
+        E_\gamma(t)
+    }{
+        \omega_\gamma(t)
+    }
     =
-    \frac{E_{\mathrm{emit}}}{\omega_{\mathrm{emit}}}
+    \frac{
+        E_{\mathrm{emit}}
+    }{
+        \omega_{\mathrm{emit}}
+    }
     =
-    \mathcal{I}_{\gamma}.
+    I_\gamma.
     \label{eq:photon_relaxation_action_ratio_preserved}
 \end{equation}
+
 
 \subsection{Required Wave-Vector-Space Transport}
 \label{subsec:photon_relaxation_wavevector_drag}
 
-Frequency evolution requires motion through the real-frequency eigenbranch. Let
+Frequency evolution requires motion through the real-frequency eigenbranch.
+Let
 \begin{equation}
-    \omega
+    \omega_\gamma
     =
-    \omega_{\mathrm{c}}
+    \omega_{\mathrm c}
     \left(
-        \mathbf{x},
-        \mathbf{k}
+        \mathbf x,
+        \mathbf k
     \right)
     \label{eq:photon_relaxation_local_conservative_branch}
 \end{equation}
-denote the local conservative branch, including quasistatic spatial dependence through
-\(\alpha_{\mathrm{G}}(\mathbf{x})\). For a stationary background,
+denote the local conservative branch, including quasistatic spatial dependence
+through \(\alpha_{\mathrm G}(\mathbf x)\). For a stationary background,
 \begin{equation}
-    \frac{\partial\omega_{\mathrm{c}}}{\partial t}
+    \frac{
+        \partial\omega_{\mathrm c}
+    }{
+        \partial t
+    }
     =
     0.
     \label{eq:photon_relaxation_stationary_branch}
@@ -1517,44 +1789,51 @@ denote the local conservative branch, including quasistatic spatial dependence t
 
 Extend the conservative ray equations by a nonconservative wave-vector term:
 \begin{equation}
-    \dot{\mathbf{x}}
+    \dot{\mathbf x}
     =
-    \nabla_{\mathbf{k}}\omega_{\mathrm{c}}
+    \nabla_{\mathbf k}\omega_{\mathrm c}
     \equiv
-    \mathbf{v}_{\mathrm{g}},
+    \mathbf v_{\mathrm g},
     \label{eq:photon_relaxation_ray_position_equation}
 \end{equation}
 \begin{equation}
-    \dot{\mathbf{k}}
+    \dot{\mathbf k}
     =
     -
-    \nabla_{\mathbf{x}}\omega_{\mathrm{c}}
+    \nabla_{\mathbf x}\omega_{\mathrm c}
     +
     \left.
-        \dot{\mathbf{k}}
-    \right|_{\mathrm{D}}.
+        \dot{\mathbf k}
+    \right|_{\mathrm{rel}}.
     \label{eq:photon_relaxation_ray_wavevector_equation}
 \end{equation}
-The first term in Equation~\eqref{eq:photon_relaxation_ray_wavevector_equation} produces conservative refraction; the second produces irreversible transport through wave-vector space.
+The first term in
+Equation~\eqref{eq:photon_relaxation_ray_wavevector_equation} produces
+conservative refraction; the second represents the proposed irreversible
+transport through wave-vector space.
 
 Along the ray,
 \begin{align}
-    \frac{\mathrm{d}\omega_{\mathrm{c}}}{\mathrm{d}t}
+    \frac{
+        \mathrm d\omega_{\mathrm c}
+    }{
+        \mathrm dt
+    }
     &=
-    \nabla_{\mathbf{x}}\omega_{\mathrm{c}}
+    \nabla_{\mathbf x}\omega_{\mathrm c}
     \cdot
-    \dot{\mathbf{x}}
+    \dot{\mathbf x}
     +
-    \nabla_{\mathbf{k}}\omega_{\mathrm{c}}
+    \nabla_{\mathbf k}\omega_{\mathrm c}
     \cdot
-    \dot{\mathbf{k}}
+    \dot{\mathbf k}
     \nonumber\\
     &=
-    \mathbf{v}_{\mathrm{g}}
+    \mathbf v_{\mathrm g}
     \cdot
     \left.
-        \dot{\mathbf{k}}
-    \right|_{\mathrm{D}},
+        \dot{\mathbf k}
+    \right|_{\mathrm{rel}},
     \label{eq:photon_relaxation_frequency_ray_derivative}
 \end{align}
 because the conservative Hamiltonian contributions cancel.
@@ -1563,73 +1842,86 @@ Define the radial group-speed component on the outward branch by
 \begin{equation}
     v_{\mathrm{g},\parallel}
     =
-    \mathbf{v}_{\mathrm{g}}
+    \mathbf v_{\mathrm g}
     \cdot
-    \widehat{\mathbf{k}}
+    \widehat{\mathbf k}
     >
     0.
     \label{eq:photon_relaxation_positive_radial_group_speed}
 \end{equation}
-The minimal direction-preserving closure reproducing Equation~\eqref{eq:photon_relaxation_frequency_transport_law} is
+The minimal direction-preserving closure reproducing
+Equation~\eqref{eq:photon_relaxation_frequency_transport_law} is
 \begin{equation}
+    \boxed{
     \left.
-        \dot{\mathbf{k}}
-    \right|_{\mathrm{D}}
+        \dot{\mathbf k}
+    \right|_{\mathrm{rel}}
     =
     -
-    \Gamma_{\mathrm{D}}
+    \Gamma_{\mathrm D}
     \frac{
-        \omega_{\mathrm{c}}
+        \omega_{\mathrm c}
     }{
         v_{\mathrm{g},\parallel}
     }
-    \widehat{\mathbf{k}}.
+    \widehat{\mathbf k}.
+    }
     \label{eq:photon_relaxation_longitudinal_k_drag}
 \end{equation}
 Its dimensions are
 \begin{equation}
     \left[
         \left.
-            \dot{\mathbf{k}}
-        \right|_{\mathrm{D}}
+            \dot{\mathbf k}
+        \right|_{\mathrm{rel}}
     \right]
     =
     \mathrm{m^{-1}\,s^{-1}}.
     \label{eq:photon_relaxation_wavevector_drag_dimensions}
 \end{equation}
-Substitution into Equation~\eqref{eq:photon_relaxation_frequency_ray_derivative} gives
+Substitution into
+Equation~\eqref{eq:photon_relaxation_frequency_ray_derivative} gives
 \begin{equation}
-    \frac{\mathrm{d}\omega_{\mathrm{c}}}{\mathrm{d}t}
+    \frac{
+        \mathrm d\omega_{\mathrm c}
+    }{
+        \mathrm dt
+    }
     =
-    -\Gamma_{\mathrm{D}}
-    \omega_{\mathrm{c}}.
+    -\Gamma_{\mathrm D}\omega_{\mathrm c}.
     \label{eq:photon_relaxation_k_drag_frequency_result}
 \end{equation}
 
 Because
 \begin{equation}
-    \widehat{\mathbf{k}}
+    \widehat{\mathbf k}
     \times
     \left.
-        \dot{\mathbf{k}}
-    \right|_{\mathrm{D}}
+        \dot{\mathbf k}
+    \right|_{\mathrm{rel}}
     =
-    \mathbf{0},
+    \mathbf 0,
     \label{eq:photon_relaxation_no_dissipative_deflection}
 \end{equation}
-the dissipative term changes the wave-number magnitude without producing deterministic angular deflection. Conservative refraction remains governed by
-\(-\nabla_{\mathbf{x}}\omega_{\mathrm{c}}\), while suppression of stochastic angular diffusion remains a microscopic requirement.
+the nonconservative term changes the wave-number magnitude without producing
+deterministic angular deflection. Conservative refraction remains governed by
+\(-\nabla_{\mathbf x}\omega_{\mathrm c}\), while suppression of stochastic
+angular diffusion remains a microscopic requirement.
 
 For propagation along a fixed direction,
 \begin{equation}
     \left.
-        \frac{\mathrm{d}k}{\mathrm{d}t}
-    \right|_{\mathrm{D}}
+        \frac{
+            \mathrm dk
+        }{
+            \mathrm dt
+        }
+    \right|_{\mathrm{rel}}
     =
     -
-    \Gamma_{\mathrm{D}}
+    \Gamma_{\mathrm D}
     \frac{
-        \omega_{\mathrm{c}}(k)
+        \omega_{\mathrm c}(k)
     }{
         v_{\mathrm{g},\parallel}(k)
     }.
@@ -1637,23 +1929,29 @@ For propagation along a fixed direction,
 \end{equation}
 In the long-wavelength regime,
 \begin{equation}
-    \omega_{\mathrm{c}}
+    \omega_{\mathrm c}
     \simeq
-    c_{\mathrm{P}}k,
+    c_{\mathrm P}k,
     \qquad
     v_{\mathrm{g},\parallel}
     \simeq
-    c_{\mathrm{P}},
+    c_{\mathrm P},
     \label{eq:photon_relaxation_long_wave_transport_limit}
 \end{equation}
 and therefore
 \begin{equation}
-    \frac{\mathrm{d}k}{\mathrm{d}t}
+    \left.
+    \frac{
+        \mathrm dk
+    }{
+        \mathrm dt
+    }
+    \right|_{\mathrm{rel}}
     \simeq
-    -\Gamma_{\mathrm{D}}k.
+    -\Gamma_{\mathrm D}k.
     \label{eq:photon_relaxation_wave_number_decay}
 \end{equation}
-For constant \(\Gamma_{\mathrm{D}}\),
+For constant \(\Gamma_{\mathrm D}\),
 \begin{equation}
     k(t)
     =
@@ -1661,7 +1959,7 @@ For constant \(\Gamma_{\mathrm{D}}\),
     \exp
     \left[
         -
-        \Gamma_{\mathrm{D}}
+        \Gamma_{\mathrm D}
         \left(
             t-t_{\mathrm{emit}}
         \right)
@@ -1675,7 +1973,7 @@ and, since \(\lambda=2\pi/k\),
     \lambda_{\mathrm{emit}}
     \exp
     \left[
-        \Gamma_{\mathrm{D}}
+        \Gamma_{\mathrm D}
         \left(
             t-t_{\mathrm{emit}}
         \right)
@@ -1683,24 +1981,35 @@ and, since \(\lambda=2\pi/k\),
     \label{eq:photon_relaxation_wavelength_solution}
 \end{equation}
 
-The wavelength increase is therefore the reciprocal wave-number response required for the carrier to remain on the real-frequency FCC eigenbranch. Equation~\eqref{eq:photon_relaxation_longitudinal_k_drag} remains a constitutive closure until it is recovered from the same causal FCC--Condensate response that produces the modal phase lag.
+The wavelength increase is therefore the reciprocal wave-number response
+required for the carrier to remain on the real-frequency FCC eigenbranch in
+the stationary homogeneous long-wave limit.
+Equation~\eqref{eq:photon_relaxation_longitudinal_k_drag} remains a
+constitutive closure until it is recovered from the same causal
+FCC--Condensate response that produces the modal phase offset.
 
-\subsection{Canonical Wave-Momentum and Reservoir Balance}
+
+\subsection{Canonical Wave-Momentum and Energy Balance}
 \label{subsec:photon_relaxation_reservoir_balance}
 
 The coherent packet carries the canonical Bloch momentum
 \begin{equation}
-    \mathbf{p}_{\gamma}^{(\mathrm{can})}
+    \mathbf p_{\gamma}^{(\mathrm{can})}
     =
-    \mathcal{I}_{\gamma}\mathbf{k}
+    I_\gamma\mathbf k
     =
-    \frac{E}{\omega}\mathbf{k}.
+    \frac{
+        E_\gamma
+    }{
+        \omega_\gamma
+    }
+    \mathbf k.
     \label{eq:photon_relaxation_packet_momentum}
 \end{equation}
 Its dimensions are
 \begin{equation}
     \left[
-        \mathbf{p}_{\gamma}^{(\mathrm{can})}
+        \mathbf p_{\gamma}^{(\mathrm{can})}
     \right]
     =
     \mathrm{kg\,m\,s^{-1}}.
@@ -1708,101 +2017,137 @@ Its dimensions are
 \end{equation}
 
 Since
-\(\mathrm{d}\mathcal{I}_{\gamma}/\mathrm{d}t=0\),
-the dissipative canonical-momentum change is
+\(\mathrm dI_\gamma/\mathrm dt=0\),
+the nonconservative canonical-momentum change is
 \begin{equation}
     \left.
-        \frac{\mathrm{d}
-        \mathbf{p}_{\gamma}^{(\mathrm{can})}}
-        {\mathrm{d}t}
-    \right|_{\mathrm{D}}
+        \frac{
+            \mathrm d
+            \mathbf p_{\gamma}^{(\mathrm{can})}
+        }{
+            \mathrm dt
+        }
+    \right|_{\mathrm{rel}}
     =
-    \mathcal{I}_{\gamma}
+    I_\gamma
     \left.
-        \dot{\mathbf{k}}
-    \right|_{\mathrm{D}}.
+        \dot{\mathbf k}
+    \right|_{\mathrm{rel}}.
     \label{eq:photon_relaxation_packet_momentum_loss}
 \end{equation}
 
-In the absence of additional loss channels, the corresponding reservoir bookkeeping is
+After reversible interaction energy and temporary dressing have been counted
+once, and in the absence of additional secular loss channels, the local
+coarse-grained bookkeeping is
 \begin{equation}
-    \frac{\mathrm{d}E_{\mathrm{res}}}{\mathrm{d}t}
+    \left.
+    \frac{
+        \mathrm dE_{\mathrm{AV}}
+    }{
+        \mathrm dt
+    }
+    \right|_{\mathrm{rec}}
     =
-    \Gamma_{\mathrm{D}}E,
+    \Gamma_{\mathrm D}E_\gamma,
     \qquad
     \left.
-        \frac{\mathrm{d}
-        \mathbf{p}_{\mathrm{res}}^{(\mathrm{can})}}
-        {\mathrm{d}t}
-    \right|_{\mathrm{D}}
+        \frac{
+            \mathrm d
+            \mathbf p_{\mathrm{AV}}^{(\mathrm{can})}
+        }{
+            \mathrm dt
+        }
+    \right|_{\mathrm{rec}}
     =
     -
     \left.
-        \frac{\mathrm{d}
-        \mathbf{p}_{\gamma}^{(\mathrm{can})}}
-        {\mathrm{d}t}
-    \right|_{\mathrm{D}}.
+        \frac{
+            \mathrm d
+            \mathbf p_{\gamma}^{(\mathrm{can})}
+        }{
+            \mathrm dt
+        }
+    \right|_{\mathrm{rel}}.
     \label{eq:photon_relaxation_reservoir_balance}
 \end{equation}
 
-This is an energy--quasimomentum balance, not yet a derivation of mechanical substrate recoil. Because \(\mathbf{k}\) is a Bloch wave vector, the mapping
+Here \(E_{\mathrm{AV}}\) and
+\(\mathbf p_{\mathrm{AV}}^{(\mathrm{can})}\) refer only to the
+finite-energy noncoherent Active-Vacuum degrees of freedom receiving energy
+and quasimomentum in this local process. They are not Structural Reservoir
+totals, and \(E_{\mathrm{AV}}\) is not identified here with thermal energy.
+
+This is an energy--quasimomentum balance, not yet a derivation of mechanical
+substrate recoil. Because \(\mathbf k\) is a Bloch wave vector, the mapping
 \begin{equation}
     \text{canonical lattice quasimomentum}
     \longrightarrow
-    \text{mechanical substrate momentum}
+    \text{mechanical FCC--Condensate momentum}
     \label{eq:photon_relaxation_quasimomentum_mechanical_mapping}
 \end{equation}
-must be recovered from the FCC--Condensate microphysics. The same completion must constrain recoil radiation, incoherent mode conversion, image diffusion, phase noise, and polarization scrambling.
+must be recovered from the spatial FCC--Condensate interaction. The same
+completion must constrain recoil radiation, incoherent mode conversion, image
+diffusion, phase noise, and polarization scrambling.
+
 
 \section{Exact Relaxation Redshift and Euclidean Path Law}
 \label{sec:photon_relaxation_exact_redshift}
 
-Equation~\eqref{eq:photon_relaxation_frequency_transport_law} may be written as
+Equation~\eqref{eq:photon_relaxation_frequency_transport_law} may be written
+as
 \begin{equation}
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    \ln\omega
+    \left.
+    \frac{\mathrm d}{\mathrm dt}
+    \ln\omega_\gamma
+    \right|_{\mathrm{rel}}
     =
-    -\Gamma_{\mathrm{D}}.
+    -\Gamma_{\mathrm D}.
     \label{eq:photon_relaxation_log_frequency_transport}
 \end{equation}
-For a generally position- or time-dependent relaxation rate,
+For a generally position-, carrier-, or time-dependent relaxation rate,
 \begin{equation}
-    \frac{
-        \omega_{\mathrm{obs}}
-    }{
-        \omega_{\mathrm{emit}}
-    }
+    \left(
+        \frac{
+            \omega_{\mathrm{obs}}
+        }{
+            \omega_{\mathrm{emit}}
+        }
+    \right)_{\mathrm D}
     =
     \exp
     \left[
         -
         \int_{t_{\mathrm{emit}}}^{t_{\mathrm{obs}}}
-        \Gamma_{\mathrm{D}}(t)
-        \,\mathrm{d}t
+        \Gamma_{\mathrm D}(t)
+        \,\mathrm dt
     \right].
     \label{eq:photon_relaxation_frequency_ratio}
 \end{equation}
-Using
+Define the relaxation-induced frequency-shift factor by
 \begin{equation}
-    1+z
-    =
-    \frac{
-        \omega_{\mathrm{emit}}
-    }{
-        \omega_{\mathrm{obs}}
-    },
+    1+z_{\mathrm D}
+    \equiv
+    \left(
+        \frac{
+            \omega_{\mathrm{emit}}
+        }{
+            \omega_{\mathrm{obs}}
+        }
+    \right)_{\mathrm D}.
     \label{eq:photon_relaxation_redshift_definition}
 \end{equation}
-gives the general temporal relation
+The general temporal relation is therefore
 \begin{equation}
+    \boxed{
     \ln
     \left(
-        1+z
+        1+z_{\mathrm D}
     \right)
     =
     \int_{t_{\mathrm{emit}}}^{t_{\mathrm{obs}}}
-    \Gamma_{\mathrm{D}}(t)
-    \,\mathrm{d}t.
+    \Gamma_{\mathrm D}(t)
+    \,\mathrm dt.
+    }
     \label{eq:photon_relaxation_exact_time_redshift}
 \end{equation}
 
@@ -1811,7 +2156,7 @@ Let \(\ell\) denote arc length along the physical ray and define
     v_{\mathrm{ray}}(\ell)
     =
     \left|
-        \mathbf{v}_{\mathrm{g}}(\ell)
+        \mathbf v_{\mathrm g}(\ell)
     \right|.
     \label{eq:photon_relaxation_ray_speed}
 \end{equation}
@@ -1823,102 +2168,105 @@ The propagation time is
     =
     \int_{\mathrm{path}}
     \frac{
-        \mathrm{d}\ell
+        \mathrm d\ell
     }{
         v_{\mathrm{ray}}
         \left[
             \omega(\ell),
-            \alpha_{\mathrm{G}}(\ell)
+            \alpha_{\mathrm G}(\ell)
         \right]
     }.
     \label{eq:photon_relaxation_path_time}
 \end{equation}
 Therefore, for a stationary but spatially nonuniform path,
 \begin{equation}
+    \boxed{
     \ln
     \left(
-        1+z
+        1+z_{\mathrm D}
     \right)
     =
     \int_{\mathrm{path}}
     \frac{
-        \Gamma_{\mathrm{D}}(\ell)
+        \Gamma_{\mathrm D}(\ell)
     }{
         v_{\mathrm{ray}}
         \left[
             \omega(\ell),
-            \alpha_{\mathrm{G}}(\ell)
+            \alpha_{\mathrm G}(\ell)
         \right]
     }
-    \,\mathrm{d}\ell.
+    \,\mathrm d\ell.
+    }
     \label{eq:photon_relaxation_general_path_redshift}
 \end{equation}
-This expression separates the conservative propagation time from the nonconservative relaxation accumulated per unit time.
+This expression separates the conservative propagation time from the
+nonconservative relaxation accumulated per unit time.
 
 In the weakly loaded constant-rate limit,
 \begin{equation}
-    \alpha_{\mathrm{G}}
+    \alpha_{\mathrm G}
     \rightarrow
     0,
     \qquad
     v_{\mathrm{ray}}
     \simeq
-    c_{\mathrm{E}},
+    c_{\mathrm E},
     \qquad
-    \Gamma_{\mathrm{D}}
+    \Gamma_{\mathrm D}
     \simeq
     \text{constant},
     \label{eq:photon_relaxation_void_limit}
 \end{equation}
 Equation~\eqref{eq:photon_relaxation_general_path_redshift} reduces to
 \begin{equation}
-    1+z
+    1+z_{\mathrm D}
     =
     \exp
     \left(
         \frac{
-            \Gamma_{\mathrm{D}}r
+            \Gamma_{\mathrm D}r
         }{
-            c_{\mathrm{E}}
+            c_{\mathrm E}
         }
     \right).
     \label{eq:photon_relaxation_exact_distance_redshift}
 \end{equation}
-Define the characteristic relaxation length
+For \(\Gamma_{\mathrm D}>0\), define the characteristic relaxation length
 \begin{equation}
-    R_{\mathrm{U}}
+    R_{\mathrm U}
     =
     \frac{
-        c_{\mathrm{E}}
+        c_{\mathrm E}
     }{
-        \Gamma_{\mathrm{D}}
+        \Gamma_{\mathrm D}
     }.
     \label{eq:photon_relaxation_ru_definition}
 \end{equation}
 Then
 \begin{equation}
-    1+z
+    1+z_{\mathrm D}
     =
-    e^{r/R_{\mathrm{U}}},
+    e^{r/R_{\mathrm U}},
     \qquad
     r
     =
-    R_{\mathrm{U}}
+    R_{\mathrm U}
     \ln
     \left(
-        1+z
+        1+z_{\mathrm D}
     \right).
     \label{eq:photon_relaxation_exact_euclidean_distance}
 \end{equation}
 
 The low-distance expansion is
 \begin{equation}
-    z
+    z_{\mathrm D}
     =
     \frac{
         r
     }{
-        R_{\mathrm{U}}
+        R_{\mathrm U}
     }
     +
     \frac{1}{2}
@@ -1926,111 +2274,118 @@ The low-distance expansion is
         \frac{
             r
         }{
-            R_{\mathrm{U}}
+            R_{\mathrm U}
         }
     \right)^2
     +
     \mathcal{O}
     \left(
         \frac{
-            r^3
+            r^{3}
         }{
-            R_{\mathrm{U}}^3
+            R_{\mathrm U}^{3}
         }
     \right),
     \label{eq:photon_relaxation_low_redshift_expansion}
 \end{equation}
 so
 \begin{equation}
-    c_{\mathrm{E}}z
+    c_{\mathrm E}z_{\mathrm D}
     \simeq
-    \Gamma_{\mathrm{D}}r
+    \Gamma_{\mathrm D}r
     \label{eq:photon_relaxation_linear_redshift_limit}
 \end{equation}
-is only the leading low-redshift approximation.
+is only the leading low-relaxation approximation.
 
-The absolute magnitude of \(\Gamma_{\mathrm{D}}\) is not yet derived from the FCC--Condensate microphysics. At the present level of TFT, it is fixed empirically by matching Equation~\eqref{eq:photon_relaxation_linear_redshift_limit} to the observed local Hubble slope,
+The absolute magnitude of \(\Gamma_{\mathrm D}\) is not derived in this
+appendix. The conditional microscopic scale-transfer closure is developed in
+Appendix~\ref{app:vacuumdamping_cosmicredshift}. Under its unit-reference
+closure,
 \begin{equation}
-    c_{\mathrm{E}}z
+    \Gamma_{\mathrm D}^{(0)}
     \simeq
-    H_{0}^{(\mathrm{obs})}r.
-\end{equation}
-Therefore, within the TFT low-redshift calibration,
-\begin{equation}
-    \Gamma_{\mathrm{D}}^{(\mathrm{cal})}
-    =
-    H_{0}^{(\mathrm{obs})}.
-    \label{eq:photon_relaxation_gamma_calibration}
-\end{equation}
-Using the adopted local value
-\begin{equation}
-    H_{0}^{(\mathrm{obs})}
-    =
-    73.04\,
-    \mathrm{km\,s^{-1}\,Mpc^{-1}},
-\end{equation}
-gives
-\begin{equation}
-    \Gamma_{\mathrm{D}}^{(\mathrm{cal})}
-    \approx
-    2.3671
+    2.3591
     \times
     10^{-18}
-    \ \mathrm{s}^{-1}.
-    \label{eq:photon_relaxation_gamma_numerical}
+    \ \mathrm{s^{-1}},
+    \label{eq:photon_relaxation_gamma_calibration}
 \end{equation}
-Thus, the equality between \(\Gamma_{\mathrm{D}}\) and the observed low-redshift Hubble slope is an empirical normalization of the TFT relaxation coefficient, not an independent microscopic derivation. A first-principles determination of \(\Gamma_{\mathrm{D}}\) from the causal FCC--Condensate response remains a theory-completion requirement.
+without using a Hubble constant, cosmic age, cosmological distance, CMB
+temperature, supernova fit, or BAO scale as an upstream input.
 
-Preservation of coherent modal action also gives
+The value in
+Equation~\eqref{eq:photon_relaxation_gamma_calibration} is used below only as
+a downstream reference input. It must not be retuned to reproduce an observed
+distance--redshift relation and is not a physical lower bound on the
+relaxation rate.
+
+Preservation of coherent modal action also gives, for the relaxation channel,
 \begin{equation}
-    \frac{
-        E_{\mathrm{obs}}
-    }{
-        E_{\mathrm{emit}}
-    }
+    \left(
+        \frac{
+            E_{\mathrm{obs}}
+        }{
+            E_{\mathrm{emit}}
+        }
+    \right)_{\mathrm D}
     =
-    \frac{
-        \omega_{\mathrm{obs}}
-    }{
-        \omega_{\mathrm{emit}}
-    }
+    \left(
+        \frac{
+            \omega_{\mathrm{obs}}
+        }{
+            \omega_{\mathrm{emit}}
+        }
+    \right)_{\mathrm D}
     =
-    \frac{1}{1+z}.
+    \frac{1}{1+z_{\mathrm D}}.
     \label{eq:photon_relaxation_energy_redshift}
 \end{equation}
-This is the energy reduction of the surviving coherent carrier under the selected transport closure. It must not be supplemented by an independent amplitude-extinction factor unless a separate absorption or incoherent-loss channel is introduced.
+This is the energy reduction of the surviving coherent carrier due to the
+selected propagation-relaxation channel. It must not be supplemented by an
+independent amplitude-extinction factor unless a separate absorption or
+incoherent-loss channel is introduced.
 
-Equation~\eqref{eq:photon_relaxation_exact_euclidean_distance} is exact within the constant-\(\Gamma_{\mathrm{D}}\), weak-loading, stationary Euclidean-path closure. The general result remains Equation~\eqref{eq:photon_relaxation_general_path_redshift}. Moreover, \(R_{\mathrm{U}}\) is an \(e\)-folding length, not a universal stopping radius or zero-energy boundary.
-
+Equation~\eqref{eq:photon_relaxation_exact_euclidean_distance} is exact within
+the constant-\(\Gamma_{\mathrm D}\), weak-loading, stationary Euclidean-path
+closure. It is a relaxation-only path relation and is not the general
+astronomical distance--redshift law when
+\(z_{\mathrm{obs}}\neq z_{\mathrm D}\). The general propagation result remains
+Equation~\eqref{eq:photon_relaxation_general_path_redshift}. Moreover,
+\(R_{\mathrm U}\) is a one-\(e\)-fold relaxation length, not a universal
+stopping radius, complete energy-removal distance, or thermalization boundary.
 
 \section{Observational Screening and Self-Consistent Path Integration}
 \label{sec:photon_relaxation_observational_screening}
 
-A viable photon branch must remain compatible with the absence of a resolved energy-ordered delay in high-energy transient observations. Two related tests are applied below: a local comparison with the conventional quadratic time-of-flight parametrization and a TFT path integral that includes the frequency evolution along the propagation path.
+A viable photon branch must remain compatible with the stringent observational
+limits on propagation-induced energy-ordered delays in high-energy transients.
+Two related tests are applied below: comparison with a conventional quadratic
+time-of-flight parametrization and a TFT path integral that includes the
+frequency evolution along the propagation path.
 
 In a weakly loaded region,
 \begin{equation}
     E
     \simeq
-    \hbar c_{\mathrm{E}}k.
+    \hbar c_{\mathrm E}k.
     \label{eq:photon_relaxation_energy_wave_number}
 \end{equation}
 Using
 \begin{equation}
     d_{\mathrm{nn}}
     =
-    2r_{\mathrm{D}},
+    2r_{\mathrm D},
     \qquad
-    E_{\max}
+    E_{\mathrm{max}}
     =
     \frac{
-        hc_{\mathrm{E}}
+        hc_{\mathrm E}
     }{
-        2r_{\mathrm{D}}
+        2r_{\mathrm D}
     }
     =
     \frac{
-        hc_{\mathrm{E}}
+        hc_{\mathrm E}
     }{
         d_{\mathrm{nn}}
     },
@@ -2044,40 +2399,44 @@ one obtains
     \frac{
         E
     }{
-        E_{\max}
+        E_{\mathrm{max}}
     }.
     \label{eq:photon_relaxation_dimensionless_energy}
 \end{equation}
 Equivalently, the natural low-wave-number conversion scale is
 \[
-    E_d
+    E_{\mathrm d}
     \equiv
     \frac{
-        \hbar c_{\mathrm{E}}
+        \hbar c_{\mathrm E}
     }{
         d_{\mathrm{nn}}
     }
     =
     \frac{
-        E_{\max}
+        E_{\mathrm{max}}
     }{
         2\pi
     },
     \qquad
     kd_{\mathrm{nn}}
     \simeq
-    \frac{E}{E_d}.
+    \frac{E}{E_{\mathrm d}}.
 \]
-The notation \(E_{\max}\) is retained because it is the established TFT calibration scale. In this calculation it sets the wavelength normalization; it is not identified with the exact energy at a Bloch-zone boundary.
+The notation \(E_{\mathrm{max}}\) is retained because it is the established
+TFT calibration scale. In this calculation it sets the wavelength
+normalization; it is not identified with the exact energy at a Bloch-zone
+boundary.
 
-For the baseline nearest-neighbor branch, Equation~\eqref{eq:photon_relaxation_baseline_group_velocity_expansion} gives
+For the baseline nearest-neighbor branch,
+Equation~\eqref{eq:photon_relaxation_baseline_group_velocity_expansion} gives
 \begin{equation}
     1
     -
     \frac{
-        v_{\mathrm{g}}
+        v_{\mathrm g}
     }{
-        c_{\mathrm{P}}
+        c_{\mathrm P}
     }
     =
     \frac{
@@ -2089,7 +2448,7 @@ For the baseline nearest-neighbor branch, Equation~\eqref{eq:photon_relaxation_b
         \frac{
             E
         }{
-            E_{\max}
+            E_{\mathrm{max}}
         }
     \right)^2
     +
@@ -2098,7 +2457,7 @@ For the baseline nearest-neighbor branch, Equation~\eqref{eq:photon_relaxation_b
         \frac{
             E^4
         }{
-            E_{\max}^4
+            E_{\mathrm{max}}^4
         }
     \right).
     \label{eq:photon_relaxation_baseline_energy_delay}
@@ -2109,7 +2468,7 @@ The conventional subluminal quadratic comparison law is
     \frac{
         v(E)
     }{
-        c_{\mathrm{E}}
+        c_{\mathrm E}
     }
     \simeq
     1
@@ -2124,8 +2483,10 @@ The conventional subluminal quadratic comparison law is
     \right)^2,
     \label{eq:photon_relaxation_standard_quadratic_parameterization}
 \end{equation}
-where \(E_{\mathrm{QG},2}\) is an observational comparison scale rather than a TFT material constant. In the weak-loading limit
-\(c_{\mathrm{P}}\simeq c_{\mathrm{E}}\), matching the quadratic coefficients gives
+where \(E_{\mathrm{QG},2}\) is an observational comparison scale rather than a
+TFT material constant. In the weak-loading limit
+\(c_{\mathrm P}\simeq c_{\mathrm E}\), matching the quadratic coefficients
+gives
 \begin{equation}
     E_{\mathrm{QG},2}^{(\mathrm{base})}
     =
@@ -2134,13 +2495,13 @@ where \(E_{\mathrm{QG},2}\) is an observational comparison scale rather than a T
     }{
         \pi
     }
-    E_{\max}.
+    E_{\mathrm{max}}.
     \label{eq:photon_relaxation_baseline_effective_scale}
 \end{equation}
 
 For the adopted TFT calibration
 \begin{equation}
-    E_{\max}
+    E_{\mathrm{max}}
     \approx
     8.320
     \times
@@ -2177,9 +2538,16 @@ The LHAASO analysis of GRB~221009A reports
     \label{eq:photon_relaxation_lhaaso_quadratic_bound}
 \end{equation}
 for its quadratic Lorentz-invariance-violation parametrization
-\cite{LHAASO2024LIV}. The local coefficient comparison therefore places the baseline nearest-neighbor photon branch in strong tension with the selected observational bound.
+\cite{LHAASO2024LIV}. This comparison places the baseline nearest-neighbor
+branch below the quoted effective scale. Because the observational bound is
+extracted using its own propagation and source-distance model, it is treated
+here as a screening benchmark rather than a direct TFT likelihood bound.
 
-A self-consistent TFT test must also account for the changing carrier energy along the path. Consider a weakly loaded path of length \(r\), parameterized by \(\ell\), with the observer at \(\ell=r\). Under the constant-rate transport law,
+A self-consistent TFT test must account for both the changing carrier energy
+and the relaxation component of the source redshift. Consider a weakly loaded
+path of length \(r\), parameterized by \(\ell\), with the observer at
+\(\ell=r\). Under the constant-rate transport law, with the observed energies
+understood in the local active-medium frame at the observer,
 \begin{equation}
     E(\ell)
     =
@@ -2189,16 +2557,16 @@ A self-consistent TFT test must also account for the changing carrier energy alo
         \frac{
             r-\ell
         }{
-            R_{\mathrm{U}}
+            R_{\mathrm U}
         }
     \right),
     \label{eq:photon_relaxation_path_energy}
 \end{equation}
 and
 \begin{equation}
-    1+z_{\mathrm{s}}
+    1+z_{\mathrm D}
     =
-    e^{r/R_{\mathrm{U}}}.
+    e^{r/R_{\mathrm U}}.
     \label{eq:photon_relaxation_path_scale}
 \end{equation}
 
@@ -2207,9 +2575,9 @@ Suppose the leading local fractional speed reduction is
     1
     -
     \frac{
-        v_{\mathrm{g}}(E)
+        v_{\mathrm g}(E)
     }{
-        c_{\mathrm{E}}
+        c_{\mathrm E}
     }
     =
     A_n
@@ -2217,27 +2585,28 @@ Suppose the leading local fractional speed reduction is
         \frac{
             E
         }{
-            E_{\max}
+            E_{\mathrm{max}}
         }
     \right)^n.
     \label{eq:photon_relaxation_generic_fractional_delay}
 \end{equation}
-The arrival-time difference between simultaneously emitted components with observed energies
+For \(\Gamma_{\mathrm D}>0\), the arrival-time difference between
+simultaneously emitted components with observed energies
 \(E_{\mathrm{h,obs}}\) and \(E_{\mathrm{l,obs}}\) is then
 \begin{align}
     \Delta t_n
     &\simeq
-    \frac{1}{c_{\mathrm{E}}}
+    \frac{1}{c_{\mathrm E}}
     \int_0^r
     \left[
         \delta_n
         \left(
-            E_{\mathrm{h}}(\ell)
+            E_{\mathrm h}(\ell)
         \right)
         -
         \delta_n
         \left(
-            E_{\mathrm{l}}(\ell)
+            E_{\mathrm l}(\ell)
         \right)
     \right]
     \mathrm{d}\ell
@@ -2246,14 +2615,14 @@ The arrival-time difference between simultaneously emitted components with obser
     \frac{
         A_n
     }{
-        n\Gamma_{\mathrm{D}}
+        n\Gamma_{\mathrm D}
     }
     \left[
         \left(
             \frac{
                 E_{\mathrm{h,obs}}
             }{
-                E_{\max}
+                E_{\mathrm{max}}
             }
         \right)^n
         -
@@ -2261,13 +2630,13 @@ The arrival-time difference between simultaneously emitted components with obser
             \frac{
                 E_{\mathrm{l,obs}}
             }{
-                E_{\max}
+                E_{\mathrm{max}}
             }
         \right)^n
     \right]
     \left[
         \left(
-            1+z_{\mathrm{s}}
+            1+z_{\mathrm D}
         \right)^n
         -
         1
@@ -2275,8 +2644,10 @@ The arrival-time difference between simultaneously emitted components with obser
     \label{eq:photon_relaxation_integrated_delay_general}
 \end{align}
 where
-\(\delta_n(E)=A_n(E/E_{\max})^n\).
-Equation~\eqref{eq:photon_relaxation_integrated_delay_general} is conditional on the same weak-loading, constant-\(\Gamma_{\mathrm{D}}\) transport closure as Equation~\eqref{eq:photon_relaxation_exact_euclidean_distance}.
+\(\delta_n(E)=A_n(E/E_{\mathrm{max}})^n\).
+Equation~\eqref{eq:photon_relaxation_integrated_delay_general} is conditional
+on the same weak-loading, constant-\(\Gamma_{\mathrm D}\) transport closure
+as Equation~\eqref{eq:photon_relaxation_exact_euclidean_distance}.
 
 For the baseline branch,
 \begin{equation}
@@ -2293,9 +2664,10 @@ For the baseline branch,
     }.
     \label{eq:photon_relaxation_baseline_delay_coefficient}
 \end{equation}
-For GRB~221009A, use
+
+For GRB~221009A, use the measured source redshift and observed-energy interval
 \begin{equation}
-    z_{\mathrm{s}}
+    z_{\mathrm{obs}}
     =
     0.151,
     \qquad
@@ -2307,10 +2679,36 @@ For GRB~221009A, use
     E_{\mathrm{h,obs}}
     =
     7
-    \ \mathrm{TeV},
+    \ \mathrm{TeV}.
     \label{eq:photon_relaxation_lhaaso_screening_inputs}
 \end{equation}
-together with the empirical TFT calibration in Equation~\eqref{eq:photon_relaxation_gamma_numerical}. Equation~\eqref{eq:photon_relaxation_integrated_delay_general} then gives
+
+The observed value \(z_{\mathrm{obs}}=0.151\) must not in general be identified
+with \(z_{\mathrm D}\). In the stationary factorized regime of
+Appendix~\ref{app:time_dilation}, if the combined endpoint factor satisfies
+\begin{equation}
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm{grav}})
+    \geq
+    1,
+\end{equation}
+then
+\begin{equation}
+    z_{\mathrm D}
+    \leq
+    z_{\mathrm{obs}}.
+\end{equation}
+A conservative maximal-relaxation screening therefore sets
+\begin{equation}
+    z_{\mathrm D}
+    =
+    z_{\mathrm{obs}}
+    =
+    0.151.
+\end{equation}
+
+Using Equation~\eqref{eq:photon_relaxation_gamma_calibration},
+Equation~\eqref{eq:photon_relaxation_integrated_delay_general} then gives
 \begin{equation}
     \Delta t_2^{(\mathrm{base})}
     \approx
@@ -2320,16 +2718,23 @@ together with the empirical TFT calibration in Equation~\eqref{eq:photon_relaxat
     \ \mathrm{s}.
     \label{eq:photon_relaxation_baseline_integrated_delay}
 \end{equation}
-This macroscopically large delay strongly disfavors identifying the reduced baseline branch with the completed physical photon branch under the selected TFT propagation law.
+This is the baseline-branch delay in the maximal-relaxation limit. A smaller
+\(z_{\mathrm D}\) reduces the predicted delay according to
+Equation~\eqref{eq:photon_relaxation_integrated_delay_general}. The baseline
+branch therefore cannot be assigned an unconditional cosmological exclusion
+from this screening calculation alone until the TFT macroscopic
+distance--redshift relation is independently derived.
 
-For the dispersion-suppressed branch, Equations~\eqref{eq:photon_relaxation_suppressed_group_velocity} and~\eqref{eq:photon_relaxation_fcc_directional_bounds} give
+For the dispersion-suppressed branch,
+Equations~\eqref{eq:photon_relaxation_suppressed_group_velocity}
+and~\eqref{eq:photon_relaxation_fcc_directional_bounds} give
 \begin{equation}
     1
     -
     \frac{
         v_{\mathrm{g},\parallel}
     }{
-        c_{\mathrm{P}}
+        c_{\mathrm P}
     }
     \leq
     \frac{
@@ -2354,7 +2759,7 @@ In energy form,
     \frac{
         v_{\mathrm{g},\parallel}
     }{
-        c_{\mathrm{P}}
+        c_{\mathrm P}
     }
     \leq
     \frac{
@@ -2366,7 +2771,7 @@ In energy form,
         \frac{
             E
         }{
-            E_{\max}
+            E_{\mathrm{max}}
         }
     \right)^4
     +
@@ -2375,7 +2780,7 @@ In energy form,
         \frac{
             E^6
         }{
-            E_{\max}^6
+            E_{\mathrm{max}}^6
         }
     \right).
     \label{eq:photon_relaxation_suppressed_energy_bound}
@@ -2395,7 +2800,8 @@ Thus,
     }.
     \label{eq:photon_relaxation_suppressed_delay_coefficient}
 \end{equation}
-Using the same source redshift, observed-energy interval, and relaxation calibration gives
+Using the same observed-energy interval and the maximal-relaxation choice
+\(z_{\mathrm D}=z_{\mathrm{obs}}=0.151\) gives
 \begin{equation}
     \Delta t_4^{(\mathrm{sup})}
     \lesssim
@@ -2405,29 +2811,45 @@ Using the same source redshift, observed-energy interval, and relaxation calibra
     \ \mathrm{s}.
     \label{eq:photon_relaxation_suppressed_integrated_delay}
 \end{equation}
-The selected dispersion-suppressed branch therefore produces a negligible path-integrated chromatic delay over the tested TeV interval.
+Any smaller relaxation component reduces this value further. The selected
+dispersion-suppressed branch therefore produces a negligible path-integrated
+chromatic delay over the tested TeV interval throughout the corresponding
+allowed relaxation range.
 
-This is a kinematic screening calculation, not a detector-level likelihood analysis. A complete observational test must include the measured source light curve, intrinsic spectral evolution, detector response, and energy uncertainty. Within the present screening scope, the baseline nearest-neighbor branch is strongly disfavored, whereas the selected quartic branch remains compatible with the quoted timing benchmark. The comparison constrains the effective photon eigenbranch but does not derive the microscopic origin of the \(1/12\) coefficient.
+This is a kinematic screening calculation, not a detector-level likelihood
+analysis. A complete observational test must include the independently derived
+TFT source distance, the measured source light curve, intrinsic spectral
+evolution, detector response, and energy uncertainty. Within the present
+screening scope, the baseline nearest-neighbor branch remains observationally
+problematic under a large relaxation path, whereas the selected quartic branch
+is strongly protected against the quoted timing constraint. The comparison
+constrains the effective photon eigenbranch but does not derive the microscopic
+origin of the \(1/12\) coefficient.
+
 
 \section{Finite-Packet Cycle Dilation and Its Scope}
 \label{sec:photon_relaxation_packet_dilation_scope}
 
 Preservation of the coherent modal action
 \(E/\omega\)
-does not by itself determine the temporal width of a finite packet. Packet-duration evolution requires an additional condition on the packet phase structure.
+does not by itself determine the temporal width of a finite packet.
+Packet-duration evolution requires an additional condition on the packet
+phase structure.
 
-For a packet bounded by \(t_{-}\) and \(t_{+}\), define the carrier-cycle count by
+For a packet bounded by \(t_{-}\) and \(t_{+}\), define the carrier-cycle
+count by
 \begin{equation}
-    N
+    N_{\mathrm{cyc}}
     =
     \int_{t_{-}}^{t_{+}}
     f(t)
     \,\mathrm{d}t.
     \label{eq:photon_relaxation_packet_cycle_count}
 \end{equation}
-For a narrowband packet whose carrier frequency varies negligibly across its own support,
+For a narrowband packet whose carrier frequency varies negligibly across its
+own support,
 \begin{equation}
-    N
+    N_{\mathrm{cyc}}
     \simeq
     f_{\mathrm{c}}
     \Delta t_{\mathrm{pkt}},
@@ -2442,14 +2864,15 @@ For a narrowband packet whose carrier frequency varies negligibly across its own
 
 The additional fixed-cycle closure is
 \begin{equation}
-    N_{\mathrm{obs}}
+    N_{\mathrm{cyc,obs}}
     =
-    N_{\mathrm{emit}}.
+    N_{\mathrm{cyc,emit}}.
     \label{eq:photon_relaxation_packet_cycle_conservation}
 \end{equation}
-This condition is distinct from modal-action preservation. It states that the packet retains its ordered carrier-phase content during propagation.
+This condition is distinct from modal-action preservation. It states that the
+packet retains its ordered carrier-phase content during propagation.
 
-If the frequency relaxation is effectively uniform across the packet,
+If the relaxation is effectively uniform across the packet,
 \begin{equation}
     f_{\mathrm{emit}}
     \Delta t_{\mathrm{pkt,emit}}
@@ -2458,7 +2881,7 @@ If the frequency relaxation is effectively uniform across the packet,
     \Delta t_{\mathrm{pkt,obs}}.
     \label{eq:photon_relaxation_packet_cycle_balance}
 \end{equation}
-Using
+For the propagation-relaxation contribution alone,
 \begin{equation}
     \frac{
         f_{\mathrm{emit}}
@@ -2466,23 +2889,28 @@ Using
         f_{\mathrm{obs}}
     }
     =
-    1+z,
+    1+z_{\mathrm D},
     \label{eq:photon_relaxation_frequency_redshift}
 \end{equation}
-gives
+and therefore
 \begin{equation}
     \Delta t_{\mathrm{pkt,obs}}
     =
     \left(
-        1+z
+        1+z_{\mathrm D}
     \right)
     \Delta t_{\mathrm{pkt,emit}}.
     \label{eq:photon_relaxation_packet_duration_dilation}
 \end{equation}
 
-Equation~\eqref{eq:photon_relaxation_packet_duration_dilation} therefore requires preservation of cycle count, narrowband or adiabatic carrier evolution, approximately uniform relaxation across the packet, and survival of the packet as one coherent phase structure. It does not establish dilation of an arbitrary macroscopic source light curve.
+Equation~\eqref{eq:photon_relaxation_packet_duration_dilation} therefore
+requires preservation of cycle count, narrowband or adiabatic carrier
+evolution, approximately uniform relaxation across the packet, and survival
+of the packet as one coherent phase structure. It does not establish dilation
+of an arbitrary macroscopic source light curve.
 
-To show the distinction, consider two independently emitted packets following the same stationary path:
+To show the distinction, consider two independently emitted packets following
+the same stationary path:
 \begin{equation}
     t_{\mathrm{obs}}^{(j)}
     =
@@ -2521,19 +2949,27 @@ so
     \label{eq:photon_relaxation_no_automatic_envelope_dilation}
 \end{equation}
 
-Carrier-frequency relaxation and finite-packet dilation therefore do not automatically imply
+Carrier-frequency relaxation and finite-packet dilation therefore do not
+automatically imply
 \begin{equation}
     \Delta t_{\mathrm{light\,curve,obs}}
     =
     \left(
-        1+z
+        1+z_{\mathrm D}
     \right)
     \Delta t_{\mathrm{light\,curve,emit}}
     \label{eq:photon_relaxation_macroscopic_dilation_target}
 \end{equation}
 for a sequence of independently emitted packets.
 
-A derivation of astronomical transient dilation requires an additional source-to-envelope transport law. That law must either show that the macroscopic emission envelope is itself carried by a coherent finite-cycle structure or derive an equivalent mapping between source chronology and observer chronology. The residual lattice dispersion evaluated in Section~\ref{sec:photon_relaxation_observational_screening} is far too small to produce an order-\((1+z)\) stretching of a broadband transient envelope.
+Macroscopic source-event timing must instead be obtained from the
+source--observer kinematics, gravitational endpoint clock conditions, or an
+independently derived source-envelope transport law. These endpoint
+contributions are treated in Appendix~\ref{app:time_dilation}. The residual
+lattice dispersion evaluated in
+Section~\ref{sec:photon_relaxation_observational_screening} is far too small
+to produce an order-\((1+z_{\mathrm D})\) stretching of a broadband transient
+envelope.
 
 The result established here is therefore restricted to
 \begin{equation}
@@ -2546,12 +2982,15 @@ The result established here is therefore restricted to
     \end{aligned}
     \label{eq:photon_relaxation_packet_dilation_scope_result}
 \end{equation}
-Macroscopic light-curve dilation remains a separate cosmological transport-completion problem.
+It is not a macroscopic light-curve dilation law.
 
-\section{Threshold Assimilation into a CMB-Associated Thermal Reservoir}
+
+\section{CMB-Band Comparison Scale and Independent Terminal Condition}
 \label{sec:photon_relaxation_cmb_assimilation}
 
-The exponential transport law does not drive the coherent carrier to zero frequency or energy at any finite distance. In the weak-loading, constant-rate limit,
+The exponential transport law does not drive the coherent carrier to zero
+frequency or energy at any finite distance. In the weak-loading,
+constant-rate limit,
 \begin{equation}
     \omega(r)
     =
@@ -2559,12 +2998,12 @@ The exponential transport law does not drive the coherent carrier to zero freque
     \exp
     \left(
         -
-        \frac{r}{R_{\mathrm{U}}}
+        \frac{r}{R_{\mathrm U}}
     \right),
     \label{eq:photon_relaxation_frequency_distance_law}
 \end{equation}
 and, because
-\(\mathcal{I}_{\gamma}=E/\omega\)
+\(I_{\gamma}=E/\omega\)
 is preserved,
 \begin{equation}
     E(r)
@@ -2573,13 +3012,13 @@ is preserved,
     \exp
     \left(
         -
-        \frac{r}{R_{\mathrm{U}}}
+        \frac{r}{R_{\mathrm U}}
     \right).
     \label{eq:photon_relaxation_energy_distance_law}
 \end{equation}
 Consequently,
 \begin{equation}
-    E(R_{\mathrm{U}})
+    E(R_{\mathrm U})
     =
     \frac{
         E_{\mathrm{emit}}
@@ -2588,9 +3027,15 @@ Consequently,
     }.
     \label{eq:photon_relaxation_one_efold_energy}
 \end{equation}
-Thus, \(R_{\mathrm{U}}\) is an \(e\)-folding length, not a universal zero-energy or stopping radius.
+Thus, \(R_{\mathrm U}\) is an \(e\)-folding length, not a universal
+zero-energy or stopping radius.
 
-A finite coherence horizon may nevertheless arise if the relaxed transverse mode becomes dynamically indistinguishable from the ambient thermal spectrum. Because the CMB is broadband, introduce an effective coherence-loss frequency
+A finite coherence distance may arise if the relaxed transverse mode reaches a
+microscopic condition at which it can no longer remain on the coherent photon
+branch. The present appendix does not derive that terminal condition.
+
+For comparison with the observed CMB band, retain the existing effective
+frequency
 \begin{equation}
     \omega_{\mathrm{CMB}}^{(\mathrm{eff})}
     =
@@ -2598,28 +3043,30 @@ A finite coherence horizon may nevertheless arise if the relaxed transverse mode
     f_{\mathrm{CMB}}^{(\mathrm{eff})}.
     \label{eq:photon_relaxation_effective_cmb_frequency}
 \end{equation}
-This parameter represents an effective spectral and coherence boundary, not a unique frequency of the CMB.
+This quantity is a phenomenological CMB-associated comparison scale. It is
+not a unique frequency of the CMB and is not a first-principles microscopic
+coherence-loss threshold.
 
 For a carrier with modal action
-\(\mathcal{I}_{\gamma}\),
-the remaining threshold energy is
+\(I_{\gamma}\),
+define the corresponding CMB-band comparison energy by
 \begin{equation}
-    E_{\mathrm{th}}^{(\mathrm{eff})}
+    E_{\mathrm{CMB}}^{(\mathrm{cmp})}
     =
-    \mathcal{I}_{\gamma}
+    I_{\gamma}
     \omega_{\mathrm{CMB}}^{(\mathrm{eff})}.
     \label{eq:photon_relaxation_effective_cmb_energy}
 \end{equation}
-The threshold energy therefore depends on the action carried by the coherent mode. For one quantum-normalized excitation,
+For one quantum-normalized excitation,
 \begin{equation}
-    \mathcal{I}_{\gamma}
+    I_{\gamma}
     =
     \hbar,
     \label{eq:photon_relaxation_quantum_normalized_action}
 \end{equation}
 and Equation~\eqref{eq:photon_relaxation_effective_cmb_energy} reduces to
 \[
-    E_{\mathrm{th}}^{(\mathrm{eff})}
+    E_{\mathrm{CMB}}^{(\mathrm{cmp})}
     =
     \hbar
     \omega_{\mathrm{CMB}}^{(\mathrm{eff})}
@@ -2628,28 +3075,31 @@ and Equation~\eqref{eq:photon_relaxation_effective_cmb_energy} reduces to
     f_{\mathrm{CMB}}^{(\mathrm{eff})}.
 \]
 
-The assimilation condition is most fundamentally stated in frequency:
+For downstream comparison only, define the distance
+\(r_{\mathrm{CMB}}^{(\mathrm{cmp})}\)
+at which the coherently relaxed carrier frequency crosses the selected
+effective CMB frequency:
 \begin{equation}
     \omega
     \left(
-        r_{\mathrm{assim}}
+        r_{\mathrm{CMB}}^{(\mathrm{cmp})}
     \right)
     =
-    \omega_{\mathrm{CMB}}^{(\mathrm{eff})},
+    \omega_{\mathrm{CMB}}^{(\mathrm{eff})}.
     \label{eq:photon_relaxation_assimilation_condition}
 \end{equation}
-with
+For
 \begin{equation}
     \omega_{\mathrm{emit}}
     >
-    \omega_{\mathrm{CMB}}^{(\mathrm{eff})}.
+    \omega_{\mathrm{CMB}}^{(\mathrm{eff})},
     \label{eq:photon_relaxation_assimilation_domain}
 \end{equation}
-Using Equation~\eqref{eq:photon_relaxation_frequency_distance_law},
+Equation~\eqref{eq:photon_relaxation_frequency_distance_law} gives
 \begin{equation}
-    r_{\mathrm{assim}}
+    r_{\mathrm{CMB}}^{(\mathrm{cmp})}
     =
-    R_{\mathrm{U}}
+    R_{\mathrm U}
     \ln
     \left(
         \frac{
@@ -2659,7 +3109,7 @@ Using Equation~\eqref{eq:photon_relaxation_frequency_distance_law},
         }
     \right)
     =
-    R_{\mathrm{U}}
+    R_{\mathrm U}
     \ln
     \left(
         \frac{
@@ -2670,23 +3120,24 @@ Using Equation~\eqref{eq:photon_relaxation_frequency_distance_law},
     \right).
     \label{eq:photon_relaxation_assimilation_distance_frequency}
 \end{equation}
-Because the same modal action multiplies the initial and threshold frequencies,
+Because the same modal action multiplies the initial and comparison
+frequencies,
 \begin{equation}
-    r_{\mathrm{assim}}
+    r_{\mathrm{CMB}}^{(\mathrm{cmp})}
     =
-    R_{\mathrm{U}}
+    R_{\mathrm U}
     \ln
     \left(
         \frac{
             E_{\mathrm{emit}}
         }{
-            E_{\mathrm{th}}^{(\mathrm{eff})}
+            E_{\mathrm{CMB}}^{(\mathrm{cmp})}
         }
     \right).
     \label{eq:photon_relaxation_assimilation_distance_energy}
 \end{equation}
 
-The assimilation distance is therefore frequency dependent. For
+For the illustrative ratio
 \begin{equation}
     \frac{
         f_{\mathrm{emit}}
@@ -2701,32 +3152,41 @@ The assimilation distance is therefore frequency dependent. For
 \end{equation}
 one obtains
 \begin{equation}
-    r_{\mathrm{assim}}
+    r_{\mathrm{CMB}}^{(\mathrm{cmp})}
     \sim
     \left(
         7
         \text{--}
         9
     \right)
-    R_{\mathrm{U}}.
+    R_{\mathrm U}.
     \label{eq:photon_relaxation_optical_assimilation_scale}
 \end{equation}
-For the adopted TFT calibration of \(R_{\mathrm{U}}\), this is of order
+Using the unit-reference rate in
+Equation~\eqref{eq:photon_relaxation_gamma_calibration}, the corresponding
+reference value of \(R_{\mathrm U}\) makes this distance of order
 \begin{equation}
     10^{27}
     \ \mathrm{m}.
     \label{eq:photon_relaxation_assimilation_order}
 \end{equation}
-This is an approximate optical-to-thermal coherence scale, not a universal photon horizon.
 
-\subsection{Energy Accounting at the Assimilation Threshold}
+Equations~\eqref{eq:photon_relaxation_assimilation_distance_frequency}--%
+\eqref{eq:photon_relaxation_assimilation_order} are downstream
+spectral-comparison estimates. They do not define a CMB formation or
+thermalization distance, derive the CMB temperature, establish the microscopic
+terminal coherence condition, or define a universal photon horizon.
+
+
+\subsection{Energy Accounting for an Independently Derived Terminal Condition}
 \label{subsec:photon_relaxation_assimilation_energy_accounting}
 
-Before terminal coherence loss, integration of the carrier--reservoir balance gives
+Before any terminal coherence loss, integration of the local energy balance
+gives
 \begin{equation}
-    E_{\mathrm{res}}(t)
+    E_{\mathrm{AV}}(t)
     -
-    E_{\mathrm{res}}
+    E_{\mathrm{AV}}
     \left(
         t_{\mathrm{emit}}
     \right)
@@ -2736,73 +3196,104 @@ Before terminal coherence loss, integration of the carrier--reservoir balance gi
     E(t),
     \label{eq:photon_relaxation_integrated_reservoir_energy}
 \end{equation}
-provided that no additional absorptive, radiative, or mode-conversion channel is active.
+provided that no additional absorptive, radiative, or mode-conversion channel
+is active.
 
-Immediately before assimilation,
+Here \(E_{\mathrm{AV}}\) denotes the energy transferred into noncoherent
+Active-Vacuum degrees of freedom participating in the local process. It is
+neither the total energy of the Structural Reservoir nor, at this stage,
+identified with thermal energy.
+
+Suppose a true microscopic terminal energy
 \begin{equation}
-    E
-    \left(
-        r_{\mathrm{assim}}^{-}
-    \right)
-    =
-    E_{\mathrm{th}}^{(\mathrm{eff})}.
-    \label{eq:photon_relaxation_preassimilation_energy}
+    E_{\mathrm{term}}^{(\mathrm{TFT})}
 \end{equation}
-The continuously transferred energy is therefore
+is independently derived from the stability of the coherent photon branch.
+
+The continuously transferred energy accumulated before that event is then
 \begin{equation}
-    \Delta E_{\mathrm{res}}^{(\mathrm{cont})}
+    \Delta E_{\mathrm{AV}}^{(\mathrm{cont})}
     =
     E_{\mathrm{emit}}
     -
-    E_{\mathrm{th}}^{(\mathrm{eff})}.
+    E_{\mathrm{term}}^{(\mathrm{TFT})}.
     \label{eq:photon_relaxation_continuous_reservoir_transfer}
 \end{equation}
-Under the terminal assimilation closure, the remaining coherent energy is redistributed into accessible reservoir modes:
+
+If terminal coherence loss transfers the remaining coherent energy into
+allowed noncoherent Active-Vacuum excitations, then
 \begin{equation}
-    \Delta E_{\mathrm{res}}^{(\mathrm{assim})}
+    \Delta E_{\mathrm{AV}}^{(\mathrm{term})}
     =
-    E_{\mathrm{th}}^{(\mathrm{eff})}.
+    E_{\mathrm{term}}^{(\mathrm{TFT})}.
     \label{eq:photon_relaxation_terminal_assimilation_energy}
 \end{equation}
 Hence
 \begin{equation}
-    \Delta E_{\mathrm{res}}^{(\mathrm{tot})}
+    \Delta E_{\mathrm{AV}}^{(\mathrm{tot})}
     =
-    \Delta E_{\mathrm{res}}^{(\mathrm{cont})}
+    \Delta E_{\mathrm{AV}}^{(\mathrm{cont})}
     +
-    \Delta E_{\mathrm{res}}^{(\mathrm{assim})}
+    \Delta E_{\mathrm{AV}}^{(\mathrm{term})}
     =
     E_{\mathrm{emit}}.
     \label{eq:photon_relaxation_total_reservoir_transfer}
 \end{equation}
 
-Equation~\eqref{eq:photon_relaxation_total_reservoir_transfer} closes only the energy bookkeeping of one assimilated coherent mode. It does not establish global thermal equilibrium, detailed balance, or preservation of the measured CMB spectrum. Those require a microscopic theory of the terminal instability, the destination of deposited energy and momentum, and the resulting thermal and spectral response.
+Equation~\eqref{eq:photon_relaxation_total_reservoir_transfer} closes only the
+energy bookkeeping of one coherent mode under the stated terminal closure. It
+does not specify how the transferred energy is partitioned among allowed
+microscopic excitations and does not imply fractional action stored on
+individual FCC nodes.
+
+If subsequent number-changing detailed-balance dynamics exchange this
+transferred energy with a thermal population of the TFT photon branch, that
+thermal evolution requires an additional microscopic mechanism. It is not
+established by the coherent scale-transfer law itself.
+
 
 \section{Closure Status, Falsifiability, and Remaining Completion}
 \label{sec:photon_relaxation_status}
 
-The appendix contains three logically distinct elements: results derived from the selected reduced carrier action, conditional nonconservative transport closures, and unresolved microscopic or cosmological completion requirements.
+The appendix contains three logically distinct elements: results derived from
+the selected reduced carrier action, conditional nonconservative transport
+closures, and unresolved microscopic or cosmological completion requirements.
+
 
 \subsection{Results Derived Within the Selected Reduced Carrier Action}
 \label{subsec:photon_relaxation_derived_status}
 
-Within the divergence-free positive two-term action of Section~\ref{sec:photon_relaxation_minimal_closure}, the following results are derived:
+Within the divergence-free two-term action with nonnegative potential energy
+in Section~\ref{sec:photon_relaxation_minimal_closure}, the following results
+are derived:
 
 \begin{enumerate}
-    \item The baseline directional chain has a leading group-speed correction proportional to
+    \item The baseline directional chain has a leading group-speed correction
+    proportional to
     \(k^2d_{\mathrm{nn}}^2\).
 
-    \item The positive centered-second-difference term with coefficient \(1/12\) cancels the quartic term in the expansion of \(\omega^2\) within the selected stencil.
+    \item The centered-second-difference term with coefficient \(1/12\)
+    cancels the quartic term in the expansion of \(\omega^2\) within the
+    selected stencil.
 
-    \item The resulting reduced transverse branch is gapless, inversion symmetric, spectrally nonnegative, and degenerate in its two transverse components.
+    \item The resulting reduced transverse branch is gapless, inversion
+    symmetric, spectrally nonnegative, and degenerate in its two transverse
+    components.
 
     \item Its leading radial group-speed correction is proportional to
-    \(k^4d_{\mathrm{nn}}^4\), with the FCC directional bound in Equation~\eqref{eq:photon_relaxation_fcc_directional_bounds}.
-
-    \item The GRB screening calculation strongly disfavors the baseline nearest-neighbor branch while leaving the selected quartic branch compatible with the adopted timing benchmark.
+    \(k^4d_{\mathrm{nn}}^4\), with the FCC directional bound in
+    Equation~\eqref{eq:photon_relaxation_fcc_directional_bounds}.
 \end{enumerate}
 
-These results follow from the selected reduced action; they do not establish that the complete FCC parent dynamics uniquely generate that action.
+These results follow from the selected reduced action; they do not establish
+that the complete FCC parent dynamics uniquely generate that action. The GRB
+timing estimates in
+Section~\ref{sec:photon_relaxation_observational_screening} are conditional
+screening consequences of these dispersion results together with the
+unit-reference rate, the maximal-relaxation endpoint assumption, and the
+stated observational inputs; they are not derived from the carrier action
+alone.
+
 
 \subsection{Conditional Nonconservative Closures}
 \label{subsec:photon_relaxation_conditional_status}
@@ -2810,27 +3301,40 @@ These results follow from the selected reduced action; they do not establish tha
 The relaxation-redshift construction additionally assumes:
 
 \begin{enumerate}
-    \item a causal weak-loss response with the inverse-frequency loss tangent in Equation~\eqref{eq:photon_relaxation_inverse_frequency_phase_lag};
+    \item a causal weak-loss response with the inverse-frequency loss tangent
+    in
+    Equation~\eqref{eq:photon_relaxation_inverse_frequency_phase_lag};
 
     \item preservation of the coherent modal action
-    \(\mathcal{I}_{\gamma}=E/\omega\);
+    \(I_{\gamma}=E/\omega\);
 
-    \item the direction-preserving wave-vector transport law in Equation~\eqref{eq:photon_relaxation_longitudinal_k_drag};
+    \item the direction-preserving wave-vector transport law in
+    Equation~\eqref{eq:photon_relaxation_longitudinal_k_drag};
 
-    \item canonical energy--quasimomentum balance with the FCC--Condensate reservoir;
+    \item local energy--quasimomentum balance with noncoherent Active-Vacuum
+    degrees of freedom;
 
-    \item suppression of incoherent absorption, angular diffusion, phase noise, polarization scrambling, and secondary-mode conversion;
+    \item suppression of incoherent absorption, angular diffusion, phase
+    noise, polarization scrambling, and secondary-mode conversion;
 
     \item a stationary or quasistatic background, with approximately constant
-    \(\Gamma_{\mathrm{D}}\)
+    \(\Gamma_{\mathrm D}\)
     for the simple Euclidean exponential law;
 
-    \item fixed carrier-cycle count for conditional packet-duration dilation; and
+    \item fixed carrier-cycle count for conditional packet-duration dilation;
 
-    \item an effective thermal coherence threshold for terminal assimilation.
+    \item a nonnegative combined endpoint redshift factor for the
+    maximal-relaxation GRB screening; and
+
+    \item for the illustrative CMB-band distance estimate, the phenomenological
+    comparison condition in
+    Equation~\eqref{eq:photon_relaxation_assimilation_condition}.
 \end{enumerate}
 
-Under these conditions, modal-energy transfer produces coherent frequency evolution. The simple distance law follows only after the additional weak-loading and constant-rate approximations are imposed.
+Under these conditions, modal-energy transfer produces coherent frequency
+evolution. The simple distance law follows only after the additional
+weak-loading and constant-rate approximations are imposed.
+
 
 \subsection{Results Not Established by the Present Appendix}
 \label{subsec:photon_relaxation_not_established}
@@ -2840,26 +3344,35 @@ The present construction does not establish:
 \begin{enumerate}
     \item unique microscopic origin of the coefficient \(1/12\);
 
-    \item uniform finite-\(k\) endpoint loading from the fully resolved FCC dynamic matrix;
+    \item uniform finite-\(k\) endpoint loading from the fully resolved FCC
+    dynamic matrix;
 
     \item first-principles derivation of the inverse-frequency loss tangent;
 
     \item nonlinear proof of coherent modal-action preservation;
 
-    \item derivation of the wave-vector transport law from the same causal susceptibility that produces the phase lag;
+    \item derivation of the wave-vector transport law from the same causal
+    susceptibility that produces the phase lag;
 
-    \item quantitative conversion of canonical Bloch quasimomentum into mechanical substrate momentum;
+    \item quantitative conversion of canonical Bloch quasimomentum into
+    mechanical substrate momentum;
 
-    \item suppression of cumulative broadening, diffusion, polarization change, recoil radiation, and secondary modes;
+    \item complete higher-order suppression of cumulative broadening,
+    diffusion, polarization change, recoil radiation, and secondary modes;
 
-    \item dilation of arbitrary macroscopic transient light curves;
+    \item a macroscopic source-event timing law generated by the relaxation
+    channel itself;
 
-    \item derivation of
-    \(f_{\mathrm{CMB}}^{(\mathrm{eff})}\)
-    from the measured thermal spectrum; or
+    \item a microscopic terminal coherence-loss condition independent of the
+    observed CMB spectrum;
 
-    \item global thermal, spectral, and momentum balance of the deposited radiation.
+    \item thermalization of the transferred coherent energy;
+
+    \item preservation of the observed CMB Planck spectrum; or
+
+    \item the absolute CMB temperature and global thermal balance.
 \end{enumerate}
+
 
 \subsection{Falsifiable Consequences}
 \label{subsec:photon_relaxation_falsifiability}
@@ -2868,31 +3381,51 @@ The construction is testable through the following channels:
 
 \begin{enumerate}
     \item \textbf{Photon dispersion.}
-    A confirmed leading quadratic vacuum delay at the TFT lattice scale would contradict the selected dispersion-suppressed branch.
+    A confirmed leading quadratic vacuum delay at the TFT lattice scale would
+    contradict the selected dispersion-suppressed branch.
 
     \item \textbf{FCC directional structure.}
-    The leading residual correction carries the cubic factor in Equation~\eqref{eq:photon_relaxation_fcc_directional_bounds}; its interpretation depends on the orientation or domain structure of the vacuum lattice.
+    The leading residual correction carries the cubic factor in
+    Equation~\eqref{eq:photon_relaxation_fcc_directional_bounds}; its
+    interpretation depends on the orientation or domain structure of the
+    vacuum lattice.
 
     \item \textbf{Loss-tangent scaling.}
     A frequency-independent
-    \(\Gamma_{\mathrm{D}}\)
+    \(\Gamma_{\mathrm D}\)
     requires the inverse-frequency weak-loss behavior derived above.
 
     \item \textbf{Spectral and directional coherence.}
-    Excessive line broadening, frequency diffusion, image blurring, polarization randomization, or secondary radiation would contradict the assumed coherent transport channel.
+    Excessive line broadening, frequency diffusion, image blurring,
+    polarization randomization, or secondary radiation would contradict the
+    assumed coherent transport channel.
 
-    \item \textbf{Momentum balance.}
-    Failure to construct a mechanical substrate response consistent with the required canonical quasimomentum change would invalidate the wave-vector transport closure.
+    \item \textbf{Spatial transport and momentum balance.}
+    Failure to construct one spatially resolved Active-Vacuum response that
+    reproduces the required real-frequency transport, spatial ray equation,
+    and mechanical recoil would invalidate the corresponding microscopic
+    implementation.
 
     \item \textbf{Macroscopic time dilation.}
-    Failure to derive source-envelope dilation elsewhere in TFT would leave astronomical transient-duration observations unexplained.
+    Because the leading relaxation channel does not automatically dilate the
+    separation of independent source events, a large \(z_{\mathrm D}\) is
+    constrained by the independent timing relation developed in
+    Appendix~\ref{app:time_dilation}.
 
-    \item \textbf{Assimilation scale.}
-    The selected closure predicts a frequency-dependent coherence distance rather than a universal stopping radius.
+    \item \textbf{Terminal coherence loss.}
+    Any microscopic terminal condition must be derived independently from
+    photon-branch stability. The CMB-band comparison distance defined in
+    Section~\ref{sec:photon_relaxation_cmb_assimilation} is not itself a
+    coherence-loss or stopping distance.
 
     \item \textbf{Thermal consistency.}
-    Unacceptable CMB spectral distortion or secular reservoir heating would contradict the proposed energy-deposition mechanism.
+    If no thermal completion can accommodate the transferred coherent energy
+    while preserving the observed CMB spectrum and energy balance, the
+    proposed connection between the transferred energy and the thermal CMB
+    population is falsified even if the microscopic scale-relaxation channel
+    remains viable.
 \end{enumerate}
+
 
 \subsection{Required Microscopic and Cosmological Completion}
 \label{subsec:photon_relaxation_remaining_completion}
@@ -2900,29 +3433,41 @@ The construction is testable through the following channels:
 The remaining program is to:
 
 \begin{enumerate}
-    \item derive the physical finite-wave-number transverse branch from the complete FCC contact Hessian, rotational variables, internal phases, and Tension-Column coupling;
+    \item derive the physical finite-wave-number transverse branch from the
+    complete FCC contact Hessian, rotational variables, internal phases, and
+    Tension-Column coupling;
 
-    \item determine the loaded finite-\(k\) dynamic matrix without importing the long-wavelength endpoint-transfer factor uniformly;
+    \item determine the loaded finite-\(k\) dynamic matrix without importing
+    the long-wavelength endpoint-transfer factor uniformly;
 
-    \item construct a causal FCC--Condensate susceptibility satisfying the appropriate Kramers--Kronig and fluctuation--dissipation constraints;
+    \item construct the complete causal FCC--Condensate susceptibility
+    satisfying the appropriate Kramers--Kronig and fluctuation--dissipation
+    constraints;
 
-    \item derive the real-frequency and real-wave-vector transport law from that same response;
+    \item recover the real-frequency and real-wave-vector transport law from
+    that same microscopic response;
 
-    \item derive the conversion between Bloch quasimomentum and mechanical substrate momentum;
+    \item derive the conversion between Bloch quasimomentum and mechanical
+    Active-Vacuum momentum;
 
-    \item demonstrate nonlinear stability against absorption, packet rupture, diffusion, decoherence, polarization scrambling, and secondary-mode production;
+    \item demonstrate nonlinear stability against absorption, packet rupture,
+    diffusion, decoherence, polarization scrambling, and secondary-mode
+    production;
 
-    \item determine
-    \(\Gamma_{\mathrm{D}}\)
-    independently from vacuum microphysics;
+    \item recover the microscopic \(\Gamma_{\mathrm D}\) closure of
+    Appendix~\ref{app:vacuumdamping_cosmicredshift} from the complete
+    FCC--Condensate parent dynamics;
 
-    \item derive macroscopic source-envelope transport and test astronomical light-curve dilation;
+    \item derive the macroscopic TFT matter-flow field and gravitational
+    endpoint loading required by the observational timing and distance
+    projection in Appendix~\ref{app:time_dilation};
 
-    \item derive
-    \(f_{\mathrm{CMB}}^{(\mathrm{eff})}\)
-    and the instability responsible for terminal coherence loss; and
+    \item derive the microscopic terminal coherence-loss condition
+    independently of the observed CMB spectrum; and
 
-    \item establish global thermal, spectral, energy, and momentum balance for the deposited radiation.
+    \item derive the thermalization, photon-number-changing detailed balance,
+    spectral response, and energy balance required to connect transferred
+    coherent energy to the thermal population of the TFT photon branch.
 \end{enumerate}
 
 The logical hierarchy is
@@ -2939,8 +3484,20 @@ The logical hierarchy is
     \text{coherent action and wave-vector transport}
     \nonumber\\
     &\qquad\longrightarrow
-    \text{relaxation redshift and threshold assimilation}.
+    \text{relaxation redshift}
+    \nonumber\\
+    &\qquad\longrightarrow
+    \text{independently derived photon-branch stability criterion}.
     \label{eq:photon_relaxation_final_hierarchy}
 \end{align}
 
-The appendix therefore supplies a dimensionally closed reduced transverse carrier action and an explicit conditional nonconservative transport closure while maintaining a strict separation among inherited TFT structure, derived results, constitutive assumptions, observational consequences, and unresolved completion.
+Thermalization of the transferred energy and its possible contribution to the
+thermal population of the TFT photon branch lie beyond this carrier-transport
+hierarchy and require the separate thermal completion developed in
+Appendix~\ref{app:cmb_thermal_completion}.
+
+The appendix therefore supplies a dimensionally closed reduced transverse
+carrier action and an explicit conditional nonconservative transport closure
+while maintaining a strict separation among inherited TFT structure, derived
+results, constitutive assumptions, observational consequences, and unresolved
+completion.

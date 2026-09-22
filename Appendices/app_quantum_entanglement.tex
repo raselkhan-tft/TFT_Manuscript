@@ -1,0 +1,819 @@
+\chapter{Analyzer Dynamics and the Bell Correlation Law}
+\label{app:quantum_entanglement}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\noindent\textbf{Abstract:}
+A correlated measurement in TFT is an interaction between a prepared Goalpost state, two oriented analyzers, and their active receiving systems. This appendix develops that response from the torsional mechanics of \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}. Analyzer geometry supplies sum-and-difference directions; the projected inertia, restoring forces, and receiving impedances determine how those directions are excited and how much work they deliver. A proposed balanced-port reduction yields half-angle received-action fractions. A specified many-site threshold model supplies an explicit first-instability distribution and its limiting relation to received action. Under the additional paired-record and symmetric-readout conditions, the joint probabilities yield the singlet correlation and the CHSH maximum $2\sqrt2$. Gravitational loading enters through the calculated mechanical response. A relative-torsion ensemble gives a conditional square-root CHSH law and identifies the further relation needed to connect that law to the coupling action $\alpha_{\mathrm Q}$. The microscopic realization of the port coupling, detector preparation, and paired readout remains part of the model's physical completion.
+
+\section{The Prepared Pair and the Measurement Variables}
+\label{sec:entanglement_scope}
+
+\subsection{The Goalpost State}
+\label{sec:entanglement_goalpost}
+
+The prepared pair is the Goalpost configuration of \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}. The Hard Floor provides the phase-locked reference and ideal compatibility limit,
+\begin{equation}
+    \mu_{\mathrm S}\rightarrow0,
+    \qquad K_{\mathrm S}\rightarrow\infty,
+    \qquad c_{\mathrm S}\rightarrow\infty,
+    \label{eq:entanglement_hardfloor_limit}
+\end{equation}
+while finite kinetic response and receiving work reside in the Active Vacuum. The finite yield-pressure scale $\tau_{\mathrm S}$ remains distinct from the limiting incremental rigidity $K_{\mathrm S}$.
+
+In the ideal vector tangent sector, the shared compatibility is
+\begin{equation}
+    \boldsymbol\Theta_{\mathrm A}+\boldsymbol\Theta_{\mathrm B}=0,
+    \label{eq:entanglement_vector_singlet_constraint}
+\end{equation}
+with axial specialization
+\begin{equation}
+    \Theta_{\mathrm A}+\Theta_{\mathrm B}=0.
+    \label{eq:entanglement_scalar_singlet_constraint}
+\end{equation}
+The corresponding admissible configuration space is
+\begin{equation}
+    \mathcal Q_{\mathrm{ent}}
+    =\bigl\{(\boldsymbol\Theta_{\mathrm A},\boldsymbol\Theta_{\mathrm B})
+       \mid\boldsymbol\Theta_{\mathrm A}+\boldsymbol\Theta_{\mathrm B}=0\bigr\}.
+    \label{eq:entanglement_constrained_configuration_space}
+\end{equation}
+The vector relation specifies the selected torsional sector, rather than an unrestricted finite-rotation law. Its axial projection has the finite mechanical response derived in \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}:
+\begin{equation}
+    \begin{aligned}
+    &(M_{\Theta\mathrm A}+M_{\Theta\mathrm B})\ddot\Theta
+      +(k_{\Theta\mathrm A}+k_{\Theta\mathrm B})\Theta\\
+    &\hspace{35mm}=\mathcal T_{\mathrm A}-\mathcal T_{\mathrm B}.
+    \end{aligned}
+\end{equation}
+This equation describes accessible active motion subject to the shared constraint. The constraint-work balance is used in \hyperref[sec:entanglement_constraint_work]{Section~\ref*{sec:entanglement_constraint_work}}.
+
+Let the unit analyzer directions be $\widehat{\mathbf n}_{\mathrm A}$ and $\widehat{\mathbf n}_{\mathrm B}$, with
+\begin{equation}
+    \widehat{\mathbf n}_{\mathrm A}\cdot\widehat{\mathbf n}_{\mathrm B}
+    =\cos\theta_{\mathrm{AB}},
+    \qquad 0\leq\theta_{\mathrm{AB}}\leq\pi.
+    \label{eq:entanglement_analyzer_angle}
+\end{equation}
+The recorded signs $s_{\mathrm A},s_{\mathrm B}\in\{-1,+1\}$ identify analyzer outlets. They are not values assigned directly to $\Theta_i$; their relation to measured angular momentum requires the rotational normalization of the same defect. The four joint outcomes divide into
+\begin{equation}
+    \begin{aligned}
+    \mathrm{opp}:&\quad(+,-),\;(-,+),\\
+    \mathrm{same}:&\quad(+,+),\;(-,-).
+    \end{aligned}
+\end{equation}
+These classes describe completed paired records, not the two spatially separated detectors. The source preparation is taken to be independent of the subsequently selected analyzer settings. Its shared active response can depend on both settings through the Goalpost boundary problem.
+
+\subsection{The Local-Orientation Comparison}
+\label{sec:entanglement_local_nogo}
+
+For a fixed pair of opposite directions $\widehat{\mathbf u}$ and $-\widehat{\mathbf u}$, isotropically distributed at preparation, consider the local sign rules
+\begin{equation}
+    s_{\mathrm A}
+    =\operatorname{sgn}(\widehat{\mathbf n}_{\mathrm A}\cdot\widehat{\mathbf u}),
+    \label{eq:entanglement_local_A}
+\end{equation}
+\begin{equation}
+    s_{\mathrm B}
+    =-\operatorname{sgn}(\widehat{\mathbf n}_{\mathrm B}\cdot\widehat{\mathbf u}).
+    \label{eq:entanglement_local_B}
+\end{equation}
+The two hemisphere classifications disagree over a fraction $\theta_{\mathrm{AB}}/\pi$ of the isotropic preparation. Their correlation is
+\begin{equation}
+    E_{\mathrm{local}}(\theta_{\mathrm{AB}})
+    =-1+\frac{2\theta_{\mathrm{AB}}}{\pi}.
+    \label{eq:entanglement_local_correlation}
+\end{equation}
+This predetermined-orientation model does not give the singlet angular law. More generally, the Bell-local factorization is
+\begin{equation}
+    \begin{aligned}
+    &P(s_{\mathrm A},s_{\mathrm B}\mid
+       \widehat{\mathbf n}_{\mathrm A},\widehat{\mathbf n}_{\mathrm B},\lambda)\\
+    &\qquad=P(s_{\mathrm A}\mid\widehat{\mathbf n}_{\mathrm A},\lambda)
+             P(s_{\mathrm B}\mid\widehat{\mathbf n}_{\mathrm B},\lambda),
+    \end{aligned}
+    \label{eq:entanglement_bell_factorization}
+\end{equation}
+with setting-independent preparation of the prior variables $\lambda$. The Bell and CHSH restrictions concern this statistical structure \cite{Bell_1964,CHSH_1969}. The proposed Goalpost response instead participates in the joint analyzer boundary problem. Its physical viability requires a calculation of the local records and their accessible statistics, as addressed in \hyperref[sec:entanglement_chsh]{Section~\ref*{sec:entanglement_chsh}}.
+
+\section{Analyzer Geometry and Mechanical Excitation}
+\label{sec:entanglement_analyzer_coupling}
+
+Retain the specified quadratic alignment interaction
+\begin{equation}
+    U_{\mathrm{an}}
+    =-U_0\left[
+        (\widehat{\boldsymbol\Theta}_{\mathrm A}\cdot
+         \widehat{\mathbf n}_{\mathrm A})^2
+        +(\widehat{\boldsymbol\Theta}_{\mathrm B}\cdot
+         \widehat{\mathbf n}_{\mathrm B})^2
+    \right],
+    \qquad U_0>0.
+    \label{eq:entanglement_analyzer_energy}
+\end{equation}
+Here $U_0$ is an interaction energy and the hatted torsional variables denote unit orientations in the selected nonzero orientation sector. This bounded alignment energy is a chosen constitutive interaction, not the kinetic or full tangent energy of every analyzer mode. In the ideal opposite-orientation specialization,
+\begin{equation}
+    \widehat{\boldsymbol\Theta}_{\mathrm B}
+    =-\widehat{\boldsymbol\Theta}_{\mathrm A}
+    \equiv-\widehat{\boldsymbol\Theta},
+\end{equation}
+it becomes
+\begin{equation}
+    U_{\mathrm{an}}
+    =-U_0\widehat{\boldsymbol\Theta}^{\mathsf T}
+      \left(
+          \widehat{\mathbf n}_{\mathrm A}\widehat{\mathbf n}_{\mathrm A}^{\mathsf T}
+          +\widehat{\mathbf n}_{\mathrm B}\widehat{\mathbf n}_{\mathrm B}^{\mathsf T}
+      \right)\widehat{\boldsymbol\Theta}.
+    \label{eq:entanglement_shared_quadratic_form}
+\end{equation}
+The analyzer sum and difference are principal directions, with eigenvalues
+\begin{equation}
+    \lambda_+=1+\cos\theta_{\mathrm{AB}},
+    \qquad
+    \lambda_-=1-\cos\theta_{\mathrm{AB}}.
+    \label{eq:entanglement_analyzer_eigenvalues}
+\end{equation}
+Consequently,
+\begin{equation}
+    \left|\widehat{\mathbf n}_{\mathrm A}
+          +\widehat{\mathbf n}_{\mathrm B}\right|^2
+    =4\cos^2\!\left(\frac{\theta_{\mathrm{AB}}}{2}\right),
+    \label{eq:entanglement_sum_channel}
+\end{equation}
+\begin{equation}
+    \left|\widehat{\mathbf n}_{\mathrm A}
+          -\widehat{\mathbf n}_{\mathrm B}\right|^2
+    =4\sin^2\!\left(\frac{\theta_{\mathrm{AB}}}{2}\right).
+    \label{eq:entanglement_difference_channel}
+\end{equation}
+The two directions are orthogonal wherever both are nonzero. A vanishing channel at equal or opposite axes is defined by continuity.
+
+These are geometric consequences of the alignment model. The oscillation amplitudes additionally depend on kinetic normalization, incident work, and receiving response. Stability and the physical mode count are determined by the full projected active system, rather than by these two geometric eigenvalues alone.
+
+\subsection{Symmetric Boundary-Driving Reduction}
+
+For an explicit calculation, adopt the following \textbf{proposed analyzer-port reduction}. Two resolved active response channels couple to the sum and difference directions with a common incident torque amplitude $\mathcal T_0$:
+\begin{equation}
+    \boxed{
+    \begin{aligned}
+    \widehat{\boldsymbol{\mathcal T}}_{\mathrm{opp}}
+    &=\frac{\mathcal T_0}{2}
+      (\widehat{\mathbf n}_{\mathrm A}+\widehat{\mathbf n}_{\mathrm B}),\\
+    \widehat{\boldsymbol{\mathcal T}}_{\mathrm{same}}
+    &=\frac{\mathcal T_0}{2}
+      (\widehat{\mathbf n}_{\mathrm A}-\widehat{\mathbf n}_{\mathrm B}).
+    \end{aligned}
+    }
+\end{equation}
+Each torque is projected along its corresponding response direction. This specifies mechanical driving before assigning outcome probabilities. It assumes equal source coupling to the two boundary combinations; the pair--analyzer contact projection must establish whether that coupling is realized.
+
+The channels represent independently resolved receiving motions in the chosen reduction. They do not add unconstrained copies of the single axial coordinate in \hyperref[sec:entanglement_goalpost]{Section~\ref*{sec:entanglement_goalpost}}. Their kinetic independence, loading, and source work must be obtained by projecting the full admissible pair--analyzer system. Both channels belong to one energy balance, not to independently duplicated incident excitations.
+
+\section{From Torque to Received Action}
+\label{sec:entanglement_action_partition}
+
+Use the rotational counterpart of the receiving response in \hyperref[sec:Y_receiving_memory]{Section~\ref*{sec:Y_receiving_memory}}. The contact and kinetic projections are inherited from \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}} and Equation~\eqref{eq:Y_receiver_projection}. For each resolved angular coordinate and the harmonic convention $e^{-i\omega t}$,
+\begin{equation}
+    \widehat\Theta_i
+    =\frac{\widehat{\mathcal T}_i}
+    {k_{\Theta i}-M_{\Theta i}\omega^2-i\omega Z_{\Theta i}(\omega)},
+    \qquad i\in\{\mathrm{opp},\mathrm{same}\}.
+\end{equation}
+In this section $i$ labels a response channel, rather than an endpoint. Its coefficients include the participating motion of that channel:
+\begin{equation}
+    [M_{\Theta i}]=\mathrm{kg\,m^2},
+    \qquad [k_{\Theta i}]=\mathrm J,
+    \qquad [Z_{\Theta i}]=\mathrm{J\,s},
+    \qquad [\mathcal T_i]=\mathrm J.
+\end{equation}
+Angles are dimensionless. The rotational impedance is conjugate to angular velocity and follows from the same angular boundary pattern used for inertia and stiffness. Conservative contributions already included in $M_{\Theta i}$ and $k_{\Theta i}$ are not added again to the residual impedance. The scalar expression assumes resolved channels; a coupled receiving system requires the corresponding matrix response.
+
+The cycle-averaged received power is the angular specialization of Equation~\eqref{eq:Y_impedance_power}:
+\begin{equation}
+    \boxed{
+    \overline P_{\mathrm{rec},i}
+    =\frac12\omega^2\operatorname{Re}Z_{\Theta i}(\omega)
+     |\widehat\Theta_i|^2
+    }.
+\end{equation}
+The receiving band is passive, with $\operatorname{Re}Z_{\Theta i}\geq0$, and the driven response is taken after the relevant transient or within a controlled slowly varying narrow-band envelope. Significant return excitation requires the initial-state and memory terms of Equation~\eqref{eq:Y_mechanical_memory}.
+
+Define the calculated response factor
+\begin{equation}
+    \mathcal G_i(\omega)
+    =\frac{\operatorname{Re}Z_{\Theta i}(\omega)}
+    {\left|k_{\Theta i}-M_{\Theta i}\omega^2
+                   -i\omega Z_{\Theta i}(\omega)\right|^2},
+    \qquad [\mathcal G_i]=\mathrm{s\,J^{-1}}.
+\end{equation}
+It is mode- and receiver-dependent, not a universal TFT constant. The denominator must define a finite driven response in the retained band.
+
+Let $\mathcal J_i(t)$ be the cumulative incident-band action received by channel $i$, with $\mathcal J_i(0)=0$. At a common, nearly fixed carrier frequency,
+\begin{equation}
+    \dot{\mathcal J}_i
+    =\frac{\overline P_{\mathrm{rec},i}}{\omega},
+    \qquad [\mathcal J_i]=\mathrm{J\,s}.
+    \label{eq:entanglement_action_absorption}
+\end{equation}
+This is an incident-energy normalization. Receiving modes at other frequencies require their own energy-to-action conversion, as specified with Equation~\eqref{eq:Y_band_received_power}. The frequency here is the full physical carrier frequency; it is not a removed rest-phase offset.
+
+Substitution of the torque inputs gives
+\begin{equation}
+    \boxed{
+    \begin{aligned}
+    \dot{\mathcal J}_{\mathrm{opp}}
+    &=\frac{\omega|\mathcal T_0|^2}{4}
+      \mathcal G_{\mathrm{opp}}(\omega)(1+\cos\theta_{\mathrm{AB}}),\\
+    \dot{\mathcal J}_{\mathrm{same}}
+    &=\frac{\omega|\mathcal T_0|^2}{4}
+      \mathcal G_{\mathrm{same}}(\omega)(1-\cos\theta_{\mathrm{AB}}).
+    \end{aligned}
+    }
+\end{equation}
+Both sides have units of action per time, or joules. The geometry and the dynamical response enter as separate factors.
+
+For balanced receiving channels,
+\begin{equation}
+    \mathcal G_{\mathrm{opp}}=\mathcal G_{\mathrm{same}}>0,
+\end{equation}
+the received-action fractions reduce to
+\begin{equation}
+    \boxed{
+    \frac{\dot{\mathcal J}_{\mathrm{opp}}}
+    {\dot{\mathcal J}_{\mathrm{opp}}+\dot{\mathcal J}_{\mathrm{same}}}
+    =\cos^2\!\left(\frac{\theta_{\mathrm{AB}}}{2}\right)
+    },
+    \label{eq:entanglement_action_opp}
+\end{equation}
+\begin{equation}
+    \boxed{
+    \frac{\dot{\mathcal J}_{\mathrm{same}}}
+    {\dot{\mathcal J}_{\mathrm{opp}}+\dot{\mathcal J}_{\mathrm{same}}}
+    =\sin^2\!\left(\frac{\theta_{\mathrm{AB}}}{2}\right)
+    },
+    \label{eq:entanglement_action_same}
+\end{equation}
+with
+\begin{equation}
+    \mathcal J_{\mathrm{tot}}
+    =\mathcal J_{\mathrm{opp}}+\mathcal J_{\mathrm{same}}.
+    \label{eq:entanglement_action_normalization}
+\end{equation}
+The ratios require a nonzero total received rate. Their derivation uses the proposed torque-port coupling and the matched complete receiving responses. Equal detector material alone does not establish this balance.
+
+Stored modal action remains the quantity defined in Equation~\eqref{eq:X_mode_action}:
+\begin{equation}
+    I_i=\frac{E_i}{\omega_i},
+    \label{eq:entanglement_modal_action_definition}
+\end{equation}
+\begin{equation}
+    I_i=\hbar|a_i|^2.
+    \label{eq:entanglement_action_amplitude_square}
+\end{equation}
+These expressions describe a resolved conservative mode at its own frequency. Stored $I_i$, cumulative received $\mathcal J_i$, and the interaction-energy--time measure $\mathcal A_Q$ of \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}} remain distinct.
+
+For a matched weak-loss mode, Equation~\eqref{eq:Y_localized_damping_rate} gives $\dot{\mathcal J}_i=\Gamma_i I_i$. The special transport form
+\begin{equation}
+    \Gamma=\sigma c_{\mathrm P}n_K
+    \label{eq:entanglement_quantum_damping}
+\end{equation}
+applies only under the velocity, independent-target, and energy-normalization conditions of Equation~\eqref{eq:Y_kinetic_rate_specialization}. It is not assigned universally to the dense receiving system considered here.
+
+\section{A Many-Site Threshold Receiver}
+\label{sec:entanglement_detector_capture}
+
+The action rates above describe continuous mechanical transfer. A discrete event requires a recording transition. The following \textbf{proposed reduced receiver model} supplies an explicit first-instability calculation. Its preparation and sharing law must be obtained from the detector's active configuration to establish a microscopic realization.
+
+For channel $i$, take $N_i$ active receiving sites. Here $N_i$ is a local site count, not the structural information count of \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}. Each site has the same transition threshold $I_{\mathrm{th}}>0$, expressed in the incident-action normalization. At preparation its residual action $R_{ir}$ has density
+\begin{equation}
+    p(R_{ir})=\frac{1}{I_{\mathrm{th}}},
+    \qquad 0<R_{ir}\leq I_{\mathrm{th}}.
+    \label{eq:entanglement_uniform_threshold_phase}
+\end{equation}
+The residuals are assumed independent across sites and between candidate channels. They are definite preparation variables in an individual realization. Their uniform distribution is a detector-ensemble assumption, not a consequence of the Goalpost topology or of phase periodicity alone.
+
+Before the first transition, suppose the monotone received action is shared equally:
+\begin{equation}
+    \mathcal J_{ir}(t)=\frac{\mathcal J_i(t)}{N_i},
+    \qquad \dot{\mathcal J}_i(t)\geq0.
+\end{equation}
+This reduction neglects pre-trigger feedback of the individual residuals on the prescribed sharing law and significant return of received energy. The receiving response in \hyperref[sec:entanglement_action_partition]{Section~\ref*{sec:entanglement_action_partition}} and the site sharing must ultimately be calculated for the same configuration.
+
+A site has not crossed its threshold when $R_{ir}>\mathcal J_i/N_i$. Consequently,
+\begin{equation}
+    \boxed{
+    P_{0,i}^{(N_i)}(t)
+    =\left[
+        1-\frac{\mathcal J_i(t)}{N_i I_{\mathrm{th}}}
+      \right]_+^{N_i}
+    },
+\end{equation}
+where $[x]_+=\max(x,0)$. This is the exact probability of no transition in that channel for the specified finite-site ensemble. Where it is positive, its survival-conditioned rate is
+\begin{equation}
+    \boxed{
+    \gamma_i^{(\mathrm{cap},N_i)}(t)
+    =-\frac{\mathrm d}{\mathrm dt}\ln P_{0,i}^{(N_i)}(t)
+    =\frac{\dot{\mathcal J}_i(t)/I_{\mathrm{th}}}
+     {1-\mathcal J_i(t)/(N_i I_{\mathrm{th}})}
+    }.
+\end{equation}
+The denominator accounts for the changing ensemble of sites that have not yet crossed. The rate formula is used before the survival probability reaches zero.
+
+\subsection{The Many-Site Limit}
+
+At fixed total received action, let each site receive a vanishingly small fraction. Then
+\begin{equation}
+    \lim_{N_i\rightarrow\infty}
+    \left(1-\frac{\mathcal J_i}{N_i I_{\mathrm{th}}}\right)^{N_i}
+    =e^{-\mathcal J_i/I_{\mathrm{th}}},
+\end{equation}
+and
+\begin{equation}
+    \boxed{
+    P_{0,i}(t)=e^{-\mathcal J_i(t)/I_{\mathrm{th}}},
+    \qquad
+    \gamma_i^{(\mathrm{cap})}(t)
+    =\frac{\dot{\mathcal J}_i(t)}{I_{\mathrm{th}}}
+    }.
+    \label{eq:entanglement_capture_rate}
+\end{equation}
+The short-time conditional crossing probability is consequently
+\begin{equation}
+    \begin{aligned}
+    &P\bigl(\text{first channel-$i$ transition in }[t,t+\mathrm dt]
+         \mid\text{no channel-$i$ transition before }t\bigr)\\
+    &\qquad=\gamma_i^{(\mathrm{cap})}(t)\,\mathrm dt+o(\mathrm dt).
+    \end{aligned}
+    \label{eq:entanglement_threshold_crossing}
+\end{equation}
+The capture rate has units $\mathrm{s^{-1}}$. It arises from the displayed preparation and weak-sharing limit; no repeated resetting of a single residual threshold is assumed.
+
+Equal sharing is sufficient but not necessary. For independent sites receiving actions $\mathcal J_{ir}$, the same limit follows when
+\begin{equation}
+    \sum_r\mathcal J_{ir}=\mathcal J_i,
+    \qquad
+    \max_r\frac{\mathcal J_{ir}}{I_{\mathrm{th}}}\rightarrow0,
+    \qquad
+    \sum_r\left(\frac{\mathcal J_{ir}}{I_{\mathrm{th}}}\right)^2\rightarrow0.
+\end{equation}
+Expanding the logarithm of the product of site-survival probabilities gives the same exponential. This is an ensemble limit at fixed prescribed total receiving action, not a derivation that an arbitrary detector can acquire infinitely many sites without changing its impedance.
+
+\subsection{Physical Content of the Preparation}
+
+The receiving sites are prepared with stored energy and a residual distance to a transition. The incident excitation supplies the additional work that closes that residual distance. Their preparation, stability before illumination, and amplification energy therefore belong to the complete balance.
+
+A recording threshold is not universally $\hbar$. When a specified transition corresponds to one elementary completed harmonic cycle, Equation~\eqref{eq:X_complete_cycle} identifies modal action $\hbar$ with cycle action $h$. Binding, activation, and amplification requirements must be included for the actual recording transition. No subdivision of the elementary cycle is implied by the continuous pre-trigger receiving coordinate.
+
+\section{First Instability and the Paired Record}
+
+For the independent candidate-channel preparations in \hyperref[sec:entanglement_detector_capture]{Section~\ref*{sec:entanglement_detector_capture}}, the probability that neither channel has triggered is
+\begin{equation}
+    P_0(t)
+    =\exp\!\left[
+       -\frac{\mathcal J_{\mathrm{opp}}(t)+\mathcal J_{\mathrm{same}}(t)}
+       {I_{\mathrm{th}}}
+      \right].
+\end{equation}
+The probability that the first instability belongs to class $i$ by time $T$ is
+\begin{equation}
+    \boxed{
+    P_i(T)
+    =\int_0^T P_0(t)
+      \frac{\dot{\mathcal J}_i(t)}{I_{\mathrm{th}}}\,\mathrm dt
+    }.
+\end{equation}
+This expression uses the full waiting-time evolution of the reduced model.
+
+Suppose the received-action fractions remain fixed during the event window:
+\begin{equation}
+    \dot{\mathcal J}_i(t)=w_i\dot{\mathcal J}_{\mathrm{tot}}(t),
+    \qquad w_i\geq0,
+    \qquad w_{\mathrm{opp}}+w_{\mathrm{same}}=1.
+\end{equation}
+Integration then gives
+\begin{equation}
+    P_i(T)=w_i[1-P_0(T)],
+    \qquad
+    \boxed{P(i\mid\mathrm{trigger})=w_i}.
+    \label{eq:entanglement_action_to_probability}
+\end{equation}
+Here conditioning is on a first transition in the specified window with nonzero trigger probability. When the received fractions vary in time, the integral above, rather than a single rate ratio, determines the branching.
+
+The trigger efficiency is
+\begin{equation}
+    \boxed{
+    P(\mathrm{trigger\ by}\ T)
+    =1-\exp\!\left[-\frac{\mathcal J_{\mathrm{tot}}(T)}{I_{\mathrm{th}}}\right]
+    }.
+\end{equation}
+For example, $\mathcal J_{\mathrm{tot}}=I_{\mathrm{th}}$ gives $1-e^{-1}$, not certain triggering. Complete efficiency requires additional preparation or recording dynamics; it is not a consequence of the rate-ratio result.
+
+\subsection{From a Trigger to Two Local Records}
+
+The threshold calculation solves a first-instability subproblem. To identify its classes with measured pair outcomes, the nonlinear readout must establish that each instability enters the corresponding terminal paired-record basin, produces two local signed records, and excludes incompatible later records for that trial. The following joint laws require successful completion without class-dependent reweighting. A class-dependent completion efficiency must instead be included in the recorded probabilities.
+
+The two parity classes are not two detectors racing to consume the same photon. The stabilization of each physical record belongs to \hyperref[sec:Y_capture]{Section~\ref*{sec:Y_capture}} and its energy balance, Equation~\eqref{eq:Y_capture_energy_balance}. That result governs settling after entry into an accessible basin; the full nonlinear trajectory must determine basin entry.
+
+The conditional construction is therefore
+\begin{equation}
+    \boxed{
+    \begin{gathered}
+    \text{shared pair and analyzer ports}
+       \longrightarrow\text{received action}\\
+    \longrightarrow\text{first active instability}
+       \longrightarrow\text{two local records}\\
+    \longrightarrow\text{joint outcome statistics}.
+    \end{gathered}
+    }
+    \label{eq:entanglement_probability_chain}
+\end{equation}
+The port projection, receiver preparation, and terminal paired-record mapping are explicit constitutive requirements of this chain.
+
+\section{The Response-Weighted Correlation Law}
+\label{sec:entanglement_singlet_correlation}
+
+Assume that the first-instability classes have been matched to terminal paired records as specified above and that the source and signed outlets are symmetric under simultaneous sign inversion. Each parity class then divides equally between its two signed outcomes.
+
+For a stationary receiving configuration with constant received fractions during the event window,
+\begin{equation}
+    P_{\mathrm{opp}\mid\mathrm{rec}}
+    =\frac{
+      \mathcal G_{\mathrm{opp}}(1+\cos\theta_{\mathrm{AB}})
+    }{
+      \mathcal G_{\mathrm{opp}}(1+\cos\theta_{\mathrm{AB}})
+      +\mathcal G_{\mathrm{same}}(1-\cos\theta_{\mathrm{AB}})
+    },
+\end{equation}
+with the complementary expression for $P_{\mathrm{same}\mid\mathrm{rec}}$. The denominator must be positive. The dimensionless Bell correlation is
+\begin{equation}
+    \boxed{
+    E_{\mathrm{Bell}}
+    =\frac{
+      \mathcal G_{\mathrm{same}}(1-\cos\theta_{\mathrm{AB}})
+      -\mathcal G_{\mathrm{opp}}(1+\cos\theta_{\mathrm{AB}})
+    }{
+      \mathcal G_{\mathrm{same}}(1-\cos\theta_{\mathrm{AB}})
+      +\mathcal G_{\mathrm{opp}}(1+\cos\theta_{\mathrm{AB}})
+    }
+    }.
+\end{equation}
+This is the response-weighted correlation of the specified reduced model, conditional on its accepted paired records. $E_{\mathrm{Bell}}$ is not a mechanical energy. The response factors are evaluated for the actual frequency and analyzer settings.
+
+\subsection{The Balanced Ideal Limit}
+
+When $\mathcal G_{\mathrm{opp}}=\mathcal G_{\mathrm{same}}>0$, the response factors cancel:
+\begin{equation}
+    \boxed{
+    P_{\mathrm{opp}\mid\mathrm{rec}}
+    =\cos^2\!\left(\frac{\theta_{\mathrm{AB}}}{2}\right)
+    },
+    \label{eq:entanglement_probability_opp}
+\end{equation}
+\begin{equation}
+    \boxed{
+    P_{\mathrm{same}\mid\mathrm{rec}}
+    =\sin^2\!\left(\frac{\theta_{\mathrm{AB}}}{2}\right)
+    }.
+    \label{eq:entanglement_probability_same}
+\end{equation}
+The four joint probabilities are
+\begin{equation}
+    P_{+-\mid\mathrm{rec}}=P_{-+\mid\mathrm{rec}}
+    =\frac12\cos^2\!\left(\frac{\theta_{\mathrm{AB}}}{2}\right),
+    \label{eq:entanglement_joint_opposite}
+\end{equation}
+\begin{equation}
+    P_{++\mid\mathrm{rec}}=P_{--\mid\mathrm{rec}}
+    =\frac12\sin^2\!\left(\frac{\theta_{\mathrm{AB}}}{2}\right).
+    \label{eq:entanglement_joint_same}
+\end{equation}
+Equivalently,
+\begin{equation}
+    \boxed{
+    \begin{aligned}
+    &P(s_{\mathrm A},s_{\mathrm B}\mid
+       \widehat{\mathbf n}_{\mathrm A},\widehat{\mathbf n}_{\mathrm B},\mathrm{rec})\\
+    &\qquad=\frac14
+      \left[1-s_{\mathrm A}s_{\mathrm B}
+        \widehat{\mathbf n}_{\mathrm A}\cdot\widehat{\mathbf n}_{\mathrm B}\right].
+    \end{aligned}
+    }
+\end{equation}
+The probabilities are nonnegative and sum to one. Thus
+\begin{equation}
+    \boxed{
+    \begin{aligned}
+    E_{\mathrm{Bell}}
+    &=\sum_{s_{\mathrm A},s_{\mathrm B}}s_{\mathrm A}s_{\mathrm B}
+        P(s_{\mathrm A},s_{\mathrm B}\mid\mathrm{rec})\\
+    &=-\widehat{\mathbf n}_{\mathrm A}\cdot\widehat{\mathbf n}_{\mathrm B}.
+    \end{aligned}
+    }
+    \label{eq:entanglement_singlet_correlation}
+\end{equation}
+The singlet form follows through the torque-port coupling, balanced receiving response, threshold preparation, and paired-record mapping. Each belongs to the stated model; agreement of the final algebra does not independently determine these microscopic inputs.
+
+\section{Local Marginals and the CHSH Combination}
+\label{sec:entanglement_chsh}
+
+Summing Equations~\eqref{eq:entanglement_joint_opposite} and~\eqref{eq:entanglement_joint_same} over the remote sign gives
+\begin{equation}
+    \boxed{
+    P(s_{\mathrm A}=\pm1\mid\mathrm{rec})
+    =P(s_{\mathrm B}=\pm1\mid\mathrm{rec})=\frac12
+    }.
+    \label{eq:entanglement_no_signalling_marginals}
+\end{equation}
+The recorded-sign marginals are unbiased. A complete operational no-signalling result additionally requires remote-setting independence of locally accessible trigger rates, missing-record probabilities, timing distributions, and other detector outputs. Equality of the two response factors at each setting alone is insufficient: their common magnitude could still depend on the remote setting and alter the recording rate.
+
+The ideal comparison therefore requires a complete-trial readout or an explicit calculation of all rejected and unrecorded trials. Setting-independent acceptance and consistent signed readout are conditions to demonstrate, not replacements for the two local detector histories. These statistical requirements are separate from the zero-total-work constraint identity in Equation~\eqref{eq:entanglement_constraint_zero_net_work}.
+
+For two settings at each endpoint, the CHSH combination \cite{CHSH_1969} is
+\begin{equation}
+    \begin{aligned}
+    S_{\mathrm{CHSH}}={}&
+      E_{\mathrm{Bell}}(\widehat{\mathbf n}_{\mathrm A},\widehat{\mathbf n}_{\mathrm B})
+      +E_{\mathrm{Bell}}(\widehat{\mathbf n}_{\mathrm A},\widehat{\mathbf n}'_{\mathrm B})\\
+      &+E_{\mathrm{Bell}}(\widehat{\mathbf n}'_{\mathrm A},\widehat{\mathbf n}_{\mathrm B})
+      -E_{\mathrm{Bell}}(\widehat{\mathbf n}'_{\mathrm A},\widehat{\mathbf n}'_{\mathrm B}).
+    \end{aligned}
+    \label{eq:entanglement_chsh_definition}
+\end{equation}
+Using Equation~\eqref{eq:entanglement_singlet_correlation},
+\begin{equation}
+    \begin{aligned}
+    S_{\mathrm{CHSH}}={}&
+      -\widehat{\mathbf n}_{\mathrm A}\cdot
+       (\widehat{\mathbf n}_{\mathrm B}+\widehat{\mathbf n}'_{\mathrm B})\\
+      &-\widehat{\mathbf n}'_{\mathrm A}\cdot
+       (\widehat{\mathbf n}_{\mathrm B}-\widehat{\mathbf n}'_{\mathrm B}).
+    \end{aligned}
+\end{equation}
+If the two $B$-axes differ by $\vartheta\in[0,\pi]$,
+\begin{equation}
+    |S_{\mathrm{CHSH}}|
+    \leq2\cos\!\left(\frac{\vartheta}{2}\right)
+        +2\sin\!\left(\frac{\vartheta}{2}\right)
+    \leq2\sqrt2.
+\end{equation}
+The optimum is attained by orthogonal $B$-axes and the corresponding sum-and-difference $A$-axes:
+\begin{equation}
+    \boxed{|S_{\mathrm{CHSH}}|_{\max}=2\sqrt2}.
+    \label{eq:entanglement_tsirelson}
+\end{equation}
+This is the optimum of the derived conditional joint law. Its complete-trial interpretation retains the detector and acceptance conditions above. The value is obtained from the angular correlation, not identified with an FCC length ratio.
+
+\section[Gravitational Loading: Coupling Strength versus Correlation]{Gravitational Loading: Coupling Strength\\versus Correlation}
+\label{sec:entanglement_gravity_status}
+
+\hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}} defines
+\begin{equation}
+    \boxed{
+    \alpha_{\mathrm Q}
+    =\frac{\mathcal A_Q}{\mathcal A_Q^{(0)}},
+    \qquad
+    \mathcal A_Q
+    =\int_0^{\Delta t}[U_Q(\Theta(t))-U_Q(0)]\,\mathrm dt
+    }.
+\end{equation}
+Under its proposed linear torsional-capacity closure and fixed comparison protocol,
+\begin{equation}
+    \alpha_{\mathrm Q}=1-\alpha_{\mathrm G}.
+\end{equation}
+The definition and conditional status of this zero-sum relation are retained. The loading of a real response channel enters through $M_{\Theta i}$, $k_{\Theta i}$, $Z_{\Theta i}$, and the projected torque, hence through $\mathcal G_i$ and the received action. Their gravitational projection must follow the selected mode in \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}} and the work-conjugate construction of \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.
+
+\noindent\textbf{Common response reduction.}
+A common multiplicative change in both received-action rates leaves their ratio and the normalized correlation unchanged. It can change the trigger efficiency and recording time.
+
+\medskip
+\noindent\textbf{Differential channel response.}
+Unequal changes of $\mathcal G_{\mathrm{opp}}$ and $\mathcal G_{\mathrm{same}}$ alter the response-weighted correlation in \hyperref[sec:entanglement_singlet_correlation]{Section~\ref*{sec:entanglement_singlet_correlation}}. Its angular form must be recalculated from those changes.
+
+\medskip
+\noindent\textbf{Relative orientation or phase dispersion.}
+Different prepared trials can sample different active transformations between the shared reference and the analyzer frames. An ensemble of those transformations can reduce the accessible averaged correlation while each configuration evolves conservatively.
+
+\medskip
+These are distinct effects. The scalar interaction-action ratio does not select among them. The following active-frame calculation specifies one route to the square-root CHSH form.
+
+\section{Relative Torsion and the Square-Root CHSH Form}
+
+Consider a \textbf{proposed active-frame reduction}: the shared reference compatibility persists, while the finite active connection between one endpoint's reference and its analyzer has an additional relative rotation $R(\varphi)$. The dimensionless angle $\varphi$ is this physical frame offset. It is not automatically the microscopic internal contact phase or the torsional coordinate already eliminated by the ideal pair constraint.
+
+For an offset that is quasistatic during one trial, assume the balanced conditional analyzer law applies in the transformed frames:
+\begin{equation}
+    E_{\mathrm{Bell}}(\varphi)
+    =-\widehat{\mathbf n}_{\mathrm A}^{\mathsf T}
+       R(\varphi)\widehat{\mathbf n}_{\mathrm B}.
+\end{equation}
+Suppose the preparation supplies a setting-independent distribution of offsets and that trigger acceptance and paired-record completion do not reweight it. Then
+\begin{equation}
+    \boxed{
+    E_{\mathrm{Bell}}
+    =-\widehat{\mathbf n}_{\mathrm A}^{\mathsf T}
+       \langle R(\varphi)\rangle\widehat{\mathbf n}_{\mathrm B}
+    }.
+\end{equation}
+The average is over definite active configurations. Changes of the offset during a trial require a time-resolved analyzer and receiving calculation rather than this quasistatic average.
+
+\subsection{Rotation about One Preserved Axis}
+
+Choose the third coordinate axis to be the mechanically specified rotation axis:
+\begin{equation}
+    R(\varphi)=
+    \begin{pmatrix}
+    \cos\varphi&-\sin\varphi&0\\
+    \sin\varphi&\cos\varphi&0\\
+    0&0&1
+    \end{pmatrix}.
+\end{equation}
+Define the angular coherence
+\begin{equation}
+    \boxed{
+    \mathcal V_\varphi
+    =\left|\left\langle e^{i\varphi}\right\rangle\right|,
+    \qquad 0\leq\mathcal V_\varphi\leq1
+    }.
+\end{equation}
+The averaged transverse block has equal singular values $\sqrt{\langle\cos\varphi\rangle^2+\langle\sin\varphi\rangle^2}=\mathcal V_\varphi$. A fixed calibration of the mean transverse rotation therefore gives the principal form
+\begin{equation}
+    \langle R\rangle
+    =\operatorname{diag}(\mathcal V_\varphi,\mathcal V_\varphi,1)
+    \quad\text{in the calibrated frames}.
+\end{equation}
+One principal correlation is preserved while two are reduced. The surviving direction belongs to the assumed physical rotation ensemble; it is not chosen separately for each analyzer setting.
+
+For completeness, the optimized CHSH value follows directly from Equation~\eqref{eq:entanglement_chsh_definition}. Write the sum and difference of the two $B$-axes as $2\cos\vartheta\,\mathbf e_1$ and $2\sin\vartheta\,\mathbf e_2$, with orthonormal $\mathbf e_1,\mathbf e_2$ and $0\leq\vartheta\leq\pi/2$. Optimizing the $A$-axes and then $\vartheta$ gives
+\begin{equation}
+    2\sqrt{
+      |\langle R\rangle\mathbf e_1|^2
+      +|\langle R\rangle\mathbf e_2|^2
+    }.
+\end{equation}
+The two largest eigenvalues of $\langle R\rangle^{\mathsf T}\langle R\rangle$ are $1$ and $\mathcal V_\varphi^2$. Consequently,
+\begin{equation}
+    \boxed{
+    |S_{\mathrm{CHSH}}|_{\max}
+    =2\sqrt{1+\mathcal V_\varphi^{\,2}}
+    }.
+\end{equation}
+This is an elementary optimization for the specified averaged rotation model. A fixed deterministic offset has $\mathcal V_\varphi=1$; it changes the optimal alignment but not the optimized Bell magnitude. An unresolved distribution of relative offsets can reduce that magnitude. The averaged conditional joint law retains unbiased signed marginals under the stated acceptance assumptions.
+
+\subsection{A Gaussian Angular Ensemble}
+
+For a centered Gaussian offset, or its wrapped angular distribution, let
+\begin{equation}
+    \sigma_\varphi^2=\langle\varphi^2\rangle
+\end{equation}
+refer to the variance of the centered unwrapped Gaussian. Direct evaluation of its characteristic function gives
+\begin{equation}
+    \mathcal V_\varphi=e^{-\sigma_\varphi^2/2},
+    \qquad
+    \boxed{
+    |S_{\mathrm{CHSH}}|_{\max}
+    =2\sqrt{1+e^{-\sigma_\varphi^2}}
+    }.
+\end{equation}
+This result is conditional on the Gaussian preparation model. The variance must come from the actual active torsional evolution and its initial-state ensemble. The receiving construction preserves such preparation information in Equation~\eqref{eq:Y_initial_receiver_force}; that equation does not, by itself, assign this variance or a Gaussian distribution.
+
+\subsection{Matching to the Goalpost Coupling Action}
+
+The two normalized quantities have different physical definitions:
+\begin{equation}
+    \begin{aligned}
+    \alpha_{\mathrm Q}
+    &=\frac{\int_0^{\Delta t}[U_Q-U_Q(0)]\,\mathrm dt}
+            {\mathcal A_Q^{(0)}},\\
+    \mathcal V_\varphi
+    &=\left|\left\langle e^{i\varphi}\right\rangle\right|.
+    \end{aligned}
+\end{equation}
+To obtain the proposed expression
+\begin{equation}
+    |S_{\mathrm{CHSH}}|_{\max}=2\sqrt{1+\alpha_{\mathrm Q}^{2}},
+\end{equation}
+the loaded active mechanics must additionally establish
+\begin{equation}
+    \boxed{\mathcal V_\varphi=\alpha_{\mathrm Q}}.
+\end{equation}
+For the Gaussian example, combining this identification with the conditional zero-sum relation in \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}} would require
+\begin{equation}
+    \boxed{
+    \sigma_\varphi^2=-2\ln(1-\alpha_{\mathrm G}),
+    \qquad 0\leq\alpha_{\mathrm G}<1
+    }.
+\end{equation}
+This is a required matching condition, not a fluctuation law already derived from gravity. Both its logarithm and the variance are dimensionless. The active-phase domain terminates at the boundary of \hyperref[sec:grav_saturation_appendix]{Section~\ref*{sec:grav_saturation_appendix}}; these formulas do not continue a functioning detector through saturation.
+
+The calculation identifies a physical candidate for the square-root form: unresolved relative torsion about a preserved axis. Its equality to the coupling action remains a separate test. In the calibrated, balanced ideal limit the retained correspondence is
+\begin{equation}
+    \boxed{
+    E_{\mathrm{Bell}}=-\cos\theta_{\mathrm{AB}},
+    \qquad |S_{\mathrm{CHSH}}|_{\max}=2\sqrt2
+    },
+    \label{eq:entanglement_ideal_summary}
+\end{equation}
+under the population, receiving, and paired-record conditions developed above.
+
+\section{Complete Energy Accounting and Detector Scope}
+\label{sec:entanglement_constraint_work}
+
+The complete mechanical accounting includes the prepared pair, analyzer work, stored detector energy, receiving motion, and recorded configuration. The ideal Goalpost constraint has no independent net uptake. For the common axial convention of Equation~\eqref{eq:entanglement_scalar_singlet_constraint}, the result derived in \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}} is
+\begin{equation}
+    \boxed{
+    P_{\mathrm C}
+    =-\lambda_{\mathrm C}
+       (\dot\Theta_{\mathrm A}+\dot\Theta_{\mathrm B})=0
+    }.
+    \label{eq:entanglement_constraint_zero_net_work}
+\end{equation}
+Endpoint reactions and redistribution of endpoint power remain possible. The distinction between the two sectors is
+\begin{equation}
+    \begin{aligned}
+    \text{Active Vacuum:}&\quad\text{finite-energy motion and receiving work},\\
+    \text{Hard Floor:}&\quad\text{ideal compatibility and structural reference}.
+    \end{aligned}
+    \label{eq:entanglement_two_causal_sectors}
+\end{equation}
+The no-signalling tests of \hyperref[sec:entanglement_chsh]{Section~\ref*{sec:entanglement_chsh}} require more than this energetic separation.
+
+In the common-frequency receiving reduction,
+\begin{equation}
+    \overline P_{\mathrm{rec},i}=\omega\dot{\mathcal J}_i.
+\end{equation}
+The many-site detector has stored preparation energy before illumination. A threshold transition can release or redirect that energy; amplification is not identified solely with incident photon or defect energy. Equation~\eqref{eq:Y_coupled_energy_balance} supplies the retained-plus-receiver work balance, while Equation~\eqref{eq:Y_capture_energy_balance} governs settling in an accessible binding basin.
+
+A complete implementation must conserve this energy while producing the two local records. The first-instability result does not establish that the first local detector drains an entire spatially distributed field or prevents every later local transition. The single-photon beam-splitter problem is a separate application of the optical energy balance in \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}} and the two receiving systems in \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}. The pair-parity construction does not automatically solve it.
+
+\subsection{Active Accessibility and the Persistent Record}
+\label{sec:entanglement_decoherence}
+
+Measurement can change the finite configuration that supported active access to the shared reference. Its phase-slip, binding, or receiving mechanism must be calculated for the participating contacts. As specified in \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}},
+\begin{equation}
+    \boxed{
+    \begin{gathered}
+    \text{loss of active coherent accessibility}\\
+    \neq\ \text{destruction of the Hard-Floor record}.
+    \end{gathered}
+    }
+    \label{eq:entanglement_decoherence_not_erasure}
+\end{equation}
+A conservative frame dispersion can reduce ensemble visibility without an irreversible loss in any individual trial. Irreversible receiving work, loss of active access, imperfect detection, and reversible misalignment therefore retain separate mechanical meanings. The structural-record interpretation belongs to \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}; it is not substituted for the active detector dynamics.
+
+\section{Derived Results and Remaining Mechanical Requirements}
+\label{sec:entanglement_status}
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.22}
+\setlength{\tabcolsep}{5pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.42\textwidth}>{\raggedright\arraybackslash}p{\dimexpr0.58\textwidth-10pt\relax}@{}}
+\toprule
+\textbf{Result} & \textbf{Constitutive status}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Result} & \textbf{Constitutive status}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Goalpost torsional response and constraint-work balance
+& Inherited from \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}.\\
+\addlinespace
+Sum-and-difference analyzer geometry
+& Derived from the specified quadratic alignment interaction.\\
+\addlinespace
+Received-action rates containing $\mathcal G_{\mathrm{opp}}$ and $\mathcal G_{\mathrm{same}}$
+& Derived for the proposed symmetric torque-port reduction and projected receiving responses.\\
+\addlinespace
+Finite-site survival and many-site capture rate
+& Derived for the stated independent threshold preparation and weak action-sharing limit.\\
+\addlinespace
+Response-weighted correlation and balanced singlet law
+& Conditional on stationary fractions, terminal paired-record mapping, and signed-readout symmetry.\\
+\addlinespace
+CHSH maximum $2\sqrt2$
+& Derived from that balanced conditional law. A complete-trial interpretation requires the specified acceptance and local-record tests.\\
+\addlinespace
+$2\sqrt{1+\mathcal V_\varphi^{\,2}}$
+& Derived for a quasistatic relative-axis rotation ensemble with setting-independent sampling and no acceptance reweighting.\\
+\addlinespace
+$\mathcal V_\varphi=\alpha_{\mathrm Q}$
+& An additional mechanical identification not established by the present calculation.\\
+\addlinespace
+Universal gravitational Bell law
+& Requires the loaded analyzer, receiving system, and preparation distribution to be calculated together.\\
+\end{longtable}
+\endgroup
+
+The reduced laws are dimensionally consistent under their stated coordinate normalizations. Their microscopic TFT realization requires a common pair--analyzer--receiver action that supplies the port projections, stable modes, threshold preparation, and terminal records. None of these additional configurations is inferred solely from agreement with the target singlet curve.
+
+\subsection{Mechanical Conclusion}
+\label{sec:entanglement_conclusion}
+
+The measurable correlation is determined by how the Goalpost state drives its analyzers and how received work produces stable records. Geometry supplies response directions; projected mechanical coefficients supply excitation and absorption; detector preparation supplies first-transition statistics. The present calculation obtains explicit conditional laws for these stages.
+
+The distinction retained in \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}} remains decisive: a reduction in coupling action can alter response speed or detection efficiency without necessarily reducing normalized Bell correlations. A square-root reduction of the Bell maximum is obtained here for a specified relative-torsion ensemble. Its identification with the zero-sum coupling requires the further relation $\mathcal V_\varphi=\alpha_{\mathrm Q}$.
+
+The remaining microscopic targets are the symmetric analyzer-port projection, the physical paired-record realization of the threshold model, and the loaded relative-torsion distribution. They are separate calculations with specified inputs and observable outputs. Closing them within one TFT mechanical configuration is the condition for promoting the conditional correspondence to an independently predictive entanglement model.

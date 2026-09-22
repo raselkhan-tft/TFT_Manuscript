@@ -31,10 +31,10 @@ def create_cosmic_horizon_visual():
     # -------------------------------------------------------
     # 2. THE MACROSCOPIC LAYOUT & HORIZON
     # -------------------------------------------------------
-    # Absolute Optical Horizon - Updated to gray dotted line
+    # Absolute Optical Horizon
     ax.axvline(R_U, color='gray', linestyle=':', lw=1.5, zorder=5)
-    ax.text(R_U + 0.3, -5.0, r'$\mathbf{Viscous\ Cosmic\ Horizon}$', 
-            color='black', fontweight='bold', rotation=90, va='bottom', ha='left', fontsize=11, zorder=10)
+    ax.text(R_U + 0.3, -5.5, r'$\mathbf{Cosmic\ Damping\ Horizon}$' + '\n' + r'($R_{\mathrm{U}}$)', 
+            color='black', fontweight='bold', rotation=90, va='bottom', ha='left', multialignment='center', fontsize=11, zorder=10)
 
     # Local Detector
     ax.scatter(0, 0, marker='s', s=120, color='black', zorder=10)
@@ -42,9 +42,6 @@ def create_cosmic_horizon_visual():
             ha='center', va='top', fontsize=11, zorder=10)
             
     # Formal Radial Dimension Line (R_U) - Moved to top with vertical extension lines (CAD style)
-    # The tip of the r_s arrow is at y = 2.0.
-    # To reduce the gap (previously 5.0 - 2.0 = 3.0) by 50%, the new gap should be 1.5.
-    # Therefore, dim_y = 2.0 + 1.5 = 3.5.
     dim_y = 3.5
     # Left vertical extension line from detector
     ax.plot([0, 0], [0.5, dim_y + 0.3], color='black', lw=0.8, zorder=4)
@@ -54,8 +51,14 @@ def create_cosmic_horizon_visual():
     # Horizontal dimension bracket
     ax.annotate("", xy=(0, dim_y), xytext=(R_U, dim_y),
                 arrowprops=dict(arrowstyle="<|-|>", lw=1.2, color='black', mutation_scale=10), zorder=4)
-    ax.text(R_U / 2, dim_y - 0.2, r"$R_{\mathrm{U}} \approx 13.39\ \mathrm{Gly}$", 
-            ha='center', va='top', fontsize=12, fontweight='bold', color='black', zorder=10,
+    
+    # Length on top, Time on bottom
+    ax.text(R_U / 2, dim_y + 0.15, r"$\mathbf{Photon\ Energy\text{-}Relaxation\ Length}$ ($R_{\mathrm{U}} \approx 1.27 \times 10^{26}\ \mathrm{m} \approx 13.39\ \mathrm{Gly}$)", 
+            ha='center', va='bottom', fontsize=12, color='black', zorder=10,
+            bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=3))
+            
+    ax.text(R_U / 2, dim_y - 0.15, r"$\mathbf{Photon\ Energy\text{-}Relaxation\ Time}$ ($t_{\mathrm{D}} = \Gamma_{\mathrm{D}}^{-1} \simeq 13.39\ \mathrm{Gyr}$)", 
+            ha='center', va='top', fontsize=11, color='black', zorder=10,
             bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=3))
 
     # -------------------------------------------------------
@@ -67,7 +70,6 @@ def create_cosmic_horizon_visual():
     ax.add_patch(shadow_fill)
     
     # 2. The Solid Maroon Perimeter (Edge Only)
-    # Decoupled to enforce 100% opacity on the ring, preventing it from washing out to gray
     shadow_edge = patches.Ellipse((R_U, 0.0), width=1.0, height=R_S_VISUAL * 2, 
                                   facecolor='none', edgecolor='#8B0000', lw=2.5, alpha=1.0, zorder=5)
     ax.add_patch(shadow_edge)
@@ -78,7 +80,7 @@ def create_cosmic_horizon_visual():
     ax.add_patch(inner_shadow)
     
     # Shadow Label
-    ax.text(R_U + 0.6, 0.0, r"$\mathbf{Thermodynamic\ Impedance\ Shadow}$" + "\n" + r"($\Delta T \approx \pm 30\ \mu\mathrm{K}$)", 
+    ax.text(R_U + 0.6, 0.0, r"$\mathbf{Thermodynamic\ Impedance\ Signature}$" + "\n" + r"($\Delta T \approx \pm 30\ \mu\mathrm{K}$)", 
             ha='left', va='center', fontsize=11, zorder=10, bbox=dict(facecolor='white', edgecolor='none', alpha=0.8, pad=2))
 
     # -------------------------------------------------------
@@ -88,7 +90,7 @@ def create_cosmic_horizon_visual():
     ax.plot([0, R_U], [0, 0], color='black', linestyle=':', lw=1.5, zorder=3)
 
     # Foundational Anchor (Positioned right-shifted under the line of sight)
-    anchor_text = r"$\mathbf{Vacuum\ Damping\ Rate}$ ($\Gamma_{\mathrm{D}} \equiv H_0 = 73.04\ \mathrm{km/s/Mpc}$)"
+    anchor_text = r"$\mathbf{Coherent\text{-}Photon\ Energy\text{-}Relaxation\ Rate}$" + "\n" + r"($\Gamma_{\mathrm{D}} \simeq H_0^{(\mathrm{obs})} \simeq 73.04\ \mathrm{km\,s^{-1}\,Mpc^{-1}}$)"
     ax.text(R_U * 0.65, -0.25, anchor_text, ha='center', va='top', fontsize=11, 
             bbox=dict(facecolor='white', edgecolor='none', alpha=0.9, pad=3), zorder=10)
 
@@ -97,7 +99,6 @@ def create_cosmic_horizon_visual():
     ax.plot([0, R_U], [0, -R_S_VISUAL], color='black', linestyle='--', lw=1.2, zorder=3)
 
     # Half Angle Label (Angular Radius)
-    # Pushed the arc further right (radius 4.0 -> width/height 8.0) where the cone is wider
     theta_arc = np.degrees(np.arctan2(R_S_VISUAL, R_U))
     angle_arc = patches.Arc((0, 0), width=8.0, height=8.0, angle=0, theta1=0, theta2=theta_arc, color='black', lw=1.5, zorder=4)
     ax.add_patch(angle_arc)
@@ -110,19 +111,16 @@ def create_cosmic_horizon_visual():
             bbox=dict(facecolor='white', edgecolor='none', alpha=1.0, pad=2), zorder=10)
 
     # The Physical Radius (True Acoustic Ruler)
-    # Updated color strictly back to Black as requested
     ax.annotate('', xy=(R_U, R_S_VISUAL + 0.05), xytext=(R_U, 0.0),
                 arrowprops=dict(arrowstyle='-|>', color='black', lw=3.5, mutation_scale=20), zorder=8)
     
-    # Label restored to formal Black, value corrected to 42.73 Mpc
-    ax.text(R_U - 0.2, R_S_VISUAL / 2, r"$\mathbf{True\ Acoustic\ Ruler}$" + "\n" + r"($r_{\mathrm{s}} \approx 42.73\ \mathrm{Mpc}$)", 
+    ax.text(R_U - 0.2, R_S_VISUAL / 2, r"$\mathbf{TFT\ Effective\ Acoustic\ Scale}$" + "\n" + r"($r_{\mathrm{s}}^{(\mathrm{TFT})} \approx 42.73\ \mathrm{Mpc}$)", 
             ha='right', va='center', fontsize=11, color='black', fontweight='bold',
             bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=3), zorder=10)
 
     # -------------------------------------------------------
     # STYLING & FORMATTING
     # -------------------------------------------------------
-    # Expanded X-limit to 20 to ensure the background grid encompasses the shadow label
     ax.set_xlim(-1, 20)
     ax.set_ylim(-5.5, 5.5) 
     ax.axis('off')

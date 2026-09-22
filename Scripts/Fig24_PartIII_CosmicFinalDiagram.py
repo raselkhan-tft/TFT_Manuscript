@@ -252,7 +252,7 @@ def create_scale_hierarchy_visual():
     ticks_y = [0.0, 0.2, y_e, 0.6, 0.8, 1.0]
     ax.set_yticks(ticks_y)
     ax.set_yticklabels(["0.0", "0.2", r"$1/e \approx 0.37$", "0.6", "0.8", "1.0"])
-    ax.set_ylabel(r"Kinematic Coherence $(E_{\mathrm{obs}} / E_{\mathrm{emit}})$", fontsize=11, labelpad=0)
+    ax.set_ylabel(r"Coherent-Photon Energy Fraction $(E_{\mathrm{obs}} / E_{\mathrm{emit}})$", fontsize=11, labelpad=0)
     
     # Bottom anchor labels
     y_align = -0.11 

@@ -1,475 +1,454 @@
-\chapter{Vacuum Visco-Elasticity and Wave Arrest}
+\chapter{Active-Vacuum Dissipative Response and Wave Arrest}
 \label{app:matter_vnlw_photon_linear_waveequation}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Abstract:} Tension Field Theory (TFT) treats the Spacetime Gravitational Floor (SGF) as a physical, dual-phase continuum. Consequently, quantum interactions are subject to the visco-elastic response of the FCC--Condensate vacuum. This appendix develops two constitutive manifestations of the same underlying relaxation mechanism: the non-linear logarithmic term governing the wave arrest of topological knots (matter), and the ordinary linear viscous term governing attenuation of untethered shear waves (light). The latter establishes the conventional attenuation branch; coherent-action-preserving photon frequency transport and the corresponding Viscoelastic Vacuum Relaxation Rate $\Gamma_{\mathrm{D}}$ are developed separately in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
+\noindent\textbf{Abstract:}
+A detector receives an incident excitation through contact forces and condensate coupling within the Active Vacuum. Building on \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}, this appendix follows the work from the incident state into a specified receiving system. Its delayed reaction yields a mechanical memory law, a conserved coupled energy balance, and a local damping limit. A weak, narrow-band projection connects that response to the matter envelope, while an outgoing FCC sequence provides an explicit radiation-resistance example. Capture requires an accessible detector-bound configuration and sufficient energy transfer for settling. The detector spectrum, interface coupling, and binding landscape remain the microscopic inputs to these reductions. Ordinary transverse attenuation and coherent photon scale relaxation retain separate physical assignments.
 
-\section{Derivation of Non-Linear Damping for Matter (The VNLW Term)}
+\section{Localized Defect--Detector Mechanics and Wave Arrest}
+\label{sec:Y_defect_detector}
 
-When a localized topological knot (a Fermion) moves through the active vacuum, it physically displaces the Face--Centered Cubic (FCC) lattice. In the presence of dense macroscopic matter (a detector), the lattice behaves as an open quantum system, draining kinetic energy from the wave into matter-coupled FCC--Condensate reservoir degrees of freedom.
+The incident defect and its associated field meet a detector made of other configurations of the same Active Vacuum. Their contacts redirect the incoming motion: part can remain in coherent reflection or transmission, while part enters detector-supported motion. The receiving reaction changes the incident state, and an accessible binding configuration can retain the defect after the excess motion has departed.
 
-To derive the governing equation, we begin with the standard time-dependent Schr\"{o}dinger equation and introduce an unknown non-Hermitian dissipative potential $W(\mathbf{x},t)$ to mathematically model this thermodynamic sink:
+The conservative reduction is supplied by Equation~\eqref{eq:X_tangent_energy}, with contact and condensate mechanics developed in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}. Throughout this appendix, $\Psi$ retains the structural-density meaning of Equation~\eqref{eq:X_structural_order_parameter}. The incident excitation uses $\psi$, its slow envelope $\psi_{\mathrm{env}}$, and the action-normalized intensity $\rho_\psi$ established with Equation~\eqref{eq:X_action_field}. The Hard Floor supplies the reference and constraint of \hyperref[part:one]{Part~\ref*{part:one}}; the detector and its active surroundings carry the receiving work.
+
+\subsection{The Retained Coordinate and Incident Work}
+\label{sec:Y_boundary_work}
+
+Select a length-valued coordinate $q(t)$ for an admissible boundary displacement of the detector-loaded configuration. The boundary mode $\mathbf b_{\partial}=\partial\mathbf X_{\partial}/\partial q$ and conservative condensate participation follow \hyperref[sec:AP_localized_kinematics]{Section~\ref*{sec:AP_localized_kinematics}} and \hyperref[sec:AP_defect_boundary_value_problem]{Section~\ref*{sec:AP_defect_boundary_value_problem}}. The complete retained inertia $M_q>0$ includes that participating motion once. Its identification with the translational mass in Equation~\eqref{eq:X_translation_mass} requires $q$ to represent the same physical translation.
+
+Let $U(q)$ include the static relaxation of the receiving coordinates. In a range where $M_q$ is constant, the retained energy and incident force are
 \begin{equation}
-    i\hbar \frac{\partial\Psi}{\partial t}
-    =
-    \left[
-        -\frac{\hbar^2}{2m}\nabla^2
-        + V
-        + W
-    \right]\Psi.
+    E_q=\frac12M_q\dot q^2+U(q),
+    \qquad
+    F_{\mathrm{in}}(t)
+    =\int_{\partial\Omega_{\mathrm{def}}}
+    \mathbf b_{\partial}\cdot\mathbf t_{\mathrm{in}}\,\mathrm dA,
+    \label{eq:Y_local_mechanical_energy}
 \end{equation}
+where $\mathbf t_{\mathrm{in}}$ is the incident traction. Its generalized work rate is $F_{\mathrm{in}}\dot q$. The mode reconstruction associated with Equation~\eqref{eq:X_complex_quadrature}, followed by the contact constitutive law, determines that traction for the chosen interface. Normal, tangential, and rotational participation are selected by the actual boundary conditions, as in \hyperref[sec:AP_defect_boundary_value_problem]{Section~\ref*{sec:AP_defect_boundary_value_problem}}.
 
-\subsection{Kinetic Derivation of the Constitutive Law ($\Gamma$)}
+\subsection{Receiving Motion and Mechanical Memory}
+\label{sec:Y_receiving_memory}
 
-To define the non-Hermitian potential $W$, the localized physical damping rate ($\Gamma$) is first derived from kinetic collision theory. As the pilot wave propagates, it sweeps through a geometric volume of space containing localized structural defects (the atomic lattice of the dense matter sink).
+A displaced boundary sets neighboring active coordinates into motion. Those coordinates store energy and subsequently react on the boundary, making the receiving force depend on its past displacement.
 
-The differential volume ($\mathrm{d}V$) swept by a wave interface of interaction area $\sigma$ moving at local kinematic velocity $c_{\mathrm{P}}$ in time $\mathrm{d}t$ is
+Evaluate the kinetic matrix $\mathsf M$ and potential Hessian $\mathsf K$ of Equation~\eqref{eq:X_tangent_energy} at the detector-loaded reference state. Choose dimensionless mode shapes $\mathbf e_q$ and $\mathbf e_a$ so that the receiving coordinates $\xi_a$ are diagonal in their kinetic and stiffness blocks and kinetically orthogonal to $q$. Their local projections give
+\begin{align}
+    M_q&=\mathbf e_q^{\mathsf T}\mathsf M\mathbf e_q,
+    &m_a&=\mathbf e_a^{\mathsf T}\mathsf M\mathbf e_a,
+    \nonumber\\
+    m_a\omega_a^2&=\mathbf e_a^{\mathsf T}\mathsf K\mathbf e_a,
+    &g_a&=-\mathbf e_q^{\mathsf T}\mathsf K\mathbf e_a.
+    \label{eq:Y_receiver_projection}
+\end{align}
+Here $m_a>0$, $\omega_a>0$, and $[g_a]=\mathrm{N\,m^{-1}}$. Nondynamical constraints and zero modes are resolved before this projection. Receiving motions retained explicitly are distinct from any motion already eliminated into $M_q$.
+
+With the origin at equilibrium, completing the potential-energy squares gives the linear receiving reduction
 \begin{equation}
-    \mathrm{d}V
-    =
-    \sigma
-    \cdot
-    c_{\mathrm{P}}
-    \cdot
-    \mathrm{d}t.
+    L=\frac12M_q\dot q^2-U(q)
+    +\sum_a\left[
+        \frac12m_a\dot\xi_a^2
+        -\frac12m_a\omega_a^2
+        \left(\xi_a-\frac{g_aq}{m_a\omega_a^2}\right)^2
+    \right],
+    \label{eq:Y_coupled_mechanical_reduction}
 \end{equation}
-
-If the local medium possesses a topological knot density $n_K(x)$ (number of defects per unit volume), the number of physical lattice collisions ($\mathrm{d}N$) occurring in that timeframe is
+with statically relaxed tangent stiffness
 \begin{equation}
-    \mathrm{d}N
-    =
-    n_K(x)
-    \cdot
-    \mathrm{d}V
-    =
-    n_K(x)
-    \cdot
-    \sigma
-    \cdot
-    c_{\mathrm{P}}
-    \cdot
-    \mathrm{d}t.
+    U''(0)=\mathbf e_q^{\mathsf T}\mathsf K\mathbf e_q
+    -\sum_a\frac{g_a^2}{m_a\omega_a^2}.
+    \label{eq:Y_relaxed_stiffness}
 \end{equation}
+The shifted squares include the static response in $U$, leaving the delayed receiving reaction explicit. At tangent order, $U(q)=U(0)+\tfrac12U''(0)q^2$. The selected configuration must support a stable retained sector and finite projected sums. Equations~\eqref{eq:Y_receiver_projection}--\eqref{eq:Y_relaxed_stiffness} specify the reduction once the detector geometry and mechanical coefficients have been calculated.
 
-The local Quantum Damping Rate ($\Gamma$) is defined as the collision frequency (fractional energy-loss events per unit time, $\mathrm{d}N/\mathrm{d}t$). Rearranging the kinetic equation yields the constitutive law for localized vacuum friction:
+Variation gives
+\begin{align}
+    m_a\ddot\xi_a+m_a\omega_a^2\xi_a&=g_aq,
+    \nonumber\\
+    M_q\ddot q+U'(q)+Q_{\mathrm{rec}}&=F_{\mathrm{in}},
+    \label{eq:Y_coupled_force_equations}
+\end{align}
+where the resisting-load convention is
 \begin{equation}
-    \Gamma(x)
-    =
-    \sigma
-    \cdot
-    c_{\mathrm{P}}
-    \cdot
-    n_K(x).
+    Q_{\mathrm{rec}}
+    =-\sum_a g_a\left(\xi_a-\frac{g_aq}{m_a\omega_a^2}\right).
+    \label{eq:Y_receiving_load}
 \end{equation}
-
-Here $\Gamma(x)$ denotes the localized defect-induced Quantum Damping Rate. It vanishes as $n_K\rightarrow0$ and is therefore not identified with the nonzero defect-free Viscoelastic Vacuum Relaxation Rate $\Gamma_{\mathrm{D}}$. The two rates represent distinct constitutive limits of the same underlying FCC--Condensate visco-elastic relaxation mechanism.
-
-\subsection{The Madelung Form and the Topological Sink}
-
-To translate this friction into the quantum potential $W$, we utilize the macroscopic physical order parameter of the SGF established in \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}. Defining the wavefunction by its physical amplitude ($\sqrt{\rho}$) and its mechanical phase action ($S$):
+Solving the first line of Equation~\eqref{eq:Y_coupled_force_equations} for the specified initial receiver state and integrating its driven term by parts yields
 \begin{equation}
-    \Psi
-    =
-    \sqrt{\rho}
-    e^{iS/\hbar}.
+    \boxed{
+    M_q\ddot q+U'(q)
+    +\int_0^t K(t-t')\dot q(t')\,\mathrm dt'
+    =F_{\mathrm{in}}(t)+f_0(t)
+    }.
+    \label{eq:Y_mechanical_memory}
 \end{equation}
+The kernel and initial-state force are
+\begin{align}
+    K(s)&=\sum_a\frac{g_a^2}{m_a\omega_a^2}\cos(\omega_as),
+    \label{eq:Y_memory_kernel}\\
+    f_0(t)&=\sum_a g_a\left[
+        \left(\xi_a(0)-\frac{g_aq(0)}{m_a\omega_a^2}\right)
+        \cos(\omega_at)
+        +\frac{\dot\xi_a(0)}{\omega_a}\sin(\omega_at)
+    \right].
+    \label{eq:Y_initial_receiver_force}
+\end{align}
+The initial-state force preserves the receiver's physical preparation. The incident drive and this receiving initial state are assigned to distinct retained sectors, so an incoming disturbance is counted once. A statistical description of $f_0$ enters when the receiver's preparation is specified as an ensemble rather than as individual mechanical coordinates.
 
-Taking the natural logarithm of both sides isolates the real amplitude from the imaginary phase:
+Assign the contact energy to the receiving sector through
 \begin{equation}
-    \ln(\Psi)
-    =
-    \ln(\sqrt{\rho})
-    +
-    \frac{iS}{\hbar}
-    =
-    \frac{1}{2}\ln(\rho)
-    +
-    \frac{iS}{\hbar}.
+    E_{\mathrm{rec}}
+    =\sum_a\left[
+        \frac12m_a\dot\xi_a^2
+        +\frac12m_a\omega_a^2
+        \left(\xi_a-\frac{g_aq}{m_a\omega_a^2}\right)^2
+    \right].
 \end{equation}
-
-In TFT, absolute kinematic localization (wave arrest) is defined as the physical collapse of the wave's spatial volume. The matter sink acts exclusively on the probability density ($\rho$). Therefore, to model an open system where the spatial extent of the wave rapidly decays into a delta function, we must isolate the real amplitude term:
+Equations~\eqref{eq:Y_coupled_force_equations}--\eqref{eq:Y_receiving_load} then imply
 \begin{equation}
-    2
-    \left[
-        \ln(\Psi)
-        -
-        \frac{iS}{\hbar}
-    \right]
-    =
-    \ln(\rho).
+    \boxed{
+    \dot E_q=F_{\mathrm{in}}\dot q-Q_{\mathrm{rec}}\dot q,
+    \qquad
+    \dot E_{\mathrm{rec}}=Q_{\mathrm{rec}}\dot q
+    }.
+    \label{eq:Y_coupled_energy_balance}
 \end{equation}
+Energy exported by the retained coordinate appears in the receiving motion. The instantaneous exchange can reverse. A finite closed harmonic receiver generally retains recurrences; an extended outgoing response can instead carry energy away from the interaction region. The effective damping interval is set by that propagation and by the timescale on which significant energy returns.
 
-Because probability density $\rho$ is the absolute square of the wavefunction ($\rho=|\Psi|^2$), we have
+\subsection{Impedance and the Localized Relaxation Rate}
+\label{sec:Y_impedance_rate}
+
+Separate the driven response from $f_0$ in Equation~\eqref{eq:Y_mechanical_memory}. For time dependence $e^{-i\omega t}$, its force--velocity impedance is
 \begin{equation}
-    \ln(\rho)
-    =
-    \ln(|\Psi|^2).
+    \widehat Q_{\mathrm{rec}}^{(\mathrm{dr})}
+    =Z_{\mathrm{rec}}(\omega)\widehat{\dot q},
+    \qquad
+    Z_{\mathrm{rec}}(\omega)
+    =\lim_{\epsilon\downarrow0}\int_0^\infty
+    K(s)e^{(i\omega-\epsilon)s}\,\mathrm ds.
+    \label{eq:Y_receiving_impedance}
 \end{equation}
-
-\subsection{The Logarithmic Resolution}
-
-In non-Hermitian quantum mechanics, the rapid collapse of probability density is driven by an imaginary potential. We define the dissipative sink potential $W$ as strictly proportional to this density distribution, scaled by the localized Quantum Damping Rate ($\Gamma$) and the quantum of action ($\hbar$):
+Here $s$ is a time lag and $\epsilon>0$ is an inverse-time convergence regulator. The kernel $K(s)$ has stiffness units and $Z_{\mathrm{rec}}$ has force--velocity impedance units, $\mathrm{kg\,s^{-1}}$. It is the receiving contribution to the localized response introduced in \hyperref[sec:AP_mode_resolved_density]{Section~\ref*{sec:AP_mode_resolved_density}}, with the conservative terms in $M_q$ and $U$ counted separately. Its cycle-averaged driven work is
 \begin{equation}
-    W
-    =
-    -i\hbar\Gamma\ln(\rho)
-    \quad
-    \implies
-    \quad
-    W
-    =
-    -i\hbar\Gamma\ln(|\Psi|^2).
+    \boxed{
+    \overline P_{\mathrm{rec}}
+    =\frac12\operatorname{Re}Z_{\mathrm{rec}}(\omega)
+    \left|\widehat{\dot q}\right|^2
+    }.
+    \label{eq:Y_impedance_power}
 \end{equation}
+For a passive receiver, $\operatorname{Re}Z_{\mathrm{rec}}\geq0$. The reactive component stores and returns energy; the real component measures net outgoing or absorbed work under the specified harmonic driving conditions. For discrete lossless modes, the limiting response is interpreted spectrally, not as a smooth irreversible constant.
 
-Substituting this potential $W$ back into the master equation yields the Viscous Non-Linear Wave Equation (VNLW). Within the retained TFT constitutive model, the localized knot density therefore controls the strength of the nonconservative wave-arrest term:
+When the memory response is approximately local over the retained band, and any relevant reactive correction has been included in the conservative coefficients,
 \begin{equation}
-    i\hbar \frac{\partial\Psi}{\partial t}
-    =
-    \left[
-        -\frac{\hbar^2}{2m}\nabla^2
-        + V
-    \right]\Psi
-    -
-    \left[
-        i(\hbar\Gamma)\ln(|\Psi|^2)
-    \right]\Psi.
+    \int_0^t K(t-t')\dot q(t')\,\mathrm dt'
+    \simeq\eta_q\dot q(t),
+    \qquad \eta_q\geq0.
 \end{equation}
-
-\section{Derivation of Linear Shear Attenuation for Light (The Damped-Wave Comparator)}
-
-Unlike Fermions, the photon is an untethered transverse shear wave possessing zero rest mass ($m = 0$). It does not drag a topological core through the bulk volume; it strictly shears the 2D surface interface of the FCC nodes. We first derive the corresponding ordinary linear attenuation branch directly from the classical continuum mechanics of the TFT substrate. This branch provides the visco-elastic attenuation comparator; the completed coherent photon-transport law is developed separately in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
-
-\subsection{The Newtonian Continuum}
-
-For the continuous 2D surface interface of the SGF, we apply Newton's second law to a differential lattice element undergoing transverse phase displacement $\mathbf{A}$.
-
-Natively employing $\mu_{\mathrm{D}}$ (the effective 2D interface inertia) and $\tau_{\mathrm{D}}$ (the baseline lattice surface tension), the local equation of motion per unit area is
+The reduced force law becomes
 \begin{equation}
-    \mu_{\mathrm{D}}
-    \frac{\partial^2 \mathbf{A}}{\partial t^2}
-    =
-    \tau_{\mathrm{D}}
-    \frac{\partial^2 \mathbf{A}}{\partial x^2}
-    +
-    F_{\mathrm{fr}}.
+    M_q\ddot q+U'(q)+\eta_q\dot q
+    =F_{\mathrm{in}}+f_0.
+    \label{eq:Y_local_force_law}
 \end{equation}
+The coefficient $\eta_q$, measured in $\mathrm{kg\,s^{-1}}$, is the effective viscous resistance of the selected coordinate. It is approximately $\operatorname{Re}Z_{\mathrm{rec}}$ over the retained dynamical band. The local representation requires a nearly constant resistance there and a controlled treatment of the reactive response; otherwise Equation~\eqref{eq:Y_mechanical_memory} remains the appropriate force law.
 
-\subsection{The Visco-Elastic Damping Force ($F_{\mathrm{fr}}$)}
-
-As the solid FCC nodes oscillate transversely, a nonconservative FCC--Condensate response may produce an out-of-phase visco-elastic force $F_{\mathrm{fr}}$. At the retained linear-response order, represent the defect-free vacuum contribution and the localized defect-induced contribution by the effective rate
+For free, weak relaxation near a stable minimum, let $\overline E_{q,\mathrm{coh}}$ be the cycle-averaged excess energy above that minimum. With negligible returned excitation, define
 \begin{equation}
-    \Gamma_{\mathrm{eff}}(x)
-    =
-    \Gamma_{\mathrm{D}}
-    +
-    \Gamma(x),
+    \boxed{
+    \Gamma_q
+    \equiv-\frac{1}{\overline E_{q,\mathrm{coh}}}
+    \frac{\mathrm d\overline E_{q,\mathrm{coh}}}{\mathrm dt}
+    =\frac{\overline P_{\mathrm{rec}}}{\overline E_{q,\mathrm{coh}}}
+    \simeq\frac{\eta_q}{M_q}
+    }.
+    \label{eq:Y_localized_damping_rate}
+\end{equation}
+The subscript identifies the coordinate and energy normalization. For a resolved weakly damped harmonic mode, the same work calculation uses $\operatorname{Re}Z_{\mathrm{rec}}$ at its mode frequency. A detector rate can therefore be defined over a finite working band without assuming the infrared behavior required for a universal photon scale-relaxation law. The matter-field coefficient is determined by the projection below.
+
+\subsection{From the Receiving Force to the Matter Envelope}
+\label{sec:Y_matter_envelope}
+
+The receiving force acts directly on the momentum quadrature of the incident motion. Apply Equation~\eqref{eq:X_complex_quadrature} to a retained harmonic coordinate centered at its minimum, with $\pi_q=M_q\dot q$ and $\omega_q^2=U''(0)/M_q$. Differentiation using Equation~\eqref{eq:Y_coupled_force_equations} gives
+\begin{equation}
+    \dot a_q=-i\omega_q a_q
+    +\frac{i\left(F_{\mathrm{in}}-Q_{\mathrm{rec}}\right)}
+    {\sqrt{2\hbar M_q\omega_q}}.
+    \label{eq:Y_forced_complex_amplitude}
+\end{equation}
+Thus the receiving force enters through the same real momentum quadrature that carries the conservative motion.
+
+For the unforced local limit of Equation~\eqref{eq:Y_local_force_law}, with $f_0$ negligible, the exact quadrature equation is
+\begin{equation}
+    \dot a_q=-i\omega_q a_q
+    -\frac{\eta_q}{2M_q}\left(a_q-a_q^*\right).
+    \label{eq:Y_quadrature_damping}
+\end{equation}
+Writing $a_q=b_qe^{-i\omega_qt}$ makes the conjugate contribution oscillate at $2\omega_q$. When $\eta_q/M_q\ll\omega_q$, averaging over the rapid cycle gives
+\begin{equation}
+    \dot b_q\simeq-\frac{\Gamma_q}{2}b_q,
+    \qquad
+    \overline E_{q,\mathrm{coh}}\propto|b_q|^2.
+    \label{eq:Y_slow_amplitude_decay}
+\end{equation}
+The factor of one half is the relation between the decay of a harmonic amplitude and its quadratic energy, as normalized in Equation~\eqref{eq:X_mode_action}.
+
+For the matter branch of \hyperref[sec:X_schrodinger_limit]{Section~\ref*{sec:X_schrodinger_limit}}, project the receiving response onto the same mechanical modes that define the excitation field. In the weak, narrow-band limit, suppose this projection is approximately local in space and time, preserves branch isolation, and has negligible returned excitation over the interval considered. Spatial variation must also remain within the envelope resolution. Write $\Gamma(\mathbf x)\geq0$ for the resulting local loss coefficient. Small conservative shifts are included once in $V$ when their leading projection is a real local potential. The slow-envelope equation is then
+\begin{equation}
+    \boxed{
+    i\hbar\partial_t\psi_{\mathrm{env}}
+    =\left[
+        -\frac{\hbar^2}{2m_{\mathrm{env}}}\nabla^2+V
+        -\frac{i\hbar}{2}\Gamma(\mathbf x)
+    \right]\psi_{\mathrm{env}}
+    }.
+    \label{eq:Y_matter_envelope_loss}
+\end{equation}
+Here $m_{\mathrm{env}}$ retains its definition and matching requirements in Equations~\eqref{eq:X_band_mass} and~\eqref{eq:X_matter_matching}. Equality $\Gamma=\Gamma_q$ applies when the boundary coordinate and field reduction describe the same retained mode and energy. A general detector instead produces a mode-coupled memory response; Equation~\eqref{eq:Y_matter_envelope_loss} is its stated local, narrow-band specialization.
+
+The intensity is $\rho_\psi=|\psi|^2=|\psi_{\mathrm{env}}|^2$, and the current retains the normalization of Equation~\eqref{eq:X_continuity}. Multiplication of Equation~\eqref{eq:Y_matter_envelope_loss} by $\psi_{\mathrm{env}}^*$ and subtraction of its complex conjugate gives
+\begin{equation}
+    \boxed{
+    \partial_t\rho_\psi+\nabla\cdot\mathbf j_\psi
+    =-\Gamma\rho_\psi
+    }.
+    \label{eq:Y_matter_action_balance}
+\end{equation}
+For a narrow band centered on a nearly fixed positive full-carrier frequency $\omega_{\mathrm{inc}}$, the leading received power is correspondingly
+\begin{equation}
+    \overline P_{\mathrm{rec}}
+    \simeq\hbar\omega_{\mathrm{inc}}
+    \int_{\Omega_{\mathrm{det}}}\Gamma\rho_\psi\,\mathrm dV,
+    \label{eq:Y_band_received_power}
+\end{equation}
+where $\Omega_{\mathrm{det}}$ is the interaction region and $\omega_{\mathrm{inc}}$ includes the rest carrier removed from $\psi_{\mathrm{env}}$. This is a leading narrow-band conversion from incident action loss to received energy. For a general spectrum, the force--velocity work must be resolved across its coupled modes; a diagonal harmonic channel uses Equation~\eqref{eq:Y_impedance_power}.
+
+Equation~\eqref{eq:Y_matter_action_balance} tracks loss from the selected incident band. The coupled work balance, Equation~\eqref{eq:Y_coupled_energy_balance}, accounts for its receiving destination, while the complete-cycle normalization of Equation~\eqref{eq:X_complete_cycle} is unchanged. A purely imaginary scalar loss term contributes directly to the intensity equation. The real phase equation retains Equation~\eqref{eq:X_phase_force_potential}, evaluated with the evolving intensity and real potential; an additional velocity-friction term in that phase equation does not follow from this scalar loss alone. The mechanical load is the force in Equation~\eqref{eq:Y_receiving_load}, and capture is the binding problem in \hyperref[sec:Y_capture]{Section~\ref*{sec:Y_capture}}.
+
+\subsection{A Solvable Directional FCC Receiving Channel}
+\label{sec:Y_directional_receiver}
+
+The directional normalization in \hyperref[sec:fcc_baseline_transverse_action]{Section~\ref*{sec:fcc_baseline_transverse_action}} supplies an explicit outgoing receiving example. Select one semi-infinite transverse sequence, with nearest-neighbor separation $d_{\mathrm{nn}}=2r_{\mathrm D}$, one nodal inertia $M_{\mathrm D}$ per site, and integrated contact stiffness $k_{\mathrm{ct}}^{(\mathrm{modal})}$. Its long-wavelength mass per length and directional elastic coefficient are
+\begin{equation}
+    \mu_{\mathrm{line}}=\frac{M_{\mathrm D}}{d_{\mathrm{nn}}},
+    \qquad
+    T_{\mathrm{line}}=k_{\mathrm{ct}}^{(\mathrm{modal})}d_{\mathrm{nn}},
+    \qquad
+    \frac{T_{\mathrm{line}}}{\mu_{\mathrm{line}}}=c_{\mathrm E}^2.
+\end{equation}
+The continuum receiving displacement obeys
+\begin{equation}
+    \mu_{\mathrm{line}}\partial_t^2u
+    =T_{\mathrm{line}}\partial_x^2u,
+    \qquad x>0.
+\end{equation}
+Let $u(0,t)=b_0q(t)$, where $b_0$ is the dimensionless boundary projection. For compatible launch history and no incoming wave, the outgoing solution is
+\begin{equation}
+    u(x,t)=b_0q\!\left(t-\frac{x}{c_{\mathrm E}}\right).
+\end{equation}
+The generalized load required to launch this motion and the corresponding outward power are
+\begin{align}
+    Q_{\mathrm{rec}}
+    &=-b_0T_{\mathrm{line}}\partial_xu(0,t)
+    =\eta_{\mathrm{line}}\dot q,
+    \nonumber\\
+    \eta_{\mathrm{line}}
+    &=\boxed{b_0^2\frac{M_{\mathrm D}c_{\mathrm E}}{d_{\mathrm{nn}}}},
+    \label{eq:Y_directional_radiation_resistance}\\
+    P_{\mathrm{out}}
+    &=-T_{\mathrm{line}}\partial_tu(0,t)\partial_xu(0,t)
+    =\eta_{\mathrm{line}}\dot q^2.
+    \label{eq:Y_directional_power}
+\end{align}
+The boundary's resisting work equals the energy launched down the continuum channel. The calculation applies to wavelengths long compared with $d_{\mathrm{nn}}$ and to an outgoing receiver independent of the retained boundary coordinate. A physical detector supplies its own projection $b_0$, connected receiving geometry, and interface compliance. Three-dimensional spreading and finite return paths enter through the calculated impedance in Equation~\eqref{eq:Y_receiving_impedance}. This directional example establishes a mechanical radiation resistance, not a universal detector coefficient.
+
+\subsection{Capture, Settling, and the Detector Record}
+\label{sec:Y_capture}
+
+The detector's binding configuration determines where the incident defect can remain. Along an admissible capture coordinate, a stable minimum satisfies
+\begin{equation}
+    U'(q_*)=0,
+    \qquad U''(q_*)>0.
+\end{equation}
+Capture requires entry into this basin together with sufficient energy export to prevent escape. The constitutive potential and accessible receiving channels must be calculated for that nonlinear configuration.
+
+After the incident drive has ended, a local receiving reduction with negligible back-excitation gives
+\begin{equation}
+    M_q(q)\ddot q+\frac12M_q'(q)\dot q^2
+    +U'(q)+\eta_q(q)\dot q=0.
+\end{equation}
+The geometry-dependent inertia is evaluated along the actual capture path. Multiplying by $\dot q$ yields
+\begin{equation}
+    \boxed{
+    \frac{\mathrm d}{\mathrm dt}
+    \left[\frac12M_q(q)\dot q^2+U(q)\right]
+    =-\eta_q(q)\dot q^2
+    }.
+    \label{eq:Y_capture_energy_balance}
+\end{equation}
+Positive inertia, positive local stiffness, and strictly positive resistance give decay of small departures from an isolated minimum. The nonlinear interaction determines whether the incoming state enters this basin and transfers enough energy to remain there; the displayed balance governs the subsequent settling.
+
+\noindent\textbf{Wave Arrest:}
+The propagating defect-associated state becomes bound to a detector-supported configuration while its excess coherent motion is transferred into receiving degrees of freedom. The bound defect can retain the internal motion needed to sustain its topology. The receiver's finite excitation and return forces determine residual fluctuations and possible escape.
+
+The conservative transport construction in \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}} supplies an incoming comparison; its relation to the complete defect must satisfy the field-current and coordinate matching discussed with Equation~\eqref{eq:X_continuity}. Equations~\eqref{eq:Y_mechanical_memory} and~\eqref{eq:Y_capture_energy_balance} describe the receiving and settling stages. A persistent record also requires stability against later disturbances. Outcome frequencies are addressed separately by the detector-threshold conditions in \hyperref[sec:entanglement_detector_capture]{Section~\ref*{sec:entanglement_detector_capture}}.
+
+Capture, phase locking, and the statistical spread of recorded quantities are different statements. A loss of incident amplitude does not by itself establish zero position--momentum spread. Gravitational arrest at the phase boundary of \hyperref[sec:grav_saturation_appendix]{Section~\ref*{sec:grav_saturation_appendix}} is likewise a distinct State-I termination, not a condition required for an ordinary detector record.
+
+\subsection{The Independent-Defect Transport Limit}
+\label{sec:Y_kinetic_limit}
+
+A solved receiving boundary problem determines the energy-transfer cross-section. For a passive target, a specified incident mode, and a fixed frequency, define
+\begin{equation}
+    \sigma(\omega)
+    =\frac{\overline P_{\mathrm{rec}}(\omega)}
+    {\mathcal I_{\mathrm{in}}(\omega)},
+    \qquad [\sigma]=\mathrm m^2,
+    \label{eq:Y_energy_cross_section}
+\end{equation}
+where $\mathcal I_{\mathrm{in}}$ is the incident energy flux per unit area. The received power is evaluated from the interface work, including its actual mode projection. Thus $\sigma$ is an energy-transfer cross-section, not an unweighted encounter area. Coherent reflection and elastic redirection are separate contributions to the scattering balance.
+
+For a dilute population of independent targets with number density $n_K$, the receiving contribution to a stationary, narrow-band, collimated intensity satisfies
+\begin{equation}
+    \left(\frac{\mathrm d\mathcal I}{\mathrm dx}\right)_{\!\mathrm{rec}}
+    =-n_K\sigma\mathcal I.
+\end{equation}
+Geometric dilution and elastic redistribution are either negligible in this reduction or treated separately. Along the incident ray, $\mathrm dx/\mathrm dt=v_{\mathrm{inc}}$, where $v_{\mathrm{inc}}>0$ is its energy-transport speed relative to the stationary targets. The corresponding receiving rate is therefore
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm{beam}}
+    \equiv-\frac{1}{\mathcal I}
+    \left(\frac{\mathrm d\mathcal I}{\mathrm dt}\right)_{\!\mathrm{rec}}
+    =n_K\sigma v_{\mathrm{inc}}
+    }.
+    \label{eq:Y_kinetic_rate_general}
+\end{equation}
+For a packet in the uniform matter sector, $v_{\mathrm{inc}}$ is the group speed derived in \hyperref[sec:X_schrodinger_limit]{Section~\ref*{sec:X_schrodinger_limit}}. It is distinct from the condensate relative-flow velocity in \hyperref[sec:AP_localized_kinematics]{Section~\ref*{sec:AP_localized_kinematics}}. The boundary problem determines which incident mode delivers the work.
+
+When this transport calculation and Equation~\eqref{eq:Y_matter_action_balance} describe the same narrow incident band, receiving channels, and energy normalization, their loss coefficients coincide: $\Gamma=\Gamma_{\mathrm{beam}}$. For the further physical case in which the calculated incident energy-transport speed is $c_{\mathrm P}$, substitution gives
+\begin{equation}
+    \boxed{\Gamma=\sigma c_{\mathrm P}n_K},
+    \qquad v_{\mathrm{inc}}=c_{\mathrm P}.
+    \label{eq:Y_kinetic_rate_specialization}
+\end{equation}
+Equation~\eqref{eq:Y_kinetic_rate_general} is the general independent-target result; Equation~\eqref{eq:Y_kinetic_rate_specialization} is its matched carrier-speed case. A numerical prediction requires both the receiving calculation for $\sigma$ and the incident dispersion. Dense correlated matter instead requires its collective response, while a distribution of target states or velocities requires the corresponding average of $\sigma v_{\mathrm{inc}}$.
+
+The quantity $\hbar\Gamma\rho_\psi$ is the incident-band action removed per unit volume and time. At a common mode frequency and common normalization, its channel integral supplies the absorbed action used in Equation~\eqref{eq:entanglement_action_absorption}. Receiver modes at different frequencies must instead be related through their received energy and individual action normalization. The additional threshold-sampling condition for discrete outcomes remains the one in \hyperref[sec:entanglement_detector_capture]{Section~\ref*{sec:entanglement_detector_capture}}.
+
+\section{Transverse Attenuation and Photon Scale Relaxation}
+\label{sec:Y_transverse_comparator}
+
+The transverse carrier has its own displacement coordinate and stored energy. Its ordinary attenuation is a second application of the receiving-work construction. The calculation below supplies the force and energy balances behind the distinction from coherent frequency transport in \hyperref[sec:photon_relaxation_attenuation_no_go]{Section~\ref*{sec:photon_relaxation_attenuation_no_go}}.
+
+\subsection{Continuum Force and Work Balance}
+\label{sec:Y_transverse_balance}
+
+Use the uniform gravity-neutral coefficients $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$ and $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$ from \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}. Their stiffness-to-inertia ratio is $c_{\mathrm E}^2$. Their kinetic bookkeeping is fixed in \hyperref[sec:fcc_cell_inertia]{Section~\ref*{sec:fcc_cell_inertia}}, and the pressure constraint in \hyperref[sec:AP_incompressible_branch]{Section~\ref*{sec:AP_incompressible_branch}}. In the receiver rest frame, let $\gamma_{\mathrm A}(\mathbf x)\geq0$ describe a local passive mean load on the transverse displacement $\mathbf A$. Its motion is
+\begin{equation}
+    \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}\partial_t^2\mathbf A
+    =\nabla\cdot\boldsymbol\sigma
+    -\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}\gamma_{\mathrm A}(\mathbf x)\partial_t\mathbf A,
+    \qquad \nabla\cdot\mathbf A=0,
+    \label{eq:Y_transverse_force_balance}
 \end{equation}
 where
 \begin{equation}
-    \Gamma(x)
-    =
-    \sigma
-    c_{\mathrm{P}}
-    n_K(x)
+    \boldsymbol\sigma=-\delta p_{\mathrm{IC}}\mathbf I
+    +2K_{\mathrm{sh}}^{(\mathrm{micro},0)}\boldsymbol\varepsilon,
+    \qquad
+    \boldsymbol\varepsilon
+    =\frac12\left[\nabla\mathbf A+(\nabla\mathbf A)^{\mathsf T}\right].
 \end{equation}
-is the localized Quantum Damping Rate derived above and $\Gamma_{\mathrm{D}}$ is the defect-free Viscoelastic Vacuum Relaxation Rate developed in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
+The pressure reaction enforces the constraint even where $\gamma_{\mathrm A}$ varies. The omitted receiving coordinates carry the corresponding recoil and energy uptake. Their incoming excitation is negligible in this passive comparator, whose local-response conditions are those of \hyperref[sec:Y_impedance_rate]{Section~\ref*{sec:Y_impedance_rate}}. Gravitational preloading is treated separately in \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.
 
-The ordinary linear damping force per unit interface area is then represented as
+For time-independent $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$ and $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$, define
 \begin{equation}
-    F_{\mathrm{fr}}
-    =
-    -\mu_{\mathrm{D}}
-    \Gamma_{\mathrm{eff}}
-    \frac{\partial \mathbf{A}}{\partial t}.
+    e_{\mathrm A}=\frac12\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}|\partial_t\mathbf A|^2
+    +K_{\mathrm{sh}}^{(\mathrm{micro},0)}\boldsymbol\varepsilon:\boldsymbol\varepsilon,
+    \qquad
+    \mathbf j_{\mathrm A}=-\boldsymbol\sigma\cdot\partial_t\mathbf A.
 \end{equation}
-
-Substituting this explicitly into the continuum equation yields
+Multiplying Equation~\eqref{eq:Y_transverse_force_balance} by the displacement velocity gives
 \begin{equation}
-    \mu_{\mathrm{D}}
-    \frac{\partial^2 \mathbf{A}}{\partial t^2}
-    =
-    \tau_{\mathrm{D}}
-    \frac{\partial^2 \mathbf{A}}{\partial x^2}
-    -
-    \mu_{\mathrm{D}}
-    \Gamma_{\mathrm{eff}}
-    \frac{\partial \mathbf{A}}{\partial t}.
-\end{equation}
-
-\subsection{Generalization to 3D and the Base Wave Equation}
-
-Dividing the entire equation by the interface inertia $\mu_{\mathrm{D}}$ gives
-\begin{equation}
-    \frac{\partial^2 \mathbf{A}}{\partial t^2}
-    =
-    \left(
-        \frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}}
-    \right)
-    \frac{\partial^2 \mathbf{A}}{\partial x^2}
-    -
-    \Gamma_{\mathrm{eff}}
-    \frac{\partial \mathbf{A}}{\partial t}.
-\end{equation}
-
-Recognizing the TFT identity for the squared elastic wave speed,
-\begin{equation}
-    c_{\mathrm{E}}^2
-    =
-    \frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}},
-\end{equation}
-and generalizing the 1D spatial derivative to the 3D Laplacian operator, the ordinary damped-wave equation becomes
-\begin{equation}
-    \frac{\partial^2 \mathbf{A}}{\partial t^2}
-    =
-    c_{\mathrm{E}}^2
-    \nabla^2\mathbf{A}
-    -
-    \Gamma_{\mathrm{eff}}
-    \frac{\partial \mathbf{A}}{\partial t}.
-\end{equation}
-
-This equation defines the ordinary linear attenuation comparator. It is not identified with the completed finite-wave-number photon eigenbranch or with the coherent frequency-transport closure.
-
-\subsection{Analytical Solution for Temporal Amplitude Decay}
-
-The temporal amplitude evolution governed by the ordinary visco-elastic differential equation is isolated via standard separation of variables, assuming
-\begin{equation}
-    \mathbf{A}(\mathbf{x},t)
-    =
-    X(\mathbf{x})T(t).
-\end{equation}
-
-Substituting this into the generalized damped-wave equation and dividing through by $c_{\mathrm{E}}^2X(\mathbf{x})T(t)$ yields
-\begin{equation}
-    \frac{\nabla^2 X}{X}
-    =
-    \frac{1}{c_{\mathrm{E}}^2T}
-    \frac{\mathrm{d}^2T}{\mathrm{d}t^2}
-    +
-    \frac{\Gamma_{\mathrm{eff}}}{c_{\mathrm{E}}^2T}
-    \frac{\mathrm{d}T}{\mathrm{d}t}.
-\end{equation}
-
-Setting both sides to the spatial separation constant $-k^2$ and using the continuum relation
-\begin{equation}
-    \omega
-    =
-    kc_{\mathrm{E}}
-\end{equation}
-for this comparator reduces the temporal system to
-\begin{equation}
-    \frac{\mathrm{d}^2T}{\mathrm{d}t^2}
-    +
-    \Gamma_{\mathrm{eff}}
-    \frac{\mathrm{d}T}{\mathrm{d}t}
-    +
-    \omega^2T
-    =
-    0.
-\end{equation}
-
-Assuming an ansatz of the form
-\begin{equation}
-    T(t)
-    =
-    e^{rt}
-\end{equation}
-yields the characteristic polynomial
-\begin{equation}
-    r^2
-    +
-    \Gamma_{\mathrm{eff}}r
-    +
-    \omega^2
-    =
-    0.
-\end{equation}
-
-Applying the quadratic formula gives
-\begin{equation}
-    r
-    =
-    \frac{
-        -\Gamma_{\mathrm{eff}}
-        \pm
-        \sqrt{
-            \Gamma_{\mathrm{eff}}^2
-            -
-            4\omega^2
-        }
-    }{2}
-    =
-    -\frac{\Gamma_{\mathrm{eff}}}{2}
-    \pm
-    \sqrt{
-        \left(
-            \frac{\Gamma_{\mathrm{eff}}}{2}
-        \right)^2
-        -
-        \omega^2
+    \boxed{
+    \partial_te_{\mathrm A}+\nabla\cdot\mathbf j_{\mathrm A}
+    =-\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}\gamma_{\mathrm A}|\partial_t\mathbf A|^2
     }.
+    \label{eq:Y_transverse_energy_balance}
 \end{equation}
+The right-hand side is the work exported from the transverse field; the complete receiving balance carries the compensating uptake as in Equation~\eqref{eq:Y_coupled_energy_balance}. The distinction between energy transfer and thermalization is developed in \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.
 
-For the weakly attenuating branch,
-\begin{equation}
-    \Gamma_{\mathrm{eff}}
-    \ll
-    \omega,
-\end{equation}
-so the system is underdamped and
-\begin{equation}
-    r
-    \approx
-    -\frac{\Gamma_{\mathrm{eff}}}{2}
-    \pm
-    i\omega.
-\end{equation}
+\subsection{Temporal and Spatial Attenuation}
+\label{sec:Y_attenuation_solutions}
 
-The general temporal solution is therefore
+For constant $\gamma_{\mathrm A}$, a transverse mode with compatible boundary conditions can be written as $\mathbf A=\mathbf X_{\mathrm A}(\mathbf x)q_{\mathrm A}(t)$, with dimensionless $\mathbf X_{\mathrm A}$ satisfying
 \begin{equation}
-    T(t)
-    =
-    C_1
-    e^{\left(
-        -\frac{\Gamma_{\mathrm{eff}}}{2}
-        +
-        i\omega
-    \right)t}
-    +
-    C_2
-    e^{\left(
-        -\frac{\Gamma_{\mathrm{eff}}}{2}
-        -
-        i\omega
-    \right)t},
+    \nabla^2\mathbf X_{\mathrm A}=-k^2\mathbf X_{\mathrm A},
+    \qquad \nabla\cdot\mathbf X_{\mathrm A}=0.
 \end{equation}
-where $C_1$ and $C_2$ are local complex integration constants fixed by the initial conditions.
+Equation~\eqref{eq:Y_transverse_force_balance} reduces to
+\begin{equation}
+    \ddot q_{\mathrm A}+\gamma_{\mathrm A}\dot q_{\mathrm A}
+    +\omega_{\mathrm A}^2q_{\mathrm A}=0,
+    \qquad \omega_{\mathrm A}=c_{\mathrm E}k.
+\end{equation}
+For $0\leq\gamma_{\mathrm A}<2\omega_{\mathrm A}$,
+\begin{equation}
+    q_{\mathrm A}(t)=e^{-\gamma_{\mathrm A}t/2}
+    \left[C_1\cos(\omega_dt)+C_2\sin(\omega_dt)\right],
+    \qquad
+    \omega_d=\sqrt{\omega_{\mathrm A}^2-\frac{\gamma_{\mathrm A}^2}{4}}.
+    \label{eq:Y_temporal_attenuation}
+\end{equation}
+The mode inertia is $M_{\mathrm A}=\int\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}|\mathbf X_{\mathrm A}|^2\,\mathrm dV$. Its instantaneous energy satisfies
+\begin{equation}
+    E_{\mathrm A}=\frac12M_{\mathrm A}
+    \left(\dot q_{\mathrm A}^2+\omega_{\mathrm A}^2q_{\mathrm A}^2\right),
+    \qquad
+    \dot E_{\mathrm A}=-M_{\mathrm A}\gamma_{\mathrm A}\dot q_{\mathrm A}^2.
+\end{equation}
+For weak loss, the cycle-averaged energy decays as $\overline E_{\mathrm A}(t)\simeq\overline E_{\mathrm A}(0)e^{-\gamma_{\mathrm A}t}$. This is the same amplitude-to-energy relation derived in Equation~\eqref{eq:Y_slow_amplitude_decay}, applied to a different mode. The frequency $\omega_d$ is constant in this fixed-$k$, time-independent problem.
 
-Factoring out the shared real exponential gives
+A monochromatic forward wave driven at fixed real $\omega$ instead has a complex propagation constant. For $A\propto e^{i(kx-\omega t)}$,
 \begin{equation}
-    T(t)
-    =
-    e^{-\frac{\Gamma_{\mathrm{eff}}}{2}t}
-    \left(
-        C_1e^{i\omega t}
-        +
-        C_2e^{-i\omega t}
-    \right).
+    c_{\mathrm E}^2k^2=\omega^2+i\gamma_{\mathrm A}\omega,
+    \qquad
+    k\simeq\frac{\omega}{c_{\mathrm E}}
+    +i\frac{\gamma_{\mathrm A}}{2c_{\mathrm E}}
+    \quad(\gamma_{\mathrm A}\ll\omega).
 \end{equation}
+Consequently,
+\begin{equation}
+    |A(x)|\propto e^{-\gamma_{\mathrm A}x/(2c_{\mathrm E})},
+    \qquad
+    \mathcal I(x)\propto e^{-\gamma_{\mathrm A}x/c_{\mathrm E}}.
+    \label{eq:Y_spatial_attenuation}
+\end{equation}
+These expressions apply within the uniform transmitting region. Boundary matching fixes the reflected, transmitted, and received powers, using Equation~\eqref{eq:Y_transverse_energy_balance}.
 
-Thus, within the ordinary linear attenuation model, the amplitude envelope obeys
-\begin{equation}
-    \mathbf{A}(t)
-    =
-    \mathbf{A}_0
-    e^{-\frac{\Gamma_{\mathrm{eff}}}{2}t}.
-\end{equation}
+\subsection{The Defect-Free Limit and the Photon Sector}
+\label{sec:Y_photon_comparison}
 
-This result establishes what a conventional velocity-proportional visco-elastic damping operator does: it produces amplitude attenuation of the retained harmonic carrier. It does not by itself establish coherent transport of the real carrier frequency.
+In \hyperref[sec:Y_kinetic_limit]{Section~\ref*{sec:Y_kinetic_limit}}, removing the target population removes its receiving contribution: $n_K\to0$ gives $\Gamma_{\mathrm{beam}}\to0$, and likewise $\Gamma\to0$ for the matched incident sector. Any remaining vacuum response is determined by its own microscopic coupling.
 
-\subsection{The Defect-Free Vacuum Limit and the Photon Relaxation Sector}
+The surviving photon's conditional scale evolution is developed in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}, with its physical receiving-response requirements specified in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}. The action-preserving relation is Equation~\eqref{eq:photon_relaxation_equal_fractional_rates}. Ordinary attenuation here instead follows Equations~\eqref{eq:Y_temporal_attenuation} and~\eqref{eq:Y_spatial_attenuation}, at fixed wave number or fixed driving frequency. The completed conservative photon sector retains Equation~\eqref{eq:AQ_conservative_limit}; a nonzero response of the real Active Vacuum requires the separate scale-coordinate coupling and receiving dynamics.
 
-Having established the ordinary linear attenuation comparator, consider the defect-free intergalactic limit. As the local macroscopic matter density approaches zero,
-\begin{equation}
-    n_K
-    \rightarrow
-    0,
-\end{equation}
-the localized Quantum Damping Rate satisfies
-\begin{equation}
-    \Gamma(x)
-    =
-    \sigma
-    c_{\mathrm{P}}
-    n_K(x)
-    \rightarrow
-    0.
-\end{equation}
+The assignments are therefore mode specific: $\Gamma_q$ describes boundary-mode energy relaxation, $\Gamma$ is the projected matter-envelope loss, and $\Gamma_{\mathrm{beam}}$ is the independently calculated transport rate. Their equality is a matching result under the conditions above. The coefficient $\gamma_{\mathrm A}$ belongs to the transverse comparator, while $\Gamma_{\mathrm D}$ belongs to the photon scale coordinate used in \hyperref[part:three]{Part~\ref*{part:three}}. Independent loads add only after projection onto a common coordinate with a common mechanical-energy normalization.
 
-The effective attenuation rate therefore approaches the nonzero vacuum baseline,
-\begin{equation}
-    \Gamma_{\mathrm{eff}}
-    =
-    \Gamma_{\mathrm{D}}
-    +
-    \Gamma
-    \rightarrow
-    \Gamma_{\mathrm{D}}.
-\end{equation}
+\section{Microscopic Completion and the Detector Record}
 
-If the same rate is inserted into the ordinary damped-wave comparator, one obtains
-\begin{equation}
-    \nabla^2\mathbf{A}
-    -
-    \frac{1}{c_{\mathrm{E}}^2}
-    \frac{\partial^2\mathbf{A}}{\partial t^2}
-    -
-    \left(
-        \frac{\Gamma_{\mathrm{D}}}{c_{\mathrm{E}}^2}
-    \right)
-    \frac{\partial\mathbf{A}}{\partial t}
-    =
-    0,
-\end{equation}
-with amplitude envelope
-\begin{equation}
-    \mathbf{A}_{\mathrm{att}}(t)
-    =
-    \mathbf{A}_0
-    e^{-\frac{\Gamma_{\mathrm{D}}}{2}t}.
-\end{equation}
+\noindent\textbf{Derived receiving response.}
+The memory and energy balances follow from the specified reduction in Equation~\eqref{eq:Y_coupled_mechanical_reduction}. The directional example explicitly equates resisting work with outgoing wave energy.
 
-Because the mechanical energy of the ordinary linear wave is proportional to the square of its amplitude,
-\begin{equation}
-    E_{\mathrm{att}}(t)
-    \propto
-    \left|
-        \mathbf{A}_{\mathrm{att}}(t)
-    \right|^2,
-\end{equation}
-the corresponding energy law is
-\begin{equation}
-    E_{\mathrm{att}}(t)
-    =
-    E_0
-    e^{-\Gamma_{\mathrm{D}}t},
-\end{equation}
-or
-\begin{equation}
-    \frac{\mathrm{d}E_{\mathrm{att}}}{\mathrm{d}t}
-    =
-    -\Gamma_{\mathrm{D}}
-    E_{\mathrm{att}}.
-\end{equation}
+\medskip
+\noindent\textbf{Conditional field and capture reductions.}
+Equation~\eqref{eq:Y_matter_envelope_loss} requires the matter branch and mass matching of \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}, together with a weak, local, narrow-band receiving projection. Equation~\eqref{eq:Y_capture_energy_balance} describes settling after entry into an accessible stable binding basin.
 
-This ordinary attenuation calculation therefore reproduces the same fractional coherent-energy transfer rate characterized by $\Gamma_{\mathrm{D}}$, but it does not determine the evolution of the real photon carrier frequency. In particular,
-\begin{equation}
-    \frac{\mathrm{d}E}{\mathrm{d}t}
-    =
-    -\Gamma_{\mathrm{D}}E
-\end{equation}
-does not by itself imply
-\begin{equation}
-    \frac{\mathrm{d}\omega}{\mathrm{d}t}
-    =
-    -\Gamma_{\mathrm{D}}\omega.
-\end{equation}
+\medskip
+\noindent\textbf{Microscopic completion.}
+A numerical prediction requires the detector configuration, kinetic and contact projections, receiving spectrum, boundary coupling, and return conditions. The nonlinear binding landscape then determines capture and record stability. The cross-section and incident speed follow from these calculations, rather than being selected to reproduce a preferred rate. Outcome frequencies additionally require the preparation and threshold sampling of \hyperref[sec:entanglement_detector_capture]{Section~\ref*{sec:entanglement_detector_capture}}.
 
-The completed cosmological photon branch therefore requires the additional coherent-action-preserving condition
-\begin{equation}
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(
-        \frac{E}{\omega}
-    \right)
-    =a
-    0.
-\end{equation}
-Together with the modal-energy transfer law, this gives
-\begin{equation}
-    \frac{\mathrm{d}\omega}{\mathrm{d}t}
-    =
-    -\Gamma_{\mathrm{D}}\omega,
-\end{equation}
-as developed in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.
-
-Accordingly, $\Gamma$ and $\Gamma_{\mathrm{D}}$ are two constitutive manifestations of the same underlying FCC--Condensate visco-elastic relaxation mechanism: $\Gamma$ is the localized defect-induced Quantum Damping Rate governing wave arrest, whereas $\Gamma_{\mathrm{D}}$ is the defect-free Viscoelastic Vacuum Relaxation Rate governing weak coherent photon-energy relaxation. The ordinary damped-wave solution derived here establishes the attenuation comparator and the associated energy-transfer scale; it is not imposed as an additional amplitude-extinction law on the coherent cosmological photon branch.
+\noindent\textbf{Conclusion:}
+The incident configuration loads the detector contacts and exchanges work with their receiving motion. An accessible binding basin retains the defect as its excess motion settles; the stable configuration carries the record. The conservative field and the receiving dynamics describe successive stages of one mechanical interaction, joined by the coupled energy balance.

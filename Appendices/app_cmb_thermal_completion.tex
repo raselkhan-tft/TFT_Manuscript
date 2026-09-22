@@ -1,0 +1,3509 @@
+\chapter{Fossil-CMB Thermalization and Active-Vacuum Equilibrium}
+\label{app:cmb_thermal_completion}
+
+\noindent\textbf{Abstract.}
+This appendix examines the thermodynamic completion required to connect the
+coherent photon scale-transfer mechanism developed in
+\hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}
+and the microscopic relaxation-rate construction developed in
+\hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}
+to a physically consistent Cosmic Microwave Background (CMB) sector.
+
+The analysis separates four mechanically distinct processes:
+coherent photon scale transfer, excitation of noncoherent finite-energy
+Active-Vacuum degrees of freedom, thermalization with photon-number-changing
+detailed balance, and macroscopic thermal energy balance. The inherited
+coherent law
+\(
+\dot E_\gamma=-\Gamma_{\mathrm D}E_\gamma
+\)
+may be represented as the coarse-grained first moment of complete quantized
+energy-transfer events and therefore need not imply fractional quantum
+occupation of individual receiving modes.
+
+Appendix~\ref{app:vacuumdamping_cosmicredshift} develops a conditional
+microscopic construction of the relaxation rate. A nonzero constant
+\(\Gamma_{\mathrm D}\) requires an independently established
+carrier-projected irreversible continuum rather than a finite conservative
+pure-point mode set. The present appendix addresses the separate
+thermodynamic question of what density of states and heat capacity follow if
+finite-energy noncoherent receiving branches exist.
+
+A central distinction is established between the thermodynamic density of
+states and the carrier-projected spectral measure governing irreversible
+photon coupling. Even complete knowledge of the latter does not determine
+the thermodynamic multiplicity or heat capacity of the receiver. For
+candidate three-dimensional gapless linear bosonic branches, the
+low-temperature energy density scales as \(T^4\) and the corresponding heat
+capacity scales as \(T^3\).
+
+A separate photon-number-changing absorption--emission interaction satisfying
+microscopic detailed balance is required for a zero-chemical-potential Planck
+occupation. The thermodynamic receiving spectrum, microscopic
+photon--receiver coupling, primordial receiver loading, thermal interaction,
+and absolute temperature normalization must therefore be derived
+independently rather than calibrated from the observed CMB temperature.
+
+
+\section{Purpose and Inherited Appendix Hierarchy}
+
+The purpose of this appendix is to determine what additional thermodynamic
+structure is required once coherent photon energy transfer has been
+specified.
+
+The inherited coherent photon law is
+\begin{equation}
+    \frac{\mathrm dE_\gamma}{\mathrm dt}
+    =
+    -\Gamma_{\mathrm D}E_\gamma,
+    \qquad
+    \frac{\mathrm d\omega_\gamma}{\mathrm dt}
+    =
+    -\Gamma_{\mathrm D}\omega_\gamma.
+    \label{eq:AT_coherent_transport}
+\end{equation}
+
+For a quantum-normalized surviving photon,
+\begin{equation}
+    I_\gamma
+    =
+    \frac{E_\gamma}{\omega_\gamma}
+    =
+    \hbar.
+    \label{eq:AT_action}
+\end{equation}
+
+A conditional microscopic construction of
+\(\Gamma_{\mathrm D}\)
+is developed in
+Appendix~\ref{app:vacuumdamping_cosmicredshift}.
+A nonzero constant rate requires an independently established
+carrier-projected irreversible continuum. In the absence of such a
+continuum, the completed conservative microscopic parent model does not
+generate irreversible damping of the pristine coherent photon branch.
+
+The present appendix neither recalibrates
+\(\Gamma_{\mathrm D}\)
+nor identifies its carrier-projected dissipative response with a
+thermodynamic density of states.
+
+The propagation contribution to astronomical redshift is
+\(z_{\mathrm D}\), not the complete observed redshift. For stationary
+gravitational conditions and consistently factorized endpoint comparisons,
+Appendix~\ref{app:time_dilation} gives
+\begin{equation}
+    \boxed{
+    1+z_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm{grav}})
+    (1+z_{\mathrm D}).
+    }
+    \label{eq:AT_redshift_hierarchy}
+\end{equation}
+
+In the gravity-neutral endpoint limit,
+\begin{equation}
+    z_{\mathrm{grav}}
+    \rightarrow
+    0,
+\end{equation}
+Equation~\eqref{eq:AT_redshift_hierarchy} reduces to the corresponding
+two-factor kinematic--relaxation form.
+
+For a positive constant physical relaxation rate, the characteristic
+coherent-relaxation scale is
+\begin{equation}
+    R_{\mathrm U}
+    =
+    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}},
+    \label{eq:AT_RU}
+\end{equation}
+with
+\begin{equation}
+    R_{\mathrm U}
+    \neq
+    R_{\mathrm{Res}}.
+    \label{eq:AT_RU_RRes}
+\end{equation}
+
+The Hard Floor remains the zero-inertia constraint, phase-reference, and
+information-memory sector. It is not assigned ordinary finite thermal
+inertia and is not used as a thermal reservoir in the present construction.
+
+The logical hierarchy required for CMB completion is therefore
+\begin{equation}
+    \begin{aligned}
+        \text{coherent photon}
+        &\longrightarrow
+        \text{noncoherent finite-energy receiving modes}
+        \\
+        &\longrightarrow
+        \text{thermalized Active-Vacuum sector}
+        \\
+        &\rightleftharpoons
+        \text{thermal photon field}
+        \\
+        &\longrightarrow
+        \text{macroscopic thermal balance}.
+    \end{aligned}
+    \label{eq:AT_hierarchy}
+\end{equation}
+
+Each arrow denotes a distinct mechanical requirement.
+
+In particular, coherent energy transfer does not by itself establish
+thermalization; thermalization does not by itself enforce a Planck spectrum;
+and the existence of a Planck spectrum does not by itself determine an
+absolute temperature.
+
+
+\section{Quantum-Consistent Receiving Channel}
+
+The differential law in
+Equation~\eqref{eq:AT_coherent_transport}
+must not be interpreted as depositing an infinitesimal fraction of
+\(\hbar\)
+on an individual microscopic degree of freedom.
+
+Let
+\(\Omega_\lambda\)
+denote the frequencies of noncoherent finite-energy receiving modes.
+A forward quantum-consistent transfer event may be represented schematically
+as
+\begin{equation}
+    \left|
+        1_{\mathbf k};
+        \{n_\lambda\}
+    \right\rangle
+    \longrightarrow
+    \left|
+        1_{\mathbf k'};
+        \{n_\lambda+\Delta n_\lambda\}
+    \right\rangle,
+    \label{eq:AT_quantized_transition}
+\end{equation}
+with
+\begin{equation}
+    \Delta n_\lambda
+    =
+    0,1,2,\ldots
+\end{equation}
+for the forward energy-transfer process.
+
+Energy conservation requires
+\begin{equation}
+    \hbar\omega_{\mathbf k}
+    -
+    \hbar\omega_{\mathbf k'}
+    =
+    \sum_\lambda
+    \Delta n_\lambda
+    \hbar\Omega_\lambda.
+    \label{eq:AT_quantized_energy}
+\end{equation}
+
+The selected coherent carrier survives the event. Its photon number remains
+unity,
+\begin{equation}
+    N_{\mathrm{ph}}
+    =
+    1,
+\end{equation}
+while
+\begin{equation}
+    \frac{E_\gamma}{\omega_\gamma}
+    =
+    \hbar
+\end{equation}
+is retained.
+
+The notation
+\(N_{\mathrm{ph}}\)
+is used specifically for photon number and is distinct from information-count
+quantities defined elsewhere in TFT.
+
+Let
+\(W(\Omega|\omega)\,\mathrm d\Omega\)
+denote the transition rate associated with transferred frequencies between
+\(\Omega\)
+and
+\(\Omega+\mathrm d\Omega\).
+The mean coherent-energy drift is
+\begin{equation}
+    -\frac{\mathrm dE_\gamma}{\mathrm dt}
+    =
+    \int_0^\omega
+    \hbar\Omega
+    W(\Omega|\omega)
+    \,\mathrm d\Omega.
+    \label{eq:AT_first_jump_moment}
+\end{equation}
+
+Consistency with
+Equation~\eqref{eq:AT_coherent_transport}
+requires
+\begin{equation}
+    \int_0^\omega
+    \Omega
+    W(\Omega|\omega)
+    \,\mathrm d\Omega
+    =
+    \Gamma_{\mathrm D}\omega.
+    \label{eq:AT_drift_constraint}
+\end{equation}
+
+The second jump-moment rate is
+\begin{equation}
+    \mathcal B_{\mathrm E}^{(2)}(\omega)
+    =
+    \int_0^\omega
+    (\hbar\Omega)^2
+    W(\Omega|\omega)
+    \,\mathrm d\Omega.
+    \label{eq:AT_second_jump_moment}
+\end{equation}
+
+Higher jump moments are defined analogously.
+
+A viable microscopic realization must therefore reproduce the first moment
+in
+Equation~\eqref{eq:AT_drift_constraint}
+while keeping the accumulated second and higher moments compatible with the
+spectral-coherence constraints developed in
+Appendices~\ref{app:photon_dispersion_relaxation}
+and~\ref{app:time_dilation}.
+
+A sparse sequence of comparatively large inelastic events would generically
+produce appreciable stochastic frequency diffusion. The required coherent
+limit is instead one in which the mean drift remains finite while the
+associated spectral variance remains sufficiently small.
+
+
+\section{Thermodynamic Receiving Spectrum and Carrier Projection}
+
+Appendix~\ref{app:vacuumdamping_cosmicredshift}
+establishes the dynamical requirement that a nonzero irreversible
+low-frequency photon response cannot be generated by a finite conservative
+pure-point mode set alone.
+
+The present section asks instead what thermodynamic state counting follows if
+a specified finite-energy receiving continuum exists.
+
+Consider a candidate receiving branch whose low-wave-number dispersion obeys
+\begin{equation}
+    \Omega_j(\mathbf k_{\mathrm{rec}})
+    \propto
+    k_{\mathrm{rec}}^{p_j},
+    \qquad
+    p_j>0,
+    \label{eq:AT_general_dispersion}
+\end{equation}
+where
+\begin{equation}
+    k_{\mathrm{rec}}
+    =
+    \left|
+        \mathbf k_{\mathrm{rec}}
+    \right|
+\end{equation}
+is the dimensional wave number of the receiving branch. It is distinct from
+the dimensionless photon scale coordinate
+\(q=kr_{\mathrm D}\)
+used in Appendix~\ref{app:vacuumdamping_cosmicredshift}.
+
+Let
+\(\mathcal D_j(\Omega)\)
+denote its thermodynamic density of states.
+
+In three physical spatial dimensions,
+\begin{equation}
+    \frac{\mathcal D_j(\Omega)}{V}
+    \propto
+    \Omega^{3/p_j-1}.
+    \label{eq:AT_general_DOS}
+\end{equation}
+
+For a gapless linear branch,
+\begin{equation}
+    \Omega_j(\mathbf k_{\mathrm{rec}})
+    =
+    v_jk_{\mathrm{rec}},
+    \label{eq:AT_linear_dispersion}
+\end{equation}
+the density of states per physical volume is
+\begin{equation}
+    \frac{\mathcal D_j(\Omega)}{V}
+    =
+    \frac{\Omega^2}{2\pi^2v_j^3}.
+    \label{eq:AT_linear_DOS}
+\end{equation}
+
+For several independent branches,
+\begin{equation}
+    \frac{\mathcal D_{\mathrm{AV}}(\Omega)}{V}
+    =
+    \frac{\Omega^2}{2\pi^2}
+    \sum_j
+    v_j^{-3}.
+    \label{eq:AT_total_DOS}
+\end{equation}
+
+Equation~\eqref{eq:AT_total_DOS}
+is a state-counting result.
+
+It does not determine the strength with which a coherent photon couples to
+those states.
+
+Define
+\begin{equation}
+    \mathcal S_{\gamma\mathrm{AV}}(\Omega)
+\end{equation}
+as the carrier-projected Active-Vacuum spectral measure entering the
+irreversible photon response.
+
+The thermodynamic and dissipative quantities are therefore distinct:
+\begin{equation}
+    \mathcal D_{\mathrm{AV}}(\Omega)
+    \not\equiv
+    \mathcal S_{\gamma\mathrm{AV}}(\Omega).
+    \label{eq:AT_DOS_spectral_distinction}
+\end{equation}
+
+If the projected spectral measure admits a factorized representation of the
+schematic form
+\begin{equation}
+    \mathcal S_{\gamma\mathrm{AV}}(\Omega)
+    \propto
+    \frac{\mathcal D_{\mathrm{AV}}(\Omega)}{V}
+    \left|
+        \langle f|
+        H_{\mathrm{int}}
+        |i\rangle
+    \right|^2,
+    \label{eq:AT_projected_spectrum}
+\end{equation}
+then both the density of states and the low-frequency interaction matrix
+element determine the irreversible response.
+
+For a frequency-independent low-frequency damping coefficient, the
+carrier-projected response must satisfy the Ohmic scaling
+\begin{equation}
+    \mathcal S_{\gamma\mathrm{AV}}(\Omega)
+    \propto
+    \Omega,
+    \qquad
+    \Omega\rightarrow0.
+    \label{eq:AT_ohmic_requirement}
+\end{equation}
+
+For the three-dimensional linear density of states in
+Equation~\eqref{eq:AT_linear_DOS},
+the factorized representation would therefore require
+\begin{equation}
+    \left|
+        \langle f|
+        H_{\mathrm{int}}
+        |i\rangle
+    \right|^2
+    \propto
+    \Omega^{-1}
+    \label{eq:AT_linear_vertex_requirement}
+\end{equation}
+in the relevant low-frequency limit.
+
+More generally, for
+\(\Omega_j\propto k_{\mathrm{rec}}^{p_j}\),
+\begin{equation}
+    \left|
+        \langle f|
+        H_{\mathrm{int}}
+        |i\rangle
+    \right|^2
+    \propto
+    \Omega^{\,2-3/p_j}
+    \label{eq:AT_general_vertex_requirement}
+\end{equation}
+would be required within the same factorized representation.
+
+Equations~\eqref{eq:AT_linear_vertex_requirement}
+and~\eqref{eq:AT_general_vertex_requirement}
+are scaling requirements on a hypothetical factorized interaction.
+They do not derive the microscopic interaction itself.
+
+Accordingly,
+\begin{equation}
+    \text{thermal state counting}
+    \not\Rightarrow
+    \text{irreversible photon coupling}.
+    \label{eq:AT_state_count_not_coupling}
+\end{equation}
+
+
+\subsection{Thermodynamic Multiplicity Is Not Fixed by Carrier Projection}
+
+The distinction between thermodynamic state counting and carrier-projected
+dissipation remains even if
+\(\mathcal S_{\gamma\mathrm{AV}}\)
+is known.
+
+Within the factorized representation of
+Equation~\eqref{eq:AT_projected_spectrum},
+consider the simultaneous rescaling
+\begin{equation}
+    \mathcal D_{\mathrm{AV}}(\Omega)
+    \longrightarrow
+    \mathcal N_{\mathrm{mult}}
+    \mathcal D_{\mathrm{AV}}(\Omega),
+\end{equation}
+and
+\begin{equation}
+    \left|
+        \langle f|
+        H_{\mathrm{int}}
+        |i\rangle
+    \right|^2
+    \longrightarrow
+    \frac{1}{\mathcal N_{\mathrm{mult}}}
+    \left|
+        \langle f|
+        H_{\mathrm{int}}
+        |i\rangle
+    \right|^2,
+\end{equation}
+where
+\(\mathcal N_{\mathrm{mult}}>0\).
+
+The carrier-projected spectral measure is unchanged, while the thermal energy
+associated with the receiving density of states is multiplied by
+\(\mathcal N_{\mathrm{mult}}\).
+
+Therefore,
+\begin{equation}
+    \mathcal S_{\gamma\mathrm{AV}}(\Omega)
+    \not\Rightarrow
+    u_{\mathrm{AV}}(T).
+    \label{eq:AT_spectrum_not_thermal_energy}
+\end{equation}
+
+Thus a dissipative spectral measure does not determine receiver
+thermodynamic multiplicity or heat capacity.
+
+The normalized overlap factor
+\(P_{\mathrm R}\)
+introduced in
+Appendix~\ref{app:vacuumdamping_cosmicredshift}
+must be interpreted accordingly.
+
+For a genuine projector
+\(\Pi_{\mathrm R}\),
+\begin{equation}
+    \Pi_{\mathrm R}^2
+    =
+    \Pi_{\mathrm R}.
+\end{equation}
+
+If
+\begin{equation}
+    \widetilde{\Pi}_{\mathrm R}
+    =
+    P_{\mathrm R}\Pi_{\mathrm R},
+\end{equation}
+then
+\begin{equation}
+    \widetilde{\Pi}_{\mathrm R}^{\,2}
+    =
+    P_{\mathrm R}
+    \widetilde{\Pi}_{\mathrm R},
+\end{equation}
+which is not idempotent unless
+\(P_{\mathrm R}=0\)
+or
+\(P_{\mathrm R}=1\).
+
+Therefore
+\(P_{\mathrm R}\)
+may enter a coupling or kernel weight, but it cannot by itself represent
+thermodynamic projector rank, state count, or degeneracy.
+
+Thermal-temperature estimates obtained by identifying
+\(P_{\mathrm R}\)
+directly with a thermodynamic mode fraction are not retained.
+
+
+\section{Conditional Thermal Energy and Heat Capacity}
+
+Suppose a specified set of noncoherent Active-Vacuum receiving modes
+thermalizes and obeys the Bose occupation
+\begin{equation}
+    n_{\mathrm B}(\Omega,T)
+    =
+    \frac{1}{
+        \exp
+        \left(
+            \hbar\Omega/k_{\mathrm B}T
+        \right)
+        -1
+    }.
+    \label{eq:AT_Bose_occupation}
+\end{equation}
+
+Their thermal energy density, excluding the temperature-independent
+zero-point contribution, is
+\begin{equation}
+    u_{\mathrm{AV}}(T)
+    =
+    \frac{1}{V}
+    \sum_j
+    \int_0^\infty
+    \hbar\Omega\,
+    \mathcal D_j(\Omega)\,
+    n_{\mathrm B}(\Omega,T)
+    \,\mathrm d\Omega.
+    \label{eq:AT_thermal_energy_general}
+\end{equation}
+
+For gapless linear branches,
+substitution of
+Equation~\eqref{eq:AT_linear_DOS}
+gives
+\begin{equation}
+    u_{\mathrm{AV}}(T)
+    =
+    \frac{\pi^2}{30}
+    \frac{k_{\mathrm B}^4T^4}{\hbar^3}
+    \sum_j
+    v_j^{-3}.
+    \label{eq:AT_thermal_energy_linear}
+\end{equation}
+
+Equation~\eqref{eq:AT_thermal_energy_linear}
+is the low-temperature continuum result for the selected linear branches.
+It applies only while the thermally occupied modes remain in the regime for
+which
+\(\Omega_j\simeq v_jk_{\mathrm{rec}}\).
+
+If significant dispersion curvature or a finite band edge is sampled, the
+exact density-of-states integral in
+Equation~\eqref{eq:AT_thermal_energy_general}
+must be used instead.
+
+The corresponding volumetric heat capacity in the linear regime is
+\begin{equation}
+    C_V^{(\mathrm{AV})}(T)
+    \equiv
+    \frac{\mathrm du_{\mathrm{AV}}}{\mathrm dT}
+    =
+    \frac{2\pi^2}{15}
+    \frac{k_{\mathrm B}^4T^3}{\hbar^3}
+    \sum_j
+    v_j^{-3}.
+    \label{eq:AT_heat_capacity_linear}
+\end{equation}
+
+For the more general low-wave-number dispersion
+\(\Omega_j\propto k_{\mathrm{rec}}^{p_j}\),
+the corresponding low-temperature continuum scalings are
+\begin{equation}
+    u(T)
+    \propto
+    T^{1+3/p_j},
+    \qquad
+    C_V(T)
+    \propto
+    T^{3/p_j}.
+    \label{eq:AT_general_thermal_scaling}
+\end{equation}
+
+These are conditional statistical-mechanical results.
+
+They determine the heat capacity only after the physical receiving branches,
+their state-counting measure, and their dispersions have been independently
+specified.
+
+They do not determine the photon-projected spectral measure
+\(\mathcal S_{\gamma\mathrm{AV}}\).
+
+The thermal energy stored in nonradiative receiving modes must also be
+distinguished from the electromagnetic CMB energy density:
+\begin{equation}
+    u_{\mathrm{CMB}}
+    \not\equiv
+    u_{\mathrm{AV}}
+    \label{eq:AT_radiative_thermal_distinction}
+\end{equation}
+in general.
+
+Here
+\(u_{\mathrm{CMB}}\)
+denotes the energy density carried by the thermal electromagnetic field,
+whereas
+\(u_{\mathrm{AV}}\)
+denotes thermal energy stored in the specified noncoherent Active-Vacuum
+receiving modes.
+
+The total thermalized sector may therefore be written schematically as
+\begin{equation}
+    u_{\mathrm{th}}
+    =
+    u_{\mathrm{CMB}}
+    +
+    u_{\mathrm{nonrad}},
+    \label{eq:AT_total_thermal_partition}
+\end{equation}
+where
+\(u_{\mathrm{nonrad}}\)
+collects independently established thermal non-electromagnetic degrees of
+freedom.
+
+No equality between
+\(u_{\mathrm{CMB}}\)
+and the complete thermal Active-Vacuum energy density is assumed.
+
+Accordingly, a candidate three-dimensional gapless linear reservoir
+establishes conditionally
+\begin{equation}
+    u_{\mathrm{AV}}\propto T^4,
+    \qquad
+    C_V^{(\mathrm{AV})}\propto T^3,
+\end{equation}
+but does not by itself establish the microscopic photon-transfer interaction,
+number-changing Planck equilibration, primordial receiver loading, or
+absolute CMB temperature.
+
+
+\section{Continuous Transfer and the Thermal Energy Ledger}
+
+Appendix~\ref{app:photon_dispersion_relaxation}
+develops the coherent-carrier propagation law and its associated continuous
+and terminal energy bookkeeping.
+
+For the thermodynamic analysis, the required inherited identity is
+\begin{equation}
+    E_{\mathrm{emit}}
+    =
+    \Delta E_{\mathrm{cont}}
+    +
+    \Delta E_{\mathrm{term}},
+    \label{eq:AT_total_energy_ledger}
+\end{equation}
+where
+\(\Delta E_{\mathrm{cont}}\)
+is the energy transferred continuously from the coherent carrier before any
+terminal event and
+\(\Delta E_{\mathrm{term}}\)
+is the remaining coherent contribution transferred at terminal coherence
+loss, if such a terminal event exists.
+
+For a terminal coherent energy
+\(E_{\mathrm{term}}\),
+\begin{equation}
+    \Delta E_{\mathrm{cont}}
+    =
+    E_{\mathrm{emit}}
+    -
+    E_{\mathrm{term}},
+    \qquad
+    \Delta E_{\mathrm{term}}
+    =
+    E_{\mathrm{term}}.
+    \label{eq:AT_energy_partition}
+\end{equation}
+
+Hence
+\begin{equation}
+    E_{\mathrm{emit}}
+    \gg
+    E_{\mathrm{term}}
+    \quad
+    \Longrightarrow
+    \quad
+    \Delta E_{\mathrm{cont}}
+    \gg
+    \Delta E_{\mathrm{term}}.
+    \label{eq:AT_terminal_subdominant_limit}
+\end{equation}
+
+A terminal coherence-loss event therefore cannot generically be treated as
+the sole destination of the initial photon energy when most of that energy
+has already left the coherent carrier continuously.
+
+The continuously transferred contribution must remain in the complete energy
+ledger. It may populate nonthermal receiving excitations, thermalized
+Active-Vacuum modes, or another independently derived finite-energy sector.
+
+Accordingly,
+\begin{equation}
+    \text{coherent energy transfer}
+    \not\Rightarrow
+    \text{immediate thermalization}.
+    \label{eq:AT_transfer_not_thermalization}
+\end{equation}
+
+The microscopic terminal condition, if one exists, must remain independent
+of the observed CMB spectrum.
+
+The required logical ordering is
+\begin{equation}
+    \text{photon-branch stability}
+    \longrightarrow
+    E_{\mathrm{term}}^{(\mathrm{TFT})}
+    \longrightarrow
+    \text{thermal evolution}
+    \longrightarrow
+    \text{CMB comparison}.
+    \label{eq:AT_terminal_logic}
+\end{equation}
+
+Neither
+\(E_{\mathrm{term}}\)
+nor any corresponding terminal frequency is used below as an upstream
+normalization of the CMB temperature.
+
+
+\section{Why Coherent Scale Transfer Alone Does Not Produce a Blackbody}
+
+The coherent scale-transfer branch preserves the identity of the surviving
+photon.
+
+Its photon-number condition is therefore
+\begin{equation}
+    \dot N_{\mathrm{ph}}
+    =
+    0
+    \label{eq:AT_coherent_number}
+\end{equation}
+for that branch.
+
+This condition is distinct from the occupation-number evolution of a
+subsequently thermalized electromagnetic population.
+
+A bosonic population that reaches kinetic equilibrium while its particle
+number remains independently constrained is described generally by the
+Bose--Einstein occupation
+\begin{equation}
+    n_{\mathrm{BE}}(\omega,T)
+    =
+    \frac{1}{
+        \exp
+        \left[
+            \left(
+                \hbar\omega-\mu_\gamma
+            \right)
+            /
+            k_{\mathrm B}T
+        \right]
+        -1
+    },
+    \label{eq:AT_BE_mu}
+\end{equation}
+where
+\(\mu_\gamma\)
+is the photon chemical potential associated with the number constraint.
+
+The Planck occupation is the special case
+\begin{equation}
+    \mu_\gamma
+    =
+    0.
+    \label{eq:AT_zero_mu}
+\end{equation}
+
+Consequently,
+\begin{equation}
+    \text{coherent frequency redistribution with fixed }
+    N_{\mathrm{ph}}
+    \not\Rightarrow
+    \text{Planck equilibrium}.
+    \label{eq:AT_number_conservation_no_Planck}
+\end{equation}
+
+This conclusion is independent of the detailed microscopic origin of
+\(\Gamma_{\mathrm D}\).
+
+A separate thermal interaction must permit the electromagnetic population to
+change occupation number so that
+\(\mu_\gamma\)
+can relax to zero.
+
+The coherent and thermal sectors therefore obey different number
+constraints:
+\begin{equation}
+    \begin{aligned}
+        \text{coherent branch:}
+        &\qquad
+        \dot N_{\mathrm{ph}}=0,
+        \\
+        \text{thermal branch:}
+        &\qquad
+        \dot N_{\mathrm{ph}}
+        \text{ need not vanish}.
+    \end{aligned}
+    \label{eq:AT_number_sector_distinction}
+\end{equation}
+
+
+\section{Number-Changing Detailed Balance and the Conditional Planck State}
+
+Let
+\(n(\omega,t)\)
+denote the occupation number of a thermal electromagnetic mode.
+
+A minimal effective absorption--emission collision operator may be written
+as
+\begin{equation}
+    C_{\mathrm{th}}[n]
+    =
+    \Gamma_{\mathrm{em}}(\omega,T)
+    \left(
+        1+n
+    \right)
+    -
+    \Gamma_{\mathrm{abs}}(\omega,T)
+    n.
+    \label{eq:AT_collision_operator}
+\end{equation}
+
+Here
+\(\Gamma_{\mathrm{em}}\)
+is the effective emission rate into the electromagnetic mode and
+\(\Gamma_{\mathrm{abs}}\)
+is the corresponding absorption rate.
+
+Microscopic detailed balance at temperature \(T\) requires
+\begin{equation}
+    \frac{
+        \Gamma_{\mathrm{em}}(\omega,T)
+    }{
+        \Gamma_{\mathrm{abs}}(\omega,T)
+    }
+    =
+    \exp
+    \left(
+        -
+        \frac{
+            \hbar\omega
+        }{
+            k_{\mathrm B}T
+        }
+    \right).
+    \label{eq:AT_detailed_balance}
+\end{equation}
+
+At equilibrium,
+\begin{equation}
+    C_{\mathrm{th}}[n_*]
+    =
+    0.
+    \label{eq:AT_collision_equilibrium}
+\end{equation}
+
+Substitution of
+Equation~\eqref{eq:AT_detailed_balance}
+into
+Equation~\eqref{eq:AT_collision_operator}
+gives
+\begin{equation}
+    n_*(\omega,T)
+    =
+    \frac{1}{
+        \exp
+        \left(
+            \hbar\omega/k_{\mathrm B}T
+        \right)
+        -1
+    }.
+    \label{eq:AT_Planck_occupation}
+\end{equation}
+
+Thus a zero-chemical-potential Planck occupation follows conditionally if the
+thermalized sector possesses a genuine photon-number-changing
+absorption--emission interaction satisfying microscopic detailed balance.
+
+At the microscopic level, that interaction must satisfy
+\begin{equation}
+    \left[
+        \hat H_{\mathrm{th}},
+        \hat N_{\mathrm{ph}}
+    \right]
+    \neq
+    0.
+    \label{eq:AT_number_changing_requirement}
+\end{equation}
+
+This interaction is physically distinct from the coherent scale-transfer
+interaction, which preserves the identity of the surviving photon.
+
+Linearizing
+Equation~\eqref{eq:AT_collision_operator}
+about
+\begin{equation}
+    n
+    =
+    n_{\mathrm P}
+    +
+    \delta n
+\end{equation}
+gives
+\begin{equation}
+    \frac{\mathrm d\delta n}{\mathrm dt}
+    =
+    -
+    \left(
+        \Gamma_{\mathrm{abs}}
+        -
+        \Gamma_{\mathrm{em}}
+    \right)
+    \delta n.
+    \label{eq:AT_Planck_stability}
+\end{equation}
+
+For finite positive
+\(\omega/T\),
+Equation~\eqref{eq:AT_detailed_balance}
+implies
+\begin{equation}
+    \Gamma_{\mathrm{abs}}
+    >
+    \Gamma_{\mathrm{em}},
+\end{equation}
+so the Planck solution is linearly stable within this effective kinetic
+description.
+
+Define
+\begin{equation}
+    \tau_{\mathrm{th}}^{-1}
+    =
+    \Gamma_{\mathrm{abs}}
+    -
+    \Gamma_{\mathrm{em}}.
+    \label{eq:AT_thermalization_rate}
+\end{equation}
+
+A sufficient hierarchy for rapid restoration of the thermal spectrum
+relative to coherent cosmological scale transfer is
+\begin{equation}
+    \tau_{\mathrm{th}}
+    \ll
+    \Gamma_{\mathrm D}^{-1}.
+    \label{eq:AT_thermalization_hierarchy}
+\end{equation}
+
+This inequality is a consistency condition and does not determine
+\(\tau_{\mathrm{th}}\).
+
+The thermal number-changing interaction must simultaneously remain
+sufficiently selective that photons remaining on the coherent astronomical
+branch do not acquire unacceptable absorption, scattering, spectral
+broadening, or polarization conversion.
+
+That selectivity remains a microscopic completion requirement.
+
+A strict equilibrium collision operator satisfies
+\begin{equation}
+    C_{\mathrm{th}}[n_{\mathrm P}]
+    =
+    0.
+    \label{eq:AT_equilibrium_collision_zero}
+\end{equation}
+
+Therefore the coherent scale-transfer law and the equilibrium thermal
+collision operator should not be applied as two independent evolution laws
+to the same mode population unless a driven nonequilibrium kinetic equation
+has been explicitly derived.
+
+The retained sector separation is
+\begin{equation}
+    \text{coherent photon branch}
+    \qquad\longrightarrow\qquad
+    \text{thermal photon sector}.
+    \label{eq:AT_sector_separation}
+\end{equation}
+
+
+\section{Fossil Initial-State Boundary}
+
+The Fossil-CMB route treats the present thermal radiation field as a relic of
+the Catastrophic Decompression and annealing history rather than as radiation
+generated by a present-day steady-state source.
+
+The high-temperature quantity
+$T_{\mathrm S}$
+introduced in
+\hyperref[app:lattice_annealing]{Appendix~\ref*{app:lattice_annealing}}
+is the kinetic-equivalent temperature scale associated with the substrate
+phase transition and is not identified directly with an ordinary photon
+blackbody temperature.
+
+The earliest presently defensible thermal photon boundary is the
+annealing/transparency endpoint derived in
+\hyperref[app:lattice_annealing]{Appendix~\ref*{app:lattice_annealing}},
+\begin{equation}
+    t_{\mathrm a}
+    \simeq
+    3.86\times10^5~{\rm yr},
+    \qquad
+    T_{\gamma}(t_{\mathrm a})
+    =
+    T_{\mathrm a}
+    \sim
+    3000~{\rm K}.
+    \label{eq:AT_transparency_temperature}
+\end{equation}
+
+The same pair $(T_{\mathrm a},t_{\mathrm a})$ therefore defines the endpoint
+of lattice annealing and the initial boundary of the subsequent Fossil-CMB
+thermal evolution.
+
+A Planck spectrum at this boundary remains conditional on sufficiently rapid
+early photon-number-changing thermalization.
+
+The high-temperature annealing similarity relation used in
+\hyperref[app:lattice_annealing]{Appendix~\ref*{app:lattice_annealing}}
+is retained within the regime for which it was derived and is not extrapolated
+as a post-transparency CMB cooling law.
+
+In particular,
+\begin{equation}
+    T\propto t^{-1/2}
+\end{equation}
+does not by itself determine the subsequent temperature of a finite fossil
+radiation field.
+
+Likewise, long propagation distance or random spatial wandering does not
+constitute a thermal cooling law.
+
+For a homogeneous thermal radiation field in a fixed physical volume,
+\begin{equation}
+    \frac{\mathrm d u_{\mathrm{CMB}}}{\mathrm dt}
+    =
+    \mathcal P_{\mathrm{dep}}
+    -
+    \mathcal P_{\mathrm{loss}},
+    \label{eq:AT_fossil_first_law}
+\end{equation}
+where
+$\mathcal P_{\mathrm{dep}}$
+and
+$\mathcal P_{\mathrm{loss}}$
+are respectively the net power densities deposited into and removed from the
+thermal photon sector.
+
+Since
+\begin{equation}
+    u_{\mathrm{CMB}}\propto T^4,
+\end{equation}
+a system satisfying
+\begin{equation}
+    \mathcal P_{\mathrm{loss}}=0,
+    \qquad
+    \mathcal P_{\mathrm{dep}}\geq0
+\end{equation}
+cannot cool:
+\begin{equation}
+    \dot T\geq0.
+    \label{eq:AT_no_loss_no_cooling}
+\end{equation}
+
+Thus post-transparency Fossil cooling requires a genuine finite-energy
+receiving channel or another explicitly derived energy-loss mechanism.
+Reduction of active FCC volume is likewise not identified with ordinary
+adiabatic expansion cooling.
+
+\section{Conditional Fossil-Radiation Energy-Conservation Closure}
+
+The preceding sections establish conditions under which a thermal
+electromagnetic population may possess a Planck spectrum.
+
+They do not determine the temperature of that spectrum.
+
+Consider a fixed physical coarse-graining volume during an equilibration
+interval in which external work, macroscopic volume change, and energy
+exchange with any third sector are negligible.
+
+Let
+\(T_{\gamma,0}\)
+denote the initial photon temperature and
+\(T_{\mathrm{rec},0}\)
+the initial effective temperature of the selected receiving sector.
+
+The subscript ``0'' labels the initial state of this equilibration problem and
+does not denote the TFT Hard-Floor State~0.
+
+If complete mutual thermal equilibrium is reached, let the common final
+temperature be
+\(T_{\mathrm{eq}}\).
+
+For an isotropic electromagnetic field with two transverse polarizations and
+propagation speed
+\(c_{\mathrm E}\),
+\begin{equation}
+    u_{\mathrm{CMB}}(T)
+    =
+    \frac{
+        \pi^2k_{\mathrm B}^4
+    }{
+        15\hbar^3c_{\mathrm E}^3
+    }
+    T^4.
+    \label{eq:AT_CMB_energy_density}
+\end{equation}
+
+For independent three-dimensional gapless linear receiving branches with
+speeds
+\(v_j\),
+Equation~\eqref{eq:AT_thermal_energy_linear}
+gives
+\begin{equation}
+    u_{\mathrm{rec}}(T)
+    =
+    \frac{
+        \pi^2k_{\mathrm B}^4
+    }{
+        30\hbar^3
+    }
+    \left(
+        \sum_j v_j^{-3}
+    \right)
+    T^4.
+    \label{eq:AT_receiver_energy_density}
+\end{equation}
+
+This expression applies only while the thermally occupied portion of each
+branch remains within its approximately linear continuum regime.
+
+For an isolated photon--receiver subsystem, energy conservation requires
+\begin{equation}
+    u_{\mathrm{CMB}}
+    \left(
+        T_{\gamma,0}
+    \right)
+    +
+    u_{\mathrm{rec}}
+    \left(
+        T_{\mathrm{rec},0}
+    \right)
+    =
+    u_{\mathrm{CMB}}
+    \left(
+        T_{\mathrm{eq}}
+    \right)
+    +
+    u_{\mathrm{rec}}
+    \left(
+        T_{\mathrm{eq}}
+    \right).
+    \label{eq:AT_fossil_energy_conservation_general}
+\end{equation}
+
+Substitution gives
+\begin{equation}
+    T_{\mathrm{eq}}^4
+    =
+    \frac{
+        2c_{\mathrm E}^{-3}
+        T_{\gamma,0}^4
+        +
+        \left(
+            \displaystyle\sum_j v_j^{-3}
+        \right)
+        T_{\mathrm{rec},0}^4
+    }{
+        2c_{\mathrm E}^{-3}
+        +
+        \displaystyle\sum_j v_j^{-3}
+    }.
+    \label{eq:AT_fossil_temperature_general}
+\end{equation}
+
+Equation~\eqref{eq:AT_fossil_temperature_general}
+is a conditional consequence of energy conservation and the specified
+receiving thermodynamics.
+
+It does not determine the receiving branches, their propagation speeds, their
+initial loading, or the microscopic rate of photon--receiver exchange.
+
+For one distinct gapless scalar receiving branch with speed
+\(v_{\mathrm{rec}}\),
+\begin{equation}
+    T_{\mathrm{eq}}^4
+    =
+    \frac{
+        T_{\gamma,0}^4
+        +
+        \dfrac{1}{2}
+        \left(
+            \dfrac{c_{\mathrm E}}{v_{\mathrm{rec}}}
+        \right)^3
+        T_{\mathrm{rec},0}^4
+    }{
+        1
+        +
+        \dfrac{1}{2}
+        \left(
+            \dfrac{c_{\mathrm E}}{v_{\mathrm{rec}}}
+        \right)^3
+    }.
+    \label{eq:AT_fossil_temperature_scalar}
+\end{equation}
+
+The notation
+\(v_{\mathrm{rec}}\)
+is intentionally generic at this stage.
+
+No identification of the general receiver with an ordinary FCC phonon, the
+Hard Floor, a bulk FCC--SC conversion coordinate, or a particular internal
+phase branch is implied by
+Equation~\eqref{eq:AT_fossil_temperature_scalar}.
+
+
+\subsection{Consistency Limits and Receiver-State Separation}
+
+If
+\begin{equation}
+    T_{\mathrm{rec},0}
+    =
+    T_{\gamma,0},
+\end{equation}
+then
+\begin{equation}
+    T_{\mathrm{eq}}
+    =
+    T_{\gamma,0}.
+    \label{eq:AT_equal_temperature_check}
+\end{equation}
+
+Thus a receiving sector already equilibrated with the thermal radiation at the
+initial boundary cannot subsequently cool that radiation through closed mutual
+equilibration.
+
+The modes strongly populated during catastrophic decompression and early
+annealing must therefore be distinguished from any weakly populated receiver
+responsible for later Fossil evolution:
+\begin{equation}
+    \mathcal H_{\mathrm{AP}}
+    \neq
+    \mathcal H_{\mathrm{rec}}.
+    \label{eq:AT_AP_receiver_separation}
+\end{equation}
+
+This separation is a microscopic requirement rather than a thermodynamic
+identity.
+
+In the limiting cold-receiver case,
+\begin{equation}
+    T_{\mathrm{rec},0}
+    =
+    0,
+\end{equation}
+Equation~\eqref{eq:AT_fossil_temperature_scalar}
+becomes
+\begin{equation}
+    T_{\mathrm{eq}}
+    =
+    T_{\gamma,0}
+    \left[
+        1+
+        \frac{1}{2}
+        \left(
+            \frac{c_{\mathrm E}}{v_{\mathrm{rec}}}
+        \right)^3
+    \right]^{-1/4}.
+    \label{eq:AT_cold_receiver_limit}
+\end{equation}
+
+This is a boundary-case solution and does not establish that the primordial
+receiver was actually cold.
+
+
+\subsection{Primordial Receiver Loading}
+
+Weak photon coupling before transparency does not by itself imply a weakly
+populated receiving sector.
+
+Using the unit-reference relaxation rate
+\(\Gamma_{\mathrm D}^{(0)}\)
+together with the retained annealing/transparency age gives the illustrative
+pre-transparency exposure
+\begin{equation}
+    \Gamma_{\mathrm D}^{(0)}t_{\mathrm a}
+    \simeq
+    2.87\times10^{-5}.
+    \label{eq:AT_pretransparency_exposure}
+\end{equation}
+
+This quantity constrains only loading acquired through the corresponding
+reference photon-coupling channel.
+
+Catastrophic decompression may excite the receiving sector directly. Its
+microscopic energy ledger therefore has the schematic form
+\begin{equation}
+    \dot u_{\mathrm{rec}}
+    =
+    \mathcal P_{\mathrm{form,rec}}
+    +
+    \mathcal P_{\gamma\mathrm{rec}}
+    -
+    \mathcal P_{\mathrm{rec}\rightarrow\mathrm{other}}.
+    \label{eq:AT_receiver_loading_ledger}
+\end{equation}
+
+Consequently, a small pre-transparency photon-relaxation exposure,
+\begin{equation}
+    \Gamma_{\mathrm D}t_{\mathrm a}
+    \ll
+    1,
+\end{equation}
+does not imply
+\begin{equation}
+    u_{\mathrm{rec},0}
+    \simeq
+    0.
+    \label{eq:AT_small_exposure_not_cold}
+\end{equation}
+
+The initial receiver energy must therefore be obtained independently from the
+preceding formation and annealing history.
+
+
+\section{Conditional Finite Active-to-Latent Interface Specialization}
+
+The general Fossil closure permits a specific TFT specialization associated
+with finite-energy active-to-latent dynamics at the FCC--SC transition.
+
+This candidate is distinct from both the ideal Hard Floor and a literal
+translation of a single geometric phase boundary.
+
+The relevant distinction is
+\begin{equation}
+    \begin{aligned}
+        \text{bulk FCC--SC conversion coordinate}
+        &\neq
+        \text{two-dimensional translating phase boundary}
+        \\
+        &\neq
+        \text{finite three-dimensional active-to-latent field}.
+    \end{aligned}
+    \label{eq:AT_interface_three_way_distinction}
+\end{equation}
+
+The first is not generically gapless, while the second possesses
+two-dimensional rather than three-dimensional thermodynamic state counting.
+
+The third remains a conditional microscopic candidate.
+
+
+\subsection{Topology-Normalized Interface Density}
+
+The TFT topology-normalized density law is
+\begin{equation}
+    \rho_i(r)
+    =
+    F_i\rho_{\mathrm S}
+    \left(
+        \frac{\ell_{\mathrm S}}{r}
+    \right)^4.
+    \label{eq:AT_topology_density_law}
+\end{equation}
+
+For the spherical Soft-Floor convergence topology,
+\begin{equation}
+    F_{\mathrm D}
+    =
+    \frac{3}{2},
+    \label{eq:AT_FD}
+\end{equation}
+and
+\begin{equation}
+    \rho_{\mathrm{QG}}
+    =
+    F_{\mathrm D}
+    \rho_{\mathrm S}
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm{QG}}}
+    \right)^4.
+    \label{eq:AT_rhoQG}
+\end{equation}
+
+For a distinct finite interface topology with factor
+\(F_{\mathrm I}\),
+\begin{equation}
+    \rho_{\mathrm I}
+    =
+    F_{\mathrm I}
+    \rho_{\mathrm S}
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm{QG}}}
+    \right)^4,
+\end{equation}
+and therefore
+\begin{equation}
+    \rho_{\mathrm I}
+    =
+    \frac{F_{\mathrm I}}{F_{\mathrm D}}
+    \rho_{\mathrm{QG}}.
+    \label{eq:AT_interface_density_ratio}
+\end{equation}
+
+For the conditional rectilinear normal-interface topology,
+\begin{equation}
+    F_{\mathrm I}
+    =
+    1,
+    \qquad
+    \rho_{\mathrm I}
+    =
+    \frac{\rho_{\mathrm{QG}}}{F_{\mathrm D}}.
+    \label{eq:AT_interface_FI1}
+\end{equation}
+
+The assignment
+\(F_{\mathrm I}=1\)
+is a topology hypothesis and is not inferred from the observed CMB
+temperature.
+
+
+\subsection{Conditional Interface Speed}
+
+Assume that the finite active-to-latent field inherits the retained active-FCC
+gradient-stiffness scale while carrying the topology-normalized inertia of
+Equation~\eqref{eq:AT_interface_density_ratio}.
+
+The corresponding assignments are
+\begin{equation}
+    K_{\mathrm I}
+    =
+    \beta_{\mathrm{geo}}
+    \rho_{\mathrm D}
+    c_{\mathrm E}^2,
+    \qquad
+    \rho_{\mathrm I}^{(\mathrm{cell})}
+    =
+    \beta_{\mathrm{geo}}
+    \rho_{\mathrm I}.
+    \label{eq:AT_interface_stiffness_inertia}
+\end{equation}
+
+Here
+\(K_{\mathrm I}\)
+has dimensions of pressure and
+\(\rho_{\mathrm I}^{(\mathrm{cell})}\)
+has dimensions of mass density.
+
+The long-wavelength propagation speed is therefore
+\begin{equation}
+    v_{\mathrm I}^2
+    =
+    \frac{
+        K_{\mathrm I}
+    }{
+        \rho_{\mathrm I}^{(\mathrm{cell})}
+    }
+    =
+    c_{\mathrm E}^2
+    \frac{
+        \rho_{\mathrm D}
+    }{
+        \rho_{\mathrm I}
+    }.
+    \label{eq:AT_interface_speed_density}
+\end{equation}
+
+Using the TFT scale identities,
+\begin{equation}
+    v_{\mathrm I}(F_{\mathrm I})
+    =
+    c_{\mathrm E}
+    \frac{
+        F_{\mathrm D}
+    }{
+        \sqrt{F_{\mathrm I}}
+    }
+    \sqrt{
+        \frac{
+            \ell_{\mathrm S}
+        }{
+            r_{\mathrm D}
+        }
+    }.
+    \label{eq:AT_interface_speed}
+\end{equation}
+
+For
+\(F_{\mathrm I}=1\),
+\begin{equation}
+    v_{\mathrm I}
+    =
+    c_{\mathrm E}
+    F_{\mathrm D}
+    \sqrt{
+        \frac{
+            \ell_{\mathrm S}
+        }{
+            r_{\mathrm D}
+        }
+    }
+    \simeq
+    20.95~{\rm km\,s^{-1}}.
+    \label{eq:AT_interface_speed_numeric}
+\end{equation}
+
+No measured CMB temperature enters
+Equation~\eqref{eq:AT_interface_speed_numeric}.
+
+The unresolved step is the independent microscopic derivation of the
+stiffness inheritance in
+Equation~\eqref{eq:AT_interface_stiffness_inertia}.
+
+
+\subsection{Conditional Interface Thermal Capacity}
+
+If the interface candidate is an independent three-dimensional gapless scalar
+branch with
+\begin{equation}
+    \Omega_{\mathrm I}(k_{\mathrm I})
+    =
+    v_{\mathrm I}k_{\mathrm I},
+    \label{eq:AT_interface_gapless_dispersion}
+\end{equation}
+where \(k_{\mathrm I}\) is the dimensional wave number of the interface
+branch, then
+\begin{equation}
+    u_{\mathrm I}(T)
+    =
+    a_{\mathrm I}T^4,
+    \qquad
+    a_{\mathrm I}
+    =
+    \frac{
+        \pi^2k_{\mathrm B}^4
+    }{
+        30\hbar^3v_{\mathrm I}^3
+    }.
+    \label{eq:AT_interface_thermal_energy}
+\end{equation}
+
+For the electromagnetic field,
+\begin{equation}
+    a_\gamma
+    =
+    \frac{
+        \pi^2k_{\mathrm B}^4
+    }{
+        15\hbar^3c_{\mathrm E}^3
+    }.
+\end{equation}
+
+Hence
+\begin{equation}
+    \frac{a_{\mathrm I}}{a_\gamma}
+    =
+    \frac{1}{2}
+    \left(
+        \frac{
+            c_{\mathrm E}
+        }{
+            v_{\mathrm I}
+        }
+    \right)^3
+    =
+    \frac{
+        F_{\mathrm I}^{3/2}
+    }{
+        2F_{\mathrm D}^3
+    }
+    \left(
+        \frac{
+            r_{\mathrm D}
+        }{
+            \ell_{\mathrm S}
+        }
+    \right)^{3/2}.
+    \label{eq:AT_interface_heat_capacity_ratio}
+\end{equation}
+
+For
+\(F_{\mathrm I}=1\),
+the current TFT microscopic quantities give approximately
+\begin{equation}
+    \frac{a_{\mathrm I}}{a_\gamma}
+    \simeq
+    1.47\times10^{12}.
+    \label{eq:AT_interface_heat_capacity_ratio_numeric}
+\end{equation}
+
+This ratio is a conditional thermodynamic state-counting result.
+
+It does not establish the existence, dimensional support, gaplessness,
+initial loading, or photon coupling of the proposed branch.
+
+
+\subsection{Conditional Cold-Interface Endpoint}
+
+Take
+\begin{equation}
+    T_{\gamma,0}
+    =
+    T_{\mathrm a},
+    \qquad
+    T_{\mathrm{rec},0}
+    =
+    T_{\mathrm I,a}.
+\end{equation}
+
+For the limiting condition
+\begin{equation}
+    T_{\mathrm I,a}
+    \rightarrow
+    0,
+\end{equation}
+energy conservation gives
+\begin{equation}
+    a_\gamma T_{\mathrm a}^4
+    =
+    \left(
+        a_\gamma+a_{\mathrm I}
+    \right)
+    T_{\mathrm f}^4.
+\end{equation}
+
+Therefore
+\begin{equation}
+    T_{\mathrm f}
+    =
+    T_{\mathrm a}
+    \left[
+        1+
+        \frac{
+            F_{\mathrm I}^{3/2}
+        }{
+            2F_{\mathrm D}^3
+        }
+        \left(
+            \frac{
+                r_{\mathrm D}
+            }{
+                \ell_{\mathrm S}
+            }
+        \right)^{3/2}
+    \right]^{-1/4}.
+    \label{eq:AT_interface_temperature_formula}
+\end{equation}
+
+For
+\begin{equation}
+    F_{\mathrm I}=1,
+    \qquad
+    F_{\mathrm D}=\frac32,
+    \qquad
+    T_{\mathrm a}=3000~{\rm K},
+\end{equation}
+the unrounded TFT microscopic quantities corresponding to
+Equation~\eqref{eq:AT_interface_speed_numeric}
+give
+\begin{equation}
+    T_{\mathrm f}
+    \simeq
+    2.726~{\rm K}.
+    \label{eq:AT_interface_temperature_numeric}
+\end{equation}
+
+The measured present CMB temperature is not inserted upstream in this
+calculation.
+
+Equation~\eqref{eq:AT_interface_temperature_numeric}
+is therefore an illustrative conditional consistency result of this
+finite-interface specialization.
+
+Its physical realization requires the corresponding interface mode,
+three-dimensional state counting, sufficiently small gap, stiffness
+normalization, primordial loading, and thermalizing photon interaction.
+
+
+\subsection{Gap Constraint and the Role of \(r_{\mathrm{QG}}\)}
+
+A general low-wave-number interface branch may instead have
+\begin{equation}
+    \Omega_{\mathrm I}^2(k_{\mathrm I})
+    =
+    \Omega_0^2
+    +
+    v_{\mathrm I}^2k_{\mathrm I}^2.
+    \label{eq:AT_interface_gapped_dispersion}
+\end{equation}
+
+Its scalar thermal energy density can be written
+\begin{equation}
+    u_{\mathrm I}(T)
+    =
+    a_{\mathrm I}T^4
+    \mathcal G
+    \left(
+        \frac{
+            \hbar\Omega_0
+        }{
+            k_{\mathrm B}T
+        }
+    \right),
+    \label{eq:AT_interface_gapped_energy}
+\end{equation}
+where
+\begin{equation}
+    \mathcal G(x)
+    =
+    \frac{15}{\pi^4}
+    \int_0^\infty
+    \frac{
+        y^2\sqrt{y^2+x^2}
+    }{
+        \exp
+        \left(
+            \sqrt{y^2+x^2}
+        \right)-1
+    }
+    \,\mathrm dy,
+    \qquad
+    \mathcal G(0)=1.
+    \label{eq:AT_interface_gap_function}
+\end{equation}
+
+The gapless approximation requires
+\begin{equation}
+    \Omega_0
+    \ll
+    \frac{k_{\mathrm B}T}{\hbar}
+    \label{eq:AT_interface_gap_requirement}
+\end{equation}
+over the thermally relevant regime.
+
+At a few kelvin,
+\begin{equation}
+    \frac{k_{\mathrm B}T}{\hbar}
+    \sim
+    10^{11}~{\rm s^{-1}}.
+\end{equation}
+
+The microscopic convergence radius
+\begin{equation}
+    r_{\mathrm{QG}}
+    \sim
+    10^{-29}~{\rm m}
+\end{equation}
+can enter the interface density and inertia normalization, but it cannot by
+itself provide the required infrared frequency scale because
+\begin{equation}
+    \frac{c_{\mathrm E}}{r_{\mathrm{QG}}}
+    \sim
+    10^{36}~{\rm s^{-1}}.
+    \label{eq:AT_rQG_frequency_scale}
+\end{equation}
+
+Thus the role of
+\(r_{\mathrm{QG}}\)
+in the present construction is mechanical normalization rather than direct
+generation of the low-frequency thermal scale.
+
+A sufficiently small
+\(\Omega_0\)
+must arise from an independently derived collective soft mode, symmetry,
+critical structure, or another genuine infrared mechanism.
+
+
+\subsection{Energy-Conserving Two-Sector Evolution}
+
+Let
+\begin{equation}
+    \mathcal P_{\gamma\mathrm{rec}}
+    \left(
+        T_\gamma,
+        T_{\mathrm{rec}}
+    \right)
+\end{equation}
+denote the net microscopic power transferred per unit physical volume from the
+thermal photon sector into the receiver, with positive sign denoting energy
+flow out of the photons.
+
+The coupled temperature equations are
+\begin{equation}
+    C_V^{(\gamma)}
+    \left(
+        T_\gamma
+    \right)
+    \dot T_\gamma
+    =
+    -
+    \mathcal P_{\gamma\mathrm{rec}}
+    \left(
+        T_\gamma,
+        T_{\mathrm{rec}}
+    \right),
+    \label{eq:AT_photon_temperature_evolution}
+\end{equation}
+and
+\begin{equation}
+    C_V^{(\mathrm{rec})}
+    \left(
+        T_{\mathrm{rec}}
+    \right)
+    \dot T_{\mathrm{rec}}
+    =
+    +
+    \mathcal P_{\gamma\mathrm{rec}}
+    \left(
+        T_\gamma,
+        T_{\mathrm{rec}}
+    \right).
+    \label{eq:AT_receiver_temperature_evolution}
+\end{equation}
+
+For the electromagnetic field,
+\begin{equation}
+    C_V^{(\gamma)}(T)
+    =
+    \frac{
+        4\pi^2k_{\mathrm B}^4
+    }{
+        15\hbar^3c_{\mathrm E}^3
+    }
+    T^3,
+    \label{eq:AT_photon_heat_capacity}
+\end{equation}
+while for the selected linear receiving branches,
+\begin{equation}
+    C_V^{(\mathrm{rec})}(T)
+    =
+    \frac{
+        2\pi^2k_{\mathrm B}^4
+    }{
+        15\hbar^3
+    }
+    \left(
+        \sum_jv_j^{-3}
+    \right)
+    T^3.
+    \label{eq:AT_receiver_heat_capacity}
+\end{equation}
+
+Adding the two equations gives
+\begin{equation}
+    \frac{\mathrm d}{\mathrm dt}
+    \left[
+        u_{\mathrm{CMB}}(T_\gamma)
+        +
+        u_{\mathrm{rec}}(T_{\mathrm{rec}})
+    \right]
+    =
+    0.
+    \label{eq:AT_two_sector_energy_conservation}
+\end{equation}
+
+The microscopic transfer kernel therefore determines the rate of approach to
+equilibrium, while the endpoint is fixed by the conserved total energy once
+the initial states and receiver thermodynamics have been specified.
+
+
+\subsection{Logical Status of the Fossil Closure}
+
+The general Fossil result has the conditional structure
+\begin{equation}
+    \left\{
+        T_{\gamma,0},
+        \,
+        T_{\mathrm{rec},0},
+        \,
+        \text{receiving spectrum}
+    \right\}
+    \longrightarrow
+    T_{\mathrm{eq}}.
+    \label{eq:AT_fossil_conditional_status}
+\end{equation}
+
+The thermodynamic density of states does not independently determine
+\begin{equation}
+    T_{\mathrm{rec},0},
+    \qquad
+    \mathcal P_{\gamma\mathrm{rec}},
+\end{equation}
+and the carrier-projected dissipative spectrum does not determine the
+thermodynamic multiplicity.
+
+The strongest general result of the closed Fossil construction is the
+energy-conserving two-sector endpoint in
+Equations~\eqref{eq:AT_fossil_energy_conservation_general}
+and~\eqref{eq:AT_fossil_temperature_general}.
+
+The finite active-to-latent interface provides the illustrative conditional
+specialization
+\begin{equation}
+    \begin{aligned}
+        F_{\mathrm I}=1,
+        \quad
+        &\text{independent three-dimensional gapless scalar receiver},
+        \\
+        T_{\mathrm I,a}\simeq0
+        \quad
+        &\Longrightarrow
+        \quad
+        T_{\mathrm f}\simeq2.726~{\rm K}.
+    \end{aligned}
+    \label{eq:AT_interface_conditional_status}
+\end{equation}
+
+The observed CMB temperature is not used to infer
+\(F_{\mathrm I}\),
+\(v_{\mathrm I}\),
+\(\Omega_0\),
+or
+\(T_{\mathrm I,a}\).
+
+Accordingly, the general Fossil endpoint is the retained energy-conservation
+result for a specified microscopic completion, while the finite-interface
+calculation serves as a downstream consistency test of one particular TFT
+realization.
+
+
+\section{Macroscopic Thermal Energy Balance}
+
+The Fossil-radiation closure derived above describes a closed local
+photon--receiver subsystem during an interval in which external work,
+macroscopic volume change, and exchange with additional sectors are
+negligible.
+
+The macroscopic thermal environment is more general.
+
+Once continuous energy injection, terminal conversion, transport into
+additional Active-Vacuum degrees of freedom, or capture by State-II
+structures is admitted, the thermalized sector must be treated as an open
+subsystem.
+
+Let
+\(u_{\mathrm{th}}(T)\)
+denote the total energy density assigned to the specified thermalized sector,
+and define its volumetric heat capacity by
+\begin{equation}
+    C_V^{(\mathrm{th})}(T)
+    \equiv
+    \frac{
+        \mathrm d u_{\mathrm{th}}
+    }{
+        \mathrm dT
+    }.
+    \label{eq:AT_heat_capacity_definition}
+\end{equation}
+
+For a spatially homogeneous coarse-graining volume in which mechanical work
+and explicit spatial transport may be neglected over the interval of
+interest, the local thermal balance is
+\begin{equation}
+    C_V^{(\mathrm{th})}(T)
+    \frac{
+        \mathrm dT
+    }{
+        \mathrm dt
+    }
+    =
+    \mathcal P_{\mathrm{in}}(T)
+    -
+    \mathcal P_{\mathrm{sink}}(T).
+    \label{eq:AT_thermal_balance}
+\end{equation}
+
+The quantities
+\(\mathcal P_{\mathrm{in}}\)
+and
+\(\mathcal P_{\mathrm{sink}}\)
+are power densities with dimensions
+\(\mathrm{W\,m^{-3}}\).
+
+If spatial heat transport, macroscopic compression or expansion, or
+mechanical work becomes important, the corresponding flux-divergence and
+work terms must be restored before
+Equation~\eqref{eq:AT_thermal_balance}
+is applied.
+
+The thermal input may be decomposed as
+\begin{equation}
+    \mathcal P_{\mathrm{in}}
+    =
+    \mathcal P_{\mathrm{cont}}
+    +
+    \mathcal P_{\mathrm{term}}
+    +
+    \mathcal P_{\mathrm{other}}.
+    \label{eq:AT_input_power}
+\end{equation}
+
+Here
+\(\mathcal P_{\mathrm{cont}}\)
+denotes thermal power originating from energy transferred continuously out of
+the coherent photon population,
+\(\mathcal P_{\mathrm{term}}\)
+denotes thermal power originating from terminal coherence-loss events, and
+\(\mathcal P_{\mathrm{other}}\)
+collects any additional independently derived thermal source.
+
+The distinction between energy leaving the coherent carrier and energy
+entering the thermalized sector is essential.
+
+Let
+\(u_\gamma^{(\mathrm{coh})}\)
+denote the local energy density carried by the coherent photon population to
+which the inherited scale-transfer law applies.
+
+The instantaneous rate at which energy leaves that coherent population is
+\begin{equation}
+    \mathcal P_{\mathrm{loss}}^{(\mathrm{coh})}
+    =
+    \Gamma_{\mathrm D}
+    u_\gamma^{(\mathrm{coh})}.
+    \label{eq:AT_coherent_loss_power_density}
+\end{equation}
+
+Equation~\eqref{eq:AT_coherent_loss_power_density}
+is a statement about the coherent carrier sector.
+
+It does not imply that the same power enters the thermalized sector at the
+same instant.
+
+Transferred coherent energy may first populate nonthermal receiving modes,
+intermediate collective excitations, or another explicitly tracked
+finite-energy sector and thermalize only after a finite delay.
+
+Consequently, no general pointwise equality is imposed between
+\(\mathcal P_{\mathrm{cont}}\)
+and
+\(\mathcal P_{\mathrm{loss}}^{(\mathrm{coh})}\).
+
+In the special local and effectively memoryless limit in which continuously
+transferred coherent energy thermalizes without appreciable intermediate
+storage on the temporal and spatial coarse-graining scales being modeled,
+one obtains
+\begin{equation}
+    \mathcal P_{\mathrm{cont}}
+    =
+    \Gamma_{\mathrm D}
+    u_\gamma^{(\mathrm{coh})}.
+    \label{eq:AT_complete_continuous_thermalization}
+\end{equation}
+
+Outside this limit,
+\(\mathcal P_{\mathrm{cont}}(t)\)
+depends on the preceding population and relaxation of the intermediate
+receiving sector and need not coincide instantaneously with the current
+coherent loss power.
+
+The general causal structure is therefore
+\begin{equation}
+    \text{coherent energy loss}
+    \longrightarrow
+    \text{nonthermal receiving sector}
+    \longrightarrow
+    \text{thermal input}.
+    \label{eq:AT_coherent_to_thermal_sequence}
+\end{equation}
+
+The intermediate stage may collapse to an effectively instantaneous process
+only when its relaxation timescale is negligible relative to the retained
+coarse-graining timescale.
+
+Terminal coherence-loss events require the same distinction.
+
+Let
+\(\mathrm d\dot n_{\mathrm{term}}\)
+denote the differential terminal-event rate per physical volume.
+
+The gross power released from the coherent terminal population is
+\begin{equation}
+    \mathcal P_{\mathrm{release}}^{(\mathrm{term})}
+    =
+    \int
+    E_{\mathrm{term}}
+    \,\mathrm d\dot n_{\mathrm{term}}.
+    \label{eq:AT_terminal_release_power_density}
+\end{equation}
+
+If this released energy is transferred directly into the thermalized sector
+on the retained coarse-graining timescale, then
+\begin{equation}
+    \mathcal P_{\mathrm{term}}
+    =
+    \mathcal P_{\mathrm{release}}^{(\mathrm{term})}
+    =
+    \int
+    E_{\mathrm{term}}
+    \,\mathrm d\dot n_{\mathrm{term}}.
+    \label{eq:AT_terminal_power_density}
+\end{equation}
+
+If instead the terminal energy first occupies a nonthermal intermediate
+sector, its eventual thermal contribution must be propagated through that
+sector rather than identified instantaneously with
+Equation~\eqref{eq:AT_terminal_release_power_density}.
+
+Thus both continuous and terminal coherent-energy loss obey the same
+thermodynamic principle:
+\begin{equation}
+    \text{energy leaving a coherent carrier}
+    \not\equiv
+    \text{instantaneous thermal heating}.
+    \label{eq:AT_loss_not_instantaneous_heating}
+\end{equation}
+
+A stationary thermal state,
+denoted by
+\(T_{\mathrm{fp}}\),
+satisfies
+\begin{equation}
+    \mathcal P_{\mathrm{in}}
+    \left(
+        T_{\mathrm{fp}}
+    \right)
+    =
+    \mathcal P_{\mathrm{sink}}
+    \left(
+        T_{\mathrm{fp}}
+    \right).
+    \label{eq:AT_fixed_point}
+\end{equation}
+
+The subscript ``fp'' denotes a driven thermal fixed point and distinguishes
+this quantity from the closed-system Fossil equilibrium temperature
+\(T_{\mathrm{eq}}\).
+
+Linear stability requires
+\begin{equation}
+    \left.
+    \frac{
+        \mathrm d
+    }{
+        \mathrm dT
+    }
+    \left[
+        \mathcal P_{\mathrm{in}}(T)
+        -
+        \mathcal P_{\mathrm{sink}}(T)
+    \right]
+    \right|_{T_{\mathrm{fp}}}
+    <
+    0.
+    \label{eq:AT_fixed_point_stability}
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    \left.
+    \frac{
+        \mathrm d\mathcal P_{\mathrm{sink}}
+    }{
+        \mathrm dT
+    }
+    \right|_{T_{\mathrm{fp}}}
+    >
+    \left.
+    \frac{
+        \mathrm d\mathcal P_{\mathrm{in}}
+    }{
+        \mathrm dT
+    }
+    \right|_{T_{\mathrm{fp}}}.
+    \label{eq:AT_sink_slope_condition}
+\end{equation}
+
+The two thermal constructions therefore represent different physical limits:
+\begin{equation}
+    \begin{aligned}
+        T_{\mathrm{eq}}:
+        &\quad
+        \text{closed photon--receiver energy redistribution},
+        \\
+        T_{\mathrm{fp}}:
+        &\quad
+        \text{open driven source--sink stationary state}.
+    \end{aligned}
+    \label{eq:AT_equilibrium_fixed_point_distinction}
+\end{equation}
+
+No equality between
+\(T_{\mathrm{eq}}\)
+and
+\(T_{\mathrm{fp}}\)
+is assumed.
+
+
+\section{Candidate State-II Thermal Sink}
+
+Localized FCC-to-State-II phase structures provide a structurally motivated
+candidate sink for thermal Active-Vacuum energy.
+
+This open-system sink is distinct from the finite active-to-latent receiving
+sector used in the closed Fossil-equilibrium construction.
+
+The present construction does not assume that State-II structures are perfect
+absorbers.
+
+Let
+\(\sigma_i^{(\mathrm{abs})}(\Omega)\)
+denote the effective absorption cross section of State-II structure \(i\) for
+a thermal excitation of angular frequency
+\(\Omega\).
+
+Define the corresponding inverse effective absorption length by
+\begin{equation}
+    \ell_{\mathrm{II}}^{-1}(\Omega)
+    \equiv
+    \frac{1}{V}
+    \sum_i
+    \sigma_i^{(\mathrm{abs})}(\Omega).
+    \label{eq:AT_StateII_inverse_absorption_length}
+\end{equation}
+
+Its dimensions are
+\begin{equation}
+    \left[
+        \ell_{\mathrm{II}}^{-1}
+    \right]
+    =
+    \mathrm{m^{-1}}.
+\end{equation}
+
+Let
+\(u_\Omega(T)\)
+denote the thermal spectral energy density per unit angular frequency of the
+excitations participating in the capture process, and let
+\(v(\Omega)\)
+denote their propagation speed.
+
+The State-II capture power density is then
+\begin{equation}
+    \mathcal P_{\mathrm{II}}(T)
+    =
+    \int_0^\infty
+    v(\Omega)
+    \ell_{\mathrm{II}}^{-1}(\Omega)
+    u_\Omega(T)
+    \,\mathrm d\Omega.
+    \label{eq:AT_StateII_sink}
+\end{equation}
+
+Equation~\eqref{eq:AT_StateII_sink}
+has dimensions
+\(\mathrm{W\,m^{-3}}\).
+
+The sink strength therefore depends on the State-II population, effective
+capture geometry, and frequency-dependent interaction with the participating
+thermal modes rather than on State-II mass alone.
+
+The function
+\(\ell_{\mathrm{II}}^{-1}(\Omega)\)
+is not presently derived from the microscopic FCC-to-State-II phase-boundary
+dynamics.
+
+Accordingly, State-II structures constitute a candidate sink architecture,
+not a completed thermal sink law.
+
+In a gray-capture approximation over the thermally relevant frequency range,
+take
+\begin{equation}
+    \ell_{\mathrm{II}}^{-1}(\Omega)
+    \simeq
+    \ell_{\mathrm{II}}^{-1},
+    \qquad
+    v(\Omega)
+    \simeq
+    v_{\mathrm{th}}.
+    \label{eq:AT_gray_capture_approximation}
+\end{equation}
+
+Define the corresponding effective capture rate
+\begin{equation}
+    \Gamma_{\mathrm{II}}^{(\mathrm{cap})}
+    \equiv
+    v_{\mathrm{th}}
+    \ell_{\mathrm{II}}^{-1}.
+    \label{eq:AT_StateII_capture_rate}
+\end{equation}
+
+Then
+\begin{equation}
+    \mathcal P_{\mathrm{II}}
+    =
+    \Gamma_{\mathrm{II}}^{(\mathrm{cap})}
+    u_{\mathrm{th}}.
+    \label{eq:AT_gray_sink}
+\end{equation}
+
+The gray approximation does not derive either
+\(v_{\mathrm{th}}\)
+or
+\(\ell_{\mathrm{II}}\);
+it only reduces the frequency-dependent capture problem to an effective rate.
+
+The SC State-II configuration is not interpreted as an ordinary thermal
+reservoir.
+
+Energy captured from the thermalized Active Vacuum must ultimately appear as
+an explicitly identified change in structural energy, phase-boundary work,
+defect growth, or another finite-energy mechanical degree of freedom.
+
+No ordinary finite thermal inertia is assigned to the zero-inertia Hard
+Floor.
+
+Thus,
+\begin{equation}
+    \text{State-II capture}
+    \neq
+    \text{Hard-Floor thermalization}.
+    \label{eq:AT_StateII_HardFloor_distinction}
+\end{equation}
+
+\section{Absolute-Temperature Normalization Test}
+
+A thermal fixed-point equation becomes an absolute temperature prediction only
+if every quantity controlling its source, sink, and thermodynamic
+normalization is determined independently of the observed temperature.
+
+Suppose, for illustration, that the specified thermalized sector is described
+over the relevant temperature range by independent three-dimensional
+gapless linear bosonic branches indexed by \(j\).
+
+Their total thermal energy density is
+\begin{equation}
+    u_{\mathrm{th}}(T)
+    =
+    \frac{
+        \pi^2k_{\mathrm B}^4
+    }{
+        30\hbar^3
+    }
+    \left(
+        \sum_j
+        v_j^{-3}
+    \right)
+    T^4,
+    \label{eq:AT_total_linear_thermal_energy}
+\end{equation}
+where each independent physical polarization or branch is counted separately.
+
+If the electromagnetic field is included in the sum, its two transverse
+polarizations each contribute a branch with speed
+\(c_{\mathrm E}\).
+
+The corresponding volumetric heat capacity is
+\begin{equation}
+    C_V^{(\mathrm{th})}(T)
+    =
+    \frac{
+        2\pi^2k_{\mathrm B}^4
+    }{
+        15\hbar^3
+    }
+    \left(
+        \sum_j
+        v_j^{-3}
+    \right)
+    T^3.
+    \label{eq:AT_total_linear_heat_capacity}
+\end{equation}
+
+These expressions apply only within the low-temperature linear portions of
+the specified branches. If finite-band or nonlinear-dispersion effects are
+thermally sampled, the exact density of states must replace the linear
+continuum approximation.
+
+Now consider the gray State-II sink of
+Equation~\eqref{eq:AT_gray_sink}.
+
+Over an interval in which the thermal input
+\begin{equation}
+    \mathcal P_0
+    \equiv
+    \mathcal P_{\mathrm{cont}}
+    +
+    \mathcal P_{\mathrm{term}}
+    +
+    \mathcal P_{\mathrm{other}}
+    \label{eq:AT_constant_thermal_input}
+\end{equation}
+may be treated as approximately independent of \(T\),
+Equation~\eqref{eq:AT_thermal_balance}
+becomes
+\begin{equation}
+    \frac{
+        2\pi^2k_{\mathrm B}^4
+    }{
+        15\hbar^3
+    }
+    \left(
+        \sum_j
+        v_j^{-3}
+    \right)
+    T^3\dot T
+    =
+    \mathcal P_0
+    -
+    \Gamma_{\mathrm{II}}^{(\mathrm{cap})}
+    \frac{
+        \pi^2k_{\mathrm B}^4
+    }{
+        30\hbar^3
+    }
+    \left(
+        \sum_j
+        v_j^{-3}
+    \right)
+    T^4.
+    \label{eq:AT_gray_temperature_evolution}
+\end{equation}
+
+The positive stationary solution is
+\begin{equation}
+    T_{\mathrm{fp}}
+    =
+    \left[
+        \frac{
+            \mathcal P_0
+        }{
+            \Gamma_{\mathrm{II}}^{(\mathrm{cap})}
+            \dfrac{
+                \pi^2k_{\mathrm B}^4
+            }{
+                30\hbar^3
+            }
+            \left(
+                \displaystyle\sum_j
+                v_j^{-3}
+            \right)
+        }
+    \right]^{1/4}.
+    \label{eq:AT_temperature_fixed_point}
+\end{equation}
+
+If complete thermalization of continuously transferred coherent energy is
+independently established over the retained coarse-graining interval, one may
+specialize
+\begin{equation}
+    \mathcal P_{\mathrm{cont}}
+    =
+    \Gamma_{\mathrm D}
+    u_\gamma^{(\mathrm{coh})}.
+    \label{eq:AT_complete_thermalization_specialization}
+\end{equation}
+
+Without that additional condition,
+Equation~\eqref{eq:AT_complete_thermalization_specialization}
+is not imposed automatically.
+
+For constant
+\(\mathcal P_0\)
+and positive
+\(\Gamma_{\mathrm{II}}^{(\mathrm{cap})}\),
+linearization around
+\(T_{\mathrm{fp}}\)
+gives
+\begin{equation}
+    \delta\dot T
+    =
+    -
+    \Gamma_{\mathrm{II}}^{(\mathrm{cap})}
+    \delta T.
+    \label{eq:AT_temperature_stability}
+\end{equation}
+
+Thus the gray fixed point is linearly stable within the assumptions of the
+reduced source--sink model.
+
+Its numerical evaluation requires independent determination of
+\begin{equation}
+    \mathcal P_{\mathrm{cont}},
+    \qquad
+    \mathcal P_{\mathrm{term}},
+    \qquad
+    \mathcal P_{\mathrm{other}},
+    \qquad
+    \Gamma_{\mathrm{II}}^{(\mathrm{cap})},
+    \qquad
+    \{v_j\}.
+    \label{eq:AT_open_temperature_parameters}
+\end{equation}
+
+The branch speeds
+\(\{v_j\}\)
+determine the thermal state-counting normalization, while
+\(\Gamma_{\mathrm{II}}^{(\mathrm{cap})}\)
+sets the gray sink normalization.
+
+The source normalization is independent of both.
+
+The observed CMB temperature therefore remains a downstream comparison rather
+than an upstream condition used to determine any quantity in
+Equation~\eqref{eq:AT_open_temperature_parameters}.
+
+In particular,
+\begin{equation}
+    R_{\mathrm U}
+    =
+    \frac{
+        c_{\mathrm E}
+    }{
+        \Gamma_{\mathrm D}
+    }
+\end{equation}
+does not by itself supply the thermal energy-density normalization.
+
+More generally, dimensional combinations of
+\(\Gamma_{\mathrm D}\),
+\(R_{\mathrm U}\),
+\(c_{\mathrm E}\),
+\(\hbar\),
+and
+\(k_{\mathrm B}\)
+constitute a physical temperature prediction only when a microscopic
+mechanism selects the corresponding combination.
+
+A second normalization result follows if both input and sink powers are
+proportional to the same thermal energy density.
+
+Suppose
+\begin{equation}
+    \mathcal P_{\mathrm{in}}
+    =
+    \Gamma_{\mathrm{in}}
+    u_{\mathrm{th}},
+    \qquad
+    \mathcal P_{\mathrm{sink}}
+    =
+    \Gamma_{\mathrm{sink}}
+    u_{\mathrm{th}}.
+    \label{eq:AT_proportional_rates}
+\end{equation}
+
+For a nonzero thermal state, stationarity requires only
+\begin{equation}
+    \Gamma_{\mathrm{in}}
+    =
+    \Gamma_{\mathrm{sink}}.
+    \label{eq:AT_proportional_rate_equality}
+\end{equation}
+
+The temperature cancels.
+
+Therefore,
+\begin{equation}
+    \mathcal P_{\mathrm{in}}
+    \propto
+    u_{\mathrm{th}},
+    \qquad
+    \mathcal P_{\mathrm{sink}}
+    \propto
+    u_{\mathrm{th}}
+    \not\Rightarrow
+    \text{a unique nonzero thermal temperature}.
+    \label{eq:AT_temperature_normalization_no_go}
+\end{equation}
+
+A unique absolute temperature requires an independently normalized energy
+scale, state-counting coefficient, nonlinear source or sink dependence, or
+boundary condition that survives the stationary balance.
+
+The same principle applies to the closed Fossil relation in
+Equation~\eqref{eq:AT_fossil_temperature_general}:
+energy conservation determines
+\(T_{\mathrm{eq}}\)
+once the initial photon state, initial receiver state, and receiver
+thermodynamics have been independently specified.
+
+The conditional interface result in
+Equation~\eqref{eq:AT_interface_temperature_numeric}
+is a particular realization of this general structure.
+
+Its numerical value becomes a physical prediction if the interface topology,
+three-dimensional mode support, stiffness, gap, primordial loading, and
+thermalizing interaction are independently established.
+
+Accordingly, the general closed Fossil equilibrium equation, the
+finite-interface specialization, and the open driven fixed-point equation
+provide complementary routes toward an absolute CMB temperature, with the
+remaining normalization supplied by their corresponding microscopic
+completion.
+
+
+\section{Temperature Evolution Seen by Local Matter}
+
+The local thermodynamic state of the radiation field and the temperature
+inferred by an astronomical matter system are related but distinct
+quantities.
+
+The thermal equations above describe the state of a specified local radiation
+and Active-Vacuum subsystem.
+
+A temperature measured at another event additionally depends on propagation
+history, relative motion, endpoint gravitational loading, angular radiation
+distribution, and the matter--radiation interaction through which the
+spectrum is sampled.
+
+For stationary gravitational conditions and the factorized propagation
+regime, Equation~\eqref{eq:AT_redshift_hierarchy} gives
+\begin{equation}
+    \boxed{
+    1+z_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm{grav}})
+    (1+z_{\mathrm D}).
+    }
+\end{equation}
+
+The gravity-neutral endpoint limit is recovered when
+\begin{equation}
+    z_{\mathrm{grav}}
+    \rightarrow
+    0.
+\end{equation}
+
+A completed TFT CMB construction must therefore derive a local
+matter--radiation measurement relation of the schematic form
+\begin{equation}
+    T_{\mathrm{meas}}
+    =
+    T_{\mathrm{rad}}
+    \left(
+        \mathbf{x},
+        t,
+        v_{\mathrm{ext}},
+        \alpha_{\mathrm G},
+        \text{local radiation state},
+        \text{local matter response}
+    \right).
+    \label{eq:AT_temperature_observer_map}
+\end{equation}
+
+Equation~\eqref{eq:AT_temperature_observer_map}
+specifies the required dependencies; it is not itself a constitutive
+temperature law.
+
+Relative motion through an isotropic thermal field generally produces an
+angularly dependent observed distribution rather than a single
+direction-independent temperature obtained by multiplying the rest-frame
+temperature by a one-dimensional Doppler factor.
+
+Therefore,
+\begin{equation}
+    T_{\mathrm{meas}}
+    =
+    T_{\mathrm{meas}}
+    \left(
+        z_{\mathrm{obs}}
+    \right)
+\end{equation}
+cannot be assumed as an upstream thermal closure.
+
+The complete observer construction must distinguish the local thermodynamic
+radiation state, the propagation contribution
+\(z_{\mathrm D}\),
+the relative-motion contribution
+\(z_{\mathrm{kin}}\),
+the endpoint gravitational contribution
+\(z_{\mathrm{grav}}\),
+the angular radiation distribution in the matter frame, and the microscopic
+matter--radiation response.
+
+Consequently,
+\begin{equation}
+    T_{\mathrm{meas}}(z_{\mathrm{obs}})
+    \text{ is a downstream observational map,
+    not an upstream thermal closure.}
+    \label{eq:AT_temperature_redshift_status}
+\end{equation}
+
+The present appendix does not derive the complete observer map.
+
+Measurements of CMB temperature at nonzero astronomical redshift therefore
+remain independent empirical tests of the completed TFT thermal and
+propagation sectors.
+
+
+\section{Structural Constraints and Logical Status}
+
+The preceding construction defines a thermodynamically consistent framework
+for testing microscopic CMB completions.
+
+The following constraints distinguish general results established by the
+thermal analysis from properties specific to candidate receiving mechanisms.
+
+
+\subsection{Coherent Propagation and Thermal Equilibration}
+
+The coherent scale-transfer branch preserves the identity and photon number
+of the surviving carrier, whereas a zero-chemical-potential Planck state
+requires a distinct photon-number-changing thermal interaction.
+
+Therefore,
+\begin{equation}
+    \text{coherent scale transfer}
+    \not\Rightarrow
+    \text{thermal Planck evolution}.
+    \label{eq:AT_constraint_scale_only}
+\end{equation}
+
+The thermal completion requires microscopic detailed balance together with
+an interaction satisfying
+\begin{equation}
+    \left[
+        \hat H_{\mathrm{th}},
+        \hat N_{\mathrm{ph}}
+    \right]
+    \neq
+    0.
+\end{equation}
+
+
+\subsection{Finite Modes, Bulk Conversion, and Interface Dimensionality}
+
+A finite set of conservative undamped modes can exchange energy reversibly
+with a coherent photon but does not by itself supply the irreversible
+continuum required for a nonzero constant low-frequency relaxation rate.
+
+Thus,
+\begin{equation}
+    \text{finite conservative mode set}
+    \not\Rightarrow
+    \text{irreversible receiving continuum}.
+    \label{eq:AT_constraint_finite_receiver}
+\end{equation}
+
+A bulk coordinate distinguishing inequivalent stable structural phases is
+also not generically gapless.
+
+Near a stable configuration,
+\begin{equation}
+    U_{\mathrm{conv}}(\xi)
+    =
+    U_{\mathrm{conv}}(\xi_0)
+    +
+    \frac{1}{2}
+    K_{\mathrm{conv}}
+    \left(
+        \xi-\xi_0
+    \right)^2
+    +
+    \cdots,
+    \qquad
+    K_{\mathrm{conv}}>0.
+    \label{eq:AT_conversion_potential}
+\end{equation}
+
+For finite generalized inertia
+\(I_\xi>0\),
+\begin{equation}
+    \Omega_{\mathrm{conv},0}^{\,2}
+    =
+    \frac{
+        K_{\mathrm{conv}}
+    }{
+        I_\xi
+    }
+    >
+    0.
+    \label{eq:AT_conversion_gap}
+\end{equation}
+
+A bulk FCC--SC conversion coordinate therefore does not automatically provide
+the gapless branch required by the massless receiver approximation.
+
+A literal translating FCC--SC phase boundary is different. Its translation
+may be gapless, but it is a two-dimensional interface excitation.
+
+For a two-dimensional gapless linear branch,
+\begin{equation}
+    \frac{
+        \mathcal D_{\mathrm{wall}}(\Omega)
+    }{
+        \mathcal A_{\mathrm{wall}}
+    }
+    \propto
+    \Omega,
+\end{equation}
+and its thermal energy per physical interface area scales as
+\begin{equation}
+    \frac{
+        U_{\mathrm{wall}}
+    }{
+        \mathcal A_{\mathrm{wall}}
+    }
+    \propto
+    T^3.
+    \label{eq:AT_wall_thermal_scaling}
+\end{equation}
+
+A volumetric contribution then requires an independently derived
+interface-area density
+\(
+\mathcal A_{\mathrm{wall}}/V
+\).
+
+The three-dimensional interface specialization developed above is therefore
+not identified with a single geometrical wall translation. Its volumetric
+state-counting interpretation refers instead to the proposed finite
+three-dimensional active-to-latent field.
+
+
+\subsection{Thermodynamic State Counting versus Irreversible Coupling}
+
+The central microscopic separation established in this appendix is
+\begin{equation}
+    \mathcal D_{\mathrm{AV}}(\Omega)
+    \not\equiv
+    \mathcal S_{\gamma\mathrm{AV}}(\Omega).
+    \label{eq:AT_constraint_DOS_projection}
+\end{equation}
+
+A three-dimensional gapless linear branch may possess
+\begin{equation}
+    u(T)\propto T^4
+\end{equation}
+without supplying the Ohmic carrier projection required for a constant
+low-frequency damping coefficient.
+
+The reduced FCC internal phase sector illustrates this distinction.
+
+Because its retained contact mechanics depend on phase differences, the
+reduced phase action admits a uniform phase-shift symmetry. If a finite
+kinetic metric exists, this provides a conditional route to a
+three-dimensional gapless collective mode.
+
+However, for the regular local derivative photon--phase couplings examined
+in the microscopic analysis, canonical normalization gives the infrared
+scaling
+\begin{equation}
+    \left|
+        \langle f|
+        H_{\gamma\phi}
+        |i\rangle
+    \right|^2
+    \propto
+    \Omega,
+\end{equation}
+while
+\begin{equation}
+    \frac{
+        \mathcal D_\phi(\Omega)
+    }{
+        V
+    }
+    \propto
+    \Omega^2.
+\end{equation}
+
+Hence
+\begin{equation}
+    \mathcal S_{\gamma\phi}(\Omega)
+    \propto
+    \Omega^3
+\end{equation}
+for this regular local derivative class, rather than the required Ohmic
+scaling proportional to
+\(\Omega\).
+
+Therefore,
+\begin{equation}
+    T^4\text{ thermal energy density}
+    \not\Rightarrow
+    \text{Ohmic photon projection}.
+    \label{eq:AT_constraint_T4_Ohmic}
+\end{equation}
+
+This leaves open independently derived collective, critical, nonlocal, or
+other nonanalytic couplings.
+
+
+\subsection{Extended Continua and Infrared Scales}
+
+A semi-infinite finite-inertia continuum with outgoing-wave boundary
+conditions can conditionally produce an Ohmic endpoint response.
+
+This dynamical result does not establish the required thermodynamic state
+counting.
+
+A literal one-dimensional linear bosonic continuum has
+\begin{equation}
+    \frac{U_{\mathrm{1D}}}{L}
+    \propto
+    T^2,
+\end{equation}
+rather than a three-dimensional
+\(T^4\)
+energy-density law.
+
+Moreover, the scale-depth coordinate appearing in the endpoint construction
+is not postulated as an additional ordinary Euclidean spatial dimension.
+
+Therefore,
+\begin{equation}
+    \text{Ohmic endpoint dynamics}
+    \not\Rightarrow
+    \text{a derived three-dimensional thermal reservoir}.
+    \label{eq:AT_constraint_extended_continuum}
+\end{equation}
+
+A separate constraint applies to the origin of the required infrared scale.
+
+Regular finite-dimensional harmonic hybridization can produce mode mixing
+and avoided crossings but does not by itself generate a parametrically new
+low-frequency scale.
+
+Thus,
+\begin{equation}
+    \text{regular finite-dimensional harmonic hybridization}
+    \not\Rightarrow
+    \text{an independently generated infrared scale}.
+    \label{eq:AT_constraint_hybridization}
+\end{equation}
+
+The interface result derived above is consistent with this restriction:
+\(r_{\mathrm{QG}}\)
+may normalize the candidate interface density and inertia, but
+\(c_{\mathrm E}/r_{\mathrm{QG}}\)
+is far too large to supply the required thermal infrared scale.
+
+A sufficiently soft receiver must therefore obtain its low-frequency
+structure from a collective mechanism, symmetry, criticality, or another
+independently established infrared origin.
+
+
+\subsection{Energy Accounting and Primordial Loading}
+
+The coherent energy ledger requires continuously transferred energy and any
+terminal remainder to remain in the complete accounting.
+
+When
+\begin{equation}
+    E_{\mathrm{emit}}
+    \gg
+    E_{\mathrm{term}},
+\end{equation}
+the continuously transferred contribution dominates.
+
+Therefore,
+\begin{equation}
+    \text{terminal coherence loss alone}
+    \not\Rightarrow
+    \text{an energy-complete thermal source}.
+    \label{eq:AT_constraint_terminal_only}
+\end{equation}
+
+The Fossil equilibrium relation likewise requires an independently specified
+initial receiving state.
+
+As established in
+Equation~\eqref{eq:AT_small_exposure_not_cold},
+a small pre-transparency relaxation exposure,
+\begin{equation}
+    \Gamma_{\mathrm D}t_{\mathrm a}
+    \ll
+    1,
+\end{equation}
+does not imply
+\begin{equation}
+    u_{\mathrm{rec},0}
+    \simeq
+    0.
+\end{equation}
+
+The actual receiver loading must follow from the catastrophic-decompression,
+formation, and annealing history.
+
+
+\subsection{Absolute-Temperature Constraint}
+
+Neither energy conservation nor the existence of a stable thermal state alone
+sets the absolute temperature without specifying the physical state being
+equilibrated.
+
+For the closed Fossil system,
+\(T_{\mathrm{eq}}\)
+is determined once the initial photon state, initial receiver state, and
+receiver thermodynamics are specified.
+
+For the finite-interface specialization, the numerical endpoint additionally
+depends on the topology, dimensional support, stiffness, gap, primordial
+loading, and photon coupling.
+
+For the open driven system,
+\(T_{\mathrm{fp}}\)
+is determined once the source, thermodynamic normalization, and sink law are
+specified.
+
+Consequently,
+\begin{equation}
+    \text{energy conservation}
+    +
+    \text{thermal stability}
+    \not\Rightarrow
+    \text{a unique absolute temperature without microscopic normalization}.
+    \label{eq:AT_constraint_absolute_temperature}
+\end{equation}
+
+The observed CMB temperature remains the downstream empirical comparison.
+
+
+\section{Falsification Conditions}
+
+A proposed microscopic CMB completion fails in the role assigned to it if
+one or more necessary conditions below are violated:
+
+\begin{enumerate}
+
+    \item
+    the proposed receiving sector lacks the low-frequency continuum required
+    by the retained irreversible photon response;
+
+    \item
+    its thermodynamic density of states cannot be derived from a physical
+    dispersion and state-counting measure;
+
+    \item
+    its carrier-projected spectral measure does not provide the required
+    low-frequency irreversible response;
+
+    \item
+    its microscopic transition kernel cannot reproduce the first-moment
+    condition in
+    Equation~\eqref{eq:AT_drift_constraint};
+
+    \item
+    higher transfer moments produce unacceptable frequency diffusion,
+    spectral broadening, angular diffusion, polarization conversion, or
+    secondary radiation;
+
+    \item
+    the required Planck-restoring interaction conserves photon number and
+    therefore cannot relax the photon chemical potential to zero;
+
+    \item
+    the number-changing interaction produces unacceptable opacity or
+    scattering for surviving coherent astronomical photons;
+
+    \item
+    the thermalization time is too long to maintain the required thermal
+    spectrum;
+
+    \item
+    the proposed receiver is not independent of an already counted photon or
+    FCC degree of freedom;
+
+    \item
+    a two-dimensional interface mode is assigned a three-dimensional
+    thermodynamic state count without an independently derived volumetric
+    multiplicity;
+
+    \item
+    the interface gap is too large for the gapless approximation used in
+    Equation~\eqref{eq:AT_interface_temperature_formula};
+
+    \item
+    the stiffness or inertia assumptions used in
+    Equation~\eqref{eq:AT_interface_speed}
+    cannot be obtained from the parent active-to-latent mechanics;
+
+    \item
+    catastrophic-decompression loading invalidates the cold or weakly
+    populated receiver condition;
+
+    \item
+    the thermal construction requires ordinary finite thermal inertia to be
+    assigned to the Hard Floor;
+
+    \item
+    an observed CMB frequency or temperature must be inserted upstream to
+    determine
+    \(F_{\mathrm I}\),
+    \(v_{\mathrm I}\),
+    \(\Omega_0\),
+    \(T_{\mathrm I,a}\),
+    \(\mathcal P_{\gamma\mathrm{rec}}\),
+    \(E_{\mathrm{term}}\),
+    \(\Gamma_{\mathrm{II}}^{(\mathrm{cap})}\),
+    or another unresolved microscopic parameter;
+
+    \item
+    after all microscopic receiver, loading, coupling, source, and sink
+    quantities have been independently fixed, the resulting spectrum or
+    temperature disagrees with observation;
+
+    \item
+    or the completed matter--radiation observer map fails to reproduce
+    theory-independent measurements of the radiation temperature at nonzero
+    astronomical redshift.
+
+\end{enumerate}
+
+Failure of one proposed receiving mechanism rejects that microscopic closure;
+it does not determine the status of the independently specified TFT
+propagation, gravity, or structural sectors.
+
+
+\section{Present Completion Status}
+
+The present TFT CMB construction has the following status:
+
+\begin{enumerate}
+
+    \item
+    \textbf{Coherent photon transport:}
+    inherited from
+    Appendices~\ref{app:photon_dispersion_relaxation}
+    and~\ref{app:vacuumdamping_cosmicredshift}.
+    A nonzero constant
+    \(\Gamma_{\mathrm D}\)
+    requires an independently established carrier-projected irreversible
+    continuum.
+
+    \item
+    \textbf{Quantum-consistent energy transfer:}
+    complete quantized receiving events can reproduce a smooth
+    coarse-grained drift through their first statistical moment.
+    The complete microscopic transition kernel remains to be specified.
+
+    \item
+    \textbf{Thermodynamic state counting:}
+    for independently established three-dimensional gapless linear branches,
+    \[
+        \mathcal D/V\propto\Omega^2,
+        \qquad
+        u\propto T^4,
+        \qquad
+        C_V\propto T^3.
+    \]
+
+    \item
+    \textbf{Dissipative projection:}
+    the thermodynamic density of states and the carrier-projected dissipative
+    spectrum are distinct physical objects.
+
+    \item
+    \textbf{Planck spectrum:}
+    a zero-chemical-potential Planck state follows conditionally from a
+    genuine photon-number-changing interaction satisfying detailed balance.
+
+    \item
+    \textbf{Fossil initial state:}
+    catastrophic decompression provides the proposed origin of the primordial
+    radiation, while
+    \(T_{\mathrm a}\sim3000~{\rm K}\)
+    is retained as the post-annealing thermal photon boundary.
+
+    \item
+    \textbf{Closed Fossil equilibrium:}
+    Equation~\eqref{eq:AT_fossil_temperature_general}
+    gives the common equilibrium temperature once the initial photon state,
+    initial receiver state, and receiver thermodynamics are independently
+    specified.
+
+    \item
+    \textbf{Finite active-to-latent interface:}
+    the conditional assignment
+    \(F_{\mathrm I}=1\)
+    together with the proposed stiffness inheritance gives
+    \[
+        v_{\mathrm I}
+        \simeq
+        20.95~{\rm km\,s^{-1}}.
+    \]
+    If the same receiver is a distinct three-dimensional gapless branch with
+    sufficiently small initial loading, the corresponding unrounded TFT
+    quantities give
+    \[
+        T_{\mathrm f}
+        \simeq
+        2.726~{\rm K}.
+    \]
+    This provides an illustrative conditional consistency test of the
+    finite-interface realization.
+
+    \item
+    \textbf{Interface infrared structure:}
+    \(r_{\mathrm{QG}}\)
+    can normalize the candidate interface inertia but cannot by itself
+    generate the required low-frequency scale.
+
+    \item
+    \textbf{Internal phase branch:}
+    phase-difference symmetry provides a conditional route to a gapless
+    three-dimensional collective branch if finite phase inertia exists, but
+    the regular local derivative coupling examined here is super-Ohmic and
+    does not close the constant-\(\Gamma_{\mathrm D}\) problem.
+
+    \item
+    \textbf{Primordial receiver loading:}
+    remains to be obtained from the decompression and annealing history.
+
+    \item
+    \textbf{Open thermal sink:}
+    State-II structures provide a candidate capture architecture, while their
+    microscopic absorption law and
+    \(\Gamma_{\mathrm{II}}^{(\mathrm{cap})}\)
+    remain to be derived.
+
+    \item
+    \textbf{Driven thermal fixed point:}
+    \(T_{\mathrm{fp}}\)
+    is conditionally determined once the thermal source, state-counting
+    normalization, and sink law are independently specified.
+
+    \item
+    \textbf{Absolute CMB temperature:}
+    the general energy-conserving Fossil closure is established conditionally,
+    while the remaining microscopic receiver, loading, and thermalization
+    structure determines whether a unique absolute temperature follows.
+
+    \item
+    \textbf{Astronomical observer map:}
+    the relation between the local thermal state and
+    \(T_{\mathrm{meas}}\)
+    remains to be derived.
+
+\end{enumerate}
+
+The compact status is
+\begin{equation}
+    \begin{aligned}
+        &\text{Fossil-radiation origin: proposed},
+        \\
+        &\text{quantized receiving architecture: mechanically admissible},
+        \\
+        &\text{thermal state counting: conditional},
+        \\
+        &\text{closed Fossil equilibrium: conditionally derived},
+        \\
+        &\text{finite-interface }2.726~{\rm K}
+        \text{ endpoint: illustrative conditional specialization},
+        \\
+        &\text{Planck equilibrium: conditional on number-changing
+        detailed balance},
+        \\
+        &\text{microscopic irreversible coupling: open},
+        \\
+        &\text{interface gap and primordial loading: open},
+        \\
+        &\text{absolute CMB temperature: not presently derived}.
+    \end{aligned}
+    \label{eq:AT_status_summary}
+\end{equation}
+
+
+\section{Summary}
+
+Appendix AT establishes that three microscopic objects relevant to CMB
+completion must remain distinct:
+\begin{equation}
+    \text{thermodynamic density of states}
+    \;\neq\;
+    \text{carrier-projected dissipative spectrum}
+    \;\neq\;
+    \text{thermal transfer kernel}.
+    \label{eq:AT_summary_three_objects}
+\end{equation}
+
+For specified three-dimensional gapless linear receiving branches,
+\begin{equation}
+    \frac{
+        \mathcal D_{\mathrm{AV}}(\Omega)
+    }{
+        V
+    }
+    =
+    \frac{
+        \Omega^2
+    }{
+        2\pi^2
+    }
+    \sum_j
+    v_j^{-3},
+\end{equation}
+and
+\begin{equation}
+    u_{\mathrm{rec}}(T)
+    =
+    \frac{
+        \pi^2k_{\mathrm B}^4
+    }{
+        30\hbar^3
+    }
+    \left(
+        \sum_j
+        v_j^{-3}
+    \right)
+    T^4.
+    \label{eq:AT_summary_receiver_thermodynamics}
+\end{equation}
+
+For a closed Fossil photon--receiver subsystem,
+\begin{equation}
+    \boxed{
+    T_{\mathrm{eq}}^4
+    =
+    \frac{
+        2c_{\mathrm E}^{-3}
+        T_{\gamma,0}^4
+        +
+        \left(
+            \displaystyle\sum_j
+            v_j^{-3}
+        \right)
+        T_{\mathrm{rec},0}^4
+    }{
+        2c_{\mathrm E}^{-3}
+        +
+        \displaystyle\sum_j
+        v_j^{-3}
+    }.
+    }
+    \label{eq:AT_summary_fossil_temperature}
+\end{equation}
+
+This relation is the central energy-conserving Fossil endpoint for
+independently specified initial states and receiving thermodynamics.
+
+The finite active-to-latent construction provides a particular conditional
+specialization.
+
+For
+\begin{equation}
+    F_{\mathrm I}=1,
+\end{equation}
+the proposed topology and stiffness inheritance give
+\begin{equation}
+    v_{\mathrm I}
+    \simeq
+    20.95~{\rm km\,s^{-1}},
+\end{equation}
+and the corresponding scalar thermodynamic weighting is
+\begin{equation}
+    \frac{
+        a_{\mathrm I}
+    }{
+        a_\gamma
+    }
+    \simeq
+    1.47\times10^{12}.
+\end{equation}
+
+If the interface receiver is a distinct three-dimensional gapless branch with
+sufficiently small primordial loading, then
+\begin{equation}
+    T_{\mathrm f}
+    =
+    T_{\mathrm a}
+    \left(
+        1+
+        \frac{
+            a_{\mathrm I}
+        }{
+            a_\gamma
+        }
+    \right)^{-1/4}
+\end{equation}
+gives, using the unrounded TFT microscopic quantities and
+\(T_{\mathrm a}=3000~{\rm K}\),
+\begin{equation}
+    T_{\mathrm f}
+    \simeq
+    2.726~{\rm K}.
+\end{equation}
+
+The measured present CMB temperature is not used to determine
+\(F_{\mathrm I}\),
+\(v_{\mathrm I}\),
+or the thermal coefficient in this calculation.
+
+This near-\(2.726~{\rm K}\) value is therefore retained as an illustrative
+conditional consistency result of the finite-interface specialization.
+
+The convergence radius
+\(r_{\mathrm{QG}}\)
+enters this construction as a microscopic density and inertia normalization,
+not as the direct source of the infrared thermal frequency.
+
+A Planck electromagnetic state additionally requires
+\begin{equation}
+    \frac{
+        \Gamma_{\mathrm{em}}
+    }{
+        \Gamma_{\mathrm{abs}}
+    }
+    =
+    \exp
+    \left(
+        -
+        \frac{
+            \hbar\omega
+        }{
+            k_{\mathrm B}T
+        }
+    \right),
+    \label{eq:AT_summary_detailed_balance}
+\end{equation}
+together with photon-number-changing dynamics.
+
+For an open thermal subsystem,
+\begin{equation}
+    C_V^{(\mathrm{th})}(T)\dot T
+    =
+    \mathcal P_{\mathrm{in}}
+    -
+    \mathcal P_{\mathrm{sink}}.
+    \label{eq:AT_summary_open_balance}
+\end{equation}
+
+The resulting driven fixed-point temperature
+\(T_{\mathrm{fp}}\)
+is physically distinct from the closed Fossil equilibrium temperature
+\(T_{\mathrm{eq}}\).
+
+The Hard Floor retains its role as the zero-inertia constraint,
+phase-reference, and information-memory sector. Finite thermal state
+counting, heat capacity, and irreversible dissipation reside in finite-energy
+Active-Vacuum, active-interface, radiative, or structural degrees of freedom.
+
+The resulting hierarchy is
+\begin{equation}
+    \begin{aligned}
+        \text{catastrophic decompression}
+        &\longrightarrow
+        \text{post-annealing fossil radiation},
+        \\
+        \text{coherent photon transport}
+        &\longrightarrow
+        \text{finite-energy receiving modes},
+        \\
+        \text{receiving modes}
+        &\rightleftharpoons
+        \text{thermal photon field},
+        \\
+        \text{thermalized sector}
+        &\longrightarrow
+        \text{macroscopic thermal balance}.
+    \end{aligned}
+    \label{eq:AT_summary_hierarchy}
+\end{equation}
+
+Appendix AT therefore supplies an energy-conserving Fossil-CMB framework and
+a specific conditional finite-interface specialization without using the
+measured CMB temperature as an upstream calibration.
+
+The remaining microscopic bridges are the identity and three-dimensional
+support of the receiving interface field, its stiffness and infrared gap, its
+primordial loading, the photon--receiver thermalization interaction, the
+carrier-projected irreversible continuum required for nonzero
+\(\Gamma_{\mathrm D}\), and the final matter--radiation observer map.
+
+The general energy-conserving two-sector endpoint is the principal
+thermodynamic result retained from the Fossil-CMB analysis. The
+near-\(2.726~{\rm K}\) interface endpoint is retained as a specific conditional
+specialization to be revisited when the corresponding microscopic
+Active-Vacuum interface dynamics are developed.
+
+The observed CMB spectrum, absolute temperature, spectral-distortion limits,
+and temperature measurements at nonzero astronomical redshift remain
+downstream empirical tests of the completed TFT thermal sector rather than
+inputs used to determine its unresolved microscopic parameters.

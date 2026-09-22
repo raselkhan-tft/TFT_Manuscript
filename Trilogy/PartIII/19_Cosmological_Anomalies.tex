@@ -1,346 +1,702 @@
 \chapter{Resolution of Cosmological Anomalies: Dark Energy, Dark Matter, and the Hubble Tension}
 \label{chap:cosmological_anomalies}
 
-\section{The Hubble Artifact and the Viscous Cosmic Horizon}
+
+\section{The Hubble Artifact and the Photon Energy-Relaxation Length}
 \label{sec:hubble_artifact}
 
-When Edwin Hubble discovered the linear relationship between redshift and distance, standard physics mathematically interpreted this apparent distance-redshift scaling as a kinematic recessional velocity ($v = H_0 d$). Under Tension Field Theory (TFT), the observed Hubble parameter ($H_0^{(\mathrm{obs})}$) is not a rate of spatial metric expansion; it serves as the empirical calibration for the Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}^{(\mathrm{cal})} = H_0^{(\mathrm{obs})}$).
+When Edwin Hubble discovered the relationship between redshift and distance, standard cosmology interpreted the observed distance--redshift slope as evidence for the expansion of space. Tension Field Theory (TFT) assigns a different mechanical meaning to this observation. As established in \hyperref[chap:cosmic_redshift]{Chapter~\ref*{chap:cosmic_redshift}}, the measured low-redshift slope contains the combined projection of source--observer motion, gravitational endpoint loading, and coherent photon scale relaxation through the Active Vacuum.
 
-This exposes a conceptual divergence regarding both the ``Age of the Universe'' and the boundary of the observable cosmos. In standard $\Lambda$CDM cosmology, $1/H_0$ represents the Hubble time, while the age of the universe (calculated by Planck as $\approx 13.8$ Gyr) is obtained from the integrated expansion history, not simply by inversion.
-
-In TFT, because $H_0^{(\mathrm{obs})}$ calibrates the vacuum relaxation rate, its inverse ($t_{\mathrm{rel}} \equiv \frac{1}{\Gamma_{\mathrm{D}}^{(\mathrm{cal})}} = \frac{1}{H_0^{(\mathrm{obs})}}$) serves strictly as the characteristic vacuum relaxation time. While the Euclidean SGF lattice provides a pre-existing, vast coordinate geometry, the baryonic matter phase originated from a definitive thermodynamic nucleation event (The Big Rupture). This mechanical decoupling rigorously insulates the underlying spatial extent of the vacuum from the finite thermodynamic age of its material contents.
-
-When we convert this temporal decay into a spatial coordinate distance using the wave speed of the vacuum ($R_{\mathrm{U}} = \frac{c_{\mathrm{E}}}{H_0^{(\mathrm{obs})}}$), it yields a characteristic distance of $\approx 13.39$ billion light-years. To understand the physical reality of this distance, we apply the visco-elastic energy-relaxation law derived in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}, which dictates that coherent wave energy decays exponentially due to lattice hysteresis:
+The observational Hubble parameter therefore characterizes a measured spectral-shift gradient rather than a fundamental expansion rate. In the relaxation-dominated low-redshift reference branch, where systematic kinematic and gravitational gradients are negligible, the Chapter~\ref*{chap:cosmic_redshift} relation reduces to
 \begin{equation}
-    E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\frac{\Gamma_{\mathrm{D}}^{(\mathrm{cal})} x}{c_{\mathrm{E}}}}
+    \Gamma_{\mathrm D}
+    \simeq
+    H_0^{(\mathrm{slope})}.
 \end{equation}
 
-Within the achromatic coherent branch, if a transverse wave travels exactly the characteristic distance $R_{\mathrm{U}}$, we substitute $x = \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}^{(\mathrm{cal})}}$ into the exponent:
+Using the local observational reference value,
 \begin{equation}
-    E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\frac{\Gamma_{\mathrm{D}}^{(\mathrm{cal})}}{c_{\mathrm{E}}}
-    \left(\frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}^{(\mathrm{cal})}}\right)}
+    H_0^{(\mathrm{obs})}
+    \simeq
+    73.04\ \mathrm{km\,s^{-1}\,Mpc^{-1}},
 \end{equation}
+this specialization defines the characteristic relaxation time
 \begin{equation}
-    E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-1} \approx 0.3678 E_{\mathrm{emit}}
+    t_{\mathrm{rel}}
+    \equiv
+    \frac{1}{\Gamma_{\mathrm D}}
+    \simeq
+    \frac{1}{H_0^{(\mathrm{obs})}}
+    \approx
+    13.39\ \mathrm{Gyr}.
 \end{equation}
 
-This mathematical derivation establishes that $R_{\mathrm{U}}$ is exactly the distance required for the visco-elastic relaxation of the lattice to transfer approximately $63.2\%$ ($1-1/e$) of the initial coherent carrier energy into the vacuum reservoir. Any additional angular dilution causing distant structures to geometrically fade remains conditional on the transverse geometric closure proposed in \hyperref[chap:cosmic_redshift]{Chapter~\ref*{chap:cosmic_redshift}}.
+This timescale is the coherent-relaxation clock of the Active Vacuum. It is distinct from the thermodynamic age of the present baryonic phase, whose chronology begins with Catastrophic Decompression.
+
+The corresponding coherent-relaxation length is the Photon Energy-Relaxation Length,
+\begin{equation}
+    R_{\mathrm U}
+    \equiv
+    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}}.
+\end{equation}
+
+Under the same low-redshift reference specialization,
+\begin{equation}
+    R_{\mathrm U}
+    \simeq
+    \frac{c_{\mathrm E}}{H_0^{(\mathrm{obs})}}
+    \simeq
+    1.2665\times10^{26}\ \mathrm{m}
+    \simeq
+    4104.5\ \mathrm{Mpc}.
+\end{equation}
+
+To understand the mechanical meaning of this distance, consider the coherent-action-preserving photon-relaxation law developed in
+\hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}:
+\begin{equation}
+    E_{\mathrm{obs}}
+    =
+    E_{\mathrm{emit}}
+    \exp\left(
+        -\frac{\Gamma_{\mathrm D}x}{c_{\mathrm E}}
+    \right)
+\end{equation}
+in the gravity-neutral, constant-rate limit.
+
+At
+\begin{equation}
+    x
+    =
+    R_{\mathrm U}
+    =
+    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}},
+\end{equation}
+the exponent becomes unity,
+\begin{equation}
+    E_{\mathrm{obs}}
+    =
+    E_{\mathrm{emit}}e^{-1}
+    \approx
+    0.3679E_{\mathrm{emit}}.
+\end{equation}
+
+Thus $R_{\mathrm U}$ is the one-$e$-fold coherent-relaxation distance: after one such path length, approximately $63.2\%$ of the original coherent carrier energy has been transferred out of the surviving photon branch into dynamically accessible finite-energy receiving degrees of freedom.
 
 \vspace{0.5em}
+
 \phantomsection
 \label{sec:kinematic_projection_artifact}
+
 \noindent\textbf{The Kinematic Projection Artifact}
-\newline
-This derivation exposes the mathematical distinction at the heart of the standard model's Hubble Sphere. In standard FLRW cosmology, the Hubble Sphere ($c/H_0$) is utilized as a kinematic Hubble-radius scale, not a material or absolute causal wall.
 
-Within that kinematic interpretation, coordinate recession reaches the speed of light at $c/H_0$ and exceeds it beyond this scale. In TFT, the distance $\frac{c_{\mathrm{E}}}{H_0^{(\mathrm{obs})}}$ is not a kinematic velocity threshold. It is strictly the characteristic relaxation scale where the fractional vacuum-relaxation exponent reaches exactly $-1$.
+In standard FLRW cosmology, the Hubble radius $c/H_0$ is the distance at which the formal recession speed $H_0d$ reaches $c$. It is a kinematic scale of the expanding coordinate system rather than a material wall.
 
-Therefore, the $\sim 13.39$ Gyr timescale associated with the local $H_0^{(\mathrm{obs})}$ calibration is reinterpreted in TFT as the characteristic relaxation time $t_{\mathrm{rel}}$. This is distinct from the $\approx 13.8$ Gyr age inferred within $\Lambda$CDM from the integrated expansion history. Light can propagate significantly beyond one $R_{\mathrm{U}}$, continuing its exponential coherent-energy relaxation; equivalently, the inferred TFT coordinate distance grows logarithmically with $(1+z)$. Within the TFT CMB-reservoir interpretation, the isotropic $2.725$ K Cosmic Microwave Background is proposed to contain accumulated transferred energy, while quantitative global thermal and spectral balance remains an open microscopic completion requirement.
+TFT assigns a different physical meaning to the corresponding macroscopic length. The scale $R_{\mathrm U}=c_{\mathrm E}/\Gamma_{\mathrm D}$ is not a recession-velocity threshold; it is the distance at which the coherent-relaxation exponent reaches unity.
 
-\section{The Accelerating Expansion Illusion (The Logarithmic Law)}
+A photon can therefore propagate through multiple $R_{\mathrm U}$ intervals while remaining on the coherent eigenbranch. The underlying Structural Reservoir extends vastly beyond this optical scale, and the finite thermodynamic history of the present matter--radiation cycle remains distinct from the pre-existing extent of the TFT continuum.
 
-In 1998, observations of distant Type Ia supernovae revealed that they were significantly dimmer and more redshifted than the linear Hubble law predicted \cite{Riess_1998}. To account for this late-time accelerated distance-redshift behavior within an expanding metric, standard cosmology invokes ``Dark Energy.''
 
-Tension Field Theory replaces the Dark-Energy term at the constitutive level with visco-elastic frequency transport. Within the TFT constitutive closure, evaluated in the weak-loading, constant-rate Euclidean path limit ($\alpha_{\mathrm{G}} \to 0$, $\Gamma_{\mathrm{D}} \simeq \mathrm{constant}$), the energy loss of a wave follows a compounding exponential relaxation function:
+\section{The Accelerating Expansion Illusion: The Nonlinear Distance Law}
+
+In 1998, observations of distant Type Ia supernovae revealed a nonlinear relation between redshift and apparent luminosity distance \cite{Riess_1998}. Standard cosmology represents this behavior through the time evolution of the metric scale factor and attributes the late-time acceleration to Dark Energy.
+
+In TFT, the same observational problem is expressed through the combined mechanics of source motion, gravitational endpoint clocks, coherent photon scale relaxation, and photometric projection. The nonlinear distance law therefore arises from the mapping between the source state and the received radiation rather than from acceleration of the underlying Structural Reservoir.
+
+For the gravity-neutral radial photometric branch derived in
+\hyperref[chap:cosmic_redshift]{Chapter~\ref*{chap:cosmic_redshift}},
 \begin{equation}
-    E(x) = E_0 e^{-\frac{\Gamma_{\mathrm{D}}^{(\mathrm{cal})} x}{c_{\mathrm{E}}}}
-\end{equation}
-
-Under coherent-action preservation, observational redshift satisfies
-$1+z = E_{\mathrm{emit}}/E_{\mathrm{obs}} = \omega_{\mathrm{emit}}/\omega_{\mathrm{obs}}$. The coordinate distance ($d$) of a wave subjected to this constant relaxation therefore algebraically rearranges into a logarithmic relation. Substituting the observational calibration ($\Gamma_{\mathrm{D}}^{(\mathrm{cal})} = H_0^{(\mathrm{obs})}$), the astronomical coordinate distance is:
-\begin{equation}
-    d = \frac{c_{\mathrm{E}}}{H_0^{(\mathrm{obs})}} \ln(1+z)
-\end{equation}
-
-However, astronomers do not directly measure raw coordinate distance; they infer Luminosity Distance ($d_{\mathrm{L}}$). The conditional luminosity distance incorporates one energy-redshift factor and one macroscopic arrival-rate factor. If the macroscopic envelope-dilation closure discussed in \hyperref[chap:cosmic_redshift]{Chapter~\ref*{chap:cosmic_redshift}} is valid, these combine to yield a factor of $(1+z)$ over the raw coordinate distance. The proposed transverse $(1+z)^2$ area-magnification closure belongs instead to angular size and surface brightness and is not double-counted into the integrated luminosity distance. Therefore, the conditionally predicted luminosity distance becomes:
-\begin{equation}
-    d_{\mathrm{L}} = \frac{c_{\mathrm{E}}}{H_0^{(\mathrm{obs})}} (1+z)\ln(1+z)
-\end{equation}
-
-Analyzing the Taylor expansion of this conditionally derived visco-elastic luminosity distance provides a non-expanding theoretical baseline:
-\begin{equation}
-    (1+z)\ln(1+z)
+    1+z_{\mathrm{obs}}
     =
-    z+\frac{1}{2}z^2-\frac{1}{6}z^3+\cdots
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm D}),
 \end{equation}
-Over relatively local cosmic distances, the linear term ($z$) dominates, recovering the linear Hubble Law. At larger redshift, the nonlinear compounding of the lattice relaxation becomes increasingly important.
-
-In standard cosmography, luminosity distance expands as
+and the luminosity distance is
 \begin{equation}
-    d_{\mathrm{L}}
-    \simeq
-    \frac{c_{\mathrm{E}}}{H_0}
-    \left[
-        z+\frac{1-q_0}{2}z^2+\cdots
-    \right].
+    d_{\mathrm L}
+    =
+    r
+    (1+z_{\mathrm{kin}})^2
+    \sqrt{1+z_{\mathrm D}}.
 \end{equation}
-The TFT quadratic coefficient of $\frac{1}{2}$ corresponds formally to $q_0=0$. Therefore, this quadratic term alone does not reproduce the negative-$q_0$ acceleration signature extracted within standard SN-Ia cosmography. TFT instead supplies a distinct nonlinear, non-expanding distance law whose empirical adequacy must be tested directly against the supernova Hubble diagram rather than interpreted through the FLRW deceleration parameter. Such a direct fit determines whether the observed nonlinear distance-redshift behavior can be reproduced by visco-elastic relaxation without introducing metric acceleration (see \hyperref[app:hubble_diagram]{Appendix~\ref*{app:hubble_diagram}} for the TFT Distance Modulus).
+
+For constant coherent relaxation,
+\begin{equation}
+    \ln(1+z_{\mathrm D})
+    =
+    \frac{\Gamma_{\mathrm D}r}{c_{\mathrm E}},
+\end{equation}
+so that
+\begin{equation}
+    r
+    =
+    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}}
+    \ln(1+z_{\mathrm D}).
+\end{equation}
+
+Substitution into the luminosity-distance relation gives
+\begin{equation}
+    d_{\mathrm L}
+    =
+    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}}
+    (1+z_{\mathrm{kin}})^2
+    \sqrt{1+z_{\mathrm D}}
+    \ln(1+z_{\mathrm D}).
+\end{equation}
+
+Using
+\begin{equation}
+    1+z_{\mathrm D}
+    =
+    \frac{1+z_{\mathrm{obs}}}
+    {1+z_{\mathrm{kin}}},
+\end{equation}
+the same relation may be written directly in terms of the total observed spectral shift:
+\begin{equation}
+    d_{\mathrm L}
+    =
+    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}}
+    (1+z_{\mathrm{kin}})^{3/2}
+    (1+z_{\mathrm{obs}})^{1/2}
+    \ln\left(
+        \frac{1+z_{\mathrm{obs}}}
+        {1+z_{\mathrm{kin}}}
+    \right).
+\end{equation}
+
+The logarithmic propagation coordinate therefore survives inside a broader nonlinear observational projection. Matter motion controls $z_{\mathrm{kin}}$, photon relaxation controls the accumulated logarithmic scale change, and gravitational endpoint loading enters through the full three-factor spectral law developed in Chapter~\ref*{chap:cosmic_redshift}.
+
+The apparent acceleration of the supernova Hubble diagram is consequently interpreted in TFT as a nonlinear mapping between source dynamics and received radiation. The macroscopic matter-flow field, gravitational loading, and photon-relaxation history together determine the observable distance--redshift curve without requiring acceleration of the Structural Reservoir itself.
+
 
 \section{The Hubble Tension: Acoustic Damping and the Standard Ruler}
 \label{sec:hubble_tension_acoustic_damping}
 
-A major cosmological tension in modern astrophysics is the statistical divergence between the cosmic expansion rate measured locally ($H_0 \approx 73.04$ km/s/Mpc) and the rate inferred from the Cosmic Microwave Background ($H_0 \approx 67.4$ km/s/Mpc). Many proposed resolutions introduce additional early- or late-universe physics, including Early Dark Energy.
+A major tension in modern cosmology is the difference between the expansion rate measured from the local distance ladder,
+\begin{equation}
+    H_0
+    \approx
+    73.04\ \mathrm{km\,s^{-1}\,Mpc^{-1}},
+\end{equation}
+and the lower value inferred from the Cosmic Microwave Background within the $\Lambda$CDM acoustic calibration,
+\begin{equation}
+    H_0
+    \approx
+    67.4\ \mathrm{km\,s^{-1}\,Mpc^{-1}}.
+\end{equation}
 
-Tension Field Theory (TFT) approaches this tension through classical thermodynamics and solid-state Euclidean geometry. In standard cosmology, the CMB inference constrains the expansion history through the observed acoustic angular scale ($\theta_*$) together with the theoretically calculated comoving sound horizon ($r_{\mathrm{s}}$).
+Standard cosmology infers the CMB value through the observed acoustic angular scale $\theta_*$ together with the calculated comoving photon--baryon sound horizon.
 
-Within $\Lambda$CDM, the sound horizon is calculated from photon--baryon sound propagation through the early-universe expansion history, including baryon drag, photon diffusion, and Silk damping, yielding a comoving drag scale $r_{\mathrm{drag}} \approx 147$ Mpc. The corresponding CMB angular scale is then interpreted through the model-dependent comoving angular-diameter distance.
+Within $\Lambda$CDM, the characteristic ruler is obtained from sound propagation through the early photon--baryon plasma and the evolving metric background, giving a comoving drag scale of approximately
+\begin{equation}
+    r_{\mathrm{drag}}
+    \approx
+    147\ \mathrm{Mpc}.
+\end{equation}
 
-\subsection{Viscous Acoustic Damping in the Active Vacuum}
+TFT instead interprets the primordial acoustic structure within a globally static FCC-condensate medium and projects the observed angular pattern through the characteristic optical scale of that medium.
+
+
+\subsection{Acoustic Propagation and Impedance in the Active Vacuum}
 \label{sec:viscous_acoustic_damping}
 
-In the TFT framework, the primordial plasma was not expanding through an empty geometric void; it was hydrodynamically coupled to the visco-elastic Spacetime Gravitational Floor (SGF).
+In TFT, the primordial baryonic plasma evolved inside the restored State-I FCC Active Vacuum following Catastrophic Decompression. Its acoustic structure therefore developed within the coupled FCC--Condensate medium rather than within an empty background.
 
 \begin{itemize}
-    \item \textbf{The Waves:} While transverse optical waves propagate through the solid FCC nodes, the Baryon Acoustic Oscillations (BAO) were longitudinal pressure waves propagating through the baryonic plasma and the interstitial condensate.
-    
-    \item \textbf{The Impedance:} The propagation of these longitudinal acoustic waves was opposed by the inherent Lattice Impedance Acceleration ($a_{\mathrm{D}}$). As formally derived in earlier appendices,
+
+    \item \textbf{The Waves:}
+    Baryon Acoustic Oscillations are represented as longitudinal pressure structures propagating through the primordial baryonic plasma and the connected interstitial condensate.
+
+    \item \textbf{The Impedance:}
+    The Active Vacuum possesses the characteristic macroscopic impedance acceleration
     \begin{equation}
-        a_{\mathrm{D}} = c_{\mathrm{E}}\Gamma_{\mathrm{D}}^{(\mathrm{cal})},
+        a_{\mathrm D}
+        =
+        c_{\mathrm E}\Gamma_{\mathrm D}
+        =
+        \frac{c_{\mathrm E}^2}{R_{\mathrm U}}.
     \end{equation}
-    this acceleration scale belongs to the same FCC--Condensate impedance sector whose reactive component enters TFT galactic dynamics.
-    
-    \item \textbf{The Result:} This impedance loading acts continuously on the oscillating acoustic field, restricting the physical distance over which the primordial pressure structure develops before lattice annealing freezes the density pattern into place.
+    This scale characterizes the FCC--Condensate response that also appears, through a distinct reactive projection, in galactic dynamics.
+
+    \item \textbf{The Fossilization:}
+    The acoustic pressure field evolves through this impedance-bearing medium until lattice annealing, recombination, and optical transparency freeze the primordial density pattern into the fossil matter distribution.
+
 \end{itemize}
 
-Consequently, TFT predicts physical density structures substantially more compact than the standard $\Lambda$CDM comoving acoustic scale under its distinct static-lattice impedance construction.
+The acoustic ruler in TFT is therefore a physical structure of the State-I medium rather than a comoving coordinate length generated by metric expansion.
+
 
 \subsection{The Euclidean Acoustic Resolution}
 \label{sec:euclidean_acoustic_resolution}
 
-Because the TFT vacuum operates as a static, visco-elastic lattice, the physical geometry of these density structures is absolute rather than comoving. The characteristic viscous scale is determined directly by the empirically calibrated local baseline observed by SH0ES ($H_0^{(\mathrm{obs})} = 73.04$ km/s/Mpc). As established previously, this empirical measurement is not interpreted in TFT as a metric expansion velocity, but as the macroscopic calibration of the Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}^{(\mathrm{cal})} = H_0^{(\mathrm{obs})}$).
-
-This temporal relaxation sets the characteristic macroscopic decay length ($R_{\mathrm{U}}$) of the active vacuum:
+The static TFT geometry assigns a physical Euclidean distance to the acoustic projection. The characteristic optical length is
 \begin{equation}
-    R_{\mathrm{U}} = \frac{c_{\mathrm{E}}}{H_0^{(\mathrm{obs})}}
-    \approx 13.39 \text{ Gly}
-    \approx 4104.498 \text{ Mpc}
+    R_{\mathrm U}
+    =
+    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}}.
 \end{equation}
 
-While the final CMB assimilation boundary is a frequency-dependent threshold occurring at greater distances, we introduce the projection distance
+Under the retained low-redshift reference specialization,
 \begin{equation}
-    D_{\mathrm{proj}} \equiv R_{\mathrm{U}}
+    \Gamma_{\mathrm D}
+    \simeq
+    H_0^{(\mathrm{obs})}
+    \simeq
+    73.04\ \mathrm{km\,s^{-1}\,Mpc^{-1}},
 \end{equation}
-explicitly as a proposed Euclidean projection closure. It utilizes the characteristic optical depth of the visco-elastic medium---the 1-$e$-fold scale over which approximately $63.2\%$ of the initial coherent carrier energy is transferred into the reservoir. We therefore project the observed acoustic angular scale measured by Planck ($\theta_* \approx 0.01041$ rad) against this proposed Euclidean projection distance:
+giving
 \begin{equation}
-    r_{\mathrm{s}(\mathrm{TFT})}
+    R_{\mathrm U}
+    \simeq
+    13.39\ \mathrm{Gly}
+    \simeq
+    4104.498\ \mathrm{Mpc}.
+\end{equation}
+
+For the acoustic projection used in TFT, define
+\begin{equation}
+    D_{\mathrm{proj}}
+    \equiv
+    R_{\mathrm U}.
+\end{equation}
+
+Applying the observed CMB acoustic angular scale,
+\begin{equation}
+    \theta_*
+    \simeq
+    0.01041,
+\end{equation}
+gives the TFT Effective Acoustic Scale
+\begin{equation}
+    r_{\mathrm s}^{(\mathrm{TFT})}
     =
     D_{\mathrm{proj}}\theta_*
     =
-    R_{\mathrm{U}}\theta_*
-\end{equation}
-\begin{equation}
-    r_{\mathrm{s}(\mathrm{TFT})}
-    =
-    4104.498 \text{ Mpc}
-    \cdot
-    0.01041
-    \approx
-    42.73 \text{ Mpc}.
+    R_{\mathrm U}\theta_*.
 \end{equation}
 
-Within this proposed $D_{\mathrm{proj}}=R_{\mathrm{U}}$ closure, the static TFT geometry therefore yields an effective projected acoustic scale of approximately $42.73$ Mpc. This is substantially smaller than the $\Lambda$CDM comoving sound horizon $r_{\mathrm{drag}}\approx147$ Mpc, reflecting the fundamentally different dynamical and geometric assumptions of the two frameworks.
+Numerically,
+\begin{equation}
+    r_{\mathrm s}^{(\mathrm{TFT})}
+    =
+    (4104.498\ \mathrm{Mpc})
+    (0.01041)
+    \approx
+    42.73\ \mathrm{Mpc}.
+\end{equation}
+
+The static Euclidean projection therefore maps the observed acoustic angle onto a characteristic physical scale of approximately $42.73$ Mpc, substantially smaller than the $\Lambda$CDM comoving sound horizon of approximately $147$ Mpc. The difference follows directly from the distinct geometric distance assigned to the same observed angular structure.
+
 
 \subsection{The Statistical Nature of the Effective Acoustic Scale}
 
-The geometric projection $r_{\mathrm{s}} = R_{\mathrm{U}}\theta_*$ yields a TFT Effective Acoustic Scale of $42.73$ Mpc. Within the proposed structural identification, this is interpreted not as a universal kinematic stopping limit for all phase boundaries, but as a dominant characteristic scale of the macroscopic spanning cluster.
+The geometric projection
+\begin{equation}
+    r_{\mathrm s}^{(\mathrm{TFT})}
+    =
+    R_{\mathrm U}\theta_*
+\end{equation}
+defines the characteristic acoustic scale of the fossil rupture network rather than a universal diameter for every individual void or shell.
 
-The observed acoustic angular scale ($\theta_* \approx 0.01041$ rad), encoded in the CMB acoustic peak pattern, represents the dominant angular scale against which this TFT projection is constructed. Because Catastrophic Decompression was triggered by the global $5.16\%$ site-percolation limit, TFT associates the macroscopic fault network with coalesced State II cores possessing a characteristic geometric distribution immediately prior to structural failure.
+Appendix AU identifies the global rupture threshold as
+\begin{equation}
+    \beta_{\mathrm{rup}}
+    =
+    p_{\mathrm c}\beta_{\mathrm{IC}}
+    \approx
+    0.0516,
+\end{equation}
+corresponding to an aggregate live-boundary mass fraction
+\begin{equation}
+    \frac{M_{\mathrm p}}
+    {M_{\mathrm{Res}}}
+    \rightarrow
+    0.0516
+\end{equation}
+at the onset of reservoir-spanning percolation.
 
-Applying the mass-energy conservation law of the martensitic transition,
+The pre-rupture universe therefore contains a distributed population of State-II domains and saturated connecting bridges rather than one uniform spherical precursor.
+
+The phase conversion obeys the mass-energy conservation relation
 \begin{equation}
     V_{\mathrm{FCC}}\rho_{\mathrm{QG}}
     =
-    V_{\mathrm{SC}}\rho_{\mathrm{S}},
+    V_{\mathrm{SC}}\rho_{\mathrm S}.
 \end{equation}
-we utilize the universal radial expansion multiplier derived in \hyperref[sec:reservoir_radius]{Section~\ref*{sec:reservoir_radius}},
+
+Using the radial conversion factor derived in
+\hyperref[sec:reservoir_radius]{Section~\ref*{sec:reservoir_radius}},
 \begin{equation}
     R_{\mathrm{FCC}}
     \approx
     R_{\mathrm{SC}}
-    \cdot
-    4.6098\times10^8.
+    \left(
+        \frac{\rho_{\mathrm S}}
+        {\rho_{\mathrm{QG}}}
+    \right)^{1/3}
+    \approx
+    R_{\mathrm{SC}}
+    \left(
+        4.6098\times10^8
+    \right),
 \end{equation}
-Under the proposed structural identification, this radial conversion is associated with the projected $\sim42.73$ Mpc Ghost-Void scale generated by dominant precursor cores. The resulting length provides a candidate primary spatial frequency for the modern Cosmic Web, while smaller and larger voids reflect the natural distribution of parent-core volumes prior to percolation together with subsequent acoustic interference.
+the compact precursor State-II domains map into vastly larger decompressed State-I regions.
+
+Within this structural interpretation, the projected $42.73$ Mpc scale characterizes the dominant spatial frequency of the fossil rupture network. The observed range of void, wall, filament, and supercluster dimensions arises from the distribution of precursor domain sizes, overlap of neighboring decompression fronts, and subsequent gravitational evolution.
+
 
 \section{Recalibrating the Kinematic Baseline}
 \label{sec:recalibrating_kinematic_baseline}
 
-Applying the proposed Euclidean projection to the observed Planck angular geometry constructs an internally consistent TFT mapping anchored to the local relaxation calibration. A parameter-free resolution of the Hubble Tension ultimately requires TFT to derive either the projection distance or the effective acoustic scale independently from FCC--Condensate microphysics and percolation dynamics. The competing cosmological constructions may therefore be summarized as:
+The observed CMB acoustic angle acquires different physical scales depending on the geometric distance through which it is projected. The competing cosmological constructions may therefore be summarized as:
 
 \begin{itemize}
+
     \item \textbf{Standard Model (Expanding Metric):}
+
     Damped Photon--Baryon Plasma
+
     $\to$
+
     Metric Comoving Distance
-    ($D_{\mathrm{M}} \approx 14,000$ Mpc)
+
+    ($D_{\mathrm M} \approx 14{,}000$ Mpc)
+
     $\to$
+
     Comoving Sound Horizon
+
     ($r_{\mathrm{drag}} \approx 147$ Mpc)
+
     $\to$
+
     CMB-Inferred Rate
+
     ($H_0 \approx 67.4$ km/s/Mpc).
-    
-    \item \textbf{TFT (Static Viscous Lattice):}
+
+    \item \textbf{TFT (Static Visco-Elastic Lattice):}
+
     Lattice-Coupled Acoustic Medium
+
     $\to$
-    Proposed Euclidean Projection
-    ($D_{\mathrm{proj}}\equiv R_{\mathrm{U}}\approx4104.5$ Mpc)
+
+    Euclidean Projection
+
+    ($D_{\mathrm{proj}}\equiv R_{\mathrm U}\approx4104.5$ Mpc)
+
     $\to$
+
     TFT Effective Acoustic Scale
-    ($r_{\mathrm{s}}\approx42.73$ Mpc)
+
+    ($r_{\mathrm s}^{(\mathrm{TFT})}\approx42.73$ Mpc)
+
     $\to$
-    Empirically Calibrated Relaxation Rate
+
+    Local Hubble-Scale Projection
+
     ($H_0^{(\mathrm{obs})}\approx73.04$ km/s/Mpc).
+
 \end{itemize}
 
-Within TFT, the Hubble Tension is therefore interpreted as a possible calibration mismatch between a metric-comoving acoustic construction and a static visco-elastic projection. The $42.73$ Mpc result quantifies this alternative mapping; completing it as an independent resolution requires the projection scale to emerge directly from the microscopic or percolative dynamics rather than from the local calibration alone.
+Within TFT, the Hubble Tension is therefore interpreted as a calibration difference between a metric-comoving acoustic construction and the Euclidean projection of the same observed angular structure through the Active Vacuum. The resulting TFT Effective Acoustic Scale is
+\begin{equation}
+    r_{\mathrm s}^{(\mathrm{TFT})}
+    \approx
+    42.73\ \mathrm{Mpc}.
+\end{equation}
 
 \begin{figure}[H]
+
     \centering
+
     \includegraphics[width=0.9\textwidth]{Fig22_PartIII_CMB.pdf}
-    \caption{\textbf{The Macroscopic Thermodynamic Projection \& Viscous Acoustic Damping.}
-    A Euclidean geometric representation of Cosmic Microwave Background (CMB) anisotropies within a static, visco-elastic lattice.
-    \textbf{The Angular Projection:}
-    The observed acoustic angular scale ($\theta_* \approx 0.01041$ rad) projects from the Local Detector onto the proposed Euclidean projection closure ($D_{\mathrm{proj}}\equiv R_{\mathrm{U}}\approx13.39$ Gly).
-    \textbf{The Projection Scale:}
-    The 1-$e$-fold distance is determined by the calibrated Viscoelastic Vacuum Relaxation Rate ($\Gamma_{\mathrm{D}}^{(\mathrm{cal})}=H_0^{(\mathrm{obs})}=73.04$ km/s/Mpc).
-    \textbf{The Effective Acoustic Scale:}
-    This proposed static configuration yields a TFT Effective Acoustic Scale of $r_{\mathrm{s}}\approx42.73$ Mpc, providing an alternative calibration of the acoustic geometry to the $\Lambda$CDM comoving sound horizon ($\approx147$ Mpc).
-    \textbf{Thermal Anisotropies:}
-    The $\pm30\,\mu$K anisotropies are interpreted as proposed Thermodynamic Impedance Signatures; their sign and amplitude require an explicit radiation-to-reservoir transfer function.}
+
+    \caption{\textbf{The Macroscopic Thermodynamic Projection and Acoustic Mapping.}
+A Euclidean representation of Cosmic Microwave Background anisotropies within the TFT Active Vacuum.
+\textbf{Photon Energy-Relaxation Scale:}
+The characteristic one-$e$-fold propagation length is
+$R_{\mathrm U}=c_{\mathrm E}/\Gamma_{\mathrm D}
+\approx1.27\times10^{26}\ \mathrm{m}
+\approx13.39\ \mathrm{Gly}$,
+with the corresponding Photon Energy-Relaxation Time
+$t_{\mathrm D}=\Gamma_{\mathrm D}^{-1}\approx13.39\ \mathrm{Gyr}$
+in the low-redshift reference realization.
+\textbf{Angular Projection:}
+The observed acoustic angular scale
+$\theta_*\approx0.01041$ rad
+is projected across
+$D_{\mathrm{proj}}\equiv R_{\mathrm U}$.
+\textbf{Effective Acoustic Scale:}
+This gives the TFT Effective Acoustic Scale
+$r_{\mathrm s}^{(\mathrm{TFT})}
+=R_{\mathrm U}\theta_*
+\approx42.73$ Mpc,
+compared with the $\Lambda$CDM comoving sound horizon of approximately $147$ Mpc.
+\textbf{Relaxation-Rate Reference:}
+In the low-redshift relaxation-dominated specialization,
+$\Gamma_{\mathrm D}\simeq H_0^{(\mathrm{obs})}$,
+with
+$H_0^{(\mathrm{obs})}=73.04\ \mathrm{km\,s^{-1}\,Mpc^{-1}}$.
+\textbf{Thermodynamic Impedance Signature:}
+The observed $\pm30\,\mu\mathrm K$ structure is interpreted as the thermodynamic imprint of Fossil CMB radiation interacting with the rupture-generated density network and the receiving degrees of freedom of the Active Vacuum.}
+
     \label{fig:cmb_acoustic_damping}
+
 \end{figure}
+
 
 \section{The Thermodynamic Impedance Signature and the $\theta_*$ Anomaly}
 \label{sec:thermodynamic_impedance_signature}
 
-Standard cosmology interprets the characteristic $100\theta_* \approx 1.041$ angular scale measured by Planck as acoustic-scale information imprinted in the primordial photon--baryon plasma and observed through the CMB at last scattering. Within the TFT CMB-reservoir interpretation, by contrast, the CMB is proposed to contain isotropic longitudinal phonon heat of the local vacuum. Consequently, these angular variations require a distinct visco-elastic interpretation.
+Standard cosmology interprets the characteristic
+\begin{equation}
+    100\theta_*
+    \approx
+    1.041
+\end{equation}
+angular scale measured by Planck as the fossil acoustic signature of the primordial photon--baryon plasma observed through the last-scattering geometry.
+
+In TFT, the CMB is the fossil electromagnetic photon population produced by the rupture-and-annealing history developed in \hyperref[chap:nucleation_annealing]{Chapter \ref*{chap:nucleation_annealing}}. Its angular structure is therefore interpreted through the interaction of this fossil radiation with the large-scale density pattern and the finite-energy receiving response of the Active Vacuum.
+
 
 \subsection{The Origin of the Fossilized Rings}
 
-As derived in \hyperref[sec:cosmic_web_formation]{Section~\ref*{sec:cosmic_web_formation}}, the Catastrophic Decompression of the State II Black Hole network generated massive, $c_{\mathrm{S}}$ longitudinal shockwaves. These shockwaves pushed the nucleated baryonic shrapnel outward, freezing into the active vacuum as the structural walls of the Cosmic Web. Within the proposed structural identification above, these fossilized, high-density shells are associated with the effective $r_{\mathrm{s}}\approx42.73$ Mpc scale and constitute the TFT mechanical interpretation of Baryon Acoustic Oscillations (BAO).
+As derived in
+\hyperref[sec:cosmic_web_formation]{Section~\ref*{sec:cosmic_web_formation}},
+the pre-rupture State-II domains carry their inertial matter on live FCC/SC phase boundaries. When global confinement fails, rapid SC$\rightarrow$FCC decompression restores the State-I Active Vacuum and drives the phase-segregated baryonic matter outward with the expanding compressive and acoustic fronts.
 
-\subsection{The Visco-Elastic Damping Penalty}
+The interiors of the decompressed domains become matter-depleted regions, while collisions and intersections of the outward-moving matter shells generate walls, filaments, and dense junctions. These fossilized density structures preserve the mechanical imprint of the Big Rupture.
 
-The fossilized acoustic rings are physically existing density structures located within the bulk medium. When optical radiation propagates through or originates within one of these dense historical fault structures, the wave encounters elevated gravitational loading ($\alpha_{\mathrm{G}}$), modifying the local conservative propagation speed $v_{\mathrm{ray}}$. Through the general TFT relaxation law,
+Within the Euclidean acoustic projection above, the characteristic
 \begin{equation}
-    \ln(1+z)
+    r_{\mathrm s}^{(\mathrm{TFT})}
+    \approx
+    42.73\ \mathrm{Mpc}
+\end{equation}
+scale represents the dominant projected spacing of this fossil rupture network and provides the TFT mechanical interpretation of the large-scale acoustic pattern.
+
+
+\subsection{The Propagation-Relaxation Path Penalty}
+
+The fossilized acoustic structures are physical density variations within the Active Vacuum. Radiation propagating through a dense historical shell encounters enhanced gravitational loading $\alpha_{\mathrm G}$, which modifies the local ray speed
+\begin{equation}
+    v_{\mathrm{ray}}
+    =
+    v_{\mathrm{ray}}
+    \left[
+        \omega,
+        \alpha_{\mathrm G}
+    \right].
+\end{equation}
+
+The propagation-relaxation depth is
+\begin{equation}
+    \ln(1+z_{\mathrm D})
     =
     \int_{\mathrm{path}}
-    \frac{\Gamma_{\mathrm{D}}(\ell)}
-    {v_{\mathrm{ray}}\!\left[\omega(\ell),\alpha_{\mathrm{G}}(\ell)\right]}
-    \,d\ell,
+    \frac{
+        \Gamma_{\mathrm D}(\ell)
+    }{
+        v_{\mathrm{ray}}
+        \left[
+            \omega(\ell),
+            \alpha_{\mathrm G}(\ell)
+        \right]
+    }
+    \,d\ell.
 \end{equation}
-a reduced local ray speed increases the accumulated relaxation per unit coordinate length even when $\Gamma_{\mathrm{D}}$ itself remains unchanged. Any additional structure-dependent modification of $\Gamma_{\mathrm{D}}$ requires a separate microscopic derivation.
 
-The resulting path-dependent relaxation produces a different radiation-to-reservoir signature from that of propagation through baseline void regions. While this mechanism provides a route to localized thermal variation, the quantitative global thermalization and spectral balance of the CMB remains an open microscopic completion requirement.
+A reduction of the local ray speed therefore increases the elapsed propagation time and the accumulated coherent-relaxation depth across the same coordinate interval.
 
-A specific transfer function is therefore required before definitively assigning positive or negative $\mu$K signs, depending on whether the observation maps transmitted radiation, for which additional relaxation suppresses the received signal, or deposited reservoir energy, for which additional transfer may increase local heating. At the present constitutive level:
-\begin{itemize}
-    \item \textbf{Thermal Variances ($\pm\mu$K):}
-    Dense fossilized structures produce greater accumulated relaxation than baseline void trajectories, while evacuated regions preserve a larger fraction of the coherent carrier signal. The observed sign and amplitude depend on the unresolved radiation-to-reservoir transfer function.
-\end{itemize}
+Dense fossil structures consequently alter the transmitted fossil-radiation field relative to propagation through matter-depleted void regions. At the same time, energy transferred from the coherent photon branch enters the finite-energy receiving sector and participates in local absorption--emission balance.
+
+The observed thermal pattern is therefore generated by the combined spatial variation of transmitted fossil radiation and local receiver-mediated re-emission. Dense shell regions and matter-depleted void regions produce different thermodynamic histories, imprinting the positive and negative $\mu$K structure observed across the CMB sky.
 
 \vspace{0.5em}
-\noindent\textbf{Conclusion:}\\*
-The $\pm30\,\mu$K structures mapped by CMB satellites can therefore be interpreted in TFT as localized Thermodynamic Impedance Signatures associated with the fossilized remnants of the previous cycle's shattered Black Hole network. A quantitative prediction of the anisotropy spectrum requires completion of the corresponding transfer kernel.
 
-\section{Kinematic Unification: Lattice Impedance ($a_{\mathrm{D}}$) and the Dark Sector}
+\noindent\textbf{Conclusion:}
 
-A primary theoretical synthesis of the Tension Field Theory framework is the kinematic unification of the Dark Sector.
+In TFT, the CMB anisotropy field is a Thermodynamic Impedance Signature of the fossil rupture network. The angular pattern records the interaction between primordial electromagnetic radiation, the decompression-generated matter distribution, and the propagation-relaxation and finite-energy receiving response of the Active Vacuum.
 
-In \hyperref[part:one]{Part I}, we derived the structural energy budget of the cosmos strictly from Face-Centered Cubic (FCC) geometry. We identified Dark Energy ($\beta_{\Lambda}$) as the effective structural packing limit of the solid lattice nodes ($\approx69\%$), and Dark Matter ($\beta_{\mathrm{IC}}$) as the interstitial condensate filling the voids ($\approx26\%$). Crucially, this $26\%$ interstitial void network acts as the vulnerable sub-lattice map where localized State II phase defects (Black Holes) nucleate and accumulate, eventually driving the cosmos toward the $5.16\%$ global percolation limit detailed in \hyperref[ch:macroscopic_oscillator]{Chapter~\ref*{ch:macroscopic_oscillator}}. While these represent two distinct structural phases of the vacuum, the observational phenomena attributed to them in standard cosmology are both linked in TFT to the mechanical interaction between the FCC lattice and the interstitial Condensate.
+\section{Kinematic Unification: Lattice Impedance ($a_{\mathrm D}$) and the Dark Sector}
 
-Standard cosmology treats the apparent accelerated cosmic redshift associated with Dark Energy and flat galactic rotation curves associated with Dark Matter as distinct physical sectors. In TFT, dissipative relaxation and reactive/inductive impedance must nevertheless remain mechanically distinguished. They arise from the same FCC--Condensate impedance sector and share the characteristic acceleration scale
+A primary synthesis of Tension Field Theory is the connection between the structural Dark Sector and the macroscopic response of the Active Vacuum.
+
+In \hyperref[part:one]{Part I}, the exact FCC geometry establishes the unperturbed structural partition
 \begin{equation}
-    a_{\mathrm{D}}
-    =
-    c_{\mathrm{E}}\Gamma_{\mathrm{D}}^{(\mathrm{cal})},
-\end{equation}
-but resistance and reactance are not the same mechanical component.
-
-As established earlier, the Viscoelastic Vacuum Relaxation Rate
-($\Gamma_{\mathrm{D}}^{(\mathrm{cal})}=H_0^{(\mathrm{obs})}$)
-parameterizes the dissipative relaxation of a transverse optical carrier associated with the FCC--Condensate interaction. Multiplying this relaxation rate by the elastic wave speed of the vacuum ($c_{\mathrm{E}}$) yields the fundamental Lattice Impedance Acceleration ($a_{\mathrm{D}}$), as derived in \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}:
-\begin{equation}
-    a_{\mathrm{D}}
-    =
-    c_{\mathrm{E}}\Gamma_{\mathrm{D}}^{(\mathrm{cal})}
-    =
-    \frac{c_{\mathrm{E}}^2}{R_{\mathrm{U}}}
+    \beta_{\mathrm{geo}}
     \approx
-    7.0964\times10^{-10}
-    \text{ m/s}^2.
+    0.74048,
+    \qquad
+    \beta_{\mathrm{IC}}
+    \approx
+    0.25952.
 \end{equation}
 
-In \hyperref[part:two]{Part II}, we established that anomalous flat galactic rotation curves arise from the reactive component of this vacuum impedance acting upon baryonic mass. Observational astrophysics, through Modified Newtonian Dynamics (MOND), characterizes the relevant galactic acceleration scale as approximately $a_0\approx1.1$--$1.2\times10^{-10}$ m/s$^2$ \cite{Milgrom_1983}.
+Under the baryonic defect-conversion closure,
+\begin{equation}
+    \beta_{\Lambda,\mathrm{eff}}
+    =
+    \beta_{\mathrm{geo}}
+    -
+    \beta_{\mathrm b}.
+\end{equation}
 
-Within TFT, these two kinematic scales are connected by the spherical geometric projection factor of a galactic halo:
+For
+\begin{equation}
+    \beta_{\mathrm b}
+    \approx
+    0.05,
+\end{equation}
+the remaining smooth nodal structural allocation is
+\begin{equation}
+    \beta_{\Lambda,\mathrm{eff}}
+    \approx
+    0.69048.
+\end{equation}
+
+The remaining nodal sector carries the smooth tensile background associated in TFT with the effective Dark-Energy contribution. The interstitial structural allocation occupies the connected condensate network, whose extended coherent response generates the galactic loading conventionally attributed to Dark Matter.
+
+The two sectors are therefore structural components of the same State-I Active Vacuum, while their observable manifestations arise through distinct mechanical response channels.
+
+The characteristic macroscopic impedance acceleration is
+\begin{equation}
+    a_{\mathrm D}
+    =
+    c_{\mathrm E}\Gamma_{\mathrm D}
+    =
+    \frac{c_{\mathrm E}^2}{R_{\mathrm U}}.
+\end{equation}
+
+Using the retained low-redshift reference scale,
+\begin{equation}
+    R_{\mathrm U}
+    \simeq
+    1.2665\times10^{26}\ \mathrm{m},
+\end{equation}
+gives
+\begin{equation}
+    a_{\mathrm D}
+    \approx
+    7.0964\times10^{-10}\ \mathrm{m\,s^{-2}}.
+\end{equation}
+
+The optical relaxation channel represents the dissipative scale-transfer projection of the Active Vacuum. Galactic dynamics probes a different, reactive response of the interstitial condensate. As developed in
+\hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}},
+the corresponding galactic acceleration scale is
+\begin{equation}
+    a_{\mathrm{gal}}
+    =
+    \frac{a_{\mathrm D}}{2\pi}.
+\end{equation}
+
+Numerically,
+\begin{equation}
+    a_{\mathrm{gal}}
+    \approx
+    1.1294\times10^{-10}\ \mathrm{m\,s^{-2}}.
+\end{equation}
+
+This lies at the empirical acceleration scale
 \begin{equation}
     a_0
-    =
-    \frac{a_{\mathrm{D}}}{2\pi}
     \approx
-    1.1294\times10^{-10}
-    \text{ m/s}^2.
+    1.1\text{--}1.2\times10^{-10}\ \mathrm{m\,s^{-2}}
 \end{equation}
+associated with the low-acceleration phenomenology of galactic rotation curves \cite{Milgrom_1983}.
+
+The TFT dark-sector picture therefore has three linked mechanical layers: the residual FCC nodal allocation supplies the smooth tensile background, the interstitial condensate supplies the coherent reactive galactic response, and the same Active-Vacuum architecture supports the dissipative optical scale-transfer channel characterized by $\Gamma_{\mathrm D}$.
 
 \vspace{0.5em}
-\noindent\textbf{Conclusion:}\\*
-The universe does not require an exotic anti-gravity field to push it apart, nor invisible particles to hold its galaxies together within the TFT construction. The corresponding Dark Sector phenomenology arises from the FCC--Condensate boundary impedance: its dissipative component governs continuous optical relaxation through $\Gamma_{\mathrm{D}}^{(\mathrm{cal})}$, whereas its reactive component produces the inductive response represented by $a_{\mathrm{D}}$ in galactic dynamics. The two effects are therefore mechanically related without being identified as the same local process.
+
+\noindent\textbf{Conclusion:}
+
+The apparent Dark-Energy and Dark-Matter phenomena are not independent substances in TFT. They are different structural and dynamical projections of the dual-phase Active Vacuum: the smooth FCC nodal sector carries the cosmological tensile background, while the interstitial condensate generates the extended galactic impedance response. Photon scale relaxation provides a separate dissipative projection of the same mechanical medium.
+
 
 \vspace{0.5em}
-\noindent\textbf{Global Scale Correspondence: Static Potential and Kinematic Relaxation}\\*
-In Tension Field Theory, the macroscopic mass scale of the universe and the visco-elastic relaxation scale of light are mathematically linked through a common characteristic limit.
 
-From \hyperref[chap:global_kinematics]{Chapter~\ref*{chap:global_kinematics}}, the Type II saturation condition evaluated at the characteristic Viscous Cosmic Horizon scale establishes
+\noindent\textbf{Global Scale Correspondence: Static Potential and Kinematic Relaxation}
+
+At the Type-II saturation condition
 \begin{equation}
-    \frac{G M_{\mathrm{U}}}{R_{\mathrm{U}}}
+    R_{\mathrm{QG}}
     =
-    c_{\mathrm{E}}^2.
+    R_{\mathrm U},
+\end{equation}
+the corresponding saturation mass is
+\begin{equation}
+    M_{\mathrm{Sat}}
+    =
+    \frac{c_{\mathrm E}^2R_{\mathrm U}}{G}.
 \end{equation}
 
-From the kinematic relations of the FCC--Condensate impedance sector, we have
+Using
 \begin{equation}
-    a_{\mathrm{D}}
+    R_{\mathrm U}
     =
-    c_{\mathrm{E}}\Gamma_{\mathrm{D}}^{(\mathrm{cal})},
+    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}},
+\end{equation}
+this becomes
+\begin{equation}
+    M_{\mathrm{Sat}}
+    =
+    \frac{c_{\mathrm E}^3}
+    {G\Gamma_{\mathrm D}}.
+\end{equation}
+
+The corresponding gravitational potential scale is
+\begin{equation}
+    \frac{
+        GM_{\mathrm{Sat}}
+    }{
+        R_{\mathrm U}
+    }
+    =
+    c_{\mathrm E}^2.
+\end{equation}
+
+The Active-Vacuum impedance relation gives independently
+\begin{equation}
+    a_{\mathrm D}
+    =
+    c_{\mathrm E}\Gamma_{\mathrm D},
     \qquad
-    R_{\mathrm{U}}
+    R_{\mathrm U}
     =
-    \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}^{(\mathrm{cal})}}.
+    \frac{c_{\mathrm E}}
+    {\Gamma_{\mathrm D}},
 \end{equation}
-Their product therefore yields
+so
 \begin{equation}
-    a_{\mathrm{D}}R_{\mathrm{U}}
+    a_{\mathrm D}R_{\mathrm U}
     =
-    \left(
-        c_{\mathrm{E}}\Gamma_{\mathrm{D}}^{(\mathrm{cal})}
-    \right)
-    \left(
-        \frac{c_{\mathrm{E}}}
-        {\Gamma_{\mathrm{D}}^{(\mathrm{cal})}}
-    \right)
-    =
-    c_{\mathrm{E}}^2.
+    c_{\mathrm E}^2.
 \end{equation}
 
-The gravitational and relaxation sectors consequently meet at the same characteristic scale:
+The gravitational and relaxation scales therefore meet at the common kinematic capacity,
 \begin{equation}
-    \frac{G M_{\mathrm{U}}}{R_{\mathrm{U}}}
+    \frac{
+        GM_{\mathrm{Sat}}
+    }{
+        R_{\mathrm U}
+    }
     =
-    a_{\mathrm{D}}R_{\mathrm{U}}
+    a_{\mathrm D}R_{\mathrm U}
     =
-    c_{\mathrm{E}}^2.
+    c_{\mathrm E}^2.
 \end{equation}
 
-With the potential sign convention,
+With the gravitational potential sign convention,
 \begin{equation}
-    -\frac{G M_{\mathrm{U}}}{R_{\mathrm{U}}}
+    -\frac{
+        GM_{\mathrm{Sat}}
+    }{
+        R_{\mathrm U}
+    }
     =
-    -a_{\mathrm{D}}R_{\mathrm{U}}
+    -a_{\mathrm D}R_{\mathrm U}
     =
-    -c_{\mathrm{E}}^2.
+    -c_{\mathrm E}^2.
 \end{equation}
 
-This global correspondence establishes a common characteristic scale linking macroscopic gravity and cosmological vacuum relaxation without identifying static gravitational potential and photon dissipation as the same local differential operator. The Type II gravitational saturation scale and the one-$e$-fold coherent-relaxation scale therefore converge on the invariant kinematic budget $c_{\mathrm{E}}^2$, providing a direct mechanical bridge between the two sectors of TFT.
+This equality is the global TFT scale correspondence between Type-II gravitational saturation and one-$e$-fold optical relaxation. Static gravitational potential and dissipative photon transport remain distinct mechanical operations, but both terminate on the same invariant specific-energy scale $c_{\mathrm E}^2$.

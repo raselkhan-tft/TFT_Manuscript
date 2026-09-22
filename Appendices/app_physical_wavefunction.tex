@@ -2,89 +2,473 @@
 \label{app:physical_wavefunction}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Abstract:} Standard Quantum Mechanics treats the wavefunction ($\Psi$) as an abstract probability amplitude. Tension Field Theory (TFT) redefines $\Psi$ as the macroscopic physical order parameter of the Spacetime Gravitational Floor (SGF), analogous to the Ginzburg--Landau theory of superfluids. This appendix defines the absolute boundary conditions of the wavefunction across the two primary phases of the vacuum.
+\noindent\textbf{Abstract:}
+The physical wavefunction describes coordinated motion within the SGF. Starting from the structural reference states and conservative FCC--condensate mechanics, this appendix distinguishes the density-normalized order parameter from the modal-action field of a selected excitation. Real displacement and momentum quadratures generate the complex representation, while complete-cycle closure retains the action quantum $h$. For an independently established matter branch with isolated positive quadratic dispersion, the long-wavelength reduction yields a Schr\"{o}dinger-form equation, its conserved current, and its amplitude-gradient force. The vortex construction becomes a boundary-value problem rather than a prescribed atomic solution. The actual defect branch, its translational mass, and its interaction coefficients remain the microscopic quantities to calculate. Detector coupling and capture are developed in \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.
 
 \section{The Physical Wavefunction}
-In TFT, the universe is not a collection of isolated particles in a void, but a single, contiguous macroscopic quantum object. The state of this object is described by a complex scalar order parameter, $\Psi$:
+
+A localized defect and the disturbance surrounding it are two aspects of one mechanical excitation. The defect carries its topological organization; the neighboring contacts and interstitial condensate carry the associated deformation and motion. A reduced wave description must retain this connection between the excitation and the medium supporting it.
+
+The mechanical variables are those established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}: nodal translation $\mathbf u_i$, contact-frame microrotation $\boldsymbol\vartheta_i$, and internal contact phase $\phi_i$. Their objective contact deformations determine the elastic response. The coherent condensate constraint and localized relative-flow construction are developed in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}. The phase of a selected collective excitation is obtained from these variables; it is not automatically identical to every contact phase or mechanical rotation.
+
+Retain the original density-normalized SGF order parameter,
 \begin{equation}
-    \Psi(x,t) = \sqrt{\rho} \cdot e^{i\varphi}
+    \boxed{
+    \Psi(\mathbf x,t)=\sqrt{\rho(\mathbf x,t)}\,e^{i\varphi(\mathbf x,t)},
+    \qquad |\Psi|^2=\rho
+    }.
+    \label{eq:X_structural_order_parameter}
 \end{equation}
+Here $\rho$ is the specified structural mass-density normalization, and $\varphi$ is the phase assigned to the selected coherent structural sector. Thus $[\Psi]=\mathrm{kg}^{1/2}\mathrm m^{-3/2}$. The amplitude is the square root of density; the corresponding stiffness follows from the contact constitutive law.
 
-\noindent\textbf{Where:}
-\begin{itemize}
-    \item $\sqrt{\rho}$ \textbf{represents the Amplitude:} the local physical density and structural stiffness of the lattice.
-    \item $e^{i\varphi}$ \textbf{represents the Phase:} the mechanical phase angle of the lattice, governing time, rotation, and dynamic motion. \textit{(Note: As established in \hyperref[sec:quantum_action]{Section \ref*{sec:quantum_action}}, this phase angle $\varphi$ scales to quantum action via $S = \hbar \cdot \varphi$, and the imaginary operator $i$ represents harmonic lattice oscillation as defined in \hyperref[sec:imaginary_operator]{Section \ref*{sec:imaginary_operator}}).}
-\end{itemize}
+The excitation field will be denoted by lowercase $\psi$ and normalized by mechanical modal action. Its slow envelope is $\psi_{\mathrm{env}}$. The field is constructed from real mechanical modes through Equation~\eqref{eq:X_action_field}; its slow-envelope reduction is developed in \hyperref[sec:X_schrodinger_limit]{Section~\ref*{sec:X_schrodinger_limit}}. Uppercase $\Psi$ retains its structural meaning throughout this appendix.
 
-\section{The Hard Floor Wavefunction (The Substrate)}
-The ``Hard Floor'' is the absolute ground state of the universe. It is characterized by maximal tension saturation and absolute phase-locking. The wavefunction for the latent Substrate ($\Psi_{\mathrm{S}}$) is time-invariant and non-local:
+\section{The Hard Floor Wavefunction: The Substrate Reference}
+
+The State-0 Hard Floor is the persistent phase-locked SC foundation of \hyperref[part:one]{Part~\ref*{part:one}}. In its homogeneous equilibrium reference, the phase is spatially uniform and time independent. Choosing its origin at zero gives
 \begin{equation}
-    \Psi_{\mathrm{S}} = \sqrt{\rho_{\mathrm{S}}} \cdot e^{i0}
+    \varphi_{\mathrm S}=0,
+    \qquad
+    \nabla\varphi_{\mathrm S}=0,
+    \qquad
+    \partial_t\varphi_{\mathrm S}=0,
+    \qquad
+    \boxed{\Psi_{\mathrm S}=\sqrt{\rho_{\mathrm S}}\,e^{i0}}.
 \end{equation}
+The limiting rigidity, vanishing intrinsic inertial response, and equilibrium order belong to the substrate constitution. The structural state written above represents that reference; its phase factor alone does not determine its structural energy, entropy, or information capacity.
 
-\noindent\textbf{Physical Implications:}
-\begin{itemize}
-    \item \textbf{Maximal Density ($\rho_{\mathrm{S}}$):} The amplitude is fixed at the absolute structural limit ($\ell_{\mathrm{S}}$). Because the bulk modulus is effectively infinite, it acts as an incompressible supersolid.
-    \item \textbf{Phase Lock ($\varphi=0$):} The phase angle is zero everywhere. Because dynamic momentum is the spatial gradient of phase ($p \propto \nabla\varphi$), and $\nabla\varphi=0$, the Hard Floor possesses zero dynamic momentum and zero entropy.
-    \item \textbf{The Arrest of Time:} Without phase rotation, time does not flow on the Hard Floor. It serves strictly as an instantaneous, non-local connection grid for quantum entanglement.
-\end{itemize}
-
-\section{The Soft Floor Wavefunction (The Active Vacuum)}
-The ``Soft Floor'' (Observable Universe) emerges when the infinite rigidity of the substrate transitions into the finite elasticity of the vacuum at the FCC Node Radius ($r_{\mathrm{D}}$). This phase break allows the lattice to unlock and oscillate, generating the wavefunction of the active vacuum ($\Psi_{\mathrm{D}}$):
+The site-density normalization also used for the substrate is distinguished by a superscript:
 \begin{equation}
-    \Psi_{\mathrm{D}}(x,t) = \sqrt{\rho_{\mathrm{D}}} \cdot e^{i(\mathbf{k} \cdot \mathbf{x} - \omega t)}
+    \Psi_{\mathrm S}^{(n)}=\sqrt{n_0}\,e^{i0},
+    \qquad n_0=\ell_{\mathrm S}^{-3},
+    \qquad
+    \Psi_{\mathrm S}=\sqrt{\frac{\rho_{\mathrm S}}{n_0}}\,
+    \Psi_{\mathrm S}^{(n)}.
 \end{equation}
+This conversion preserves both reference descriptions while keeping their dimensions explicit. The factor $\rho_{\mathrm S}/n_0$ converts density per volume to structural mass normalization per site; it is not an additional active inertia.
 
-\noindent\textbf{Physical Implications:}
-\begin{itemize}
-    \item \textbf{Dynamic Phase ($\varphi(t) \neq 0$):} The phase rotates with frequency $\omega$. This localized rotation is the mechanical origin of the flow of time.
-    \item \textbf{Elastic Density ($\rho_{\mathrm{D}}$):} The structural density transitions to the Face--Centered Cubic (FCC) configuration. This provides the finite shear elasticity ($\tau_{\mathrm{D}}$) required to support transverse wave propagation (light).
-    \item \textbf{Emergence of Gradients:} The dynamic variation of this wavefunction generates the macroscopic forces:
-    \begin{itemize}
-        \item \textbf{Gravity:} The spatial gradient of the amplitude (tension/density).
-        \item \textbf{Motion / Inertia:} The spatial gradient of the phase (momentum).
-    \end{itemize}
-\end{itemize}
+The bare Hard Floor supplies the structural reference and constraint. Finite-energy excitation and detector work belong to the active degrees of freedom. The corresponding constraint role in a correlated pair is developed in \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.
 
-\section{Metric Comparison Summary}
-The dual-scale architecture of the SGF necessitates two distinct boundary conditions for the universal order parameter:
+\section{The Soft Floor Wavefunction: The Active Vacuum}
 
-\begin{table}[h!]
+The Active Vacuum is the coupled FCC scaffold and interstitial condensate supported by the latent substrate. Its finite contact stiffness and admissible kinetic response permit deformation, coherent propagation, and localized defects. The structural reference remains present as these active configurations evolve.
+
+In the coherent translational branch, the condensate is entrained with the scaffold. The pressure constraint and transverse mode count are those derived in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}. A localized defect can instead produce relative condensate motion and conservative added inertia.
+
+For a selected coherent phase pattern at constant nodal-density normalization, the original traveling representation is
+\begin{equation}
+    \boxed{
+    \Psi_{\mathrm D}(\mathbf x,t)
+    =\sqrt{\rho_{\mathrm D}}\,
+    e^{i(\mathbf k\cdot\mathbf x-\omega t)}
+    }.
+\end{equation}
+This expression displays the phase pattern on the specified nodal reference. Its dispersion and physical displacement amplitude must be supplied by the mode it represents. The constant $\rho_{\mathrm D}$ normalizes the structural constituent; it does not determine the energy of every excitation supported by that constituent.
+
+Gravitational loading modifies the active response through the endpoint-transfer construction in \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}. Its State-I domain is $0\leq\alpha_{\mathrm G}<1$. At saturation, the active organization gives way to the phase-locked State-II configuration. State II is the compressed saturation state, while State 0 remains the equilibrium foundation. The matter reduction below is evaluated in a uniform, gravity-neutral active region; a loaded matter branch requires the corresponding gravitational projection rather than an assumed multiplicative correction.
+
+\begin{table}[htbp]
 \centering
-\caption{Wavefunction Boundary Conditions of the SGF}
-\vspace{0.2cm}
+\caption{Structural Reference and Active-Field Comparison}
 \label{tab:wavefunction_comparison}
-\renewcommand{\arraystretch}{1.5}
-\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.25}
 \small
-\begin{tabular}{@{}lll@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.35\textwidth}>{\raggedright\arraybackslash}p{0.37\textwidth}@{}}
 \toprule
-\textbf{Metric} & \textbf{Hard Floor (Substrate)} & \textbf{Soft Floor (Active Vacuum)} \\
+\textbf{Property} & \textbf{Hard Floor: State 0} & \textbf{Soft Floor: State I} \\
 \midrule
-\textbf{Wavefunction} & $\Psi_{\mathrm{S}} = \sqrt{\rho_{\mathrm{S}}} \cdot e^{i0}$ & $\Psi_{\mathrm{D}} = \sqrt{\rho_{\mathrm{D}}} \cdot e^{i(\mathbf{k} \cdot \mathbf{x} - \omega t)}$ \\
-\textbf{Phase ($\varphi$)} & $0$ (topologically locked) & Dynamic ($\omega t$) \\
-\textbf{Density ($\rho$)} & Latent / maximum ($\rho_{\mathrm{S}}$) & Active / elastic ($\rho_{\mathrm{D}}$) \\
-\textbf{Geometry} & Simple cubic (rigid) & Face--centered cubic (elastic) \\
-\textbf{Physics} & Non-local connectivity ($c_{\mathrm{S}}$) & Local causality ($c_{\mathrm{E}}$) \\
+Architecture & Phase-locked SC reference & FCC scaffold and interstitial condensate \\
+Structural normalization & $|\Psi_{\mathrm S}|^2=\rho_{\mathrm S}$ & $|\Psi_{\mathrm D}|^2=\rho_{\mathrm D}$ for the nodal reference \\
+Phase condition & Uniform equilibrium phase & Evolving phase of a specified active mode \\
+Mechanical role & Constraint and structural record & Contact deformation, propagation, and defect response \\
+Kinetic description & No independent active oscillator assigned to the bare reference & Inertia determined by the retained active coordinates \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\section{Application to Atomic Mechanics (The Localized Vortex)}
-Because the active SGF is a contiguous macroscopic medium, standard atomic particles are not discrete entities isolated from the vacuum; they are localized topological defects (phase vortices) within the Soft Floor order parameter ($\Psi_{\mathrm{D}}$).
+\section{Conservative Mechanics of the Matter State}
 
-When a transverse wave locks into a chiral standing wave (such as an electron or atomic orbital), the linear phase gradient ($\mathbf{k} \cdot \mathbf{x}$) winds into a localized rotational gradient. To maintain topological continuity in the FCC lattice, the phase angle must complete an integer number of full cycles ($n$) around the defect core:
+The field equation is constructed from the configuration whose energy it describes. About a specified stationary active configuration, collect the admissible small displacements into $\boldsymbol\zeta$. Angular coordinates are expressed through their associated arc displacements when forming the kinetic matrix. After resolving nondynamical constraints, the tangent energies take the form
 \begin{equation}
-    \oint \nabla \varphi \cdot \mathrm{d}\ell = 2\pi n
+    T^{(2)}=\frac12\dot{\boldsymbol\zeta}^{\mathsf T}
+    \mathsf M\dot{\boldsymbol\zeta},
+    \qquad
+    U^{(2)}=\frac12\boldsymbol\zeta^{\mathsf T}
+    \mathsf K\boldsymbol\zeta.
+    \label{eq:X_tangent_energy}
 \end{equation}
-This topological boundary condition mathematically enforces the quantization of atomic states. The atomic wavefunction ($\Psi_{\mathrm{atom}}$) is therefore a strict, localized solution of the Soft Floor order parameter:
-\begin{equation}
-    \Psi_{\mathrm{atom}}(r, \theta, t) = \sqrt{\rho(r)} \cdot e^{i(n\theta - \omega t)}
-\end{equation}
+The symmetric kinetic matrix $\mathsf M$ is positive on the retained kinetic subspace, and $\mathsf K$ is the potential-energy Hessian at that configuration. Their contact assembly and primitive-cell bookkeeping are inherited from \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}. Each physical inertia enters once. A nonlinear defect must first be established before its tangent coefficients can be evaluated; a periodic reference requires its time-dependent linearization or a justified cycle-averaged reduction.
 
-\noindent\textbf{Physical Implications at the Atomic Scale:}
-\begin{itemize}
-    \item \textbf{Quantized Orbitals ($n$):} The principal quantum numbers of atomic shells are the integer phase-winding numbers of the lattice vortex.
-    \item \textbf{Mass Generation ($\rho(r)$):} At the core of the phase vortex, the structural density of the lattice must radially deform, creating the spatial tension gradient observationally recognized as the mass of the particle.
-    \item \textbf{The Schr\"{o}dinger Equation:} The probabilistic behavior of electrons in standard quantum mechanics is physically resolved as the deterministic hydrodynamic behavior of these localized standing-strain vortices interacting within the $\Psi_{\mathrm{D}}$ field. \textit{(Note: The absolute kinematic localization, or ``wavefunction collapse,'' of these continuous vortices upon interaction with macroscopic matter is formally derived in \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix \ref*{app:matter_vnlw_photon_linear_waveequation}}).}
-\end{itemize}
+For the admissible normal-coupled defect mode of \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}, the conservative flow contributes
+\begin{equation}
+    m_{\mathrm{add}}
+    =\mu_{\mathrm D}A_{\mathrm{imp}}^{(n)}
+    =\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}.
+\end{equation}
+The boundary mode and outer conditions fix this coefficient. If the flow has been eliminated into the retained inertia, the same flow is not added again as an independent kinetic contribution. A circulation-carrying defect requires its circulation sector as well as the baseline potential-flow response.
+
+The translational mass is a property of the complete moving defect, evaluated at fixed internal state and topology. Denoting its translational velocity by $\mathbf v_K$, define
+\begin{equation}
+    m_{ij}^{(\mathrm{tr})}
+    =\left.
+    \frac{\partial^2T_{\mathrm{def}}}
+    {\partial v_{K,i}\partial v_{K,j}}
+    \right|_{\mathbf v_K=0}.
+    \label{eq:X_translation_mass}
+\end{equation}
+Here $T_{\mathrm{def}}$ is the consistently reduced kinetic energy of that defect and its participating field. In an isotropic reduction, $m_{ij}^{(\mathrm{tr})}=m\delta_{ij}$. This $m$ is the physical inertia against which the later matter-wave coefficient is compared.
+
+Variation of $T^{(2)}-U^{(2)}$ gives
+\begin{equation}
+    \mathsf M\ddot{\boldsymbol\zeta}
+    +\mathsf K\boldsymbol\zeta=0,
+    \qquad
+    \frac{\mathrm d}{\mathrm dt}
+    \bigl(T^{(2)}+U^{(2)}\bigr)=0.
+\end{equation}
+The internal phase-difference potential of the contact theory does not by itself assign an independent phase inertia. Any such kinetic term must be obtained from the physical configuration entering Equation~\eqref{eq:X_tangent_energy}.
+
+\section{Complete Cycles and the Mechanical Complex Amplitude}
+\label{sec:X_cycles_and_phase}
+
+Separate the zero-frequency motions from the stable positive-frequency sector. Its real normal modes satisfy
+\begin{equation}
+    \mathsf K\mathbf e_a=\omega_a^2\mathsf M\mathbf e_a,
+    \qquad
+    \mathbf e_a^{\mathsf T}\mathsf M\mathbf e_b=M_a\delta_{ab},
+    \qquad
+    \boldsymbol\zeta=\sum_a\mathbf e_a q_a.
+\end{equation}
+The mode shapes $\mathbf e_a$ are dimensionless, $q_a$ is length valued, and $M_a>0$ is its coordinate inertia. The conservative force balance obtained from Equation~\eqref{eq:X_tangent_energy} then separates into real oscillations with conjugate momenta $\pi_a=M_a\dot q_a$:
+\begin{equation}
+    \ddot q_a+\omega_a^2q_a=0,
+    \qquad
+    E_a=\frac{\pi_a^2}{2M_a}
+    +\frac12M_a\omega_a^2q_a^2.
+\end{equation}
+The mode inertia $M_a$ belongs to this chosen oscillation; it is not automatically the translational mass in Equation~\eqref{eq:X_translation_mass}.
+
+Displacement and momentum provide the two real quadratures. Their complex representation is
+\begin{equation}
+    a_a=\sqrt{\frac{M_a\omega_a}{2\hbar}}\,q_a
+    +\frac{i\pi_a}{\sqrt{2\hbar M_a\omega_a}}.
+    \label{eq:X_complex_quadrature}
+\end{equation}
+Differentiating this expression with the harmonic force law above gives
+\begin{equation}
+    \boxed{
+    i\hbar\dot a_a=\hbar\omega_a a_a,
+    \qquad
+    E_a=\hbar\omega_a|a_a|^2,
+    \qquad
+    I_a\equiv\frac{E_a}{\omega_a}=\hbar|a_a|^2
+    }.
+    \label{eq:X_mode_action}
+\end{equation}
+The real motion is recovered through
+\begin{equation}
+    q_a=\sqrt{\frac{2\hbar}{M_a\omega_a}}\,
+    \operatorname{Re}a_a,
+    \qquad
+    \pi_a=\sqrt{2\hbar M_a\omega_a}\,
+    \operatorname{Im}a_a.
+\end{equation}
+Together with the normal-mode expansion above, these relations reconstruct the participating contact deformation and motion. The imaginary unit records their quarter-cycle relation. This is the mechanical quadrature interpretation used in \hyperref[sec:imaginary_operator]{Section~\ref*{sec:imaginary_operator}}.
+
+The closed trajectory of a harmonic mode is an ellipse in its displacement--momentum plane. Its enclosed action is
+\begin{equation}
+    \oint\pi_a\,\mathrm dq_a
+    =\frac{2\pi E_a}{\omega_a}=2\pi I_a.
+\end{equation}
+For the elementary completed excitation selected by the action condition of \hyperref[part:one]{Part~\ref*{part:one}}, $I_a=\hbar$ and therefore
+\begin{equation}
+    \boxed{
+    \oint\pi_a\,\mathrm dq_a=h,
+    \qquad
+    E_a\frac{2\pi}{\omega_a}=h
+    }.
+    \label{eq:X_complete_cycle}
+\end{equation}
+The full-cycle action remains $h$. The linear equations allow continuous quadrature amplitudes; the selection of elementary completed excitations is inherited from the TFT action condition. Decomposition of one excitation among several modes does not assign a separate integer quantum to every coefficient.
+
+\subsection{The Signed Traveling Phase}
+
+For the traveling convention $\varphi=\mathbf k\cdot\mathbf x-\omega t$, the phase--action assignment is $S=\hbar\varphi$. The corresponding one-action quantities are
+\begin{equation}
+    \boxed{
+    E=-\partial_tS=\hbar\omega,
+    \qquad
+    \mathbf p=\nabla S=\hbar\mathbf k
+    }.
+    \label{eq:X_phase_energy_momentum}
+\end{equation}
+A positively advancing clock angle is instead $\varphi_{\mathrm{cyc}}=\omega t$, so $E=\hbar\partial_t\varphi_{\mathrm{cyc}}$. These opposite temporal orientations distinguish the advancing-cycle convention from the signed traveling phase. The same distinction must be used in the phase--action summary of \hyperref[sec:quantum_action]{Section~\ref*{sec:quantum_action}}. Identification of the phase momentum with the total translational momentum of a matter defect is part of the mechanical matching in \hyperref[sec:X_schrodinger_limit]{Section~\ref*{sec:X_schrodinger_limit}}.
+
+For a scalar field that is nonzero on a closed contour $\mathcal C$, single-valued phase closure gives
+\begin{equation}
+    \oint_{\mathcal C}\nabla\varphi\cdot\mathrm d\boldsymbol\ell
+    =2\pi n,
+    \qquad n\in\mathbb Z.
+\end{equation}
+Using Equation~\eqref{eq:X_phase_energy_momentum},
+\begin{equation}
+    \boxed{
+    \oint_{\mathcal C}\mathbf p\cdot\mathrm d\boldsymbol\ell=nh
+    }.
+    \label{eq:X_winding_action}
+\end{equation}
+The sign of $n$ specifies winding orientation. A phase difference across one FCC bond is $\mathbf k\cdot\mathbf d_{ij}$; a long-wavelength spatial cycle extends across many bonds. Whole-cycle closure therefore coexists with continuous intermediate phase evolution.
+
+\section{The Action-Normalized Excitation Field}
+
+The mechanical amplitudes can be assembled into a field once a translation-covariant sector has been specified. In a uniform periodic reference volume $\mathcal V$, orthogonal combinations of real standing modes give traveling coefficients $a_{\mathbf k}$. Define
+\begin{equation}
+    \boxed{
+    \psi(\mathbf x,t)
+    =\frac{1}{\sqrt{\mathcal V}}
+    \sum_{\mathbf k}a_{\mathbf k}(t)e^{i\mathbf k\cdot\mathbf x}
+    }.
+    \label{eq:X_action_field}
+\end{equation}
+For the retained branch, orthogonality gives
+\begin{equation}
+    \int_{\mathcal V}|\psi|^2\,\mathrm dV
+    =\sum_{\mathbf k}|a_{\mathbf k}|^2
+    =\frac{I_{\mathrm{tot}}}{\hbar},
+    \qquad
+    E_{\mathrm{tot}}
+    =\sum_{\mathbf k}\hbar\omega(\mathbf k)|a_{\mathbf k}|^2.
+\end{equation}
+Thus $[\psi]=\mathrm m^{-3/2}$, and
+\begin{equation}
+    \rho_\psi\equiv|\psi|^2
+\end{equation}
+is an action-normalized intensity, with $[\rho_\psi]=\mathrm m^{-3}$. It is distinct from the mass density $\rho$ in Equation~\eqref{eq:X_structural_order_parameter}. Structural density and stress are reconstructed from the real mode shapes; they are not obtained by reinterpreting $\rho_\psi$ as the material density of the SGF.
+
+The integral normalization is exact for the specified mode expansion. Its local coarse-grained action interpretation applies in the envelope regime below; exact mode-to-displacement weights may be spatially nonlocal. For an excitation assigned total modal action $\hbar$, the integral equals one. This normalization does not by itself specify detector-event probabilities.
+
+Substitution of Equation~\eqref{eq:X_mode_action} into Equation~\eqref{eq:X_action_field} yields
+\begin{equation}
+    i\hbar\partial_t\psi
+    =\frac{1}{\sqrt{\mathcal V}}
+    \sum_{\mathbf k}\hbar\omega(\mathbf k)
+    a_{\mathbf k}(t)e^{i\mathbf k\cdot\mathbf x}.
+    \label{eq:X_exact_spectral_evolution}
+\end{equation}
+This equation is a rewriting of the conservative real-mode dynamics. Its spatial evolution is determined by the calculated spectrum. For matter, the translation-covariant sector must describe the defect together with its surrounding field; it is a separate construction from the defect-free scaffold spectrum.
+
+\section{The Conservative Schr\"{o}dinger Limit}
+\label{sec:X_schrodinger_limit}
+
+\subsection{The Matter Branch and Its Inertial Curvature}
+
+Consider an independently established, isolated reciprocal matter branch with a smooth minimum at $\mathbf k=0$, a positive carrier frequency $\omega_0=\omega(\mathbf0)$, and positive quadratic curvature. Reciprocity removes the odd powers in the local expansion:
+\begin{equation}
+    \omega(\mathbf k)=\omega_0
+    +\frac12\left.
+    \frac{\partial^2\omega}{\partial k_i\partial k_j}
+    \right|_{\mathbf0}k_i k_j
+    +O(|\mathbf k|^4).
+\end{equation}
+Repeated Cartesian indices are summed. Define the inverse envelope-mass tensor by
+\begin{equation}
+    \left(m_{\mathrm{env}}^{-1}\right)_{ij}
+    \equiv\frac{1}{\hbar}\left.
+    \frac{\partial^2\omega}{\partial k_i\partial k_j}
+    \right|_{\mathbf0}.
+    \label{eq:X_band_mass}
+\end{equation}
+It has dimensions of inverse mass and is a property of the selected branch, not a new universal TFT constant. In a conservative projected eigenproblem,
+\begin{equation}
+    \mathsf K(\mathbf k)\mathbf e
+    =\omega^2(\mathbf k)\mathsf M(\mathbf k)\mathbf e,
+\end{equation}
+its value follows from the projected contact and kinetic matrices, including mixing with other modes. At the stationary point,
+\begin{equation}
+    \left(m_{\mathrm{env}}^{-1}\right)_{ij}
+    =\frac{1}{2\hbar\omega_0}\left.
+    \frac{\partial^2\omega^2}{\partial k_i\partial k_j}
+    \right|_{\mathbf0}.
+\end{equation}
+The existence and coefficients of this matter branch are inputs to the following reduction. Neither the gapless transverse scaffold branch nor a phase-difference potential alone supplies its positive rest carrier.
+
+\subsection{The Slow Envelope Equation}
+
+Let $E_0=\hbar\omega_0$ and remove the uniform carrier oscillation through
+\begin{equation}
+    \psi(\mathbf x,t)
+    =e^{-iE_0t/\hbar}\psi_{\mathrm{env}}(\mathbf x,t).
+\end{equation}
+Using the quadratic dispersion expansion above, with the curvature defined by Equation~\eqref{eq:X_band_mass}, in Equation~\eqref{eq:X_exact_spectral_evolution}, and $k_i k_j e^{i\mathbf k\cdot\mathbf x}=-\partial_i\partial_j e^{i\mathbf k\cdot\mathbf x}$, gives the leading spatial equation
+\begin{equation}
+    i\hbar\partial_t\psi_{\mathrm{env}}
+    =-\frac{\hbar^2}{2}
+    \left(m_{\mathrm{env}}^{-1}\right)_{ij}
+    \partial_i\partial_j\psi_{\mathrm{env}}.
+\end{equation}
+For an isotropic curvature, $(m_{\mathrm{env}}^{-1})_{ij}=\delta_{ij}/m_{\mathrm{env}}$. Suppose a weak, slowly varying surrounding configuration produces a leading real local frequency shift $\delta\omega_0(\mathbf x)$, with branch mixing and spatial changes of mode shape and kinetic coefficient beyond the retained order. Its projected potential is
+\begin{equation}
+    V(\mathbf x)=\hbar\delta\omega_0(\mathbf x).
+\end{equation}
+The resulting local equation is
+\begin{equation}
+    \boxed{
+    i\hbar\partial_t\psi_{\mathrm{env}}
+    =\left[-\frac{\hbar^2}{2m_{\mathrm{env}}}\nabla^2+V\right]
+    \psi_{\mathrm{env}}
+    }.
+    \label{eq:X_schrodinger_conditional}
+\end{equation}
+The Schr\"{o}dinger form follows here from the quadratic spatial dispersion of real conservative modes. Its domain is the linear, single-branch, long-wavelength limit: the packet scale must exceed the matter sector's coarse-graining length, while its bandwidth and imposed shifts remain within the isolated branch. Higher dispersion, nonlinear deformation, and spatial variation of the mode projection supply corrections outside this limit.
+
+A physical matter correspondence requires the independent matching
+\begin{equation}
+    \boxed{
+    m_{\mathrm{env}}=m,
+    \qquad
+    E_0=mc_{\mathrm E}^2
+    }.
+    \label{eq:X_matter_matching}
+\end{equation}
+The first equality compares Equation~\eqref{eq:X_band_mass} with the translational response in Equation~\eqref{eq:X_translation_mass}. The second applies when the carrier describes the rest energy of that same excitation. The calculation must also identify $\hbar\mathbf k$ with the defect's total translational momentum and $V$ with its mechanical interaction energy per elementary excitation. These are tests of the microscopic projection, not definitions chosen to fix the desired coefficients.
+
+For the uniform isotropic branch, the corresponding group velocity is
+\begin{equation}
+    \mathbf v_{\mathrm g}
+    =\nabla_{\mathbf k}\omega
+    =\frac{\hbar\mathbf k}{m_{\mathrm{env}}}
+    \quad\text{at the retained quadratic order}.
+\end{equation}
+This is the packet-transport velocity of the matter branch. The speed $c_{\mathrm P}$ characterizes the coherent elastic carrier in \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}. Which field supplies the incident work at a detector is decided by the boundary projection, rather than by identifying these two speeds in advance.
+
+\section{Conserved Current, Phase Force, and Gradient Energy}
+
+For constant $m_{\mathrm{env}}>0$ and real $V$, multiplying Equation~\eqref{eq:X_schrodinger_conditional} by $\psi_{\mathrm{env}}^*$ and subtracting the conjugate product gives
+\begin{equation}
+    \boxed{
+    \partial_t\rho_\psi+\nabla\cdot\mathbf j_\psi=0,
+    \qquad
+    \mathbf j_\psi=\frac{\hbar}{m_{\mathrm{env}}}
+    \operatorname{Im}(\psi^*\nabla\psi)
+    }.
+    \label{eq:X_continuity}
+\end{equation}
+The full carrier and envelope have the same intensity,
+$\rho_\psi=|\psi|^2=|\psi_{\mathrm{env}}|^2$, and the same current because the removed phase is spatially uniform.
+
+Where $\rho_\psi>0$, write
+\begin{equation}
+    \psi=\sqrt{\rho_\psi}\,e^{iS/\hbar},
+    \qquad
+    \mathbf j_\psi=\rho_\psi\mathbf v_\psi,
+    \qquad
+    \mathbf v_\psi=\frac{\nabla S}{m_{\mathrm{env}}}.
+\end{equation}
+Here $S$ is the signed phase action of the full excitation field. When it represents the same coherent phase as the structural field, the phase identification is $S=\hbar\varphi$; the two amplitude normalizations remain distinct.
+
+The real part of the full-carrier equation yields
+\begin{equation}
+    \partial_tS+E_0
+    +\frac{|\nabla S|^2}{2m_{\mathrm{env}}}+V+Q=0,
+    \qquad
+    \boxed{
+    Q=-\frac{\hbar^2}{2m_{\mathrm{env}}}
+    \frac{\nabla^2\sqrt{\rho_\psi}}{\sqrt{\rho_\psi}}
+    }.
+    \label{eq:X_phase_force_potential}
+\end{equation}
+Taking its gradient in a smooth irrotational region away from a defect core gives
+\begin{equation}
+    m_{\mathrm{env}}
+    (\partial_t+\mathbf v_\psi\cdot\nabla)\mathbf v_\psi
+    =-\nabla V-\nabla Q.
+\end{equation}
+The amplitude-gradient term $Q$ belongs to the same reduced mechanics as the kinetic coefficient; no dissipative force has entered this conservative equation.
+
+With periodic boundaries or sufficient decay at infinity, the retained energy is
+\begin{align}
+    E_{\mathrm{eff}}
+    &=\int\left[(E_0+V)\rho_\psi
+        +\frac{\hbar^2}{2m_{\mathrm{env}}}|\nabla\psi|^2\right]
+        \,\mathrm dV
+    \nonumber\\
+    &=\int\left[(E_0+V)\rho_\psi
+        +\frac{\rho_\psi|\nabla S|^2}{2m_{\mathrm{env}}}
+        +\frac{\hbar^2}{8m_{\mathrm{env}}}
+        \frac{|\nabla\rho_\psi|^2}{\rho_\psi}\right]\,\mathrm dV.
+    \label{eq:X_effective_energy}
+\end{align}
+For time-independent $V$, this energy is conserved within the retained approximation. Variation of its amplitude-gradient contribution with respect to $\rho_\psi$ gives $Q$. The force and stored gradient energy therefore have a common origin. At zeros of the field, the original gradient expression $|\nabla\psi|^2$ remains the appropriate form whenever the state has finite energy.
+
+For a localized packet with decaying boundary terms, the action-weighted centroid obeys
+\begin{equation}
+    \overline{\mathbf x}
+    =\frac{\int\mathbf x\rho_\psi\,\mathrm dV}
+    {\int\rho_\psi\,\mathrm dV},
+    \qquad
+    m_{\mathrm{env}}\frac{\mathrm d^2\overline{\mathbf x}}{\mathrm dt^2}
+    =-\frac{\int\rho_\psi\nabla V\,\mathrm dV}
+    {\int\rho_\psi\,\mathrm dV}.
+\end{equation}
+This follows from Equations~\eqref{eq:X_schrodinger_conditional} and~\eqref{eq:X_continuity}. Identifying packet transport or the phase-flow velocity with the motion of the localized knot requires the complete defect reconstruction. The conservative guidance construction in \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}} must be matched to that same excitation and normalization.
+
+\section{Application to Atomic Mechanics: The Localized Vortex}
+
+The scalar phase closure leading to Equation~\eqref{eq:X_winding_action} selects the phase sector around a defect. Within a coherent axisymmetric scalar description, the original structural vortex form is retained as
+\begin{equation}
+    \Psi_{\mathrm{atom}}(r_\perp,\theta,z,t)
+    =\sqrt{\rho(r_\perp,z)}\,e^{i(n\theta-\omega t)}.
+\end{equation}
+Here $r_\perp$ is cylindrical radius, $\theta$ is the azimuthal angle, and the structural density profile is to be obtained from the underlying configuration. The expression specifies a phase pattern; closure alone does not supply its radial profile or stability.
+
+For the action-normalized field in the scalar envelope regime, the corresponding separated form is
+\begin{equation}
+    \psi_{\mathrm{atom}}(r_\perp,\theta,z,t)
+    =F_n(r_\perp,z)e^{i(n\theta-\omega t)},
+    \qquad
+    \hbar\omega=E_0+\varepsilon.
+\end{equation}
+The profile $F_n$ has the modal-action normalization introduced with Equation~\eqref{eq:X_action_field}; $|F_n|^2$ is not the structural mass density $\rho$ in the vortex representation above. With $\varepsilon$ the energy relative to the rest carrier, removing the uniform rest-energy phase as in \hyperref[sec:X_schrodinger_limit]{Section~\ref*{sec:X_schrodinger_limit}} before substitution into Equation~\eqref{eq:X_schrodinger_conditional} gives
+\begin{equation}
+    \left[
+    -\frac{\hbar^2}{2m_{\mathrm{env}}}
+    \left(
+        \partial_{r_\perp}^2
+        +\frac{1}{r_\perp}\partial_{r_\perp}
+        +\partial_z^2-\frac{n^2}{r_\perp^2}
+    \right)+V(r_\perp,z)
+    \right]F_n=\varepsilon F_n.
+    \label{eq:X_vortex_boundary_problem}
+\end{equation}
+Regularity, normalization, and outer boundary conditions determine the allowed profiles and energies once $V$ and the mode projection are specified. For a regular potential at the axis, the regular local branch behaves as $F_n\propto r_\perp^{|n|}$. A microscopic core requires its own inner solution and matching conditions.
+
+The integer $n$ counts circulation about the selected axis. Radial structure and any remaining angular dependence provide additional labels; the principal shell index is determined by the full bound-state problem. The central chiral coupling and shell construction in \hyperref[app:hydrogenic_shell]{Appendix~\ref*{app:hydrogenic_shell}} provide the corresponding mechanical comparison. Tethered spin rotation requires the transformation of the full oriented defect, beyond this scalar circulation calculation.
+
+The inertial mass remains the kinetic response of Equation~\eqref{eq:X_translation_mass}. A density or tension gradient can contribute to force and deformation, but it is not substituted for that inertia definition. This preserves the distinction between the profile of a matter state and the mechanical coefficient governing its translation.
+
+\section{Connection to Detector Coupling and Structural Saturation}
+
+The conservative construction supplies an excitation, its modal-action normalization, and the real coordinates from which it is reconstructed. A detector introduces additional active motions coupled to that same state. The receiving-force and energy-balance derivation belongs to \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}, where the interface projection determines the participating inertia, incident energy flux, and capture conditions.
+
+The field current in Equation~\eqref{eq:X_continuity} and the packet velocity derived in \hyperref[sec:X_schrodinger_limit]{Section~\ref*{sec:X_schrodinger_limit}} are therefore inputs to a detector calculation, not interchangeable with any assumed carrier speed. Likewise, complete-cycle action, the spatial width of a field, and the statistics of recorded outcomes remain distinct quantities. The conversion from channel action to outcome frequency is treated under the explicit detector conditions in \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.
+
+Gravitational saturation is the phase boundary described in \hyperref[sec:grav_saturation_appendix]{Section~\ref*{sec:grav_saturation_appendix}}. It terminates the State-I transfer description and requires the State-II constitution. No uncertainty factor is inferred here by continuing the active envelope equation through that transition. TFT's deterministic objective concerns the underlying dynamics throughout; operational certainty requires the definition and calculation of the measured quantities.
+
+The coherent-photon transport construction in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} follows a different retained branch. Its action-preserving scale evolution is kept separate from the conservative massive-matter limit obtained here. This distinction supports the separation of matter dynamics and cosmic photon transport in \hyperref[part:two]{Part~\ref*{part:two}} and \hyperref[part:three]{Part~\ref*{part:three}}.
+
+\section{Derivation Status and Microscopic Completion}
+
+\noindent\textbf{Inherited constitution.}
+The SC reference, dual-phase FCC Active Vacuum, and elementary complete-cycle action are inputs from \hyperref[part:one]{Part~\ref*{part:one}}. The contact and localized-flow constructions fix the mechanical variables and bookkeeping used here. The scalar structural order parameter in Equation~\eqref{eq:X_structural_order_parameter} is a representation of the specified sector.
+
+\medskip
+\noindent\textbf{Derived within the retained mechanics.}
+Equations~\eqref{eq:X_complex_quadrature}--\eqref{eq:X_mode_action} follow from the real conservative oscillator equations. The harmonic cycle integral in \hyperref[sec:X_cycles_and_phase]{Section~\ref*{sec:X_cycles_and_phase}} and the scalar winding relation in Equation~\eqref{eq:X_winding_action} follow under their stated conditions. The spectral field evolution follows from the same mode expansion.
+
+\medskip
+\noindent\textbf{Conditional matter limit.}
+Equation~\eqref{eq:X_schrodinger_conditional}, its current, gradient force, and vortex boundary problem follow when the physical matter sector supplies the isolated quadratic branch and local potential projection specified in \hyperref[sec:X_schrodinger_limit]{Section~\ref*{sec:X_schrodinger_limit}}. Establishing a stable TFT defect, calculating that branch, and verifying Equation~\eqref{eq:X_matter_matching} remain the required microscopic steps. The scalar reduction does not by itself derive spin, a full multi-defect state, or universal measurement statistics.
+
+\medskip
+\noindent\textbf{Conclusion:}
+The physical wavefunction acquires its meaning from the motion beneath it. Contact deformation supplies restoring forces, condensate participation contributes the appropriate inertia, and coordinated oscillation supplies amplitude and phase. A calculated matter branch with the required low-wave-number curvature then evolves in Schr\"{o}dinger form. The same defect must carry the corresponding inertia, phase momentum, and detector coupling. That common mechanical identity is the criterion linking the field description to matter.

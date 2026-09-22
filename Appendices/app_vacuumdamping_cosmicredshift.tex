@@ -1,100 +1,2707 @@
-\chapter{Vacuum Damping and Cosmic Redshift}
+\chapter{Microscopic Scale-Transfer Closure for the Vacuum Relaxation Rate}
 \label{app:vacuumdamping_cosmicredshift}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Subject:} Replacing the empirical Hubble Constant ($H_0$) and ``Dark Energy'' with the theoretical Vacuum Damping Rate ($\Gamma_{\mathrm{D}}$).
+\noindent\textbf{Abstract.}
+This appendix develops a microscopic closure for the weak vacuum relaxation
+rate $\Gamma_{\mathrm D}$ acting on the coherent photon branch of Tension
+Field Theory (TFT). The construction addresses the microscopic origin of a
+slow, coherent migration of a propagating photon through its real-frequency
+eigenbranch. Ordinary linear amplitude damping does not generate such a
+migration: it attenuates a fixed-wave-number carrier while leaving its real
+frequency unchanged to leading order. The required TFT mechanism must instead
+act on the self-similar photon scale coordinate.
 
-\section{The Physical Premise}
-Standard cosmology attributes the redshift of distant galaxies to a recession velocity (metric expansion). Tension Field Theory (TFT) resolves this strictly through the static vacuum's visco-elastic properties.
+The construction uses the established FCC transverse modal normalization
+\begin{equation}
+    A_{\mathrm{ct}}^{(\mathrm{modal})}
+    =
+    2\pi\ell_{\mathrm S}^{2},
+\end{equation}
+where $\ell_{\mathrm S}$ is the fixed Hard-Floor substrate spacing.
+The quantity $A_{\mathrm{ct}}^{(\mathrm{modal})}$ remains a modal
+surface-to-cell normalization and is not reinterpreted as a literal
+microscopic contact patch.
 
-In TFT, as established in Part I, the active vacuum is a dual-phase visco-elastic Face-Centered Cubic (FCC) medium. Like all real visco-elastic media, it possesses intrinsic boundary friction.
+A minimal reference-mediated scale-transfer closure assigns this transverse
+modal support one substrate-reference correlation depth $\ell_{\mathrm S}$.
+The resulting normalized reference overlap with one Soft-Floor node scales as
+$(\ell_{\mathrm S}/r_{\mathrm D})^{3/2}$. Under the adopted
+two-reference-vertex return closure, the coherent photon leaves and returns to
+the Soft-Floor photon branch. The effective coupling is therefore second order
+in the reference-overlap amplitude, and the corresponding scale-relaxation
+kernel is suppressed by $(\ell_{\mathrm S}/r_{\mathrm D})^6$.
+
+The resulting conditional microscopic rate is
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm D}
+    =
+    \frac{9}{16}\,
+    \mathcal F_{\mathrm R}\,
+    \frac{c_{\mathrm E}}{r_{\mathrm D}}
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \right)^6
+    }
+    \label{eq:AQ_gamma_master}
+\end{equation}
+where $\mathcal F_{\mathrm R}$ is a dimensionless
+reference-mediated carrier--noncoherent correlation factor. It contains the
+normalized intermediate-state response, the carrier-projected active-vacuum
+spectral weight, and the physical correlation response relative to the
+reference microscopic interval.
+
+For the unit-reference closure
+$\mathcal F_{\mathrm R}=1$, the presently calibrated TFT microscopic scales
+give
+\begin{equation}
+    \Gamma_{\mathrm D}^{(0)}
+    \simeq
+    2.36\times10^{-18}\ {\rm s^{-1}},
+\end{equation}
+without using a Hubble constant, cosmic age, cosmological distance, CMB
+temperature, supernova fit, or BAO scale as an upstream input.
+
+The microscopic suppression factor is not interpreted as the probability of a
+rare destructive photon collision. It is instead the small coherent weight of
+a scale-projected response operating over successive microscopic correlation
+cycles. Under preservation of the coherent modal action
+$I_{\gamma}=E_{\gamma}/\omega_{\gamma}=\hbar$, this transfer produces
+\begin{equation}
+    \frac{d\ln\omega_{\gamma}}{dt}
+    =
+    -\Gamma_{\mathrm D}
+\end{equation}
+while preserving photon number, propagation direction, and polarization at
+leading order within the selected coherent-channel closure. Energy transferred
+out of the coherent photon branch is assigned only to noncoherent degrees of
+freedom of the active vacuum at this stage; no thermal-equilibrium or CMB
+identification is made in this appendix.
+
+The resulting frequency shift defines only the relaxation-induced component
+$z_{\mathrm D}$ of an astronomical redshift. TFT is globally non-expanding at
+the Structural Reservoir level but locally dynamical in its matter and
+phase-boundary sectors; therefore local source--observer kinematics may
+generate an additional kinematic contribution $z_{\mathrm{kin}}$, while
+different gravitational endpoint clock conditions contribute
+$z_{\mathrm{grav}}$. In the stationary factorized regime,
+\begin{equation}
+    1+z_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm{grav}})
+    (1+z_{\mathrm D}),
+\end{equation}
+with the full observational decomposition developed separately. Consequently,
+the characteristic length
+$c_{\mathrm E}/\Gamma_{\mathrm D}$ is a photon scale-relaxation length and
+must not be identified with the full Structural Reservoir radius
+$R_{\mathrm{Res}}$.
+
+The numerical value of Equation~\eqref{eq:AQ_gamma_master} remains sensitive
+to the independent microscopic determination of $r_{\mathrm D}$. The present
+TFT determination of that scale inherits an unresolved microscopic
+two-dimensional-to-three-dimensional projection, and the numerical result
+therefore remains calibration dependent at this stage.
+
+
+\section{Scope, Architectural Setting, and Logical Status}
+
+TFT distinguishes between the structural and kinematic descriptions of the
+vacuum.
+
+At the structural level, the theory is discrete and quantum. The Hard Floor
+provides a phase-locked substrate reference, while the active FCC Soft Floor
+contains finite-energy propagating degrees of freedom.
+
+At the kinematic level, the long-wavelength dynamics are represented by a
+continuum limit. Matter, localized phase structures, black-hole phase
+boundaries, and other macroscopic structures may therefore move, rotate,
+recede, approach, merge, or reorganize inside the active medium even when the
+Structural Reservoir itself is not undergoing FLRW-type metric expansion.
+
+Accordingly,
+\begin{equation}
+    \boxed{
+    \text{global staticity}
+    \;\not\Rightarrow\;
+    \text{local kinematic staticity}.
+    }
+    \label{eq:AQ_global_local_distinction}
+\end{equation}
+
+This distinction is important for the interpretation of astronomical
+observables but is not required for the microscopic derivation of
+$\Gamma_{\mathrm D}$ itself.
+
+The purpose of the present appendix is therefore narrow. In the deterministic
+weak-transfer reduction, the physical relaxation rate is defined by
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm D}
+    \equiv
+    -\left.
+    \frac{d\ln E_{\gamma}}{dt}
+    \right|_{\mathrm{rel}},
+    \qquad
+    [\Gamma_{\mathrm D}]
+    =
+    \mathrm{s^{-1}}.
+    }
+\end{equation}
+The qualifier $\mathrm{rel}$ denotes energy transferred from the coherent
+photon branch into finite-energy Active-Vacuum receiving degrees of freedom.
+It excludes source--observer Doppler shifts, gravitational endpoint clock
+differences, and conservative frequency conversion by an evolving background.
+
+It does not derive:
 
 \begin{itemize}
-    \item \textbf{Mechanism:} A photon is a 2D transverse shear wave propagating exclusively across the solid FCC lattice nodes. \textit{(Note: This mechanism applies identically to 3D bulk gravitational waves).} During propagation, the transverse wave must continuously work against the visco-elastic friction between these solid nodes and the interstitial condensate.
-    \item \textbf{Result:} This work is not perfectly elastic. A fundamental, minute fraction of the wave's kinetic energy is dissipated into the lattice as longitudinal phonon heat, sustaining the 2.725 K Cosmic Microwave Background (as detailed in \hyperref[sec:lattice_hysteresis_blackbody]{Section \ref*{sec:lattice_hysteresis_blackbody}}). This boundary friction produces a strict temporal energy decay, which we define as the Vacuum Damping Rate ($\Gamma_{\mathrm{D}}$). This cumulative energy loss is observed macroscopically as cosmological redshift.
+    \item the global size of the Structural Reservoir,
+    \item the macroscopic source velocity field,
+    \item black-hole recession or rotational kinematics,
+    \item the complete observed-redshift decomposition,
+    \item the supernova light-curve timing law,
+    \item or the BAO/CMB observational mapping.
 \end{itemize}
 
-\vspace{0.5em}
-\noindent\textbf{Exemption of Topological Mass (Lorentz Invariance):} 
-It is critical to distinguish continuous transverse shear waves from condensed mass. As established in \hyperref[postulate:five]{Postulate V}, macroscopic mass (topological knots) propagates via perfectly elastic Sequential Discrete Reconfiguration (untying and retying). Because this state transfer operates strictly via radial volumetric displacement---which the interstitial condensate absorbs and returns as a perfectly elastic, lossless exchange---mass translating at a constant velocity experiences zero net vacuum damping, perfectly preserving Galilean and Lorentz invariance. The Vacuum Damping Rate ($\Gamma_{\mathrm{D}}$) applies exclusively to continuous dynamic stress propagation (photons and bulk gravitational waves) which must continuously apply transverse shear across the visco-elastic boundary.
+Instead, it asks one specific question:
 
-\section{The Energy Dissipation Equation}
-As formally derived from the continuum mechanics of the SGF in \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix \ref*{app:matter_vnlw_photon_linear_waveequation}} (Derivation of Vacuum Visco-Elasticity and Wave Arrest), the physical amplitude of a transverse shear wave ($\mathbf{A}$) propagating through the vacuum yields a strict temporal amplitude decay envelope:
 \begin{equation}
-    \mathbf{A}(t) = \mathbf{A}_0 e^{-\frac{\Gamma_{\mathrm{D}}}{2} t}
+    \boxed{
+    \text{Can the established TFT microscopic hierarchy support a finite}
+    \quad
+    \Gamma_{\mathrm D}
+    \quad
+    \text{without cosmological calibration?}
+    }
 \end{equation}
 
-Because the total mechanical energy of any classical elastic wave is directly proportional to the square of its amplitude ($E \propto |\mathbf{A}|^2$), substituting the decayed amplitude yields the pristine macroscopic energy decay curve of the active vacuum:
+Three logical levels must be kept separate.
+
+First, the following relations are inherited from the established TFT
+construction:
+\begin{align}
+    d_{\mathrm{nn}}
+    &=
+    2r_{\mathrm D},
+    \label{eq:AQ_dnn}
+    \\
+    A_{\mathrm{ct}}^{(\mathrm{modal})}
+    &=
+    \frac{M_{\mathrm D}}{\mu_{\mathrm D}}
+    =
+    2\pi\ell_{\mathrm S}^{2},
+    \label{eq:AQ_Act}
+    \\
+    M_{\mathrm D}c_{\mathrm E}r_{\mathrm D}
+    &=
+    h.
+    \label{eq:AQ_action_identity}
+\end{align}
+
+The coherent photon branch satisfies
 \begin{equation}
-    E(t) \propto \left( \mathbf{A}_0 e^{-\frac{\Gamma_{\mathrm{D}}}{2} t} \right)^2 = E_0 e^{-\Gamma_{\mathrm{D}} t}
+    \boxed{
+    I_{\gamma}
+    \equiv
+    \frac{E_{\gamma}}{\omega_{\gamma}}
+    =
+    \hbar.
+    }
+    \label{eq:AQ_photon_action}
 \end{equation}
 
-Taking the time-derivative of this exponential function yields the governing differential equation for macroscopic visco-elastic energy dissipation:
+Second, the present appendix introduces one explicit microscopic extension:
+the established transverse Soft-Floor modal coordinate is allowed to couple
+weakly to the phase-reference architecture through a
+reference-mediated scale-transfer channel.
+
+Third, a dimensionless coefficient
+$\mathcal F_{\mathrm R}$ is retained because geometry alone does not determine
+the complete carrier-projected noncoherent spectral response.
+
+The derivation therefore has the logical structure
 \begin{equation}
-    \frac{\mathrm{d}E}{\mathrm{d}t} = -\Gamma_{\mathrm{D}} E
+    \boxed{
+    \text{established TFT microphysics}
+    \rightarrow
+    \text{reference overlap}
+    \rightarrow
+    \text{second-order scale kernel}
+    \rightarrow
+    \Gamma_{\mathrm D}.
+    }
+    \label{eq:AQ_logic_chain}
 \end{equation}
 
-To map this to astronomical observations, we substitute the spatial propagation distance ($x = c_{\mathrm{E}} t$) to find the spatial energy decay rate:
+
+\section{Why Ordinary Amplitude Damping Cannot Produce the Required Drift}
+
+Consider an ordinary linearly damped transverse wave equation
 \begin{equation}
-    \frac{\mathrm{d}E}{\mathrm{d}x} = -\frac{\Gamma_{\mathrm{D}}}{c_{\mathrm{E}}} E
+    \nabla^2 A
+    -
+    \frac{1}{c_{\mathrm E}^2}
+    \frac{\partial^2 A}{\partial t^2}
+    -
+    \frac{\gamma_{\mathrm A}}{c_{\mathrm E}^2}
+    \frac{\partial A}{\partial t}
+    =
+    0,
+    \label{eq:AQ_linear_damped_wave}
+\end{equation}
+where $\gamma_{\mathrm A}$ is an ordinary amplitude-damping coefficient.
+
+For the harmonic ansatz
+\begin{equation}
+    A
+    =
+    A_0
+    e^{i(\mathbf{k}\cdot\mathbf{x}-\omega t)},
+\end{equation}
+one obtains
+\begin{equation}
+    \omega^2
+    +
+    i\gamma_{\mathrm A}\omega
+    -
+    c_{\mathrm E}^2k^2
+    =
+    0.
 \end{equation}
 
-Integrating this over propagation distance yields the compounding spatial decay function:
+The positive-frequency root is
 \begin{equation}
-    E_{\mathrm{obs}} = E_{\mathrm{emit}} e^{-\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
+    \omega
+    =
+    -\frac{i\gamma_{\mathrm A}}{2}
+    +
+    \sqrt{
+        c_{\mathrm E}^2k^2
+        -
+        \frac{\gamma_{\mathrm A}^2}{4}
+    }.
 \end{equation}
 
-\section{Deriving the Redshift Factor ($1+z$)}
-Because the energy of a photon is inversely proportional to its wavelength ($E \propto 1/\lambda$), we substitute wavelength into the spatial decay function:
+For
 \begin{equation}
-    \frac{1}{\lambda_{\mathrm{obs}}} = \frac{1}{\lambda_{\mathrm{emit}}} e^{-\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
+    \gamma_{\mathrm A}
+    \ll
+    c_{\mathrm E}k,
 \end{equation}
+this becomes
 \begin{equation}
-    \lambda_{\mathrm{obs}} = \lambda_{\mathrm{emit}} e^{\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
-\end{equation}
-
-The standard astronomical definition of redshift is $1+z = \lambda_{\mathrm{obs}}/\lambda_{\mathrm{emit}}$. Substituting our derived wavelength yields the absolute Visco-Elastic Damping Equation:
-\begin{equation}
-    1+z = e^{\frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}}
-\end{equation}
-
-\section{Resolving the Hubble Law and ``Dark Energy''}
-For relatively short, local cosmic distances, the Taylor series expansion of the exponential function ($e^y \approx 1+y$) cleanly reduces to a linear approximation:
-\begin{equation}
-    1+z \approx 1 + \frac{\Gamma_{\mathrm{D}} x}{c_{\mathrm{E}}}
-\end{equation}
-\begin{equation}
-    z \approx \frac{\Gamma_{\mathrm{D}}}{c_{\mathrm{E}}} x
+    \omega
+    \simeq
+    c_{\mathrm E}k
+    -
+    \frac{i\gamma_{\mathrm A}}{2}
+    -
+    \frac{\gamma_{\mathrm A}^2}
+    {8c_{\mathrm E}k}
+    +\cdots.
 \end{equation}
 
-Rearranging to solve for the velocity-equivalent ($c_{\mathrm{E}} z$):
+The leading imaginary contribution produces amplitude decay. The leading real
+frequency remains fixed by the carrier wave number.
+
+Thus
 \begin{equation}
-    c_{\mathrm{E}} \cdot z = \Gamma_{\mathrm{D}} \cdot x
+    \boxed{
+    \text{ordinary fixed-}k\text{ damping}
+    \neq
+    \text{continuous real-frequency migration}.
+    }
+    \label{eq:AQ_damping_nogo}
 \end{equation}
 
-\noindent\textbf{The Hubble Law Inversion:} This matches the exact linear format of Hubble's Law ($v = H_0 d$). By setting $\Gamma_{\mathrm{D}} \equiv H_0$, TFT proves that the Hubble constant is not a velocity of metric expansion, but the literal visco-elastic damping coefficient of the vacuum.
+Consequently, the desired vacuum relaxation rate must not be identified
+directly with $\gamma_{\mathrm A}$.
 
-Furthermore, at extreme distances (such as Type Ia Supernovae), the higher-order terms of the exponential expansion can no longer be ignored. Substituting $t = x/c_{\mathrm{E}}$, the second-order expansion yields:
+The required reduced photon law is instead
 \begin{equation}
-    z \approx \Gamma_{\mathrm{D}} t + \frac{(\Gamma_{\mathrm{D}} t)^2}{2}
+    \boxed{
+    \frac{d\ln\omega_{\gamma}}{dt}
+    =
+    -\Gamma_{\mathrm D}.
+    }
+    \label{eq:AQ_required_frequency_law}
 \end{equation}
 
-This mathematically proves that the inherent exponential nature of the decay natively produces a non-linear, upward-curving redshift. The $+\frac{(\Gamma_{\mathrm{D}} t)^2}{2}$ term exactly mimics the anomalous signal dimming that standard cosmology incorrectly attributes to an accelerating metric (``Dark Energy'').
 
-\section{The Empirical Calibration of $\Gamma_{\mathrm{D}}$}
-Because $\Gamma_{\mathrm{D}}$ is identical to the empirical Hubble Constant, we derive the absolute magnitude of the vacuum damping using the high-precision SH0ES collaboration local baseline ($H_0 \approx 73.04$ km/s/Mpc):
+\section{Self-Similar Photon Scale Coordinate}
+
+Define the dimensionless photon scale coordinate
 \begin{equation}
-    \Gamma_{\mathrm{D}} \equiv H_0 = \frac{73040 \text{ m/s}}{3.0857 \times 10^{22} \text{ m}} \approx 2.3671 \times 10^{-18} \text{ s}^{-1}
+    q
+    \equiv
+    kr_{\mathrm D}.
+    \label{eq:AQ_qdef}
 \end{equation}
 
-This temporal rate defines the absolute Viscous Cosmic Horizon ($R_{\mathrm{U}}$)---the coordinate distance where cumulative vacuum visco-elastic damping attenuates a photon's initial energy by a factor of $1/e$:
+The coherent self-similar photon family may be represented schematically by
 \begin{equation}
-    R_{\mathrm{U}} = \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}} \approx 1.2665 \times 10^{26} \text{ m}
+    \mathbf{u}_q(\mathbf{x})
+    =
+    r_{\mathrm D}q\,
+    \mathbf{U}
+    \left(
+        \frac{q\mathbf{x}}{r_{\mathrm D}}
+    \right).
+    \label{eq:AQ_selfsimilar_photon}
 \end{equation}
 
-\section{Conclusion}
-The Vacuum Damping Rate ($\Gamma_{\mathrm{D}}$) is numerically equivalent to the empirical Hubble Constant ($H_0$), operating as a mechanical friction coefficient rather than a metric expansion rate.
+Introduce
+\begin{equation}
+    \boldsymbol{\xi}
+    =
+    \frac{q\mathbf{x}}{r_{\mathrm D}}.
+\end{equation}
+
+The associated strain scales as
+\begin{equation}
+    \boldsymbol{\varepsilon}_q
+    =
+    q^2
+    \boldsymbol{\mathcal E}(\boldsymbol{\xi}),
+\end{equation}
+whereas the volume element transforms according to
+\begin{equation}
+    d^3x
+    =
+    r_{\mathrm D}^{3}
+    q^{-3}
+    d^3\xi.
+\end{equation}
+
+The elastic energy therefore takes the form
+\begin{align}
+    E_{\gamma}(q)
+    &=
+    \frac{1}{2}
+    \int
+    \boldsymbol{\varepsilon}_q
+    :
+    \mathbf{C}
+    :
+    \boldsymbol{\varepsilon}_q
+    \,d^3x
+    \\
+    &=
+    qE_*,
+    \label{eq:AQ_Elinearq}
+\end{align}
+with
+\begin{equation}
+    E_*
+    =
+    \frac{r_{\mathrm D}^{3}}{2}
+    \int
+    \boldsymbol{\mathcal E}
+    :
+    \mathbf{C}
+    :
+    \boldsymbol{\mathcal E}
+    \,d^3\xi.
+\end{equation}
+
+For the one-action photon family,
+\begin{equation}
+    E_{\gamma}
+    =
+    \hbar\omega_{\gamma}.
+    \label{eq:AQ_Ehbaromega}
+\end{equation}
+
+Define the logarithmic scale coordinate
+\begin{equation}
+    s
+    \equiv
+    \ln q.
+    \label{eq:AQ_sdef}
+\end{equation}
+
+Then
+\begin{equation}
+    \dot s
+    =
+    \frac{\dot q}{q}.
+\end{equation}
+
+Let
+$\boldsymbol{\Phi}_{\gamma}$
+denote the complete coherent photon configuration. The tangent to the
+self-similar photon family is
+\begin{equation}
+    \boxed{
+    \boldsymbol{\Psi}_s
+    \equiv
+    \frac{
+        \partial\boldsymbol{\Phi}_{\gamma}
+    }{
+        \partial s
+    }
+    =
+    q
+    \frac{
+        \partial\boldsymbol{\Phi}_{\gamma}
+    }{
+        \partial q
+    }.
+    }
+    \label{eq:AQ_scale_tangent}
+\end{equation}
+
+The proposed weak nonconservative interaction is required to project primarily
+onto this tangent.
+
+It is therefore a scale-transfer process rather than an ordinary attenuation
+operator acting orthogonally to the coherent photon family.
+
+
+\section{Established Role of the FCC Modal Area}
+
+The FCC contact homogenization gives
+\begin{equation}
+    \boxed{
+    A_{\mathrm{ct}}^{(\mathrm{modal})}
+    =
+    \frac{M_{\mathrm D}}{\mu_{\mathrm D}}
+    =
+    2\pi\ell_{\mathrm S}^{2}.
+    }
+    \label{eq:AQ_modal_area}
+\end{equation}
+
+The quantity
+$A_{\mathrm{ct}}^{(\mathrm{modal})}$
+has a specific established role.
+
+The microscopic FCC contact law is expressed in terms of interface
+coefficients, while the primitive-cell reduced transverse coordinate is
+expressed through integrated stiffness and nodal inertia.
+
+The modal inertia is
+\begin{equation}
+    m_{\mathrm{ct}}^{(\mathrm{modal})}
+    =
+    \mu_{\mathrm D}
+    A_{\mathrm{ct}}^{(\mathrm{modal})}
+    =
+    M_{\mathrm D}.
+    \label{eq:AQ_modal_mass}
+\end{equation}
+
+Similarly,
+\begin{equation}
+    k_{\mathrm{ct}}^{(\mathrm{modal})}
+    =
+    \kappa_{\mathrm c}
+    A_{\mathrm{ct}}^{(\mathrm{modal})}.
+    \label{eq:AQ_modal_stiffness}
+\end{equation}
+
+Thus
+\begin{equation}
+    \boxed{
+    A_{\mathrm{ct}}^{(\mathrm{modal})}
+    =
+    \text{surface-to-cell normalization area of the reduced transverse mode}.
+    }
+\end{equation}
+
+It is not asserted to be a literal circular contact patch or a geometrically
+isolated active fraction of every FCC face.
+
+The present derivation preserves this interpretation.
+
+
+\section{Reference-Mediated Scale-Transfer Closure}
+
+The Hard Floor remains the zero-inertia phase-reference and structural-record
+sector.
+
+It is not assigned:
+
 \begin{itemize}
-    \item \textbf{The Nature of Expansion:} The observed ``expansion'' and ``acceleration'' of the universe are mathematical artifacts caused by observing a purely exponential visco-elastic decay curve and misinterpreting it as kinematics.
-    \item \textbf{LIGO Alignment:} Because this visco-elastic damping ($\Gamma_{\mathrm{D}}$) is strictly a mechanical consequence of geometric shear rubbing against the condensate, it applies identically to all transverse waves. This proves why macroscopic gravitational waves (3D bulk shear) suffer the exact same cosmological redshift as photons (2D surface shear) over cosmic distances, perfectly aligning with observational amplitude corrections required by the LIGO collaboration.
+    \item an independently propagating photon mode,
+    \item an additive photon inertia,
+    \item or a dissipative energy-absorption role.
 \end{itemize}
+
+The minimal new closure is that the same normalized transverse coordinate used
+by the Soft-Floor photon may weakly sample the fixed substrate reference.
+
+Define the transverse reference-coupled modal measure by
+\begin{equation}
+    \boxed{
+    A_{\mathrm R}
+    \equiv
+    A_{\mathrm{ct}}^{(\mathrm{modal})}.
+    }
+    \label{eq:AQ_AR}
+\end{equation}
+
+Equation~\eqref{eq:AQ_AR} does not identify the modal area with a literal
+Hard-Floor aperture.
+
+It states only that the reference-mediated coupling is projected through the
+same normalized transverse coordinate already established for the photon
+carrier.
+
+The additional microscopic closure assigns one substrate correlation depth
+$\ell_{\mathrm S}$ to this reference support:
+\begin{equation}
+    \boxed{
+    V_{\mathrm R}
+    \equiv
+    A_{\mathrm R}\ell_{\mathrm S}.
+    }
+    \label{eq:AQ_VR}
+\end{equation}
+
+Using Equation~\eqref{eq:AQ_modal_area},
+\begin{equation}
+    \boxed{
+    V_{\mathrm R}
+    =
+    2\pi\ell_{\mathrm S}^{3}.
+    }
+    \label{eq:AQ_VR_explicit}
+\end{equation}
+
+The Soft-Floor node volume is
+\begin{equation}
+    \boxed{
+    V_{\mathrm D}
+    =
+    \frac{4\pi}{3}
+    r_{\mathrm D}^{3}.
+    }
+    \label{eq:AQ_VD}
+\end{equation}
+
+For normalized lowest-order support functions, define the geometric overlap
+amplitude
+\begin{equation}
+    \eta_{\mathrm R}
+    \equiv
+    \sqrt{
+        \frac{V_{\mathrm R}}{V_{\mathrm D}}
+    }.
+    \label{eq:AQ_eta_def}
+\end{equation}
+
+Substitution gives
+\begin{equation}
+    \boxed{
+    \eta_{\mathrm R}
+    =
+    \sqrt{\frac{3}{2}}
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \right)^{3/2}.
+    }
+    \label{eq:AQ_eta}
+\end{equation}
+
+This quantity is an overlap amplitude between normalized modal supports.
+
+It is not a collision probability. It is also not a thermodynamic state count,
+mode degeneracy, projector rank, or heat-capacity fraction of the receiving
+sector.
+
+
+\section{Second-Order Number-Preserving Scale Coupling}
+
+A number-preserving photon transition cannot terminate in the Hard Floor.
+
+The phase-reference sector supplies only the intermediate structural
+correlation. The final energy must remain within the active Soft-Floor system.
+
+The lowest-order schematic process is therefore
+\begin{equation}
+    \gamma_q
+    \longrightarrow
+    \text{reference-correlated intermediate state}
+    \longrightarrow
+    \gamma_{q-dq}
+    +
+    \text{noncoherent active-vacuum degrees of freedom},
+    \label{eq:AQ_second_order_process}
+\end{equation}
+where the noncoherent degrees of freedom receive the energy transferred out of
+the coherent photon branch. Their subsequent thermalization is not assumed in
+the present derivation.
+
+The projected interaction may be written schematically as
+\begin{equation}
+    H_{\mathrm{int}}^{(\mathrm R)}
+    =
+    g_0
+    \epsilon_{\mathrm R}
+    \hat X_s
+    \hat B_{\mathrm{AV}},
+    \label{eq:AQ_Hint}
+\end{equation}
+where:
+
+\begin{itemize}
+    \item $\hat X_s$ is the photon operator projected onto the scale tangent
+    $\boldsymbol{\Psi}_s$;
+
+    \item $\hat B_{\mathrm{AV}}$ is the work-conjugate operator of the
+    noncoherent active-vacuum degrees of freedom;
+
+    \item $g_0$ is the unsuppressed microscopic interaction scale;
+
+    \item $\epsilon_{\mathrm R}$ is the dimensionless
+    reference-mediated effective coupling.
+\end{itemize}
+
+Under the adopted two-reference-overlap-vertex return closure, the effective
+coupling amplitude is
+\begin{equation}
+    \epsilon_{\mathrm R}
+    =
+    \eta_{\mathrm R}^{2}.
+\end{equation}
+
+Hence
+\begin{equation}
+    \boxed{
+    \epsilon_{\mathrm R}
+    =
+    \frac{3}{2}
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \right)^3.
+    }
+    \label{eq:AQ_epsilonR}
+\end{equation}
+
+The irreversible scale kernel is second order in this effective interaction
+amplitude.
+
+Define
+\begin{equation}
+    P_{\mathrm R}
+    \equiv
+    \epsilon_{\mathrm R}^{2}.
+    \label{eq:AQ_PRdef}
+\end{equation}
+
+Then
+\begin{equation}
+    \boxed{
+    P_{\mathrm R}
+    =
+    \frac{9}{4}
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \right)^6.
+    }
+    \label{eq:AQ_PR}
+\end{equation}
+
+The sixth power is therefore generated by
+\begin{equation}
+    \boxed{
+    \underbrace{
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \right)^3
+    }_{\text{two-vertex amplitude}}
+    \quad
+    \xrightarrow{\;|\cdot|^2\;}
+    \quad
+    \underbrace{
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \right)^6
+    }_{\text{relaxation-kernel weight}}.
+    }
+    \label{eq:AQ_sixth_power_origin}
+\end{equation}
+
+The quantity $P_{\mathrm R}$ is a dimensionless perturbative kernel weight.
+
+It must not be interpreted as the probability of one rare, macroscopic
+frequency-changing collision.
+
+
+\section{Carrier-Projected Noncoherent Correlation}
+
+The geometric factor in Equation~\eqref{eq:AQ_PR} does not by itself generate
+irreversibility.
+
+A nonzero relaxation rate requires a continuum of noncoherent active-vacuum
+states onto which the photon scale tangent can transfer energy.
+
+Let the reduced logarithmic-scale dynamics be written schematically as
+\begin{equation}
+    \dot s(t)
+    =
+    -
+    P_{\mathrm R}
+    \int_0^{\infty}
+    K_{\mathrm R}(t_{\mathrm{lag}})
+    \,dt_{\mathrm{lag}}.
+    \label{eq:AQ_kernel_equation}
+\end{equation}
+
+The reference microscopic two-leg correlation interval is defined as
+\begin{equation}
+    \boxed{
+    t_{\mathrm{corr}}^{(0)}
+    \equiv
+    \frac{2d_{\mathrm{nn}}}{c_{\mathrm E}}
+    =
+    \frac{4r_{\mathrm D}}{c_{\mathrm E}}.
+    }
+    \label{eq:AQ_tau0}
+\end{equation}
+
+This is the shortest geometric interval associated with departure from and
+return to the coherent nearest-neighbor transfer sequence.
+
+The exact physical correlation duration need not equal this reference value.
+
+Write the kernel as
+\begin{equation}
+    K_{\mathrm R}(t_{\mathrm{lag}})
+    =
+    \frac{1}{
+        \left(
+            t_{\mathrm{corr}}^{(0)}
+        \right)^2
+    }
+    \widehat K_{\mathrm R}
+    \left(
+        \frac{t_{\mathrm{lag}}}{
+            t_{\mathrm{corr}}^{(0)}
+        }
+    \right).
+    \label{eq:AQ_kernel_scaled}
+\end{equation}
+
+Define the dimensionless carrier--noncoherent correlation factor
+\begin{equation}
+    \boxed{
+    \mathcal F_{\mathrm R}
+    \equiv
+    \int_0^{\infty}
+    \widehat K_{\mathrm R}(u)\,du,
+    \qquad
+    u
+    =
+    \frac{t_{\mathrm{lag}}}{t_{\mathrm{corr}}^{(0)}}.
+    }
+    \label{eq:AQ_FRdef}
+\end{equation}
+
+The factor $\mathcal F_{\mathrm R}$ contains the normalized microscopic
+information not determined by the geometric overlap alone, including:
+
+\begin{itemize}
+    \item the intermediate-state energy denominator;
+
+    \item the scale-projected active-vacuum spectral density;
+
+    \item phase and registry participation;
+
+    \item the exact temporal correlation function;
+
+    \item the detailed projection of the interaction onto
+    $\boldsymbol{\Psi}_s$;
+
+    \item and the physical correlation duration relative to the reference
+    two-leg interval.
+\end{itemize}
+
+The carrier-projected spectral density entering
+$\mathcal F_{\mathrm R}$ is not the thermodynamic density of states of the
+receiving sector and therefore does not determine its state multiplicity,
+thermal energy, or heat capacity.
+
+The reduced scale law becomes
+\begin{equation}
+    \dot s
+    =
+    -
+    \frac{
+        P_{\mathrm R}
+        \mathcal F_{\mathrm R}
+    }{
+        t_{\mathrm{corr}}^{(0)}
+    }.
+\end{equation}
+
+Identifying
+\begin{equation}
+    \dot s
+    =
+    -\Gamma_{\mathrm D},
+\end{equation}
+one obtains
+\begin{equation}
+    \Gamma_{\mathrm D}
+    =
+    \frac{
+        P_{\mathrm R}
+        \mathcal F_{\mathrm R}
+    }{
+        t_{\mathrm{corr}}^{(0)}
+    }.
+    \label{eq:AQ_gamma_kernel}
+\end{equation}
+
+Substituting Equations~\eqref{eq:AQ_PR} and
+\eqref{eq:AQ_tau0} yields
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm D}
+    =
+    \frac{9}{16}
+    \mathcal F_{\mathrm R}
+    \frac{c_{\mathrm E}}{r_{\mathrm D}}
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \right)^6.
+    }
+    \label{eq:AQ_gamma_final}
+\end{equation}
+
+Equation~\eqref{eq:AQ_gamma_final} is the principal conditional microscopic
+closure of this appendix.
+
+
+\section{Required Continuum and the Conservative Limit}
+
+A finite set of conservative internal modes cannot produce an irreversible
+constant relaxation coefficient in the asymptotic long-time limit.
+
+Let
+\begin{equation}
+    \Sigma_s^{\mathrm R}(\Omega)
+\end{equation}
+denote the retarded self-energy of the photon scale coordinate after
+noncoherent active-vacuum degrees of freedom have been projected out.
+
+A finite Markovian relaxation coefficient requires
+\begin{equation}
+    \boxed{
+    \eta_{s\mathrm R}
+    \equiv
+    \lim_{\Omega\rightarrow0}
+    \frac{
+        -\operatorname{Im}
+        \Sigma_s^{\mathrm R}(\Omega)
+    }{
+        \Omega
+    }
+    >
+    0.
+    }
+    \label{eq:AQ_ohmic_condition}
+\end{equation}
+
+A finite pure-point spectrum of conservative oscillators does not satisfy this
+condition in the required irreversible sense.
+
+Therefore,
+\begin{equation}
+    \boxed{
+    \text{pure conservative coherent sector}
+    \Longrightarrow
+    \mathcal F_{\mathrm R}=0
+    \Longrightarrow
+    \Gamma_{\mathrm D}=0.
+    }
+    \label{eq:AQ_conservative_limit}
+\end{equation}
+
+This reproduces the previously established conservative coherent-vacuum
+result. It applies to the completed conservative branch and does not by itself
+determine the response of a real nonideal State-I Active Vacuum.
+
+A finite vacuum relaxation rate requires both
+\begin{equation}
+    P_{\mathrm R}\neq0
+\end{equation}
+and
+\begin{equation}
+    \mathcal F_{\mathrm R}\neq0.
+\end{equation}
+
+The first measures the microscopic weakness of the coupling.
+
+The second determines whether the active vacuum actually supplies a
+carrier-projected irreversible continuum.
+
+
+\section{Unit-Reference Single-Correlation Closure}
+
+The simplest local normalization is
+\begin{equation}
+    \boxed{
+    \mathcal F_{\mathrm R}=1.
+    }
+    \label{eq:AQ_FRone}
+\end{equation}
+
+This is not claimed to be derived from the complete nonlinear microscopic
+spectrum.
+
+It is the unit-reference single-correlation closure.
+
+Under Equation~\eqref{eq:AQ_FRone},
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm D}^{(0)}
+    =
+    \frac{9}{16}
+    \frac{c_{\mathrm E}}{r_{\mathrm D}}
+    \left(
+        \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \right)^6.
+    }
+    \label{eq:AQ_gamma0}
+\end{equation}
+
+Using the presently adopted TFT microscopic quantities
+\begin{align}
+    c_{\mathrm E}
+    &=
+    2.99792458\times10^8
+    \ {\rm m\,s^{-1}},
+    \\
+    \ell_{\mathrm S}
+    &\simeq
+    1.616255\times10^{-35}
+    \ {\rm m},
+    \\
+    r_{\mathrm D}
+    &\simeq
+    7.4504\times10^{-27}
+    \ {\rm m},
+\end{align}
+gives
+\begin{equation}
+    \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+    \simeq
+    2.16935\times10^{-9}.
+\end{equation}
+
+The single-reference overlap is
+\begin{equation}
+    \eta_{\mathrm R}
+    \simeq
+    1.2375\times10^{-13}.
+\end{equation}
+
+The effective two-vertex amplitude is
+\begin{equation}
+    \epsilon_{\mathrm R}
+    \simeq
+    1.5314\times10^{-26}.
+\end{equation}
+
+The corresponding second-order kernel weight is
+\begin{equation}
+    \boxed{
+    P_{\mathrm R}
+    \simeq
+    2.3451\times10^{-52}.
+    }
+    \label{eq:AQ_PR_numeric}
+\end{equation}
+
+The reference correlation frequency is
+\begin{equation}
+    \frac{1}{
+        t_{\mathrm{corr}}^{(0)}
+    }
+    =
+    \frac{
+        c_{\mathrm E}
+    }{
+        4r_{\mathrm D}
+    }
+    \simeq
+    1.0060\times10^{34}
+    \ {\rm s^{-1}}.
+\end{equation}
+
+Their product gives
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm D}^{(0)}
+    \simeq
+    2.3591\times10^{-18}
+    \ {\rm s^{-1}}.
+    }
+    \label{eq:AQ_gamma_numeric}
+\end{equation}
+
+No astronomical observable is used in obtaining
+Equation~\eqref{eq:AQ_gamma_numeric}. This remains a unit-reference
+evaluation: it assumes $\mathcal F_{\mathrm R}=1$ and inherits the adopted
+calibration of $r_{\mathrm D}$.
+
+
+\section{Downstream Calibrated Normalization}
+
+Only after evaluating the unit-reference microscopic rate do we introduce the present low-redshift empirical normalization. Define
+
+\begin{equation}
+    \Gamma_{\mathrm D}^{(\mathrm{cal})}
+    \equiv
+    H_0^{(\mathrm{obs})}.
+\end{equation}
+
+Using the value employed in the cosmological sector,
+
+\begin{equation}
+    \Gamma_{\mathrm D}^{(\mathrm{cal})}
+    \simeq
+    2.3671\times10^{-18}\ \mathrm{s}^{-1}.
+\end{equation}
+
+The corresponding carrier-response normalization is
+
+\begin{equation}
+    F_{\mathrm R}^{(\mathrm{cal})}
+    =
+    \frac{
+        \Gamma_{\mathrm D}^{(\mathrm{cal})}
+    }{
+        \Gamma_{\mathrm D}^{(0)}
+    }.
+\end{equation}
+
+Numerically,
+
+\begin{equation}
+    F_{\mathrm R}^{(\mathrm{cal})}
+    \simeq
+    1.00339.
+\end{equation}
+
+Thus, the unit-reference rate differs from the present calibrated normalization by approximately $0.34\%$. This downstream normalization leaves the microscopic unit-reference construction unchanged.
+
+\section{Equivalent Fundamental-Constant Representation}
+
+The substrate spacing satisfies
+\begin{equation}
+    \ell_{\mathrm S}^{2}
+    =
+    \frac{
+        \hbar G
+    }{
+        c_{\mathrm E}^{3}
+    }.
+    \label{eq:AQ_lS}
+\end{equation}
+
+Hence
+\begin{equation}
+    \ell_{\mathrm S}^{6}
+    =
+    \frac{
+        \hbar^3G^3
+    }{
+        c_{\mathrm E}^{9}
+    }.
+\end{equation}
+
+Equation~\eqref{eq:AQ_gamma_final} may therefore be written
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm D}
+    =
+    \frac{9}{16}
+    \mathcal F_{\mathrm R}
+    \frac{
+        \hbar^3G^3
+    }{
+        c_{\mathrm E}^{8}
+        r_{\mathrm D}^{7}
+    }.
+    }
+    \label{eq:AQ_gamma_fundamental}
+\end{equation}
+
+The dimensions are
+\begin{equation}
+    [\Gamma_{\mathrm D}]
+    =
+    {\rm s^{-1}}.
+\end{equation}
+
+The result exposes the strong scale sensitivity
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm D}
+    \propto
+    r_{\mathrm D}^{-7}.
+    }
+    \label{eq:AQ_rD_scaling}
+\end{equation}
+
+Taking a formal logarithmic variation before imposing correlations among the
+microscopic quantities gives
+\begin{equation}
+    \frac{
+        \delta\Gamma_{\mathrm D}
+    }{
+        \Gamma_{\mathrm D}
+    }
+    =
+    \frac{
+        \delta\mathcal F_{\mathrm R}
+    }{
+        \mathcal F_{\mathrm R}
+    }
+    +
+    6
+    \frac{
+        \delta\ell_{\mathrm S}
+    }{
+        \ell_{\mathrm S}
+    }
+    -
+    7
+    \frac{
+        \delta r_{\mathrm D}
+    }{
+        r_{\mathrm D}
+    }
+    +
+    \frac{
+        \delta c_{\mathrm E}
+    }{
+        c_{\mathrm E}
+    }.
+    \label{eq:AQ_sensitivity}
+\end{equation}
+
+When Equation~\eqref{eq:AQ_lS} is imposed, the variations of
+$\ell_{\mathrm S}$, $G$, and $c_{\mathrm E}$ are not independent. The numerical
+rate remains strongly sensitive to the independent determination of
+$r_{\mathrm D}$.
+
+The current TFT construction of $r_{\mathrm D}$ inherits an unresolved
+microscopic two-dimensional-to-three-dimensional impedance projection.
+Consequently,
+\begin{equation}
+    \boxed{
+    \text{cosmology-independent}
+    \;\not\Rightarrow\;
+    \text{parameter-free}.
+    }
+\end{equation}
+
+
+\section{Continuous Scale Drift Rather Than Rare Events}
+
+The extremely small value of $P_{\mathrm R}$ must not be interpreted as a
+rare-event probability.
+
+In the intended coherent-kernel closure, each microscopic correlation interval
+produces a weak scale-tangent correction. Let the discrete logarithmic scale
+evolution be
+\begin{equation}
+    s_{n+1}
+    =
+    s_n
+    -
+    \mathcal F_{\mathrm R}
+    P_{\mathrm R}
+    +
+    \delta s_n,
+    \label{eq:AQ_discrete_drift}
+\end{equation}
+where $\delta s_n$ is the residual fluctuating component.
+
+After
+\begin{equation}
+    N_{\mathrm{corr}}
+    \simeq
+    \frac{
+        t
+    }{
+        t_{\mathrm{corr}}^{(0)}
+    }
+\end{equation}
+correlation intervals,
+\begin{equation}
+    \langle s(t)\rangle
+    =
+    s_0
+    -
+    \Gamma_{\mathrm D}t.
+    \label{eq:AQ_s_drift}
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \boxed{
+    \frac{
+        d\langle\ln q\rangle
+    }{
+        dt
+    }
+    =
+    -\Gamma_{\mathrm D}.
+    }
+\end{equation}
+
+If the residual increments are sufficiently weakly correlated and satisfy the
+additional variance closure
+\begin{equation}
+    \left\langle
+        (\delta s_n)^2
+    \right\rangle
+    =
+    \mathcal C_{\mathrm R}
+    P_{\mathrm R}^{2},
+    \label{eq:AQ_noise_assumption}
+\end{equation}
+with $\mathcal C_{\mathrm R}=O(1)$, the logarithmic-scale diffusion coefficient
+is
+\begin{equation}
+    D_s
+    =
+    \frac{
+        \mathcal C_{\mathrm R}
+        P_{\mathrm R}^{2}
+    }{
+        2t_{\mathrm{corr}}^{(0)}
+    }.
+\end{equation}
+
+Thus, for $\mathcal F_{\mathrm R}>0$,
+\begin{equation}
+    \boxed{
+    \frac{
+        D_s
+    }{
+        \Gamma_{\mathrm D}
+    }
+    =
+    \frac{
+        \mathcal C_{\mathrm R}
+    }{
+        2\mathcal F_{\mathrm R}
+    }
+    P_{\mathrm R}.
+    }
+    \label{eq:AQ_diffusion_ratio}
+\end{equation}
+
+Because
+\begin{equation}
+    P_{\mathrm R}
+    \sim
+    10^{-52},
+\end{equation}
+this particular fluctuation closure permits systematic scale drift with
+negligible stochastic broadening.
+
+The suppression in Equation~\eqref{eq:AQ_diffusion_ratio} is conditional on
+Equation~\eqref{eq:AQ_noise_assumption}, the assumed increment correlations,
+and the physical state of the receiver. It does not follow from the smallness
+of $P_{\mathrm R}$ alone.
+
+A compound-jump description is not adopted in the present coherent-kernel
+closure. Any such alternative must be assessed through its independently
+derived first and second transfer moments rather than excluded solely by its
+statistical classification.
+
+When $D_s$ is not negligible, the drift of $\langle s\rangle$ and the
+fractional decay of the mean photon energy need not coincide exactly. Outside
+the drift-dominated regime, the physical rate must be defined by the
+energy-transfer first moment.
+
+
+\section{Energy Transfer and Real-Frequency Evolution}
+
+The projected scale-transfer law gives
+\begin{equation}
+    \boxed{
+    \left.\dot E_{\gamma}\right|_{\mathrm{rel}}
+    =
+    -\Gamma_{\mathrm D}E_{\gamma}.
+    }
+    \label{eq:AQ_energy_decay}
+\end{equation}
+
+After reversible interaction energy and temporary dressing have been accounted
+for, the energy removed from the coherent photon branch is transferred to
+finite-energy noncoherent degrees of freedom of the Active Vacuum. This
+energy-transfer statement does not by itself establish thermalization, a CMB
+receiver occupation, or a temperature. The smooth reduced law also does not
+imply that a fractional quantum of action is deposited on each individual FCC
+node.
+
+For a photon remaining on the same coherent one-action branch,
+\begin{equation}
+    I_{\gamma}
+    =
+    \frac{
+        E_{\gamma}
+    }{
+        \omega_{\gamma}
+    }
+    =
+    \hbar.
+\end{equation}
+
+The invariant $I_{\gamma}=\hbar$ applies to the surviving coherent photon
+branch. The microscopic decomposition of the transferred energy among allowed
+noncoherent Active-Vacuum excitations is not determined by the present reduced
+scale-transfer law.
+
+Differentiation gives
+\begin{equation}
+    \dot I_{\gamma}
+    =
+    \frac{
+        \dot E_{\gamma}
+    }{
+        \omega_{\gamma}
+    }
+    -
+    \frac{
+        E_{\gamma}
+    }{
+        \omega_{\gamma}^{2}
+    }
+    \dot\omega_{\gamma}.
+\end{equation}
+
+Under
+\begin{equation}
+    \dot I_{\gamma}=0,
+\end{equation}
+one obtains
+\begin{equation}
+    \frac{
+        \dot E_{\gamma}
+    }{
+        E_{\gamma}
+    }
+    =
+    \frac{
+        \dot\omega_{\gamma}
+    }{
+        \omega_{\gamma}
+    }.
+\end{equation}
+
+Hence
+\begin{equation}
+    \boxed{
+    \left.\dot\omega_{\gamma}\right|_{\mathrm{rel}}
+    =
+    -\Gamma_{\mathrm D}\omega_{\gamma}.
+    }
+    \label{eq:AQ_omega_evolution}
+\end{equation}
+
+For constant $\Gamma_{\mathrm D}$, integration gives
+\begin{equation}
+    \boxed{
+    \omega_{\gamma}(t)
+    =
+    \omega_{\gamma,0}
+    e^{-\Gamma_{\mathrm D}t}.
+    }
+    \label{eq:AQ_omega_solution}
+\end{equation}
+
+On a homogeneous stationary linear branch, the wavelength evolves
+correspondingly as
+\begin{equation}
+    \boxed{
+    \lambda_{\gamma}(t)
+    =
+    \lambda_{\gamma,0}
+    e^{+\Gamma_{\mathrm D}t}.
+    }
+    \label{eq:AQ_lambda_solution}
+\end{equation}
+
+This is a real-frequency evolution through the coherent eigenbranch. It is not
+obtained from a decaying field amplitude at fixed $k$.
+
+
+\section{Wave-Vector Transport}
+
+Let the conservative carrier branch be
+\begin{equation}
+    \omega_{\gamma}
+    =
+    \omega_{\mathrm c}(\mathbf{k}).
+\end{equation}
+
+For a locally homogeneous stationary segment of the Active Vacuum,
+\begin{equation}
+    \left.\dot\omega_{\gamma}\right|_{\mathrm{rel}}
+    =
+    \mathbf{v}_{\mathrm g}
+    \cdot
+    \left.\dot{\mathbf{k}}\right|_{\mathrm{rel}},
+\end{equation}
+where
+\begin{equation}
+    \mathbf{v}_{\mathrm g}
+    =
+    \nabla_{\mathbf{k}}
+    \omega_{\mathrm c}.
+\end{equation}
+
+The intended leading scale-transfer channel is direction preserving:
+\begin{equation}
+    \boxed{
+    \left.
+    \dot{\hat{\mathbf{k}}}
+    \right|_{\mathrm{rel}}
+    =
+    0.
+    }
+    \label{eq:AQ_direction_preservation}
+\end{equation}
+
+This is a defining condition on the selected mean relaxation channel. Isotropy
+alone does not exclude stochastic angular diffusion, whose rate must be
+evaluated separately.
+
+Write
+\begin{equation}
+    \left.\dot{\mathbf{k}}\right|_{\mathrm{rel}}
+    =
+    \left.\dot k\right|_{\mathrm{rel}}
+    \hat{\mathbf{k}}.
+\end{equation}
+
+Define the longitudinal group-speed projection
+\begin{equation}
+    v_{\mathrm{g},\parallel}
+    \equiv
+    \mathbf{v}_{\mathrm g}
+    \cdot
+    \hat{\mathbf{k}}.
+\end{equation}
+
+Using Equation~\eqref{eq:AQ_omega_evolution},
+\begin{equation}
+    v_{\mathrm{g},\parallel}
+    \left.\dot k\right|_{\mathrm{rel}}
+    =
+    -\Gamma_{\mathrm D}
+    \omega_{\mathrm c}.
+\end{equation}
+
+Thus
+\begin{equation}
+    \boxed{
+    \left.\dot{\mathbf{k}}\right|_{\mathrm{rel}}
+    =
+    -
+    \Gamma_{\mathrm D}
+    \frac{
+        \omega_{\mathrm c}
+    }{
+        v_{\mathrm{g},\parallel}
+    }
+    \hat{\mathbf{k}}.
+    }
+    \label{eq:AQ_k_general}
+\end{equation}
+
+For the long-wave linear branch,
+\begin{equation}
+    \omega_{\mathrm c}
+    \simeq
+    c_{\mathrm E}k,
+    \qquad
+    v_{\mathrm{g},\parallel}
+    \simeq
+    c_{\mathrm E},
+\end{equation}
+so
+\begin{equation}
+    \boxed{
+    \left.\dot{\mathbf{k}}\right|_{\mathrm{rel}}
+    =
+    -\Gamma_{\mathrm D}\mathbf{k}.
+    }
+    \label{eq:AQ_k_simple}
+\end{equation}
+
+For a constant rate in this long-wave limit, the corresponding reduced
+one-photon kinetic operator is
+\begin{equation}
+    \boxed{
+    \mathcal L_{\mathrm D}f_{\gamma}
+    =
+    \Gamma_{\mathrm D}
+    \nabla_{\mathbf{k}}
+    \cdot
+    \left(
+        \mathbf{k}f_{\gamma}
+    \right).
+    }
+    \label{eq:AQ_LD}
+\end{equation}
+
+Equations~\eqref{eq:AQ_k_general} and~\eqref{eq:AQ_k_simple} specify the
+required reduced wave-vector transport. A complete microscopic
+photon--receiver interaction must reproduce this transport together with the
+correct spatial ray equation and mechanical recoil.
+
+
+\section{Photon Number, Polarization, and Angular Coherence}
+
+The selected coherent scale-transfer channel is defined to preserve the
+surviving photon count. Integrating Equation~\eqref{eq:AQ_LD} over
+wave-vector space, for an integrable distribution with no boundary flux,
+gives
+\begin{equation}
+    \boxed{
+    \left.\dot N_{\mathrm{ph}}\right|_{\mathrm{rel}}
+    =
+    0.
+    }
+    \label{eq:AQ_number}
+\end{equation}
+
+The notation $N_{\mathrm{ph}}$ denotes photon number and is distinct from the
+information count $N_{\gamma}$ defined elsewhere in TFT. Photon absorption,
+emission, and thermal number-changing processes are separate channels and are
+not excluded by Equation~\eqref{eq:AQ_number}.
+
+The vacuum is assumed parity even and unpolarized at the retained order.
+Consequently, the leading mean scale-projected response is required to act
+identically on the two transverse polarization states.
+
+In polarization-space notation,
+\begin{equation}
+    \boxed{
+    \Sigma_{ab}^{\mathrm R}
+    =
+    \Sigma_{\mathrm R}^{\mathrm R}
+    \delta_{ab}
+    }
+    \label{eq:AQ_pol_selfenergy}
+\end{equation}
+at leading isotropic order.
+
+Hence the differential mean polarization relaxation satisfies
+\begin{equation}
+    \boxed{
+    \Delta\Gamma_{\mathrm{pol}}
+    =
+    0
+    }
+    \label{eq:AQ_pol_zero}
+\end{equation}
+at this order.
+
+This does not by itself exclude stochastic polarization conversion.
+
+The leading selection rule is schematically
+\begin{equation}
+    \boxed{
+    \gamma(
+        \mathbf{k},
+        \lambda_{\mathrm{pol}}
+    )
+    \rightarrow
+    \gamma(
+        \mathbf{k}-d\mathbf{k},
+        \lambda_{\mathrm{pol}}
+    )
+    +
+    \mathrm{AV},
+    }
+    \label{eq:AQ_selection}
+\end{equation}
+where $\mathrm{AV}$ denotes the noncoherent Active-Vacuum degrees of freedom
+receiving the transferred coherent energy, and
+\begin{equation}
+    d\mathbf{k}
+    \parallel
+    \mathbf{k}.
+\end{equation}
+
+For the selected coherent channel to dominate, the orthogonal rates must
+satisfy
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm{angle}},
+    \Gamma_{\mathrm{pol}},
+    \Gamma_{\mathrm{destroy}},
+    \Gamma_{\mathrm{secondary}}
+    \ll
+    \Gamma_{\mathrm D}.
+    }
+    \label{eq:AQ_suppression_requirements}
+\end{equation}
+
+These are direct falsifiability requirements of the proposed microscopic
+channel. They are not established solely by photon-number preservation or
+isotropy.
+
+
+\section{Energy and Momentum Ledger}
+
+The Hard Floor is not the dissipative receiving sector. It supplies the fixed
+reference scale and structural phase architecture.
+
+After reversible dressing and temporary interaction energy have been included
+once and coarse-grained consistently, the secular local energy ledger is
+\begin{equation}
+    \boxed{
+    \left.\dot E_{\gamma}\right|_{\mathrm{rel}}
+    +
+    \left.\dot E_{\mathrm{AV}}\right|_{\mathrm{rec}}
+    =
+    0.
+    }
+    \label{eq:AQ_energy_conservation}
+\end{equation}
+
+Using
+\begin{equation}
+    \left.\dot E_{\gamma}\right|_{\mathrm{rel}}
+    =
+    -\Gamma_{\mathrm D}E_{\gamma},
+\end{equation}
+one obtains
+\begin{equation}
+    \boxed{
+    \left.\dot E_{\mathrm{AV}}\right|_{\mathrm{rec}}
+    =
+    +\Gamma_{\mathrm D}E_{\gamma}.
+    }
+    \label{eq:AQ_AV_energy}
+\end{equation}
+
+Here $E_{\mathrm{AV}}$ denotes only the participating finite-energy
+Active-Vacuum receiving sector. It is not the total energy of the Structural
+Reservoir and is not identified here with thermal-equilibrium energy.
+
+The Hard-Floor energy deposition is
+\begin{equation}
+    \boxed{
+    \left.\dot E_{\mathrm{HF}}\right|_{\mathrm{rel}}
+    =
+    0.
+    }
+    \label{eq:AQ_HF_energy}
+\end{equation}
+
+For the long-wave photon,
+\begin{equation}
+    \mathbf{p}_{\gamma}
+    =
+    \hbar\mathbf{k}.
+\end{equation}
+
+Equation~\eqref{eq:AQ_k_simple} gives
+\begin{equation}
+    \left.\dot{\mathbf{p}}_{\gamma}\right|_{\mathrm{rel}}
+    =
+    -\Gamma_{\mathrm D}\mathbf{p}_{\gamma}.
+\end{equation}
+
+The corresponding reduced quasimomentum requirement is
+\begin{equation}
+    \boxed{
+    \left.\dot{\mathbf P}_{\mathrm{AV}}\right|_{\mathrm{rec}}
+    =
+    +\Gamma_{\mathrm D}
+    \mathbf{p}_{\gamma}.
+    }
+    \label{eq:AQ_momentum_balance}
+\end{equation}
+
+A complete microscopic derivation must relate this reduced quasimomentum
+transfer to the physical FCC--Condensate stress and mechanical recoil.
+
+
+\section{Leading Achromaticity}
+
+At fixed local background conditions,
+Equation~\eqref{eq:AQ_gamma_final} may be written as
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm D}(q)
+    =
+    \Gamma_{\mathrm D}^{(0)}
+    \mathcal F_{\mathrm R}(q)
+    =
+    \frac{
+        P_{\mathrm R}
+    }{
+        t_{\mathrm{corr}}^{(0)}
+    }
+    \mathcal F_{\mathrm R}(q).
+    }
+    \label{eq:AQ_rate_factorization}
+\end{equation}
+
+Here
+\begin{equation}
+    \Gamma_{\mathrm D}^{(0)}
+    =
+    \frac{
+        P_{\mathrm R}
+    }{
+        t_{\mathrm{corr}}^{(0)}
+    }
+\end{equation}
+is the unit-reference rate defined by
+\(\mathcal F_{\mathrm R}=1\).
+It is distinct from the physical infrared value of the relaxation rate.
+
+Under fixed
+\(c_{\mathrm E}\),
+\(r_{\mathrm D}\),
+and
+\(\ell_{\mathrm S}\),
+all carrier-scale dependence is contained in
+\(\mathcal F_{\mathrm R}(q)\).
+Any dependence arising from variation of the local background quantities
+themselves must be retained separately and is not absorbed implicitly into
+the present fixed-background factorization.
+
+The geometric prefactor in
+Equation~\eqref{eq:AQ_rate_factorization}
+contains no explicit external photon scale \(q\).
+If the carrier-projected receiving response approaches a finite,
+nonzero, approximately \(q\)-independent infrared plateau,
+\begin{equation}
+    \mathcal F_{\mathrm R}(q)
+    \longrightarrow
+    \mathcal F_{\mathrm R}^{(\mathrm{IR})}
+    \qquad
+    \text{as}
+    \qquad
+    q\longrightarrow0,
+\end{equation}
+define the corresponding physical infrared rate by
+\begin{equation}
+    \Gamma_{\mathrm D}^{(\mathrm{IR})}
+    \equiv
+    \Gamma_{\mathrm D}^{(0)}
+    \mathcal F_{\mathrm R}^{(\mathrm{IR})}.
+\end{equation}
+
+The leading long-wave response is then
+\begin{equation}
+    \boxed{
+    \Gamma_{\mathrm D}(q)
+    \simeq
+    \Gamma_{\mathrm D}^{(\mathrm{IR})}.
+    }
+    \label{eq:AQ_achromatic_leading}
+\end{equation}
+
+Finite-wave-number, registry, receiver-bandwidth, or interaction-projection
+corrections may instead produce
+\begin{equation}
+    \Gamma_{\mathrm D}(q)
+    =
+    \Gamma_{\mathrm D}^{(\mathrm{IR})}
+    \left[
+        1
+        +
+        O(q^m)
+    \right],
+    \qquad
+    m>0.
+    \label{eq:AQ_chromatic_correction}
+\end{equation}
+
+The exponent \(m\) and its coefficient must be obtained from the physical
+receiving response. Geometry alone does not prove either a nonzero infrared
+plateau or leading achromaticity.
+
+Within the constant-response plateau, the notation
+\(\Gamma_{\mathrm D}\) may be used for the constant physical value
+\(\Gamma_{\mathrm D}^{(\mathrm{IR})}\). The leading fractional evolution is
+then
+\begin{equation}
+    \boxed{
+    \frac{1}{\omega_{\gamma}}
+    \left.
+    \frac{
+        d\omega_{\gamma}
+    }{
+        dt
+    }
+    \right|_{\mathrm{rel}}
+    =
+    -\Gamma_{\mathrm D}.
+    }
+    \label{eq:AQ_fractional_achromaticity}
+\end{equation}
+
+Thus, the fractional coherent-frequency evolution is independent of photon
+frequency at the retained order only when the carrier-projected receiving
+response possesses the required approximately constant infrared plateau.
+
+\section{Effective Loss-Tangent Representation}
+
+For weak coherent energy transfer, an effective quality factor may be defined
+through
+\begin{equation}
+    Q_{\mathrm{eff}}^{-1}
+    \equiv
+    \frac{
+        \Gamma_{\mathrm D}
+    }{
+        \omega
+    }.
+\end{equation}
+
+An equivalent reduced loss-tangent notation is
+\begin{equation}
+    \boxed{
+    \tan\delta_{\mathrm{eff}}(\omega)
+    \simeq
+    \frac{
+        \Gamma_{\mathrm D}
+    }{
+        \omega
+    }.
+    }
+    \label{eq:AQ_loss_tangent}
+\end{equation}
+
+This expression is not interpreted as the local material loss tangent of an
+ordinary Kelvin--Voigt or Maxwell element acting directly on photon amplitude.
+
+The fundamental nonconservative object is the scale-projected retarded kernel.
+Causality requires
+\begin{equation}
+    K_{\mathrm R}(t_{\mathrm{lag}})
+    =
+    0,
+    \qquad
+    t_{\mathrm{lag}}<0.
+\end{equation}
+
+The full frequency-dependent response must obey the corresponding
+Kramers--Kronig relations.
+
+Equation~\eqref{eq:AQ_loss_tangent} is therefore a reduced weak-loss
+representation over the photon-frequency domain in which the fractional
+scale-relaxation rate is approximately constant.
+
+
+\section{Relaxation-Induced Frequency-Shift Component}
+
+The microscopic rate developed in this appendix defines the
+photon-propagation relaxation component of a frequency shift.
+
+For a locally quasistatic ray segment,
+\begin{equation}
+    \frac{
+        d\ln\omega_{\gamma}
+    }{
+        dt
+    }
+    =
+    -\Gamma_{\mathrm D}.
+    \label{eq:AQ_local_relaxation}
+\end{equation}
+
+Along a ray,
+\begin{equation}
+    dt
+    =
+    \frac{
+        d\ell
+    }{
+        v_{\mathrm{ray}}
+    }.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    d\ln\omega_{\gamma}
+    =
+    -
+    \frac{
+        \Gamma_{\mathrm D}(\ell)
+    }{
+        v_{\mathrm{ray}}(\ell)
+    }
+    d\ell.
+\end{equation}
+
+Define the relaxation-induced frequency-shift factor by
+\begin{equation}
+    \boxed{
+    1+z_{\mathrm D}
+    \equiv
+    \frac{
+        \omega_{\mathrm{in}}
+    }{
+        \omega_{\mathrm{out}}
+    }.
+    }
+    \label{eq:AQ_zD_def}
+\end{equation}
+
+Integration gives
+\begin{equation}
+    \boxed{
+    \ln(1+z_{\mathrm D})
+    =
+    \int_{\mathrm{path}}
+    \frac{
+        \Gamma_{\mathrm D}(\ell)
+    }{
+        v_{\mathrm{ray}}(\ell)
+    }
+    \,d\ell.
+    }
+    \label{eq:AQ_zD_general}
+\end{equation}
+
+For constant $\Gamma_{\mathrm D}$ and
+$v_{\mathrm{ray}}\simeq c_{\mathrm E}$,
+\begin{equation}
+    \boxed{
+    1+z_{\mathrm D}
+    =
+    \exp
+    \left(
+        \frac{
+            \Gamma_{\mathrm D}r
+        }{
+            c_{\mathrm E}
+        }
+    \right).
+    }
+    \label{eq:AQ_zD_constant}
+\end{equation}
+
+At small relaxation depth,
+\begin{equation}
+    \frac{
+        \Gamma_{\mathrm D}r
+    }{
+        c_{\mathrm E}
+    }
+    \ll1,
+\end{equation}
+this reduces to
+\begin{equation}
+    \boxed{
+    z_{\mathrm D}
+    \simeq
+    \frac{
+        \Gamma_{\mathrm D}r
+    }{
+        c_{\mathrm E}
+    }.
+    }
+    \label{eq:AQ_zD_low}
+\end{equation}
+
+The symbol $z_{\mathrm D}$ is deliberately distinguished from the total
+astronomically observed redshift $z_{\mathrm{obs}}$.
+
+
+\section{Separation of Relaxation Redshift from Endpoint Contributions}
+
+The TFT universe is not assumed to be locally motionless.
+
+Global Structural Reservoir staticity does not eliminate local motion of
+matter, localized defects, galaxies, compact objects, or FCC--SC
+phase-boundary structures.
+
+A moving emitter and observer can therefore generate a kinematic frequency
+shift independently of the propagation relaxation derived above. Different
+gravitational loading at the emitter and observer can also produce an endpoint
+clock-frequency difference.
+
+Define the corresponding factors by
+\begin{equation}
+    1+z_{\mathrm{kin}},
+    \qquad
+    1+z_{\mathrm{grav}}.
+\end{equation}
+
+When the endpoint transformations and the propagation relaxation are
+consistently factorized, their frequency ratios multiply:
+\begin{equation}
+    \boxed{
+    1+z_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm{grav}})
+    (1+z_{\mathrm D}).
+    }
+    \label{eq:AQ_total_redshift}
+\end{equation}
+
+Equivalently,
+\begin{equation}
+    \boxed{
+    \ln(1+z_{\mathrm{obs}})
+    =
+    \ln(1+z_{\mathrm{kin}})
+    +
+    \ln(1+z_{\mathrm{grav}})
+    +
+    \ln(1+z_{\mathrm D}).
+    }
+    \label{eq:AQ_total_redshift_log}
+\end{equation}
+
+Equation~\eqref{eq:AQ_total_redshift} is an interface relation, not a complete
+cosmological closure.
+
+The present appendix derives only the conditional propagation response
+$z_{\mathrm D}$. It does not determine $z_{\mathrm{kin}}$,
+$z_{\mathrm{grav}}$, the macroscopic source velocity field, the gravitational
+loading of the actual emitting region, or the fraction of an observed
+astronomical redshift assigned to each contribution.
+
+The full observational decomposition and its source-event timing conditions
+are developed in Appendix~\ref{app:time_dilation}. Strongly time-dependent
+backgrounds or moving refractive media may require additional path-dependent
+frequency terms beyond the stationary factorization above.
+
+
+\section{The Photon Energy-Relaxation Length and the Structural Reservoir Radius}
+
+For a positive constant physical relaxation rate, the characteristic photon
+scale-relaxation length is the TFT Photon Energy-Relaxation Length,
+\begin{equation}
+    \boxed{
+    R_{\mathrm U}
+    \equiv
+    \frac{
+        c_{\mathrm E}
+    }{
+        \Gamma_{\mathrm D}
+    }.
+    }
+    \label{eq:AQ_RU}
+\end{equation}
+
+For constant $\Gamma_{\mathrm D}$,
+Equation~\eqref{eq:AQ_zD_constant} becomes
+\begin{equation}
+    1+z_{\mathrm D}
+    =
+    e^{r/R_{\mathrm U}}.
+\end{equation}
+
+At
+\begin{equation}
+    r=R_{\mathrm U},
+\end{equation}
+the coherent photon frequency and energy become
+\begin{equation}
+    \omega_{\gamma}
+    =
+    \frac{
+        \omega_{\gamma,0}
+    }{
+        e
+    },
+\end{equation}
+and
+\begin{equation}
+    E_{\gamma}
+    =
+    \frac{
+        E_{\gamma,0}
+    }{
+        e
+    }.
+\end{equation}
+
+Therefore,
+\begin{equation}
+    \boxed{
+    R_{\mathrm U}
+    =
+    \text{characteristic one-e-fold coherent photon scale-relaxation length}.
+    }
+    \label{eq:AQ_RU_definition}
+\end{equation}
+
+The Photon Energy-Relaxation Length is not:
+
+\begin{itemize}
+    \item the physical radius of the TFT universe;
+
+    \item the radius of the Structural Reservoir;
+
+    \item an absolute causal boundary of the substrate;
+
+    \item a photon stopping radius;
+
+    \item a complete photon-energy-removal distance;
+
+    \item a thermalization boundary;
+
+    \item or a requirement that no matter or radiation exists beyond
+    $R_{\mathrm U}$.
+\end{itemize}
+
+The full structural extent of the TFT universe is described independently by
+the Structural Reservoir radius $R_{\mathrm{Res}}$, obtained from the global
+phase and mass-conservation sector.
+
+Thus,
+\begin{equation}
+    \boxed{
+    R_{\mathrm U}
+    \neq
+    R_{\mathrm{Res}}.
+    }
+    \label{eq:AQ_RU_not_RRes}
+\end{equation}
+
+The two quantities describe physically distinct scales:
+$R_{\mathrm U}$ characterizes one e-fold of coherent photon scale relaxation,
+whereas $R_{\mathrm{Res}}$ characterizes the macroscopic structural extent of
+the TFT universe.
+
+
+\section{Local Dynamics and Constitutive Dependence}
+
+The rate $\Gamma_{\mathrm D}$ is defined in the local rest frame of the active
+medium.
+
+Local motion of a source does not modify the microscopic overlap calculation
+in Equation~\eqref{eq:AQ_gamma_final} unless that motion changes one of the
+local quantities entering
+\begin{equation}
+    r_{\mathrm D},
+    \qquad
+    \ell_{\mathrm S},
+    \qquad
+    \mathcal F_{\mathrm R},
+    \qquad
+    c_{\mathrm E}.
+\end{equation}
+
+Weak gravitational loading alone does not determine
+$\mathcal F_{\mathrm R}$. In the completed conservative coherent sector,
+\begin{equation}
+    \mathcal F_{\mathrm R}=0,
+    \qquad
+    \Gamma_{\mathrm D}=0.
+\end{equation}
+
+For a real nonideal State-I Active Vacuum possessing an independently active
+carrier-projected receiving continuum,
+\begin{equation}
+    \Gamma_{\mathrm D}
+    =
+    \Gamma_{\mathrm D}^{(0)}
+    \mathcal F_{\mathrm R}.
+\end{equation}
+
+The specialization
+\begin{equation}
+    \Gamma_{\mathrm D}
+    =
+    \Gamma_{\mathrm D}^{(0)}
+\end{equation}
+holds only under the unit-reference closure
+$\mathcal F_{\mathrm R}=1$. It is not the definition of a pristine or merely
+weakly loaded vacuum.
+
+Whether large-scale structural evolution produces a systematic dependence of
+$\mathcal F_{\mathrm R}$, $r_{\mathrm D}$, or another local constitutive
+quantity is not determined here. Such a dependence must be derived from TFT
+microphysics rather than fitted retrospectively to astronomical distance data.
+
+
+\section{What the Present Appendix Establishes}
+
+Conditional on the explicit reference-mediated coupling closure, the present
+appendix establishes the following results:
+
+\begin{enumerate}
+    \item Ordinary linear amplitude damping is not the mechanism responsible
+    for real photon-frequency migration.
+
+    \item The relevant weak nonconservative coordinate is the tangent to the
+    self-similar coherent photon family.
+
+    \item The established transverse modal normalization is
+    \begin{equation}
+        A_{\mathrm{ct}}^{(\mathrm{modal})}
+        =
+        2\pi\ell_{\mathrm S}^{2}.
+    \end{equation}
+
+    \item Assigning one substrate-reference correlation depth gives
+    \begin{equation}
+        V_{\mathrm R}
+        =
+        2\pi\ell_{\mathrm S}^{3}.
+    \end{equation}
+
+    \item The normalized single-reference overlap is
+    \begin{equation}
+        \eta_{\mathrm R}
+        =
+        \sqrt{\frac32}
+        \left(
+            \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+        \right)^{3/2}.
+    \end{equation}
+
+    \item Under the adopted two-reference-overlap-vertex return closure,
+    \begin{equation}
+        P_{\mathrm R}
+        =
+        \frac94
+        \left(
+            \frac{\ell_{\mathrm S}}{r_{\mathrm D}}
+        \right)^6.
+    \end{equation}
+
+    \item The resulting conditional rate is
+    \begin{equation}
+        \boxed{
+        \Gamma_{\mathrm D}
+        =
+        \frac{9}{16}
+        \mathcal F_{\mathrm R}
+        \frac{
+            c_{\mathrm E}
+        }{
+            r_{\mathrm D}
+        }
+        \left(
+            \frac{
+                \ell_{\mathrm S}
+            }{
+                r_{\mathrm D}
+            }
+        \right)^6.
+        }
+    \end{equation}
+
+    \item Under coherent modal-action preservation,
+    \begin{equation}
+        \frac{
+            \dot E_{\gamma}
+        }{
+            E_{\gamma}
+        }
+        =
+        \frac{
+            \dot\omega_{\gamma}
+        }{
+            \omega_{\gamma}
+        }
+        =
+        -\Gamma_{\mathrm D}.
+    \end{equation}
+
+    \item Within the selected leading closure, the mean scale transport is
+    constructed to preserve photon number, propagation direction, and
+    polarization degeneracy. The suppression of orthogonal channels remains
+    an independent falsification requirement.
+
+    \item The microscopic rate defines the propagation-relaxation component
+    $z_{\mathrm D}$ rather than automatically defining the total astronomical
+    redshift.
+
+    \item For a positive constant physical rate, the Photon Energy-Relaxation Length
+    \begin{equation}
+        R_{\mathrm U}
+        =
+        \frac{
+            c_{\mathrm E}
+        }{
+            \Gamma_{\mathrm D}
+        }
+    \end{equation}
+    is the characteristic one-e-fold coherent photon scale-relaxation length
+    and is distinct from the Structural Reservoir radius
+    $R_{\mathrm{Res}}$.
+\end{enumerate}
+
+
+\section{What the Present Appendix Does Not Establish}
+
+The present derivation does not establish the following stronger statements:
+
+\begin{enumerate}
+    \item It does not derive
+    \begin{equation}
+        \mathcal F_{\mathrm R}=1
+    \end{equation}
+    from the complete nonlinear FCC--Condensate spectrum.
+
+    \item It does not prove that
+    $A_{\mathrm{ct}}^{(\mathrm{modal})}$
+    is a literal microscopic contact patch.
+
+    \item It does not yet derive the complete noncoherent Active-Vacuum
+    spectral density from the rotational, internal-phase, Condensate, and
+    Tension-Column sectors.
+
+    \item It does not derive a complete spatial photon--receiver vertex that
+    simultaneously produces real-frequency transfer, the correct spatial ray
+    equation, and mechanical FCC--Condensate recoil.
+
+    \item It does not establish the complete higher-order suppression of
+    spectral diffusion, angular diffusion, polarization conversion, photon
+    destruction, or secondary radiation.
+
+    \item It does not derive that
+    $\mathcal F_{\mathrm R}$ is independent of photon scale, position, or the
+    physical state of the Active Vacuum.
+
+    \item It does not derive the local galaxy or compact-object velocity field.
+
+    \item It does not assert
+    \begin{equation}
+        z_{\mathrm{obs}}
+        =
+        z_{\mathrm D}.
+    \end{equation}
+
+    \item It does not derive the gravitational loading of a general emitting
+    region or observer.
+
+    \item It does not derive supernova source-envelope time dilation.
+
+    \item It does not derive the complete luminosity-distance relation.
+
+    \item It does not derive BAO geometry.
+
+    \item It does not derive thermalization of the transferred coherent
+    photon energy, CMB thermal equilibrium, CMB spectral preservation, or the
+    CMB temperature.
+
+    \item It does not identify the Photon Energy-Relaxation Length
+    \begin{equation}
+        R_{\mathrm U}
+    \end{equation}
+    with the Structural Reservoir radius
+    \begin{equation}
+        R_{\mathrm{Res}}.
+    \end{equation}
+
+    \item It does not make the numerical value of
+    $\Gamma_{\mathrm D}$
+    fully parameter free while the independent determination of
+    $r_{\mathrm D}$ remains projection dependent.
+\end{enumerate}
+
+
+\section{Falsification Conditions}
+
+The proposed microscopic closure is falsifiable.
+
+First, if a completed FCC--Condensate calculation yields
+\begin{equation}
+    \lim_{\Omega\rightarrow0}
+    \frac{
+        -\operatorname{Im}
+        \Sigma_s^{\mathrm R}(\Omega)
+    }{
+        \Omega
+    }
+    =
+    0,
+\end{equation}
+then the proposed constant Ohmic realization has
+\begin{equation}
+    \mathcal F_{\mathrm R}=0
+\end{equation}
+in the infrared and therefore
+\begin{equation}
+    \Gamma_{\mathrm D}=0
+\end{equation}
+for that realization.
+
+Second, if the microscopic reference coupling does not project onto the
+self-similar photon scale tangent with the overlap structure assumed in
+Equation~\eqref{eq:AQ_eta}, the sixth-power suppression must be revised.
+
+Third, if the observed fractional relaxation is strongly chromatic over a
+frequency range in which finite-wave-number corrections are negligible, the
+leading achromatic plateau closure is falsified.
+
+Fourth, measurable cumulative spectral diffusion, image blurring,
+polarization scrambling, photon destruction, or secondary-radiation
+production at rates comparable to $\Gamma_{\mathrm D}$ would contradict the
+proposed coherent scale-transfer mechanism.
+
+Fifth, an independent determination of $r_{\mathrm D}$ significantly different
+from the presently adopted value would modify $\Gamma_{\mathrm D}$ strongly
+through
+\begin{equation}
+    \Gamma_{\mathrm D}
+    \propto
+    r_{\mathrm D}^{-7}.
+\end{equation}
+
+Sixth, if the full observational analysis requires identifying
+$z_{\mathrm D}$ with the entire observed redshift but the resulting timing,
+BAO, CMB, or other theory-independent observables cannot be reproduced, then
+that \emph{cosmological identification} is falsified even if the microscopic
+rate itself remains viable.
+
+Seventh, if no complete spatial photon--receiver action can reproduce the
+required real-frequency transport, spatial ray equation, and mechanical
+recoil simultaneously, the corresponding microscopic implementation is
+falsified.
+
+Thus, failure of a complete cosmological interpretation does not
+automatically imply that
+\begin{equation}
+    \Gamma_{\mathrm D}=0
+\end{equation}
+microscopically.
+
+The microphysical mechanism and its macroscopic cosmological role are distinct
+claims and must be tested separately.
+
+
+\section{Summary}
+
+The coherent photon branch of TFT requires a strict distinction between
+ordinary amplitude damping and real-frequency scale transport.
+
+The relevant coordinate is
+\begin{equation}
+    s=\ln q,
+\end{equation}
+with the desired local long-wave law
+\begin{equation}
+    \dot s
+    =
+    -\Gamma_{\mathrm D}.
+\end{equation}
+
+The established FCC transverse normalization is
+\begin{equation}
+    A_{\mathrm{ct}}^{(\mathrm{modal})}
+    =
+    2\pi\ell_{\mathrm S}^{2}.
+\end{equation}
+
+Under the adopted reference-mediated scale-transfer closure,
+\begin{equation}
+    V_{\mathrm R}
+    =
+    A_{\mathrm{ct}}^{(\mathrm{modal})}
+    \ell_{\mathrm S}
+    =
+    2\pi\ell_{\mathrm S}^{3}.
+\end{equation}
+
+Relative to
+\begin{equation}
+    V_{\mathrm D}
+    =
+    \frac{4\pi}{3}
+    r_{\mathrm D}^{3},
+\end{equation}
+the normalized overlap amplitude is
+\begin{equation}
+    \eta_{\mathrm R}
+    =
+    \sqrt{\frac32}
+    \left(
+        \frac{
+            \ell_{\mathrm S}
+        }{
+            r_{\mathrm D}
+        }
+    \right)^{3/2}.
+\end{equation}
+
+Under the adopted two-reference-overlap-vertex return closure,
+\begin{equation}
+    P_{\mathrm R}
+    =
+    \eta_{\mathrm R}^{4}
+    =
+    \frac94
+    \left(
+        \frac{
+            \ell_{\mathrm S}
+        }{
+            r_{\mathrm D}
+        }
+    \right)^6.
+\end{equation}
+
+Using
+\begin{equation}
+    t_{\mathrm{corr}}^{(0)}
+    =
+    \frac{
+        4r_{\mathrm D}
+    }{
+        c_{\mathrm E}
+    },
+\end{equation}
+the conditional microscopic scale-relaxation closure gives
+\begin{equation}
+    \Gamma_{\mathrm D}
+    =
+    \frac{9}{16}
+    \mathcal F_{\mathrm R}
+    \frac{
+        c_{\mathrm E}
+    }{
+        r_{\mathrm D}
+    }
+    \left(
+        \frac{
+            \ell_{\mathrm S}
+        }{
+            r_{\mathrm D}
+        }
+    \right)^6.
+\end{equation}
+
+A finite nonzero $\Gamma_{\mathrm D}$ requires a carrier-projected
+irreversible Active-Vacuum continuum. In the completed conservative coherent
+sector,
+\begin{equation}
+    \mathcal F_{\mathrm R}=0,
+    \qquad
+    \Gamma_{\mathrm D}=0.
+\end{equation}
+
+For the unit-reference closure
+\begin{equation}
+    \mathcal F_{\mathrm R}=1,
+\end{equation}
+the presently adopted microscopic TFT scales give
+\begin{equation}
+    \Gamma_{\mathrm D}^{(0)}
+    \simeq
+    2.3591\times10^{-18}
+    \ {\rm s^{-1}}.
+\end{equation}
+
+This numerical value is the result of the unit-reference
+single-correlation closure. It is not a derivation of
+$\mathcal F_{\mathrm R}=1$ from the complete nonlinear microscopic spectrum
+and is not a physical lower bound on the relaxation rate.
+
+Under preservation of the coherent modal action,
+\begin{equation}
+    I_{\gamma}
+    =
+    \frac{
+        E_{\gamma}
+    }{
+        \omega_{\gamma}
+    }
+    =
+    \hbar,
+\end{equation}
+the same conditional rate controls the real photon frequency:
+\begin{equation}
+    \frac{
+        \dot E_{\gamma}
+    }{
+        E_{\gamma}
+    }
+    =
+    \frac{
+        \dot\omega_{\gamma}
+    }{
+        \omega_{\gamma}
+    }
+    =
+    -\Gamma_{\mathrm D}.
+\end{equation}
+
+In the selected long-wave mean transport closure,
+\begin{equation}
+    \dot{\mathbf{k}}
+    \simeq
+    -\Gamma_{\mathrm D}\mathbf{k},
+    \qquad
+    \dot{\hat{\mathbf{k}}}=0,
+    \qquad
+    \dot N_{\mathrm{ph}}=0.
+\end{equation}
+
+The preservation of direction, polarization, photon number, and spectral
+sharpness remains subject to the corresponding orthogonal-channel and
+fluctuation constraints.
+
+The energy removed from the coherent photon branch is transferred to
+finite-energy noncoherent Active-Vacuum degrees of freedom. The Hard Floor is
+not the dissipative receiving sector, and the present appendix does not
+identify the transferred energy with a thermal state.
+
+If the carrier-projected response possesses an approximately
+$q$-independent plateau, the corresponding propagation-relaxation
+frequency-shift factor is
+\begin{equation}
+    \ln(1+z_{\mathrm D})
+    =
+    \int_{\mathrm{path}}
+    \frac{
+        \Gamma_{\mathrm D}
+    }{
+        v_{\mathrm{ray}}
+    }
+    \,d\ell.
+\end{equation}
+
+This is not, by itself, the complete astronomical redshift.
+
+In the stationary factorized regime,
+\begin{equation}
+    1+z_{\mathrm{obs}}
+    =
+    (1+z_{\mathrm{kin}})
+    (1+z_{\mathrm{grav}})
+    (1+z_{\mathrm D}).
+\end{equation}
+
+The corresponding Photon Energy-Relaxation Length,
+\begin{equation}
+    R_{\mathrm U}
+    =
+    \frac{
+        c_{\mathrm E}
+    }{
+        \Gamma_{\mathrm D}
+    },
+\end{equation}
+is the characteristic one-$e$-fold coherent photon scale-relaxation length
+for a positive constant physical rate.
+
+It is not a complete photon-energy-removal distance, a stopping boundary, or a
+thermalization surface. It is also distinct from the Structural Reservoir
+radius $R_{\mathrm{Res}}$, which characterizes the much larger macroscopic
+structural extent of the TFT universe.
+
+The microscopic scale-relaxation mechanism and the astronomical decomposition
+of observed redshift are therefore deliberately separated. The present
+appendix constructs a conditional microscopic closure for the former, while
+the observational projection remains a distinct problem.

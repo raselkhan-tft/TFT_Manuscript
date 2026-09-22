@@ -2,85 +2,537 @@
 \label{app:photon_hamiltonian}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\noindent\textbf{Abstract:} Standard quantum mechanics defines the photon as a massless probability wave. Tension Field Theory (TFT) redefines it as a physical, transverse harmonic oscillation of the active vacuum floor. To calculate the exact mechanical energy of this wave, the classical variables of a harmonic oscillator must map strictly to the discrete geometric constants of the TFT vacuum. This appendix validates the mechanical Hamiltonian of the photon, proving that quantized energy is a strictly mechanical derivation of geometric displacement and local field tension.
+\noindent\textbf{Abstract:}
+A photon in TFT is a coherent transverse excitation of the coupled FCC--condensate Active Vacuum. Its energy resides in the motion of the participating scaffold and the elastic deformation of its contacts. This appendix obtains the Hamiltonian from the selected transverse photon action, projects its inertia and stiffness onto the same mechanical mode, and applies the complete-cycle action condition to determine the energy normalization. The mode's spatial support then determines its displacement amplitude. A finite-packet interference calculation follows the incoming energy through overlap, temporary elastic storage, and subsequent propagation, proving conservation within the stated coherent continuum regime. Gravitational loading, ordinary attenuation, and coherent photon scale relaxation retain their separate constitutive roles.
 
 \section{The Photonic Wave Hamiltonian}
-The total energy of a single photon propagating through the vacuum is governed by the TFT lattice Hamiltonian, which adapts the classical harmonic oscillator to a localized quantum excitation:
-\begin{equation}
-    E_{\mathrm{total}} = \frac{1}{2} \tau_{\mathrm{local}} (\Delta x)^2 + \frac{1}{2} \mu_{\mathrm{eff}} v^2
-\end{equation}
 
-To accurately describe the physical action of the photon, these variables map directly to the discrete mechanics of the wave:
-\begin{itemize}
-    \item $\tau_{\mathrm{local}}$ \textbf{(Operative Local Tension):} The effective linear spring constant (N/m) of the local vacuum geometry actively carrying the wave.
-    \item $\Delta x$ \textbf{(Transverse Displacement):} The maximum physical, transverse displacement of the field's wave amplitude.
-    \item $\mu_{\mathrm{eff}}$ \textbf{(Effective Mass):} The local inertial resistance (kg) of the specific structural lattice nodes physically participating in the transverse oscillation.
-    \item $v$ \textbf{(Oscillation Velocity):} The transverse kinetic velocity of the propagating wave.
-\end{itemize}
+Light crosses the Active Vacuum as a coordinated pattern of displacement and contact deformation. The participating scaffold supplies inertia, its contacts supply restoring forces, and the entrained condensate enforces the coherent volume constraint. The photon is the excitation carried by this coupled structure rather than an additional material object moving between otherwise inactive nodes.
+
+The contact and primitive-cell kinetic construction is established in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}, with the coherent condensate constraint in \hyperref[sec:AP_incompressible_branch]{Section~\ref*{sec:AP_incompressible_branch}}. The selected finite-wave-number photon action is Equation~\eqref{eq:photon_relaxation_cell_lagrangian}. Its first-difference and centered-second-difference elastic terms, including the specified positive higher-gradient coefficient, are retained in the photon stiffness whenever finite-wave-number corrections are evaluated. That action defines the reduced transverse branch used here; its constitutive completion is identified in \hyperref[subsec:photon_relaxation_not_established]{Section~\ref*{subsec:photon_relaxation_not_established}}.
+
+\subsection{From the Photon Action to Its Hamiltonian}
+
+On the independent coherent coordinates left after the pressure constraint has been resolved, collect the real displacements into $\boldsymbol\zeta$. The selected photon Lagrangian has the quadratic form of Equation~\eqref{eq:X_tangent_energy},
+\begin{equation}
+    L_{\gamma}^{(\mathrm T)}
+    =\frac12\dot{\boldsymbol\zeta}^{\mathsf T}
+    \mathsf M\dot{\boldsymbol\zeta}
+    -\frac12\boldsymbol\zeta^{\mathsf T}
+    \mathsf K\boldsymbol\zeta.
+\end{equation}
+Here $\mathsf M$ and $\mathsf K$ are the kinetic matrix and stiffness Hessian of the specified photon action, not independently assigned oscillator parameters. The reference is stationary, the retained kinetic matrix is positive, and the matrices are time independent. The energy is measured above the chosen equilibrium configuration. Any conservative condensate participation already included in this reduction is counted once.
+
+Differentiation with respect to the real velocities gives the conjugate momentum,
+\begin{equation}
+    \boldsymbol\pi
+    =\frac{\partial L_{\gamma}^{(\mathrm T)}}
+    {\partial\dot{\boldsymbol\zeta}}
+    =\mathsf M\dot{\boldsymbol\zeta}.
+\end{equation}
+The Legendre transform therefore yields
+\begin{align}
+    H_{\gamma}
+    &=\boldsymbol\pi^{\mathsf T}\dot{\boldsymbol\zeta}
+      -L_{\gamma}^{(\mathrm T)}
+    \nonumber\\
+    &=\boxed{
+    \frac12\boldsymbol\pi^{\mathsf T}\mathsf M^{-1}\boldsymbol\pi
+    +\frac12\boldsymbol\zeta^{\mathsf T}\mathsf K\boldsymbol\zeta
+    }.
+\end{align}
+The inverse is taken on the independent kinetic subspace. Hamilton's equations give
+\begin{equation}
+    \dot{\boldsymbol\zeta}=\mathsf M^{-1}\boldsymbol\pi,
+    \qquad
+    \dot{\boldsymbol\pi}=-\mathsf K\boldsymbol\zeta,
+\end{equation}
+which recover the same conservative lattice force equation. For the complete retained system with conservative boundary conditions,
+\begin{equation}
+    \frac{\mathrm dH_{\gamma}}{\mathrm dt}
+    =\dot{\boldsymbol\zeta}^{\mathsf T}
+    \left(\mathsf M\ddot{\boldsymbol\zeta}
+    +\mathsf K\boldsymbol\zeta\right)=0.
+\end{equation}
+Energy conservation is thus a consequence of the photon action and its force law.
+
+\subsection{Projection onto One Real Mode}
+
+Use the transverse displacement notation of \hyperref[sec:Y_transverse_balance]{Section~\ref*{sec:Y_transverse_balance}}. For a real eigenmode in a finite normalization volume, or a normalizable mode with conservative boundaries, write
+\begin{equation}
+    \mathbf A(\mathbf x,t)
+    =\mathbf X_{\mathrm A}(\mathbf x)q_{\mathrm A}(t).
+\end{equation}
+The mode shape $\mathbf X_{\mathrm A}$ is dimensionless and $q_{\mathrm A}$ is length valued. Fixing $\max|\mathbf X_{\mathrm A}|=1$ makes the peak coordinate equal to the mode's maximum physical displacement. In the discrete notation, $\mathbf X_{\mathrm A}$ denotes the collection of those shape values on the independent coordinates.
+
+Projecting both quadratic forms onto this same shape gives
+\begin{equation}
+    M_{\mathrm A}
+    =\mathbf X_{\mathrm A}^{\mathsf T}\mathsf M\mathbf X_{\mathrm A},
+    \qquad
+    k_{\mathrm A}
+    =\mathbf X_{\mathrm A}^{\mathsf T}\mathsf K\mathbf X_{\mathrm A},
+    \qquad
+    \omega_{\mathrm A}^{2}=\frac{k_{\mathrm A}}{M_{\mathrm A}}.
+\end{equation}
+The integrated coefficients satisfy $[M_{\mathrm A}]=\mathrm{kg}$ and $[k_{\mathrm A}]=\mathrm{N\,m^{-1}}$. For a positive-frequency mode, both are positive. With $\pi_{\mathrm A}=M_{\mathrm A}\dot q_{\mathrm A}$,
+\begin{equation}
+    \boxed{
+    H_{\mathrm A}
+    =\frac{\pi_{\mathrm A}^{2}}{2M_{\mathrm A}}
+    +\frac12k_{\mathrm A}q_{\mathrm A}^{2}
+    =\frac12M_{\mathrm A}\dot q_{\mathrm A}^{2}
+    +\frac12M_{\mathrm A}\omega_{\mathrm A}^{2}q_{\mathrm A}^{2}
+    }.
+\end{equation}
+These terms describe participating motion and contact deformation. The coefficient $M_{\mathrm A}$ is the inertia of a collective coordinate, not the invariant rest mass of a material photon core.
+
+A propagating packet generally uses several real modes. The total energy is their sum in a mechanically orthogonal decomposition, following the mode construction of \hyperref[sec:X_cycles_and_phase]{Section~\ref*{sec:X_cycles_and_phase}}. A turning point of one real coordinate need not be a simultaneous turning point of every component of a traveling packet.
 
 \section{Dimensional Mapping of the Photon's Mechanics}
 
-\noindent\textbf{1. The Local Spring Constant ($\tau_{\mathrm{local}}$):} 
-The effective stiffness experienced by the microscopic geometry of the photon ($r_{\mathrm{D}}^3$) is the Operative Local Tension. By substituting the known geometric bounds of the quantum action limit ($h$), we define the local structural tension required to sustain the wave:
+The contact description uses surface coefficients, while the oscillator Hamiltonian uses integrated coefficients. Their connection is fixed by the modal area and primitive-cell bookkeeping of \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}:
 \begin{equation}
-    \tau_{\mathrm{local}} = \frac{h \cdot c_{\mathrm{E}}}{r_{\mathrm{D}}^3}
+    M_{\mathrm D}
+    =\mu_{\mathrm D}A_{\mathrm{ct}}^{(\mathrm{modal})},
+    \qquad
+    k_{\mathrm{ct}}^{(\mathrm{modal})}
+    =\frac{A_{\mathrm{ct}}^{(\mathrm{modal})}\tau_{\mathrm D}}
+    {d_{\mathrm{nn}}^{2}},
+    \qquad
+    d_{\mathrm{nn}}=2r_{\mathrm D}.
 \end{equation}
-Because this parameter resolves dimensionally to Newtons per meter (N/m), $\tau_{\mathrm{local}}$ functions exactly as the local linear spring constant governing the photon's elastic potential energy. This is a statement of structural compatibility, mapping the established quantum action limit to classical lattice geometry.
+The modal area converts the surface representation to the representative scaffold-coordinate normalization. The node inertia is not duplicated on every bond, as specified in \hyperref[sec:fcc_cell_inertia]{Section~\ref*{sec:fcc_cell_inertia}}.
 
-\vspace{0.4cm}
-\noindent \textbf{2. Effective Mass ($\mu_{\mathrm{eff}}$):} 
-The photon's kinetic energy term requires discrete mass/inertia. The TFT baseline inertia ($\mu_{\mathrm{D}}$) is an inertial surface density. Incorporating the gravitational strain factor ($\alpha_{\mathrm{G}}$) yields the local effective mass governing the photon's transverse kinetic energy:
+For a purely translational mode in the unstrained coherent branch,
 \begin{equation}
-    \mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}} r_{\mathrm{D}}^2}{(1 - \alpha_{\mathrm{G}})^4}
+    M_{\mathrm A}
+    =M_{\mathrm D}\sum_{\mathbf R}
+    |\mathbf X_{\mathrm A}(\mathbf R)|^{2}.
 \end{equation}
-
-\section{The Quantum Displacement Limit ($\Delta x$)}
-The massive magnitude of the vacuum's operative stiffness requires an infinitesimally small physical displacement ($\Delta x$) to yield the standard energy scale of a photon. The peak transverse displacement of the photonic wave is mechanically constrained by the field radius ($r_{\mathrm{D}}$) scaled by the square root of the geometric ratio of the full cell diameter ($2r_{\mathrm{D}}$) to the wavelength ($\lambda$) of the photon:
+The long-wavelength continuum projection is correspondingly
+\begin{align}
+    M_{\mathrm A}
+    &\simeq\int
+    \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    |\mathbf X_{\mathrm A}|^{2}\,\mathrm dV,
+    \\
+    k_{\mathrm A}
+    &\simeq 2\int
+    K_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    \boldsymbol\varepsilon[\mathbf X_{\mathrm A}]
+    :\boldsymbol\varepsilon[\mathbf X_{\mathrm A}]\,\mathrm dV,
+\end{align}
+where
 \begin{equation}
-    \Delta x = r_{\mathrm{D}} \cdot \sqrt{\frac{2r_{\mathrm{D}}}{\lambda}}
+    \boldsymbol\varepsilon[\mathbf X_{\mathrm A}]
+    =\frac12\left[
+    \nabla\mathbf X_{\mathrm A}
+    +(\nabla\mathbf X_{\mathrm A})^{\mathsf T}\right].
 \end{equation}
+The gradient of the dimensionless mode shape has units of inverse length, so the second integral has the required stiffness units. These expressions use the leading isotropic closure of \hyperref[sec:fcc_isotropy]{Section~\ref*{sec:fcc_isotropy}}. At finite wave number, the complete retained photon stiffness is projected instead.
 
-\vspace{0.4cm}
-\noindent \textbf{Mathematical Resolution:}
+\subsection{The Local Stiffness Scale}
 
-By evaluating the Hamiltonian at maximum transverse displacement (where velocity $v = 0$ and kinetic energy is momentarily zero), the Peak Potential Energy is exactly equal to the Total Energy of the photon. Plugging this geometric limit into the potential energy term defines the exact scaling law for quantum wave mechanics:
+The established nodal mass $M_{\mathrm D}=h/(c_{\mathrm E}r_{\mathrm D})$ and contact-speed normalization $c_{\mathrm E}^{2}=\tau_{\mathrm D}/\mu_{\mathrm D}$ give
 \begin{equation}
-    E_{\mathrm{total}} = E_{\mathrm{potential\_max}} = \frac{1}{2} \tau_{\mathrm{local}} \left[ r_{\mathrm{D}} \cdot \sqrt{\frac{2r_{\mathrm{D}}}{\lambda}} \right]^2
+    k_{\mathrm{ct}}^{(\mathrm{modal})}
+    =\frac{M_{\mathrm D}c_{\mathrm E}^{2}}{d_{\mathrm{nn}}^{2}}
+    =\frac{hc_{\mathrm E}}{4r_{\mathrm D}^{3}}.
+\end{equation}
+Thus the existing quantity $\tau_{\mathrm{local}}$ has the precise baseline interpretation
+\begin{equation}
+    \boxed{
+    \tau_{\mathrm{local}}
+    \equiv4k_{\mathrm{ct}}^{(\mathrm{modal})}
+    =\frac{hc_{\mathrm E}}{r_{\mathrm D}^{3}}
+    }.
+\end{equation}
+It is a directional stiffness scale. The actual modal stiffness also contains the mode's phase differences and spatial participation.
+
+For the baseline nearest-neighbor sequence of \hyperref[sec:fcc_baseline_transverse_action]{Section~\ref*{sec:fcc_baseline_transverse_action}}, the directional dispersion gives
+\begin{equation}
+    \frac{k_{\mathrm A}}{M_{\mathrm A}}
+    =\frac{4k_{\mathrm{ct}}^{(\mathrm{modal})}}{M_{\mathrm D}}
+    \sin^{2}\!\left(\frac{kd_{\mathrm{nn}}}{2}\right)
+    =\frac{\tau_{\mathrm{local}}}{M_{\mathrm D}}
+    \sin^{2}(kr_{\mathrm D}).
+\end{equation}
+The selected dispersion-suppressed photon branch instead uses Equation~\eqref{eq:photon_relaxation_exact_bloch_branch}. The reference scale above is not substituted for the stiffness of that complete branch at every wavelength.
+
+\section{Complete-Cycle Energy and the Displacement Amplitude}
+
+\subsection{Energy from the Assigned Modal Action}
+
+Equation~\eqref{eq:X_mode_action} gives $I_{\mathrm A}=E_{\mathrm A}/\omega_{\mathrm A}$ for a real harmonic mode, and Equation~\eqref{eq:X_complete_cycle} gives its elementary completed-cycle normalization. Applying those results to the selected photon mode,
+\begin{equation}
+    \oint\pi_{\mathrm A}\,\mathrm dq_{\mathrm A}
+    =2\pi I_{\mathrm A}=h,
+    \qquad
+    I_{\mathrm A}=\hbar,
+    \qquad
+    E_{\mathrm A}=\hbar\omega_{\mathrm A}.
+\end{equation}
+More generally, a monochromatic traveling excitation can occupy a degenerate set of real modes at the same frequency $\omega_\gamma$. If their total modal action is $\hbar$, summing their energies gives
+\begin{equation}
+    \boxed{
+    E_\gamma=\hbar\omega_\gamma=h\nu_\gamma,
+    \qquad \nu_\gamma=\frac{\omega_\gamma}{2\pi}
+    }.
+\end{equation}
+The harmonic Hamiltonian supplies the energy--action relation. The selection of the elementary completed action is inherited from \hyperref[part:one]{Part~\ref*{part:one}}, rather than inferred from the continuous-amplitude linear equations alone. The energies here are excitation energies above the retained structural reference.
+
+For $\lambda=2\pi/|\mathbf k|$, the energy is governed by the actual dispersion $E_\gamma(\mathbf k)=\hbar\omega_\gamma(\mathbf k)$. In the gravity-neutral long-wavelength limit of Equation~\eqref{eq:photon_relaxation_suppressed_continuum_limit},
+\begin{equation}
+    \boxed{E_\gamma\simeq\frac{hc_{\mathrm E}}{\lambda}}.
+\end{equation}
+Finite-wave-number corrections are supplied by Equation~\eqref{eq:photon_relaxation_exact_frequency_expansion}, without changing the assigned modal-action normalization.
+
+For a packet with several frequencies, the mode expansion associated with Equation~\eqref{eq:X_action_field} gives
+\begin{equation}
+    E_\gamma=\sum_a\omega_a I_a,
+    \qquad
+    I_{\mathrm{tot}}=\sum_a I_a.
+\end{equation}
+A packet assigned one elementary total action satisfies $I_{\mathrm{tot}}=\hbar$. Writing its energy as $\hbar$ times a stated carrier frequency is a narrow-band approximation unless that frequency is defined as the action-weighted mean.
+
+\subsection{Peak Displacement of the Participating Mode}
+
+Let $\Delta x$ denote the peak displacement of the normalized real mode. It is an oscillation amplitude. At its turning point,
+\begin{equation}
+    E_{\mathrm A}
+    =\frac12k_{\mathrm A}(\Delta x)^2
+    =\omega_{\mathrm A}I_{\mathrm A}.
+\end{equation}
+The amplitude follows directly:
+\begin{equation}
+    \boxed{
+    \Delta x
+    =\sqrt{\frac{2\omega_{\mathrm A}I_{\mathrm A}}{k_{\mathrm A}}}
+    =\sqrt{\frac{2I_{\mathrm A}}{M_{\mathrm A}\omega_{\mathrm A}}}
+    }.
+\end{equation}
+For a single real mode assigned $I_{\mathrm A}=\hbar$,
+\begin{equation}
+    \Delta x=\sqrt{\frac{2\hbar}{M_{\mathrm A}\omega_{\mathrm A}}}.
+\end{equation}
+The participating volume and mode shape enter through $M_{\mathrm A}$. Two differently prepared excitations can have the same carrier frequency and different peak displacements. A packet's displacement is reconstructed from all its real quadratures using Equation~\eqref{eq:X_complex_quadrature}; its wavelength alone does not specify that normalization.
+
+\subsection{Connection to the Self-Similar Photon Family}
+
+Equation~\eqref{eq:AQ_selfsimilar_photon} specifies a family of photon profiles,
+\begin{equation}
+    \mathbf u_q(\mathbf x)
+    =r_{\mathrm D}q\,
+    \mathbf U\!\left(\frac{q\mathbf x}{r_{\mathrm D}}\right),
+    \qquad q=kr_{\mathrm D}.
+\end{equation}
+The dimensionless scale $q$, defined by Equation~\eqref{eq:AQ_qdef}, is distinct from the length-valued coordinate $q_{\mathrm A}$. For a fixed dimensionless profile $\mathbf U$ in a uniform long-wave background, spatial volume scales as $q^{-3}$, displacement as $q$, and strain as $q^2$. Scaling the temporal evolution with $\omega\propto q$ makes the velocity scale as $q^2$. Therefore both integrated kinetic and elastic energies scale as $q$:
+\begin{equation}
+    E_\gamma\propto q,
+    \qquad \omega_\gamma\propto q,
+    \qquad \frac{E_\gamma}{\omega_\gamma}=\text{constant}.
+\end{equation}
+The displacement scaling is equivalently obtained by applying the modal formula to a fixed-shape scaled component, for which $M_{\mathrm A}\propto q^{-3}$:
+\begin{equation}
+    \Delta x\propto(M_{\mathrm A}\omega_{\mathrm A})^{-1/2}
+    \propto q\propto\lambda^{-1}.
+\end{equation}
+These are consequences of the specified self-similar family, not a universal wavelength-only amplitude law. Absolute normalization uses the total kinetic-plus-elastic energy. An elastic-energy integral represents the complete energy only at an appropriate common turning state; it is not generally the full instantaneous energy of a traveling packet.
+
+\section{The Energy Paradox of Interference}
+
+The apparent missing-energy question arises when cancellation of a displacement is treated as cancellation of the complete mechanical state. In an elastic medium, motion is determined by the local velocity, while contact deformation is determined by relative displacement. The energy carried into an overlap region must therefore be evaluated from both quantities and their spatial work flux.
+
+\subsection{Spatial Energy and Boundary Work}
+
+In the uniform gravity-neutral long-wavelength regime, set the receiving coefficient to zero in Equation~\eqref{eq:Y_transverse_force_balance}. The transverse displacement obeys
+\begin{equation}
+    \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}\partial_t^2\mathbf A
+    =\nabla\cdot\boldsymbol\sigma,
+    \qquad \nabla\cdot\mathbf A=0,
+\end{equation}
+with
+\begin{equation}
+    \boldsymbol\sigma
+    =-\delta p_{\mathrm{IC}}\mathbf I
+    +2K_{\mathrm{sh}}^{(\mathrm{micro},0)}\boldsymbol\varepsilon,
+    \qquad
+    \boldsymbol\varepsilon
+    =\frac12\left[\nabla\mathbf A+(\nabla\mathbf A)^{\mathsf T}\right].
+\end{equation}
+The pressure enforces the coherent constraint. It contributes to boundary work, while its bulk contraction with the velocity gradient vanishes because $\nabla\cdot\partial_t\mathbf A=0$.
+
+The energy density and stress-work flux of \hyperref[sec:Y_transverse_balance]{Section~\ref*{sec:Y_transverse_balance}} are
+\begin{equation}
+    e_{\mathrm A}
+    =\frac12\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    |\partial_t\mathbf A|^2
+    +K_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    \boldsymbol\varepsilon:\boldsymbol\varepsilon,
+    \qquad
+    \mathbf j_{\mathrm A}=-\boldsymbol\sigma\cdot\partial_t\mathbf A.
+\end{equation}
+Multiplying the force equation by $\partial_t\mathbf A$, using stress symmetry and the volume constraint, gives
+\begin{equation}
+    \boxed{\partial_te_{\mathrm A}+\nabla\cdot\mathbf j_{\mathrm A}=0}.
+\end{equation}
+For a fixed region $\Omega$, integration yields
+\begin{equation}
+    \boxed{
+    \frac{\mathrm d}{\mathrm dt}\int_\Omega e_{\mathrm A}\,\mathrm dV
+    =-\oint_{\partial\Omega}
+    \mathbf j_{\mathrm A}\cdot\widehat{\mathbf n}\,\mathrm dA
+    }.
+\end{equation}
+This is the conservative specialization of Equation~\eqref{eq:Y_transverse_energy_balance}. A local change of stored energy is accounted for by work crossing the region's boundary. With periodic boundaries or sufficient decay, the integrated symmetric-strain energy agrees with the leading transverse gradient energy of the selected photon action. In the one-dimensional transverse specialization below, the leading local energy densities agree directly. At finite wave number, the discrete higher-gradient energy and its corresponding work flux must also be retained.
+
+\subsection{Kinetic and Elastic Interference Terms}
+
+For coherent components $\mathbf A=\mathbf A_1+\mathbf A_2$, expansion of the same energy functional gives
+\begin{align}
+    e_{\mathrm A}
+    &=e_1+e_2
+    +\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}
+      \partial_t\mathbf A_1\cdot\partial_t\mathbf A_2
+    \nonumber\\
+    &\quad
+    +2K_{\mathrm{sh}}^{(\mathrm{micro},0)}
+      \boldsymbol\varepsilon_1:\boldsymbol\varepsilon_2.
+\end{align}
+Here $e_1$ and $e_2$ are the energies of the component solutions in isolation. Their kinetic and elastic cross-terms determine the partition during overlap. They are contributions to the combined physical field, not new reservoirs. Whether local motion cancels while strain remains depends on the spatial geometry and phase of those components.
+
+\subsection{Finite-Packet Proof: From Incoming Waves to Elastic Storage}
+
+Consider one transverse displacement component $A(x,t)$, varying along the propagation coordinate $x$. The profile is uniform over the transverse reference plane, so integrals over $x$ are energies per unit transverse area. The conservative force equation and energy flux reduce to
+\begin{equation}
+    \rho_{\mathrm{sh}}^{(\mathrm{micro},0)}\partial_t^2A
+    =K_{\mathrm{sh}}^{(\mathrm{micro},0)}\partial_x^2A,
+    \qquad
+    \frac{K_{\mathrm{sh}}^{(\mathrm{micro},0)}}
+    {\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}}=c_{\mathrm E}^{2},
 \end{equation}
 \begin{equation}
-    E_{\mathrm{total}} = \frac{1}{2} \tau_{\mathrm{local}} \cdot r_{\mathrm{D}}^2 \cdot \left(\frac{2r_{\mathrm{D}}}{\lambda}\right)
+    e_{\mathrm A}
+    =\frac12\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}(\partial_tA)^2
+    +\frac12K_{\mathrm{sh}}^{(\mathrm{micro},0)}(\partial_xA)^2,
+    \qquad
+    j_{\mathrm A}
+    =-K_{\mathrm{sh}}^{(\mathrm{micro},0)}\partial_tA\,\partial_xA.
 \end{equation}
+The scalar elastic factor follows from the symmetric-strain expression above. Direct differentiation makes the conservation step explicit:
+\begin{align}
+    \partial_te_{\mathrm A}
+    &=K_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    \left[(\partial_tA)(\partial_x^2A)
+    +(\partial_xA)(\partial_x\partial_tA)\right]
+    \nonumber\\
+    &=\partial_x\!\left[
+    K_{\mathrm{sh}}^{(\mathrm{micro},0)}\partial_tA\,\partial_xA
+    \right]
+    =-\partial_xj_{\mathrm A}.
+\end{align}
+
+Let $f$ be a smooth localized displacement profile, with $f$ and $f'$ decaying sufficiently rapidly and $\int_{-\infty}^{\infty}[f'(x)]^2\,\mathrm dx<\infty$. Its characteristic spatial variations are long compared with $d_{\mathrm{nn}}$, and its strain remains within the linear regime. A prime denotes differentiation with respect to the profile's length-valued argument. Two equal incoming packets traveling in opposite directions are
 \begin{equation}
-    E_{\mathrm{total}} = \frac{\tau_{\mathrm{local}} \cdot r_{\mathrm{D}}^3}{\lambda}
+    A_1(x,t)=f(x-c_{\mathrm E}t),
+    \qquad
+    A_2(x,t)=f(x+c_{\mathrm E}t).
 \end{equation}
-
-The discrete physical geometry of the cell diameter ($2r_{\mathrm{D}}$) naturally cancels the macroscopic factor of $1/2$ from classical elasticity, perfectly offsetting the structural field stiffness.
-
-Substituting the dimensional definition of Operative Local Tension ($\tau_{\mathrm{local}} = \frac{h \cdot c_{\mathrm{E}}}{r_{\mathrm{D}}^3}$) back into the resolved geometric limit perfectly cancels the volumetric scaling geometry ($r_{\mathrm{D}}^3$):
+Their sum is an exact solution of the stated continuum equation. Taking $t=0$ as the instant of complete overlap,
+\begin{align}
+    \partial_tA
+    &=c_{\mathrm E}\left[
+    -f'(x-c_{\mathrm E}t)+f'(x+c_{\mathrm E}t)\right],
+    \\
+    \partial_xA
+    &=f'(x-c_{\mathrm E}t)+f'(x+c_{\mathrm E}t).
+\end{align}
+The difference of profile slopes sets the velocity, while their sum sets the strain. Substitution into the two energy terms gives
+\begin{align}
+    e_{\mathrm{kin}}
+    &=\frac12K_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    \left[-f'(x-c_{\mathrm E}t)+f'(x+c_{\mathrm E}t)\right]^2,
+    \\
+    e_{\mathrm{el}}
+    &=\frac12K_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    \left[f'(x-c_{\mathrm E}t)+f'(x+c_{\mathrm E}t)\right]^2.
+\end{align}
+The opposite kinetic and elastic cross-terms cancel in their sum:
 \begin{equation}
-    E_{\mathrm{total}} = \left(\frac{h \cdot c_{\mathrm{E}}}{r_{\mathrm{D}}^3}\right) \cdot \frac{r_{\mathrm{D}}^3}{\lambda}
+    \boxed{
+    e_{\mathrm A}(x,t)
+    =K_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    \left[f'(x-c_{\mathrm E}t)^2+f'(x+c_{\mathrm E}t)^2\right]
+    }.
 \end{equation}
+A translation of the integration variable in each term then proves
 \begin{equation}
-    E_{\mathrm{total}} = \frac{h \cdot c_{\mathrm{E}}}{\lambda}
+    \boxed{
+    \int_{-\infty}^{\infty}e_{\mathrm A}(x,t)\,\mathrm dx
+    =2K_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    \int_{-\infty}^{\infty}[f'(x)]^2\,\mathrm dx
+    =\text{constant}
+    }.
 \end{equation}
+This is the sum of the energies of the incoming packets. It remains unchanged before overlap, throughout the interference, and after separation.
 
-\vspace{0.4cm}
-\noindent \textbf{Conclusion:}
+\subsection{Complete Overlap and a Stationary Displacement Node}
 
-This resolves the energy to scale strictly as $1/\lambda$, mathematically validating the classical Hamiltonian for the quantum scale. By formally separating the photon's total energy into distinct, calculable kinetic (velocity) and potential (strain) components, this Hamiltonian provides the exact mechanical foundation required to resolve the ``missing energy'' paradox of destructive interference.
-
-\vspace{0.4cm}
-\noindent \textbf{The Incorporation of Visco-Elastic Damping:}
-
-While the geometric limits above define the absolute initial emission energy of the photon, TFT establishes that the continuous SGF is not perfectly frictionless. As derived in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}}, the transverse phase displacement ($\mathbf{A}$) is governed by the Damped Wave Equation, yielding a strict temporal amplitude decay envelope that operates at half the macroscopic energy decay rate:
+At $t=0$, the combined field satisfies
 \begin{equation}
-    \Delta x(t) = \Delta x_0 e^{-\frac{\Gamma_{\mathrm{D}}}{2} t}
+    A(x,0)=2f(x),
+    \qquad
+    \partial_tA(x,0)=0,
+    \qquad
+    \partial_xA(x,0)=2f'(x).
 \end{equation}
-
-Because the total mechanical energy of the photon Hamiltonian is directly proportional to the square of this spatial displacement ($E \propto (\Delta x)^2$), substituting the decayed amplitude perfectly cancels the fractional rate, yielding the pristine macroscopic energy loss rate:
+Consequently,
 \begin{equation}
-    E(t) \propto \left( \Delta x_0 e^{-\frac{\Gamma_{\mathrm{D}}}{2} t} \right)^2 = E_0 e^{-\Gamma_{\mathrm{D}} t}
+    \boxed{
+    e_{\mathrm{kin}}(x,0)=0,
+    \qquad
+    e_{\mathrm{el}}(x,0)
+    =2K_{\mathrm{sh}}^{(\mathrm{micro},0)}[f'(x)]^2
+    =e_{\mathrm A}(x,0)
+    }.
 \end{equation}
+All the incoming excitation energy is momentarily elastic in this overlap configuration. The opposing velocities cancel, while the contact deformations add. This is a turning state of the active deformation, not an irreversible transition into a latent substrate state.
 
-\vspace{0.5em}
-\noindent\textit{(Note: This explicit mechanical energy envelope establishes the non-circular foundation for the observed astronomical redshift, $1+z = e^{\Gamma_{\mathrm{D}} x / c_{\mathrm{E}}}$, derived in Part III).}
+A permanent displacement node within the overlap follows by choosing an odd profile, $f(-x)=-f(x)$. Since its derivative is even,
+\begin{equation}
+    A(0,t)=0,
+    \qquad
+    \partial_tA(0,t)=0,
+    \qquad
+    \partial_xA(0,t)=2f'(c_{\mathrm E}t).
+\end{equation}
+At that node,
+\begin{equation}
+    \boxed{
+    e_{\mathrm A}(0,t)
+    =2K_{\mathrm{sh}}^{(\mathrm{micro},0)}
+    [f'(c_{\mathrm E}t)]^2
+    }.
+\end{equation}
+The node is motionless, yet its neighboring contacts carry a generally nonzero, time-dependent elastic deformation. Zero displacement and zero local velocity do not specify the complete mechanical energy.
+
+The stored strain also supplies the subsequent acceleration:
+\begin{equation}
+    \partial_t^2A(x,0)=2c_{\mathrm E}^{2}f''(x).
+\end{equation}
+The packets then separate under the same force law. Their instantaneous energy flux is
+\begin{equation}
+    j_{\mathrm A}(x,t)
+    =K_{\mathrm{sh}}^{(\mathrm{micro},0)}c_{\mathrm E}
+    \left[f'(x-c_{\mathrm E}t)^2-f'(x+c_{\mathrm E}t)^2\right].
+\end{equation}
+Together with the total energy density above, it satisfies the local conservation identity exactly. Elastic storage at overlap is converted back into propagating kinetic and elastic energy; no part of the incoming energy disappears.
+
+\subsection{The Interference Pattern and the Detector}
+
+The finite-packet proof establishes a specific mechanism: cancellation of opposing velocities can coexist with contact strain, and the resulting elastic storage is reversible. The phase relation and propagation geometry determine whether this partition occurs.
+
+For exact opposite copies of the same co-propagating component, $\mathbf A_2=-\mathbf A_1$ throughout a region, the total displacement, velocity, and strain all vanish there. The corresponding channel has zero excitation energy. In a complete preparation or scattering problem, the source work, boundary motion, reflected fields, and other output channels determine the distribution of energy. The local conservation law remains the same. The superposed components are coherent mechanical fields; no collision or disappearance of two material photon objects is assumed.
+
+A detector couples through boundary traction and the response of its active coordinates, as formulated in \hyperref[sec:Y_boundary_work]{Section~\ref*{sec:Y_boundary_work}} and Equation~\eqref{eq:Y_impedance_power}. A displacement node, a strain node, and a location of vanishing received power are therefore distinct conditions. The actual optical arrangement fixes the fringe geometry, and the receiving boundary determines its recorded brightness.
+
+\noindent\textbf{Mechanical resolution:}
+The Hamiltonian follows the energy through nodal motion, contact deformation, and spatial work flux. The finite-packet solution proves temporary conversion into elastic energy when the opposing motions cancel. It supplies the energy-accounting mechanism underlying the interference discussion in \hyperref[chap:quantum_vacuum]{Chapter~\ref*{chap:quantum_vacuum}} without assigning every dark fringe a universal maximum of static strain.
+
+\section{Gravitational Loading of the Photon Hamiltonian}
+
+The completed-coordinate transformation in \hyperref[sec:grav_referred_surface_inertia]{Section~\ref*{sec:grav_referred_surface_inertia}} gives the referred surface inertia
+\begin{equation}
+    \mu_{\mathrm{eff}}
+    =\frac{\mu_{\mathrm D}}{(1-\alpha_{\mathrm G})^4},
+    \qquad 0\leq\alpha_{\mathrm G}<1.
+\end{equation}
+Here $[\mu_{\mathrm{eff}}]=\mathrm{kg\,m^{-2}}$; an integrated mode mass requires its spatial projection. Under uniform, quasistatic loading and for a purely coherent translational mode whose spatial shape is fixed, Equations~\eqref{eq:projected_mass_scaling} and~\eqref{eq:baseline_stiffness_retained} give
+\begin{equation}
+    M_{\mathrm A}(\alpha_{\mathrm G})
+    =\frac{M_{\mathrm A}(0)}{(1-\alpha_{\mathrm G})^4},
+    \qquad
+    k_{\mathrm A}(\alpha_{\mathrm G})=k_{\mathrm A}(0).
+\end{equation}
+Hence
+\begin{equation}
+    \omega_{\mathrm A}(\alpha_{\mathrm G})
+    =(1-\alpha_{\mathrm G})^2\omega_{\mathrm A}(0),
+    \qquad
+    H_{\mathrm A}
+    =\frac{\pi_{\mathrm A}^{2}}{2M_{\mathrm A}(\alpha_{\mathrm G})}
+    +\frac12k_{\mathrm A}(0)q_{\mathrm A}^{2}.
+\end{equation}
+The scaling is the same kinetic-coordinate referral used in Equation~\eqref{eq:photon_relaxation_loaded_cell_inertia}; it is not a change in the underlying node mass.
+
+For separately prepared states of this same spatial mode and equal assigned action, the peak-amplitude formula gives
+\begin{equation}
+    \Delta x(\alpha_{\mathrm G})
+    =(1-\alpha_{\mathrm G})\Delta x(0).
+\end{equation}
+This is a fixed-mode amplitude comparison. It does not describe irreversible energy loss along a ray or a statistical position uncertainty. A stationary propagation problem instead holds the driving frequency fixed by its source and boundary conditions while the wavevector adjusts to the loaded dispersion, as in \hyperref[sec:grav_refraction_appendix]{Section~\ref*{sec:grav_refraction_appendix}}.
+
+At $\alpha_{\mathrm G}=1$, the active-coordinate map reaches the saturation boundary of \hyperref[sec:grav_saturation_appendix]{Section~\ref*{sec:grav_saturation_appendix}}. The propagating State-I Hamiltonian is not continued through that phase transition as an ordinary active mode.
+
+\section{Ordinary Attenuation and Coherent Photon Scale Relaxation}
+
+\subsection{Fixed-Mode Attenuation}
+
+The receiving response in \hyperref[sec:Y_attenuation_solutions]{Section~\ref*{sec:Y_attenuation_solutions}} supplies the ordinary damped-mode comparison. For constant $M_{\mathrm A}$, $k_{\mathrm A}$, and $\gamma_{\mathrm A}\geq0$,
+\begin{equation}
+    \ddot q_{\mathrm A}+\gamma_{\mathrm A}\dot q_{\mathrm A}
+    +\omega_{\mathrm A}^{2}q_{\mathrm A}=0,
+    \qquad
+    \dot E_{\mathrm A}
+    =-M_{\mathrm A}\gamma_{\mathrm A}\dot q_{\mathrm A}^{2}.
+\end{equation}
+The second relation is the exact instantaneous work law. In the underdamped regime, Equation~\eqref{eq:Y_temporal_attenuation} has a constant damped frequency and an exponentially decaying displacement envelope. Writing that envelope as $\Delta x_{\mathrm{att}}$, the weak-loss energy average is
+\begin{equation}
+    \Delta x_{\mathrm{att}}(t)
+    =\Delta x_{\mathrm{att}}(0)e^{-\gamma_{\mathrm A}t/2},
+    \qquad
+    \overline E_{\mathrm A}(t)
+    \simeq\overline E_{\mathrm A}(0)e^{-\gamma_{\mathrm A}t}.
+\end{equation}
+The factor of one half in the amplitude exponent follows from quadratic modal energy, consistently with Equation~\eqref{eq:Y_slow_amplitude_decay}. The receiving sector carries the corresponding work, as in Equation~\eqref{eq:Y_coupled_energy_balance}. Redistribution into a thermal population is a subsequent receiving process.
+
+\subsection{Frequency Evolution of the Surviving Carrier}
+
+The coherent scale-transport construction in \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} follows a different coordinate. Under its action-preserving closure, Equation~\eqref{eq:photon_relaxation_equal_fractional_rates} gives
+\begin{equation}
+    \frac{\mathrm d}{\mathrm dt}
+    \left(\frac{E_\gamma}{\omega_\gamma}\right)=0,
+    \qquad
+    \frac{\dot E_\gamma}{E_\gamma}
+    =\frac{\dot\omega_\gamma}{\omega_\gamma}
+    =-\Gamma_{\mathrm D}.
+\end{equation}
+The required physical receiving response is developed in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}. The conservative photon action retains the limit in Equation~\eqref{eq:AQ_conservative_limit}; a nonzero scale-relaxation coefficient requires the separately identified Active-Vacuum coupling and receiving dynamics. The Hamiltonian fixes the carrier energy but does not supply that coefficient by itself.
+
+A changing scale can change the participating volume as well as the real frequency. For the self-similar family of Equation~\eqref{eq:AQ_selfsimilar_photon}, the long-wave scalings $\Delta x\propto q$ and $\omega_\gamma\propto q$ imply
+\begin{equation}
+    \frac{\mathrm d}{\mathrm dt}\ln\Delta x
+    =\frac{\dot q}{q}
+    \simeq-\Gamma_{\mathrm D},
+\end{equation}
+provided that family is maintained under slow evolution with $|\dot q/q|\ll\omega_\gamma$. This is an adiabatic shape-scaling consequence; higher dispersive corrections and the additional velocities from changing the profile are beyond the retained order. Its coefficient differs from the fixed-mode amplitude law because the kinetic participation changes during scale evolution.
+
+The energy law, displacement law, and spatial-support law must therefore refer to the same evolving configuration. The rate assignments and their receiving-energy normalization are summarized in \hyperref[sec:Y_photon_comparison]{Section~\ref*{sec:Y_photon_comparison}}. No cosmological rate is required to establish the conservative interference balance proved here.
+
+\section{Derivation Status and Mechanical Conclusion}
+
+\noindent\textbf{Inherited mechanics.}
+The contact geometry, primitive-cell kinetic normalization, and coherent volume constraint are those of \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}. The elementary action selection is inherited through Equation~\eqref{eq:X_complete_cycle}. The higher-gradient photon branch retains the constitutive status specified with Equation~\eqref{eq:photon_relaxation_cell_lagrangian}.
+
+\medskip
+\noindent\textbf{Derived within the stated regimes.}
+The Legendre transform gives the photon-sector Hamiltonian and its conservative modal reduction. The same mode fixes the integrated inertia, stiffness, and displacement amplitude. The continuum work balance and finite-packet solution prove that the incoming kinetic-plus-elastic energy is conserved through interference. At complete overlap in the specified counter-propagating configuration, it is momentarily all elastic; restoring acceleration then produces the outgoing motion. The gravitational amplitude comparison follows from the uniform endpoint-transfer closure, while the self-similar amplitude comparison follows from its specified packet family.
+
+\medskip
+\noindent\textbf{Remaining physical specification.}
+A numerical photon displacement requires the prepared profile, participation volume, and mode normalization. The exact fringe pattern and detector response require the optical boundary solution and the receiving coupling. The full microscopic photon spectrum and any nonzero coherent relaxation rate retain the completion requirements of their respective derivations. None of these open specifications changes the energy identity within the conservative model established above.
+
+\medskip
+\noindent\textbf{Conclusion:}
+Photon energy is the energy of coordinated Active-Vacuum motion. Contact geometry determines the restoring action, the participating scaffold determines the modal inertia, and complete-cycle action supplies the elementary energy normalization. During interference, local velocities can cancel while the surrounding contacts remain strained. The finite-packet solution follows that energy into temporary elastic storage and back into propagation without loss. The complete mechanical Hamiltonian, together with its spatial work flux, resolves the apparent missing energy within the coherent elastic regime.

@@ -403,6 +403,77 @@ In the spherical limit,
 \end{equation}
 the local description collapses back to the averaged growth model.
 
+\subsection{Integrated Live-Boundary Mass Growth}
+
+For a closed live FCC/SC phase boundary, define the total boundary mass by
+\begin{equation}
+    M_{\partial}(t)
+    =
+    \int_{\partial\Omega(t)}
+    \Sigma_{\partial}\,\mathrm dA.
+\end{equation}
+
+Using the moving-surface transport theorem together with the local boundary
+conservation equation above, the tangential redistribution term contributes
+no net mass to a closed boundary, while the geometric area-growth term is
+absorbed into the time derivative of the moving surface measure. Therefore,
+\begin{equation}
+    \boxed{
+    \frac{\mathrm dM_{\partial}}{\mathrm dt}
+    =
+    \int_{\partial\Omega(t)}
+    \left(
+        \dot\Sigma_{\partial,\mathrm{in}}
+        +
+        \dot\Sigma_{\partial,\mathrm{vac}}
+        -
+        \dot\Sigma_{\partial,\mathrm{shed}}
+    \right)
+    \mathrm dA.
+    }
+    \label{eq:U_integrated_boundary_mass}
+\end{equation}
+
+This relation defines the net growth of a live phase boundary independently
+of tangential redistribution.
+
+Define the corresponding fractional boundary-growth rate by
+\begin{equation}
+    \boxed{
+    \Gamma_{\partial}
+    \equiv
+    \frac{1}{M_{\partial}}
+    \frac{\mathrm dM_{\partial}}{\mathrm dt}.
+    }
+    \label{eq:U_boundary_growth_rate}
+\end{equation}
+
+For approximately spherical growth,
+\begin{equation}
+    R_{\mathrm{QG}}
+    =
+    \frac{GM_{\partial}}{c_{\mathrm E}^{2}},
+\end{equation}
+and therefore
+\begin{equation}
+    \boxed{
+    \Gamma_{\partial}
+    =
+    \frac{\dot M_{\partial}}{M_{\partial}}
+    =
+    \frac{\dot R_{\mathrm{QG}}}{R_{\mathrm{QG}}}
+    =
+    \frac{v_n}{R_{\mathrm{QG}}}.
+    }
+    \label{eq:U_boundary_fractional_growth}
+\end{equation}
+
+Equation~\eqref{eq:U_boundary_fractional_growth} converts the local
+phase-front velocity into a fractional structural-growth rate. The
+population-level generalization of this quantity governs the global
+phase-avalanche chronology developed in
+Appendix~\ref{app:cosmic_energy_budget_and_chronology}.
+
 \section{Stress Shedding and Ringdown}
 
 When two black holes merge, the newly formed common FCC/SC boundary is not immediately relaxed. It is distorted, dynamically loaded, and torsionally strained. The live boundary must therefore shed excess energy, redistribute angular momentum, and settle toward a lower-strain saturated configuration.
