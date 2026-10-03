@@ -381,7 +381,7 @@ for _ in range(n_heat):
 arrow_style = dict(arrowstyle="->", lw=0.6, color="#444444")
 
 ax.annotate(
-    r"Extended Pilot Wave ($\Psi$)",
+    r"Extended pilot wave ($\psi$)",
     xy=(-3.2, 1.55), xytext=(-5.7, 3.2),
     arrowprops=arrow_style,
     fontsize=11, ha="left",
@@ -389,7 +389,7 @@ ax.annotate(
 )
 
 ax.annotate(
-    r"Quantum Force ($-\nabla Q$)",
+    r"Amplitude-gradient force ($-\nabla Q$)",
     xy=(2.3, 0.95), xytext=(0.8, 3.55),
     arrowprops=arrow_style,
     fontsize=11, ha="left",
@@ -397,7 +397,7 @@ ax.annotate(
 )
 
 ax.annotate(
-    "Deterministic trajectory\nthrough one slit only",
+    "Deterministic knot trajectory\nthrough one slit",
     xy=(slit_x + 0.02, upper_slit_y - 0.03), xytext=(-5.2, -2.8),
     arrowprops=arrow_style,
     fontsize=11, ha="left",
@@ -405,16 +405,16 @@ ax.annotate(
 )
 
 ax.annotate(
-    "Localized particle\n(Impedance Artifact $m$)",
+    "Localized topological\nknot " + r"($m_i$)",
     xy=(particle_marker[0], particle_marker[1]), xytext=(2.9, -2.7),
     arrowprops=arrow_style,
-    fontsize=11, ha="left",
+    fontsize=11, ha="center",
+    multialignment="center",
     bbox=LABEL_BOX, zorder=20
 )
 
-# Changed the friction annotation text
 ax.annotate(
-    r"Viscous Collapse ($-F_{\mathrm{fr}}$)",
+    "Capture and receiving work",
     xy=(impact[0], impact[1]), xytext=(5.15, 1.75),
     arrowprops=dict(arrowstyle="->", lw=0.6, color="#444444", shrinkB=12),
     fontsize=11, ha="left",
@@ -422,7 +422,7 @@ ax.annotate(
 )
 
 ax.annotate(
-    "Destructive Interference\n(High Static Tension)",
+    "Destructive interference",
     xy=(4.0, 1.2), xytext=(4.0, 2.8),
     arrowprops=arrow_style,
     fontsize=11, ha="center",
@@ -430,7 +430,7 @@ ax.annotate(
 )
 
 ax.annotate(
-    "Constructive Interference\n(Low Static Tension)",
+    "Constructive interference",
     xy=(5.0, 0.0), xytext=(6.5, -3.5),
     arrowprops=dict(arrowstyle="->", lw=0.6, color="#444444", shrinkB=10),
     fontsize=11, ha="center",

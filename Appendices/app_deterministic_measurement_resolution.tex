@@ -1,0 +1,936 @@
+\chapter[Deterministic Evolution and Measurement Resolution]
+{Deterministic Evolution and Measurement Resolution}
+\label{app:deterministic_measurement_resolution}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\noindent{\large\bfseries
+Heisenberg Uncertainty as a Continuum Consequence of the Mechanical Field\par}
+\medskip
+
+\noindent\textbf{Abstract:}
+Tension Field Theory describes an excitation, its detector, and the surrounding receiving motion as configurations of the same Active Vacuum. This appendix connects their deterministic evolution to the spatial and spectral extent of the physical matter field and to the resolution of a detector record. The action-normalized continuum field yields an exact amplitude--phase spread identity whose lower bound is the Heisenberg uncertainty relation. Work-conjugate projection identifies the localized coordinate driven by that field. Receiving dynamics then determines preparation transport, covariance-area contraction in a local passive regime, and the contribution of unresolved receiving motion. A gravitationally loaded boundary problem gives the corresponding inertia, impedance, amplitude, momentum, and timing transformations. The finite receiving spectrum supplies a criterion for persistent localized motion, while the binding landscape yields retention and readout bounds. A conditional position-distribution preservation theorem identifies the additional preparation and detector matching required for an operational quantum correspondence. The resulting laws apply to the specified field branches and mechanical reductions; particle-specific predictions require the associated defect configuration and measurement geometry.
+
+\section{The Complete Mechanical State and Deterministic Evolution}
+\label{sec:DMR_deterministic_evolution}
+
+\subsection{The Excitation, Detector, and Receiving Medium}
+
+A measurement begins when an incoming excitation encounters a detector-supported configuration of the SGF. Their contact forces redistribute energy among the incident field, localized motion, and receiving disturbances. A readable record is a configuration produced and retained by this interaction. The incoming excitation and the apparatus are parts of the same mechanical medium.
+
+The constitution in \hyperref[part:one]{Part~\ref*{part:one}} supplies the Hard-Floor reference and the finite-energy Active Vacuum. The objective contact action is developed in \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}, and the localized condensate contribution in \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}. Receiving motion belongs to active coordinates. Motion already eliminated into a conservative inertia is not introduced again as an independent receiver.
+
+Select the length-valued coordinate $q$ and its conjugate momentum $\pi_q$ from \hyperref[sec:Y_matter_envelope]{Section~\ref*{sec:Y_matter_envelope}}, and independent length-valued receiving coordinates $\xi_a$ with momenta $\pi_a$. After resolving constraints and kinetic cross terms, the receiving reduction of Equation~\eqref{eq:Y_coupled_mechanical_reduction} has Hamiltonian
+\begin{equation}
+\begin{aligned}
+ H={}&\frac{\pi_q^2}{2M_q}+U(q)\\
+ &+\sum_a\left[
+ \frac{\pi_a^2}{2m_a}
+ +\frac{m_a\omega_a^2}{2}
+ \left(\xi_a-\frac{g_aq}{m_a\omega_a^2}\right)^2
+ \right].
+\end{aligned}
+\label{eq:DMR_parent_hamiltonian}
+\end{equation}
+Here $M_q,m_a>0$, $[g_a]=\mathrm{N\,m^{-1}}$, and $U$ includes static equilibration of the receiving coordinates. The complete initial data consist of $(q,\pi_q,\xi_a,\pi_a)$ and any specified external boundary drive. Each term in $H$ has energy units.
+
+\subsection{Governing Dynamics and Initial Data}
+
+Hamilton's equations determine the retained and receiving motion. For a finite receiving approximation, constant positive inertias, and a locally Lipschitz force, complete initial data determine a unique local solution. If $U(q)=k_qq^2/2$ with $k_q>0$, the Hamiltonian is a positive quadratic form and the finite-dimensional linear solution exists uniquely for all finite times. An infinite receiving limit additionally requires a well-defined operator, admissible initial data, and the stated boundary conditions.
+
+For time-independent coefficients and no external drive, $\dot H=0$. With an imposed incident force, the balance inherited from Equation~\eqref{eq:Y_coupled_energy_balance} is
+\begin{equation}
+ \dot E_q=F_{\mathrm{in}}\dot q-Q_{\mathrm{rec}}\dot q,
+ \qquad
+ \dot E_{\mathrm{rec}}=Q_{\mathrm{rec}}\dot q.
+\label{eq:DMR_total_energy_balance}
+\end{equation}
+The apparent decay of the retained coordinate is energy transfer into resolved receiving motion. The delayed-force description obtained by eliminating those coordinates is a Hamiltonian reduction of the type studied in generalized Langevin mechanics~\cite{DMR_Zwanzig1973}.
+
+These existence statements apply within the specified regular sector. A change of topology requires its own admissible transition dynamics; the limit of a regular equation does not supply that dynamics automatically.
+
+\subsection{Field Spread, Preparation Spread, and Measurement Resolution}
+
+Three kinds of spread enter the calculation. \emph{Field spread} measures the spatial and Fourier-momentum extent of one action-normalized field. \emph{Preparation spread} measures variation among initial mechanical states. \emph{Readout spread} measures variation in the records produced by a specified detector.
+
+The symbols $\sigma_x$ and $\sigma_{p,\mathrm w}$ denote the action-weighted field spreads, with units of length and momentum, respectively. The symbols $\Delta q$ and $\Delta \pi_q$ denote standard deviations in a mechanical preparation ensemble. Their covariance matrix is $\mathsf V$, with coordinate order $(q,\pi_q)$ and entries $V_{qq}$, $V_{q\pi}$, and $V_{\pi\pi}$. These entries have units $\mathrm{m^2}$, $\mathrm{J\,s}$, and $\mathrm{kg^2\,m^2\,s^{-2}}$, respectively. The boundary coordinate $q$ is identified with a particle-center position only when the defect reconstruction establishes that identification. The wave momentum representation is denoted $\widehat p_{\mathrm w}$; $\pi_q$ remains the momentum conjugate to $q$.
+
+A complete state fixes one evolution. An ensemble and a readout map specify how many such evolutions are compared. The field theorem is derived in \hyperref[sec:DMR_heisenberg]{Section~\ref*{sec:DMR_heisenberg}}, preparation transport in \hyperref[sec:DMR_receiving]{Section~\ref*{sec:DMR_receiving}}, and their operational correspondence in \hyperref[sec:DMR_quantum_correspondence]{Section~\ref*{sec:DMR_quantum_correspondence}}.
+
+\section{Heisenberg Uncertainty as a Continuum Consequence}
+\label{sec:DMR_heisenberg}
+
+\subsection{From Mechanical Modes to the Continuum Matter Field}
+
+The mechanical quadratures in Equation~\eqref{eq:X_complex_quadrature} reconstruct real displacement and momentum. Their action normalization and field assembly are given by Equations~\eqref{eq:X_mode_action} and~\eqref{eq:X_action_field}. The structural order parameter $\Psi$ retains its density meaning; the excitation field $\psi$ carries the action normalization.
+
+For an independently established isolated matter branch, \hyperref[sec:X_schrodinger_limit]{Section~\ref*{sec:X_schrodinger_limit}} derives the conservative envelope equation from its quadratic spatial dispersion. The relevant regime is linear, single-branch, and long wavelength, with the kinetic curvature and mechanical momentum matched to the same excitation. The present section uses that field representation without repeating its dynamical derivation.
+
+Select a normalized transverse profile and a separable field along $x$. For the remaining one-dimensional field, write
+\begin{equation}
+ \psi(x)=\sqrt{\rho_\psi(x)}\,e^{iS(x)/\hbar},
+ \qquad
+ \int_{\mathbb R}\rho_\psi(x)\,\mathrm dx=1.
+\label{eq:DMR_normalized_field}
+\end{equation}
+Here $[\rho_\psi]=\mathrm{m^{-1}}$. Assume $\psi$ and $\partial_x\psi$ are square integrable, $x\psi$ is square integrable, and the boundary terms used below vanish. The explicit polar formulas assume a regular phase and finite amplitude-gradient integral. At nodes, the original $\psi$ and its weak derivative provide the appropriate representation; no derivative of a discontinuous phase is inserted separately.
+
+% BEGIN PAPER-IV SYNCHRONIZATION: normalized field domain
+After projected incident-band loss, the retained field can be subnormalized. The field theorem below applies to a unit-normalized field, not directly to unnormalized second moments. At a time when $0<\int|\psi|^2\,\mathrm dx<\infty$, the conditional retained-channel shape is obtained by dividing $\psi$ by the square root of that integral. The same spread theorem applies to that normalized shape under the stated regularity assumptions. This conditioning does not restore omitted channels or establish a distribution of complete detector records.
+% END PAPER-IV SYNCHRONIZATION
+
+\subsection{Spatial Width, Phase Momentum, and Spectral Momentum}
+
+For a normalized field, define
+\begin{equation}
+ \langle f\rangle_\rho=\int\rho_\psi f\,\mathrm dx,
+ \qquad
+ \sigma_x^2=\langle(x-\langle x\rangle_\rho)^2\rangle_\rho.
+\label{eq:DMR_field_average}
+\end{equation}
+The phase-action assignment in Equation~\eqref{eq:X_phase_energy_momentum} gives
+\begin{equation}
+ \widehat p_{\mathrm w}=-i\hbar\partial_x,
+ \qquad
+ \widetilde\psi(p_{\mathrm w})=
+ \frac{1}{\sqrt{2\pi\hbar}}
+ \int e^{-ip_{\mathrm w}x/\hbar}\psi(x)\,\mathrm dx.
+\label{eq:DMR_fourier_momentum}
+\end{equation}
+Thus $|\widetilde\psi|^2\,\mathrm dp_{\mathrm w}$ is the normalized spectral-action measure. The spectral variance may equivalently be evaluated from $\hbar^2\int|\partial_x\psi|^2\mathrm dx-\langle p_{\mathrm w}\rangle^2$.
+
+Acting on Equation~\eqref{eq:DMR_normalized_field},
+\begin{equation}
+ \widehat p_{\mathrm w}\psi=
+ \left(S'-\frac{i\hbar}{2}\frac{\rho_\psi'}{\rho_\psi}\right)\psi.
+\label{eq:DMR_momentum_decomposition}
+\end{equation}
+Integration gives $\langle p_{\mathrm w}\rangle=\langle S'\rangle_\rho$ and
+\begin{equation}
+ \boxed{
+ \sigma_{p,\mathrm w}^{\,2}
+ =\operatorname{Var}_\rho(S')+\frac{\hbar^2}{4}\mathcal F_\rho,
+ \qquad
+ \mathcal F_\rho=\int\frac{(\rho_\psi')^2}{\rho_\psi}\,\mathrm dx
+ }.
+\label{eq:DMR_momentum_variance}
+\end{equation}
+The phase-gradient variation and amplitude-gradient term are distinct contributions. The functional $\mathcal F_\rho$ measures the spatial sharpness of the normalized field intensity. It has $[\mathcal F_\rho]=\mathrm{m^{-2}}$ and determines the one-dimensional gradient energy $\hbar^2\mathcal F_\rho/(8m_{\mathrm{env}})$ inherited from Equation~\eqref{eq:X_effective_energy}.
+
+\subsection{The Exact Amplitude--Phase Spread Identity}
+
+Define the position--phase-momentum covariance
+\begin{equation}
+ C_{xp}=\left\langle
+ (x-\langle x\rangle_\rho)(S'-\langle S'\rangle_\rho)
+ \right\rangle_\rho.
+\label{eq:DMR_field_covariance}
+\end{equation}
+It equals the symmetrized position--spectral-momentum covariance on the stated domain. Substitution of Equation~\eqref{eq:DMR_momentum_variance} yields
+\begin{equation}
+\boxed{\begin{aligned}
+ \sigma_x^2\sigma_{p,\mathrm w}^{\,2}-C_{xp}^{\,2}
+ ={}&\frac{\hbar^2}{4}
+ +\frac{\hbar^2}{4}\left(\sigma_x^2\mathcal F_\rho-1\right)\\
+ &+\left[\sigma_x^2\operatorname{Var}_\rho(S')-C_{xp}^{\,2}\right].
+\end{aligned}}
+\label{eq:DMR_exact_field_spread}
+\end{equation}
+Every term has squared-action units. This is the amplitude--phase variance decomposition related to the exact uncertainty constructions of Hall~\cite{DMR_Hall2001}; its TFT interpretation uses the mechanical field normalization and gradient energy already established in \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.
+
+\subsection{The Heisenberg Bound and Minimum-Spread Fields}
+
+Integration by parts gives
+\begin{equation}
+ \int(x-\langle x\rangle_\rho)\rho_\psi'\,\mathrm dx=-1.
+\end{equation}
+Cauchy--Schwarz therefore implies
+\begin{equation}
+ \sigma_x^2\mathcal F_\rho\geq1,
+ \qquad
+ C_{xp}^{\,2}\leq\sigma_x^2\operatorname{Var}_\rho(S').
+\label{eq:DMR_positive_remainders}
+\end{equation}
+Both remainders in Equation~\eqref{eq:DMR_exact_field_spread} are nonnegative. Hence
+\begin{equation}
+ \boxed{
+ \sigma_x^2\sigma_{p,\mathrm w}^{\,2}-C_{xp}^{\,2}
+ \geq\frac{\hbar^2}{4},
+ \qquad
+ \sigma_x\sigma_{p,\mathrm w}\geq
+ \sqrt{C_{xp}^{\,2}+\frac{\hbar^2}{4}}
+ \geq\frac{\hbar}{2}
+ }.
+\label{eq:DMR_heisenberg_bound}
+\end{equation}
+The simple product is the usual Heisenberg preparation bound for the corresponding canonical representation~\cite{DMR_Robertson1929}. Its derivation here uses the field profile and phase action.
+
+The covariance bound is saturated by a Gaussian intensity and an affine phase momentum,
+\begin{equation}
+ \rho_\psi(x)=
+ \frac{\exp[-(x-\langle x\rangle_\rho)^2/(2\sigma_x^2)]}
+ {\sqrt{2\pi}\sigma_x},
+ \qquad
+ S'(x)=\langle S'\rangle_\rho+
+ \frac{C_{xp}}{\sigma_x^2}(x-\langle x\rangle_\rho).
+\label{eq:DMR_gaussian_equality}
+\end{equation}
+The phase-momentum slope is the already defined ratio $C_{xp}/\sigma_x^2$, with units $\mathrm{kg\,s^{-1}}$. The simple product reaches $\hbar/2$ when $C_{xp}=0$; a nonzero phase correlation increases that product while preserving equality in the covariance form.
+
+\subsection{Complete-Cycle Action and the Continuum Approximation}
+
+Equation~\eqref{eq:X_complete_cycle} fixes the elementary closed-cycle action as $h=2\pi\hbar$. Equation~\eqref{eq:DMR_heisenberg_bound} instead relates spatial and spectral second moments. The coefficient $\hbar/2$ is not the action of a fractional completed lattice event.
+
+The spread identity is exact for the stated continuum field. The approximation enters when the underlying defect--field system is represented by the isolated branch of Equation~\eqref{eq:X_schrodinger_conditional}. Its application to particle measurements requires the momentum and mass matching of Equation~\eqref{eq:X_matter_matching}, followed by the detector correspondence in \hyperref[sec:DMR_quantum_correspondence]{Section~\ref*{sec:DMR_quantum_correspondence}}. This ordering separates a field theorem from the physical identification of measured distributions.
+
+\section{From the Physical Field to the Localized Defect}
+\label{sec:DMR_field_defect}
+
+\subsection{Reconstruction of Displacement, Momentum, and Traction}
+
+For a fixed reference configuration, reconstruct the real incident motion from Equation~\eqref{eq:X_complex_quadrature}:
+\begin{equation}
+ \boldsymbol\zeta_{\mathrm{in}}(t)=
+ \sum_a\mathbf e_a
+ \sqrt{\frac{2\hbar}{M_a\omega_a}}
+ \operatorname{Re}a_a(t).
+\label{eq:DMR_field_reconstruction}
+\end{equation}
+Here $a$ labels the incident real-mode expansion of Equation~\eqref{eq:X_complex_quadrature}; $M_a$ is its modal inertia. The separately projected receiving modes retain their $m_a,\xi_a,g_a$ notation from \hyperref[sec:DMR_receiving]{Section~\ref*{sec:DMR_receiving}}. The contact operators of \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} convert these displacements into strains and tractions. The same mode shape, polarization, kinetic normalization, and boundary geometry must be used in both reconstructions. The action intensity $\rho_\psi$ is not substituted directly for the material displacement.
+
+\subsection{The Defect Coordinate and Its Conjugate Momentum}
+
+Let an established detector-loaded defect family be $\boldsymbol\zeta_*(q)$, with tangent $\mathbf e_q=\partial\boldsymbol\zeta_*/\partial q$. Freeze its tangent and positive kinetic matrix $\mathsf M$ within a local patch. Minimizing the kinetic-metric mismatch between a perturbation $\delta\boldsymbol\zeta$ and $\mathbf e_q\delta q$ gives
+\begin{equation}
+ \boxed{
+ M_q=\mathbf e_q^{\mathsf T}\mathsf M\mathbf e_q,
+ \qquad
+ \delta q=\frac{\mathbf e_q^{\mathsf T}\mathsf M\delta\boldsymbol\zeta}{M_q},
+ \qquad
+ \pi_q=\mathbf e_q^{\mathsf T}\boldsymbol\pi
+ }.
+\label{eq:DMR_defect_projection}
+\end{equation}
+The full momentum $\boldsymbol\pi=\mathsf M\dot{\boldsymbol\zeta}$ uses the canonical-vector convention of \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}} for the present reduced configuration. The residual displacement is kinetically orthogonal to $\mathbf e_q$. For canonical full coordinates $(\boldsymbol\zeta,\boldsymbol\pi)$, the projected bracket is
+\begin{equation}
+ \{q,\pi_q\}=\frac{\mathbf e_q^{\mathsf T}\mathsf M\mathbf e_q}{M_q}=1.
+\end{equation}
+Thus the displacement and momentum projections are fixed together. Coordinate-dependent geometry requires the corresponding curvilinear kinetic reduction rather than extending this frozen projection unchanged.
+
+The coefficient $M_q$ belongs to the selected motion. Identification with the translational mass in Equation~\eqref{eq:X_translation_mass} requires $q$ to represent that same complete defect translation, including its participating condensate flow.
+
+\subsection{Boundary Work and Detector Coupling}
+
+The physical boundary mode is $\mathbf b_\partial=\partial\mathbf X_\partial/\partial q$. The incident traction performs generalized work
+\begin{equation}
+ F_{\mathrm{in}}(t)=
+ \int_{\partial\Omega_{\mathrm{def}}}
+ \mathbf b_\partial\cdot\mathbf t_{\mathrm{in}}\,\mathrm dA.
+\label{eq:DMR_boundary_work}
+\end{equation}
+The instantaneous incident power is $F_{\mathrm{in}}\dot q$. The boundary-value construction is supplied by \hyperref[sec:Y_boundary_work]{Section~\ref*{sec:Y_boundary_work}} and \hyperref[sec:AP_defect_boundary_value_problem]{Section~\ref*{sec:AP_defect_boundary_value_problem}}. Normal, tangential, rotational, and phase participation are selected by that configuration. The map from field to $q$ is therefore a traction projection, not a direct assignment of field intensity to a detection event.
+
+\section[Receiving Dynamics and the Evolution of Measurement Resolution]
+{Receiving Dynamics and the Evolution\\of Measurement Resolution}
+\label{sec:DMR_receiving}
+
+\subsection{Mechanical Memory and Receiving Preparation}
+
+Equation~\eqref{eq:Y_mechanical_memory} gives the exact receiving elimination for the specified oscillator reduction:
+\begin{equation}
+ M_q\ddot q+U'(q)+\int_0^tK(t-t')\dot q(t')\,\mathrm dt'
+ =F_{\mathrm{in}}(t)+f_0(t).
+\label{eq:DMR_memory_equation}
+\end{equation}
+The kernel $K$ and initial-state force $f_0$ retain the definitions in Equations~\eqref{eq:Y_memory_kernel} and~\eqref{eq:Y_initial_receiver_force}. Using the receiving momentum $\pi_a(0)=m_a\dot\xi_a(0)$, that force is
+\begin{equation}
+ f_0(t)=\sum_a g_a\left[
+ \left(\xi_a(0)-\frac{g_aq(0)}{m_a\omega_a^2}\right)
+ \cos(\omega_at)+\frac{\pi_a(0)}{m_a\omega_a}\sin(\omega_at)
+ \right].
+\label{eq:DMR_preparation_force}
+\end{equation}
+All initial data fix a definite $f_0$. Its statistics arise only when a preparation ensemble is specified.
+
+For independent uniform phases of the shifted receiving oscillators, let $\varepsilon_a$ be their mean initial energies about the respective $q(0)$-dependent static positions, with $[\varepsilon_a]=\mathrm J$. These means are distinct from the instantaneous energies of evolving coupled oscillators. Phase averaging gives
+\begin{equation}
+\begin{aligned}
+ \left\langle\left(\xi_a(0)-\frac{g_aq(0)}{m_a\omega_a^2}\right)^2\right\rangle
+ &=\frac{\varepsilon_a}{m_a\omega_a^2},
+ &\langle\pi_a(0)^2\rangle&=m_a\varepsilon_a,\\
+ \left\langle\left(\xi_a(0)-\frac{g_aq(0)}{m_a\omega_a^2}\right)
+ \pi_a(0)\right\rangle&=0.
+\end{aligned}
+\end{equation}
+Consequently,
+\begin{equation}
+ \boxed{
+ \langle f_0(t)f_0(t')\rangle
+ =\sum_a\frac{g_a^2\varepsilon_a}{m_a\omega_a^2}
+ \cos[\omega_a(t-t')]
+ }.
+\label{eq:DMR_force_covariance}
+\end{equation}
+The left side has force-squared units. Centering the receiver at a $q(0)$-dependent static displacement can correlate its original canonical coordinates with $q(0)$. Those correlations are retained in the complete map below.
+
+\subsection{The Complete Preparation-to-Output Map}
+
+For the fixed linear Hamiltonian, write $\mathbf z=(q,\pi_q)^{\mathsf T}$ and let $\mathbf w_0$ contain the remaining independent canonical initial coordinates. Then
+\begin{equation}
+ \mathbf z(t)=\mathsf A(t)\mathbf z_0+\mathsf B(t)\mathbf w_0+\mathbf d(t),
+\label{eq:DMR_linear_state_map}
+\end{equation}
+Here $\mathsf A$ transfers the initial retained pair, $\mathsf B$ transfers the receiving initial data, and $\mathbf d$ is the retained-state response to the common imposed drive. Thus the two entries of $\mathbf d$ have length and momentum units; $\mathbf d$ is not itself a force. The blocks carry the units needed to map lengths and momenta and are not all dimensionless gains.
+
+Taking covariances yields
+\begin{equation}
+\boxed{\begin{aligned}
+ \mathsf V_{\mathrm{out}}={}&
+ \mathsf A\mathsf V_0\mathsf A^{\mathsf T}
+ +\mathsf B\mathsf V_{\mathrm R}\mathsf B^{\mathsf T}\\
+ &+\mathsf A\mathsf V_{0\mathrm R}\mathsf B^{\mathsf T}
+ +\mathsf B\mathsf V_{0\mathrm R}^{\mathsf T}\mathsf A^{\mathsf T}.
+\end{aligned}}
+\label{eq:DMR_full_covariance}
+\end{equation}
+All $\mathsf V$ symbols belong to one preparation-covariance family: $\mathsf V_0=\operatorname{Cov}(\mathbf z_0)$, $\mathsf V_{\mathrm R}=\operatorname{Cov}(\mathbf w_0)$, $\mathsf V_{0\mathrm R}=\langle(\mathbf z_0-\langle\mathbf z_0\rangle)(\mathbf w_0-\langle\mathbf w_0\rangle)^{\mathsf T}\rangle$, and $\mathsf V_{\mathrm{out}}=\operatorname{Cov}(\mathbf z(t))$. Later qualifiers select the inherited part ($\mathrm{sig}$), the stationary limit ($\infty$), or a record class ($j$). For uncorrelated preparations, the receiving contribution is the positive-semidefinite covariance $\mathsf B\mathsf V_{\mathrm R}\mathsf B^{\mathsf T}$. Initial correlations are not removed by a change of notation.
+
+This expression precedes the local-memory approximation. A finite conservative receiver can return energy, so its exact block $\mathsf A(t)$ need not contract exponentially for all times.
+
+\subsection{Local Receiving Dynamics and Covariance-Area Contraction}
+\label{sec:DMR_local_contraction}
+
+Within the dynamical band where Equation~\eqref{eq:Y_local_force_law} is valid, take constant $M_q,k_q,\eta_q>0$ and compare trajectories with the same imposed force. With $\pi_q=M_q\dot q$, their differences obey
+\begin{equation}
+ \delta\dot{\mathbf z}=\mathsf L\delta\mathbf z,
+ \qquad
+ \mathsf L=\begin{pmatrix}
+ 0&1/M_q\\-k_q&-\eta_q/M_q
+ \end{pmatrix},
+ \qquad
+ \dot{\boldsymbol\Phi}=\mathsf L\boldsymbol\Phi,
+ \quad\boldsymbol\Phi(0)=\mathbf I.
+\label{eq:DMR_local_generator}
+\end{equation}
+Since $\mathrm d\ln\det\boldsymbol\Phi/\mathrm dt=\operatorname{tr}\mathsf L$,
+\begin{equation}
+ \det\boldsymbol\Phi(t)=e^{-(\eta_q/M_q)t}.
+\label{eq:DMR_flow_determinant}
+\end{equation}
+For the covariance inherited from the initial pair,
+$\mathsf V_{\mathrm{sig}}(t)=\boldsymbol\Phi\mathsf V_{\mathrm{sig}}(0)\boldsymbol\Phi^{\mathsf T}$, and therefore
+\begin{equation}
+ \boxed{
+ \sqrt{\det\mathsf V_{\mathrm{sig}}(t)}
+ =e^{-(\eta_q/M_q)t}
+ \sqrt{\det\mathsf V_{\mathrm{sig}}(0)}
+ }.
+\label{eq:DMR_covariance_contraction}
+\end{equation}
+The contracted quantity is
+\begin{equation}
+ \sqrt{\det\mathsf V}
+ =\sqrt{(\Delta q)^2(\Delta \pi_q)^2-V_{q\pi}^{\,2}},
+ \qquad [\sqrt{\det\mathsf V}]=\mathrm{J\,s}.
+\end{equation}
+Its initial value is fixed by preparation, not by identifying it with a completed-cycle action. Equation~\eqref{eq:Y_localized_damping_rate} gives $\Gamma_q\simeq\eta_q/M_q$ in the weak-loss, cycle-averaged harmonic regime. More generally, the energy-decay rate follows from the received power, whereas Equation~\eqref{eq:DMR_covariance_contraction} concerns a linear flow determinant.
+
+For a specified time-dependent linear generator, integrate its trace to obtain the corresponding exponent. If that trace is $-\eta_q/M_q$, the contraction factor is
+\begin{equation}
+ \exp\!\left[-\int_0^t\frac{\eta_q(t')}{M_q(t')}\,\mathrm dt'\right].
+\end{equation}
+For stationary coordinate-dependent inertia and resistance, use the canonical equations
+\begin{equation}
+ H_q=\frac{\pi_q^2}{2M_q(q)}+U(q),
+ \qquad
+ \dot q=\partial_{\pi_q}H_q,
+ \qquad
+ \dot \pi_q=-\partial_qH_q-\frac{\eta_q(q)}{M_q(q)}\pi_q.
+\end{equation}
+Their phase-space divergence is $-\eta_q(q)/M_q(q)$. The integral exponent then governs an infinitesimal tangent area along a smooth trajectory. A finite nonlinear preparation cloud also changes shape and must be propagated by its full dynamics.
+
+\subsection{Residual Fluctuations and Calibrated Resolution}
+
+As a classical preparation specialization, let all receiving modes share the same mean initial oscillator energy, $\varepsilon_a=\varepsilon_{\mathrm{prep}}$ in Equation~\eqref{eq:DMR_force_covariance}. A local white-force limit has
+\begin{equation}
+ \langle f_0(t)f_0(t')\rangle=2\eta_q\varepsilon_{\mathrm{prep}}\delta(t-t'),
+ \qquad [\varepsilon_{\mathrm{prep}}]=\mathrm J.
+\end{equation}
+For this linear preparation model,
+\begin{equation}
+ \dot{\mathsf V}=\mathsf L\mathsf V+\mathsf V\mathsf L^{\mathsf T}
+ +\begin{pmatrix}0&0\\0&2\eta_q\varepsilon_{\mathrm{prep}}\end{pmatrix}.
+\label{eq:DMR_prepared_covariance_evolution}
+\end{equation}
+Writing $\det\mathsf V=V_{qq}V_{\pi\pi}-V_{q\pi}^2$ and differentiating gives
+\begin{equation}
+ \boxed{
+ \frac{\mathrm d}{\mathrm dt}\det\mathsf V
+ =-2\frac{\eta_q}{M_q}\det\mathsf V
+ +2\eta_q\varepsilon_{\mathrm{prep}}V_{qq}
+ }.
+\label{eq:DMR_prepared_area_law}
+\end{equation}
+The first term contracts the inherited area; the second is supplied by receiving preparation. The stationary covariance is
+\begin{equation}
+ \mathsf V_\infty=
+ \begin{pmatrix}
+ \varepsilon_{\mathrm{prep}}/k_q&0\\
+ 0&M_q\varepsilon_{\mathrm{prep}}
+ \end{pmatrix},
+ \qquad
+ \sqrt{\det\mathsf V_\infty}
+ =\frac{\varepsilon_{\mathrm{prep}}}{\omega_q},
+ \quad\omega_q=\sqrt{\frac{k_q}{M_q}}.
+\label{eq:DMR_stationary_preparation}
+\end{equation}
+Classical thermal preparation corresponds to $\varepsilon_{\mathrm{prep}}=k_{\mathrm B}T$. A different receiving preparation requires its own force covariance. The white-force model is a classical limit; an operator-valued receiving state must satisfy its own quantum covariance conditions and is not specified by this ansatz.
+
+For an invertible linearized readout of these mechanical variables, let
+\begin{equation}
+ \mathbf z_{\mathrm{read}}=\mathsf G_{\mathrm{read}}\mathbf z_0
+ +\mathbf n_{\mathrm{read}}.
+\end{equation}
+Here $\mathbf z_0$ is the selected input pair already used in Equation~\eqref{eq:DMR_linear_state_map}, $\mathsf G_{\mathrm{read}}$ is its invertible calibrated response, and $\mathbf n_{\mathrm{read}}$ is the additive readout contribution. If that contribution is independent of the input preparation, calibration gives
+\begin{equation}
+ \boxed{
+ \operatorname{Cov}\!\left(\mathsf G_{\mathrm{read}}^{-1}
+ \mathbf z_{\mathrm{read}}\right)
+ =\mathsf V_0
+ +\mathsf G_{\mathrm{read}}^{-1}
+ \operatorname{Cov}(\mathbf n_{\mathrm{read}})
+ \mathsf G_{\mathrm{read}}^{-\mathsf T}
+ }.
+\label{eq:DMR_calibrated_covariance}
+\end{equation}
+A smaller raw excursion is not by itself improved input resolution. This is a mechanical readout map; it is not a claim of noiseless simultaneous measurement of quantum conjugate observables.
+
+\subsection{Canonical Consistency of the Reduced Response}
+
+In a canonical operator comparison, suppose $[\widehat q_0,\widehat\pi_q(0)]=i\hbar$. Transport only this initial pair through the homogeneous matrix of Equation~\eqref{eq:DMR_local_generator}. The two-dimensional identity $\boldsymbol\Phi\mathsf J_2\boldsymbol\Phi^{\mathsf T}=(\det\boldsymbol\Phi)\mathsf J_2$, where
+\begin{equation}
+ \mathsf J_2=\begin{pmatrix}0&1\\-1&0\end{pmatrix},
+\end{equation}
+gives
+\begin{equation}
+ [\widehat q_{\mathrm{sig}},\widehat\pi_{q,\mathrm{sig}}]
+ =i\hbar\det\boldsymbol\Phi,
+ \qquad
+ \Delta q_{\mathrm{sig}}\Delta \pi_{q,\mathrm{sig}}
+ \geq\frac{\hbar}{2}|\det\boldsymbol\Phi|.
+\label{eq:DMR_signal_bracket}
+\end{equation}
+These spreads are operator standard deviations, and the corresponding covariance is symmetrized. This operator comparison is distinct from an arbitrary classical preparation covariance.
+
+The exact quadratic Hamiltonian flow is symplectic. Its blocks in Equation~\eqref{eq:DMR_linear_state_map} obey
+\begin{equation}
+ \mathsf A\mathsf J_2\mathsf A^{\mathsf T}
+ +\mathsf B\mathsf J_{\mathrm R}\mathsf B^{\mathsf T}
+ =\mathsf J_2,
+ \qquad
+ [\widehat q_{\mathrm{out}},\widehat\pi_{q,\mathrm{out}}]=i\hbar.
+\label{eq:DMR_complete_canonical_map}
+\end{equation}
+Here $\mathsf J_2$ and $\mathsf J_{\mathrm R}$ encode the antisymmetric canonical pairing of the retained and receiving variables; their entries are dimensionless, and $\mathsf J_{\mathrm R}$ is block diagonal over receiver pairs. The exact $\mathsf A$ need not equal the local-memory approximation $\boldsymbol\Phi$. Equation~\eqref{eq:DMR_signal_bracket} characterizes an inherited signal component; Equation~\eqref{eq:DMR_complete_canonical_map} retains the complementary receiving contribution. Neither changes the field theorem in Equation~\eqref{eq:DMR_heisenberg_bound}.
+
+% BEGIN PAPER-IV SYNCHRONIZATION: covariance positivity
+\paragraph{Classical preparation and quantum covariance positivity.}
+For an arbitrary classical preparation, positivity of the receiving covariance does not impose a universal area $\hbar/2$. For example, Equation~\eqref{eq:DMR_stationary_preparation} gives $\sqrt{\det\mathsf V_\infty}=\varepsilon_{\mathrm{prep}}/\omega_q$, whose value is set by that classical preparation. In the quantum canonical comparison, the complete initial state must instead be a positive quantum state. For its symmetrized retained covariance and the canonical output pair, positivity of $\langle C^\dagger C\rangle$ for every complex linear combination $C$ of centered output operators gives
+\[
+ \mathsf V_{\mathrm{out}}+\frac{i\hbar}{2}\mathsf J_2\succeq0,
+ \qquad \det\mathsf V_{\mathrm{out}}\geq\frac{\hbar^2}{4}.
+\]
+The complete Hamiltonian evolution preserves this condition. A local reduced approximation interpreted as a quantum channel must also preserve the positivity appropriate to the actual receiving state and coupling. Arbitrary classical noise is not sufficient. The inherited-signal contraction is therefore neither a violation of the normalized field theorem nor a derivation of a disappearing quantum bound; it describes only one part of the complete response.
+% END PAPER-IV SYNCHRONIZATION
+
+\section{Gravitationally Loaded Observables}
+\label{sec:DMR_gravity}
+
+\subsection{Endpoint Transfer and the Loaded Kinetic Projection}
+
+The gravitational endpoint construction supplies the uniform two-endpoint factor
+\begin{equation}
+ \mathcal C=(1-\alpha_{\mathrm G})^2,
+ \qquad 0<\mathcal C\leq1,
+\label{eq:DMR_loading_factor}
+\end{equation}
+as in Equation~\eqref{eq:uniform_two_endpoint_factor}. Its primitive-cell operator and mass congruence, Equations~\eqref{eq:cell_transfer_operator} and~\eqref{eq:effective_cell_mass_matrix}, are
+\begin{equation}
+ \mathbf T_{\mathrm{cell}}=\mathbf I+(\mathcal C-1)\mathbb P_{\mathrm{tr}},
+ \qquad
+ \mathbf M_{\mathrm{cell}}^{(\mathrm{eff})}=
+ \mathbf T_{\mathrm{cell}}^{-\mathsf T}
+ \mathbf M_{\mathrm{cell}}^{(0)}
+ \mathbf T_{\mathrm{cell}}^{-1}.
+\label{eq:DMR_loaded_mass}
+\end{equation}
+The completed-coordinate tangent stiffness remains at its baseline value at the order specified by Equation~\eqref{eq:baseline_stiffness_retained}. The underlying finite kinetic response is active motion referred through the transfer map, not a newly introduced inertia of the bare Hard Floor.
+
+The matrices in Equation~\eqref{eq:DMR_loaded_mass} retain their primitive-cell meaning from \hyperref[sec:grav_mass_matrix_congruence]{Section~\ref*{sec:grav_mass_matrix_congruence}}. Assemble the applicable loaded cells and the already selected defect participation into the kinetic matrix $\mathsf M$ of Equation~\eqref{eq:DMR_defect_projection}, then project onto its same boundary mode. For a fixed mode with decoupled transfer and complementary kinetic blocks,
+\begin{equation}
+ M_q(\mathcal C)=\frac{M_{\mathrm{tr}}}{\mathcal C^2}+M_{\mathrm{comp}}.
+\label{eq:DMR_mixed_inertia}
+\end{equation}
+Here $M_{\mathrm{tr}}$ and $M_{\mathrm{comp}}$ are the baseline modal inertia contributions in the transfer and complementary kinetic blocks, respectively, both in kilograms. The following explicit boundary comparison uses the pure-transfer specialization $M_{\mathrm{comp}}=0$, fixed mode shape and boundary projections, and unchanged $k_q$. A configuration whose mode shape changes with loading requires a new projection.
+
+\subsection{The Loaded Field--Defect--Receiver Boundary Problem}
+
+Take two directional receiving channels of \hyperref[sec:Y_directional_receiver]{Section~\ref*{sec:Y_directional_receiver}}. Write their boundary projections as $b_{\partial\mathrm L}$ and $b_{\partial\mathrm R}$ to distinguish them from the outgoing wave amplitudes used in the tunneling appendix. Let $u_{\mathrm{in}}$ and $u_{\mathrm{refl}}$ be physical displacement histories in the incident channel:
+\begin{equation}
+ u_{\mathrm{in}}+u_{\mathrm{refl}}=b_{\partial\mathrm L}q,
+ \qquad
+ u_{\mathrm R}(0,t)=b_{\partial\mathrm R}q(t).
+\label{eq:DMR_boundary_matching}
+\end{equation}
+For a uniformly loaded directional lead,
+\begin{equation}
+ \mu_{\mathrm{line}}=\frac{\mu_{\mathrm{line},0}}{\mathcal C^2},
+ \qquad T_{\mathrm{line}}=T_{\mathrm{line},0},
+ \qquad c_{\mathrm P}=\mathcal C c_{\mathrm E},
+ \qquad Z_{\mathrm{line}}=\frac{Z_{\mathrm{line},0}}{\mathcal C}.
+\label{eq:DMR_loaded_lead}
+\end{equation}
+Here $c_{\mathrm P}$ retains the completed long-wavelength propagation meaning of \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}, and $[\mu_{\mathrm{line}}]=\mathrm{kg\,m^{-1}}$, $[T_{\mathrm{line}}]=\mathrm N$, and $[Z_{\mathrm{line}}]=\mathrm{kg\,s^{-1}}$. The baseline directional values follow from Equation~\eqref{eq:Y_directional_radiation_resistance}, with one site inertia $M_{\mathrm D}$ and spacing $d_{\mathrm{nn}}=2r_{\mathrm D}$.
+
+Resolving the incident and reflected tractions gives the left force $2b_{\partial\mathrm L}Z_{\mathrm L}\dot u_{\mathrm{in}}-b_{\partial\mathrm L}^2Z_{\mathrm L}\dot q$. The right outgoing force is $-b_{\partial\mathrm R}^2Z_{\mathrm R}\dot q$. Hence
+\begin{align}
+ M_q\ddot q+k_qq+\eta_q\dot q
+ &=2b_{\partial\mathrm L}Z_{\mathrm L}\dot u_{\mathrm{in}}+f_0,
+ \label{eq:DMR_two_sided_motion}\\
+ \eta_q&=b_{\partial\mathrm L}^2Z_{\mathrm L}
+ +b_{\partial\mathrm R}^2Z_{\mathrm R}.
+ \label{eq:DMR_two_sided_resistance}
+\end{align}
+For the harmonic convention $e^{-i\omega t}$ used in Equation~\eqref{eq:Y_impedance_power}, $\omega$ is the imposed angular frequency, whereas $\omega_q$ is the retained mode's natural frequency. The continuum response is
+\begin{equation}
+ \widehat q=
+ \frac{-2i\omega b_{\partial\mathrm L}Z_{\mathrm L}\widehat u_{\mathrm{in}}
+ +\widehat f_0}
+ {k_q-M_q\omega^2-i\omega\eta_q},
+ \qquad \widehat\pi_q=-i\omega M_q\widehat q.
+\label{eq:DMR_loaded_response}
+\end{equation}
+The homogeneous response of the initial defect is added in an initial-value problem. Incident motion and $f_0$ are separate preparations and are counted once.
+
+With $f_0=0$, the exact continuum boundary balance is
+\begin{equation}
+\begin{aligned}
+ \dot E_q={}&Z_{\mathrm L}\dot u_{\mathrm{in}}^2
+ -Z_{\mathrm L}(b_{\partial\mathrm L}\dot q-\dot u_{\mathrm{in}})^2\\
+ &-Z_{\mathrm R}b_{\partial\mathrm R}^2\dot q^2.
+\end{aligned}
+\label{eq:DMR_boundary_flux_balance}
+\end{equation}
+The terms are incident flux, reflected flux, and outgoing receiving flux. This directional supported model includes their energy balance; a complete spatial recoil calculation requires the detector's full geometry.
+
+\subsection{Fixed-Action Scaling of Displacement, Momentum, and Time}
+
+For a pure-transfer coordinate and two uniformly loaded leads,
+\begin{equation}
+ M_q(\mathcal C)=\frac{M_{q0}}{\mathcal C^2},
+ \qquad \eta_q(\mathcal C)=\frac{\eta_{q0}}{\mathcal C},
+ \qquad \omega_q(\mathcal C)=\mathcal C\omega_{q0}.
+\label{eq:DMR_uniform_parameters}
+\end{equation}
+Compare homologous harmonic-sector experiments with equal total modal action. Transform the incident pulse and initial preparations according to
+\begin{equation}
+ u_{\mathrm{in},\mathcal C}(t)=\sqrt{\mathcal C}\,u_{\mathrm{in},1}(\mathcal C t),
+ \qquad f_{0,\mathcal C}(t)=\sqrt{\mathcal C}\,f_{0,1}(\mathcal C t),
+\end{equation}
+with $q_{\mathcal C}(0)=\sqrt{\mathcal C}\,q_1(0)$ and $\pi_{q,\mathcal C}(0)=\pi_{q,1}(0)/\sqrt{\mathcal C}$. Substitution into Equation~\eqref{eq:DMR_two_sided_motion} gives
+\begin{equation}
+ \boxed{
+ q_{\mathcal C}(t)=\sqrt{\mathcal C}\,q_1(\mathcal C t),
+ \qquad \pi_{q,\mathcal C}(t)=\frac{\pi_{q,1}(\mathcal C t)}{\sqrt{\mathcal C}}
+ }.
+\label{eq:DMR_action_scaling}
+\end{equation}
+Energies and frequencies scale by $\mathcal C$, preserving the modal action of corresponding spectra. This is a comparison of homologous preparations, not adiabatic evolution under an arbitrary changing external load.
+
+At corresponding scaled times,
+\begin{equation}
+ \boxed{
+ \Delta q_{\mathcal C}=(1-\alpha_{\mathrm G})\Delta q_1,
+ \qquad
+ \Delta \pi_{q,\mathcal C}=\frac{\Delta \pi_{q,1}}{1-\alpha_{\mathrm G}}
+ }.
+\label{eq:DMR_reciprocal_spreads}
+\end{equation}
+The comparison acts through $\operatorname{diag}(\sqrt{\mathcal C},\mathcal C^{-1/2})$, whose determinant is one. It preserves canonical covariance area. The displacement is a boundary-motion amplitude; it is not automatically the spatial support of the incident matter field. For the directional pulse, $u_{\mathcal C}(x,t)=\sqrt{\mathcal C}\,u_1(x,\mathcal C t)$, so propagation speed and temporal duration transform together.
+
+\subsection{Loaded Receiving Rates and Preparation Dependence}
+
+Equations~\eqref{eq:DMR_uniform_parameters} imply
+\begin{equation}
+ \frac{\eta_q(\mathcal C)}{M_q(\mathcal C)}=\mathcal C\frac{\eta_{q0}}{M_{q0}},
+ \qquad
+ \frac{\eta_q(\mathcal C)}{2\sqrt{M_q(\mathcal C)k_q}}
+ =\frac{\eta_{q0}}{2\sqrt{M_{q0}k_q}}.
+\label{eq:DMR_loaded_rate}
+\end{equation}
+Uniform loading slows the local response in the common reference time while preserving its damping ratio. The inherited local covariance law becomes
+\begin{equation}
+ \boxed{
+ \sqrt{\det\mathsf V_{\mathrm{sig}}(t)}
+ =e^{-(1-\alpha_{\mathrm G})^2(\eta_{q0}/M_{q0})t}
+ \sqrt{\det\mathsf V_{\mathrm{sig}}(0)}
+ }.
+\label{eq:DMR_loaded_area_law}
+\end{equation}
+Its interpretation as $\Gamma_q$ retains the weak-loss condition of Equation~\eqref{eq:Y_localized_damping_rate}. The photon propagation rate $\Gamma_{\mathrm D}$ is a separate receiving problem and does not enter this detector equation.
+
+At fixed classical receiving energy $\varepsilon_{\mathrm{prep}}$, Equation~\eqref{eq:DMR_stationary_preparation} gives area $\varepsilon_{\mathrm{prep}}/(\mathcal C\omega_{q0})$. Corresponding fixed-action receiving preparations instead have $\varepsilon_{\mathrm{prep},\mathcal C}=\mathcal C\varepsilon_{\mathrm{prep},1}$ and preserve that area. For the mixed inertia in Equation~\eqref{eq:DMR_mixed_inertia}, with the same loaded leads,
+\begin{equation}
+ \frac{\eta_q(\mathcal C)}{M_q(\mathcal C)}=
+ \frac{\eta_{q0}\mathcal C}{M_{\mathrm{tr}}+M_{\mathrm{comp}}\mathcal C^2}.
+\label{eq:DMR_mixed_rate}
+\end{equation}
+Thus the observable response depends jointly on kinetic participation, receiving geometry, and preparation. Equation~\eqref{eq:DMR_calibrated_covariance} converts its raw output into input-referred resolution.
+
+\section{Capture, Retention, and Detector Records}
+\label{sec:DMR_capture_records}
+
+\subsection{Receiving Bands and Persistent Localized Motion}
+\label{sec:DMR_receiving_band}
+
+The local receiving approximation can be tested against the underlying directional lattice. Let each receiving site have inertia $m_{\mathrm{lead}}$ and each nearest-neighbor bond integrated stiffness $k_{\mathrm{ct}}$. The driven site zero belongs to the retained coordinate; its inertia is already in $M_q$. For an outgoing solution $u_n=z_{\mathrm{lat}}^nu_0$,
+\begin{equation}
+ z_{\mathrm{lat}}+z_{\mathrm{lat}}^{-1}
+ =2-\frac{m_{\mathrm{lead}}\omega^2}{k_{\mathrm{ct}}},
+ \qquad
+ Z_{\mathrm{lat}}=\frac{k_{\mathrm{ct}}(1-z_{\mathrm{lat}})}{-i\omega}.
+\label{eq:DMR_discrete_root}
+\end{equation}
+The dimensionless $z_{\mathrm{lat}}$ is the displacement ratio between neighboring receiving sites: its phase specifies propagation and its modulus specifies spatial decay. The outgoing or decaying root is selected by the causal boundary condition. Inside the propagating band,
+\begin{equation}
+\begin{aligned}
+ Z_{\mathrm{lat}}(\omega)
+ &=\sqrt{k_{\mathrm{ct}}m_{\mathrm{lead}}}
+ \sqrt{1-\frac{\omega^2}{\Omega_{\max}^2}}
+ +i\frac{m_{\mathrm{lead}}\omega}{2},\\
+ \Omega_{\max}&=2\sqrt{\frac{k_{\mathrm{ct}}}{m_{\mathrm{lead}}}}.
+\end{aligned}
+\label{eq:DMR_discrete_impedance}
+\end{equation}
+The reactive term belongs to this terminal convention and is not an additional independent inertia. Above the band the admissible tail is evanescent and $\operatorname{Re}Z_{\mathrm{lat}}=0$. The underlying directional dispersion is Equation~\eqref{eq:constrained_directional_dispersion}.
+
+For a propagating incident lead, resolving its incoming and outgoing roots gives the finite-band version of Equation~\eqref{eq:DMR_loaded_response}:
+\begin{equation}
+ \widehat q=
+ \frac{-2i\omega b_{\partial\mathrm L}\operatorname{Re}Z_{\mathrm L}
+ \widehat u_{\mathrm{in}}+\widehat f_0}
+ {k_q-M_q\omega^2-i\omega
+ (b_{\partial\mathrm L}^2Z_{\mathrm L}+b_{\partial\mathrm R}^2Z_{\mathrm R})}.
+\label{eq:DMR_discrete_boundary_response}
+\end{equation}
+With $f_0=0$, define displacement reflection and transmission amplitudes by $u_{\mathrm{refl}}=r_{\mathrm{lat}}u_{\mathrm{in}}$ and $u_{\mathrm R}(0)=t_{\mathrm{lat}}u_{\mathrm{in}}$. Direct substitution gives
+\begin{equation}
+ |r_{\mathrm{lat}}|^2+
+ \frac{\operatorname{Re}Z_{\mathrm R}}{\operatorname{Re}Z_{\mathrm L}}
+ |t_{\mathrm{lat}}|^2=1.
+\label{eq:DMR_discrete_flux}
+\end{equation}
+The continuum limit follows well below the band edge.
+
+\paragraph{A localized-mode criterion.}
+Take two identical infinite leads, unit boundary projections, and $M_q,m_{\mathrm{lead}},k_q,k_{\mathrm{ct}}>0$. An above-band localized mode has tails $u_n\propto(-\lambda_{\mathrm{tail}})^{|n|}$ with $0<\lambda_{\mathrm{tail}}<1$. Its equations are
+\begin{align}
+ \Omega_b^2&=\frac{k_{\mathrm{ct}}}{m_{\mathrm{lead}}}
+ (2+\lambda_{\mathrm{tail}}+\lambda_{\mathrm{tail}}^{-1}),\\
+ M_q\Omega_b^2&=k_q+2k_{\mathrm{ct}}(1+\lambda_{\mathrm{tail}}).
+\end{align}
+The difference between the right side of the second equation and $M_q$ times the first has derivative
+\begin{equation}
+ k_{\mathrm{ct}}\left[
+ 2+\frac{M_q}{m_{\mathrm{lead}}}(\lambda_{\mathrm{tail}}^{-2}-1)
+ \right]>0.
+\end{equation}
+It tends to $-\infty$ as $\lambda_{\mathrm{tail}}\to0^+$ and has value $k_q-4k_{\mathrm{ct}}(M_q/m_{\mathrm{lead}}-1)$ at one. Consequently, exactly one localized mode exists precisely when
+\begin{equation}
+ \boxed{
+ k_q>4k_{\mathrm{ct}}\left(\frac{M_q}{m_{\mathrm{lead}}}-1\right)
+ }.
+\label{eq:DMR_bound_mode_criterion}
+\end{equation}
+Equality is a band-edge case, not a square-integrable localized mode. Under the strict opposite inequality, the retained response has no discrete localized component in this model.
+
+For central mode amplitude one, the central spectral weight is
+\begin{equation}
+ w_b=\frac{M_q}{
+ M_q+\dfrac{2m_{\mathrm{lead}}\lambda_{\mathrm{tail}}^2}
+ {1-\lambda_{\mathrm{tail}}^2}}.
+\label{eq:DMR_bound_weight}
+\end{equation}
+The denominator is the mode's complete inertia norm, including both evanescent receiving tails. When only the initial central pair varies and the leads are initially fixed at rest, the exact response block of Equation~\eqref{eq:DMR_linear_state_map} satisfies
+\begin{equation}
+ \mathsf A(t)-w_b
+ \begin{pmatrix}
+ \cos\Omega_bt&\sin\Omega_bt/(M_q\Omega_b)\\
+ -M_q\Omega_b\sin\Omega_bt&\cos\Omega_bt
+ \end{pmatrix}\longrightarrow\mathbf 0
+ \qquad(t\to\infty).
+\end{equation}
+After the integrable continuous spectral contribution disperses, $\det\mathsf A(t)\to w_b^2$. The inherited covariance-area fraction therefore approaches $w_b^2$, not zero. For $M_q=m_{\mathrm{lead}}$ and $k_q=k_{\mathrm{ct}}$, one obtains $\Omega_b^2=(2+\sqrt5)k_{\mathrm{ct}}/m_{\mathrm{lead}}$ and $w_b=1/\sqrt5$.
+
+This explicit criterion is a specialization of localized-mode persistence in harmonic receiving systems~\cite{DMR_IshikawaTodo2018}. In the no-bound case, the integrable continuous spectral representation makes the local inherited response decay in the infinite-lead limit; its late-time behavior need not be exponential. Finite lead truncations eventually recur. Uniform pure-transfer loading scales both inertias by $\mathcal C^{-2}$, preserving the criterion and weight while scaling all frequencies by $\mathcal C$.
+
+\subsection{Entry into a Binding Basin and Finite-Window Retention}
+
+The receiving spectrum determines which excess motions can leave. The binding landscape determines where the defect can remain. The capture construction of \hyperref[sec:Y_capture]{Section~\ref*{sec:Y_capture}} starts with an accessible detector-bound minimum $q_j$.
+
+Within a stationary local receiving regime, retain coordinate-dependent inertia and resistance and a resolved preparation force:
+\begin{equation}
+ M_q(q)\ddot q+\frac12M_q'(q)\dot q^2+U'(q)
+ +\eta_q(q)\dot q=f_0(t).
+\label{eq:DMR_nonlinear_capture}
+\end{equation}
+Retain the mechanical energy $E_q$ of Equation~\eqref{eq:Y_local_mechanical_energy}. Its excess above this particular record minimum is
+\begin{equation}
+ E_q-U(q_j)=\frac12M_q(q)\dot q^2+U(q)-U(q_j).
+\end{equation}
+Multiplication by $\dot q$ and completion of the square yield
+\begin{equation}
+ \boxed{
+ \dot E_q
+ =\frac{f_0^2}{4\eta_q}
+ -\eta_q\left(\dot q-\frac{f_0}{2\eta_q}\right)^2
+ }.
+\label{eq:DMR_retention_energy}
+\end{equation}
+Let a protected basin interval contain $q_j$, with $U(q)\geq U(q_j)$ there, $\eta_q\geq\eta_{\min}>0$, and minimum escape-boundary energy $\Delta U_{\mathrm{esc},j}>0$. Starting inside that interval at $t_c$, a sufficient retention condition is
+\begin{equation}
+ \boxed{
+ E_q(t_c)-U(q_j)+\frac{1}{4\eta_{\min}}
+ \int_{t_c}^{t_{\mathrm{read}}}f_0(t)^2\,\mathrm dt
+ <\Delta U_{\mathrm{esc},j}
+ }.
+\label{eq:DMR_retention_criterion}
+\end{equation}
+Before any first exit, Equation~\eqref{eq:DMR_retention_energy} bounds the energy by the left side. At an exit the potential alone would require at least $\Delta U_{\mathrm{esc},j}$, a contradiction. The integral has energy units and uses a square-integrable resolved force, not ideal white noise inserted into a pathwise square.
+
+The condition is sufficient and applies over the stated readout window. Additional escape coordinates and incoming work must be included for a multidimensional detector. With no subsequent forcing, an appropriate compact invariant sublevel containing only the isolated stationary minimum converges to that minimum under the local passive dynamics. Persistent preparation forcing instead requires its finite-window retention or escape analysis.
+
+\subsection{Residual-Energy Bounds on Record Resolution}
+
+Suppose the protected basin satisfies
+\begin{equation}
+ U(q)-U(q_j)\geq\tfrac12k_{\min}(q-q_j)^2,
+ \qquad 0<M_q(q)\leq M_{\max},
+ \qquad k_{\min}>0.
+\end{equation}
+Bounding each trajectory and averaging over a specified ensemble within that record gives
+\begin{equation}
+ \boxed{
+ (\Delta q)^2\leq\frac{2\bigl[\langle E_q\rangle_j-U(q_j)\bigr]}{k_{\min}},
+ \qquad
+ (\Delta \pi_q)^2\leq2M_{\max}\bigl[\langle E_q\rangle_j-U(q_j)\bigr]
+ }.
+\label{eq:DMR_resolution_energy_bounds}
+\end{equation}
+These are preparation bounds for the mechanical capture coordinate, not substitutions for the spectral spreads in Equation~\eqref{eq:DMR_heisenberg_bound}.
+
+For a harmonic basin with constant $M_q,k_q$, let
+\begin{equation}
+ E_{\mathrm{fluc}}=\frac{V_{\pi\pi}}{2M_q}+\frac{k_qV_{qq}}2,
+ \qquad \omega_q=\sqrt{\frac{k_q}{M_q}}.
+\end{equation}
+The identity
+\begin{equation}
+ E_{\mathrm{fluc}}^2-\omega_q^2\det\mathsf V
+ =\frac14\left(\frac{V_{\pi\pi}}{M_q}-k_qV_{qq}\right)^2
+ +\omega_q^2V_{q\pi}^2
+\end{equation}
+proves
+\begin{equation}
+ \boxed{\sqrt{\det\mathsf V}\leq\frac{E_{\mathrm{fluc}}}{\omega_q}}.
+\label{eq:DMR_energy_area_bound}
+\end{equation}
+
+Choose a readout tolerance around $q_j$. If the least potential energy outside that tolerance but inside the protected basin is $E_{\mathrm{tol},j}>0$, every outside-tolerance realization has $E_q-U(q_j)\geq E_{\mathrm{tol},j}$. Therefore
+\begin{equation}
+ \boxed{
+ P(\text{outside tolerance}\mid j)
+ \leq\min\left(1,
+ \frac{\langle E_q\rangle_j-U(q_j)}{E_{\mathrm{tol},j}}
+ \right)
+ }.
+\label{eq:DMR_readout_bound}
+\end{equation}
+The probability denotes the fraction of the specified within-record preparation ensemble. The same dynamics fixes each trajectory; this inequality bounds an ensemble without selecting it.
+
+\subsection{Registration Time and the Distribution of Records}
+
+For a regular crossing $q(t_*)=q_{\mathrm{th}}$ with $v_*=\dot q(t_*)\neq0$, linearization gives
+\begin{equation}
+ \delta t_*=-\frac{\delta q(t_*)-\delta q_{\mathrm{th}}}{v_*}.
+\end{equation}
+The perturbation $\delta q(t_*)$ is evaluated at the nominal crossing time. Its covariance includes the receiving preparation. Hence
+\begin{equation}
+ \operatorname{Var}(t_*)=
+ \frac{\operatorname{Var}(q(t_*))+\operatorname{Var}(q_{\mathrm{th}})
+ -2\operatorname{Cov}(q(t_*),q_{\mathrm{th}})}{v_*^2}
+\label{eq:DMR_event_variance}
+\end{equation}
+to first order. For a fixed threshold and a two-dimensional tangent map $\boldsymbol\Phi$, denote the momentum at the actual crossing by $\pi_{q,*}=\pi_q(t_*)$. Its variation is $\delta\pi_{q,*}=\delta\pi_q(t_*)+\dot\pi_q(t_*)\delta t_*$, where $\delta\pi_q(t_*)$ is evaluated at the nominal fixed time. It follows that
+\begin{equation}
+ \det\frac{\partial(t_*,\pi_{q,*})}{\partial(q_0,\pi_q(0))}
+ =-\frac{\det\boldsymbol\Phi(t_*)}{v_*}.
+\label{eq:DMR_event_map}
+\end{equation}
+A fixed registered position can therefore transfer preparation dependence into timing, crossing momentum, and receiver motion. Near a grazing crossing, the regular expansion fails and the complete trajectory is required.
+
+Under the matched loading comparison in Equation~\eqref{eq:DMR_action_scaling}, homologous thresholds have $t_{*,\mathcal C}=t_{*,1}/\mathcal C$. A physically fixed threshold need not be homologous. If $\sqrt{\mathcal C}\,q_{\max,1}<q_{\mathrm{th}}$, that pulse produces no crossing.
+
+For terminal record classes $j$, let $P_j$ be the preparation fraction ending in class $j$ and $\mathsf V_j=\operatorname{Cov}(\mathbf z\mid j)$. Write the mean records directly as $\langle\mathbf z\rangle_j$ and $\langle\mathbf z\rangle=\sum_jP_j\langle\mathbf z\rangle_j$. The total covariance is
+\begin{equation}
+ \mathsf V_{\mathrm{total}}=
+ \sum_jP_j\mathsf V_j+
+ \sum_jP_j(\langle\mathbf z\rangle_j-\langle\mathbf z\rangle)
+ (\langle\mathbf z\rangle_j-\langle\mathbf z\rangle)^{\mathsf T}.
+\label{eq:DMR_record_mixture}
+\end{equation}
+Within-record settling does not remove variation among distinct record locations. The dynamics and preparation determine the weights. The specialized paired-record construction is developed in \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.
+
+\section[From Mechanical Preparations to Quantum Measurement Statistics]
+{From Mechanical Preparations\\to Quantum Measurement Statistics}
+\label{sec:DMR_quantum_correspondence}
+
+\subsection{Conditional Preservation of the Position Distribution}
+
+Return to the three-dimensional matter field of Equation~\eqref{eq:X_continuity}, with $\rho_\psi=|\psi|^2$ normalized to one and $[\rho_\psi]=\mathrm{m^{-3}}$. Suppose the actual defect reconstruction establishes the guidance relation
+\begin{equation}
+ \mathbf v_K=\frac{\mathbf j_\psi}{\rho_\psi}
+\label{eq:DMR_guidance_condition}
+\end{equation}
+on the relevant nonzero-density domain. Its use requires the same mechanical matching as \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}. This phase-guided correspondence has antecedents in deterministic quantum descriptions~\cite{Bohm_1952,DMR_DurrGoldsteinZanghi1992}; the TFT requirement is to obtain it for the physical defect and its participating field.
+
+Let $f_K(\mathbf x,t)$ be the position density of a normalized preparation ensemble transported by that velocity. For a smooth flow without creation or loss in the domain,
+\begin{equation}
+ \partial_t f_K+\nabla\cdot(f_K\mathbf v_K)=0,
+ \qquad
+ \partial_t\rho_\psi+\nabla\cdot(\rho_\psi\mathbf v_K)=0.
+\end{equation}
+Subtracting the corresponding convective equations yields
+\begin{equation}
+ \boxed{
+ (\partial_t+\mathbf v_K\cdot\nabla)
+ \left(\frac{f_K}{\rho_\psi}\right)=0
+ }.
+\label{eq:DMR_equivariance}
+\end{equation}
+With compatible boundary fluxes and regular trajectories, $f_K(\mathbf x,0)=\rho_\psi(\mathbf x,0)$ is therefore preserved. The theorem propagates a matched preparation; it neither selects the initial equality nor forces an arbitrary initial ratio to become one. Nodes and topology-changing events require their own admissible transport continuation.
+
+\subsection{Position Readout and Momentum Readout}
+
+The physical measurement map must be specified separately for each apparatus. For a preparation measure $\mu_{\mathrm{prep}}$ on complete initial states $\mathbf Z_0$, let $\mathcal R_x(\mathbf Z_0)$ and $\mathcal R_p(\mathbf Z_0)$ denote the terminal outputs of position and momentum experiments. Their distributions are the respective pushforwards:
+\begin{equation}
+ \mathbb P_{\mathcal A}(B)=
+ \int_{\{\mathbf Z_0:\,\mathcal R_{\mathcal A}(\mathbf Z_0)\in B\}}
+ \,\mathrm d\mu_{\mathrm{prep}}(\mathbf Z_0),
+ \qquad \mathcal A\in\{x,p\}.
+\label{eq:DMR_readout_pushforward}
+\end{equation}
+Here $B$ is a measurable interval or set of the chosen apparatus output; the integral counts precisely the preparations whose deterministic records lie in that set. This is the distribution induced by a deterministic readout, not an assigned detector law.
+
+For ideal position readout, the actual coupling, calibrated spatial response, efficiency, and matched preparation must give the position marginal of $\rho_\psi$. For an ideal momentum experiment, its separate interaction and calibration must give the spectral marginal defined by Equation~\eqref{eq:DMR_fourier_momentum}. In the one-dimensional notation of \hyperref[sec:DMR_heisenberg]{Section~\ref*{sec:DMR_heisenberg}}, the operational matching conditions are
+\begin{equation}
+ \boxed{
+ \frac{\mathrm d\mathbb P_x}{\mathrm dx}=\rho_\psi(x),
+ \qquad
+ \frac{\mathrm d\mathbb P_p}{\mathrm dp_{\mathrm w}}
+ =|\widetilde\psi(p_{\mathrm w})|^2
+ \quad\text{under ideal observable matching}.
+ }
+\label{eq:DMR_operational_matching}
+\end{equation}
+They are conditions to establish from the two readout maps, not consequences of intensity normalization alone. The momentum readout is not obtained by simply sampling the local phase gradient $S'$ from the initial position distribution. The experiments act differently on the complete field--defect--detector configuration.
+
+\subsection{Preparation Uncertainty, Readout Error, and Disturbance}
+
+Preparation uncertainty refers to the spreads of observables in the specified incoming preparation. Readout error compares a calibrated apparatus output with its designated target observable. Disturbance compares the relevant state or output after interaction with that of a specified comparison protocol. These require different physical maps.
+
+Equations~\eqref{eq:DMR_full_covariance} and~\eqref{eq:DMR_calibrated_covariance} calculate preparation and readout transport within their linear mechanical domain. Equations~\eqref{eq:DMR_retention_criterion} and~\eqref{eq:DMR_readout_bound} concern the stability and tolerance of an already selected record. None equates a narrow terminal binding coordinate with a simultaneously narrow pair of incoming field observables.
+
+Likewise, the two distributions in Equation~\eqref{eq:DMR_operational_matching} belong to separate measurement arrangements on the same class of incident preparations. A joint position--momentum readout would require its own coupling and added-resolution calculation.
+
+\subsection{The Quantum Correspondence Statement}
+
+The completed field result is Equation~\eqref{eq:DMR_heisenberg_bound}. Equation~\eqref{eq:DMR_equivariance} preserves a matched position distribution when the stated defect-velocity condition holds. Equation~\eqref{eq:DMR_operational_matching} states the additional detector correspondence required to identify the field widths with the measured preparation widths.
+
+When all three steps hold for an experiment, the measured position and momentum spreads inherit the continuum Heisenberg bound. The field theorem is exact in its declared function space; the physical correspondence is limited by the matter-branch approximation and the precision of the preparation and readout matching. This construction supplies no universal Born preparation or completed particle-specific detector response beyond those stated conditions.
+
+Correlated and sequential measurements require the corresponding joint mechanical state and detector dynamics. Their specialized torsional and paired-record reductions remain in \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}} and \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}} rather than being inferred from a single-field spread identity.
+
+\section{Structural Limits and the Domain of the Correspondence}
+\label{sec:DMR_structural_limits}
+
+\subsection{Beyond the Continuum and Local Receiving Limits}
+
+The wave identity requires the continuum field and spectral momentum specified in \hyperref[sec:DMR_heisenberg]{Section~\ref*{sec:DMR_heisenberg}}. Finite-lattice dispersion, branch mixing, and nonlinear defect deformation must be included before extending its physical interpretation to shorter scales. No universal finite-lattice correction follows solely from the spacing $r_{\mathrm D}$.
+
+The local receiving law requires a sufficiently broad outgoing response over the relevant band and an observation interval on which returning energy is negligible. The finite-band calculation and bound-mode criterion in \hyperref[sec:DMR_receiving_band]{Section~\ref*{sec:DMR_receiving_band}} provide an explicit check for the selected directional geometry. Other geometries require their own spectral projection. Coherent interference and barrier propagation retain the dedicated energy and boundary constructions of \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}} and \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.
+
+\subsection{Nonuniform Loading and Approach to Saturation}
+
+For unequal active endpoints, Equation~\eqref{eq:exact_nonuniform_factor} gives
+\begin{equation}
+ \mathcal C_{ij}=(1-\overline\alpha_{\mathrm G})^2
+ -\frac{(\delta\alpha_{\mathrm G})^2}{4},
+\end{equation}
+where the bar is the endpoint mean and $\delta\alpha_{\mathrm G}$ their difference. The locally uniform approximation requires
+$|\delta\alpha_{\mathrm G}|\ll2(1-\overline\alpha_{\mathrm G})$ across the participating support, as in Equation~\eqref{eq:continuum_validity_condition}.
+
+For a prescribed time-dependent scalar constraint $q=\mathcal C(t)y$ with $\mathcal C>0$, an explicit extension of the quasistatic kinetic map gives
+\begin{equation}
+ L=\frac{M_0}{2\mathcal C^2}
+ \left(\dot q-\frac{\dot{\mathcal C}}{\mathcal C}q\right)^2-U(q),
+ \qquad
+ \pi_q=\frac{M_0}{\mathcal C^2}\left(\dot q-\frac{\dot{\mathcal C}}{\mathcal C}q\right).
+\label{eq:DMR_time_dependent_loading}
+\end{equation}
+The associated canonical generator is
+\begin{equation}
+ H_q=\frac{\mathcal C^2\pi_q^2}{2M_0}+\frac{\dot{\mathcal C}}{\mathcal C}q\pi_q+U(q).
+\label{eq:DMR_loading_generator}
+\end{equation}
+For time-independent $U$ and this prescribed constraint, the physical energy $E_{\mathrm{phys}}=\tfrac12M_0\dot y^2+U(\mathcal C y)$ satisfies
+\begin{equation}
+ \dot E_{\mathrm{phys}}=\frac{\dot{\mathcal C}}{\mathcal C}qU'(q).
+\label{eq:DMR_loading_work}
+\end{equation}
+The changing load supplies this work. Equations~\eqref{eq:DMR_time_dependent_loading}--\eqref{eq:DMR_loading_work} describe a stated extension of the scalar map, not a microscopic equation for $\mathcal C(t)$ or for phase conversion.
+
+For the uniformly scaled branch $\omega_q=\mathcal C\omega_{q0}$, quasistatic following requires
+\begin{equation}
+ \boxed{
+ \frac{|\dot{\mathcal C}|}{\mathcal C^2\omega_{q0}}\ll1,
+ \qquad
+ \frac{2|\dot\alpha_{\mathrm G}|}
+ {\omega_{q0}(1-\alpha_{\mathrm G})^3}\ll1
+ }.
+\label{eq:DMR_quasistatic_limit}
+\end{equation}
+The two inequalities are equivalent for Equation~\eqref{eq:DMR_loading_factor}. Band access, spatial uniformity, or quasistatic tracking can fail before $\mathcal C=0$.
+
+\subsection{Active Detector Records and Latent Structural Records}
+
+At $\mathcal C=0$, the active coordinate map is singular. The endpoint construction is restricted to State I, as specified in \hyperref[sec:grav_saturation_appendix]{Section~\ref*{sec:grav_saturation_appendix}}. The FCC-to-SC transformation requires the appropriate phase-boundary state and dynamics developed as a separate problem in \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}.
+
+An active detector record is a retained binding configuration with a finite readout lifetime. A Hard-Floor record is a static longitudinal configuration under the information premise of \hyperref[part:one]{Part~\ref*{part:one}}; its microscopic writing and probing belong to \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}. The bare substrate is not included as an ordinary kinetic or thermal receiver in Equation~\eqref{eq:DMR_parent_hamiltonian}.
+
+A definite locked configuration fixes its own physical state. An ensemble of unresolved locked configurations may still have a distribution of addresses and probe responses. The active covariance law is not analytically continued through the singular endpoint to determine that distribution.
+
+\subsection{Particle-Specific Completion and Independent Tests}
+
+A complete application begins with one localized defect and its detector-supported configuration. The same parent mechanics must determine its profile, kinetic participation, boundary traction, receiving spectrum, nonlinear binding landscape, and terminal readout. The preparation measure and the physical identification of position and momentum records then determine whether Equation~\eqref{eq:DMR_operational_matching} is realized.
+
+The displayed identities can be checked independently by comparing direct contact dynamics with the reduced response, testing its energy and canonical balances, resolving any discrete spectral component, and propagating complete preparation data through capture and readout. Empirical comparison requires an apparatus calibration and prediction in the same physical regime. The harmonic and continuum results here do not independently complete microscopic particle structure or the FCC-to-SC transformation.
+
+\section*{Conclusion: Deterministic Mechanics and Its Continuum Measurement Limit}
+
+The field, receiver, and record provide three linked descriptions. Equation~\eqref{eq:DMR_exact_field_spread} expresses the spatial--spectral structure of the action-normalized field and yields the Heisenberg bound. Equation~\eqref{eq:DMR_full_covariance} transports complete preparation dependence into the measured mechanical response, with the exponential inherited limit given by Equation~\eqref{eq:DMR_covariance_contraction}. Capture and readout are controlled by the spectral, retention, and residual-energy conditions in Equations~\eqref{eq:DMR_bound_mode_criterion}, \eqref{eq:DMR_retention_criterion}, and~\eqref{eq:DMR_readout_bound}.
+
+Gravitational loading acts through that same mechanics. It changes the kinetic projection, receiving impedance, response time, and calibrated output. The reciprocal fixed-action scaling in Equation~\eqref{eq:DMR_reciprocal_spreads} preserves canonical area while giving the boundary displacement a definite loading dependence.
+
+The operational quantum correspondence follows when the physical defect transport, preparation, and detector maps satisfy the matching conditions of \hyperref[sec:DMR_quantum_correspondence]{Section~\ref*{sec:DMR_quantum_correspondence}}. Within that correspondence, the uncertainty relation is an exact property of the continuum field description, while the description itself is a controlled reduction of the stipulated mechanical dynamics.
+
+\noindent\textbf{Certainty is the definite evolution of the complete mechanical state. Measurement resolution is the precision with which a specified interaction records that evolution.} Their relation is calculated through the physical field, its work-conjugate coupling, the receiving preparation, and the structure that retains the record.

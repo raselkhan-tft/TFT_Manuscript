@@ -191,6 +191,20 @@ For the elementary completed excitation selected by the action condition of \hyp
 \end{equation}
 The full-cycle action remains $h$. The linear equations allow continuous quadrature amplitudes; the selection of elementary completed excitations is inherited from the TFT action condition. Decomposition of one excitation among several modes does not assign a separate integer quantum to every coefficient.
 
+% BEGIN PAPER-IV SYNCHRONIZATION: nonlinear cycle diagnostic
+\subsection*{Harmonic normalization and a nonlinear periodic core}
+\phantomsection\label{sec:X_nonlinear_action_diagnostic}
+
+The equality $E_a=\omega_a I_a$ above belongs to a harmonic mode with its energy measured from the specified reference. For a regular one-degree-of-freedom periodic family, with any other invariants fixed, define instead
+\[
+ I(E)=\frac1{2\pi}\oint\pi\,\mathrm dq,
+ \qquad \frac{\mathrm dI}{\mathrm dE}
+ =\frac{T(E)}{2\pi}=\frac1{\omega(E)},
+ \qquad \omega(I)=\frac{\mathrm dE}{\mathrm dI}.
+\]
+Here $T(E)$ is the orbit period. The derivative follows by differentiating the energy contour: $\partial\pi/\partial E=1/\dot q$ on a regular segment, so the contour derivative is the full period. Consequently, selecting $I=\hbar$ does not by itself prove $E(\hbar)=\hbar\omega(\hbar)$ for a nonlinear core. Its total rest energy, internal cycle frequency, and small-perturbation frequencies must be matched using the same configuration. This qualification changes neither the harmonic quadrature identities nor the elementary-action premise.
+% END PAPER-IV SYNCHRONIZATION
+
 \subsection{The Signed Traveling Phase}
 
 For the traveling convention $\varphi=\mathbf k\cdot\mathbf x-\omega t$, the phase--action assignment is $S=\hbar\varphi$. The corresponding one-action quantities are
@@ -262,6 +276,10 @@ This equation is a rewriting of the conservative real-mode dynamics. Its spatial
 
 \subsection{The Matter Branch and Its Inertial Curvature}
 
+% BEGIN PAPER-IV SYNCHRONIZATION: meaning of the matter branch
+The required branch belongs to the complete localized configuration and its participating field, not automatically to the reference scaffold. A local defect breaks spatial translation symmetry; a Fourier envelope for its motion requires a justified translation-covariant collective description. Plane waves of the defect-free lattice are not silently substituted for the eigenmodes of a single inhomogeneous defect. A positive gap, including the existing microrotational gap, does not alone establish a particle rest carrier or its translational inertia.
+
+% END PAPER-IV SYNCHRONIZATION
 Consider an independently established, isolated reciprocal matter branch with a smooth minimum at $\mathbf k=0$, a positive carrier frequency $\omega_0=\omega(\mathbf0)$, and positive quadratic curvature. Reciprocity removes the odd powers in the local expansion:
 \begin{equation}
     \omega(\mathbf k)=\omega_0
@@ -331,6 +349,24 @@ A physical matter correspondence requires the independent matching
     \label{eq:X_matter_matching}
 \end{equation}
 The first equality compares Equation~\eqref{eq:X_band_mass} with the translational response in Equation~\eqref{eq:X_translation_mass}. The second applies when the carrier describes the rest energy of that same excitation. The calculation must also identify $\hbar\mathbf k$ with the defect's total translational momentum and $V$ with its mechanical interaction energy per elementary excitation. These are tests of the microscopic projection, not definitions chosen to fix the desired coefficients.
+
+% BEGIN PAPER-IV SYNCHRONIZATION: mass-curvature consistency test
+For an isotropic branch, the simultaneous conditions in Equation~\eqref{eq:X_matter_matching}, together with $E_0=\hbar\omega_0$, imply the explicit curvature test
+\[
+ \left.\frac{\partial^2\omega^2}
+ {\partial k_i\partial k_j}\right|_{\mathbf0}
+ =\frac{2\hbar\omega_0}{m}\delta_{ij}
+ =2c_{\mathrm E}^2\delta_{ij},
+ \qquad
+ \omega^2(\mathbf k)=\omega_0^2+c_{\mathrm E}^2k^2+O(k^4).
+\]
+This is a necessary consequence of the independent matching, not a dispersion law imposed in order to obtain it. Positive curvature alone does not fix this coefficient. The quadratic envelope also requires the omitted dispersion to be small across the occupied wave-number band. For phase-accurate propagation over a reference-time interval $t$, a sufficient homogeneous-sector diagnostic is
+\[
+ t\left|\omega(\mathbf k)-\omega_0
+ -\frac{\hbar}{2}(m_{\mathrm{env}}^{-1})_{ij}k_i k_j\right|\ll1
+\]
+on that band. This bounds accumulated phase error; interaction-induced branch mixing must be controlled separately.
+% END PAPER-IV SYNCHRONIZATION
 
 For the uniform isotropic branch, the corresponding group velocity is
 \begin{equation}

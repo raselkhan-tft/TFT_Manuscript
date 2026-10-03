@@ -390,3 +390,275 @@ $P_{\mathrm{GW}}$ & Total Quadrupole Luminosity & $\frac{G}{5c_{\mathrm{E}}^5} \
 
 \bottomrule
 \end{longtable}
+
+\newpage
+\section*{VI. Physical Fields, Defect Coordinates, and Modal Mechanics}
+
+These entries collect the retained notation of
+\hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}
+that has no symbol entry in the preceding tables. Related forms are grouped
+by their mechanical or statistical role. A response-dependent or
+preparation-dependent entry is not an additional universal constant.
+
+Throughout these entries, $t$ is coordinate time in seconds and $x$ or
+$\mathbf x$ denotes spatial position in metres per component. A subscript
+$0$ marks initial data or an unstrained coefficient as defined locally;
+the comparison subscripts $1$ and $\mathcal C$ distinguish corresponding
+unstrained and loaded preparations. A prefix $\delta$ denotes a tangent
+variation, whereas $\Delta q$ and $\Delta\pi_q$ denote standard deviations.
+A hat denotes a harmonic amplitude in the boundary problem and an
+operator only in the explicitly designated canonical comparison.
+Powers, time derivatives, inverses, transposes, and component indices
+are forms of the same defined quantity rather than additional variables.
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{longtable}{@{} c p{5.5cm} p{4cm} p{3.5cm} @{}}
+\toprule
+\textbf{Symbol} & {\raggedright \textbf{Mechanical Definition}\par} & {\raggedright \textbf{TFT Mathematical Relation}\par} & {\raggedright \textbf{Numerical Value}\par} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Symbol} & {\raggedright \textbf{Mechanical Definition}\par} & {\raggedright \textbf{TFT Mathematical Relation}\par} & {\raggedright \textbf{Numerical Value}\par} \\
+\midrule
+\endhead
+
+% ABN-01: F19
+\begin{tabular}[c]{@{}c@{}}$\psi$ \\ $\rho_\psi$\end{tabular} & {\raggedright Action-normalized excitation field and its intensity; distinct from the structural order parameter $\Psi$.\par} & {\raggedright $\rho_\psi=|\psi|^2$; $\int\rho_\psi\,\mathrm dx=1$ in the selected 1D channel. \newline Equation~\eqref{eq:DMR_normalized_field}.\par} & {\raggedright 1D: $[\psi]=\mathrm{m^{-1/2}}$, $[\rho_\psi]=\mathrm{m^{-1}}$; 3D: $\mathrm{m^{-3/2}}$, $\mathrm{m^{-3}}$.\par} \\
+
+% ABN-02: F19
+$\widetilde\psi$ & {\raggedright Momentum-space representation of the normalized 1D excitation field.\par} & {\raggedright Fourier transform with kernel $e^{-ip_{\mathrm w}x/\hbar}$ and factor $(2\pi\hbar)^{-1/2}$. \newline Equation~\eqref{eq:DMR_fourier_momentum}.\par} & {\raggedright Variable; units $(\mathrm{kg\,m\,s^{-1}})^{-1/2}$.\par} \\
+
+% ABN-03: F21
+$S$ & {\raggedright Signed mechanical phase action of the selected excitation field.\par} & {\raggedright $\psi=\sqrt{\rho_\psi}\,e^{iS/\hbar}$; $S'=\partial_xS$ is its phase momentum. \newline Equation~\eqref{eq:DMR_normalized_field}.\par} & {\raggedright Variable ($\mathrm{J\,s}$).\par} \\
+
+% ABN-04: F58
+\begin{tabular}[c]{@{}c@{}}$p_{\mathrm w}$ \\ $\widehat p_{\mathrm w}$\end{tabular} & {\raggedright Spectral momentum coordinate and its generator on the continuum field; distinct from the capture momentum $\pi_q$.\par} & {\raggedright $\widehat p_{\mathrm w}=-i\hbar\partial_x$. \newline Equation~\eqref{eq:DMR_fourier_momentum}.\par} & {\raggedright Momentum units ($\mathrm{kg\,m\,s^{-1}}$).\par} \\
+
+% ABN-05: F45
+\begin{tabular}[c]{@{}c@{}}$\sigma_x$ \\ $\sigma_{p,\mathrm w}$\end{tabular} & {\raggedright Action-weighted spatial and Fourier-momentum standard deviations of one normalized field.\par} & {\raggedright $\sigma_x^2=\langle(x-\langle x\rangle_\rho)^2\rangle_\rho$; spectral variance in the referenced expression. \newline Equation~\eqref{eq:DMR_momentum_variance}.\par} & {\raggedright Respectively $\mathrm m$ and $\mathrm{kg\,m\,s^{-1}}$.\par} \\
+
+% ABN-06: F53
+$C_{xp}$ & {\raggedright Action-weighted covariance of position and phase momentum; equals the symmetrized field covariance on the stated domain.\par} & {\raggedright Action-weighted product of the centered $x$ and $S'$ values. \newline Equation~\eqref{eq:DMR_field_covariance}.\par} & {\raggedright Variable ($\mathrm{J\,s}$).\par} \\
+
+% ABN-07: F56
+$\mathcal F_\rho$ & {\raggedright Amplitude-gradient functional measuring spatial sharpness of the normalized 1D field.\par} & {\raggedright $\displaystyle\int \frac{(\rho_\psi')^2}{\rho_\psi}\,\mathrm dx$; gradient energy $\hbar^2\mathcal F_\rho/(8m_{\mathrm{env}})$. \newline Equation~\eqref{eq:DMR_momentum_variance}.\par} & {\raggedright Profile-dependent ($\mathrm{m^{-2}}$).\par} \\
+
+% ABN-08: F26
+$m_{\mathrm{env}}$ & {\raggedright Envelope inertial-curvature coefficient of the isolated matter branch in the isotropic reduction.\par} & {\raggedright $\displaystyle\frac1{m_{\mathrm{env}}}=\frac1\hbar\left.\frac{\partial^2\omega}{\partial k_x^2}\right|_{\mathbf0}$. \newline Equation~\eqref{eq:X_band_mass}.\par} & {\raggedright Branch-dependent ($\mathrm{kg}$).\par} \\
+
+% ABN-09: F61
+$\mathbf j_\psi$ & {\raggedright Action-normalized current of the 3D conservative matter field.\par} & {\raggedright $\displaystyle\frac{\hbar}{m_{\mathrm{env}}}\operatorname{Im}(\psi^*\nabla\psi)$. \newline Equation~\eqref{eq:X_continuity}.\par} & {\raggedright Variable ($\mathrm{m^{-2}\,s^{-1}}$ in 3D).\par} \\
+
+% ABN-10: F61
+\begin{tabular}[c]{@{}c@{}}$\mathbf v_K$ \\ $f_K$\end{tabular} & {\raggedright Knot transport velocity and the separately prepared 3D knot-position density. Equality of $f_K$ and $\rho_\psi$ requires matched preparation.\par} & {\raggedright $\mathbf v_K=\mathbf j_\psi/\rho_\psi$ under the stated guidance condition; $\int f_K\,\mathrm dV=1$. \newline Equation~\eqref{eq:DMR_guidance_condition}.\par} & {\raggedright Respectively $\mathrm{m\,s^{-1}}$ and $\mathrm{m^{-3}}$.\par} \\
+
+% ABN-11: F09
+$q$ & {\raggedright Length-valued retained defect or detector-boundary coordinate; particle-center position only after the corresponding reconstruction.\par} & {\raggedright $\delta\boldsymbol\zeta=\mathbf e_q\,\delta q$ for its retained tangent component. \newline Equation~\eqref{eq:DMR_defect_projection}.\par} & {\raggedright Configuration-dependent ($\mathrm m$).\par} \\
+
+% ABN-12: F10
+$\pi_q$ & {\raggedright Canonical momentum conjugate to the retained coordinate $q$.\par} & {\raggedright $\pi_q=M_q\dot q$ for the stationary kinetic map; changing loading uses the referenced generator. \newline Equation~\eqref{eq:DMR_time_dependent_loading}.\par} & {\raggedright Variable ($\mathrm{kg\,m\,s^{-1}}$).\par} \\
+
+% ABN-13: F24
+\begin{tabular}[c]{@{}c@{}}$\boldsymbol\zeta$ \\ $\boldsymbol\zeta_*(q)$\end{tabular} & {\raggedright Admissible active displacement configuration and the selected detector-loaded defect family.\par} & {\raggedright $\mathbf e_q=\partial_q\boldsymbol\zeta_*$; $\boldsymbol\zeta_{\mathrm{in}}$ is the incident reconstruction. \newline Equation~\eqref{eq:DMR_defect_projection}.\par} & {\raggedright Length per retained coordinate ($\mathrm m$).\par} \\
+
+% ABN-14: F70
+$\boldsymbol\pi$ & {\raggedright Complete canonical-momentum vector for the same admissible length coordinates.\par} & {\raggedright $\boldsymbol\pi=\mathsf M\dot{\boldsymbol\zeta}$. \newline Equation~\eqref{eq:DMR_defect_projection}.\par} & {\raggedright $\mathrm{kg\,m\,s^{-1}}$ per component.\par} \\
+
+% ABN-15: F37
+\begin{tabular}[c]{@{}c@{}}$\mathbf e_q$ \\ $\mathbf e_a$\end{tabular} & {\raggedright Defect tangent mode and incident or receiving real-mode shapes within their separately specified expansions.\par} & {\raggedright $\mathbf e_q=\partial_q\boldsymbol\zeta_*$; real-mode projection as referenced. \newline Equation~\eqref{eq:DMR_field_reconstruction}.\par} & {\raggedright Dimensionless for length-valued mode coordinates.\par} \\
+
+% ABN-16: F78
+$a_a$ & {\raggedright Complex mechanical quadrature amplitude of incident real mode $a$, using the action normalization of the physical-wavefunction construction.\par} & {\raggedright $q_a=\sqrt{\hbar/(2M_a\omega_a)}(a_a+a_a^*)$. \newline Equation~\eqref{eq:X_complex_quadrature}.\par} & {\raggedright Dimensionless; mode action $\hbar|a_a|^2$.\par} \\
+
+% ABN-17: F17
+$M_{\mathrm D}$ & {\raggedright Baseline nodal inertia assigned once to each site of the selected FCC scaffold-coordinate normalization.\par} & {\raggedright $M_{\mathrm D}=h/(c_{\mathrm E}r_{\mathrm D})$. \newline Equation~\eqref{eq:Y_directional_radiation_resistance}.\par} & {\raggedright Set by the adopted baseline ($\mathrm{kg}$).\par} \\
+
+% ABN-18: F17
+\begin{tabular}[c]{@{}c@{}}$M_a$ \\ $m_a$\end{tabular} & {\raggedright Incident real-mode inertia $M_a$ and independently projected receiving-mode inertia $m_a$.\par} & {\raggedright Kinetic projections of their specified, nonduplicated mode shapes. \newline Equation~\eqref{eq:Y_coupled_mechanical_reduction}.\par} & {\raggedright Mode-dependent, positive ($\mathrm{kg}$).\par} \\
+
+% ABN-19: F30 F17
+\begin{tabular}[c]{@{}c@{}}$\mathsf M$ \\ $M_q$\end{tabular} & {\raggedright Assembled admissible-coordinate kinetic matrix and the inertia of the selected defect mode.\par} & {\raggedright $M_q=\mathbf e_q^{\mathsf T}\mathsf M\mathbf e_q$. \newline Equation~\eqref{eq:DMR_defect_projection}.\par} & {\raggedright Matrix entries and $M_q$ in $\mathrm{kg}$ when coordinates are lengths.\par} \\
+
+% ABN-20: F39
+\begin{tabular}[c]{@{}c@{}}$\xi_a$ \\ $\pi_a$\end{tabular} & {\raggedright Independent active receiving displacement and its conjugate momentum.\par} & {\raggedright $\pi_a=m_a\dot\xi_a$. \newline Equation~\eqref{eq:DMR_preparation_force}.\par} & {\raggedright Respectively $\mathrm m$ and $\mathrm{kg\,m\,s^{-1}}$.\par} \\
+
+% ABN-21: F11 F22
+\begin{tabular}[c]{@{}c@{}}$\omega$ \\ $\omega_a$ \\ $\omega_q$\end{tabular} & {\raggedright Imposed harmonic angular frequency; frequency of a specified incident or receiving mode; natural frequency of the retained harmonic coordinate.\par} & {\raggedright $\omega_q=\sqrt{k_q/M_q}$; mode frequencies are supplied by the respective eigenproblem. \newline Equation~\eqref{eq:DMR_loaded_response}.\par} & {\raggedright $\mathrm{s^{-1}}$; no universal detector value.\par} \\
+
+% ABN-22: F20 F54
+\begin{tabular}[c]{@{}c@{}}$U(q)$ \\ $E_q$\end{tabular} & {\raggedright Statically relaxed retained potential and total retained mechanical energy.\par} & {\raggedright $E_q=\tfrac12M_q\dot q^2+U(q)$. \newline Equation~\eqref{eq:Y_local_mechanical_energy}.\par} & {\raggedright Configuration-dependent ($\mathrm J$).\par} \\
+
+% ABN-23: F54
+$E_{\mathrm{rec}}$ & {\raggedright Receiving energy, including the contact-storage terms assigned to that sector.\par} & {\raggedright $\dot E_{\mathrm{rec}}=Q_{\mathrm{rec}}\dot q$. \newline Equation~\eqref{eq:DMR_total_energy_balance}.\par} & {\raggedright State-dependent ($\mathrm J$).\par} \\
+
+% ABN-24: F54 F16
+\begin{tabular}[c]{@{}c@{}}$H$ \\ $H_q$ \\ $L$\end{tabular} & {\raggedright Complete coupled Hamiltonian, retained canonical generator, and Lagrangian of the stated coordinate reduction. A time-dependent generator is distinguished from physical stored energy.\par} & {\raggedright Coupled Hamiltonian and changing-coordinate generator as referenced. \newline Equations~\eqref{eq:DMR_parent_hamiltonian} and \eqref{eq:DMR_loading_generator}.\par} & {\raggedright Energy units ($\mathrm J$).\par} \\
+
+% ABN-25: F29 F35
+\begin{tabular}[c]{@{}c@{}}$k_q$ \\ $g_a$\end{tabular} & {\raggedright Local retained-potential curvature and work-conjugate coupling stiffness from $q$ to receiving mode $a$.\par} & {\raggedright $U(q)=k_qq^2/2$ locally; $m_a\ddot\xi_a+m_a\omega_a^2\xi_a=g_aq$. \newline Equation~\eqref{eq:Y_coupled_mechanical_reduction}.\par} & {\raggedright Configuration-dependent ($\mathrm{N\,m^{-1}}$).\par} \\
+
+% ABN-26: F62 F32
+\begin{tabular}[c]{@{}c@{}}$\mathbf X_\partial$ \\ $\mathbf b_\partial$\end{tabular} & {\raggedright Physical defect boundary and its displacement mode per unit retained coordinate.\par} & {\raggedright $\mathbf b_\partial=\partial_q\mathbf X_\partial$. \newline Equation~\eqref{eq:DMR_boundary_work}.\par} & {\raggedright $[\mathbf X_\partial]=\mathrm m$; $\mathbf b_\partial$ dimensionless.\par} \\
+
+% ABN-27: F62 F41
+\begin{tabular}[c]{@{}c@{}}$\mathbf t_{\mathrm{in}}$ \\ $F_{\mathrm{in}}$\end{tabular} & {\raggedright Incident surface traction and its generalized-force projection on the retained boundary mode.\par} & {\raggedright $\displaystyle F_{\mathrm{in}}=\int_{\partial\Omega_{\mathrm{def}}}\mathbf b_\partial\!\cdot\!\mathbf t_{\mathrm{in}}\,\mathrm dA$. \newline Equation~\eqref{eq:DMR_boundary_work}.\par} & {\raggedright Respectively $\mathrm{N\,m^{-2}}$ and $\mathrm N$.\par} \\
+
+% ABN-28: F52
+$Q_{\mathrm{rec}}$ & {\raggedright Receiving load on $q$, written with the resisting-force sign convention.\par} & {\raggedright $\dot E_q=F_{\mathrm{in}}\dot q-Q_{\mathrm{rec}}\dot q$. \newline Equation~\eqref{eq:DMR_total_energy_balance}.\par} & {\raggedright Force ($\mathrm N$); distinct from the field gradient-energy potential $Q$.\par} \\
+
+\bottomrule
+\end{longtable}
+
+\vspace{1cm}
+\section*{VII. Receiving Preparation, Covariance, and Readout}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{longtable}{@{} c p{5.5cm} p{4cm} p{3.5cm} @{}}
+\toprule
+\textbf{Symbol} & {\raggedright \textbf{Mechanical Definition}\par} & {\raggedright \textbf{TFT Mathematical Relation}\par} & {\raggedright \textbf{Numerical Value}\par} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Symbol} & {\raggedright \textbf{Mechanical Definition}\par} & {\raggedright \textbf{TFT Mathematical Relation}\par} & {\raggedright \textbf{Numerical Value}\par} \\
+\midrule
+\endhead
+
+% ABN-29: F33
+$K$ & {\raggedright Mechanical memory kernel of the selected active receiving modes, distinct from a stiffness matrix or a new constant.\par} & {\raggedright $K(s)=\sum_a\frac{g_a^2}{m_a\omega_a^2}\cos(\omega_as)$. \newline Equation~\eqref{eq:Y_memory_kernel}.\par} & {\raggedright $\mathrm{N\,m^{-1}}$; $s$ is a time lag.\par} \\
+
+% ABN-30: F31
+$f_0$ & {\raggedright Generalized force fixed by the initial receiving positions and momenta, including their static shift.\par} & {\raggedright Initial-state force in the delayed equation; its explicit oscillator sum is referenced. \newline Equation~\eqref{eq:DMR_preparation_force}.\par} & {\raggedright Force ($\mathrm N$).\par} \\
+
+% ABN-31: F23 F06
+\begin{tabular}[c]{@{}c@{}}$\eta_q$ \\ $\Gamma_q$\end{tabular} & {\raggedright Effective local force--velocity resistance and coherent-energy relaxation rate of the same retained mode.\par} & {\raggedright $Q_{\mathrm{rec}}\simeq\eta_q\dot q$ for the driven local response; $\Gamma_q\simeq\eta_q/M_q$ in the weak-loss harmonic limit. \newline Equation~\eqref{eq:Y_localized_damping_rate}.\par} & {\raggedright $\eta_q$: $\mathrm{kg\,s^{-1}}$; $\Gamma_q$: $\mathrm{s^{-1}}$.\par} \\
+
+% ABN-32: F44
+\begin{tabular}[c]{@{}c@{}}$\varepsilon_a$ \\ $\varepsilon_{\mathrm{prep}}$\end{tabular} & {\raggedright Mean initial energy of shifted receiving oscillator $a$; common mean under the stated equal-energy preparation.\par} & {\raggedright $\langle\pi_a(0)^2\rangle=m_a\varepsilon_a$ for uniform phase; $\varepsilon_a=\varepsilon_{\mathrm{prep}}$ in the common-energy case. \newline Equation~\eqref{eq:DMR_force_covariance}.\par} & {\raggedright Preparation-dependent ($\mathrm J$).\par} \\
+
+% ABN-33: F12
+\begin{tabular}[c]{@{}c@{}}$T$ \\ $k_{\mathrm B}$\end{tabular} & {\raggedright Classical receiving-preparation temperature and the Boltzmann energy--temperature conversion factor.\par} & {\raggedright $\varepsilon_{\mathrm{prep}}=k_{\mathrm B}T$ in the thermal specialization. \newline Equation~\eqref{eq:DMR_stationary_preparation}.\par} & {\raggedright $T$: $\mathrm K$; $k_{\mathrm B}$: $\mathrm{J\,K^{-1}}$.\par} \\
+
+% ABN-34: F09 F10
+\begin{tabular}[c]{@{}c@{}}$\Delta q$ \\ $\Delta\pi_q$\end{tabular} & {\raggedright Standard deviations of the retained mechanical preparation; distinct from the field widths $\sigma_x,\sigma_{p,\mathrm w}$.\par} & {\raggedright Diagonal entries of $\mathsf V$ are $(\Delta q)^2$ and $(\Delta\pi_q)^2$. \newline Equation~\eqref{eq:DMR_covariance_contraction}.\par} & {\raggedright Respectively $\mathrm m$ and $\mathrm{kg\,m\,s^{-1}}$.\par} \\
+
+% ABN-35: F68
+\begin{tabular}[c]{@{}c@{}}$\mathbf z$ \\ $\mathbf w_0$ \\ $\mathbf d$\end{tabular} & {\raggedright Retained canonical pair; remaining receiving initial data; retained-state contribution from the common imposed drive.\par} & {\raggedright $\mathbf z=(q,\pi_q)^{\mathsf T}$; $\mathbf z=\mathsf A\mathbf z_0+\mathsf B\mathbf w_0+\mathbf d$. \newline Equation~\eqref{eq:DMR_linear_state_map}.\par} & {\raggedright Length and momentum by component. $\mathbf d$ is a state contribution, not a force.\par} \\
+
+% ABN-36: F43
+$\mathsf V$ & {\raggedright Covariance family of the retained pair. Qualifiers $0$, $\mathrm{sig}$, $\mathrm{out}$, $\infty$, $j$, and $\mathrm{total}$ select initial, inherited, output, stationary, conditional, and mixed preparations.\par} & {\raggedright $\mathsf V=\operatorname{Cov}(\mathbf z)$; entries $V_{qq}$, $V_{q\pi}$, $V_{\pi\pi}$. \newline Equation~\eqref{eq:DMR_full_covariance}.\par} & {\raggedright Entry units: $\mathrm{m^2}$, $\mathrm{J\,s}$, $\mathrm{kg^2\,m^2\,s^{-2}}$.\par} \\
+
+% ABN-37: F43
+\begin{tabular}[c]{@{}c@{}}$\mathsf V_{\mathrm R}$ \\ $\mathsf V_{0\mathrm R}$\end{tabular} & {\raggedright Receiving-initial-state covariance and retained--receiving initial cross covariance, within the same covariance family.\par} & {\raggedright $\mathsf V_{\mathrm R}=\operatorname{Cov}(\mathbf w_0)$; cross block as referenced. \newline Equation~\eqref{eq:DMR_full_covariance}.\par} & {\raggedright Products of the corresponding coordinate units.\par} \\
+
+% ABN-38: F46
+\begin{tabular}[c]{@{}c@{}}$\mathsf A$ \\ $\mathsf B$\end{tabular} & {\raggedright Exact fixed-linear-system response blocks carrying initial retained data and receiving data into the retained pair.\par} & {\raggedright $\mathbf z=\mathsf A\mathbf z_0+\mathsf B\mathbf w_0+\mathbf d$. \newline Equation~\eqref{eq:DMR_linear_state_map}.\par} & {\raggedright Each entry has output-unit/input-unit dimensions.\par} \\
+
+% ABN-39: F59 F38
+\begin{tabular}[c]{@{}c@{}}$\mathsf L$ \\ $\boldsymbol\Phi$\end{tabular} & {\raggedright Local tangent generator and its fundamental response matrix in the memory-localized harmonic approximation.\par} & {\raggedright $\delta\dot{\mathbf z}=\mathsf L\delta\mathbf z$; $\dot{\boldsymbol\Phi}=\mathsf L\boldsymbol\Phi$, $\boldsymbol\Phi(0)=\mathbf I$. \newline Equation~\eqref{eq:DMR_local_generator}.\par} & {\raggedright $L_{12}$: $\mathrm{kg^{-1}}$; $L_{21}$: $\mathrm{kg\,s^{-2}}$; diagonal: $\mathrm{s^{-1}}$. Response entries have coordinate-unit ratios.\par} \\
+
+% ABN-40: F74
+\begin{tabular}[c]{@{}c@{}}$\mathsf G_{\mathrm{read}}$ \\ $\mathbf n_{\mathrm{read}}$\end{tabular} & {\raggedright Invertible calibrated readout response and its additive recorded-state contribution.\par} & {\raggedright $\mathbf z_{\mathrm{read}}=\mathsf G_{\mathrm{read}}\mathbf z_0+\mathbf n_{\mathrm{read}}$. \newline Equation~\eqref{eq:DMR_calibrated_covariance}.\par} & {\raggedright Gain entries: output/input units; $\mathbf n_{\mathrm{read}}$: output-coordinate units.\par} \\
+
+% ABN-41: F64
+\begin{tabular}[c]{@{}c@{}}$\mathsf J_2$ \\ $\mathsf J_{\mathrm R}$\end{tabular} & {\raggedright Antisymmetric canonical-pairing arrays for the retained pair and receiving pairs; not material moduli or structural mass moments.\par} & {\raggedright $\mathsf J_2=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$; $\mathsf J_{\mathrm R}$ is block diagonal over receiving pairs. \newline Equation~\eqref{eq:DMR_complete_canonical_map}.\par} & {\raggedright Dimensionless array entries.\par} \\
+
+% ABN-42: F63
+\begin{tabular}[c]{@{}c@{}}$\mathbf Z_0$ \\ $\mu_{\mathrm{prep}}$\end{tabular} & {\raggedright Complete initial mechanical state and its normalized preparation measure. The measure is distinct from surface inertia.\par} & {\raggedright $\int\mathrm d\mu_{\mathrm{prep}}(\mathbf Z_0)=1$. \newline Equation~\eqref{eq:DMR_readout_pushforward}.\par} & {\raggedright $\mathbf Z_0$: component units; $\mu_{\mathrm{prep}}$: dimensionless measure.\par} \\
+
+% ABN-43: F63
+\begin{tabular}[c]{@{}c@{}}$\mathcal R_x$ \\ $\mathcal R_p$\end{tabular} & {\raggedright Terminal outputs of the separately specified position and momentum apparatuses.\par} & {\raggedright $\mathcal R_x(\mathbf Z_0)$ and $\mathcal R_p(\mathbf Z_0)$; generic notation $\mathcal R_{\mathcal A}$. \newline Equation~\eqref{eq:DMR_readout_pushforward}.\par} & {\raggedright Respectively $\mathrm m$ and $\mathrm{kg\,m\,s^{-1}}$.\par} \\
+
+% ABN-44: F40 F63
+\begin{tabular}[c]{@{}c@{}}$\mathbb P_{\mathcal A}$ \\ $P_j$\end{tabular} & {\raggedright Output distribution induced by apparatus $\mathcal A\in\{x,p\}$ and preparation fraction ending in record class $j$. $P(\cdot\mid j)$ is a conditional within-record fraction.\par} & {\raggedright $\mathbb P_{\mathcal A}(B)=\mu_{\mathrm{prep}}\{\mathcal R_{\mathcal A}\in B\}$; $P_j$ weights record mixtures. \newline Equation~\eqref{eq:DMR_readout_pushforward}.\par} & {\raggedright Dimensionless, in $[0,1]$; normalized over complete output classes.\par} \\
+
+% ABN-45: F54
+$E_{\mathrm{fluc}}$ & {\raggedright Quadratic fluctuation energy of a preparation covariance in a harmonic detector basin.\par} & {\raggedright $E_{\mathrm{fluc}}=\dfrac{V_{\pi\pi}}{2M_q}+\dfrac{k_qV_{qq}}2$. \newline Equation~\eqref{eq:DMR_energy_area_bound}.\par} & {\raggedright Preparation-dependent ($\mathrm J$).\par} \\
+
+\bottomrule
+\end{longtable}
+
+\vspace{1cm}
+\section*{VIII. Loaded Receiving Channels and Detector Records}
+
+\vspace{0.5cm}
+\noindent
+\renewcommand{\arraystretch}{1.6}
+\begin{longtable}{@{} c p{5.5cm} p{4cm} p{3.5cm} @{}}
+\toprule
+\textbf{Symbol} & {\raggedright \textbf{Mechanical Definition}\par} & {\raggedright \textbf{TFT Mathematical Relation}\par} & {\raggedright \textbf{Numerical Value}\par} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Symbol} & {\raggedright \textbf{Mechanical Definition}\par} & {\raggedright \textbf{TFT Mathematical Relation}\par} & {\raggedright \textbf{Numerical Value}\par} \\
+\midrule
+\endhead
+
+% ABN-46: F15 F04
+$\mathcal C_{ij}$ & {\raggedright Completed transfer factor for unequal neighboring active endpoints. The uniform member $\mathcal C$ is already listed.\par} & {\raggedright $\mathcal C_{ij}=(1-\overline\alpha_{\mathrm G})^2-(\delta\alpha_{\mathrm G})^2/4$. \newline Equation~\eqref{eq:exact_nonuniform_factor}.\par} & {\raggedright Dimensionless; bar denotes endpoint mean and $\delta$ their difference.\par} \\
+
+% ABN-47: F60
+\begin{tabular}[c]{@{}c@{}}$\mathbf T_{\mathrm{cell}}$ \\ $\mathbb P_{\mathrm{tr}}$\end{tabular} & {\raggedright Primitive-cell transfer operator and projector onto its coherent translational sector.\par} & {\raggedright $\mathbf T_{\mathrm{cell}}=\mathbf I+(\mathcal C-1)\mathbb P_{\mathrm{tr}}$. \newline Equation~\eqref{eq:cell_transfer_operator}.\par} & {\raggedright Dimensionless operators.\par} \\
+
+% ABN-48: F30
+\begin{tabular}[c]{@{}c@{}}$\mathbf M_{\mathrm{cell}}^{(0)}$ \\ $\mathbf M_{\mathrm{cell}}^{(\mathrm{eff})}$\end{tabular} & {\raggedright Baseline and loaded primitive-cell kinetic matrices; assembled before projection onto a complete defect mode.\par} & {\raggedright Loaded matrix is $\mathbf T_{\mathrm{cell}}^{-\mathsf T}\mathbf M_{\mathrm{cell}}^{(0)}\mathbf T_{\mathrm{cell}}^{-1}$. \newline Equation~\eqref{eq:effective_cell_mass_matrix}.\par} & {\raggedright $\mathrm{kg}$ per matrix entry in length-coordinate normalization.\par} \\
+
+% ABN-49: F17
+\begin{tabular}[c]{@{}c@{}}$M_{\mathrm{tr}}$ \\ $M_{\mathrm{comp}}$\end{tabular} & {\raggedright Baseline transfer-sector and complementary kinetic contributions to the same retained mode.\par} & {\raggedright $M_q(\mathcal C)=M_{\mathrm{tr}}/\mathcal C^2+M_{\mathrm{comp}}$ for fixed decoupled mode blocks. \newline Equation~\eqref{eq:DMR_mixed_inertia}.\par} & {\raggedright Mode-dependent ($\mathrm{kg}$).\par} \\
+
+% ABN-50: F28 F17
+\begin{tabular}[c]{@{}c@{}}$y$ \\ $M_0$\end{tabular} & {\raggedright Reference coordinate and its active kinetic coefficient in the stated scalar time-dependent transfer map; not a kinetic Hard-Floor mode.\par} & {\raggedright $q=\mathcal C(t)y$; $M_0\dot y^2/2$ is its kinetic energy. \newline Equation~\eqref{eq:DMR_time_dependent_loading}.\par} & {\raggedright $y$: $\mathrm m$; $M_0$: $\mathrm{kg}$.\par} \\
+
+% ABN-51: F54
+$E_{\mathrm{phys}}$ & {\raggedright Physical energy of the specified time-dependent reference-coordinate model, distinguished from its transformed canonical generator $H_q$.\par} & {\raggedright $E_{\mathrm{phys}}=\tfrac12M_0\dot y^2+U(\mathcal C y)$. \newline Equation~\eqref{eq:DMR_loading_work}.\par} & {\raggedright Variable ($\mathrm J$).\par} \\
+
+% ABN-52: F55
+\begin{tabular}[c]{@{}c@{}}$\mu_{\mathrm{line}}$ \\ $T_{\mathrm{line}}$\end{tabular} & {\raggedright Mass per unit length and integrated directional tension of the selected receiving continuum.\par} & {\raggedright $\mu_{\mathrm{line}}=\mu_{\mathrm{line},0}/\mathcal C^2$; $T_{\mathrm{line}}=T_{\mathrm{line},0}$. \newline Equation~\eqref{eq:DMR_loaded_lead}.\par} & {\raggedright Respectively $\mathrm{kg\,m^{-1}}$ and $\mathrm N$.\par} \\
+
+% ABN-53: F25
+\begin{tabular}[c]{@{}c@{}}$u_n$ \\ $u_{\mathrm{in}}$ \\ $u_{\mathrm{refl}}$ \\ $u_{\mathrm R}$\end{tabular} & {\raggedright Receiving-site displacement, incident and reflected displacement histories, and right-channel displacement field.\par} & {\raggedright $u_{\mathrm{in}}+u_{\mathrm{refl}}=b_{\partial\mathrm L}q$; $u_{\mathrm R}(0,t)=b_{\partial\mathrm R}q$. \newline Equation~\eqref{eq:DMR_boundary_matching}.\par} & {\raggedright Length-valued ($\mathrm m$).\par} \\
+
+% ABN-54: F32
+\begin{tabular}[c]{@{}c@{}}$b_{\partial\mathrm L}$ \\ $b_{\partial\mathrm R}$\end{tabular} & {\raggedright Scalar projections of the physical defect-boundary mode onto the left and right receiving ports.\par} & {\raggedright Endpoint displacement per unit $q$, as in the boundary matching relation. \newline Equation~\eqref{eq:DMR_boundary_matching}.\par} & {\raggedright Geometry-dependent; dimensionless.\par} \\
+
+% ABN-55: F17 F29
+\begin{tabular}[c]{@{}c@{}}$m_{\mathrm{lead}}$ \\ $k_{\mathrm{ct}}$\end{tabular} & {\raggedright Site inertia and integrated bond stiffness of the specified directional receiving lattice. The driven endpoint inertia is already in $M_q$.\par} & {\raggedright $z_{\mathrm{lat}}+z_{\mathrm{lat}}^{-1}=2-m_{\mathrm{lead}}\omega^2/k_{\mathrm{ct}}$. \newline Equation~\eqref{eq:DMR_discrete_root}.\par} & {\raggedright $m_{\mathrm{lead}}$: $\mathrm{kg}$; $k_{\mathrm{ct}}$: $\mathrm{N\,m^{-1}}$.\par} \\
+
+% ABN-56: F48
+\begin{tabular}[c]{@{}c@{}}$Z_{\mathrm{line}}$ \\ $Z_{\mathrm L}$ \\ $Z_{\mathrm R}$\end{tabular} & {\raggedright Directional continuum impedance and the impedances of the two physical ports. Ports are evaluated in the continuum or lattice model stated locally.\par} & {\raggedright $Z_{\mathrm{line}}=Z_{\mathrm{line},0}/\mathcal C$; $\eta_q=b_{\partial\mathrm L}^2Z_{\mathrm L}+b_{\partial\mathrm R}^2Z_{\mathrm R}$ in the local continuum. \newline Equation~\eqref{eq:DMR_two_sided_resistance}.\par} & {\raggedright Force--velocity units ($\mathrm{kg\,s^{-1}}$).\par} \\
+
+% ABN-57: F48
+$Z_{\mathrm{lat}}$ & {\raggedright Exact directional-lattice terminal force--velocity impedance for the selected outgoing or evanescent root.\par} & {\raggedright $Z_{\mathrm{lat}}=\dfrac{k_{\mathrm{ct}}(1-z_{\mathrm{lat}})}{-i\omega}$. \newline Equation~\eqref{eq:DMR_discrete_root}.\par} & {\raggedright Complex response ($\mathrm{kg\,s^{-1}}$).\par} \\
+
+% ABN-58: F50
+\begin{tabular}[c]{@{}c@{}}$z_{\mathrm{lat}}$ \\ $\lambda_{\mathrm{tail}}$\end{tabular} & {\raggedright Complex neighboring-site displacement ratio; positive decay factor of the alternating above-band tail.\par} & {\raggedright $u_n=z_{\mathrm{lat}}^nu_0$; $z_{\mathrm{lat}}=-\lambda_{\mathrm{tail}}$ on the localized tail. \newline Equation~\eqref{eq:DMR_bound_mode_criterion}.\par} & {\raggedright Dimensionless; $0<\lambda_{\mathrm{tail}}<1$.\par} \\
+
+% ABN-59: F49
+\begin{tabular}[c]{@{}c@{}}$\Omega_{\max}$ \\ $\Omega_b$\end{tabular} & {\raggedright Receiving-band cutoff and frequency of an above-band localized mode of the specified detector--lead system.\par} & {\raggedright $\Omega_{\max}=2\sqrt{k_{\mathrm{ct}}/m_{\mathrm{lead}}}$; $\Omega_b$ follows the coupled tail equations. \newline Equation~\eqref{eq:DMR_bound_mode_criterion}.\par} & {\raggedright Angular frequencies ($\mathrm{s^{-1}}$); not universal photon cutoffs.\par} \\
+
+% ABN-60: F73
+\begin{tabular}[c]{@{}c@{}}$r_{\mathrm{lat}}$ \\ $t_{\mathrm{lat}}$\end{tabular} & {\raggedright Displacement-amplitude reflection and transmission coefficients of the specified lattice ports.\par} & {\raggedright $r_{\mathrm{lat}}=u_{\mathrm{refl}}/u_{\mathrm{in}}$; $t_{\mathrm{lat}}=u_{\mathrm R}(0)/u_{\mathrm{in}}$ in the harmonic response. \newline Equation~\eqref{eq:DMR_discrete_flux}.\par} & {\raggedright Dimensionless complex amplitudes; fluxes also contain impedance weights.\par} \\
+
+% ABN-61: F27
+$w_b$ & {\raggedright Central-coordinate spectral weight of the above-band localized mode; denominator includes both evanescent receiving tails.\par} & {\raggedright $\displaystyle\frac{M_q}{M_q+\dfrac{2m_{\mathrm{lead}}\lambda_{\mathrm{tail}}^2}{1-\lambda_{\mathrm{tail}}^2}}$. \newline Equation~\eqref{eq:DMR_bound_weight}.\par} & {\raggedright Dimensionless; $0<w_b<1$ for the specified bound mode.\par} \\
+
+% ABN-62: F51
+\begin{tabular}[c]{@{}c@{}}$q_j$ \\ $q_{\mathrm{th}}$\end{tabular} & {\raggedright Minimum of detector record basin $j$ and a separate trigger or readout position threshold.\par} & {\raggedright $U'(q_j)=0$ at the stable minimum; $q(t_*)=q_{\mathrm{th}}$ at a regular crossing. \newline Equation~\eqref{eq:DMR_event_variance}.\par} & {\raggedright Configuration-dependent ($\mathrm m$).\par} \\
+
+% ABN-63: F47 F67
+\begin{tabular}[c]{@{}c@{}}$t_c$ \\ $t_{\mathrm{read}}$ \\ $t_*$ \\ $v_*$\end{tabular} & {\raggedright Capture assessment time, readout-window endpoint, threshold-crossing time, and velocity at that crossing.\par} & {\raggedright $q(t_*)=q_{\mathrm{th}}$; $v_*=\dot q(t_*)\ne0$ for the regular event map. \newline Equation~\eqref{eq:DMR_event_variance}.\par} & {\raggedright Times in $\mathrm s$; $v_*$ in $\mathrm{m\,s^{-1}}$.\par} \\
+
+% ABN-64: F23 F29 F17
+\begin{tabular}[c]{@{}c@{}}$\eta_{\min}$ \\ $k_{\min}$ \\ $M_{\max}$\end{tabular} & {\raggedright Basin lower resistance bound, lower quadratic-restoring bound, and upper retained-inertia bound.\par} & {\raggedright $\eta_q\geq\eta_{\min}>0$, $M_q\leq M_{\max}$; $U(q)-U(q_j)\geq k_{\min}(q-q_j)^2/2$. \newline Equation~\eqref{eq:DMR_resolution_energy_bounds}.\par} & {\raggedright Respectively $\mathrm{kg\,s^{-1}}$, $\mathrm{N\,m^{-1}}$, and $\mathrm{kg}$.\par} \\
+
+% ABN-65: F69
+\begin{tabular}[c]{@{}c@{}}$\Delta U_{\mathrm{esc},j}$ \\ $E_{\mathrm{tol},j}$\end{tabular} & {\raggedright Minimum escape-boundary energy above record minimum $j$ and the minimum energy to exceed the selected readout tolerance within that basin.\par} & {\raggedright Compared with the same residual energy $E_q-U(q_j)$; retention and tolerance are separate tests. \newline Equation~\eqref{eq:DMR_retention_criterion}.\par} & {\raggedright Positive, configuration-dependent ($\mathrm J$).\par} \\
+
+\bottomrule
+\end{longtable}

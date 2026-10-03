@@ -227,6 +227,20 @@ where $\Omega_{\mathrm{det}}$ is the interaction region and $\omega_{\mathrm{inc
 
 Equation~\eqref{eq:Y_matter_action_balance} tracks loss from the selected incident band. The coupled work balance, Equation~\eqref{eq:Y_coupled_energy_balance}, accounts for its receiving destination, while the complete-cycle normalization of Equation~\eqref{eq:X_complete_cycle} is unchanged. A purely imaginary scalar loss term contributes directly to the intensity equation. The real phase equation retains Equation~\eqref{eq:X_phase_force_potential}, evaluated with the evolving intensity and real potential; an additional velocity-friction term in that phase equation does not follow from this scalar loss alone. The mechanical load is the force in Equation~\eqref{eq:Y_receiving_load}, and capture is the binding problem in \hyperref[sec:Y_capture]{Section~\ref*{sec:Y_capture}}.
 
+% BEGIN PAPER-IV SYNCHRONIZATION: incident loss versus settling
+\paragraph{Uniform-loss check and persistent configurations.}
+For constant nonnegative $\Gamma$ and the same linear boundary conditions, let $\psi_{\mathrm{env}}^{(0)}$ solve the conservative envelope equation with the same initial field. Direct substitution gives
+\[
+ \psi_{\mathrm{env}}(\mathbf x,t)
+ =e^{-\Gamma t/2}\psi_{\mathrm{env}}^{(0)}(\mathbf x,t),\qquad
+ \rho_\psi=e^{-\Gamma t}\rho_\psi^{(0)},\qquad
+ \mathbf j_\psi=e^{-\Gamma t}\mathbf j_\psi^{(0)}.
+\]
+Thus $\mathbf j_\psi/\rho_\psi$ is unchanged wherever the intensity is nonzero. Uniform scalar loss depletes this channel; it does not brake its normalized phase flow. Spatially varying loss can reshape the field, but is likewise not identified with a separately derived velocity-friction force.
+
+In the receiving projection, $\int\rho_\psi\,\mathrm dV$ measures retained incident modal action in units of $\hbar$, not a topological existence count. Its decrease need not mean annihilation of the complete excitation. Conversely, this scalar equation does not specify the omitted detector-bound state or establish that its topology survives. Relaxation of $q$ removes excess motion relative to a chosen equilibrium; a persistent defect at that equilibrium must be supplied by the bound-state configuration. Incident-band depletion, capture into a binding basin, subsequent settling, and a topology-changing annihilation process are distinct questions. The equality $\Gamma=\Gamma_q$ remains restricted to matched mode, frequency, and energy projections and is not a generic conversion of detector friction into loss of a normalized one-particle state.
+% END PAPER-IV SYNCHRONIZATION
+
 \subsection{A Solvable Directional FCC Receiving Channel}
 \label{sec:Y_directional_receiver}
 

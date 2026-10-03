@@ -169,11 +169,11 @@ Instead, it asks one specific question:
 
 \begin{equation}
     \boxed{
-    \text{Can the established TFT microscopic hierarchy support a finite}
-    \quad
-    \Gamma_{\mathrm D}
-    \quad
-    \text{without cosmological calibration?}
+    \begin{gathered}
+        \text{Can the established TFT microscopic hierarchy support a finite}\\
+        \Gamma_{\mathrm D}\quad
+        \text{without cosmological calibration?}
+    \end{gathered}
     }
 \end{equation}
 
@@ -622,13 +622,14 @@ correlation. The final energy must remain within the active Soft-Floor system.
 
 The lowest-order schematic process is therefore
 \begin{equation}
-    \gamma_q
-    \longrightarrow
-    \text{reference-correlated intermediate state}
-    \longrightarrow
-    \gamma_{q-dq}
-    +
-    \text{noncoherent active-vacuum degrees of freedom},
+    \begin{aligned}
+        \gamma_q
+        &\longrightarrow
+        \text{reference-correlated intermediate state}\\
+        &\longrightarrow
+        \gamma_{q-dq}
+        +\text{noncoherent active-vacuum degrees of freedom},
+    \end{aligned}
     \label{eq:AQ_second_order_process}
 \end{equation}
 where the noncoherent degrees of freedom receive the energy transferred out of
@@ -1440,6 +1441,12 @@ obtained from a decaying field amplitude at fixed $k$.
 
 \section{Wave-Vector Transport}
 
+The rate $\Gamma_{\mathrm D}$ and the conservative ray velocity are expressed
+using the same evolution parameter $t$. In the homogeneous gravity-neutral
+calculation below, this is the inertial time of the resting Active-Vacuum
+reference. A rate specified per a different clock must be converted before
+combining it with the ray speed.
+
 Let the conservative carrier branch be
 \begin{equation}
     \omega_{\gamma}
@@ -1505,7 +1512,7 @@ Using Equation~\eqref{eq:AQ_omega_evolution},
     \omega_{\mathrm c}.
 \end{equation}
 
-Thus
+Where $v_{\mathrm{g},\parallel}\neq0$,
 \begin{equation}
     \boxed{
     \left.\dot{\mathbf{k}}\right|_{\mathrm{rel}}
@@ -1522,7 +1529,7 @@ Thus
     \label{eq:AQ_k_general}
 \end{equation}
 
-For the long-wave linear branch,
+For the homogeneous gravity-neutral long-wave linear branch,
 \begin{equation}
     \omega_{\mathrm c}
     \simeq
@@ -1542,7 +1549,12 @@ so
     \label{eq:AQ_k_simple}
 \end{equation}
 
-For a constant rate in this long-wave limit, the corresponding reduced
+Let $f_{\gamma}(\mathbf x,\mathbf k,t)\geq0$ denote photon number per
+$\mathrm d^3x\,\mathrm d^3k$ in the reduced long-wave description, summed over
+polarizations. Any constant phase-space normalization factor is absorbed
+into $f_{\gamma}$. Work on $k=|\mathbf k|>0$, with
+$\hat{\mathbf k}=\mathbf k/k$, and with support within the retained long-wave
+sector. For a constant nonnegative rate, the corresponding reduced
 one-photon kinetic operator is
 \begin{equation}
     \boxed{
@@ -1558,6 +1570,24 @@ one-photon kinetic operator is
     \label{eq:AQ_LD}
 \end{equation}
 
+Together with the leading spatial ray law, the population continuity
+equation is
+\[
+\begin{gathered}
+    \dot{\mathbf{x}}=c_{\mathrm E}\hat{\mathbf{k}},
+    \qquad
+    \dot{\mathbf{k}}=-\Gamma_{\mathrm D}\mathbf{k},\\
+    \partial_t f_{\gamma}
+    +\nabla_{\mathbf{x}}\cdot(\dot{\mathbf{x}}f_{\gamma})
+    +\nabla_{\mathbf{k}}\cdot(\dot{\mathbf{k}}f_{\gamma})=0.
+\end{gathered}
+\]
+Equivalently,
+$\partial_t f_{\gamma}+c_{\mathrm E}\hat{\mathbf k}\cdot
+\nabla_{\mathbf x}f_{\gamma}=\mathcal L_{\mathrm D}f_{\gamma}$.
+This is the deterministic mean-drift specialization; absorption, diffusion,
+and returned excitation require their own transport terms.
+
 Equations~\eqref{eq:AQ_k_general} and~\eqref{eq:AQ_k_simple} specify the
 required reduced wave-vector transport. A complete microscopic
 photon--receiver interaction must reproduce this transport together with the
@@ -1566,10 +1596,15 @@ correct spatial ray equation and mechanical recoil.
 
 \section{Photon Number, Polarization, and Angular Coherence}
 
-The selected coherent scale-transfer channel is defined to preserve the
-surviving photon count. Integrating Equation~\eqref{eq:AQ_LD} over
-wave-vector space, for an integrable distribution with no boundary flux,
-gives
+For an integrable distribution, define the total retained photon number by
+\[
+    N_{\mathrm{ph}}(t)
+    =\int f_{\gamma}(\mathbf x,\mathbf k,t)
+       \,\mathrm d^3x\,\mathrm d^3k.
+\]
+Assume sufficient regularity and vanishing spatial and wave-vector boundary
+fluxes, or periodic spatial boundaries. Integration of the continuity
+equation, using Equation~\eqref{eq:AQ_LD}, then gives
 \begin{equation}
     \boxed{
     \left.\dot N_{\mathrm{ph}}\right|_{\mathrm{rel}}
@@ -1583,6 +1618,63 @@ The notation $N_{\mathrm{ph}}$ denotes photon number and is distinct from the
 information count $N_{\gamma}$ defined elsewhere in TFT. Photon absorption,
 emission, and thermal number-changing processes are separate channels and are
 not excluded by Equation~\eqref{eq:AQ_number}.
+
+This conservation statement concerns the whole retained population. The
+number within a finite observing aperture also has its spatial boundary
+flux; photon-number conservation does not imply that every aperture
+receives a fixed count.
+
+For constant $\Gamma_{\mathrm D}$, the characteristics in the homogeneous
+linear-carrier limit are
+\[
+\begin{gathered}
+    \mathbf{k}(t)=e^{-\Gamma_{\mathrm D}t}\mathbf{k}_0,
+    \qquad
+    \hat{\mathbf{k}}(t)=\hat{\mathbf{k}}_0,\\
+    \mathbf{x}(t)=\mathbf{x}_0+c_{\mathrm E}t\hat{\mathbf{k}}_0.
+\end{gathered}
+\]
+The spatial diagonal block of the characteristic derivative is the identity,
+and its wave-vector diagonal block is
+$e^{-\Gamma_{\mathrm D}t}\mathbf I$. The derivative is block triangular, so
+\[
+    \det\!\left[
+        \frac{\partial(\mathbf x,\mathbf k)}
+             {\partial(\mathbf x_0,\mathbf k_0)}
+    \right]
+    =e^{-3\Gamma_{\mathrm D}t},
+    \qquad
+    \nabla_{\mathbf x}\cdot\dot{\mathbf x}
+    +\nabla_{\mathbf k}\cdot\dot{\mathbf k}
+    =-3\Gamma_{\mathrm D}.
+\]
+The off-diagonal dependence of $\mathbf x(t)$ on $\mathbf k_0$ does not
+alter this determinant. Along each characteristic,
+$\mathrm d f_{\gamma}/\mathrm dt=3\Gamma_{\mathrm D}f_{\gamma}$, yielding
+\[
+    f_{\gamma}(\mathbf x,\mathbf k,t)
+    =e^{3\Gamma_{\mathrm D}t}
+      f_{\gamma,0}\!\left(
+          \mathbf x-c_{\mathrm E}t\hat{\mathbf k},
+          e^{\Gamma_{\mathrm D}t}\mathbf k
+      \right),
+\]
+where $f_{\gamma,0}$ is the initial distribution. The density increase
+compensates exactly for contraction of the reduced phase-space volume.
+For spatially uniform time-dependent $\Gamma_{\mathrm D}(t)$, replace
+$\Gamma_{\mathrm D}t$ in these scaling factors by
+$\int_0^t\Gamma_{\mathrm D}(t')\,\mathrm dt'$. Spatially or spectrally
+dependent rates require their own characteristic solution.
+
+For $\Gamma_{\mathrm D}>0$, this reduced flow is not a canonical Hamiltonian
+flow of an isolated photon subsystem in $(\mathbf x,\hbar\mathbf k)$.
+A complete canonical photon--receiver system can preserve its full
+phase-space volume while a reduced photon description contracts after
+receiving variables are eliminated. The present drift operator does not
+supply that microscopic completion: its projection must also reproduce the
+spatial propagation, receiver recoil, and fluctuations. Number conservation
+alone therefore does not impose collisionless phase-space transport; the
+photometric consequences must retain the actual energy and angular mappings.
 
 The vacuum is assumed parity even and unpolarized at the retained order.
 Consequently, the leading mean scale-projected response is required to act
@@ -1733,6 +1825,43 @@ The corresponding reduced quasimomentum requirement is
 A complete microscopic derivation must relate this reduced quasimomentum
 transfer to the physical FCC--Condensate stress and mechanical recoil.
 
+For the same homogeneous gravity-neutral population used above, assume
+finite energy and wave-momentum moments and vanishing moment boundary
+fluxes. Define
+\[
+\begin{aligned}
+    \mathcal E_{\gamma}(t)
+    &=\int\hbar c_{\mathrm E}k\,f_{\gamma}
+        \,\mathrm d^3x\,\mathrm d^3k,\\
+    \mathbf P_{\mathrm w}(t)
+    &=\int\hbar\mathbf k\,f_{\gamma}
+        \,\mathrm d^3x\,\mathrm d^3k.
+\end{aligned}
+\]
+Here $\mathcal E_{\gamma}$ is the total energy of the retained photon
+population, distinct from the single-photon $E_{\gamma}$, and
+$\mathbf P_{\mathrm w}$ is its canonical wave-quasimomentum moment.
+Integration by parts in the continuity equation gives
+\[
+\begin{aligned}
+    \frac{\mathrm d\mathcal E_{\gamma}}{\mathrm dt}
+    &=-\Gamma_{\mathrm D}
+      \int f_{\gamma}\,
+      \mathbf k\cdot\nabla_{\mathbf k}(\hbar c_{\mathrm E}k)
+      \,\mathrm d^3x\,\mathrm d^3k
+      =-\Gamma_{\mathrm D}\mathcal E_{\gamma},\\
+    \frac{\mathrm d\mathbf P_{\mathrm w}}{\mathrm dt}
+    &=-\Gamma_{\mathrm D}\mathbf P_{\mathrm w}.
+\end{aligned}
+\]
+Thus the specified drift preserves photon number while reducing the
+population energy and wave-quasimomentum moment. The energy decrement
+must enter the Active-Vacuum receiving ledger. The wave-quasimomentum
+moment is not automatically the complete mechanical momentum of the
+scaffold, condensate, and dressed carrier; its conversion to mechanical
+recoil remains the same requirement stated above. These moment equations
+are consequences of the retained drift, not an independent calculation of
+$F_{\mathrm R}$ or of a physical nonzero $\Gamma_{\mathrm D}$.
 
 \section{Leading Achromaticity}
 
@@ -2187,9 +2316,10 @@ the TFT universe.
 The rate $\Gamma_{\mathrm D}$ is defined in the local rest frame of the active
 medium.
 
+{\emergencystretch=2em
 Local motion of a source does not modify the microscopic overlap calculation
 in Equation~\eqref{eq:AQ_gamma_final} unless that motion changes one of the
-local quantities entering
+local quantities entering\par}
 \begin{equation}
     r_{\mathrm D},
     \qquad
@@ -2239,8 +2369,9 @@ Conditional on the explicit reference-mediated coupling closure, the present
 appendix establishes the following results:
 
 \begin{enumerate}
-    \item Ordinary linear amplitude damping is not the mechanism responsible
-    for real photon-frequency migration.
+    \item {\emergencystretch=2em
+    Ordinary linear amplitude damping is not the mechanism responsible
+    for real photon-frequency migration.\par}
 
     \item The relevant weak nonconservative coordinate is the tangent to the
     self-similar coherent photon family.

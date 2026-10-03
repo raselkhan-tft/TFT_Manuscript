@@ -52,11 +52,12 @@ mechanics gives
         }
     }.
 \end{equation}
-Here \(v_{\mathrm{ext}}\) is the signed radial velocity of the massive emitter
-relative to the observer, positive for recession. It is not the photon ray
-speed. This factor governs both the frequency shift associated with
-source--observer motion and the dilation of temporal separations between
-independent emission events in the gravity-neutral local limit.
+Here \(v_{\mathrm{ext}}\) is the signed radial source velocity, positive for
+recession, in the homogeneous gravity-neutral Active-Vacuum reference with
+the observer at rest. In this specialization it is also the source velocity
+relative to the observer; it is not the photon ray speed. The same source-clock
+and retarded-path construction governs both the kinematic frequency shift
+and the separation of independent emission events.
 
 The established static TFT clock law also supplies the gravitational endpoint
 factor
@@ -132,9 +133,9 @@ Appendix~\ref{app:vacuumdamping_cosmicredshift}; their suppression remains a
 microscopic falsification requirement.
 
 The moving-source angular transformation follows from the same TFT kinematic
-continuum and supplies the required ray-direction Jacobian. In the local
-radial, gravity-neutral, no-lensing limit this closes the luminosity-distance
-and surface-brightness projection. The pure kinematic branch reproduces the
+continuum and supplies the required ray-direction Jacobian. In the homogeneous radial, gravity-neutral,
+transparent, no-lensing reference limit this closes the luminosity-distance
+and bolometric surface-brightness projection. The pure kinematic branch reproduces the
 bolometric Tolman four-power without the previously proposed deterministic
 transverse photon-relaxation magnification.
 
@@ -376,13 +377,16 @@ Part~I establishes the underlying kinematic capacity partition
 \end{equation}
 
 In the constitutional kinematic construction, a massless coherent state lies
-at the external-transfer limit
-\(v_{\mathrm{int}}\rightarrow0\).
-In the observational equations below, however,
-\(v_{\mathrm{ext}}\) denotes the signed source--observer velocity of a massive
-emitter. The photon transport velocity is denoted by
-\(v_{\mathrm{ray}}\), and approaches \(c_{\mathrm P}\) in the long-wave
-optical limit.
+at the external-transfer limit \(v_{\mathrm{int}}\rightarrow0\).
+For the explicit gravity-neutral radial derivations below, choose the
+inertial reference in which the homogeneous Active Vacuum and the observer
+are at rest. The signed \(v_{\mathrm{ext}}\) is then the massive source's
+velocity in that reference and relative to that observer. It is neither the
+photon velocity nor a derivative of global structural capacity. An observer
+moving relative to the medium requires its own endpoint clock, photon-energy,
+and angular transformations; the two velocity conventions are not otherwise
+interchangeable. The photon transport speed is \(v_{\mathrm{ray}}\), which
+approaches \(c_{\mathrm P}\) on the retained long-wave optical branch.
 
 The corresponding mechanical Lorentz factor for the massive emitter is
 \begin{equation}
@@ -407,6 +411,29 @@ The local translational velocity is bounded by
     c_{\mathrm E}
 \end{equation}
 for a massive coherent defect.
+
+The source-clock assignment in this reference is
+\(dt_{\mathrm e}=\gamma\,dt_{\mathrm{p,e}}\). This clock relation is part of
+the retained TFT kinematic constitution; the algebraic velocity partition
+alone does not establish an operational clock transformation.
+
+Throughout the path equations, the rate \(\Gamma_{\mathrm D}\) and ray speed
+must use the same evolution parameter \(t\). In the homogeneous
+gravity-neutral reference, \(t\) is medium-rest inertial time. In the
+stationary loaded optical representation, it is the reference optical time
+used to define \(c_{\mathrm P}\). A microscopic rate specified per local
+physical clock must be converted before use in the optical-time integral;
+its product with the corresponding elapsed time is unchanged by that
+conversion. A constant-rate assumption always refers to this specified time
+parameter, not simultaneously to every local or moving observer clock.
+
+The event labels \(t_{\mathrm e}\) and \(t_{\mathrm o}\) below denote
+reference-coordinate emission and reception times. Observed intervals
+\(\Delta t_{\mathrm{obs}}\) and \(dt_{\mathrm{obs}}\) denote readings of the
+observer clock, equivalently \(\Delta t_{\mathrm{p,o}}\) and
+\(dt_{\mathrm{p,o}}\). They coincide with reference-coordinate reception
+intervals only in the resting gravity-neutral specialization. Emitter
+proper intervals retain the notation \(\Delta t_{\mathrm{p,e}}\).
 
 The photon propagation capacity is a distinct quantity.
 
@@ -477,18 +504,20 @@ lensing.
 
 \section{Local Kinematic Frequency Shift}
 
-Consider a radially moving emitter in the gravity-neutral local limit, with
-the observer local frame taken as the reference frame for the relative radial
-motion. Let \(v_{\mathrm{ext}}>0\) denote recession and
-\(v_{\mathrm{ext}}<0\) approach.
+Consider a radially moving emitter and a resting observer in the common
+homogeneous gravity-neutral Active-Vacuum reference specified above. Let
+\(v_{\mathrm{ext}}>0\) denote recession and \(v_{\mathrm{ext}}<0\) approach.
+The source velocity and clock coefficients are taken approximately constant
+over the pair of events; for longer varying histories the differential
+event map must be integrated.
 
 Let two successive emission events be separated by the emitter proper interval
 \begin{equation}
     \Delta t_{\mathrm{p,e}}.
 \end{equation}
 
-Equation~\eqref{eq:AR_gamma} gives the corresponding local substrate-coordinate
-interval
+The source-clock assignment accompanying
+Equation~\eqref{eq:AR_gamma} gives the emission interval in the reference frame
 \begin{equation}
     \Delta t_{\mathrm{emit}}
     =
@@ -591,8 +620,10 @@ events in this gravity-neutral local limit:
 \end{equation}
 
 Equation~\eqref{eq:AR_zkin_Doppler} is algebraically identical to the
-relativistic longitudinal Doppler factor, but here it follows from the TFT
-kinematic velocity budget and finite propagation delay.
+relativistic longitudinal Doppler factor. Here the retained TFT source-clock
+assignment is combined with the change in propagation distance. Adding a
+separate kinetic clock-redshift factor would count part of this same
+transformation twice.
 
 It does not require an expanding metric.
 
@@ -664,11 +695,17 @@ Moving endpoints must use locally defined velocities in the corresponding
 endpoint frames, and explicitly time-dependent gravitational fields require a
 more general frequency-transfer calculation.
 
+The loading is evaluated at the actual radiating and receiving regions.
+The compactness of a central object does not determine the loading of every
+surrounding emitter. Equal endpoint loading produces no conservative
+frequency difference, even when a stationary intervening region changes the
+travel time.
+
 
 \section{Combination with the Coherent Scale-Relaxation Channel}
 
-Appendix~\ref{app:vacuumdamping_cosmicredshift} derives the distinct coherent
-photon scale-relaxation law
+Appendix~\ref{app:vacuumdamping_cosmicredshift} constructs the conditional
+coherent photon scale-relaxation law
 \begin{equation}
     \left.
     \frac{
@@ -681,6 +718,11 @@ photon scale-relaxation law
     -\Gamma_{\mathrm D}.
     \label{eq:AR_AQ_local}
 \end{equation}
+
+The coefficient here is expressed per unit of the same reference evolution
+time used in the following ray equation. Its physical nonzero value remains
+undetermined by the overlap normalization alone; zero is the completed
+conservative-sector limit, not an excluded parameter value.
 
 Along the physical TFT ray,
 \begin{equation}
@@ -819,16 +861,77 @@ It does not determine the relative magnitude of the three contributions.
 That division must be constrained by independent observations and ultimately
 by the derived TFT matter-flow and gravitational-loading fields.
 
+The product of the endpoint factors is retained where the local kinematic
+and gravitational comparisons can be composed consistently. The separately
+derived flat radial and stationary gravitational limits do not establish
+this product for an arbitrary moving or evolving medium. Conservative
+frequency conversion by a time-dependent background must be calculated as
+part of that background's transport, rather than assigned to
+\(z_{\mathrm D}\) or hidden inside a stationary endpoint factor.
+
 
 \section{Supernova Time Dilation as a Redshift-Decomposition Test}
 
 A crucial distinction exists between the duration of a single coherent wave
 packet and the temporal separation of independent source events.
 
-The leading scale-relaxation channel changes the real photon frequency while
-preserving the propagation direction and, at retained order, does not create a
-separate macroscopic delay proportional to the interval between independent
-emission events.
+For a differentiable family of signal trajectories, let
+\(t_{\mathrm{prop}}(t_{\mathrm e})\) be the travel time evaluated at the actual
+reception event. The event map and its clock conversion are
+\[
+    t_{\mathrm o}
+    =t_{\mathrm e}+t_{\mathrm{prop}}(t_{\mathrm e}),
+\]
+\[
+    \frac{dt_{\mathrm{p,o}}}{dt_{\mathrm{p,e}}}
+    =\left(\frac{dt_{\mathrm{p,o}}}{dt_{\mathrm o}}\right)
+     \left(1+\frac{dt_{\mathrm{prop}}}{dt_{\mathrm e}}\right)
+     \left(\frac{dt_{\mathrm e}}{dt_{\mathrm{p,e}}}\right).
+\]
+The propagation derivative is a total derivative along the selected arrival
+branch. It contains observer motion implicitly when the reception position
+depends on \(t_{\mathrm o}\); that endpoint is not held fixed artificially.
+The identity also applies to a differentiable time-dependent propagation
+law. Multiple images and broad stochastic arrival kernels require their
+separate event or response descriptions.
+
+For a resting observer at the origin and a radial emitter at
+\(\mathbf x_{\mathrm e}(t_{\mathrm e})=r(t_{\mathrm e})\hat{\mathbf z}\),
+the homogeneous straight-ray specialization gives
+\[
+    t_{\mathrm o}=t_{\mathrm e}+\frac{r(t_{\mathrm e})}{c_{\mathrm E}},
+    \qquad
+    \frac{dt_{\mathrm o}}{dt_{\mathrm e}}
+    =1+\frac{v_{\mathrm{ext}}}{c_{\mathrm E}},
+    \qquad
+    \frac{dr}{dt_{\mathrm e}}=v_{\mathrm{ext}}.
+\]
+Together with \(dt_{\mathrm e}=\gamma\,dt_{\mathrm{p,e}}\) and
+\(dt_{\mathrm{p,o}}=dt_{\mathrm o}\), this recovers
+Equation~\eqref{eq:AR_time_dilation_kin}. For fixed endpoints on a stationary
+loaded path, the propagation derivative instead vanishes, and the endpoint
+clock conversions give Equation~\eqref{eq:AR_time_dilation_grav}.
+
+Identical signals emitted at different times through the same stationary
+configuration between fixed endpoints have time-translated propagation
+histories:
+\[
+    t_{\mathrm{prop}}^{(2)}=t_{\mathrm{prop}}^{(1)},
+    \qquad
+    \Delta t_{\mathrm o}=\Delta t_{\mathrm e}
+\]
+before endpoint clock conversion. A stationary frequency-dependent response
+does not alter this statement for identical signals. Changing emitted
+spectra, evolving media, or receiving memory that links successive signals
+requires the actual temporal-response model. Conditional preservation of one
+packet's carrier-cycle count is not a law for the interval between independent
+source events.
+
+The leading scale-relaxation channel therefore changes real photon frequency
+without supplying an additional source-event stretch in this stationary
+specialization. A finite event interval uses the same multiplicative stretch
+when its coefficients remain effectively constant; otherwise the differential
+event map must be integrated.
 
 For stationary endpoint loading and the factorized local kinematic
 transformation, define the observed source-event stretch by
@@ -867,6 +970,20 @@ Thus astronomical transient timing becomes a quantitative discriminator
 between the combined endpoint factor and propagation relaxation. Timing alone
 does not determine how the endpoint factor is divided between kinematic and
 gravitational contributions.
+
+With the same time convention and passive drift, the residual also satisfies
+\[
+    \ln\!\left(\frac{1+z_{\mathrm{obs}}}{\mathcal S}\right)
+    =\int_{\mathcal P}
+      \frac{\Gamma_{\mathrm D}(\ell)}{v_{\mathrm{ray}}(\ell)}\,d\ell
+    \geq0.
+\]
+An independently calibrated equality
+\(\mathcal S=1+z_{\mathrm{obs}}\) leaves no accumulated relaxation on that
+path within this closure. A null residual is not evidence for the microscopic
+existence of the additional receiving channel. The intrinsic source duration,
+its population dependence, and its calibration must be constrained without
+first imposing the stretch being tested.
 
 A convenient observational parameterization is
 \begin{equation}
@@ -1183,6 +1300,16 @@ TFT information count \(N_\gamma\). Absorption, emission, and thermal
 number-changing processes are separate channels and are not excluded by
 Equation~\eqref{eq:AR_number}.
 
+The population conservation statement does not guarantee a fixed count in
+an observing aperture; the latter also depends on the spatial and angular
+boundary fluxes. The reduced drift in
+Appendix~\ref{app:vacuumdamping_cosmicredshift} conserves the number integral
+while compressing the photon subsystem's phase-space volume. It does not
+impose the collisionless phase-space occupation law of an isolated photon
+Hamiltonian. The following photometric calculation consequently counts
+photons through the specified detector cone rather than assuming an
+additional collisionless intensity invariant.
+
 For a surviving one-action photon compared between the local emitter and
 observer frames, the observed photon energy satisfies
 \begin{equation}
@@ -1267,8 +1394,11 @@ These factors coincide only when
 
 \section{Luminosity Distance and Moving-Source Angular Projection}
 
-The following derivation is restricted to radial recession in the
-gravity-neutral, no-lensing geometric-optics limit,
+The following derivation is restricted to radial recession in the common
+medium-rest reference, with the observer at rest, homogeneous gravity-neutral
+propagation along the entire path, and no lensing. The selected channel is
+transparent to photon removal and angular redistribution. The local endpoint
+limit is
 \begin{equation}
     \alpha_{\mathrm G,e}
     \rightarrow
@@ -1287,8 +1417,27 @@ gravity-neutral, no-lensing geometric-optics limit,
     c_{\mathrm E}.
 \end{equation}
 
-The coordinate \(r\) denotes the physical source--observer propagation distance
-associated with the retarded emission event.
+The ray is taken straight and nondispersive at the retained long-wave order.
+The bolometric factorization further requires an effectively achromatic
+frequency transformation across the emitted spectrum. These are path and
+source assumptions, not consequences of small endpoint potentials alone.
+
+Define the retarded reference-space propagation distance by
+\[
+    r=\left|
+        \mathbf x_{\mathrm o}(t_{\mathrm o})
+        -\mathbf x_{\mathrm e}(t_{\mathrm e})
+      \right|,
+    \qquad
+    t_{\mathrm e}=t_{\mathrm{emit}},\quad
+    t_{\mathrm o}=t_{\mathrm{obs}}.
+\]
+Here the observer is fixed in the common gravity-neutral reference, so its
+proper and coordinate times coincide. The distance is evaluated between the
+emission and reception events; it is not automatically the source's
+present-time separation, an FLRW comoving distance, an affine parameter, or
+a measured parallax distance. Its definition does not use a redshift-derived
+distance calibration.
 
 Thus,
 \begin{equation}
@@ -1314,9 +1463,10 @@ For an isotropic emitter in its local rest frame,
     }.
 \end{equation}
 
-Let \(\theta'\) denote the emission angle in the source frame and \(\theta\) the
-corresponding angle in the observer local frame. The TFT kinematic
-transformation gives
+Let \(\theta'\) denote the photon emission angle in the source rest frame
+and \(\theta\) the direction of that same emitted ray in the resting
+observer/medium reference, both measured relative to the source velocity.
+The retained TFT local angular transformation gives
 \begin{equation}
     \cos\theta
     =
@@ -1369,6 +1519,22 @@ reaches the observer, this gives
 Equation~\eqref{eq:AR_angular_jacobian} is a moving-source ray-direction
 Jacobian.
 
+In this equation, \(d\Omega_{\mathrm{emit}}=d\Omega'\) and
+\(d\Omega_{\mathrm{obs}}=d\Omega\) describe the same emitted cone in two
+local frames. To distinguish it from the extended source image, write
+\(d\Omega_{\mathrm{ref}}\equiv d\Omega_{\mathrm{obs}}\) for this reference
+ray-direction element. A small detector area \(dA_{\mathrm o}\), normal to
+the central ray, subtends
+\[
+    d\Omega_{\mathrm{ref}}=\frac{dA_{\mathrm o}}{r^2},
+    \qquad
+    d\Omega_{\mathrm{emit}}
+    =\frac{dA_{\mathrm o}}{r^2(1+z_{\mathrm{kin}})^2}.
+\]
+The aberration Jacobian is evaluated once at emission. It is not applied
+repeatedly along the otherwise homogeneous path, and it is not the mapping
+from transverse emitting area to observed image area.
+
 It is not a transverse expansion of the photon packet and is not an angular
 diffusion effect.
 
@@ -1388,7 +1554,26 @@ reduces to
 \end{equation}
 before applying the angular mapping.
 
-Combining this result with Equation~\eqref{eq:AR_angular_jacobian} gives
+In a narrow emitted frequency bin, let \(\dot N_{\mathrm{emit}}\) be the
+photon rate per source proper time. Isotropic emission gives the photon count
+into the selected cone as
+\[
+    dN=\frac{\dot N_{\mathrm{emit}}}{4\pi}
+        \,d\Omega_{\mathrm{emit}}\,dt_{\mathrm{p,e}}.
+\]
+Under the transparent direction-preserving specialization, that count
+reaches the detector. Its photon energy is reduced by
+\(1+z_{\mathrm{obs}}\), and its reception interval is multiplied by
+\(\mathcal S=1+z_{\mathrm{kin}}\). Using
+\(L_{\mathrm{emit}}=E_{\mathrm{emit}}\dot N_{\mathrm{emit}}\) for that bin,
+dividing the received energy by detector area and observer time gives
+\[
+    F_{\mathrm{obs}}
+    =\frac{L_{\mathrm{emit}}}{4\pi}
+      \frac{d\Omega_{\mathrm{emit}}}{dA_{\mathrm o}}
+      \frac{1}{\mathcal S(1+z_{\mathrm{obs}})}.
+\]
+Substitution of the angular Jacobian yields
 \begin{equation}
     \boxed{
     F_{\mathrm{obs}}
@@ -1405,6 +1590,13 @@ Combining this result with Equation~\eqref{eq:AR_angular_jacobian} gives
     }
     \label{eq:AR_flux_general}
 \end{equation}
+
+For a broadband source, \(L_{\mathrm{emit}}\) and \(F_{\mathrm{obs}}\)
+denote bolometric quantities after integration over the emitted spectrum.
+The same factor can be removed from that integral only under the stated
+achromatic approximation. Otherwise the frequency-dependent energy and
+arrival mappings must remain inside the integral. Intrinsic luminosity is
+evaluated at the corresponding retarded source event.
 
 In the same gravity-neutral limit,
 Equation~\eqref{eq:AR_total_redshift} becomes
@@ -1524,7 +1716,12 @@ Consider a small physical source element with transverse size
 at the retarded emission event.
 
 For radial source motion, the transverse physical size is unchanged at the
-retained order.
+retained order. Across a small locally transverse emitting element, the
+radial-distance and retarded-time differences are second order in transverse
+angular extent. Differential source evolution and viewing-angle dependence
+must remain negligible over that element or be modeled explicitly. The
+emitted detector-cone Jacobian is not applied a second time to the image-area
+mapping.
 
 In the same gravity-neutral, no-lensing reference geometry,
 \begin{equation}
@@ -1563,11 +1760,28 @@ gravity-neutral, no-lensing geometry.
 Gravitational refraction, strong lensing, nonspherical propagation, and
 nonradial source motion require the corresponding TFT ray-bundle correction.
 
+In that general problem, the detector cone and source image are obtained by
+propagating neighboring rays through the actual refractive configuration,
+with travel time \(\int_{\mathcal P}d\ell/v_{\mathrm{ray}}\). A small local
+loading alone does not bound an integrated focusing correction. The reference
+area factor \(r^2\) is therefore not substituted into a general loaded path
+without its own ray-bundle calculation.
+
 
 \section{Surface Brightness and Optical Reciprocity}
 
 All results in this section inherit the radial, gravity-neutral, no-lensing
 conditions of the preceding section.
+
+They also retain transparent direction-preserving transport, the common
+resting-observer reference, and the bolometric achromatic approximation.
+The distance ratio below combines the calculated photon count, energy, event
+interval, and area mappings. Because the selected relaxation drift changes
+physical energy--quasimomentum transport and compresses the reduced photon
+phase space, photon-number conservation alone does not enforce the
+collisionless metric distance-duality relation. The modified ratio is a
+consequence of this declared reduced transport hypothesis, not a violation
+of geometrical reciprocity with all its transport assumptions unchanged.
 
 Equations~\eqref{eq:AR_dL_conditional} and
 \eqref{eq:AR_dA} give
@@ -1615,7 +1829,7 @@ Let the projected physical emitting area be
     A_\perp.
 \end{equation}
 
-The observed angular area is
+The observed angular \emph{image} area is
 \begin{equation}
     \Omega_{\mathrm{obs}}
     =
@@ -1627,7 +1841,11 @@ The observed angular area is
 \end{equation}
 
 Using the operational definitions of luminosity distance and angular-diameter
-distance,
+distance, take \(\mathrm{SB}_{\mathrm{obs}}=F_{\mathrm{obs}}/\Omega_{\mathrm{obs}}\)
+and \(\mathrm{SB}_{\mathrm{emit}}=L_{\mathrm{emit}}/(4\pi A_\perp)\) for
+the same isotropic emitting component. Here \(\Omega_{\mathrm{obs}}\) is the
+source-image solid angle, distinct from the reference-frame emitted cone
+\(d\Omega_{\mathrm{ref}}\). Then
 \begin{equation}
     \frac{
         \mathrm{SB}_{\mathrm{obs}}
@@ -1878,6 +2096,11 @@ gravitational frequency factor, kinematic angular Jacobian, gravitational
 focusing, and angular-area transport must be derived together from the
 complete TFT ray-bundle mechanics.
 
+A conservative magnification can cancel between flux and resolved image
+area under an appropriate measurement definition. That cancellation does not
+establish the full nonconservative photometric law for finite apertures,
+frequency-dependent transport, or selected source populations.
+
 \section{The General Redshift Gradient in a Locally Dynamic TFT Universe}
 
 Equation~\eqref{eq:AR_total_log} provides the basis for the radial
@@ -1961,7 +2184,12 @@ Equation~\eqref{eq:AR_zD_cP} gives locally
         c_{\mathrm P}
     }
 \end{equation}
-for nested radial paths in the stationary long-wave limit.
+for nested radial paths in a stationary long-wave model with an achromatic
+receiving response and a common rate/time convention on overlapping path
+segments. If the rate depends on the evolving photon frequency, or if the
+background or path changes across the source family, the derivative must be
+taken through the complete propagation integral rather than replaced by this
+single local term.
 
 Therefore,
 \begin{equation}
@@ -2008,11 +2236,11 @@ Equation~\eqref{eq:AR_master_gradient} states that the radial redshift gradient
 contains three physically distinct contributions:
 \begin{equation}
     \boxed{
-    \text{local matter-flow gradient}
-    \quad+\quad
-    \text{emission-region gravitational-loading gradient}
-    \quad+\quad
-    \text{coherent photon scale relaxation}.
+    \begin{gathered}
+    \text{local matter-flow gradient}\\
+    {}+\text{emission-region gravitational-loading gradient}\\
+    {}+\text{coherent photon scale relaxation}.
+    \end{gathered}
     }
 \end{equation}
 
@@ -2063,7 +2291,8 @@ therefore requires independently derived TFT fields
 \end{equation}
 together with the physical photon relaxation response and ray speed.
 
-\section{Relation Between the Vacuum Relaxation Rate and Hubble-Scale Quantities}
+\section[Relation Between the Vacuum Relaxation Rate and Hubble-Scale Quantities]
+{Relation Between the Vacuum Relaxation Rate\texorpdfstring{\\}{ }and Hubble-Scale Quantities}
 \label{sec:AS_gamma_hubble_relation}
 
 The microscopic relaxation rate
@@ -2304,7 +2533,7 @@ The specialization
     =
     H_0^{(\mathrm{slope})}
     }
-    \label{eq:AS_gamma_H0_specialization}
+    \label{eq:AT_gamma_H0_specialization_exact}
 \end{equation}
 is therefore valid only when
 \begin{equation}
@@ -2354,8 +2583,8 @@ The physical Photon Energy-Relaxation Length is defined by
     \label{eq:AS_RU_physical_definition}
 \end{equation}
 
-Under the additional low-redshift specialization in which the systematic
-kinematic and gravitational-loading gradients are negligible,
+Under the additional low-redshift specialization with negligible systematic
+gradients of source velocity and emission-region gravitational loading,
 \begin{equation}
     \frac{
         dv_{\mathrm{ext}}
@@ -2430,11 +2659,13 @@ Equation~\eqref{eq:AR_master_gradient}. Thus
 \(H_0^{(\mathrm{obs})}\)
 is not, in general, identical to the microscopic photon-relaxation rate.
 
-The numerical proximity between the unit-reference microscopic rate and the
-observational low-redshift Hubble-scale value is therefore a meaningful
-downstream consistency comparison. It becomes a physical identification only
-when the endpoint contributions are independently shown to be negligible over
-the corresponding low-redshift calibration domain.
+The numerical proximity between the unit-reference rate and an observational
+low-redshift Hubble-scale value is a downstream reference comparison, not an
+independent calculation of the physical receiving response. Identifying the
+physical rate with the observed slope additionally requires negligible
+endpoint gradients and the same independently specified distance/time mapping.
+An empirically inferred rate would constrain the transport hypothesis; it
+would not determine the microscopic coefficient by first principles.
 
 \section{BAO and the Alcock--Paczynski Projection}
 
@@ -3228,8 +3459,8 @@ The next required derivations are:
     source-event time dilation, spectral aging, apparent flux, color, and
     resolved surface-brightness information where available;
 
-    \item derive the microscopic photon--receiver interaction responsible for
-    the number-changing detailed-balance dynamics represented by
+    \item derive the microscopic photon--receiver interaction that supplies
+    the number-changing dynamics with detailed balance represented by
     \(C_{\mathrm{th}}[n_\nu]\), including its rate and selectivity between the
     coherent and thermal photon populations;
 
