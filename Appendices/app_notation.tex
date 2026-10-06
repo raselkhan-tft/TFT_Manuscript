@@ -2,7 +2,9 @@
 \addcontentsline{toc}{chapter}{\protect\numberline{}Table of Notation and Constants}
 \label{app:notation}
 
-This appendix details the fundamental constants, geometric boundaries, and mathematical notation utilized throughout Tension Field Theory (TFT). 
+This appendix collects the fundamental constants, geometric boundaries, constitutive coefficients, and principal notation used throughout Tension Field Theory (TFT). Related symbols are grouped by physical role. Numerical values retain the manuscript's stated calibration or reference specialization; a mode-dependent coefficient is not an additional universal constant.
+
+The surface coefficient $\tau_{\mathrm D}$, volumetric yield pressure $\tau_{\mathrm{D,bulk}}$, and mode-resolved stiffnesses are distinct quantities. Likewise, the structural order parameter $\Psi$ differs from the excitation field $\psi$, and the photon relaxation rate $\Gamma_{\mathrm D}$ differs from the structural growth rate $\Gamma_{\mathrm{pc}}$ and local receiving rates. Derivatives, component indices, and local comparison qualifiers belong to the same defined symbol family.
 
 \section*{I. Geometric Boundaries and Dimensional Limits}
 
@@ -22,15 +24,29 @@ This appendix details the fundamental constants, geometric boundaries, and mathe
 
 $\ell_{\mathrm{S}}$ & Substrate Lattice Spacing (Hard Floor 1D Limit) & $\sqrt{\hbar G / c_{\mathrm{E}}^3}$ & $\approx 1.6163 \times 10^{-35}$ m \\
 
-$r_{\mathrm{D}}$ & FCC Soft Floor Node Radius & $h c_{\mathrm{E}} / 2E_{\mathrm{D}}$ & $\approx 7.4504 \times 10^{-27}$ m \\
+$A_{\mathrm S}$ & {\raggedright Substrate reference cell area used in the cross-scale coupling construction.\par} & {\raggedright $A_{\mathrm S}=\ell_{\mathrm S}^2$. \newline \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}}.\par} & {\raggedright Area ($\mathrm{m^2}$).\par} \\
+
+
+$r_{\mathrm D}$ & {\raggedright FCC Soft-Floor node radius; empirically calibrated active structural scale.\par} & {\raggedright $hc_{\mathrm E}/(2E_{\mathrm{max}})$ \newline \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}}.\par} & {\raggedright $\approx7.4504\times10^{-27}\,\mathrm m$.\par} \\
+
+$r_{\mathrm{amp}}$ & {\raggedright Radial boundary-displacement amplitude of a specified localized defect; not the support-node radius.\par} & {\raggedright $r_{\mathrm{amp}}\simeq m_i/K_{\mathrm D}$ only under the stated radial calibration. \newline \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.\par} & {\raggedright Particle- and mode-dependent ($\mathrm m$).\par} \\
+
 
 $r_{\mathrm{N}}$ & Nucleon Mechanical Radius (Torsional Anchor) & Derived geometric limit & $\approx 0.88 \times 10^{-15}$ m \\
 
 $R_{\mathrm{QG}}$ & Event Horizon Radius (Gravitational Saturation) & $GM / c_{\mathrm{E}}^2$ & Variable \\
 
-$R_{\mathrm{U}}$ & Geometric Cosmic Horizon (Viscous Limit) & $c_{\mathrm{E}} / \Gamma_{\mathrm{D}}$ & $\approx 1.2665 \times 10^{26}$ m \\
+\begin{tabular}[c]{@{}c@{}}$R_{\mathrm{rup}}$ \\ $\Delta R$\end{tabular} & {\raggedright Effective radius at global rupture and its decrement from the reference reservoir radius.\par} & {\raggedright $R_{\mathrm{rup}}=R_{\mathrm{Res}}(1-\beta_{\mathrm{rup}})^{1/3}$; $\Delta R=R_{\mathrm{Res}}-R_{\mathrm{rup}}$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Reference: $R_{\mathrm{rup}}\approx5.7361\times10^{34}\,\mathrm m$; $\Delta R\approx1.0220\times10^{33}\,\mathrm m$.\par} \\
 
-$R_{\mathrm{Res}}$ & Total Cosmic Reservoir Radius & $R_{\mathrm{U}} \cdot (\rho_{\mathrm{S}}/\rho_{\mathrm{QG}})^{1/3}$ & $\approx 5.8383 \times 10^{34}$ m \\
+
+$R_{\mathrm U}$ & {\raggedright Photon Energy-Relaxation Length; Cosmic Damping Horizon in its cosmological role.\par} & {\raggedright $R_{\mathrm U}=c_{\mathrm E}/\Gamma_{\mathrm D}$; one coherent-energy e-fold, not a propagation wall. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright Variable; $\approx1.2665\times10^{26}\,\mathrm m$ in the observational reference.\par} \\
+
+$R_{\mathrm{Res}}$ & {\raggedright Reference effective radius of the Structural Reservoir; distinct from the optical relaxation length.\par} & {\raggedright $R_{\mathrm U}(\rho_{\mathrm S}/\rho_{\mathrm{QG}})^{1/3}$ under the retained reservoir scaling. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright $\approx5.8383\times10^{34}\,\mathrm m$ in the reference realization.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$V_{\mathrm{Res}}$ \\ $V(t)$ \\ $V_{\mathrm{rup}}$\end{tabular} & {\raggedright Reference, evolving, and rupture-state effective active-reservoir volumes in the mean-density closure.\par} & {\raggedright $V_{\mathrm{Res}}=4\pi R_{\mathrm{Res}}^3/3$; $V/V_{\mathrm{Res}}=1-M_{\mathrm p}/M_{\mathrm{Res}}$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Volumes ($\mathrm{m^3}$); $V_{\mathrm{rup}}/V_{\mathrm{Res}}\approx0.9484$ in the reference closure.\par} \\
+
+$V_{\mathrm{SC}}$ & {\raggedright Physical volume of saturated SC interiors and bridges; not the effective volume removed from the active-reservoir ledger.\par} & {\raggedright Geometric SC volume; not identified with $V_{\mathrm{Res}}-V(t)$ or $\beta_{\mathrm{rup}}V_{\mathrm{Res}}$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Configuration-dependent ($\mathrm{m^3}$); total at rupture is not fixed by the mass threshold.\par} \\
+
 
 $r_{\mathrm{QG}}$ & Convergence Radius (Microscopic Phase Trigger) & $\ell_{\mathrm{S}} \cdot \left(1.5 \frac{\rho_{\mathrm{S}}}{\rho_{\mathrm{QG}}}\right)^{1/4}$ & $\approx 5.6248 \times 10^{-29} \text{ m}$ \\
 
@@ -48,13 +64,21 @@ $N_{\mathrm{D}}$ & Kinematic Lattice Index & $R_{\mathrm{U}} / 2r_{\mathrm{D}}$ 
 
 $N_{\mathrm{S}}$ & Absolute Substrate Index & $R_{\mathrm{Res}} / \ell_{\mathrm{S}}$ & $\approx 3.6121 \times 10^{69}$ \\
 
-$V_{\mathrm{eff}}$ & Effective Hydrodynamic Volume & Kinematic boundary & Variable (m$^3$) \\
+$V_{\mathrm{eff}}$ & {\raggedright Swept thin-layer volume used in the radial particle calibration; distinct from the solved participation volume.\par} & {\raggedright $V_{\mathrm{eff}}=4\pi r_{\mathrm D}^{2}r_{\mathrm{amp}}$. \newline \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.\par} & {\raggedright Geometry-dependent ($\mathrm{m^3}$); thin-layer approximation.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$V_{\mathrm{imp}}$ \\ $A_{\mathrm{imp}}^{(\mathrm n)}$\end{tabular} & {\raggedright Mode-weighted condensate participation volume and normal-coupled defect interface area.\par} & {\raggedright $V_{\mathrm{imp}}=\int|\boldsymbol\Upsilon|^2\,\mathrm dV$; $A_{\mathrm{imp}}^{(\mathrm n)}=\int|b_n|^2\,\mathrm dA$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Respectively $\mathrm{m^3}$ and $\mathrm{m^2}$; evaluated on the specified defect domains.\par} \\
+
+$\ell_{\mathrm{imp}}^{(\mathrm{def})}$ & {\raggedright Effective penetration length of the solved normal-flow mode; need not equal the defect radius or shell thickness.\par} & {\raggedright $V_{\mathrm{imp}}/A_{\mathrm{imp}}^{(\mathrm n)}=1/\iota_{\mathrm V}^{(\mathrm{def})}$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Mode-dependent ($\mathrm m$).\par} \\
+
 
 $N_{\mathrm{QG}}$ & Convergence Information Limit (Absolute Boundary Capacity) & $\frac{8\pi^2 R_{\mathrm{QG}}^2}{\ell_{\mathrm{S}}^2}$ & Dimensionless \\
 
 $N_{\mathrm{M}}$ & True Coherent Information Record (Active Strain Bits) & $2\pi \left(\frac{m_{\mathrm{S}}}{M}\right)^2$ & Dimensionless \\
 
-$S_{\mathrm{geo}}$ & Geometric Capacity (Max FCC Boundary Slots) & $k_{\mathrm{B}} \frac{4\pi R_{\mathrm{QG}}^2}{r_{\mathrm{D}}^2}$ & Variable (J/K) \\
+\begin{tabular}[c]{@{}c@{}}$N_\gamma$ \\ $N_{\mathrm m}$\end{tabular} & {\raggedright Wave and localized-matter information footprints with their separate topological normalizations.\par} & {\raggedright $N_\gamma=1/\alpha_{\mathrm G,\gamma}$; $N_{\mathrm m}=2\pi/\alpha_{\mathrm G,\mathrm m}$. \newline \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}.\par} & {\raggedright Dimensionless; $N_{\mathrm M}$ is the macroscopic mass-state notation used in the ledger.\par} \\
+
+
+$S_{\mathrm{geo}}$ & {\raggedright Entropy-scaled geometric boundary capacity; the corresponding slot count is $S_{\mathrm{geo}}/k_{\mathrm B}$.\par} & {\raggedright $k_{\mathrm B}\,4\pi R_{\mathrm{QG}}^2/r_{\mathrm D}^2$. \newline \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}.\par} & {\raggedright Variable ($\mathrm{J\,K^{-1}}$).\par} \\
 
 $S_{\mathrm{kin}}$ & Kinematic Occupancy (Actual Defect Count) & $\frac{R_{\mathrm{QG}}}{r_{\mathrm{D}}}$ & Dimensionless \\
 
@@ -64,9 +88,15 @@ $\Phi_{\mathrm{info}}$ & Information Fill Ratio (Strain Dilution) & $\frac{1}{4\
 
 $d_{\mathrm{nn}}$ & FCC Nearest-Neighbor Separation & $2r_{\mathrm{D}}$ & $\approx 1.4901 \times 10^{-26} \text{ m}$ \\
 
+\begin{tabular}[c]{@{}c@{}}$a$ \\ $V_{\mathrm{cell}}$ \\ $V_{\mathrm{IC}}$\end{tabular} & {\raggedright Conventional FCC cube edge, cell volume, and interstitial volume; distinct from the one-node primitive cell.\par} & {\raggedright $a=2\sqrt2\,r_{\mathrm D}$; $V_{\mathrm{cell}}=a^3=4V_{\mathrm p}$; $V_{\mathrm{IC}}=\beta_{\mathrm{IC}}V_{\mathrm{cell}}$. \newline \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}}.\par} & {\raggedright Respectively $\mathrm m$, $\mathrm{m^3}$, and $\mathrm{m^3}$.\par} \\
+
+
 $V_{\mathrm{p}}$ & FCC Primitive-Cell Volume & $4\sqrt{2} r_{\mathrm{D}}^3$ & $\approx 2.339 \times 10^{-78} \text{ m}^3$ \\
 
-$A_{\mathrm{ct}}^{(\mathrm{modal})}$ & Effective Modal Contact Area & $2\pi\ell_{\mathrm{S}}^2$ & $\approx 1.641 \times 10^{-69} \text{ m}^2$ \\
+$A_{\mathrm{ct}}^{(\mathrm{modal})}$ & {\raggedright Effective modal contact area for the surface-to-cell normalization; not a literal microscopic contact patch.\par} & {\raggedright $2\pi\ell_{\mathrm S}^2=M_{\mathrm D}/\mu_{\mathrm D}$. \newline \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.\par} & {\raggedright $\approx1.641\times10^{-69}\,\mathrm{m^2}$.\par} \\
+
+$D_\tau$ & {\raggedright Strain-weighted path functional; its optical representation is evaluated on the specified ray path.\par} & {\raggedright $D_\tau[\mathcal P]=\int_{\mathcal P}n_\tau\,\mathrm d\ell$ in the optical reduction. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright Length ($\mathrm m$); the foundational gradient-weighted form retains its stated scope.\par} \\
+
 
 \bottomrule
 \end{longtable}
@@ -91,6 +121,11 @@ $A_{\mathrm{ct}}^{(\mathrm{modal})}$ & Effective Modal Contact Area & $2\pi\ell_
 
 $\rho_{\mathrm{S}}$ & Substrate Density (Absolute Lattice Capacity) & Mass / Volume at $\ell_{\mathrm{S}}$ & $\approx 5.1550 \times 10^{96}$ kg/m$^3$ \\
 
+\begin{tabular}[c]{@{}c@{}}$K_{\mathrm S}$ \\ $\mu_{\mathrm S}$\end{tabular} & {\raggedright Limiting incremental rigidity and vanishing intrinsic inertial response of the phase-locked Hard Floor.\par} & {\raggedright $K_{\mathrm S}\to\infty$, $\mu_{\mathrm S}\to0$; distinct from finite yield pressure $\tau_{\mathrm S}$. \newline \hyperref[sec:sgf_constitution]{Section~\ref*{sec:sgf_constitution}}.\par} & {\raggedright Formal constitutive limits; no independent finite coefficient is assigned.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$\tau$ \\ $\rho$\end{tabular} & {\raggedright Volumetric tension (energy density) and its mass-equivalent density for the specified physical state.\par} & {\raggedright $\tau=\rho c_{\mathrm E}^2$; $E=\int\tau\,\mathrm dV$. \newline \hyperref[sec:2.3]{Section~\ref*{sec:2.3}}.\par} & {\raggedright $\tau$: $\mathrm{Pa}=\mathrm{J\,m^{-3}}$; $\rho$: $\mathrm{kg\,m^{-3}}$.\par} \\
+
+
 $\rho_{\mathrm{QG}}$ & Convergence Density (Void Exhaustion Limit) & Derived phase trigger & $\approx 5.2625 \times 10^{70}$ kg/m$^3$ \\
 
 $\rho_{\mathrm{D}}$ & Operational Node Density (Soft Floor Baseline) & Derived mass / volume & $\approx 1.7124 \times 10^{62}$ kg/m$^3$ \\
@@ -101,15 +136,20 @@ $\rho_{\mathrm{M}}$ & Macroscopic Baryonic Density & Local mass distribution & V
 
 $\Sigma_{\mathrm{surf}}$ & Areal Mass Density (Black Hole Boundary) & $\left( \frac{\rho_{\mathrm{QG}} \cdot r_{\mathrm{D}}^2}{4\pi} \right) \frac{1}{R_{\mathrm{QG}}}$ & Variable (kg/m$^2$) \\
 
-$\rho_{\mathrm{IC}}$ & Interstitial Condensate Density & $\mu_{\mathrm{D}} \cdot \iota_{\mathrm{V}}$ & $\approx 1.8074 \times 10^{53}$ kg/m$^3$ \\
+\begin{tabular}[c]{@{}c@{}}$\rho_{\mathrm{IC}}^{(\mathrm{emp})}$ \\ $\rho_{\mathrm{IC}}$\end{tabular} & {\raggedright Empirical equivalent defect-impedance density; the unqualified symbol denotes this historical calibration, not an independently derived intrinsic condensate density.\par} & {\raggedright $\rho_{\mathrm{IC}}^{(\mathrm{emp})}=\mu_{\mathrm D}\iota_{\mathrm V}^{(\mathrm{emp})}$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright $\approx1.8074\times10^{53}\,\mathrm{kg\,m^{-3}}$ under the empirical projection.\par} \\
 
-$\iota_{\mathrm{V}}$ & Dimensional Projection Constant (2D to 3D mapping) & $\rho_{\mathrm{IC}} / \mu_{\mathrm{D}}$ & $\equiv 1$ m$^{-1}$ \\
+\begin{tabular}[c]{@{}c@{}}$\iota_{\mathrm V}^{(\mathrm{emp})}$ \\ $\iota_{\mathrm V}$\end{tabular} & {\raggedright Empirical surface-to-volume projection convention used in the calibrated particle branch.\par} & {\raggedright $\rho_{\mathrm{IC}}^{(\mathrm{emp})}/\mu_{\mathrm D}=1\,\mathrm{m^{-1}}$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Calibration convention; not a universal solved defect projection.\par} \\
 
-$\beta_{\mathrm{geo}}$ & Vacuum Geometric Packing Fraction (Dark Energy) & $\frac{\pi}{\sqrt{18}}$ & $\approx 0.74048$ \\
+$\beta_{\mathrm{geo}}$ & {\raggedright Geometric volume fraction of the nodal phase in ideal FCC packing; its energy-allocation interpretation uses a separate closure.\par} & {\raggedright $\pi/(3\sqrt2)$. \newline \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.\par} & {\raggedright $\approx0.74048$; dimensionless.\par} \\
 
-$\beta_{\mathrm{IC}}$ & Interstitial Condensate Fraction (Dark Matter) & $1 - \beta_{\mathrm{geo}}$ & $\approx 0.25952$ \\
+$\beta_{\mathrm{IC}}$ & {\raggedright Complementary interstitial volume fraction; not by itself a galactic response coefficient.\par} & {\raggedright $1-\beta_{\mathrm{geo}}$. \newline \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.\par} & {\raggedright $\approx0.25952$; dimensionless.\par} \\
 
 $\beta_{\mathrm{oct}}$ & Octahedral Void Limit (Baryonic Mass Limit) & $\frac{\pi(\sqrt{2}-1)^3}{3\sqrt{2}}$ & $\approx 0.05260$ \\
+
+\begin{tabular}[c]{@{}c@{}}$\beta_{\mathrm b}$ \\ $\beta_{\Lambda,\mathrm{eff}}$\end{tabular} & {\raggedright Baryonic structural-energy allocation and the smooth nodal allocation remaining after defect conversion.\par} & {\raggedright $\beta_{\Lambda,\mathrm{eff}}=\beta_{\mathrm{geo}}-\beta_{\mathrm b}$. \newline \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.\par} & {\raggedright Dimensionless; adopted $\beta_{\mathrm b}\simeq0.05$ gives $\beta_{\Lambda,\mathrm{eff}}\simeq0.69048$.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$\Omega_{\mathrm D}^{(\mathrm{TFT},0)}$ \\ $\Omega_{\mathrm{IC}}^{(\mathrm{TFT},0)}$\end{tabular} & {\raggedright Normalized nodal and interstitial structural-energy fractions in the homogeneous reference budget.\par} & {\raggedright Equal to $\beta_{\mathrm{geo}}$ and $\beta_{\mathrm{IC}}$, respectively, under uniform structural capacity. \newline \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.\par} & {\raggedright Dimensionless; comparison with conventional critical-density fractions requires the normalization bridge.\par} \\
+
 
 $\mu_{\mathrm{D}}$ & Baseline Lattice Interface Inertia & $\frac{c_{\mathrm{E}}^2}{G \cdot r_{\mathrm{D}}}$ & $\approx 1.8074 \times 10^{53} \text{ kg/m}^2$ \\
 
@@ -119,13 +159,25 @@ $F_{\mathrm{S}}$ & Ultimate Substrate Yield Force (Planck Force) & $\frac{c_{\ma
 
 $\tau_{\mathrm{S}}$ & Max Substrate Tension (Hard Floor Yield Limit) & $\frac{F_{\mathrm{S}}}{\ell_{\mathrm{S}}^2}$ & $\approx 4.6330 \times 10^{113}$ Pa \\
 
-$\tau_{\mathrm{D}}$ & Lattice Shear Stiffness (Soft Floor Tension) & $\frac{c_{\mathrm{E}}^4}{G \cdot r_{\mathrm{D}}^2}$ & $\approx 2.1803 \times 10^{96}$ Pa \\
+$\tau_{\mathrm D}$ & {\raggedright Baseline surface-contact tension of the Active FCC Vacuum; distinct from bulk yield pressure.\par} & {\raggedright $c_{\mathrm E}^4/(G r_{\mathrm D})=\mu_{\mathrm D}c_{\mathrm E}^2$. \newline \hyperref[app:fcc_constants]{Appendix~\ref*{app:fcc_constants}}.\par} & {\raggedright $\approx1.6244\times10^{70}\,\mathrm{N\,m^{-1}}$.\par} \\
 
-$\tau_{\mathrm{M}}$ & Macroscopic Gravitational Tension & $\frac{G \cdot M \cdot \mu_{\mathrm{D}}}{R}$ & Variable (Pa) \\
+$\tau_{\mathrm{D,bulk}}$ & {\raggedright Volumetric gravitational yield-pressure scale of the active phase.\par} & {\raggedright $\tau_{\mathrm D}/r_{\mathrm D}=c_{\mathrm E}^4/(G r_{\mathrm D}^2)$. \newline \hyperref[app:fcc_constants]{Appendix~\ref*{app:fcc_constants}}.\par} & {\raggedright $\approx2.1803\times10^{96}\,\mathrm{Pa}$.\par} \\
+
+
+$\tau_{\mathrm M}$ & {\raggedright Signed mass-induced surface-tension potential, with zero potential at infinity; distinct from positive loading $\tau_{\mathrm L}$.\par} & {\raggedright $\tau_{\mathrm M}=\mu_{\mathrm D}\Phi_\tau=-GM\mu_{\mathrm D}/R$. \newline \hyperref[chap:restorative_gravity]{Chapter~\ref*{chap:restorative_gravity}}.\par} & {\raggedright Variable ($\mathrm{N\,m^{-1}}$).\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$\tau_{\mathrm L}$ \\ $\tau_{\mathrm{av}}$\end{tabular} & {\raggedright Positive active surface loading and remaining surface-transfer capacity in the scalar loading balance.\par} & {\raggedright $\tau_{\mathrm L}=\alpha_{\mathrm G}\tau_{\mathrm D}$; $\tau_{\mathrm{av}}=\tau_{\mathrm D}(1-\alpha_{\mathrm G})$. \newline \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.\par} & {\raggedright Surface coefficients ($\mathrm{N\,m^{-1}}$); not the bare substrate yield pressure.\par} \\
+
+$\Phi_\tau$ & {\raggedright Specific tension potential of a localized source; its negative gradient gives gravitational acceleration.\par} & {\raggedright $\Phi_\tau=\tau_{\mathrm M}/\mu_{\mathrm D}$; exterior sphere: $-GM/R$. \newline \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}.\par} & {\raggedright Variable ($\mathrm{m^2\,s^{-2}}$).\par} \\
+
 
 $\tau_{\mathrm{G}}$ & Local Yield Tension & $\rho_{\mathrm{G}} c_{\mathrm{E}}^2$ & $\approx 2.1803 \times 10^{96}$ J/m$^3$ \\
 
-$K_{\mathrm{shear}}$ & Substrate Shear Modulus & $\rho_{\mathrm{c}} \cdot c_{\mathrm{E}}^2$ & Derived limit (Pa) \\
+\begin{tabular}[c]{@{}c@{}}$T_{\mu\nu}^{(0)}$ \\ $T_{\mu\nu}^{(\mathrm{rem})}$ \\ $\Delta T_{\mu\nu}^{(\tau)}$\end{tabular} & {\raggedright Reference, remaining, and converted structural-capacity tensors; remaining capacity is not total conserved energy--momentum.\par} & {\raggedright $T_{\mu\nu}^{(0)}=T_{\mu\nu}^{(\mathrm{rem})}+\Delta T_{\mu\nu}^{(\tau)}$. \newline \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.\par} & {\raggedright Energy-density/stress units in the local orthonormal frame ($\mathrm{J\,m^{-3}}$).\par} \\
+
+$T_{\mu\nu}^{(\mathrm{TFT})}$ & {\raggedright Complete effective State-I energy--momentum tensor, with localized and extended condensate contributions counted once.\par} & {\raggedright Nodal remainder, interstitial background/response, and coupled baryonic state are combined in the total tensor. \newline \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.\par} & {\raggedright Energy-density/stress units in the local orthonormal frame ($\mathrm{J\,m^{-3}}$).\par} \\
+
+
 
 $\mathcal{C}$ & Two-Endpoint Residual Capacity Factor & $(1 - \alpha_{\mathrm{G}})^2$ & Dimensionless \\
 
@@ -133,13 +185,31 @@ $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}$ & Microscopic Scaffold Inertia Normali
 
 $K_{\mathrm{sh}}^{(\mathrm{micro},0)}$ & Microscopic Tangent Shear Coefficient & $\beta_{\mathrm{geo}}\rho_{\mathrm{D}}c_{\mathrm{E}}^2$ & $\approx 1.14 \times 10^{79} \text{ Pa}$ \\
 
+\begin{tabular}[c]{@{}c@{}}$\kappa_{\mathrm n}$ \\ $\kappa_{\mathrm t}$ \\ $\kappa_{\mathrm c}$\end{tabular} & {\raggedright Normal and tangential surface-contact tangent coefficients; $\kappa_{\mathrm c}$ is their common value in the isotropic specialization.\par} & {\raggedright $\kappa_{\mathrm n}=\kappa_{\mathrm t}\equiv\kappa_{\mathrm c}$ for the stated leading isotropic branch. \newline \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.\par} & {\raggedright $\mathrm{N\,m^{-3}}$; contact energy is per participating area.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$\kappa_{\mathrm b}$ \\ $\kappa_{\mathrm{tw}}$ \\ $\kappa_\varphi$\end{tabular} & {\raggedright Bending, twist, and internal-phase tangent coefficients in the parity-even contact energy.\par} & {\raggedright Angular and phase differences enter through the arc lengths $r_{\mathrm D}\boldsymbol\vartheta$ and $r_{\mathrm D}\varphi$. \newline \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.\par} & {\raggedright $\mathrm{N\,m^{-3}}$ in the surface-contact normalization.\par} \\
+
+$B_{\mathrm{IC}}$ & {\raggedright Finite-compressibility penalty coefficient used to regularize the coherent volume constraint; not the finite yield pressure.\par} & {\raggedright Volumetric penalty $\tfrac12B_{\mathrm{IC}}\varepsilon_{\mathrm V}^2$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Pressure units ($\mathrm{Pa}$); diagnostic regularization, not an independently derived material constant.\par} \\
+
+
 $\mathcal{T}_{\mathrm{TT}}^{(0)}$ & Collective Tensor-Gradient Coefficient & $\frac{c_{\mathrm{E}}^4}{8\pi G}$ & $\approx 4.814 \times 10^{42} \text{ N}$ \\
 
 $M_{\mathrm{TT}}^{(0)}$ & Collective Line Inertia & $\frac{c_{\mathrm{E}}^2}{8\pi G}$ & $\approx 5.356 \times 10^{25} \text{ kg/m}$ \\
 
-$\iota_{\mathrm{V}}^{(\mathrm{def})}$ & Localized Defect Impedance Projection & $1/\ell_{\mathrm{imp}}^{(\mathrm{def})}$ & Variable ($\text{m}^{-1}$) \\
+$\iota_{\mathrm V}^{(\mathrm{def})}$ & {\raggedright Mode-resolved surface-to-volume projection of the localized normal-flow boundary-value problem.\par} & {\raggedright $A_{\mathrm{imp}}^{(\mathrm n)}/V_{\mathrm{imp}}=1/\ell_{\mathrm{imp}}^{(\mathrm{def})}$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Mode-dependent ($\mathrm{m^{-1}}$).\par} \\
 
 $\rho_{\mathrm{IC}}^{(\mathrm{imp})}$ & Mode-Resolved Condensate Impedance Density & $\mu_{\mathrm{D}}\iota_{\mathrm{V}}^{(\mathrm{def})}$ & Variable ($\text{kg/m}^3$) \\
+
+\begin{tabular}[c]{@{}c@{}}$m_i$ \\ $m_g$ \\ $M_{\mathrm{top}}$\end{tabular} & {\raggedright Invariant inertial and gravitational projections of the same localized topological loading.\par} & {\raggedright $m_i=M_{\mathrm{top}}=\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}f_\varphi$; $m_g=m_i$ in the equivalence closure. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Defect-dependent ($\mathrm{kg}$).\par} \\
+
+$m_{\mathrm{add}}$ & {\raggedright Conservative added inertia of the selected normal-coupled condensate flow.\par} & {\raggedright $m_{\mathrm{add}}=\mu_{\mathrm D}A_{\mathrm{imp}}^{(\mathrm n)}=\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Nonnegative mode coefficient ($\mathrm{kg}$).\par} \\
+
+$\mathcal G_{\mathrm{imp}}$ & {\raggedright Dimensionless participation-geometry factor in the reduced thin-layer defect volume.\par} & {\raggedright $V_{\mathrm{imp}}=4\pi r_{\mathrm D}^2r_{\mathrm{amp}}\mathcal G_{\mathrm{imp}}[1+O(r_{\mathrm{amp}}/r_{\mathrm D})]$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Mode-dependent; unity only in the stated calibration.\par} \\
+
+$f_\varphi(\Delta\varphi)$ & {\raggedright Nonnegative phase-participation function of the localized defect.\par} & {\raggedright $m_i=\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}f_\varphi(\Delta\varphi)$; selected branch: $f_\varphi=\sin\Delta\varphi$. \newline \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.\par} & {\raggedright Dimensionless; not a universal damping factor.\par} \\
+
+$K_{\mathrm D}^{(\mathrm{def})}$ & {\raggedright Mode-resolved thin-layer conservative loading per unit radial amplitude.\par} & {\raggedright $4\pi r_{\mathrm D}^2\mu_{\mathrm D}\iota_{\mathrm V}^{(\mathrm{def})}\mathcal G_{\mathrm{imp}}$; $m_i\simeq K_{\mathrm D}^{(\mathrm{def})}r_{\mathrm{amp}}f_\varphi$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Mode-dependent ($\mathrm{kg\,m^{-1}}$).\par} \\
+
 
 $\rho_{\mathrm{Q}}$ & Quantum Saturation Density (Kinematic Limit) & $\frac{\hbar}{c_{\mathrm{E}} r_{\mathrm{D}}^4}$ & $\approx 1.1416 \times 10^{62} \text{ kg/m}^3$ \\
 
@@ -147,15 +217,18 @@ $\rho_{\mathrm{G}}$ & Gravitational Yield Density (Lattice Yield) & $\frac{c_{\m
 
 $\tau_{\mathrm{QG}}$ & Macroscopic Boundary Tension & $\frac{c_{\mathrm{E}}^4}{4\pi G R_{\mathrm{QG}}^2}$ & Scale-dependent ($\text{Pa}$) \\
 
-$\tau_{\mathrm{local}}$ & Operative Local Tension (Photon Stiffness) & $\frac{h c_{\mathrm{E}}}{r_{\mathrm{D}}^3}$ & $\approx 4.8035 \times 10^{53} \text{ N/m}$ \\
+$\tau_{\mathrm{local}}$ & {\raggedright Baseline directional modal stiffness scale; not a volumetric pressure or the complete stiffness of every photon mode.\par} & {\raggedright $4k_{\mathrm{ct}}^{(\mathrm{modal})}=hc_{\mathrm E}/r_{\mathrm D}^3$. \newline \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}.\par} & {\raggedright $\approx4.8035\times10^{53}\,\mathrm{N\,m^{-1}}$.\par} \\
 
-$Z_{\mathrm{wall}}$ & Static Mechanical Impedance (Barrier) & Resistance metric & Variable ($\text{kg/(m}^2\cdot\text{s)}$) \\
 
-$Z_{\mathrm{drive}}$ & Active Drive Impedance (Tunneling) & Applied frequency drive & Variable ($\text{kg/(m}^2\cdot\text{s)}$) \\
 
-$n_K(x)$ & Topological Knot Density & Local structural defects & Variable ($\text{m}^{-3}$) \\
+$n_{\mathrm K}(\mathbf x)$ & {\raggedright Number density of independently responding matter targets in the selected energy-transfer channel.\par} & {\raggedright Target count per volume; enters $\Gamma_{\mathrm{beam}}=n_{\mathrm K}\sigma v_{\mathrm{inc}}$ in the independent-target limit. \newline \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.\par} & {\raggedright Variable ($\mathrm{m^{-3}}$); dense collective response is separate.\par} \\
 
-$\Psi$ & Physical Wavefunction (Macroscopic Order) & $\sqrt{\rho} \cdot e^{i\varphi}$ & Complex Phase \\
+$\Psi$ & {\raggedright Density-normalized structural SGF order parameter; distinct from the action-normalized excitation field $\psi$.\par} & {\raggedright $\Psi=\sqrt\rho\,e^{i\varphi}$; $|\Psi|^2=\rho$. \newline \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.\par} & {\raggedright $[\Psi]=\mathrm{kg^{1/2}\,m^{-3/2}}$.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$\mathbf u$ \\ $\mathbf v_{\mathrm{IC}}$ \\ $\mathbf v_{\mathrm{rel}}$\end{tabular} & {\raggedright Scaffold displacement, condensate velocity, and condensate velocity relative to the scaffold.\par} & {\raggedright $\mathbf v_{\mathrm{rel}}=\mathbf v_{\mathrm{IC}}-\dot{\mathbf u}$; coherent entrainment: $\mathbf v_{\mathrm{rel}}=0$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright $\mathbf u$: $\mathrm m$; velocities: $\mathrm{m\,s^{-1}}$.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$b_n$ \\ $\boldsymbol\Upsilon$\end{tabular} & {\raggedright Normal defect-boundary mode and dimensionless relative-flow shape per unit retained-coordinate speed.\par} & {\raggedright $b_n=\mathbf b_\partial\cdot\widehat{\mathbf n}_{\mathrm d}$; $\mathbf v_{\mathrm{rel}}=\dot q\boldsymbol\Upsilon$. \newline \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.\par} & {\raggedright Dimensionless for length-valued $q$.\par} \\
+
 
 \bottomrule
 \end{longtable}
@@ -184,27 +257,33 @@ $E_{\mathrm{S}}$ & Substrate Phase Transition Energy (Yield Limit) & $\sqrt{\fra
 
 $T_{\mathrm{S}}$ & Substrate Transition Temperature (Thermal Yield) & $\sqrt{\frac{\hbar c_{\mathrm{E}}^5}{G k_{\mathrm{B}}^2}}$ & $\approx 1.416 \times 10^{32}$ K \\
 
-$c_{\mathrm{E}}$ & Invariant Energy Constant (Absolute Shear Limit) & $\sqrt{\frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{D}}}}$ & 299,792,458 m/s \\
+$c_{\mathrm E}$ & {\raggedright Invariant elastic capacity: gravity-neutral long-wave transverse speed and specific-energy normalization.\par} & {\raggedright $c_{\mathrm E}^2=\tau_{\mathrm D}/\mu_{\mathrm D}$. \newline \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.\par} & {\raggedright $299\,792\,458\,\mathrm{m\,s^{-1}}$.\par} \\
 
-$c_{\mathrm{P}}$ & Dynamic Wave Propagation Speed & $c_{\mathrm{E}} \sqrt{\frac{\mu_{\mathrm{D}}}{\mu_{\mathrm{eff}}}}$ & $\le c_{\mathrm{E}}$ \\
+$c_{\mathrm P}$ & {\raggedright Locally completed long-wave propagation capacity of the loaded coherent transverse branch.\par} & {\raggedright $\sqrt{\tau_{\mathrm D}/\mu_{\mathrm{eff}}}=c_{\mathrm E}(1-\alpha_{\mathrm G})^2$ in the locally uniform active closure. \newline \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.\par} & {\raggedright Variable ($\mathrm{m\,s^{-1}}$); distinct from finite-wave-number group speed.\par} \\
 
-$c_{\mathrm{S}}$ & Substrate Longitudinal Speed (Entanglement) & $\sqrt{\frac{\tau_{\mathrm{S}}}{\mu_{\mathrm{S}}}}$ & $\to \infty$ \\
+$c_{\mathrm S}$ & {\raggedright Hard-Floor longitudinal constraint connectivity; not an independently propagating finite-energy wave speed.\par} & {\raggedright $c_{\mathrm S}\to\infty$ in the locked limit $K_{\mathrm S}\to\infty$, $\mu_{\mathrm S}\to0$. \newline \hyperref[sec:sgf_constitution]{Section~\ref*{sec:sgf_constitution}}.\par} & {\raggedright Formal zero-delay limit; no finite propagating carrier assigned.\par} \\
 
-$t_{\mathrm{p}}$ & Proper Time (Internal Clock of Localized Defect) & $n \left( \frac{h}{E_0} \right)$ & Variable (s) \\
+$t_{\mathrm p}$ & {\raggedright Proper time of localized matter; the single rest-energy cycle is the period used in the particle calibration.\par} & {\raggedright $t_{\mathrm p}=h/E_0$ for one cycle; accumulated rest cycles: $nh/E_0$. \newline \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.\par} & {\raggedright Time ($\mathrm s$); period versus accumulated time is specified locally.\par} \\
 
 $\Delta\varphi$ & Lattice Phase Differential & Phase topology & Radians \\
 
-$J_i$ & Structural Mass Moment & $\rho_i r_i^4$ & Topology-weighted ($J_i = \mathcal{F}_i \hat{J}$) \\
+\begin{tabular}[c]{@{}c@{}}$\varphi$ \\ $\varphi_{\mathrm S}$\end{tabular} & {\raggedright Phase of the selected coherent structural or excitation sector, and its Hard-Floor reference origin.\par} & {\raggedright $S=\hbar\varphi$ for the selected phase-action field; $\varphi_{\mathrm S}=0$ is the equilibrium convention. \newline \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.\par} & {\raggedright Angles (rad); collective phase is not automatically every contact rotation.\par} \\
 
-$\hat{J}$ & Topology-Normalized Scale-Invariant Mass Moment & $\frac{J_i}{\mathcal{F}_i}$ & Universal constant \\
 
-$J_{\mathrm{D}}$ & Fundamental Node Structural Mass Moment & $\rho_{\mathrm{D}} r_{\mathrm{D}}^4$ & Derived constant \\
+$J_i$ & {\raggedright Raw density--radius structural mass moment of phase or topological layer $i$; not angular momentum.\par} & {\raggedright $J_i=\rho_i r_i^4=\mathcal F_i\widehat J$. \newline \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}}.\par} & {\raggedright Topology-dependent ($\mathrm{kg\,m}$).\par} \\
+
+$\widehat J$ & {\raggedright Topology-normalized invariant structural mass moment.\par} & {\raggedright $J_i/\mathcal F_i=\hbar/c_{\mathrm E}$. \newline \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}}.\par} & {\raggedright Invariant ($\mathrm{kg\,m}$).\par} \\
+
+$J_{\mathrm D}$ & {\raggedright Raw structural mass moment of the active spherical node.\par} & {\raggedright $\rho_{\mathrm D}r_{\mathrm D}^4=\tfrac32\widehat J$. \newline \hyperref[app:fcc_constants]{Appendix~\ref*{app:fcc_constants}}.\par} & {\raggedright $\approx5.2764\times10^{-43}\,\mathrm{kg\,m}$.\par} \\
+
+$J_{\mathrm S}$ & {\raggedright Substrate realization of the raw structural mass moment.\par} & {\raggedright $J_{\mathrm S}=\rho_{\mathrm S}\ell_{\mathrm S}^4$; $\mathcal F_{\mathrm S}=1$ gives $J_{\mathrm S}=\widehat J$. \newline \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}}.\par} & {\raggedright Structural mass moment ($\mathrm{kg\,m}$).\par} \\
+
 
 $J_{\mathrm{N}}$ & Nucleon Structural Mass Moment & $\rho_{\mathrm{N}} r_{\mathrm{N}}^4$ & $\approx 3.51 \times 10^{-43}$ kg$\cdot$m \\
 
-$h$ & Quantum of Action (Lattice Rotational Momentum) & $2\pi \cdot \hat{J} \cdot c_{\mathrm{E}}$ & $\approx 6.626 \times 10^{-34} \text{ J}\cdot\text{s}$ \\
+$h$ & {\raggedright Complete-cycle quantum of action; not an energy or an angular-momentum magnitude by itself.\par} & {\raggedright $2\pi\widehat J c_{\mathrm E}=2\pi\hbar$. \newline \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}}.\par} & {\raggedright $\approx6.6261\times10^{-34}\,\mathrm{J\,s}$.\par} \\
 
-$\hbar$ & Reduced Quantum of Action & $\frac{h}{2\pi}$ & $\approx 1.054 \times 10^{-34}$ J$\cdot$s \\
+$\hbar$ & {\raggedright Reduced action scale used in the one-mode action normalization.\par} & {\raggedright $h/(2\pi)$. \newline \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.\par} & {\raggedright $\approx1.05457\times10^{-34}\,\mathrm{J\,s}$.\par} \\
 
 $G$ & Gravitational Coupling Efficiency & $\mathcal{F}_i \cdot \left(\frac{c_{\mathrm{E}}^2 A_{\mathrm{S}}}{J_i}\right)$ & $\approx 6.674 \times 10^{-11}$ m$^3$/(kg$\cdot$s$^2$) \\
 
@@ -214,19 +293,33 @@ $\mathcal{F}_i$ & Master Geometric Scaling Factor & Dimensional projection & Dim
 
 $K_{\mathrm{L}}$ & Absolute Lattice Shear Coupling ($k_{\mathrm{e}} e^2$) & Derived geometric limit & $\approx 2.307 \times 10^{-28}$ N$\cdot$m$^2$ \\
 
+$\chi$ & {\raggedright Signed chiral integer of a localized torsional state.\par} & {\raggedright $\chi=+1,-1,0$ for the specified positive, negative, and neutral sectors. \newline \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}}.\par} & {\raggedright Dimensionless; distinct from response functions such as $\chi_{\mathrm g}$.\par} \\
+
+
 $\alpha$ & Fine-Structure Constant (Transverse Survival Ratio) & $\frac{K_{\mathrm{L}}}{\hbar c_{\mathrm{E}}}$ & $\approx 1/137.036$ \\
 
 $\alpha_{\mathrm{G}}$ & Structural Gravitational Strain & $\frac{GM}{r c_{\mathrm{E}}^2}$ & Dimensionless \\
 
+\begin{tabular}[c]{@{}c@{}}$\alpha_{\mathrm G,\gamma}$ \\ $\alpha_{\mathrm G,\mathrm m}$\end{tabular} & {\raggedright Photon and localized-matter gravitational strain in their respective carrier normalizations.\par} & {\raggedright $\alpha_{\mathrm G,\gamma}=2\pi(\ell_{\mathrm S}/\lambda)^2$; $\alpha_{\mathrm G,\mathrm m}=(m_i/m_{\mathrm S})^2$. \newline \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}.\par} & {\raggedright Dimensionless; the two information footprints use different topological factors.\par} \\
+
+
 $n_\tau(\mathbf{x})$ & Strain-Induced Vacuum Refractive Index & $\frac{c_{\mathrm{E}}}{c_{\mathrm{P}}} = \frac{1}{(1-\alpha_{\mathrm{G}})^2}$ \newline (Spherical: $\approx 1+\frac{2GM}{rc_{\mathrm{E}}^2}$) & Dimensionless; variable \\
 
-$\alpha_{\mathrm{Q}}$ & Topological Quantum Coupling Budget & $1 - \alpha_{\mathrm{G}}$ & Dimensionless \\
+$\alpha_{\mathrm Q}$ & {\raggedright Available normalized torsional coupling capacity under the fixed-comparison linear closure.\par} & {\raggedright $\alpha_{\mathrm Q}=1-\alpha_{\mathrm G}$ in the specified torsional-capacity comparison. \newline \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}.\par} & {\raggedright Dimensionless; not automatically the measured Bell visibility.\par} \\
 
-$\sigma$ & Local Scattering Cross-Section (Interaction Area) & \textit{Derived geometric target} & Variable (m$^2$) \\
+\begin{tabular}[c]{@{}c@{}}$g_{\mu\nu}^{(\tau)}$ \\ $G_{\mu\nu}^{(\tau)}$\end{tabular} & {\raggedright Effective optical/measurement tensor and its gravitational field-tensor representation in the continuum limit.\par} & {\raggedright $G_{\mu\nu}^{(\tau)}=(\kappa G/c_{\mathrm E}^4)\Delta T_{\mu\nu}^{(\tau)}$ in the stated tensor projection. \newline \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.\par} & {\raggedright Component units follow the coordinate convention; orthonormal $G^{(\tau)}$ has $\mathrm{m^{-2}}$ units.\par} \\
 
-$K_{\mathrm{D}}$ & Fundamental Impedance Constant & $\rho_{\mathrm{IC}} \cdot 4\pi r_{\mathrm{D}}^2$ & $\approx 126.08 \text{ kg/m}$ \\
 
-$f_{\mathrm{D}}$ & Baseline Structural Frequency & $\frac{c_{\mathrm{E}}}{2r_{\mathrm{D}}}$ & Derived constant ($\text{Hz}$) \\
+$\sigma$ & {\raggedright Energy-transfer cross-section of a specified receiving target and incident band.\par} & {\raggedright $\sigma(\omega)=\overline P_{\mathrm{rec}}(\omega)/\mathcal I_{\mathrm{in}}(\omega)$. \newline \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.\par} & {\raggedright Area ($\mathrm{m^2}$); not a universal geometric scattering area.\par} \\
+
+$K_{\mathrm D}$ & {\raggedright Calibrated radial amplitude-to-mass coefficient; special case of $K_{\mathrm D}^{(\mathrm{def})}$.\par} & {\raggedright $4\pi r_{\mathrm D}^2\rho_{\mathrm{IC}}^{(\mathrm{emp})}$ for unit geometry and the stated empirical projection. \newline \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.\par} & {\raggedright $\approx126.07\,\mathrm{kg\,m^{-1}}$; calibration-dependent.\par} \\
+
+$f_{\mathrm D}$ & {\raggedright Support-scale transverse reference frequency; not the frequency of every photon.\par} & {\raggedright $c_{\mathrm E}/(2r_{\mathrm D})$. \newline \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.\par} & {\raggedright Reference frequency ($\mathrm{Hz}$).\par} \\
+
+$f_{\mathrm m}$ & {\raggedright Characteristic doubled-transit support resonance in the radial expansion--contraction ansatz.\par} & {\raggedright $c_{\mathrm E}/(4r_{\mathrm D})=f_{\mathrm D}/2$. \newline \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.\par} & {\raggedright Reference frequency ($\mathrm{Hz}$); not by itself the particle rest-energy clock.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$v_{\mathrm{ext}}$ \\ $v_{\mathrm{int}}$ \\ $\gamma$\end{tabular} & {\raggedright External translation, internal resonant capacity, and the mechanical Lorentz factor in the kinematic partition.\par} & {\raggedright $v_{\mathrm{ext}}^2+v_{\mathrm{int}}^2=c_{\mathrm E}^2$; $\gamma=c_{\mathrm E}/v_{\mathrm{int}}$. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright Velocities: $\mathrm{m\,s^{-1}}$; $\gamma$: dimensionless.\par} \\
+
 
 $\eta_{\varphi}$ & Geometric Coupling Efficiency & Empirical calibration & Dimensionless ($<1$) \\
 
@@ -234,9 +327,14 @@ $G_{\mathrm{F}}$ & Weak Force 3D Gear Slip (Fermi Limit) & $(\tau V)^{-2}$ & $\a
 
 $T_{\mathrm{s}}$ & Strong Force 1D Bond Pull (QCD Tension) & $\tau A_{\mathrm{chan}}$ & $\approx 1.6 \text{ GeV/fm}$ \\
 
-$k_{\mathrm{e}}$ & Electrostatic Constant (SI Normalized) & $10^{-7} \cdot c_{\mathrm{E}}^2$ & $\approx 8.987 \times 10^9 \text{ N}\cdot\text{m}^2/\text{C}^2$ \\
+$k_{\mathrm e}$ & {\raggedright Electrostatic SI conversion coefficient for the lattice shear coupling.\par} & {\raggedright $1/(4\pi\epsilon_0)$; $10^{-7}c_{\mathrm E}^2$ in the historical SI reference used in the source. \newline \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}}.\par} & {\raggedright $\approx8.987\times10^9\,\mathrm{N\,m^2\,C^{-2}}$.\par} \\
 
 $e$ & Elementary Charge Conversion Factor & $\sqrt{K_{\mathrm{L}} / k_{\mathrm{e}}}$ & $\approx 1.602 \times 10^{-19} \text{ C}$ \\
+
+\begin{tabular}[c]{@{}c@{}}$\epsilon_0$ \\ $\mu_0$\end{tabular} & {\raggedright Electric permittivity and magnetic permeability in the manuscript's macroscopic SI representation; not equal in units to mechanical moduli or mass densities.\par} & {\raggedright $c_{\mathrm E}^2=1/(\mu_0\epsilon_0)$; $k_{\mathrm e}=1/(4\pi\epsilon_0)$. \newline \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}}.\par} & {\raggedright $\epsilon_0$: $\mathrm{F\,m^{-1}}$; $\mu_0$: $\mathrm{N\,A^{-2}}$.\par} \\
+
+$\zeta_{\mathrm{SO}}$ & {\raggedright Geometrical knot--shell overlap factor in the retained spin--orbit correction.\par} & {\raggedright Multiplies the $\alpha^4$ spin--orbit energy term. \newline \hyperref[app:fine_structure]{Appendix~\ref*{app:fine_structure}}.\par} & {\raggedright Dimensionless; order unity in the stated model, not numerically fixed.\par} \\
+
 
 $a_{\mathrm{gal}}$ & Galactic Acceleration Scale & $\frac{a_{\mathrm{D}}}{2\pi}$ & $\approx 1.129 \times 10^{-10} \text{ m/s}^2$ \\
 
@@ -249,6 +347,11 @@ $h_{ij}^{(\mathrm{TT})}$ & Observable Transverse-Traceless Strain & $2\mathsf{H}
 $K_{\mathrm{GW}}^{(\mathrm{eff})}$ & Spectral Gravitational-Wave Stiffness & $\frac{\pi c_{\mathrm{E}}^2 f^2}{4G}$ & Variable (Pa) \\
 
 $\zeta_{\mathrm{GW}}(f)$ & Microscopic-to-Collective Response Ratio & $\frac{K_{\mathrm{GW}}^{(\mathrm{eff})}}{K_{\mathrm{sh}}^{(\mathrm{micro},0)}}$ & Variable \\
+
+\begin{tabular}[c]{@{}c@{}}$I_{\mathrm{spin}}$ \\ $M_{\mathrm{spin}}$\end{tabular} & {\raggedright Fixed-axis moment of inertia and effective participating mass coefficient of the rotational support mode.\par} & {\raggedright $I_{\mathrm{spin}}=M_{\mathrm{spin}}r_{\mathrm D}^2$; $L=I_{\mathrm{spin}}\omega$. \newline \hyperref[sec:quantum_spin]{Section~\ref*{sec:quantum_spin}}.\par} & {\raggedright Respectively $\mathrm{kg\,m^2}$ and $\mathrm{kg}$; not the translational electron mass.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$M_{\mathrm{spin,min}}$ \\ $m_{\mathrm{eq}}$\end{tabular} & {\raggedright Minimum rotational participation for $L=\hbar/2$ at the stated speed ceiling, and the equatorial reference coefficient.\par} & {\raggedright $M_{\mathrm{spin,min}}=\hbar/(2c_{\mathrm E}r_{\mathrm D})=M_{\mathrm D}/(4\pi)$; $m_{\mathrm{eq}}=2M_{\mathrm{spin,min}}$. \newline \hyperref[sec:quantum_spin]{Section~\ref*{sec:quantum_spin}}.\par} & {\raggedright $\approx2.3607\times10^{-17}\,\mathrm{kg}$ and $4.7214\times10^{-17}\,\mathrm{kg}$; fixed-axis reduction.\par} \\
+
 
 \bottomrule
 \end{longtable}
@@ -273,6 +376,9 @@ $\zeta_{\mathrm{GW}}(f)$ & Microscopic-to-Collective Response Ratio & $\frac{K_{
 
 $E_{\mathrm{max}}$ & Absolute Max Coherent Energy (Nyquist Limit) & $\frac{h c_{\mathrm{E}}}{2r_{\mathrm{D}}}$ & $\approx 8.3203 \times 10^{10}$ GeV \\
 
+\begin{tabular}[c]{@{}c@{}}$E_0$ \\ $m_{\mathrm e}$\end{tabular} & {\raggedright Rest energy of the chosen matter state and the electron's measured invariant mass used in the particle calibration.\par} & {\raggedright $E_0=m_i c_{\mathrm E}^2$; electron specialization: $m_i=m_{\mathrm e}$. \newline \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.\par} & {\raggedright $E_0$: $\mathrm J$; $m_{\mathrm e}\approx9.1094\times10^{-31}\,\mathrm{kg}$.\par} \\
+
+
 $m_{\mathrm{S}}$ & Universal Substrate Mass Potential (SC Node Limit) & $\sqrt{\frac{\hbar c_{\mathrm{E}}}{G}}$ & $\approx 2.1764 \times 10^{-8}$ kg \\
 
 $M_{\mathrm{D,G}}$ & Soft Floor Ignition Mass (Micro-BH Nucleation) & $\frac{c_{\mathrm{E}}^2 \cdot r_{\mathrm{D}}}{G}$ & $\approx 10.033$ kg \\
@@ -281,31 +387,51 @@ $M_{\mathrm{U}}$ & Universal Saturation Mass (Observable Cosmic Mass) & $\frac{c
 
 $M_{\mathrm{Res}}$ & Total Cosmic Reservoir Mass & $M_{\mathrm{U}} \cdot \left(\frac{\rho_{\mathrm{S}}}{\rho_{\mathrm{QG}}}\right)$ & $\approx 1.6707 \times 10^{79}$ kg \\
 
-$M_{\mathrm{net}}(t)$ & Aggregate State II BoundaryMass & $M_{\mathrm{D,G}} \cdot e^{\Gamma_{\mathrm{D}} t}$ & Variable (kg) \\
+$M_{\mathrm p}(t)$ & {\raggedright Aggregate inertial mass on the participating live FCC/SC boundary network; not physical SC bulk volume.\par} & {\raggedright $M_{\mathrm p}(t)=M_{\mathrm p}(0)e^{\Gamma_{\mathrm{pc}}t}$ for constant net fractional growth. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Variable ($\mathrm{kg}$).\par} \\
 
-$M_{\mathrm{trg}}$ & Global Rupture Trigger Mass (Percolation Threshold) & $0.0516 \cdot M_{\mathrm{Res}}$ & $\approx 8.6208 \times 10^{77}$ kg \\
+$\Gamma_{\mathrm{pc}}$ & {\raggedright Net fractional growth rate of the aggregate live-boundary mass.\par} & {\raggedright $\Gamma_{\mathrm{pc}}=\dot M_{\mathrm p}/M_{\mathrm p}$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Variable ($\mathrm{s^{-1}}$); separate from $\Gamma_{\mathrm D}$.\par} \\
+
+$\mathcal C_{\mathrm{pcD}}$ & {\raggedright Dimensionless ratio of structural and photon scale-relaxation rates.\par} & {\raggedright $\mathcal C_{\mathrm{pcD}}=\Gamma_{\mathrm{pc}}/\Gamma_{\mathrm D}$ for $\Gamma_{\mathrm D}\ne0$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Unity only in the single-rate synchronization specialization.\par} \\
+
+
+$M_{\mathrm{trg}}$ & {\raggedright Aggregate live-boundary mass at the adopted global percolation threshold.\par} & {\raggedright $M_{\mathrm{trg}}=\beta_{\mathrm{rup}}M_{\mathrm{Res}}$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright $\approx8.6208\times10^{77}\,\mathrm{kg}$ in the reference closure.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$p_{\mathrm c}$ \\ $\beta_{\mathrm{rup}}$\end{tabular} & {\raggedright Adopted FCC site-percolation probability and its equal-capacity live-boundary mass projection.\par} & {\raggedright $\beta_{\mathrm{rup}}=p_{\mathrm c}\beta_{\mathrm{IC}}=M_{\mathrm{trg}}/M_{\mathrm{Res}}$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright $p_{\mathrm c}\approx0.199$; $\beta_{\mathrm{rup}}\approx0.0516$; not an SC volume fraction.\par} \\
+
 
 $M_{\mathrm{cur}}$ & Current Aggregate State II Boundary Mass & $M_{\mathrm{obs}} \cdot \left(\frac{\rho_{\mathrm{S}}}{\rho_{\mathrm{QG}}}\right)$ & $\approx 9.7957 \times 10^{75}$ kg \\
 
-$\Gamma_{\mathrm{D}}$ & Coherent Photon Energy-Relaxation Rate (General Physical Rate) & $\Gamma_{\mathrm{D}}(q)=\Gamma_{\mathrm{D}}^{(0)}F_{\mathrm{R}}(q)$ & Response-dependent (s$^{-1}$) \\
+$M_{\mathrm{obs}}$ & {\raggedright Adopted black-hole boundary-mass inventory in the reference observable domain.\par} & {\raggedright $M_{\mathrm{cur}}=M_{\mathrm{obs}}(\rho_{\mathrm S}/\rho_{\mathrm{QG}})$ under the homogeneity extrapolation. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Adopted inventory: $\approx10^{50}\,\mathrm{kg}$.\par} \\
 
-$\Gamma_{\mathrm{D}}^{(0)}$ & Unit-Reference Coherent Photon Energy-Relaxation Rate & $\displaystyle \frac{9}{16}\frac{c_{\mathrm{E}}}{r_{\mathrm{D}}}\left(\frac{\ell_{\mathrm{S}}}{r_{\mathrm{D}}}\right)^6$ & $\approx 2.3591 \times 10^{-18}$ s$^{-1}$ \\
 
-$\Gamma_{\mathrm{D}}^{(\mathrm{cal})}$ & Present Calibrated Coherent Photon Energy-Relaxation Rate & $\displaystyle \frac{c_{\mathrm{E}}}{R_{\mathrm{U}}}=H_0^{(\mathrm{obs})}$ & $\approx 2.3671 \times 10^{-18}$ s$^{-1}$ \\
+$\Gamma_{\mathrm D}$ & {\raggedright Physical coherent-photon energy/frequency scale-relaxation rate in the action-preserving branch.\par} & {\raggedright $\Gamma_{\mathrm D}=\Gamma_{\mathrm D}^{(0)}\mathcal F_{\mathrm R}$ in the AS factorization. \newline \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.\par} & {\raggedright Response-dependent ($\mathrm{s^{-1}}$); no universal physical value is supplied by the unit closure.\par} \\
 
-$\Gamma$ & Localized Quantum Damping Rate (Measurement / Wave Arrest) & $\sigma c_{\mathrm{P}} n_K(x)$ & Variable (s$^{-1}$) \\
+$\Gamma_{\mathrm D}^{(0)}$ & {\raggedright Unit-reference photon scale-relaxation rate for $\mathcal F_{\mathrm R}=1$.\par} & {\raggedright $\frac9{16}\frac{c_{\mathrm E}}{r_{\mathrm D}}\left(\frac{\ell_{\mathrm S}}{r_{\mathrm D}}\right)^6$. \newline \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.\par} & {\raggedright $\approx2.3591\times10^{-18}\,\mathrm{s^{-1}}$; reference, not a physical minimum.\par} \\
 
-$\Gamma_{\mathrm{eff}}$ & Effective Photon Energy-Relaxation Rate & $\Gamma_{\mathrm D}+\Gamma(x)$ & Variable (s$^{-1}$) \\
+$\mathcal F_{\mathrm R}$ & {\raggedright Dimensionless reference-mediated carrier--noncoherent correlation factor, including the spectral and physical time-correlation projection.\par} & {\raggedright $\mathcal F_{\mathrm R}=\int_0^\infty\widehat K_{\mathrm R}(u)\,\mathrm du$. \newline \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.\par} & {\raggedright Physical response remains to be fixed; $1$ is the unit-reference closure.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$P_{\mathrm R}$ \\ $t_{\mathrm{corr}}^{(0)}$\end{tabular} & {\raggedright Perturbative reference-overlap kernel weight and reference two-leg microscopic correlation interval.\par} & {\raggedright $P_{\mathrm R}=\frac94(\ell_{\mathrm S}/r_{\mathrm D})^6$; $t_{\mathrm{corr}}^{(0)}=4r_{\mathrm D}/c_{\mathrm E}$. \newline \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.\par} & {\raggedright Respectively dimensionless and $\mathrm s$; $\Gamma_{\mathrm D}=P_{\mathrm R}\mathcal F_{\mathrm R}/t_{\mathrm{corr}}^{(0)}$.\par} \\
+
+$t_{\mathrm D}$ & {\raggedright Coherent-photon energy-relaxation time for a specified positive constant rate.\par} & {\raggedright $t_{\mathrm D}=\Gamma_{\mathrm D}^{-1}$; $R_{\mathrm U}=c_{\mathrm E}t_{\mathrm D}$. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright Time ($\mathrm s$); observational reference $\approx13.39\,\mathrm{Gyr}$.\par} \\
+
+
+$\Gamma_{\mathrm D}^{(\mathrm{cal})}$ & {\raggedright Observationally calibrated relaxation-dominated reference realization.\par} & {\raggedright $\Gamma_{\mathrm D}^{(\mathrm{cal})}=H_0^{(\mathrm{obs})}$ only in that adopted calibration. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright $\approx2.3671\times10^{-18}\,\mathrm{s^{-1}}$; not an identity for a general observed redshift.\par} \\
+
+$\Gamma$ & {\raggedright Local coherent incident-band depletion rate in the matched weak matter-envelope reduction.\par} & {\raggedright $\Gamma=\sigma c_{\mathrm P}n_{\mathrm K}$ only for independent targets and $v_{\mathrm{inc}}=c_{\mathrm P}$. \newline \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.\par} & {\raggedright Variable ($\mathrm{s^{-1}}$); receiving loss alone does not establish capture.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$\Gamma_{\mathrm{beam}}$ \\ $v_{\mathrm{inc}}$\end{tabular} & {\raggedright Independent-target beam energy-depletion rate and incident energy-transport speed relative to those targets.\par} & {\raggedright $\Gamma_{\mathrm{beam}}=n_{\mathrm K}\sigma v_{\mathrm{inc}}$. \newline \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.\par} & {\raggedright $\mathrm{s^{-1}}$ and $\mathrm{m\,s^{-1}}$; match to an envelope rate only for the same retained band.\par} \\
+
+
 
 $a_{\mathrm{D}}$ & Lattice Impedance Acceleration (Dark Matter Effect) & $c_{\mathrm{E}} \cdot \Gamma_{\mathrm{D}}$ & $\approx 7.0964 \times 10^{-10}$ m/s$^2$ \\
 
 $g_{\mathrm{b}}$ & Baryonic Newtonian Acceleration & $\frac{GM}{r^2}$ & Variable (m/s$^2$) \\
 
-$T_{\mathrm{cyc}}$ & Total Oscillation Time (Macroscopic Lifespan) & $\frac{1}{\Gamma_{\mathrm{D}}}\ln\left(\frac{M_{\mathrm{trg}}}{M_{\mathrm{D,G}}}\right)$ & $\approx 2.3715$ Trillion yrs \\
+$T_{\mathrm{cyc}}$ & {\raggedright Structural phase-avalanche duration from the specified primordial aggregate to rupture.\par} & {\raggedright $\Gamma_{\mathrm{pc}}^{-1}\ln[M_{\mathrm{trg}}/M_{\mathrm p}(0)]$ for constant $\Gamma_{\mathrm{pc}}$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Reference minimum-seed synchronized branch: $\approx2.3795\times10^{12}\,\mathrm{yr}$.\par} \\
 
-$t_{\mathrm{cur}}$ & Current Cosmic Epoch (Elapsed Time) & $\frac{1}{\Gamma_{\mathrm{D}}}\ln\left(\frac{M_{\mathrm{cur}}}{M_{\mathrm{D,G}}}\right)$ & $\approx 2.3116$ Trillion yrs \\
+$t_{\mathrm{cur}}$ & {\raggedright Elapsed structural time assigned to the adopted current boundary-mass inventory.\par} & {\raggedright $\Gamma_{\mathrm{pc}}^{-1}\ln[M_{\mathrm{cur}}/M_{\mathrm p}(0)]$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Same reference branch: $\approx2.3194\times10^{12}\,\mathrm{yr}$.\par} \\
 
-$\Delta t$ & Remaining Cosmic Lifespan (Expiration Timer) & $T_{\mathrm{cyc}} - t_{\mathrm{cur}}$ & $\approx 59.938$ Billion yrs \\
+$\Delta t$ & {\raggedright Time remaining to rupture in the structural chronology; other elapsed-time uses are specified locally.\par} & {\raggedright $T_{\mathrm{cyc}}-t_{\mathrm{cur}}=\Gamma_{\mathrm{pc}}^{-1}\ln(M_{\mathrm{trg}}/M_{\mathrm{cur}})$. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Synchronized unit-reference value: $\approx60.14\,\mathrm{Gyr}$.\par} \\
 
 $\Pi(r)$ & Radial Projection Factor & Distance modulation & Dimensionless \\
 
@@ -314,6 +440,25 @@ $\Xi(R)$ & Structural Shielding Operator & Acoustic boundary & Dimensionless \\
 $g_{\mathrm{QG,max}}$ & Maximum Finite Gravity Limit & $\frac{c_{\mathrm{E}}^2}{r_{\mathrm{D}}}$ & $\approx 1.2063 \times 10^{43} \text{ m/s}^2$ \\
 
 $T_{\mathrm{nuc}}$ & Nucleation Temperature (Hydrogen Limit) & Topological stability limit & $\approx 3.0 \times 10^3 \text{ K}$ \\
+
+\begin{tabular}[c]{@{}c@{}}$H_0^{(\mathrm{obs})}$ \\ $H_0^{(\mathrm{slope})}$\end{tabular} & {\raggedright Empirical Hubble reference and the local total-redshift slope used in the TFT observational projection.\par} & {\raggedright $H_0^{(\mathrm{slope})}=c_{\mathrm E}(\mathrm dz_{\mathrm{obs}}/\mathrm dr)_{z\to0}$. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright Rate ($\mathrm{s^{-1}}$); reference $73.04\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$z_{\mathrm{obs}}$ \\ $z_{\mathrm{kin}}$ \\ $z_{\mathrm{grav}}$ \\ $z_{\mathrm D}$\end{tabular} & {\raggedright Observed spectral redshift and its kinematic, gravitational-endpoint, and coherent propagation-relaxation components.\par} & {\raggedright $1+z_{\mathrm{obs}}=(1+z_{\mathrm{kin}})(1+z_{\mathrm{grav}})(1+z_{\mathrm D})$ in the stationary factorized regime. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright Dimensionless frequency ratios; endpoint components can include blueshifts.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$v_{\mathrm g}$ \\ $v_{\mathrm{ray}}$\end{tabular} & {\raggedright Group velocity of the selected dispersive eigenbranch and the ray transport speed used with the same time parameter as $\Gamma_{\mathrm D}$.\par} & {\raggedright $\mathbf v_{\mathrm g}=\nabla_{\mathbf k}\omega$; $\mathbf v_{\mathrm{ray}}=\partial\omega_\gamma/\partial\mathbf k$ in the ray description. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright $\mathrm{m\,s^{-1}}$; long-wave limit $v_{\mathrm{ray}}\simeq c_{\mathrm P}$.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$d_{\mathrm L}$ \\ $d_{\mathrm A}$\end{tabular} & {\raggedright Luminosity and angular-diameter distances; the angular definition uses transverse source size and observed angular size.\par} & {\raggedright $F_{\mathrm{obs}}=L_{\mathrm{emit}}/(4\pi d_{\mathrm L}^2)$; $d_{\mathrm A}=S_\perp/\theta_{\mathrm{obs}}$. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright Distances ($\mathrm m$); endpoint and lensing assumptions remain part of the projection.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$\Delta t_{\mathrm{pkt}}$ \\ $\Delta t_{\mathrm{p,e}}$ \\ $\Delta t_{\mathrm{obs}}$\end{tabular} & {\raggedright Coherent packet duration, proper separation of independent source events, and their observed separation.\par} & {\raggedright Fixed-cycle packet support is distinct from the source-event clock comparison. \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.\par} & {\raggedright Times ($\mathrm s$); the propagation factor does not automatically dilate independent event separation.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$T_{\mathrm a}$ \\ $t_{\mathrm a}$\end{tabular} & {\raggedright Adopted annealing/transparency temperature and the corresponding time under the early bulk-cooling and geometric-mode closures.\par} & {\raggedright $T(t)\simeq T_{\mathrm S}\sqrt{t_{\mathrm S}/t}$ in the annealing model. \newline \hyperref[app:lattice_annealing]{Appendix~\ref*{app:lattice_annealing}}.\par} & {\raggedright $T_{\mathrm a}\approx3000\,\mathrm K$; $t_{\mathrm a}\approx3.86\times10^5\,\mathrm{yr}$.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$T_{\gamma,0}$ \\ $T_{\mathrm{rec},0}$ \\ $T_{\mathrm{eq}}$\end{tabular} & {\raggedright Initial photon and receiver temperatures and the common endpoint temperature in the isolated two-sector equilibration model.\par} & {\raggedright $u_{\mathrm{CMB}}(T_{\gamma,0})+u_{\mathrm{rec}}(T_{\mathrm{rec},0})=u_{\mathrm{CMB}}(T_{\mathrm{eq}})+u_{\mathrm{rec}}(T_{\mathrm{eq}})$. \newline \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.\par} & {\raggedright Temperatures ($\mathrm K$); the initial subscript $0$ does not mean Hard-Floor State 0.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$u_{\mathrm{CMB}}$ \\ $u_{\mathrm{rec}}$\end{tabular} & {\raggedright Thermal electromagnetic and receiving-sector energy densities; distinct from coherent single-photon energy.\par} & {\raggedright $u_{\mathrm{CMB}}=\pi^2k_{\mathrm B}^4T^4/(15\hbar^3c_{\mathrm E}^3)$; receiving density follows its own spectrum. \newline \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.\par} & {\raggedright Energy densities ($\mathrm{J\,m^{-3}}$); receiver value is model-dependent.\par} \\
+
+$v_{\mathrm{rec}}$ & {\raggedright Speed of a distinct gapless scalar receiving branch in the conditional Fossil-CMB closure.\par} & {\raggedright $u_{\mathrm{rec}}(T)/u_{\mathrm{CMB}}(T)=\tfrac12(c_{\mathrm E}/v_{\mathrm{rec}})^3$ for the specified 3D scalar branch. \newline \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.\par} & {\raggedright $\mathrm{m\,s^{-1}}$; not a derived Hard-Floor thermal-wave speed.\par} \\
+
 
 \bottomrule
 \end{longtable}
@@ -348,11 +493,11 @@ $\omega_{\mathrm{drag}}$ & Torsional Soft-Floor Dragging Rate & $\frac{2G\mathca
 
 $v_{\phi}^{(\mathrm{SF})}$ & Tangential Soft-Floor Shear Speed & $r\sin\theta \, \omega_{\mathrm{drag}}(r)$ & Variable (m/s) \\
 
-$\tau_{\mathrm{tor}}$ & 3D Torsional Stiffness Density & $\tau_{D,\mathrm{bulk}} = \frac{c_{\mathrm{E}}^4}{G r_{\mathrm{D}}^2}$ & $\approx 2.18 \times 10^{96}$ Pa \\
+$\tau_{\mathrm{tor}}$ & {\raggedright Exterior volumetric torsional stiffness in the retained rotating Soft-Floor constitutive closure.\par} & {\raggedright $\tau_{\mathrm{tor}}=\tau_{\mathrm{D,bulk}}$ in the matched closure of Appendix W. \newline \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.\par} & {\raggedright $\approx2.18\times10^{96}\,\mathrm{Pa}$ for that normalization; not continued into the SC core.\par} \\
 
 $r_\perp$ & Cylindrical Distance from Spin Axis & $r\sin\theta$ & Variable (m) \\
 
-$r_{\mathrm{sat}}$ & Spin-Deformed Phase Boundary & $R_{\mathrm{QG}} \left[ 1 - a_\ast^2P_2(\cos\theta) \right]$ & Variable (m) \\
+$r_{\mathrm{sat}}$ & {\raggedright Spin-deformed saturation surface in the leading axisymmetric quadrupolar ansatz.\par} & {\raggedright $R_{\mathrm{QG}}[1-a_*^2P_2(\cos\theta)]$ in the stated leading model. \newline \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}}.\par} & {\raggedright Variable ($\mathrm m$); strong-field surface follows the exterior/free-boundary construction.\par} \\
 
 $r_{\mathrm{cap}}$ & Torsional Capacity Surface & $\left| v_{\phi}^{(\mathrm{SF})} \right| = c_P(r)$ & Variable (m) \\
 
@@ -362,7 +507,7 @@ $R_{\mathrm{obs}}$ & Observational Surface Map & Derived optical/orbital bounds 
 
 $d$ & Binary Center-to-Center Separation & Geometric distance & Variable (m) \\
 
-$v_{\mathrm{rel}}$ & Binary Relative Orbital Velocity & $c_{\mathrm{E}}\sqrt{\frac{R_1+R_2}{d}}$ & $\le c_{\mathrm{E}}$ \\
+$v_{\mathrm{rel}}$ & {\raggedright Relative orbital speed of two black holes in the ideal circular two-body reduction; distinct from condensate relative flow.\par} & {\raggedright $v_{\mathrm{rel}}=c_{\mathrm E}\sqrt{(R_1+R_2)/d}$. The radii and separation belong to the same binary. \newline \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}.\par} & {\raggedright Velocity ($\mathrm{m\,s^{-1}}$); the contact limit is not a universal merger speed.\par} \\
 
 $\alpha_{\mathrm{bridge}}$ & Bridge Saturation Condition (Merger) & $\alpha_{\mathrm{G},1} + \alpha_{\mathrm{G},2} + \alpha_{\mathrm{dyn}}$ & $\ge 1$ (at merger) \\
 
@@ -376,7 +521,7 @@ $\omega_{\ell m}$ & Ringdown Normal Mode Frequency & Derived eigenvalue & Variab
 
 $\Gamma_{\ell m}^{(\mathrm{rd})}$ & Ringdown Normal Mode Damping Rate & Derived eigenvalue & Variable (s$^{-1}$) \\
 
-$r_{\gamma,s_{\mathrm{br}}}$ & Photon Ring Radius (Prograde/Retrograde) & Circular null geodesic root & Variable (m) \\
+$r_{\gamma,s_{\mathrm{br}}}$ & {\raggedright Prograde or retrograde circular-photon radius of the specified dragged optical exterior.\par} & {\raggedright Circular-ray root of the branch-specific optical Hamiltonian. \newline \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.\par} & {\raggedright Variable ($\mathrm m$); $s_{\mathrm{br}}=\pm1$.\par} \\
 
 $B_{\gamma,s_{\mathrm{br}}}$ & Shadow Impact Scale & $\frac{c_{\mathrm{E}}}{\left| \omega_{\mathrm{drag}} + s_{\mathrm{br}} \frac{c_P}{r_\gamma} \right|}$ & Variable (m) \\
 
@@ -394,9 +539,11 @@ $P_{\mathrm{GW}}$ & Total Quadrupole Luminosity & $\frac{G}{5c_{\mathrm{E}}^5} \
 \newpage
 \section*{VI. Physical Fields, Defect Coordinates, and Modal Mechanics}
 
-These entries collect the retained notation of
-\hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}
-that has no symbol entry in the preceding tables. Related forms are grouped
+These entries collect the physical-field, modal, boundary-control, and measurement notation developed in
+\hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}} through
+\hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}},
+together with the analyzer observables of
+\hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}. Related forms are grouped
 by their mechanical or statistical role. A response-dependent or
 preparation-dependent entry is not an additional universal constant.
 
@@ -426,13 +573,16 @@ are forms of the same defined quantity rather than additional variables.
 \endhead
 
 % ABN-01: F19
-\begin{tabular}[c]{@{}c@{}}$\psi$ \\ $\rho_\psi$\end{tabular} & {\raggedright Action-normalized excitation field and its intensity; distinct from the structural order parameter $\Psi$.\par} & {\raggedright $\rho_\psi=|\psi|^2$; $\int\rho_\psi\,\mathrm dx=1$ in the selected 1D channel. \newline Equation~\eqref{eq:DMR_normalized_field}.\par} & {\raggedright 1D: $[\psi]=\mathrm{m^{-1/2}}$, $[\rho_\psi]=\mathrm{m^{-1}}$; 3D: $\mathrm{m^{-3/2}}$, $\mathrm{m^{-3}}$.\par} \\
+\begin{tabular}[c]{@{}c@{}}$\psi$ \\ $\psi_{\mathrm{env}}$ \\ $\rho_\psi$\end{tabular} & {\raggedright Action-normalized excitation field, its slow envelope, and retained intensity; distinct from the structural order parameter $\Psi$.\par} & {\raggedright $\rho_\psi=|\psi|^2$ (or $|\psi_{\mathrm{env}}|^2$ for the envelope); normalization is stated for the selected channel. \newline \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.\par} & {\raggedright 1D: $\mathrm{m^{-1/2}}$, $\mathrm{m^{-1}}$; 3D: $\mathrm{m^{-3/2}}$, $\mathrm{m^{-3}}$ for field and intensity.\par} \\
 
 % ABN-02: F19
 $\widetilde\psi$ & {\raggedright Momentum-space representation of the normalized 1D excitation field.\par} & {\raggedright Fourier transform with kernel $e^{-ip_{\mathrm w}x/\hbar}$ and factor $(2\pi\hbar)^{-1/2}$. \newline Equation~\eqref{eq:DMR_fourier_momentum}.\par} & {\raggedright Variable; units $(\mathrm{kg\,m\,s^{-1}})^{-1/2}$.\par} \\
 
 % ABN-03: F21
 $S$ & {\raggedright Signed mechanical phase action of the selected excitation field.\par} & {\raggedright $\psi=\sqrt{\rho_\psi}\,e^{iS/\hbar}$; $S'=\partial_xS$ is its phase momentum. \newline Equation~\eqref{eq:DMR_normalized_field}.\par} & {\raggedright Variable ($\mathrm{J\,s}$).\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$\lambda$ \\ $\mathbf k$ \\ $\nu$\end{tabular} & {\raggedright Carrier wavelength, wave vector, angular frequency, and ordinary frequency in the selected wave branch.\par} & {\raggedright $|\mathbf k|=2\pi/\lambda$; $\omega=2\pi\nu$; dispersion fixes $\omega(\mathbf k)$. \newline \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.\par} & {\raggedright $\lambda$: $\mathrm m$; $\mathbf k$: $\mathrm{m^{-1}}$; $\omega$: $\mathrm{s^{-1}}$; $\nu$: $\mathrm{Hz}$.\par} \\
+
 
 % ABN-04: F58
 \begin{tabular}[c]{@{}c@{}}$p_{\mathrm w}$ \\ $\widehat p_{\mathrm w}$\end{tabular} & {\raggedright Spectral momentum coordinate and its generator on the continuum field; distinct from the capture momentum $\pi_q$.\par} & {\raggedright $\widehat p_{\mathrm w}=-i\hbar\partial_x$. \newline Equation~\eqref{eq:DMR_fourier_momentum}.\par} & {\raggedright Momentum units ($\mathrm{kg\,m\,s^{-1}}$).\par} \\
@@ -445,6 +595,9 @@ $C_{xp}$ & {\raggedright Action-weighted covariance of position and phase moment
 
 % ABN-07: F56
 $\mathcal F_\rho$ & {\raggedright Amplitude-gradient functional measuring spatial sharpness of the normalized 1D field.\par} & {\raggedright $\displaystyle\int \frac{(\rho_\psi')^2}{\rho_\psi}\,\mathrm dx$; gradient energy $\hbar^2\mathcal F_\rho/(8m_{\mathrm{env}})$. \newline Equation~\eqref{eq:DMR_momentum_variance}.\par} & {\raggedright Profile-dependent ($\mathrm{m^{-2}}$).\par} \\
+
+$Q$ & {\raggedright Amplitude-gradient potential of the isolated matter-envelope reduction; distinct from receiver force $Q_{\mathrm{rec}}$.\par} & {\raggedright $Q=-\frac{\hbar^2}{2m_{\mathrm{env}}}\frac{\nabla^2\sqrt{\rho_\psi}}{\sqrt{\rho_\psi}}$. \newline \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.\par} & {\raggedright Energy ($\mathrm J$); defined on the appropriate regular field domain.\par} \\
+
 
 % ABN-08: F26
 $m_{\mathrm{env}}$ & {\raggedright Envelope inertial-curvature coefficient of the isolated matter branch in the isotropic reduction.\par} & {\raggedright $\displaystyle\frac1{m_{\mathrm{env}}}=\frac1\hbar\left.\frac{\partial^2\omega}{\partial k_x^2}\right|_{\mathbf0}$. \newline Equation~\eqref{eq:X_band_mass}.\par} & {\raggedright Branch-dependent ($\mathrm{kg}$).\par} \\
@@ -473,11 +626,25 @@ $\boldsymbol\pi$ & {\raggedright Complete canonical-momentum vector for the same
 % ABN-16: F78
 $a_a$ & {\raggedright Complex mechanical quadrature amplitude of incident real mode $a$, using the action normalization of the physical-wavefunction construction.\par} & {\raggedright $q_a=\sqrt{\hbar/(2M_a\omega_a)}(a_a+a_a^*)$. \newline Equation~\eqref{eq:X_complex_quadrature}.\par} & {\raggedright Dimensionless; mode action $\hbar|a_a|^2$.\par} \\
 
+\begin{tabular}[c]{@{}c@{}}$I_a$ \\ $I_\gamma$\end{tabular} & {\raggedright Harmonic modal action and the selected coherent photon action; $h$ denotes the associated complete-cycle action.\par} & {\raggedright $I_a=E_a/\omega_a=\hbar|a_a|^2$; $I_\gamma=E_\gamma/\omega_\gamma=\hbar$ for one elementary photon. \newline \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.\par} & {\raggedright Action ($\mathrm{J\,s}$); $\oint\pi_a\,\mathrm dq_a=2\pi I_a$.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$E_\gamma$ \\ $\omega_\gamma$\end{tabular} & {\raggedright Energy and real angular frequency of the surviving coherent photon eigenbranch.\par} & {\raggedright $E_\gamma=\hbar\omega_\gamma=h\nu_\gamma$ in the one-action branch. \newline \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.\par} & {\raggedright Respectively $\mathrm J$ and $\mathrm{s^{-1}}$; distinguish frequency migration from carrier depletion.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$\mathbf A$ \\ $\mathbf X_{\mathrm A}$\end{tabular} & {\raggedright Real transverse photon displacement field and the dimensionless shape of one selected real mode.\par} & {\raggedright $\mathbf A(\mathbf x,t)=\mathbf X_{\mathrm A}(\mathbf x)q_{\mathrm A}(t)$. \newline \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}.\par} & {\raggedright $\mathbf A$: $\mathrm m$; $\mathbf X_{\mathrm A}$: dimensionless.\par} \\
+
+
 % ABN-17: F17
-$M_{\mathrm D}$ & {\raggedright Baseline nodal inertia assigned once to each site of the selected FCC scaffold-coordinate normalization.\par} & {\raggedright $M_{\mathrm D}=h/(c_{\mathrm E}r_{\mathrm D})$. \newline Equation~\eqref{eq:Y_directional_radiation_resistance}.\par} & {\raggedright Set by the adopted baseline ($\mathrm{kg}$).\par} \\
+$M_{\mathrm D}$ & {\raggedright Integrated scaffold-node inertia, assigned once in the primitive-cell kinetic normalization.\par} & {\raggedright $M_{\mathrm D}=h/(c_{\mathrm E}r_{\mathrm D})=(4\pi/3)\rho_{\mathrm D}r_{\mathrm D}^3$. \newline \hyperref[app:fcc_constants]{Appendix~\ref*{app:fcc_constants}}.\par} & {\raggedright $\approx2.9665\times10^{-16}\,\mathrm{kg}$.\par} \\
 
 % ABN-18: F17
 \begin{tabular}[c]{@{}c@{}}$M_a$ \\ $m_a$\end{tabular} & {\raggedright Incident real-mode inertia $M_a$ and independently projected receiving-mode inertia $m_a$.\par} & {\raggedright Kinetic projections of their specified, nonduplicated mode shapes. \newline Equation~\eqref{eq:Y_coupled_mechanical_reduction}.\par} & {\raggedright Mode-dependent, positive ($\mathrm{kg}$).\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$q_{\mathrm A}$ \\ $\pi_{\mathrm A}$ \\ $M_{\mathrm A}$ \\ $k_{\mathrm A}$\end{tabular} & {\raggedright Displacement, conjugate momentum, integrated inertia, and stiffness of the same selected real transverse photon mode.\par} & {\raggedright $\pi_{\mathrm A}=M_{\mathrm A}\dot q_{\mathrm A}$; $k_{\mathrm A}=M_{\mathrm A}\omega_{\mathrm A}^2$. \newline \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}.\par} & {\raggedright $\mathrm m$, $\mathrm{kg\,m\,s^{-1}}$, $\mathrm{kg}$, and $\mathrm{N\,m^{-1}}$.\par} \\
+
+$H_{\mathrm A}$ & {\raggedright Mechanical Hamiltonian of the selected real transverse mode, using its matched inertia and stiffness.\par} & {\raggedright $\pi_{\mathrm A}^2/(2M_{\mathrm A})+k_{\mathrm A}q_{\mathrm A}^2/2$. \newline \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}.\par} & {\raggedright Energy ($\mathrm J$).\par} \\
+
+$k_{\mathrm{ct}}^{(\mathrm{modal})}$ & {\raggedright Integrated directional baseline contact stiffness used in the photon-mode normalization.\par} & {\raggedright $M_{\mathrm D}c_{\mathrm E}^2/d_{\mathrm{nn}}^2=hc_{\mathrm E}/(4r_{\mathrm D}^3)$. \newline \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}.\par} & {\raggedright Stiffness ($\mathrm{N\,m^{-1}}$); distinct from a stiffness per contact area.\par} \\
+
 
 % ABN-19: F30 F17
 \begin{tabular}[c]{@{}c@{}}$\mathsf M$ \\ $M_q$\end{tabular} & {\raggedright Assembled admissible-coordinate kinetic matrix and the inertia of the selected defect mode.\par} & {\raggedright $M_q=\mathbf e_q^{\mathsf T}\mathsf M\mathbf e_q$. \newline Equation~\eqref{eq:DMR_defect_projection}.\par} & {\raggedright Matrix entries and $M_q$ in $\mathrm{kg}$ when coordinates are lengths.\par} \\
@@ -508,6 +675,17 @@ $E_{\mathrm{rec}}$ & {\raggedright Receiving energy, including the contact-stora
 
 % ABN-28: F52
 $Q_{\mathrm{rec}}$ & {\raggedright Receiving load on $q$, written with the resisting-force sign convention.\par} & {\raggedright $\dot E_q=F_{\mathrm{in}}\dot q-Q_{\mathrm{rec}}\dot q$. \newline Equation~\eqref{eq:DMR_total_energy_balance}.\par} & {\raggedright Force ($\mathrm N$); distinct from the field gradient-energy potential $Q$.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$V_{\mathrm B}$ \\ $L$ \\ $\kappa_{\mathrm B}$ \\ $\ell_{\mathrm{ev}}$\end{tabular} & {\raggedright Barrier energy height, barrier width, evanescence coefficient, and penetration length in the stationary rectangular-barrier reduction.\par} & {\raggedright $\kappa_{\mathrm B}=\sqrt{2m(V_{\mathrm B}-E)}/\hbar$; $\ell_{\mathrm{ev}}=1/\kappa_{\mathrm B}$ for $0<E<V_{\mathrm B}$. \newline \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.\par} & {\raggedright $\mathrm J$, $\mathrm m$, $\mathrm{m^{-1}}$, and $\mathrm m$; $L$ here is a length, not a Lagrangian.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$a_{\mathrm L},\ a_{\mathrm R}$ \\ $b_{\mathrm L},\ b_{\mathrm R}$\end{tabular} & {\raggedright Incident and outgoing coherent amplitudes at the left and right ports of the same barrier.\par} & {\raggedright Incoming vector $(a_{\mathrm L},a_{\mathrm R})^{\mathsf T}$ and outgoing vector $(b_{\mathrm L},b_{\mathrm R})^{\mathsf T}$. \newline \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.\par} & {\raggedright Units of the selected field normalization; flux ratios include the stated channel factors.\par} \\
+
+$T_{\mathrm{pass}}$ & {\raggedright Passive transmitted-to-incident flux ratio, with no imposed coherent input from the right.\par} & {\raggedright $T_{\mathrm{pass}}=j_{\mathrm{tr}}/j_{\mathrm{in}}$ for $a_{\mathrm R}=0$. \newline \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.\par} & {\raggedright Dimensionless; not the active two-input control ratio.\par} \\
+
+$\mathcal V_\varphi$ & {\raggedright Angular coherence/visibility of the specified analyzer rotation ensemble; distinct from mechanical capacity $\alpha_{\mathrm Q}$.\par} & {\raggedright $\mathcal V_\varphi=|\langle e^{i\varphi}\rangle|$. \newline \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.\par} & {\raggedright $0\leq\mathcal V_\varphi\leq1$; no general equality with $\alpha_{\mathrm Q}$ is assumed.\par} \\
+
+\begin{tabular}[c]{@{}c@{}}$E_{\mathrm{Bell}}$ \\ $S_{\mathrm{CHSH}}$\end{tabular} & {\raggedright Normalized paired-outcome correlation and its four-setting CHSH combination.\par} & {\raggedright $E_{\mathrm{Bell}}=-\widehat{\mathbf n}_{\mathrm A}\cdot\widehat{\mathbf n}_{\mathrm B}$ under the balanced singlet closure. \newline \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.\par} & {\raggedright Dimensionless; ideal maximum $|S_{\mathrm{CHSH}}|=2\sqrt2$ in that construction.\par} \\
+
 
 \bottomrule
 \end{longtable}
@@ -542,7 +720,7 @@ $f_0$ & {\raggedright Generalized force fixed by the initial receiving positions
 \begin{tabular}[c]{@{}c@{}}$\varepsilon_a$ \\ $\varepsilon_{\mathrm{prep}}$\end{tabular} & {\raggedright Mean initial energy of shifted receiving oscillator $a$; common mean under the stated equal-energy preparation.\par} & {\raggedright $\langle\pi_a(0)^2\rangle=m_a\varepsilon_a$ for uniform phase; $\varepsilon_a=\varepsilon_{\mathrm{prep}}$ in the common-energy case. \newline Equation~\eqref{eq:DMR_force_covariance}.\par} & {\raggedright Preparation-dependent ($\mathrm J$).\par} \\
 
 % ABN-33: F12
-\begin{tabular}[c]{@{}c@{}}$T$ \\ $k_{\mathrm B}$\end{tabular} & {\raggedright Classical receiving-preparation temperature and the Boltzmann energy--temperature conversion factor.\par} & {\raggedright $\varepsilon_{\mathrm{prep}}=k_{\mathrm B}T$ in the thermal specialization. \newline Equation~\eqref{eq:DMR_stationary_preparation}.\par} & {\raggedright $T$: $\mathrm K$; $k_{\mathrm B}$: $\mathrm{J\,K^{-1}}$.\par} \\
+\begin{tabular}[c]{@{}c@{}}$T$ \\ $k_{\mathrm B}$\end{tabular} & {\raggedright Temperature of the specified receiving preparation and the Boltzmann energy--temperature conversion constant. In Appendix AF only, $T$ denotes dwell time instead.\par} & {\raggedright $\varepsilon_{\mathrm{prep}}=k_{\mathrm B}T$ in the thermal specialization. \newline \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.\par} & {\raggedright $T$: $\mathrm K$; $k_{\mathrm B}$: $\mathrm{J\,K^{-1}}$. The AF dwell-time $T$ is in $\mathrm s$.\par} \\
 
 % ABN-34: F09 F10
 \begin{tabular}[c]{@{}c@{}}$\Delta q$ \\ $\Delta\pi_q$\end{tabular} & {\raggedright Standard deviations of the retained mechanical preparation; distinct from the field widths $\sigma_x,\sigma_{p,\mathrm w}$.\par} & {\raggedright Diagonal entries of $\mathsf V$ are $(\Delta q)^2$ and $(\Delta\pi_q)^2$. \newline Equation~\eqref{eq:DMR_covariance_contraction}.\par} & {\raggedright Respectively $\mathrm m$ and $\mathrm{kg\,m\,s^{-1}}$.\par} \\
@@ -583,7 +761,7 @@ $E_{\mathrm{fluc}}$ & {\raggedright Quadratic fluctuation energy of a preparatio
 \bottomrule
 \end{longtable}
 
-\vspace{1cm}
+\newpage
 \section*{VIII. Loaded Receiving Channels and Detector Records}
 
 \vspace{0.5cm}
