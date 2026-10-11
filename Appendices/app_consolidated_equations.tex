@@ -2,678 +2,1231 @@
 \addcontentsline{toc}{chapter}{\protect\numberline{}Consolidated Equations}
 \label{app:consolidated_equations}
 
-This appendix consolidates the complete mathematical derivations and governing equations of Tension Field Theory (TFT), providing a unified reference across the microscopic, macroscopic, and cosmological scales.
+This appendix consolidates the principal governing equations, constitutive relations, and reference evaluations of Tension Field Theory (TFT), following the microscopic, macroscopic, and cosmological organization of the manuscript. Each entry retains the regime of the linked construction; numerical reference values are not additional universal constants. Appendix references are supplied where the construction is available, while the Section column is used only for main-body results. The accompanying \hyperref[app:notation]{Table of Notation and Constants} defines the symbol families.
 
-\section*{Part I: Foundations of the Dual-Phase Vacuum}
-
-\vspace{0.5cm}
-\noindent
-\renewcommand{\arraystretch}{1.6} 
-\begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
-\toprule
-\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
-\midrule
-\endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
-\toprule
-\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
-\midrule
-\endhead
-
-Active Space \newline \textit{Strain-Weighted Path Functional} & $D_\tau(a,b) = \int_a^b \left( 1 + \frac{r_{\mathrm{D}}}{\tau_{\mathrm{S}}} |\nabla\tau(x)| \right) \mathrm{d}x$ & \hyperref[sec:2.2]{2.2} & Postulate II \\
-
-Dynamic Propagation \newline \textit{Speed} & $c_{\mathrm{P}} = \sqrt{\frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{eff}}}}$ & \hyperref[sec:2.2]{2.2} & Postulate IV \\
-
-Energy \newline \textit{Phase Potential} & $E = \tau \cdot V \equiv \hbar \cdot \frac{\partial\varphi}{\partial t}$ & \hyperref[sec:2.3]{2.3} & Definition I \\
-
-Fundamental Force \newline \textit{The Twist} & $F = -\nabla\tau \cdot V \equiv -\nabla\varphi \cdot E$ & \hyperref[sec:2.3]{2.3} & Definition II \\
-
-Inertial Mass \newline \textit{Hydrodynamic Impedance} & $m \propto \rho_{\mathrm{IC}} \cdot V_{\mathrm{eff}} \cdot \sin(\Delta\varphi)$ & \hyperref[sec:2.3]{2.3} & Definition III \\
-
-Wave Strain Identity & $N_{\gamma} = \frac{1}{2\pi} \left(\frac{\lambda}{\ell_{\mathrm{S}}}\right)^2$ & - & \hyperref[app:graviton]{Appendix \ref*{app:graviton}} \\
-
-Matter Strain Identity & $N_{\mathrm{m}} = 2\pi\left(\frac{m_{\mathrm{S}}}{m}\right)^2$ & - & \hyperref[app:graviton]{Appendix \ref*{app:graviton}} \\
-
-Absolute Max \newline \textit{Coherent Energy} & $E_{\mathrm{max}} \approx 8.320 \times 10^{10} \text{ GeV}$ & - & \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}} \\
-
-FCC Node Radius \newline \textit{($r_D$)} & $r_{\mathrm{D}} = \frac{h c_{\mathrm{E}}}{2E_{\mathrm{max}}} \approx 7.450 \times 10^{-27} \text{ m}$ & - & \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}} \\
-
-Kinematic Lattice Index \newline \textit{($N_D$)} & $N_{\mathrm{D}} = \frac{R_{\mathrm{U}}}{2r_{\mathrm{D}}} \approx 8.499 \times 10^{51}$ & \hyperref[sec:3.2]{3.2} & Structural Span \\
-
-Photon Energy-Relaxation Length \newline \textit{($R_U$)} & $R_{\mathrm{U}} = \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}} \approx 1.267 \times 10^{26} \text{ m}$ & \hyperref[sec:3.2]{3.2} & \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} \\
-
-Master Geometric \newline \textit{Scaling Law} & $\rho(r) = \mathcal{F}_i \cdot \rho_{\mathrm{S}} \left(\frac{\ell_{\mathrm{S}}}{r}\right)^4$ & - & \hyperref[app:conservation_action]{Appendix \ref*{app:conservation_action}} \\
-
-Vacuum Geometric \newline \textit{Packing Fraction} & $\beta_{\mathrm{geo}} = \frac{\pi}{3\sqrt{2}} \approx 0.74048$ & \hyperref[sec:6.3]{6.3} & Kepler Conjecture \\
-
-Vibration Amplitude \newline \textit{($r_{\mathrm{amp}}$)} & $r_{\mathrm{amp}} = \frac{m}{K_{\mathrm{D}}}$ & - & \hyperref[app:particle_amplitude]{Appendix \ref*{app:particle_amplitude}} \\
-
-Fundamental Impedance \newline \textit{Constant ($K_{\mathrm{D}}$)} & $K_{\mathrm{D}} = \rho_{\mathrm{IC}} \cdot 4\pi r_{\mathrm{D}}^2$ & - & \hyperref[app:particle_amplitude]{Appendix \ref*{app:particle_amplitude}} \\
-
-Topological Resonance \newline \textit{Frequency ($f_{\mathrm{m}}$)} & $f_{\mathrm{m}} = \frac{c_{\mathrm{E}}}{4r_{\mathrm{D}}} = \frac{1}{2} f_{\mathrm{D}}$ & - & \hyperref[app:particle_amplitude]{Appendix \ref*{app:particle_amplitude}} \\
-
-Interstitial Condensate \newline \textit{Fraction} & $\beta_{\mathrm{IC}} = 1 - \beta_{\mathrm{geo}} \approx 0.25952$ & \hyperref[sec:6.4]{6.4} & Geometric Postulate \\
-
-Microscopic \newline \textit{Velocity Budget} & $c_{\mathrm{E}}^2 = v_{\mathrm{ext}}^2 + v_{\mathrm{int}}^2$ & \hyperref[sec:7.4]{7.4} & Geometric Partition \\
-
-Mechanical \newline \textit{Lorentz Factor} & $\gamma = \frac{c_{\mathrm{E}}}{v_{\mathrm{int}}} = \frac{1}{\sqrt{1 - \frac{v_{\mathrm{ext}}^2}{c_{\mathrm{E}}^2}}}$ & \hyperref[sec:7.5]{7.5} & Kinematic Deriv. \\
-
-Force Transfer \newline \textit{Efficiency} & $F_{\mathrm{eff}} = F_{\mathrm{source}} \cdot \left(\frac{v_{\mathrm{int}}}{c_{\mathrm{E}}}\right) = \frac{F_{\mathrm{source}}}{\gamma}$ & \hyperref[sec:7.6]{7.6} & Impedance Match \\
-
-Quantization of Action \newline \textit{($h$)} & $h = 2\pi \cdot \hat{J} \cdot c_{\mathrm{E}}$ & - & \hyperref[app:conservation_action]{App. \ref*{app:conservation_action}} \& \hyperref[app:fractal_architecture]{\ref*{app:fractal_architecture}} \\
-
-FCC Nearest-Neighbor \newline \textit{Separation} & $d_{\mathrm{nn}} = 2r_{\mathrm{D}}$ & - & \hyperref[app:fcc_microphysics]{Appendix \ref*{app:fcc_microphysics}} \\
-
-FCC Primitive-Cell \newline \textit{Volume} & $V_{\mathrm{p}} = 4\sqrt{2} r_{\mathrm{D}}^3$ & - & \hyperref[app:fcc_microphysics]{Appendix \ref*{app:fcc_microphysics}} \\
-
-Objective Contact-Point \newline \textit{Relative Displacement} & $\Delta\mathbf{u}_{ij}^{\mathrm{c}} = \mathbf{u}_j - \mathbf{u}_i - r_{\mathrm{D}} (\boldsymbol{\vartheta}_i+\boldsymbol{\vartheta}_j) \times \hat{\mathbf{n}}_{ij}$ & - & \hyperref[app:fcc_microphysics]{Appendix \ref*{app:fcc_microphysics}} \\
-
-Baseline Directional \newline \textit{Dispersion Relation} & $\omega^2(k) = \frac{4c_{\mathrm{E}}^2}{d_{\mathrm{nn}}^2} \sin^2\left( \frac{kd_{\mathrm{nn}}}{2} \right)$ & - & \hyperref[app:fcc_microphysics]{Appendix \ref*{app:fcc_microphysics}} \\
-
-FCC Scaffold \newline \textit{Cubic Tensor} & $C_{ijkl}^{(\mathrm{FCC})} = K_{\mathrm{sh}}^{(\mathrm{micro},0)}\left(\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk}\right)$ & - & \hyperref[app:fcc_microphysics]{Appendix \ref*{app:fcc_microphysics}} \\
-
-Microscopic Scaffold \newline \textit{Inertia Normalization} & $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)} = \beta_{\mathrm{geo}}\rho_{\mathrm{D}}$ & - & \hyperref[app:fcc_microphysics]{Appendix \ref*{app:fcc_microphysics}} \\
-
-Microscopic Tangent \newline \textit{Shear Coefficient} & $K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \beta_{\mathrm{geo}}\rho_{\mathrm{D}}c_{\mathrm{E}}^2$ & - & \hyperref[app:fcc_microphysics]{Appendix \ref*{app:fcc_microphysics}} \\
-
-Effective Modal \newline \textit{Contact Area} & $A_{\mathrm{ct}}^{(\mathrm{modal})} = 2\pi\ell_{\mathrm{S}}^2$ & - & \hyperref[app:fcc_microphysics]{Appendix \ref*{app:fcc_microphysics}} \\
-
-Coherent Phase \newline \textit{Incompressibility} & $\mathbf{v}_{\mathrm{rel}} = \dot{\mathbf{w}} - \dot{\mathbf{u}} = \mathbf{0}, \quad \nabla\cdot\mathbf{u} = 0$ & - & \hyperref[app:condensate_impedance]{Appendix \ref*{app:condensate_impedance}} \\
-
-Longitudinal Diagnostic \newline \textit{Acoustic Mode} & $\omega_{\mathrm{L}}^2 = \frac{B_{\mathrm{IC}}+2K_{\mathrm{sh}}^{(0)}}{\rho_{\mathrm{eff}}(\alpha_{\mathrm{G}})}k^2$ & - & \hyperref[app:condensate_impedance]{Appendix \ref*{app:condensate_impedance}} \\
-
-Quasistatic Condensate \newline \textit{Gravitational Preload} & $\overline{p}_{\mathrm{IC}} = \alpha_{\mathrm{G}}\tau_{\mathrm{D,bulk}}$ & - & \hyperref[app:condensate_impedance]{Appendix \ref*{app:condensate_impedance}} \\
-
-Localized Defect \newline \textit{Impedance Projection} & $\iota_{\mathrm{V}}^{(\mathrm{def})} \equiv \frac{A_{\mathrm{imp}}^{(\mathrm{n})}}{V_{\mathrm{imp}}} = \frac{1}{\ell_{\mathrm{imp}}^{(\mathrm{def})}}$ & - & \hyperref[app:condensate_impedance]{Appendix \ref*{app:condensate_impedance}} \\
-
-Mode-Resolved Condensate \newline \textit{Impedance Density} & $\rho_{\mathrm{IC}}^{(\mathrm{imp})} \equiv \mu_{\mathrm{D}}\iota_{\mathrm{V}}^{(\mathrm{def})} = \frac{\mu_{\mathrm{D}}}{\ell_{\mathrm{imp}}^{(\mathrm{def})}}$ & - & \hyperref[app:condensate_impedance]{Appendix \ref*{app:condensate_impedance}} \\
-
-Localized Defect \newline \textit{Added Inertia} & $m_{\mathrm{add}} = \mu_{\mathrm{D}}A_{\mathrm{imp}}^{(\mathrm{n})} = \rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}$ & - & \hyperref[app:condensate_impedance]{Appendix \ref*{app:condensate_impedance}} \\
-
-\bottomrule
-\end{longtable}
-
-\vspace{1cm} % Adds spacing between the tables
-
-\section*{Part II: The Mechanics of Gravity and the Gravitational Field}
-
-\vspace{0.5cm}
-\noindent
+\begingroup
+\setlength{\tabcolsep}{2.8pt}
 \renewcommand{\arraystretch}{1.6}
-\begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
-\toprule
-\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
-\midrule
-\endfirsthead
 
-% This tells longtable what to print at the top if the table breaks to a new page
-\toprule
-\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
-\midrule
-\endhead
-
-Gravitational Constant \newline \textit{($G$)} & $G_i = \mathcal{F}_i \cdot \left( \frac{c_{\mathrm{E}}^2 A_{\mathrm{S}}}{J_i} \right)$ & - & \hyperref[app:fractal_architecture]{Appendix \ref*{app:fractal_architecture}} \\
-
-Gravitational \newline \textit{Tension} & $\tau_{\mathrm{M}} = \frac{G \cdot M \cdot \mu_{\mathrm{D}}}{R}$ & \hyperref[sec:12.3]{12.3} & Field Mechanics \\
-
-Gravitational \newline \textit{Acceleration} & $g = - \left(\frac{1}{\mu_{\mathrm{D}}}\right) \frac{\mathrm{d}\tau_{\mathrm{M}}}{\mathrm{d}R} = -\frac{G \cdot M}{R^2}$ & \hyperref[sec:12.3]{12.3} & Field Mechanics \\
-
-Total Acceleration \newline \textit{Law (Unscreened)} & $g_{\mathrm{obs}}(R) = \Pi(R)g_b(R) + \sqrt{ a_{\mathrm{gal}}\Pi(R)g_b(R) }$ & - & \hyperref[app:cosmic_impedance]{Appendix \ref*{app:cosmic_impedance}} \\
-
-Radial Projection \newline \textit{Operator ($\Pi$)} & $\Pi(r) = 1 \pm \delta \left(\frac{R_{\mathrm{d}}}{r}\right)^n$ & - & \hyperref[app:radial_projection]{Appendix \ref*{app:radial_projection}} \\
-
-Master Acceleration \newline \textit{Equation} & $g_{\mathrm{obs}}(R) = \Pi(R)g_b(R) + \Xi(R) \sqrt{ a_{\mathrm{gal}}\Pi(R)g_b(R) }$ & - & \hyperref[app:cosmic_impedance]{Appendix \ref*{app:cosmic_impedance}} \\
-
-Condensate Relative \newline \textit{Response ($\chi_{\mathrm{g}}$)} & $\chi_{\mathrm{g}}(R) = \sqrt{ \frac{a_{\mathrm{gal}}}{g_{b,\Pi}(R)} }$ & - & \hyperref[app:cosmic_impedance]{Appendix \ref*{app:cosmic_impedance}} \\
-
-Baryonic Tully--Fisher \newline \textit{Relation} & $v_\infty^4 = G a_{\mathrm{gal}} M_b$ & - & \hyperref[app:cosmic_impedance]{Appendix \ref*{app:cosmic_impedance}} \\
-
-Unified Screening \newline \textit{Function ($\Xi(R)$)} & $\Xi(R) = \left[ 1+ \left( \frac{g_{b,\Pi}(R)}{g_*} \right)^{n_1} \right]^{-1} \left[ 1+ \left( \frac{R}{R_{\mathrm{c}}} \right)^{n_2} \right]^{-1}$ & - & \hyperref[app:cosmic_impedance]{Appendix \ref*{app:cosmic_impedance}} \\
-
-Gravitational \newline \textit{Wave Speed} & $c_{\mathrm{GW}} = \sqrt{\frac{\mathcal{T}_{\mathrm{TT}}^{(0)}}{M_{\mathrm{TT}}^{(0)}}} = c_{\mathrm{E}}$ & - & \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} \\
-
-Structural Gravitational \newline \textit{Strain ($\alpha_G$)} & $\alpha_{\mathrm{G}} = \frac{G M}{r c_{\mathrm{E}}^2}$ & \hyperref[sec:13.2]{13.2} & Field Mechanics \\
-
-Density-Based \newline \textit{Strain Coupling} & $\alpha_{\mathrm{G}} = \frac{\rho_{\mathrm{M}}}{\rho_{\mathrm{QG}}}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
-
-Quantum Gravitational \newline \textit{Unification} & $\alpha_{\mathrm{G}} = \frac{G m_{\mathrm{p}}^2}{\hbar c_{\mathrm{E}}}$ & \hyperref[sec:13.2]{13.2} & Geometric Proof \\
-
-Gravitational Saturation \newline \textit{Radius} & $R_{\mathrm{sat}} = \frac{c_{\mathrm{E}}}{\sqrt{\kappa \cdot \rho \cdot G}}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
-
-TFT Field Equation \newline \textit{Strain Formulation} & $\|G_{\mu\nu}\| = \frac{1}{\ell_{\mathrm{S}}^2} - \frac{1}{R^2} = \frac{\kappa \cdot G}{c_{\mathrm{E}}^2}(\rho_{\mathrm{S}} - \rho_{\mathrm{L}})$ & \hyperref[sec:13.4.1]{13.4.1} & Lattice Mechanics \\
-
-TFT Field Equation \newline \textit{Tension Formulation} & $\|G_{\mu\nu}\| = \frac{\kappa \cdot G}{c_{\mathrm{E}}^4}(\tau_{\mathrm{S}} - \tau_{\mathrm{L}})$ & \hyperref[sec:13.4.2]{13.4.2} & Stress Balance \\
-
-TFT Field Equation \newline \textit{Tensor Formulation} & $G_{\mu\nu}^{(\tau)} = \frac{\kappa G}{c_{\mathrm{E}}^4} \Delta T_{\mu\nu}^{(\tau)}$ & - & \hyperref[app:cosmic_energy_continuum_mechanics]{App. \ref*{app:cosmic_energy_continuum_mechanics}} \\
-
-Vacuum Refractive \newline \textit{Index} & $n_\tau(r) = \frac{1}{(1 - \alpha_{\mathrm{G}})^2} \approx 1 + 2\alpha_{\mathrm{G}}$ & - & \hyperref[app:optical_relativity]{Appendix~\ref*{app:optical_relativity}} \\
-
-Surface Time \newline \textit{Dilation} & $T_{\mathrm{surface}} = \frac{T_{\mathrm{vac}}}{1 - \alpha_{\mathrm{G}}}$ & \hyperref[sec:13.5.2]{13.5.2} & Clock Mechanics \\
-
-Variable Speed \newline \textit{of Light} & $c_{\mathrm{P}}(r) = \frac{c_{\mathrm{E}}}{n(r)} \approx c_{\mathrm{E}} (1 - 2\alpha_{\mathrm{G}})$ & - & \hyperref[app:optical_relativity]{Appendix \ref*{app:optical_relativity}} \\
-
-Total Flight Time \newline \textit{(Shapiro Delay)} & $\Delta t \approx \frac{1}{c_{\mathrm{E}}} \int (1 + 2\alpha_{\mathrm{G}}) \, \mathrm{d}l$ & - & \hyperref[app:optical_relativity]{Appendix \ref*{app:optical_relativity}} \\
-
-Total Deflection \newline \textit{Angle} & $\theta_{\mathrm{total}} = \frac{4GM}{b c_{\mathrm{E}}^2} = 4\alpha_{\mathrm{G}}(b)$ & - & \hyperref[app:optical_relativity]{Appendix \ref*{app:optical_relativity}} \\
-
-Work-Conjugate \newline \textit{Coordinate Constraint} & $u_{i} = \mathcal{C}_{i}y_{i}$ & - & \hyperref[app:gravitational_endpoint_transfer]{Appendix \ref*{app:gravitational_endpoint_transfer}} \\
-
-Volumetric \newline \textit{Referred Inertia} & $\rho_{\mathrm{eff}} = \frac{ \rho_{\mathrm{eff}}^{(0)} }{ \mathcal{C}^2 }$ & - & \hyperref[app:gravitational_endpoint_transfer]{Appendix \ref*{app:gravitational_endpoint_transfer}} \\
-
-Bond-Resolved \newline \textit{Propagation Speed} & $c_{\mathrm{P}}^{(i\rightarrow j)} = c_{\mathrm{E}} \left[ \left( 1-\alpha_{\mathrm{G}} \right)^2 - \frac{ \left( \delta\alpha_{\mathrm{G}} \right)^2 }{4} \right]$ & - & \hyperref[app:gravitational_endpoint_transfer]{Appendix \ref*{app:gravitational_endpoint_transfer}} \\
-
-\bottomrule
-\end{longtable}
-
-\section*{Part II (Continued): Weak-Field Orbital Dynamics (Perihelion Precession)}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:one}: Foundations of the Dual-Phase Vacuum}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Radial Strain \newline \textit{Potential} & $\Phi_\tau(r) = - \frac{GM}{r}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+% O001 | source: Trilogy/PartI/01_PartI_Intro.tex
+{\raggedright Active Space \newline \textit{Strain-Weighted Path Functional}\par} & {\raggedright $D_\tau(a,b) = \int_a^b \left( 1 + \frac{r_{\mathrm{D}}}{\tau_{\mathrm{S}}} |\nabla\tau(x)| \right) \mathrm{d}x$\par} & \hyperref[sec:2.2]{\ref*{sec:2.2}} & {\raggedright Main-body construction\par} \\
 
-Tangential \newline \textit{Loading Factor} & $q_{\mathrm{orb}} = \frac{v_\perp^2}{c_{\mathrm{E}}^2}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+% A001 | source: Trilogy/PartI/01_PartI_Intro.tex
+{\raggedright Phase-Generated Coordinate Length \newline \textit{Nonzero phase gradient}\par} & {\raggedright $x_\varphi=\Delta\varphi/|\nabla\varphi|$\par} & \hyperref[sec:2.2]{\ref*{sec:2.2}} & {\raggedright Main-body construction\par} \\
 
-Specific Orbital \newline \textit{Strain Coupling} & $\Phi_{\mathrm{orb}} = \Phi_\tau \left( \frac{v_\perp^2}{c_{\mathrm{E}}^2} \right)$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+% O002 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Dynamic Propagation \newline \textit{Speed}\par} & {\raggedright $c_{\mathrm{P}} = \sqrt{\frac{\tau_{\mathrm{D}}}{\mu_{\mathrm{eff}}}}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
 
-Reduced Orbital \newline \textit{Strain Potential} & $\Phi_{\mathrm{orb}}^{(\mathrm{red})} = - \frac{GM\ell_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2r^3}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+% O003 | source: Trilogy/PartI/01_PartI_Intro.tex
+{\raggedright Integrated Tension Energy\par} & {\raggedright $\begin{gathered}[t]E=\int_{\mathcal V}\tau(\mathbf x,t)\,\mathrm dV \\ E=\tau V\quad\text{(uniform state)}\end{gathered}$\par} & \hyperref[sec:2.3]{\ref*{sec:2.3}} & {\raggedright Main-body construction\par} \\
 
-Bound-Orbit \newline \textit{Acceleration Correction} & $g_{\mathrm{orb}} = 3g_{\mathrm{b}} \frac{v_\perp^2}{c_{\mathrm{E}}^2}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+% A002 | source: Trilogy/PartI/01_PartI_Intro.tex
+{\raggedright Coherent Eigenmode Energy \newline \textit{\hyperref[def:definition_one]{Definition~I} temporal phase convention}\par} & {\raggedright $E=\hbar\,\partial_t\varphi$\par} & \hyperref[sec:2.3]{\ref*{sec:2.3}} & {\raggedright Main-body construction\par} \\
 
-TFT Post-Newtonian \newline \textit{Orbital Equation} & $\frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2} + u = \frac{GM}{\ell_{\mathrm{orb}}^2} + \frac{3GM}{c_{\mathrm{E}}^2}u^2$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+% O004 | source: Trilogy/PartI/01_PartI_Intro.tex
+{\raggedright Restorative Force \newline \textit{Potential and phase chain rule}\par} & {\raggedright $\begin{gathered}[t]\mathbf F=-\nabla U \\ \mathbf F_\varphi=-\frac{\partial U}{\partial\varphi}\nabla\varphi\end{gathered}$\par} & \hyperref[sec:2.3]{\ref*{sec:2.3}} & {\raggedright Main-body construction\par} \\
 
-Perihelion \newline \textit{Advance} & $\Delta\varphi = \frac{6\pi GM}{a(1-e^2)c_{\mathrm{E}}^2}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+% O005 | source: Appendices/app_condensate_impedance.tex
+{\raggedright Topological Loading and Inertial Mass\par} & {\raggedright $\begin{gathered}[t]m_i=M_{\mathrm{top}} \\ =\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}f_\varphi(\Delta\varphi)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}\par} \\
 
-Total Bound-Orbit \newline \textit{Acceleration} & $g_{\mathrm{bound}} = g_{\mathrm{env}} + g_{\mathrm{orb}}$ & - & \hyperref[app:perihelion_orbital_strain]{App. \ref*{app:perihelion_orbital_strain}} \\
+% A003 | source: Appendices/app_condensate_impedance.tex; Appendices/app_particle_amplitude.tex
+{\raggedright Thin-Layer Defect Loading \newline \textit{$r_{\mathrm{amp}}\ll r_{\mathrm D}$}\par} & {\raggedright $\begin{gathered}[t]m_i=K_{\mathrm D}^{(\mathrm{def})}r_{\mathrm{amp}}f_\varphi(\Delta\varphi) \\ \times[1+O(r_{\mathrm{amp}}/r_{\mathrm D})]\end{gathered}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}} \newline \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}\par} \\
+
+% A004 | source: Appendices/app_condensate_impedance.tex
+{\raggedright Mode-Resolved Loading Coefficient\par} & {\raggedright $\begin{gathered}[t]K_{\mathrm D}^{(\mathrm{def})} \\ =4\pi r_{\mathrm D}^2\mu_{\mathrm D}\iota_{\mathrm V}^{(\mathrm{def})}\mathcal G_{\mathrm{imp}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}\par} \\
+
+% O006 | source: Appendices/app_graviton.tex
+{\raggedright Wave Strain Identity\par} & {\raggedright $N_{\gamma} = \frac{1}{2\pi} \left(\frac{\lambda}{\ell_{\mathrm{S}}}\right)^2$\par} & -- & {\raggedright \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}\par} \\
+
+% O007 | source: Appendices/app_graviton.tex
+{\raggedright Matter Strain Identity\par} & {\raggedright $N_{\mathrm m}=2\pi(m_{\mathrm S}/m_i)^2$\par} & -- & {\raggedright \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}\par} \\
+
+% O008 | source: Appendices/app_vacuum_scale_strain_unification.tex
+{\raggedright Maximum Coherent Energy \newline \textit{Calibrated structural cutoff}\par} & {\raggedright $\begin{gathered}[t]E_{\max}=\frac{hc_{\mathrm E}}{2r_{\mathrm D}} \\ \approx8.3203\times10^{10}\,\mathrm{GeV}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}}\par} \\
+
+% O009 | source: Appendices/app_vacuum_scale_strain_unification.tex
+{\raggedright FCC Node Radius \newline \textit{Empirical VEV matching}\par} & {\raggedright $r_{\mathrm D}\approx7.4504\times10^{-27}\,\mathrm m$\par} & -- & {\raggedright \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}}\par} \\
+
+% O010 | source: Appendices/app_vacuum_scale_strain_unification.tex
+{\raggedright Kinematic Lattice Index \newline \textit{Observational reference length}\par} & {\raggedright $\begin{gathered}[t]N_{\mathrm D}=R_{\mathrm U}/(2r_{\mathrm D}) \\ \approx8.4995\times10^{51}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}}\par} \\
+
+% O011 | source: Appendices/app_vacuumdamping_cosmicredshift.tex
+{\raggedright Photon Energy-Relaxation Length \newline \textit{Observed low-redshift reference}\par} & {\raggedright $\begin{gathered}[t]R_{\mathrm U}=c_{\mathrm E}/\Gamma_{\mathrm D} \\ \approx1.2665\times10^{26}\,\mathrm m\end{gathered}$\par} & -- & {\raggedright \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}\par} \\
+
+% O012 | source: Appendices/app_conservation_action.tex
+{\raggedright Master Geometric \newline \textit{Scaling Law}\par} & {\raggedright $\rho(r) = \mathcal{F}_i \cdot \rho_{\mathrm{S}} \left(\frac{\ell_{\mathrm{S}}}{r}\right)^4$\par} & -- & {\raggedright \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}}\par} \\
+
+% O013 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Vacuum Geometric \newline \textit{Packing Fraction}\par} & {\raggedright $\beta_{\mathrm{geo}} = \frac{\pi}{3\sqrt{2}} \approx 0.74048$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
+
+% O014 | source: Appendices/app_particle_amplitude.tex
+{\raggedright Vibration Amplitude \newline \textit{Unit-phase thin-layer calibration}\par} & {\raggedright $r_{\mathrm{amp}}\simeq m_i/K_{\mathrm D}$\par} & -- & {\raggedright \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}\par} \\
+
+% O015 | source: Appendices/app_particle_amplitude.tex
+{\raggedright Fundamental Impedance Constant \newline \textit{Historical empirical projection}\par} & {\raggedright $\begin{gathered}[t]K_{\mathrm D}=4\pi r_{\mathrm D}^2\rho_{\mathrm{IC}}^{(\mathrm{emp})} \\ \approx126.07\,\mathrm{kg\,m^{-1}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}\par} \\
+
+% A005 | source: Appendices/app_condensate_impedance.tex; Appendices/app_vacuum_scale_strain_unification.tex
+{\raggedright Empirical Impedance Projection \newline \textit{Calibration, not intrinsic density}\par} & {\raggedright $\begin{gathered}[t]\rho_{\mathrm{IC}}^{(\mathrm{emp})}=\mu_{\mathrm D}\iota_{\mathrm V}^{(\mathrm{emp})} \\ \iota_{\mathrm V}^{(\mathrm{emp})}=1\,\mathrm{m^{-1}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}} \newline \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}}\par} \\
+
+% O016 | source: Appendices/app_particle_amplitude.tex
+{\raggedright Topological Resonance Frequency \newline \textit{Reduced radial-transit ansatz}\par} & {\raggedright $f_{\mathrm{m}} = \frac{c_{\mathrm{E}}}{4r_{\mathrm{D}}} = \frac{1}{2} f_{\mathrm{D}}$\par} & -- & {\raggedright \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}\par} \\
+
+% A006 | source: Appendices/app_particle_amplitude.tex
+{\raggedright Rest-Energy Clock Period \newline \textit{One completed rest-state cycle}\par} & {\raggedright $E_0=m_i c_{\mathrm E}^2,\qquad t_{\mathrm p}=h/E_0$\par} & -- & {\raggedright \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}\par} \\
+
+% O017 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Interstitial Condensate \newline \textit{Fraction}\par} & {\raggedright $\beta_{\mathrm{IC}} = 1 - \beta_{\mathrm{geo}} \approx 0.25952$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
+
+% O018 | source: Appendices/app_time_dilation.tex
+{\raggedright Microscopic \newline \textit{Velocity Budget}\par} & {\raggedright $c_{\mathrm{E}}^2 = v_{\mathrm{ext}}^2 + v_{\mathrm{int}}^2$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O019 | source: Appendices/app_time_dilation.tex
+{\raggedright Mechanical \newline \textit{Lorentz Factor}\par} & {\raggedright $\gamma = \frac{c_{\mathrm{E}}}{v_{\mathrm{int}}} = \frac{1}{\sqrt{1 - \frac{v_{\mathrm{ext}}^2}{c_{\mathrm{E}}^2}}}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O020 | source: Trilogy/PartI/02_PartI_Core.tex
+{\raggedright Force Transfer \newline \textit{Efficiency}\par} & {\raggedright $\begin{gathered}[t]F_{\mathrm{eff}}=F_{\mathrm E}\frac{v_{\mathrm{int}}}{c_{\mathrm E}} \\ =F_{\mathrm E}/\gamma\end{gathered}$\par} & \hyperref[sec:force_effeciency]{\ref*{sec:force_effeciency}} & {\raggedright Main-body construction\par} \\
+
+% O021 | source: Appendices/app_conservation_action.tex; Appendices/app_fractal_architecture.tex
+{\raggedright Quantization of Action \newline \textit{($h$)}\par} & {\raggedright $h = 2\pi \cdot \hat{J} \cdot c_{\mathrm{E}}$\par} & -- & {\raggedright \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}} \newline \hyperref[app:fractal_architecture]{Appendix~\ref*{app:fractal_architecture}}\par} \\
+
+% A007 | source: Appendices/app_conservation_action.tex
+{\raggedright Topology-Normalized Mass Moment\par} & {\raggedright $\begin{gathered}[t]\widehat J=J_i/\mathcal F_i \\ =\rho_{\mathrm S}\ell_{\mathrm S}^4=\hbar/c_{\mathrm E}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}}\par} \\
+
+% A008 | source: Appendices/app_substrate_units.tex
+{\raggedright Substrate Length, Mass, and Time \newline \textit{Empirically normalized unit system}\par} & {\raggedright $\begin{gathered}[t]\ell_{\mathrm S}=\sqrt{\hbar G/c_{\mathrm E}^3} \\ m_{\mathrm S}=\sqrt{\hbar c_{\mathrm E}/G} \\ t_{\mathrm S}=\ell_{\mathrm S}/c_{\mathrm E}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:substrate_units]{Appendix~\ref*{app:substrate_units}}\par} \\
+
+% A009 | source: Appendices/app_substrate_units.tex
+{\raggedright Substrate Force and Stress Capacity \newline \textit{Finite yield scales}\par} & {\raggedright $\begin{gathered}[t]F_{\mathrm S}=c_{\mathrm E}^4/G \\ \tau_{\mathrm S}=F_{\mathrm S}/\ell_{\mathrm S}^2 \\ E_{\mathrm S}=F_{\mathrm S}\ell_{\mathrm S}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:substrate_units]{Appendix~\ref*{app:substrate_units}}\par} \\
+
+% A010 | source: Appendices/app_fcc_constants.tex
+{\raggedright Integrated Nodal Action Scale\par} & {\raggedright $\begin{gathered}[t]M_{\mathrm D}=\frac{4\pi}{3}\rho_{\mathrm D}r_{\mathrm D}^3 \\ M_{\mathrm D}c_{\mathrm E}r_{\mathrm D}=h\end{gathered}$\par} & -- & {\raggedright \hyperref[app:fcc_constants]{Appendix~\ref*{app:fcc_constants}}\par} \\
+
+% A011 | source: Appendices/app_fcc_constants.tex
+{\raggedright Surface and Bulk Tension Scales\par} & {\raggedright $\begin{gathered}[t]\tau_{\mathrm D}=\frac{c_{\mathrm E}^4}{Gr_{\mathrm D}}\quad(\mathrm{N/m}) \\ \tau_{\mathrm{D,bulk}}=\frac{\tau_{\mathrm D}}{r_{\mathrm D}}\quad(\mathrm{Pa}) \\ \mu_{\mathrm D}=\frac{c_{\mathrm E}^2}{Gr_{\mathrm D}}\quad(\mathrm{kg/m^2})\end{gathered}$\par} & -- & {\raggedright \hyperref[app:fcc_constants]{Appendix~\ref*{app:fcc_constants}}\par} \\
+
+% O022 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright FCC Nearest-Neighbor \newline \textit{Separation}\par} & {\raggedright $d_{\mathrm{nn}} = 2r_{\mathrm{D}}$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% O023 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright FCC Primitive-Cell \newline \textit{Volume}\par} & {\raggedright $V_{\mathrm{p}} = 4\sqrt{2} r_{\mathrm{D}}^3$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% O024 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright Objective Contact-Point \newline \textit{Relative Displacement}\par} & {\raggedright $\begin{gathered}[t]\Delta\mathbf u_{ij}^{\mathrm c}=\mathbf u_j-\mathbf u_i \\ {}-r_{\mathrm D}(\boldsymbol\vartheta_i+\boldsymbol\vartheta_j) \\ {}\times\widehat{\mathbf n}_{ij}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% A012 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright Long-Wavelength Contact Isotropy \newline \textit{Constitutive condition, not packing alone}\par} & {\raggedright $\kappa_n=\kappa_t\equiv\kappa_c$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% O025 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright Baseline Directional Dispersion Relation \newline \textit{Directional baseline, not full photon completion}\par} & {\raggedright $\omega^2(k) = \frac{4c_{\mathrm{E}}^2}{d_{\mathrm{nn}}^2} \sin^2\left( \frac{kd_{\mathrm{nn}}}{2} \right)$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% O026 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright FCC Scaffold Elastic Tensor \newline \textit{Isotropic contact specialization}\par} & {\raggedright $\begin{gathered}[t]C_{ijkl}^{(\mathrm{FCC})} \\ =K_{\mathrm{sh}}^{(\mathrm{micro},0)} \\ \times(\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk})\end{gathered}$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% O027 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright Microscopic Scaffold \newline \textit{Inertia Normalization}\par} & {\raggedright $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)} = \beta_{\mathrm{geo}}\rho_{\mathrm{D}}$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% O028 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright Microscopic Tangent \newline \textit{Shear Coefficient}\par} & {\raggedright $K_{\mathrm{sh}}^{(\mathrm{micro},0)} = \beta_{\mathrm{geo}}\rho_{\mathrm{D}}c_{\mathrm{E}}^2$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% O029 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright Effective Modal \newline \textit{Contact Area}\par} & {\raggedright $A_{\mathrm{ct}}^{(\mathrm{modal})} = 2\pi\ell_{\mathrm{S}}^2$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% A013 | source: Appendices/app_fcc_microphysics.tex
+{\raggedright Contact/Nodal Inertia Normalization \newline \textit{One participating inertia; not one per bond}\par} & {\raggedright $M_{\mathrm D}=\mu_{\mathrm D}A_{\mathrm{ct}}^{(\mathrm{modal})}$\par} & -- & {\raggedright \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}\par} \\
+
+% O030 | source: Appendices/app_condensate_impedance.tex
+{\raggedright Coherent Phase Incompressibility \newline \textit{Conservative coherent branch}\par} & {\raggedright $\begin{gathered}[t]\mathbf v_{\mathrm{rel}}=\dot{\mathbf w}-\dot{\mathbf u}=\mathbf0 \\ \nabla\!\cdot\mathbf u=0\end{gathered}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}\par} \\
+
+% O031 | source: Appendices/app_condensate_impedance.tex
+{\raggedright Longitudinal Diagnostic Acoustic Mode \newline \textit{Finite-penalty diagnostic only}\par} & {\raggedright $\omega_{\mathrm L}^2=\frac{B_{\mathrm{IC}}+2K_{\mathrm{sh}}^{(0)}}{\rho_{\mathrm{eff}}(\alpha_{\mathrm G})}k^2$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}\par} \\
+
+% O032 | source: Appendices/app_condensate_impedance.tex
+{\raggedright Quasistatic Condensate Gravitational Preload \newline \textit{Quasistatic background; not wave modulus}\par} & {\raggedright $\overline{p}_{\mathrm{IC}} = \alpha_{\mathrm{G}}\tau_{\mathrm{D,bulk}}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}\par} \\
+
+% O033 | source: Appendices/app_condensate_impedance.tex
+{\raggedright Localized Defect \newline \textit{Impedance Projection}\par} & {\raggedright $\begin{gathered}[t]\iota_{\mathrm V}^{(\mathrm{def})} \\ \equiv\frac{A_{\mathrm{imp}}^{(n)}}{V_{\mathrm{imp}}}=\frac1{\ell_{\mathrm{imp}}^{(\mathrm{def})}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}\par} \\
+
+% O034 | source: Appendices/app_condensate_impedance.tex
+{\raggedright Mode-Resolved Condensate \newline \textit{Impedance Density}\par} & {\raggedright $\begin{gathered}[t]\rho_{\mathrm{IC}}^{(\mathrm{imp})}=\mu_{\mathrm D}\iota_{\mathrm V}^{(\mathrm{def})} \\ =\frac{\mu_{\mathrm D}}{\ell_{\mathrm{imp}}^{(\mathrm{def})}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}\par} \\
+
+% O035 | source: Appendices/app_condensate_impedance.tex
+{\raggedright Localized Defect Added Inertia \newline \textit{Same normalized boundary mode}\par} & {\raggedright $\begin{gathered}[t]m_{\mathrm{add}}=\mu_{\mathrm D}A_{\mathrm{imp}}^{(n)} \\ =\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}\par} \\
+
+% A014 | source: Appendices/app_condensate_impedance.tex
+{\raggedright Mode-Weighted Normal Contact Area \newline \textit{Dimensionless boundary mode}\par} & {\raggedright $\begin{gathered}[t]A_{\mathrm{imp}}^{(n)} \\ =\int_{\partial\Omega_{\mathrm{def}}}|\mathbf b_\partial\!\cdot\widehat{\mathbf n}|^2\,\mathrm dA\end{gathered}$\par} & -- & {\raggedright \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}\par} \\
 
 \bottomrule
 \end{longtable}
 
-\newpage
-
-\section*{Part II (Continued): Microphysics of Black Holes and Gravitational Saturation}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two}: The Mechanics of Gravity and the Gravitational Field}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Soft Floor \newline \textit{Ignition Mass} & $M_{\mathrm{D,G}} = \frac{c_{\mathrm{E}}^2 \cdot r_{\mathrm{D}}}{G} \approx 10.033 \text{ kg}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+% O036 | source: Appendices/app_fractal_architecture.tex
+{\raggedright Gravitational Constant \newline \textit{($G$)}\par} & {\raggedright $\begin{gathered}[t]G_i=\frac{\mathcal F_i c_{\mathrm E}^2A_{\mathrm S}}{J_i} \\ =\frac{c_{\mathrm E}^2A_{\mathrm S}}{\widehat J}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:fractal_architecture]{Appendix~\ref*{app:fractal_architecture}}\par} \\
 
-Vacuum Stability \newline \textit{Margin} & $\frac{E_{\mathrm{struc}}}{E_{\mathrm{vib}}} \approx \frac{\rho_{\mathrm{G}}}{\rho_{\mathrm{D}}} \approx 10^{17}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+% O037 | source: Trilogy/PartII/04_Foundations_Gravity.tex
+{\raggedright Signed Surface-Tension Potential \newline \textit{Zero at infinity; N/m}\par} & {\raggedright $\begin{gathered}[t]\tau_{\mathrm M}(R)=\mu_{\mathrm D}\Phi_\tau(R) \\ =-\frac{GM\mu_{\mathrm D}}R\end{gathered}$\par} & \hyperref[chap:restorative_gravity]{Ch.~\ref*{chap:restorative_gravity}} & {\raggedright Main-body construction\par} \\
 
-Isoenergetic \newline \textit{Continuity} & $E_{\mathrm{QG}} = E_{\mathrm{S}} = E_{\mathrm{P}} = \sqrt{\frac{\hbar c_{\mathrm{E}}^5}{G}}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+% O038 | source: Trilogy/PartII/04_Foundations_Gravity.tex
+{\raggedright Restorative Acceleration \newline \textit{Exterior spherical source}\par} & {\raggedright $\begin{gathered}[t]\mathbf g=-\mu_{\mathrm D}^{-1}\nabla\tau_{\mathrm M} \\ =-\nabla\Phi_\tau=-\frac{GM}{R^2}\widehat{\mathbf r}\end{gathered}$\par} & \hyperref[chap:restorative_gravity]{Ch.~\ref*{chap:restorative_gravity}} & {\raggedright Main-body construction\par} \\
 
-Effective Causal \newline \textit{Inertia} & $\mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{(1 - \alpha_{\mathrm{G}})^4}$ & \hyperref[sec:14.8]{14.8} & Lattice Mechanics \\
+% O039 | source: Appendices/app_cosmic_impedance.tex
+{\raggedright Total Acceleration Law (Unscreened) \newline \textit{Unscreened condensate response}\par} & {\raggedright $\begin{gathered}[t]g_{\mathrm{obs}}=g_{b,\Pi}+\sqrt{a_{\mathrm{gal}}g_{b,\Pi}} \\ g_{b,\Pi}=\Pi g_b\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}\par} \\
 
-Causal Propagation \newline \textit{Speed} & $c_{\mathrm{P}} = c_{\mathrm{E}} \sqrt{\frac{\mu_{\mathrm{D}}}{\mu_{\mathrm{eff}}}}$ & \hyperref[sec:14.8]{14.8} & Kinematics \\
+% O040 | source: Appendices/app_radial_projection.tex
+{\raggedright Radial Transmission Factor \newline \textit{Far-field anisotropy ansatz}\par} & {\raggedright $\begin{gathered}[t]\Pi(R)\approx1\pm\delta(R_{\mathrm d}/R)^n \\ R\gg R_{\mathrm d}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:radial_projection]{Appendix~\ref*{app:radial_projection}}\par} \\
 
-Lattice Energy \newline \textit{Dissipation} & $\frac{\mathrm{d}E}{\mathrm{d}t} = -\Gamma_{\mathrm{D}} \cdot E$ & - & \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}} \\
+% O041 | source: Appendices/app_cosmic_impedance.tex
+{\raggedright Master Acceleration Equation \newline \textit{Screened environmental closure}\par} & {\raggedright $\begin{gathered}[t]g_{\mathrm{obs}}=g_{b,\Pi} \\ {}+\Xi\sqrt{a_{\mathrm{gal}}g_{b,\Pi}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}\par} \\
 
-Photon Energy \newline \textit{Relaxation Shift} & $c_{\mathrm{E}} \cdot z = \Gamma_{\mathrm{D}} \cdot r$ & - & \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}} \\
+% O042 | source: Appendices/app_cosmic_impedance.tex
+{\raggedright Condensate Relative Response \newline \textit{Deep-response closure}\par} & {\raggedright $\chi_{\mathrm{g}}(R) = \sqrt{ \frac{a_{\mathrm{gal}}}{g_{b,\Pi}(R)} }$\par} & -- & {\raggedright \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}\par} \\
 
-Coherent-Photon Energy-Relaxation Rate \newline \textit{*General Physical Rate*} & $\Gamma_{\mathrm D}(q)=\Gamma_{\mathrm D}^{(0)}F_{\mathrm R}(q)$ & - & \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} \\
+% O043 | source: Appendices/app_cosmic_impedance.tex
+{\raggedright Baryonic Tully--Fisher Relation \newline \textit{Isolated unscreened asymptote}\par} & {\raggedright $v_\infty^4 = G a_{\mathrm{gal}} M_b$\par} & -- & {\raggedright \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}\par} \\
 
-Coherent-Photon Energy-Relaxation Rate \newline \textit{*Unit-Reference Scale*} & $\Gamma_{\mathrm D}^{(0)}\simeq 2.3591\times10^{-18}\ \mathrm{s}^{-1}$ & - & \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} \\
+% O044 | source: Appendices/app_cosmic_impedance.tex
+{\raggedright Unified Screening Function \newline \textit{Constitutive screening ansatz}\par} & {\raggedright $\begin{gathered}[t]\Xi(R)=\left[1+(g_{b,\Pi}/g_*)^{n_1}\right]^{-1} \\ \times\left[1+(R/R_{\mathrm c})^{n_2}\right]^{-1}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}\par} \\
 
-Coherent-Photon Energy-Relaxation Rate \newline \textit{*Present Calibrated Scale*} & $\Gamma_{\mathrm D}^{(\mathrm{cal})}\equiv H_0^{(\mathrm{obs})}\simeq 2.3671\times10^{-18}\ \mathrm{s}^{-1}$ & - & \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} \\
+% O045 | source: Appendices/app_kinematic_shear.tex
+{\raggedright Gravitational Wave Speed \newline \textit{Unstrained collective normalization}\par} & {\raggedright $c_{\mathrm{GW}}^2=\frac{\mathcal T_{\mathrm{TT}}^{(0)}}{M_{\mathrm{TT}}^{(0)}}=c_{\mathrm E}^2$\par} & -- & {\raggedright \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}\par} \\
 
-Universal Closure \newline \textit{Mass ($M_{\mathrm{Sat}}$)} & $M_{\mathrm{Sat}} = \frac{c_{\mathrm{E}}^3}{G \Gamma_{\mathrm{D}}}$ & \hyperref[sec:15.2]{15.2} & Kinematic Limits \\
+% O046 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Structural Gravitational Strain \newline \textit{Spherical loading}\par} & {\raggedright $\alpha_{\mathrm G}=\frac{\tau_{\mathrm L}}{\tau_{\mathrm D}}=\frac{GM}{rc_{\mathrm E}^2}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
 
-Cosmic Reservoir \newline \textit{Radius ($R_{\mathrm{Res}}$)} & $R_{\mathrm{Res}} = R_{\mathrm{U}} \cdot (10^{26})^{1/3} \sim 10^{35} \text{ m}$ & \hyperref[sec:15.3.1]{15.3.1} & Volumetric Scaling \\
+% O047 | source: Trilogy/PartII/05_GravitationalField.tex
+{\raggedright Remaining Volumetric Capacity \newline \textit{Same convergence normalization}\par} & {\raggedright $\rho_{\mathrm{rem}}=\rho_{\mathrm{QG}}-\rho_{\mathrm L}$\par} & \hyperref[chap:gravitational_field]{Ch.~\ref*{chap:gravitational_field}} & {\raggedright Main-body construction\par} \\
 
-Interior Growth Law \newline \textit{Node Rate} & $\frac{\mathrm{d}N}{\mathrm{d}t} = \frac{\eta_{\mathrm{N}} P_{\mathrm{in}} - L_{\mathrm{out}}}{E_{\mathrm{S}}}$ & \hyperref[sec:15.4.1]{15.4.1} & Phase Transition \\
+% O048 | source: Trilogy/PartII/04_Foundations_Gravity.tex
+{\raggedright Quantum Gravitational Coupling \newline \textit{Reduced-Compton evaluation}\par} & {\raggedright $\begin{gathered}[t]\alpha_{\mathrm G}=\frac{Gm_{\mathrm p}^2}{\hbar c_{\mathrm E}} \\ r=\frac{\hbar}{m_{\mathrm p}c_{\mathrm E}}\end{gathered}$\par} & \hyperref[sec:gravitational_coupling_alpha]{\ref*{sec:gravitational_coupling_alpha}} & {\raggedright Main-body construction\par} \\
 
-Horizon Surface \newline \textit{Tension} & $\tau_{\mathrm{QG}} = \left(\frac{c_{\mathrm{E}}^2}{4\pi G R_{\mathrm{QG}}}\right) g_{\mathrm{QG}}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+% O049 | source: Trilogy/PartII/05_GravitationalField.tex
+{\raggedright Gravitational Saturation Radius \newline \textit{Uniform geometry: $M=\kappa\rho R^3$}\par} & {\raggedright $R_{\mathrm{sat}}=\frac{c_{\mathrm E}}{\sqrt{\kappa\rho G}}$\par} & \hyperref[chap:gravitational_field]{Ch.~\ref*{chap:gravitational_field}} & {\raggedright Main-body construction\par} \\
 
-Event Horizon \newline \textit{Surface Gravity} & $g_{\mathrm{QG}} = \frac{c_{\mathrm{E}}^4}{GM}$ & \hyperref[sec:15.5]{15.5} & Macroscopic Limit \\
+% O050 | source: Trilogy/PartII/05_GravitationalField.tex
+{\raggedright Scalar Capacity Difference \newline \textit{Not an induced Einstein-tensor norm}\par} & {\raggedright $\begin{gathered}[t]\frac1{R_{\mathrm{QG}}^2}-\frac1{R_{\mathrm L}^2} \\ =\frac{\kappa G}{c_{\mathrm E}^2}(\rho_{\mathrm{QG}}-\rho_{\mathrm L})\end{gathered}$\par} & \hyperref[chap:gravitational_field]{Ch.~\ref*{chap:gravitational_field}} & {\raggedright Main-body construction\par} \\
 
-Quantum Saturation \newline \textit{Density ($\rho_{\mathrm{Q}}$)} & $\rho_{\mathrm{Q}} = \frac{\hbar}{c_{\mathrm{E}} r^4}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+% O051 | source: Trilogy/PartII/05_GravitationalField.tex
+{\raggedright Volumetric Tension-Capacity Balance \newline \textit{Local convergence sector}\par} & {\raggedright $\begin{gathered}[t]\tau_{\mathrm{rem}}=\tau_{\mathrm{QG}}-\tau_{\mathrm L} \\ \frac1{R_{\mathrm{QG}}^2}-\frac1{R_{\mathrm L}^2}=\frac{\kappa G}{c_{\mathrm E}^4}\tau_{\mathrm{rem}}\end{gathered}$\par} & \hyperref[chap:gravitational_field]{Ch.~\ref*{chap:gravitational_field}} & {\raggedright Main-body construction\par} \\
 
-Gravitational Yield \newline \textit{Density ($\rho_{\mathrm{G}}$)} & $\rho_{\mathrm{G}} = \frac{c_{\mathrm{E}}^2}{G r^2}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+% O052 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright TFT Field Equation Tensor Formulation \newline \textit{Converted-capacity tensor projection}\par} & {\raggedright $G_{\mu\nu}^{(\tau)} = \frac{\kappa G}{c_{\mathrm{E}}^4} \Delta T_{\mu\nu}^{(\tau)}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
 
-Convergence Phase \newline \textit{Density ($\rho_{\mathrm{QG}}$)} & $\rho_{\mathrm{QG}} = \sqrt{\rho_{\mathrm{Q}} \cdot \rho_{\mathrm{G}}}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+% A015 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Converted-Capacity Decomposition \newline \textit{Localized defect already includes its added inertia}\par} & {\raggedright $\begin{gathered}[t]\Delta T_{\mu\nu}^{(\tau)}=T_{\mu\nu}^{(b)} \\ {}+\delta T_{\mu\nu}^{(\mathrm{IC})}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
 
-Master Phase Radius \newline \textit{Equation} & $r(\rho) = \ell_{\mathrm{S}} \cdot \left(1.5 \frac{\rho_{\mathrm{S}}}{\rho}\right)^{1/4}$ & - & \hyperref[app:phase_transition]{Appendix \ref*{app:phase_transition}} \\
+% A016 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Dynamical Stress-Energy Conservation \newline \textit{Completed coupled on-shell tensor}\par} & {\raggedright $\nabla_\mu^{(\tau)}T_{\mathrm{TFT}}^{\mu\nu}=0$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
+
+% O053 | source: Appendices/app_optical_relativity.tex
+{\raggedright Vacuum Refractive Index \newline \textit{Active branch; weak-field expansion}\par} & {\raggedright $\begin{gathered}[t]n_\tau=(1-\alpha_{\mathrm G})^{-2} \\ =1+2\alpha_{\mathrm G}+O(\alpha_{\mathrm G}^2)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:optical_relativity]{Appendix~\ref*{app:optical_relativity}}\par} \\
+
+% A017 | source: Appendices/app_optical_relativity.tex; Appendices/app_time_dilation.tex
+{\raggedright Optical Path and Ray Condition \newline \textit{Stationary long-wave optical branch}\par} & {\raggedright $\begin{gathered}[t]D_\tau[\mathcal P]=\int_{\mathcal P}n_\tau\,\mathrm d\ell \\ \delta\!\int_{\mathcal P}n_\tau\,\mathrm d\ell=0\end{gathered}$\par} & -- & {\raggedright \hyperref[app:optical_relativity]{Appendix~\ref*{app:optical_relativity}} \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O054 | source: Appendices/app_time_dilation.tex
+{\raggedright Static Gravitational Clock \newline \textit{Specified reference clock}\par} & {\raggedright $\mathrm dt_{\mathrm p}=(1-\alpha_{\mathrm G})\,\mathrm dt$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O055 | source: Appendices/app_gravitational_endpoint_transfer.tex; Appendices/app_optical_relativity.tex
+{\raggedright Variable Speed of Light \newline \textit{Locally uniform; weak-field limit}\par} & {\raggedright $\begin{gathered}[t]c_{\mathrm P}=c_{\mathrm E}(1-\alpha_{\mathrm G})^2 \\ \simeq c_{\mathrm E}(1-2\alpha_{\mathrm G})\end{gathered}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}} \newline \hyperref[app:optical_relativity]{Appendix~\ref*{app:optical_relativity}}\par} \\
+
+% O056 | source: Appendices/app_optical_relativity.tex; Appendices/app_time_dilation.tex
+{\raggedright Optical Travel Time \newline \textit{Includes baseline flight time}\par} & {\raggedright $\begin{gathered}[t]\Delta t_{\mathrm{prop}}=\frac1{c_{\mathrm E}}\int n_\tau\,\mathrm d\ell \\ \simeq\frac1{c_{\mathrm E}}\int(1+2\alpha_{\mathrm G})\,\mathrm d\ell\end{gathered}$\par} & -- & {\raggedright \hyperref[app:optical_relativity]{Appendix~\ref*{app:optical_relativity}} \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O057 | source: Appendices/app_optical_relativity.tex
+{\raggedright Total Deflection Angle \newline \textit{Leading weak-field deflection}\par} & {\raggedright $\begin{gathered}[t]\theta_{\mathrm{total}}\simeq\frac{4GM}{bc_{\mathrm E}^2} \\ =4\alpha_{\mathrm G}(b)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:optical_relativity]{Appendix~\ref*{app:optical_relativity}}\par} \\
+
+% O058 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Work-Conjugate Coordinate Constraint \newline \textit{One endpoint, fixed loading}\par} & {\raggedright $u_{i} = \mathcal{C}_{i}y_{i}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
+
+% A018 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Serial Two-Endpoint Capacity\par} & {\raggedright $\begin{gathered}[t]\mathcal C_{ij}=(1-\alpha_{\mathrm G}^{(i)}) \\ \times(1-\alpha_{\mathrm G}^{(j)}) \\ \mathcal C=(1-\alpha_{\mathrm G})^2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
+
+% O059 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Volumetric Referred Inertia \newline \textit{Matched kinetic-coordinate projection}\par} & {\raggedright $\rho_{\mathrm{eff}} = \frac{ \rho_{\mathrm{eff}}^{(0)} }{ \mathcal{C}^2 }$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
+
+% O060 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Bond-Resolved Propagation Speed \newline \textit{Mean endpoint loading and difference}\par} & {\raggedright $\begin{gathered}[t]c_{\mathrm P}^{(i\to j)}=c_{\mathrm E}\mathcal C_{ij} \\ \mathcal C_{ij}=(1-\alpha_{\mathrm G})^2 \\ {}-\tfrac14(\delta\alpha_{\mathrm G})^2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
+
+% A019 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Nonuniform Continuum Condition \newline \textit{Same mean endpoint loading as the bond law}\par} & {\raggedright $|\delta\alpha_{\mathrm G}|\ll2(1-\alpha_{\mathrm G})$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
+
+% A020 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Active-Side Saturation \newline \textit{Not continued into State II}\par} & {\raggedright $\begin{gathered}[t]\alpha_{\mathrm G}\to1^-: \\ c_{\mathrm P}\to0,\quad\mu_{\mathrm{eff}}\to\infty\end{gathered}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
 
 \bottomrule
 \end{longtable}
 
-\vspace{1cm}
-\section*{Part II (Continued): Black Hole Thermodynamics \& Information (Phase Boundaries)}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two} (Continued): Weak-Field Orbital Dynamics (Perihelion Precession)}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Holographic Limit \newline \textit{Translation Metric} & $S_{\mathrm{holo}} = \frac{2\pi^2 k_{\mathrm{B}}}{N_{\mathrm{M}}}$ & - & \hyperref[app:information_paradox]{Appendix \ref*{app:information_paradox}} \\
+% O061 | source: Appendices/app_perihelion_orbital_strain.tex
+{\raggedright Radial Strain \newline \textit{Potential}\par} & {\raggedright $\Phi_\tau(r) = - \frac{GM}{r}$\par} & -- & {\raggedright \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}\par} \\
 
-Geometric Capacity \newline \textit{Boundary Limit} & $S_{\mathrm{geo}} = k_{\mathrm{B}} \frac{4\pi R_{\mathrm{QG}}^2}{r_{\mathrm{D}}^2}$ & - & \hyperref[app:information_paradox]{Appendix \ref*{app:information_paradox}} \\
+% O062 | source: Appendices/app_perihelion_orbital_strain.tex
+{\raggedright Tangential Loading Ratio\par} & {\raggedright $v_\perp^2/c_{\mathrm E}^2$\par} & -- & {\raggedright \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}\par} \\
 
-Kinematic Occupancy \newline \textit{Defect Count} & $S_{\mathrm{kin}} = \frac{R_{\mathrm{QG}}}{r_{\mathrm{D}}}$ & - & \hyperref[app:information_paradox]{Appendix \ref*{app:information_paradox}} \\
+% O063 | source: Appendices/app_perihelion_orbital_strain.tex
+{\raggedright Specific Orbital Strain Coupling \newline \textit{Weak-field circular-loading reduction}\par} & {\raggedright $\begin{gathered}[t]\Phi_{\mathrm{orb}}^{(\mathrm{red})} \\ =\Phi_\tau v_\perp^2/c_{\mathrm E}^2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}\par} \\
 
-Kinematic Fill Ratio \newline \textit{Mass Dilution} & $\Phi_{\mathrm{kin}} = \frac{1}{4\pi} \left(\frac{r_{\mathrm{D}}}{R_{\mathrm{QG}}}\right)$ & - & \hyperref[app:information_paradox]{Appendix \ref*{app:information_paradox}} \\
+% O064 | source: Appendices/app_perihelion_orbital_strain.tex
+{\raggedright Reduced Orbital Strain Potential \newline \textit{Fixed leading specific angular momentum}\par} & {\raggedright $\Phi_{\mathrm{orb}}^{(\mathrm{red})} = - \frac{GM\ell_{\mathrm{orb}}^2}{c_{\mathrm{E}}^2r^3}$\par} & -- & {\raggedright \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}\par} \\
 
-Convergence Information \newline \textit{Absolute Capacity} & $N_{\mathrm{QG}} = \frac{8\pi^2 R_{\mathrm{QG}}^2}{\ell_{\mathrm{S}}^2}$ & - & \hyperref[app:information_paradox]{Appendix \ref*{app:information_paradox}} \\
+% O065 | source: Appendices/app_perihelion_orbital_strain.tex
+{\raggedright Bound-Orbit Acceleration Correction \newline \textit{Leading post-Newtonian correction}\par} & {\raggedright $g_{\mathrm{orb}} = 3g_{\mathrm{b}} \frac{v_\perp^2}{c_{\mathrm{E}}^2}$\par} & -- & {\raggedright \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}\par} \\
 
-Information Fill Ratio \newline \textit{Strain Dilution} & $\Phi_{\mathrm{info}} = \frac{1}{4\pi} \left( \frac{\ell_{\mathrm{S}}}{R_{\mathrm{QG}}} \right)^4$ & - & \hyperref[app:information_paradox]{Appendix \ref*{app:information_paradox}} \\
+% O066 | source: Appendices/app_perihelion_orbital_strain.tex
+{\raggedright TFT Post-Newtonian Orbital Equation \newline \textit{First post-Newtonian order}\par} & {\raggedright $\frac{\mathrm{d}^2u}{\mathrm{d}\varphi^2} + u = \frac{GM}{\ell_{\mathrm{orb}}^2} + \frac{3GM}{c_{\mathrm{E}}^2}u^2$\par} & -- & {\raggedright \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}\par} \\
 
-Topological Invariant \newline \textit{Absolute Unitarity} & $N_{\mathrm{QG}} \cdot N_{\mathrm{M}} = 16\pi^3$ & - & \hyperref[app:information_paradox]{Appendix \ref*{app:information_paradox}} \\
+% O067 | source: Appendices/app_perihelion_orbital_strain.tex
+{\raggedright Perihelion Advance \newline \textit{First post-Newtonian order}\par} & {\raggedright $\Delta\varphi = \frac{6\pi GM}{a(1-e^2)c_{\mathrm{E}}^2}$\par} & -- & {\raggedright \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}\par} \\
+
+% O068 | source: Appendices/app_perihelion_orbital_strain.tex
+{\raggedright Total Bound-Orbit Acceleration \newline \textit{Environmental plus bound-orbit term}\par} & {\raggedright $g_{\mathrm{bound}}=g_{\mathrm{obs}}+g_{\mathrm{orb}}$\par} & -- & {\raggedright \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}\par} \\
 
 \bottomrule
 \end{longtable}
 
-\vspace{1cm}
-\newpage
-
-\newpage % Forces the section and table to start cleanly on a new page
-\section*{Part II (Continued): Gravitational Radiation and Tensor Mechanics}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two} (Continued): Microphysics of Black Holes and Gravitational Saturation}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Normalized Tensor \newline \textit{Wave Equation} & $\frac{1}{c_{\mathrm{E}}^2} \ddot{\mathsf{H}}_{ij}^{(\mathrm{GW})} - \nabla^2\mathsf{H}_{ij}^{(\mathrm{GW})} = \frac{8\pi G}{c_{\mathrm{E}}^4} T_{ij}^{(\mathrm{TT})}$ & - & \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} \\
+% O069 | source: Appendices/app_phase_transition.tex
+{\raggedright Soft Floor \newline \textit{Ignition Mass}\par} & {\raggedright $\begin{gathered}[t]M_{\mathrm{D,G}}=c_{\mathrm E}^2r_{\mathrm D}/G \\ \approx10.033\,\mathrm{kg}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}\par} \\
 
-Spectral GW \newline \textit{Stiffness} & $K_{\mathrm{GW}}^{(\mathrm{eff})}(f) = \frac{\pi c_{\mathrm{E}}^2 f^2}{4G}$ & - & \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} \\
+% O070 | source: Appendices/app_phase_transition.tex
+{\raggedright Vacuum Stability Margin \newline \textit{Structural-to-operational density scale}\par} & {\raggedright $\rho_{\mathrm G}/\rho_{\mathrm D}\sim10^{17}$\par} & -- & {\raggedright \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}\par} \\
 
-Micro-to-Collective \newline \textit{Response Ratio ($\zeta_{\mathrm{GW}}$)} & $\zeta_{\mathrm{GW}}(f) = \frac{1}{\sqrt{2}} \left( \frac{r_{\mathrm{D}}}{\ell_{\mathrm{S}}} \right)^2 \left( \frac{f r_{\mathrm{D}}}{c_{\mathrm{E}}} \right)^2$ & - & \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} \\
+% O071 | source: Appendices/app_phase_transition.tex
+{\raggedright Isoenergetic Continuity \newline \textit{Specified phase-capacity normalization}\par} & {\raggedright $\begin{gathered}[t]E_{\mathrm{QG}}=E_{\mathrm S}=E_{\mathrm P} \\ =\sqrt{\hbar c_{\mathrm E}^5/G}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}\par} \\
 
-Far-Zone Quadrupole \newline \textit{Strain} & $h_{ij}^{(\mathrm{TT})} (\mathbf{x},t) = \frac{2G}{c_{\mathrm{E}}^4 R} \Lambda_{ij,kl}(\mathbf{n}) \ddot{Q}_{kl} \left( t_{\mathrm{R}} \right)$ & - & \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} \\
+% O072 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Effective Causal Inertia \newline \textit{Active side only}\par} & {\raggedright $\mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{(1 - \alpha_{\mathrm{G}})^4}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
 
-Total Quadrupole \newline \textit{Luminosity} & $P_{\mathrm{GW}} = \frac{G}{5c_{\mathrm{E}}^5} \left\langle \dddot{Q}_{ij} \dddot{Q}_{ij} \right\rangle$ & - & \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} \\
+% O073 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Causal Propagation \newline \textit{Speed}\par} & {\raggedright $c_{\mathrm{P}} = c_{\mathrm{E}} \sqrt{\frac{\mu_{\mathrm{D}}}{\mu_{\mathrm{eff}}}}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
 
-Circular-Binary \newline \textit{Chirp Relation} & $\dot{f} = \frac{96}{5} \pi^{8/3} \frac{(G\mathcal{M})^{5/3}}{c_{\mathrm{E}}^5} f^{11/3}$ & - & \hyperref[app:kinematic_shear]{Appendix \ref*{app:kinematic_shear}} \\
+% O079 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Isolated-Core Saturation Mass \newline \textit{Isolated-core comparison: $R_{\mathrm{QG}}=R_{\mathrm U}$}\par} & {\raggedright $M_{\mathrm{Sat}} = \frac{c_{\mathrm{E}}^3}{G \Gamma_{\mathrm{D}}}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O080 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Cosmic Reservoir Radius \newline \textit{Adopted reservoir scaling}\par} & {\raggedright $\begin{gathered}[t]R_{\mathrm{Res}}=R_{\mathrm U}(\rho_{\mathrm S}/\rho_{\mathrm{QG}})^{1/3} \\ \approx5.8383\times10^{34}\,\mathrm m\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O081 | source: Trilogy/PartII/07_Gravitational_Saturation.tex
+{\raggedright Interior Growth Law Node Rate \newline \textit{Main-text nucleation model}\par} & {\raggedright $\frac{\mathrm{d}N}{\mathrm{d}t} = \frac{\eta_{\mathrm{N}} P_{\mathrm{in}} - L_{\mathrm{out}}}{E_{\mathrm{S}}}$\par} & \hyperref[chap:gravitational_saturation]{Ch.~\ref*{chap:gravitational_saturation}} & {\raggedright Main-body construction\par} \\
+
+% O082 | source: Appendices/app_phase_transition.tex
+{\raggedright Horizon Surface \newline \textit{Tension}\par} & {\raggedright $\tau_{\mathrm{QG}} = \left(\frac{c_{\mathrm{E}}^2}{4\pi G R_{\mathrm{QG}}}\right) g_{\mathrm{QG}}$\par} & -- & {\raggedright \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}\par} \\
+
+% O083 | source: Appendices/app_phase_transition.tex
+{\raggedright Event Horizon Surface Gravity \newline \textit{Spherical phase-boundary magnitude}\par} & {\raggedright $g_{\mathrm{QG}} = \frac{c_{\mathrm{E}}^4}{GM}$\par} & -- & {\raggedright \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}\par} \\
+
+% O084 | source: Appendices/app_phase_transition.tex
+{\raggedright Quantum Saturation \newline \textit{Density ($\rho_{\mathrm{Q}}$)}\par} & {\raggedright $\rho_{\mathrm Q}(r)=\hbar/(c_{\mathrm E}r^4)$\par} & -- & {\raggedright \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}\par} \\
+
+% O085 | source: Appendices/app_phase_transition.tex
+{\raggedright Gravitational Yield \newline \textit{Density ($\rho_{\mathrm{G}}$)}\par} & {\raggedright $\rho_{\mathrm G}(r)=c_{\mathrm E}^2/(Gr^2)$\par} & -- & {\raggedright \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}\par} \\
+
+% O086 | source: Appendices/app_phase_transition.tex
+{\raggedright Convergence Phase \newline \textit{Density ($\rho_{\mathrm{QG}}$)}\par} & {\raggedright $\begin{gathered}[t]\rho_{\mathrm{QG}}(r)=\sqrt{\rho_{\mathrm Q}(r)\rho_{\mathrm G}(r)} \\ =\sqrt{\hbar c_{\mathrm E}/(Gr^6)}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}\par} \\
+
+% O087 | source: Appendices/app_phase_transition.tex
+{\raggedright Master Phase Radius \newline \textit{Equation}\par} & {\raggedright $r(\rho) = \ell_{\mathrm{S}} \cdot \left(1.5 \frac{\rho_{\mathrm{S}}}{\rho}\right)^{1/4}$\par} & -- & {\raggedright \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}\par} \\
 
 \bottomrule
 \end{longtable}
 
-\vspace{1cm}
-\section*{Part II (Continued): Live Phase-Boundary Dynamics \& Binary Kinematics}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two} (Continued): Black Hole Thermodynamics \& Information (Phase Boundaries)}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Spherical Boundary \newline \textit{Growth Rate} & $\dot{R}_{\mathrm{QG}} = \frac{G}{c_{\mathrm{E}}^2}\dot{M}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+% O088 | source: Appendices/app_information_paradox.tex
+{\raggedright Holographic Limit Translation Metric \newline \textit{Entropy-scaled comparison}\par} & {\raggedright $S_{\mathrm{holo}} = \frac{2\pi^2 k_{\mathrm{B}}}{N_{\mathrm{M}}}$\par} & -- & {\raggedright \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}\par} \\
 
-Live-Boundary \newline \textit{Spin Relation} & $\mathcal{J}_{\mathrm{BH}} = I_{\mathrm{surf}} \frac{v_{\mathrm{tor}}}{R_{\mathrm{QG}}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+% O089 | source: Appendices/app_information_paradox.tex
+{\raggedright Geometric Capacity Boundary Limit \newline \textit{Slot count is the ratio to $k_{\mathrm B}$}\par} & {\raggedright $S_{\mathrm{geo}} = k_{\mathrm{B}} \frac{4\pi R_{\mathrm{QG}}^2}{r_{\mathrm{D}}^2}$\par} & -- & {\raggedright \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}\par} \\
 
-Dimensionless \newline \textit{Spin Parameter} & $a_\ast = \left( \frac{I_{\mathrm{surf}}}{M R_{\mathrm{QG}}^2} \right) \frac{v_{\mathrm{tor}}}{c_{\mathrm{E}}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+% O090 | source: Appendices/app_information_paradox.tex
+{\raggedright Kinematic Occupancy \newline \textit{Dimensionless defect count}\par} & {\raggedright $\frac{R_{\mathrm{QG}}}{r_{\mathrm D}}$ \newline \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}} writes this count as $S_{\mathrm{kin}}/k_{\mathrm B}$.\par} & -- & {\raggedright \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}\par} \\
 
-Binary Separation \newline \textit{Orbital Velocity} & $v_{\mathrm{rel}} = c_{\mathrm{E}} \sqrt{\frac{R_1+R_2}{d}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+% O091 | source: Appendices/app_information_paradox.tex
+{\raggedright Kinematic Fill Ratio \newline \textit{Mass Dilution}\par} & {\raggedright $\Phi_{\mathrm{kin}} = \frac{1}{4\pi} \left(\frac{r_{\mathrm{D}}}{R_{\mathrm{QG}}}\right)$\par} & -- & {\raggedright \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}\par} \\
 
-Merger Bridge \newline \textit{Saturation Condition} & $\alpha_{\mathrm{bridge}} = \alpha_{\mathrm{G},1} + \alpha_{\mathrm{G},2} + \alpha_{\mathrm{dyn}} \geq 1$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+% O092 | source: Appendices/app_information_paradox.tex
+{\raggedright Convergence Information \newline \textit{Absolute Capacity}\par} & {\raggedright $N_{\mathrm{QG}} = \frac{8\pi^2 R_{\mathrm{QG}}^2}{\ell_{\mathrm{S}}^2}$\par} & -- & {\raggedright \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}\par} \\
 
-Boundary Mass \newline \textit{Conservation} & $\frac{\partial \Sigma_{\partial}}{\partial t} + \nabla_A\left(\Sigma_{\partial} v_{\parallel}^{A}\right) + \frac{2\Sigma_{\partial}v_n}{R} =$ \newline $\dot{\Sigma}_{\partial,\mathrm{in}} + \dot{\Sigma}_{\partial,\mathrm{vac}} - \dot{\Sigma}_{\partial,\mathrm{shed}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
+% O093 | source: Appendices/app_information_paradox.tex
+{\raggedright Information Fill Ratio \newline \textit{Strain Dilution}\par} & {\raggedright $\Phi_{\mathrm{info}} = \frac{1}{4\pi} \left( \frac{\ell_{\mathrm{S}}}{R_{\mathrm{QG}}} \right)^4$\par} & -- & {\raggedright \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}\par} \\
 
-Remnant Mass \newline \textit{(Stress Shedding)} & $M_f = M_1 + M_2 - \frac{E_{\mathrm{shed}}}{c_{\mathrm{E}}^2}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
-
-Remnant \newline \textit{Angular Momentum} & $\mathcal{J}_f = \mathcal{J}_1^{(\mathrm{spin})} + \mathcal{J}_2^{(\mathrm{spin})} + \mathcal{J}_{\mathrm{orb}}^{(\mathrm{bin})} - \mathcal{J}_{\mathrm{shed}}$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
-
-Linearized Boundary \newline \textit{Ringdown Equation} & $\frac{\partial^2 \delta R}{\partial t^2} + \Gamma_{\mathrm{QG}}\frac{\partial \delta R}{\partial t} + \omega_{\mathrm{QG}}^2\delta R = 0$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
-
-Kinematic Capacity \newline \textit{Constraint} & $V_{\mathrm{CM}}^2 + v_n^2 + v_{\parallel}^2 + v_{\mathrm{tor}}^2 \lesssim c_{\mathrm{E}}^2$ & - & \hyperref[app:live_black_hole_boundaries]{App. \ref*{app:live_black_hole_boundaries}} \\
-
-Exterior Torsional \newline \textit{Field Equation} & $\frac{\mathrm{d}}{\mathrm{d}r} \left[ \tau_{\mathrm{tor}}(r) r^4 \frac{\mathrm{d}\omega_{\mathrm{drag}}}{\mathrm{d}r} \right] = 0$ & - & \hyperref[app:kerr_limit]{App. \ref*{app:kerr_limit}} \\
-
-Effective Rotating \newline \textit{Optical Line Element} & $ds_{\tau,\mathrm{rot}}^2 = -c_{\mathrm{E}}^2 (1-\alpha_{\mathrm{G}})^2 dt^2$ \newline $+ \frac{dr^2 + r^2d\theta^2 + r^2\sin^2\theta (d\phi - \omega_{\mathrm{drag}}dt)^2}{(1-\alpha_{\mathrm{G}})^2}$ & - & \hyperref[app:kerr_limit]{App. \ref*{app:kerr_limit}} \\
-
-Spin-Orbit Strain \newline \textit{Effective Potential} & $\Phi_{\mathrm{spin}} = - \ell_{\mathrm{orb}} \omega_{\mathrm{drag}}(r)$ & - & \hyperref[app:kerr_limit]{App. \ref*{app:kerr_limit}} \\
-
-Boundary Relaxation \newline \textit{Selection Law} & $\frac{\mathrm{d}\mathcal{E}_{\mathrm{stored}}}{\mathrm{d}t} = - \mathcal{P}_{\mathrm{shed}} \leq 0$ & - & \hyperref[app:kerr_limit]{App. \ref*{app:kerr_limit}} \\
+% O094 | source: Appendices/app_information_paradox.tex
+{\raggedright Information-Ledger Invariant \newline \textit{Adopted boundary normalizations}\par} & {\raggedright $N_{\mathrm{QG}} \cdot N_{\mathrm{M}} = 16\pi^3$\par} & -- & {\raggedright \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}\par} \\
 
 \bottomrule
 \end{longtable}
 
-\vspace{1cm}
-\section*{Part II (Continued): Rotating Black Hole Exteriors (Kerr Correspondence)}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two} (Continued): Gravitational Radiation and Tensor Mechanics}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Torsional Stiffness \newline \textit{Constitutive Closure} & $\tau_{\mathrm{tor}}(\alpha_{\mathrm{G}}) = \tau_{D,\mathrm{bulk}} = \frac{c_{\mathrm{E}}^4}{G r_D^2}$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+% O095 | source: Appendices/app_kinematic_shear.tex
+{\raggedright Normalized Tensor Wave Equation \newline \textit{Collective source normalization}\par} & {\raggedright $\frac{1}{c_{\mathrm{E}}^2} \ddot{\mathsf{H}}_{ij}^{(\mathrm{GW})} - \nabla^2\mathsf{H}_{ij}^{(\mathrm{GW})} = \frac{8\pi G}{c_{\mathrm{E}}^4} T_{ij}^{(\mathrm{TT})}$\par} & -- & {\raggedright \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}\par} \\
 
-Angular Drag Field \newline \textit{Lense--Thirring Match} & $\omega_{\mathrm{drag}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3}$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+% A021 | source: Appendices/app_kinematic_shear.tex
+{\raggedright Collective Tensor Normalization \newline \textit{Not the microscopic FCC shear modulus}\par} & {\raggedright $\begin{gathered}[t]\mathcal T_{\mathrm{TT}}^{(0)}=c_{\mathrm E}^4/(8\pi G) \\ M_{\mathrm{TT}}^{(0)}=c_{\mathrm E}^2/(8\pi G)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}\par} \\
 
-No-Hair Quadrupole \newline \textit{TFT Closure} & $Q_{\mathrm{TFT}} = -\frac{\mathcal{J}_{\mathrm{BH}}^2}{M c_{\mathrm{E}}^2} = -a_\ast^2 M R_{\mathrm{QG}}^2$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+% A022 | source: Appendices/app_8pai_origin.tex
+{\raggedright Topological Source Normalization \newline \textit{Retained scalar projection model}\par} & {\raggedright $\kappa=4\pi+4\pi=8\pi$\par} & -- & {\raggedright \hyperref[app:8pi_origin]{Appendix~\ref*{app:8pi_origin}}\par} \\
 
-Rotating Strain Field \newline \textit{Quadrupole-Corrected} & $\alpha_{\mathrm{G}}(r,\theta) = \frac{R_{\mathrm{QG}}}{r} - a_\ast^2 \left( \frac{R_{\mathrm{QG}}}{r} \right)^3 P_2(\cos\theta)$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+% O096 | source: Appendices/app_kinematic_shear.tex
+{\raggedright Spectral GW Stiffness \newline \textit{Spectral effective coefficient}\par} & {\raggedright $K_{\mathrm{GW}}^{(\mathrm{eff})}(f) = \frac{\pi c_{\mathrm{E}}^2 f^2}{4G}$\par} & -- & {\raggedright \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}\par} \\
 
-Phase Boundary \newline \textit{Spin-Deformed Saturation} & $r_{\mathrm{sat}}(\theta,a_\ast) = R_{\mathrm{QG}} \left[ 1 - a_\ast^2P_2(\cos\theta) \right]$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+% O097 | source: Appendices/app_kinematic_shear.tex
+{\raggedright Micro-to-Collective Response Ratio \newline \textit{Micro-to-collective spectral projection}\par} & {\raggedright $\zeta_{\mathrm{GW}}(f) = \frac{1}{\sqrt{2}} \left( \frac{r_{\mathrm{D}}}{\ell_{\mathrm{S}}} \right)^2 \left( \frac{f r_{\mathrm{D}}}{c_{\mathrm{E}}} \right)^2$\par} & -- & {\raggedright \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}\par} \\
 
-Torsional Capacity \newline \textit{Co-Motion Surface} & $r_{\mathrm{cap}}(\theta,a_\ast) = R_{\mathrm{QG}} \left[ 1+\sqrt{2|a_\ast|\sin\theta} \right]$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+% O098 | source: Appendices/app_kinematic_shear.tex
+{\raggedright Far-Zone Quadrupole Strain \newline \textit{Far-zone slow-source limit}\par} & {\raggedright $h_{ij}^{(\mathrm{TT})} (\mathbf{x},t) = \frac{2G}{c_{\mathrm{E}}^4 R} \Lambda_{ij,kl}(\mathbf{n}) \ddot{Q}_{kl} \left( t_{\mathrm{R}} \right)$\par} & -- & {\raggedright \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}\par} \\
 
-Photon Ring \newline \textit{Equatorial Orbit Condition} & $\omega_{\mathrm{drag}}'(r) + s_{\mathrm{br}} \left[ \frac{c_P'(r)}{r} - \frac{c_P(r)}{r^2} \right] = 0$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+% O099 | source: Appendices/app_kinematic_shear.tex
+{\raggedright Total Quadrupole Luminosity \newline \textit{Leading quadrupole order}\par} & {\raggedright $P_{\mathrm{GW}} = \frac{G}{5c_{\mathrm{E}}^5} \left\langle \dddot{Q}_{ij} \dddot{Q}_{ij} \right\rangle$\par} & -- & {\raggedright \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}\par} \\
 
-Shadow Edge \newline \textit{Impact Scale} & $B_{\gamma,s_{\mathrm{br}}}(a_\ast) = \frac{ c_{\mathrm{E}} }{ \left| \omega_{\mathrm{drag}} + s_{\mathrm{br}} \frac{c_P}{r_{\gamma,s_{\mathrm{br}}}} \right| }$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
-
-ISCO Map \newline \textit{Marginal Stability} & $\mathcal{R}_m = 0, \quad \frac{\partial\mathcal{R}_m}{\partial x} = 0, \quad \frac{\partial^2\mathcal{R}_m}{\partial x^2} = 0$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
-
-Ringdown Spectrum \newline \textit{Complex Eigenfrequency} & $\varpi_{\ell m} = \frac{c_{\mathrm{E}}^3}{GM} \left[ \widehat{\omega}_{\ell m} - i\widehat{\Gamma}_{\ell m}^{(\mathrm{rd})} \right]$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
-
-Massive-Particle \newline \textit{Radial Potential ($\mathcal{R}_m$)} & $\mathcal{R}_m(x;\varepsilon,j_z) = \frac{ \left[ \varepsilon - j_z\widehat{\omega}(x) \right]^2 }{ \widehat{c}_P^2(x) } - j_z^2x^2 - 1$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
-
-Nonrotating Photon \newline \textit{Ring Radius} & $r_{\gamma,0} = 3R_{\mathrm{QG}}$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
-
-Nonrotating Shadow \newline \textit{Impact Scale} & $B_{\gamma,0} = \frac{27}{4}R_{\mathrm{QG}}$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
-
-Nonrotating ISCO \newline \textit{Radius} & $r_{\mathrm{ISCO},0} = 6R_{\mathrm{QG}}$ & - & \hyperref[app:bh_rotating_kerr_clouser]{App. \ref*{app:bh_rotating_kerr_clouser}} \\
+% O100 | source: Appendices/app_kinematic_shear.tex
+{\raggedright Circular-Binary Chirp Relation \newline \textit{Adiabatic circular binary}\par} & {\raggedright $\dot{f} = \frac{96}{5} \pi^{8/3} \frac{(G\mathcal{M})^{5/3}}{c_{\mathrm{E}}^5} f^{11/3}$\par} & -- & {\raggedright \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}\par} \\
 
 \bottomrule
 \end{longtable}
 
-\vspace{1cm}
-
-\section*{Part II (Continued): The Quantum Structure of the Vacuum \& Vertical Topology}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two} (Continued): Live Phase-Boundary Dynamics \& Binary Kinematics}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Physical Wavefunction \newline \textit{Order Parameter} & $\Psi = \sqrt{\rho} \cdot \exp\left(\frac{i S}{\hbar}\right)$ & - & \hyperref[app:physical_wavefunction]{Appendix \ref*{app:physical_wavefunction}} \\
+% O101 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Spherical Boundary Growth Rate \newline \textit{Spherical saturation boundary}\par} & {\raggedright $\dot{R}_{\mathrm{QG}} = \frac{G}{c_{\mathrm{E}}^2}\dot{M}$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Viscous Non-Linear \newline \textit{Wave Equation} & $i\hbar \frac{\partial\Psi}{\partial t} = \left[-\frac{\hbar^2}{2m} \nabla^2 + V\right]\Psi - \left[i(\hbar\Gamma)\ln(\|\Psi\|^2)\right]\Psi$ & \hyperref[sec:16.1.2]{16.1.2} & Fluid Mechanics \\
+% O102 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Live-Boundary Spin Relation \newline \textit{Participating live-boundary inertia}\par} & {\raggedright $\mathcal{J}_{\mathrm{BH}} = I_{\mathrm{surf}} \frac{v_{\mathrm{tor}}}{R_{\mathrm{QG}}}$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Lattice Quantum \newline \textit{Potential} & $Q = -\frac{\hbar^2}{2m} \left(\frac{\nabla^2 \sqrt{\rho}}{\sqrt{\rho}}\right)$ & \hyperref[sec:16.1.3]{16.1.3} & Fluid Mechanics \\
+% O103 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Dimensionless Spin Parameter \newline \textit{Boundary angular-momentum convention}\par} & {\raggedright $a_\ast = \left( \frac{I_{\mathrm{surf}}}{M R_{\mathrm{QG}}^2} \right) \frac{v_{\mathrm{tor}}}{c_{\mathrm{E}}}$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Condensate Force Law \newline \textit{Euler Formulation} & $F = -\nabla V - \nabla Q - F_{\mathrm{friction}}$ & \hyperref[sec:16.1.3]{16.1.3} & Fluid Mechanics \\
+% O104 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Binary Separation Orbital Velocity \newline \textit{Weak-field circular binary}\par} & {\raggedright $v_{\mathrm{rel}} = c_{\mathrm{E}} \sqrt{\frac{R_1+R_2}{d}}$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Electron Rotational \newline \textit{Mass Limit} & $M_{\mathrm{spin}} = \frac{\hbar}{2 \cdot c_{\mathrm{E}} \cdot r_{\mathrm{D}}} \approx 2.229 \times 10^{-17} \text{ kg}$ & \hyperref[sec:16.2.5]{16.2.5} & Mechanical Proof \\
+% O105 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Merger Bridge Saturation Condition \newline \textit{Saturated-bridge onset criterion}\par} & {\raggedright $\alpha_{\mathrm{bridge}} = \alpha_{\mathrm{G},1} + \alpha_{\mathrm{G},2} + \alpha_{\mathrm{dyn}} \geq 1$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Localized Quantum Damping Rate \newline \textit{Matter-Coupled Boundary} & $\Gamma(x)=\sigma\,c_{\mathrm P}\,n_K(x)$ & \hyperref[sec:16.3.2]{16.3.2} & Node Topology \\
+% O106 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Boundary Mass Conservation \newline \textit{Moving spherical boundary balance}\par} & {\raggedright $\begin{gathered}[t]\partial_t\Sigma_\partial+\nabla_A(\Sigma_\partial v_\parallel^A) \\ {}+2\Sigma_\partial v_n/R \\ =\dot\Sigma_{\partial,\mathrm{in}}+\dot\Sigma_{\partial,\mathrm{vac}} \\ {}-\dot\Sigma_{\partial,\mathrm{shed}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Generalized Linear \newline \textit{Uncertainty} & $\Delta x \cdot \Delta p \geq h \cdot (1 - \alpha_{\mathrm{G}}) \cdot e^{-\Gamma t}$ & \hyperref[sec:16.4.3]{16.4.3} & Generalized Law \\
+% O107 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Remnant Mass (Stress Shedding) \newline \textit{Negligible extra binding and recoil terms}\par} & {\raggedright $M_f = M_1 + M_2 - \frac{E_{\mathrm{shed}}}{c_{\mathrm{E}}^2}$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Generalized Angular \newline \textit{Uncertainty} & $\Delta \theta \cdot \Delta L \geq \frac{\hbar}{2}$ & \hyperref[sec:16.4.3]{16.4.3} & Generalized Law \\
+% O108 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Remnant Angular Momentum \newline \textit{Angular-momentum ledger}\par} & {\raggedright $\begin{gathered}[t]\mathcal J_f=\mathcal J_1^{(\mathrm{spin})}+\mathcal J_2^{(\mathrm{spin})} \\ {}+\mathcal J_{\mathrm{orb}}^{(\mathrm{bin})}-\mathcal J_{\mathrm{shed}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Generalized \newline \textit{Commutator} & $[x,p] = i\hbar \cdot (1 - \alpha_{\mathrm{G}}) \cdot e^{-\Gamma t}$ & \hyperref[sec:16.4.4]{16.4.4} & Generalized Law \\
+% O109 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Linearized Boundary Ringdown Equation \newline \textit{Linearized effective ringdown}\par} & {\raggedright $\frac{\partial^2 \delta R}{\partial t^2} + \Gamma_{\mathrm{QG}}\frac{\partial \delta R}{\partial t} + \omega_{\mathrm{QG}}^2\delta R = 0$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Node Cell Hamiltonian \newline \textit{Energy} & $E_{\mathrm{total}} = \frac{1}{2} \tau_{\mathrm{D}} (\Delta x)^2 + \frac{1}{2} \mu_{\mathrm{eff}} v^2$ & - & \hyperref[app:photon_hamiltonian]{Appendix \ref*{app:photon_hamiltonian}} \\
+% O110 | source: Appendices/app_black_hole_boundaries.tex
+{\raggedright Kinematic Capacity Constraint \newline \textit{Adopted channel-capacity estimate}\par} & {\raggedright $\begin{gathered}[t]V_{\mathrm{CM}}^2+v_n^2+v_\parallel^2+v_{\mathrm{tor}}^2 \\ \lesssim c_{\mathrm E}^2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}\par} \\
 
-Active Tunneling \newline \textit{Transmission Law} & $T_{\mathrm{active}} = \frac{\exp(-2DL)}{1 + \left(\frac{Z_{\mathrm{wall}}}{Z_{\mathrm{drive}}}\right)^2 \cdot \left[\sin^2(kL+\varphi_0) + \left(\frac{\omega-\omega_0}{\omega_0}\right)^2\right]}$ & - & \hyperref[app:quantum_tunneling]{Appendix \ref*{app:quantum_tunneling}} \\
+% O111 | source: Appendices/app_black_hole_kerr_limit.tex
+{\raggedright Exterior Torsional Field Equation \newline \textit{Leading axisymmetric exterior}\par} & {\raggedright $\frac{\mathrm d}{\mathrm dr}\left[\tau_{\mathrm{tor}}r^4\frac{\mathrm d\omega_{\mathrm{drag}}}{\mathrm dr}\right]=0$\par} & -- & {\raggedright \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}}\par} \\
 
-Gravitational Strain \newline \textit{of a Photon} & $\alpha_{\mathrm{G}} = 2\pi\left(\frac{\ell_{\mathrm{S}}}{\lambda}\right)^2$ & - & \hyperref[app:graviton]{Appendix \ref*{app:graviton}} \\
+% O112 | source: Appendices/app_black_hole_kerr_limit.tex
+{\raggedright Effective Rotating Optical Line Element \newline \textit{Effective optical representation}\par} & {\raggedright $\begin{gathered}[t]\mathrm ds_{\tau,\mathrm{rot}}^2=-c_{\mathrm E}^2(1-\alpha_{\mathrm G})^2\mathrm dt^2 \\ {}+(1-\alpha_{\mathrm G})^{-2}\bigl[\mathrm dr^2+r^2\mathrm d\theta^2 \\ {}+r^2\sin^2\theta(\mathrm d\phi-\omega_{\mathrm{drag}}\mathrm dt)^2\bigr]\end{gathered}$\par} & -- & {\raggedright \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}}\par} \\
 
-Graviton Energy \newline \textit{Strain Shadow} & $E_{\mathrm{g}} = \frac{h^2 G}{c_{\mathrm{E}}^2 \lambda^3}$ & - & \hyperref[app:graviton]{Appendix \ref*{app:graviton}} \\
+% O113 | source: Appendices/app_black_hole_kerr_limit.tex
+{\raggedright Spin-Orbit Strain Effective Potential \newline \textit{Reduced spin-orbit convention}\par} & {\raggedright $\Phi_{\mathrm{spin}} = - \ell_{\mathrm{orb}} \omega_{\mathrm{drag}}(r)$\par} & -- & {\raggedright \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}}\par} \\
 
-Speed of Substrate \newline \textit{Transmission} & $c_{\mathrm{S}} = \sqrt{\frac{\tau_{\mathrm{S}}}{\mu_{\mathrm{S}}}}$ & \hyperref[sec:17.4]{17.4} & Hard Floor Physics \\
-
-Topological Budget \newline \textit{Identity} & $\alpha_{\mathrm{Q}} = 1 - \alpha_{\mathrm{G}}$ & - & \hyperref[app:entanglement]{Appendix \ref*{app:entanglement}} \\
-
-Operative Local \newline \textit{Tension ($\tau_{\mathrm{local}}$)} & $\tau_{\mathrm{local}} = \frac{h c_{\mathrm{E}}}{r_{\mathrm{D}}^3}$ & - & \hyperref[app:photon_hamiltonian]{Appendix \ref*{app:photon_hamiltonian}} \\
-
-Quantum Displacement \newline \textit{Limit ($\Delta x$)} & $\Delta x = r_{\mathrm{D}} \sqrt{\frac{2r_{\mathrm{D}}}{\lambda}}$ & - & \hyperref[app:photon_hamiltonian]{Appendix \ref*{app:photon_hamiltonian}} \\
-
-Phase Crosstalk \newline \textit{Budget Limit} & $\Delta\varphi \leq \eta_{\varphi} \left(\frac{c_{\mathrm{E}}}{r^3}\right) A_{\mathrm{overlap}} T$ & - & \hyperref[app:photonic_emission]{Appendix \ref*{app:photonic_emission}} \\
-
-Macroscopic Tunneling \newline \textit{($T_{\mathrm{device}}$)} & $T_{\mathrm{device}} \approx \frac{1}{1 + \left(\frac{Z_{\mathrm{wall}}}{Z_{\mathrm{drive}}}\right)^2 (\Delta\varphi^2 + \Delta f^2)}$ & - & \hyperref[app:quantum_tunneling]{Appendix \ref*{app:quantum_tunneling}} \\
-
-Topological Winding \newline \textit{Condition} & $\oint \nabla \varphi \cdot \mathrm{d}\ell = 2\pi n$ & - & \hyperref[app:physical_wavefunction]{Appendix \ref*{app:physical_wavefunction}} \\
+% O114 | source: Appendices/app_black_hole_kerr_limit.tex
+{\raggedright Boundary Relaxation Selection Law \newline \textit{Undriven relaxation closure}\par} & {\raggedright $\frac{\mathrm{d}\mathcal{E}_{\mathrm{stored}}}{\mathrm{d}t} = - \mathcal{P}_{\mathrm{shed}} \leq 0$\par} & -- & {\raggedright \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}}\par} \\
 
 \bottomrule
 \end{longtable}
 
-\newpage % Forces the section and table to start cleanly on the next page
-
-\section*{Part II (Continued): Grand Unification of the Fundamental Forces}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two} (Continued): Rotating Black Hole Exteriors (Kerr Correspondence)}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Raw Structural \newline \textit{Mass Moment} & $J_i = \rho_i r_i^4$ & - & \hyperref[app:fractal_architecture]{Appendix \ref*{app:fractal_architecture}} \\
+% O115 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Torsional Stiffness Constitutive Closure \newline \textit{Adopted exterior closure; $0\leq\alpha_{\mathrm G}<1$}\par} & {\raggedright $\begin{gathered}[t]\tau_{\mathrm{tor}}=\tau_{\mathrm{D,bulk}} \\ =c_{\mathrm E}^4/(Gr_{\mathrm D}^2)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Strong Force \newline \textit{1D Confinement} & $T_{\mathrm{s}} = 2\pi \rho_{\mathrm{eff}} c_{\mathrm{E}}^2 r_{\mathrm{N}}^2$ & - & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
+% O116 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Angular Drag Field Lense--Thirring Match \newline \textit{Weak-field matching normalization}\par} & {\raggedright $\omega_{\mathrm{drag}}(r) = \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm{E}}^2r^3}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Electromagnetism \newline \textit{Fine-Structure} & $\alpha = \frac{K_{\mathrm{L}}}{\hbar c_{\mathrm{E}}}$ & - & \hyperref[app:geometric_alpha]{App. \ref*{app:geometric_alpha}} \& \hyperref[app:dynamic_alpha]{\ref*{app:dynamic_alpha}} \\
+% O117 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright No-Hair Quadrupole TFT Closure \newline \textit{Relaxed quadrupole correspondence}\par} & {\raggedright $\begin{gathered}[t]Q_{\mathrm{TFT}}=-\mathcal J_{\mathrm{BH}}^2/(Mc_{\mathrm E}^2) \\ =-a_*^2MR_{\mathrm{QG}}^2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Macroscopic \newline \textit{Coulomb Constant} & $k_{\mathrm{e}} = 10^{-7} \cdot c_{\mathrm{E}}^2$ & - & \hyperref[app:origin_of_charge]{Appendix \ref*{app:origin_of_charge}} \\
+% O118 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Rotating Strain Field Quadrupole-Corrected \newline \textit{Retained quadrupolar order}\par} & {\raggedright $\begin{gathered}[t]\alpha_{\mathrm G}(r,\theta)=R_{\mathrm{QG}}/r \\ {}-a_*^2(R_{\mathrm{QG}}/r)^3P_2(\cos\theta) \\ {}+O(a_*^4)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Elementary \newline \textit{Charge} & $e = \sqrt{\frac{K_{\mathrm{L}}}{k_{\mathrm{e}}}}$ & - & \hyperref[app:origin_of_charge]{Appendix \ref*{app:origin_of_charge}} \\
+% O119 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Phase Boundary Spin-Deformed Saturation \newline \textit{Small-spin boundary expansion}\par} & {\raggedright $\begin{gathered}[t]r_{\mathrm{sat}}/R_{\mathrm{QG}} \\ =1-a_*^2P_2(\cos\theta)+O(a_*^4)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Weak Force \newline \textit{3D Torsional Slip} & $G_{\mathrm{F}} = (2\pi \rho(r_{\mathrm{w}}) c_{\mathrm{E}}^2 r_{\mathrm{w}}^3)^{-2}$ & - & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
+% O120 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Torsional Capacity Co-Motion Surface \newline \textit{Leading co-motion surface}\par} & {\raggedright $r_{\mathrm{cap}}(\theta,a_\ast) = R_{\mathrm{QG}} \left[ 1+\sqrt{2|a_\ast|\sin\theta} \right]$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Gravity \newline \textit{Radial Tension} & $\alpha_{\mathrm{G}} = \frac{\kappa c_{\mathrm{E}}^2}{\rho_{\mathrm{eff}} G R^2}$ & - & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
+% O121 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Photon Ring Equatorial Orbit Condition \newline \textit{Evaluated at the equatorial circular ray}\par} & {\raggedright $\begin{gathered}[t]\omega_{\mathrm{drag}}^\prime+s_{\mathrm{br}} \\ \times\left(c_{\mathrm P}^\prime/r-c_{\mathrm P}/r^2\right)=0\end{gathered}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Unified EM \newline \textit{Torsional Projection} & $\alpha = \frac{K_{\mathrm{L}}}{c_{\mathrm{E}}^2 J_{\mathrm{N}}}$ & - & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
+% O122 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Shadow Edge Impact Scale \newline \textit{All fields evaluated at $r_\gamma=r_{\gamma,s_{\mathrm{br}}}$}\par} & {\raggedright $B_{\gamma,s_{\mathrm{br}}}=\frac{c_{\mathrm E}}{|\omega_{\mathrm{drag}}+s_{\mathrm{br}}c_{\mathrm P}/r_\gamma|}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Unified Weak \newline \textit{Torsional Projection} & $E_{\mathrm{weak}} = \frac{2\pi J_i c_{\mathrm{E}}^2}{r_{\mathrm{w}}}$ & - & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
+% O123 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright ISCO Map Marginal Stability \newline \textit{Matched $(x,\varepsilon,j_z)$ convention}\par} & {\raggedright $\mathcal{R}_m = 0, \quad \frac{\partial\mathcal{R}_m}{\partial x} = 0, \quad \frac{\partial^2\mathcal{R}_m}{\partial x^2} = 0$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Unified Strong \newline \textit{Torsional Projection} & $\sigma_{\mathrm{s}} = \frac{2\pi c_{\mathrm{E}}^2 J_i}{r_{\mathrm{N}}^2}$ & - & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
+% O124 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Ringdown Spectrum Complex Eigenfrequency \newline \textit{Dimensionless spectral functions required}\par} & {\raggedright $\begin{gathered}[t]\varpi_{\ell m}(M,a_*)=\frac{c_{\mathrm E}^3}{GM} \\ \times[\widehat\omega_{\ell m}(a_*)-i\widehat\Gamma_{\ell m}^{(\mathrm{rd})}(a_*)]\end{gathered}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
-Unified Gravity \newline \textit{Torsional Projection} & $\alpha_{\mathrm{G}} = \frac{\kappa J_i G}{c_{\mathrm{E}}^2 r^2}$ & - & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
+% O125 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Massive-Particle Radial Potential \newline \textit{\hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}} massive-particle closure}\par} & {\raggedright $\begin{gathered}[t]\mathcal R_m(x;\varepsilon,j_z) \\ =\frac{[\varepsilon-j_z\widehat\omega(x)]^2}{\widehat c_{\mathrm P}^{\,2}(x)}-j_z^2x^2-1\end{gathered}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
+
+% O126 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Nonrotating Photon Ring Radius \newline \textit{Nonrotating limit of the retained TFT model}\par} & {\raggedright $r_{\gamma,0} = 3R_{\mathrm{QG}}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
+
+% O127 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Nonrotating Shadow Impact Scale \newline \textit{Nonrotating limit of the retained TFT model}\par} & {\raggedright $B_{\gamma,0} = \frac{27}{4}R_{\mathrm{QG}}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
+
+% O128 | source: Appendices/app_bh_rotating_kerr_clouser.tex
+{\raggedright Nonrotating ISCO Radius \newline \textit{Nonrotating limit of the retained TFT model}\par} & {\raggedright $r_{\mathrm{ISCO},0} = 6R_{\mathrm{QG}}$\par} & -- & {\raggedright \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}\par} \\
 
 \bottomrule
 \end{longtable}
 
-\newpage % Forces the section and table to start cleanly on the next page
-
-\section*{Part II (Continued): The Mechanical Foundations of the Hydrogen Atom}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two} (Continued): The Quantum Structure of the Vacuum \& Vertical Topology}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Proton Mechanical \newline \textit{Radius} & $r_{\mathrm{N}} \approx 0.88 \times 10^{-15} \text{ m}$ & \hyperref[sec:19.1]{19.1} & Anchor Topology \\
+% O129 | source: Appendices/app_physical_wavefunction.tex
+{\raggedright SGF Structural Order Parameter\par} & {\raggedright $\Psi=\sqrt\rho\,e^{i\varphi},\quad |\Psi|^2=\rho$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}\par} \\
 
-Effective Nuclear \newline \textit{Confinement} & $F_{\mathrm{strong}} = \rho_{\mathrm{eff}} \cdot c_{\mathrm{E}}^2 \cdot 2\pi r_{\mathrm{N}}^2 \approx 1.6 \text{ GeV/fm}$ & - & \hyperref[app:unifiedforces_validation]{Appendix \ref*{app:unifiedforces_validation}} \\
+% A023 | source: Appendices/app_physical_wavefunction.tex
+{\raggedright Action-Normalized Excitation Field \newline \textit{Distinct from structural $\Psi$}\par} & {\raggedright $\begin{gathered}[t]\psi=\sqrt{\rho_\psi}\,e^{iS/\hbar} \\ \rho_\psi=|\psi|^2,\quad\int|\psi|^2\,\mathrm dV=I_{\mathrm{tot}}/\hbar\end{gathered}$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}\par} \\
 
-Nucleon Structural \newline \textit{Mass Moment} & $J_{\mathrm{N}} = \rho_{\mathrm{N}} r_{\mathrm{N}}^4 \approx 3.51 \times 10^{-43} \text{ kg}\cdot\text{m}$ & - & \hyperref[app:fractal_architecture]{Appendix \ref*{app:fractal_architecture}} \\
+% A024 | source: Appendices/app_physical_wavefunction.tex
+{\raggedright Real-Mode Quadrature and Action \newline \textit{Mechanical normal-mode normalization}\par} & {\raggedright $\begin{gathered}[t]a_a=\sqrt{\frac{M_a\omega_a}{2\hbar}}q_a \\ {}+\frac{i\pi_a}{\sqrt{2\hbar M_a\omega_a}} \\ E_a=\hbar\omega_a|a_a|^2,\quad I_a=\hbar|a_a|^2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}\par} \\
 
-Lattice \newline \textit{Fine-Structure} & $\alpha = \frac{K_{\mathrm{L}}}{c_{\mathrm{E}}^2 J_{\mathrm{N}}} \approx \frac{1}{137}$ & - & \hyperref[app:geometric_alpha]{Appendix \ref*{app:geometric_alpha}} \\
+% A025 | source: Appendices/app_physical_wavefunction.tex
+{\raggedright Phase Momentum and Mode Energy \newline \textit{Travelling phase $S=\hbar(\mathbf k\cdot\mathbf x-\omega t)$}\par} & {\raggedright $\begin{gathered}[t]\mathbf p=\nabla S=\hbar\mathbf k \\ E=-\partial_tS=\hbar\omega\end{gathered}$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}\par} \\
 
-TFT Hydrogenic \newline \textit{Shell Law} & $r_n = \frac{n^2 \hbar}{m_{\mathrm{e}} \alpha c_{\mathrm{E}}}$ & - & \hyperref[app:hydrogenic_shell]{Appendix \ref*{app:hydrogenic_shell}} \\
+% O130 | source: Appendices/app_matter_vnlw_photon_linear_waveequation.tex
+{\raggedright Matter-Envelope Receiving Equation \newline \textit{Weak local narrow-band reduction}\par} & {\raggedright $\begin{gathered}[t]i\hbar\partial_t\psi_{\mathrm{env}} \\ =\left[-\frac{\hbar^2}{2m_{\mathrm{env}}}\nabla^2+V-\frac{i\hbar\Gamma}{2}\right] \\ \times\psi_{\mathrm{env}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}\par} \\
 
-TFT Hydrogenic \newline \textit{Energy Spectrum} & $E_n = -\frac{m_{\mathrm{e}} \alpha^2 c_{\mathrm{E}}^2}{2n^2}$ & - & \hyperref[app:hydrogenic_shell]{Appendix \ref*{app:hydrogenic_shell}} \\
+% A026 | source: Appendices/app_physical_wavefunction.tex; Appendices/app_quantum_tunneling.tex
+{\raggedright Action Current and Guidance \newline \textit{Isolated isotropic matter branch}\par} & {\raggedright $\begin{gathered}[t]\mathbf j_\psi=\frac{\hbar}{m_{\mathrm{env}}}\operatorname{Im}(\psi^*\nabla\psi) \\ \mathbf v_\psi=\mathbf j_\psi/\rho_\psi=\nabla S/m_{\mathrm{env}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}} \newline \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}\par} \\
 
-Angular Standing \newline \textit{Mode Limit} & $l \le n-1$ & - & \hyperref[app:atomic_angular_modes]{Appendix \ref*{app:atomic_angular_modes}} \\
+% A027 | source: Appendices/app_matter_vnlw_photon_linear_waveequation.tex
+{\raggedright Receiving-Envelope Continuity \newline \textit{Selected incident-band intensity}\par} & {\raggedright $\partial_t\rho_\psi+\nabla\!\cdot\mathbf j_\psi=-\Gamma\rho_\psi$\par} & -- & {\raggedright \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}\par} \\
 
-TFT Fine-Structure \newline \textit{Splitting} & $E_{n,l,j_{\mathrm{tot}}}^{\mathrm{TFT}} = -\frac{m_{\mathrm{e}} \alpha^2 c_{\mathrm{E}}^2}{2n^2} - \frac{m_{\mathrm{e}} \alpha^4 c_{\mathrm{E}}^2}{8n^4} + \zeta_{\mathrm{SO}} \frac{m_{\mathrm{e}} \alpha^4 c_{\mathrm{E}}^2}{2n^6 \left[j_{\mathrm{tot}}(j_{\mathrm{tot}}+1) - l(l+1) - \frac{3}{4}\right]}$ & - & \hyperref[app:fine_structure]{Appendix \ref*{app:fine_structure}} \\
+% O131 | source: Appendices/app_physical_wavefunction.tex
+{\raggedright Amplitude-Gradient Potential \newline \textit{Regular matched matter envelope}\par} & {\raggedright $Q=-\frac{\hbar^2}{2m_{\mathrm{env}}}\frac{\nabla^2\sqrt{\rho_\psi}}{\sqrt{\rho_\psi}}$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}\par} \\
 
-Bipolar Lattice \newline \textit{Strain Force} & $F_{\mathrm{lattice}} = \frac{K_{\mathrm{L}} (\chi_1)(\chi_2)}{r^2}$ & - & \hyperref[app:origin_of_charge]{Appendix \ref*{app:origin_of_charge}} \\
+% A028 | source: Appendices/app_physical_wavefunction.tex
+{\raggedright Mechanical Phase-Action Equation \newline \textit{Full matter-field phase; conservative branch}\par} & {\raggedright $\begin{gathered}[t]\partial_tS+E_0+\frac{|\nabla S|^2}{2m_{\mathrm{env}}} \\ {}+V+Q=0\end{gathered}$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}\par} \\
 
-Photonic Extrusion \newline \textit{Energy} & $E_{\gamma} = \int \delta\tau \, \mathrm{d}V \approx \tau_{\mathrm{bulk}} \cdot A_{\mathrm{chan}} \cdot \Delta r$ & - & \hyperref[app:photonic_emission]{Appendix \ref*{app:photonic_emission}} \\
+% O132 | source: Appendices/app_physical_wavefunction.tex
+{\raggedright Conservative Phase-Flow Force Law \newline \textit{Constant matched inertia}\par} & {\raggedright $\begin{gathered}[t]m_{\mathrm{env}}(\partial_t+\mathbf v_\psi\!\cdot\nabla)\mathbf v_\psi \\ =-\nabla V-\nabla Q\end{gathered}$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}\par} \\
 
-Nucleon Resonance \newline \textit{Threshold} & $E_{\mathrm{N}} = \frac{h c_{\mathrm{E}}}{r_{\mathrm{N}}} \approx 1.41 \text{ GeV}$ & \hyperref[sec:19.6]{19.6} & Energy Limits \\
+% O133 | source: Trilogy/PartII/08_Quantum_Vacuum.tex
+{\raggedright Minimum Rotational Participation \newline \textit{Fixed-axis $L=\hbar/2$, $v\leq c_{\mathrm E}$}\par} & {\raggedright $\begin{gathered}[t]M_{\mathrm{spin}}\geq\frac{\hbar}{2c_{\mathrm E}r_{\mathrm D}} \\ =M_{\mathrm{spin,min}}=\frac{M_{\mathrm D}}{4\pi} \\ M_{\mathrm{spin,min}}\approx2.3607\times10^{-17}\,\mathrm{kg}\end{gathered}$\par} & \hyperref[sec:quantum_spin]{\ref*{sec:quantum_spin}} & {\raggedright Main-body construction\par} \\
+
+% A029 | source: Trilogy/PartII/08_Quantum_Vacuum.tex
+{\raggedright Rotational Participation Bound \newline \textit{Fixed-axis $L=\hbar/2$ model}\par} & {\raggedright $\begin{gathered}[t]I_{\mathrm{spin}}=M_{\mathrm{spin}}r_{\mathrm D}^2 \\ v=\frac{\hbar}{2M_{\mathrm{spin}}r_{\mathrm D}}\leq c_{\mathrm E} \\ M_{\mathrm{spin}}\geq M_{\mathrm D}/(4\pi)\end{gathered}$\par} & \hyperref[sec:quantum_spin]{\ref*{sec:quantum_spin}} & {\raggedright Main-body construction\par} \\
+
+% O134 | source: Appendices/app_matter_vnlw_photon_linear_waveequation.tex
+{\raggedright Independent-Target Receiving Rate \newline \textit{Matched flux normalization}\par} & {\raggedright $\begin{gathered}[t]\Gamma_{\mathrm{beam}}=n_{\mathrm K}\sigma v_{\mathrm{inc}} \\ \Gamma=\sigma c_{\mathrm P}n_{\mathrm K}\quad(v_{\mathrm{inc}}=c_{\mathrm P})\end{gathered}$\par} & -- & {\raggedright \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}\par} \\
+
+% A030 | source: Appendices/app_matter_vnlw_photon_linear_waveequation.tex
+{\raggedright Received-Power Cross-Section \newline \textit{Dilute independent targets}\par} & {\raggedright $\sigma(\omega)=\frac{\overline P_{\mathrm{rec}}(\omega)}{I_{\mathrm{in}}(\omega)}$\par} & -- & {\raggedright \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}\par} \\
+
+% A031 | source: Appendices/app_matter_vnlw_photon_linear_waveequation.tex
+{\raggedright Coupled Receiving Equation \newline \textit{Constant positive retained inertia}\par} & {\raggedright $M_q\ddot q+U^{\prime}(q)+Q_{\mathrm{rec}}=F_{\mathrm{in}}$\par} & -- & {\raggedright \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}\par} \\
+
+% A032 | source: Appendices/app_matter_vnlw_photon_linear_waveequation.tex
+{\raggedright Receiving Memory Kernel \newline \textit{Resolved conservative receiving modes}\par} & {\raggedright $\begin{gathered}[t]K(s)=\sum_a\frac{g_a^2}{m_a\omega_a^2}\cos(\omega_a s) \\ Q_{\mathrm{rec}}(t)=\int_0^tK(t-t^{\prime})\dot q(t^{\prime})\,\mathrm dt^{\prime} \\ {}-f_0(t)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}\par} \\
+
+% A033 | source: Appendices/app_matter_vnlw_photon_linear_waveequation.tex; Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Receiving-Work Energy Balance\par} & {\raggedright $\begin{gathered}[t]\dot E_q=F_{\mathrm{in}}\dot q-Q_{\mathrm{rec}}\dot q \\ \dot E_{\mathrm{rec}}=Q_{\mathrm{rec}}\dot q\end{gathered}$\par} & -- & {\raggedright \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}} \newline \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% A034 | source: Appendices/app_matter_vnlw_photon_linear_waveequation.tex
+{\raggedright Impedance and Coherent-Energy Rate \newline \textit{Weak local harmonic response}\par} & {\raggedright $\begin{gathered}[t]\overline P_{\mathrm{rec}}=\tfrac12\operatorname{Re}Z_{\mathrm{rec}}(\omega)|\widehat{\dot q}|^2 \\ \Gamma_q=\overline P_{\mathrm{rec}}/\overline E_{q,\mathrm{coh}} \\ \simeq\eta_q/M_q\end{gathered}$\par} & -- & {\raggedright \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}\par} \\
+
+% A035 | source: Appendices/app_matter_vnlw_photon_linear_waveequation.tex
+{\raggedright Binding Minimum and Settling \newline \textit{After drive; passive local response; negligible return}\par} & {\raggedright $\begin{gathered}[t]U^{\prime}(q_*)=0,\quad U^{\prime\prime}(q_*)>0 \\ E_q=\tfrac12 M_q(q)\dot q^2+U(q) \\ \dot E_q=-\eta_q(q)\dot q^2\leq0\end{gathered}$\par} & -- & {\raggedright \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}\par} \\
+
+% O135 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Continuum Field-Spread Bound \newline \textit{Normalized field; regular boundary terms}\par} & {\raggedright $\begin{gathered}[t]\sigma_x^2\sigma_{p,\mathrm w}^{\,2}-C_{xp}^{\,2}\geq\hbar^2/4 \\ \sigma_x\sigma_{p,\mathrm w}\geq\sqrt{C_{xp}^{\,2}+\hbar^2/4} \\ \geq\hbar/2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% A036 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Phase/Amplitude Momentum Spread \newline \textit{Normalized regular 1D field}\par} & {\raggedright $\begin{gathered}[t]\sigma_{p,\mathrm w}^2=\operatorname{Var}_\rho(S^{\prime})+\frac{\hbar^2}{4}\mathcal F_\rho \\ \mathcal F_\rho=\int\frac{(\rho_\psi^{\prime})^2}{\rho_\psi}\,\mathrm dx\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% A037 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Complete Preparation-to-Output Map \newline \textit{Fixed linear coupled system}\par} & {\raggedright $\begin{gathered}[t]\mathbf z=\mathsf A\mathbf z_0+\mathsf B\mathbf w_0+\mathbf d \\ \mathbf z=(q,\pi_q)^{\mathsf T}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% A038 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Full Output Covariance \newline \textit{Includes receiving and cross-covariance}\par} & {\raggedright $\begin{gathered}[t]\mathsf V_{\mathrm{out}}=\mathsf A\mathsf V_0\mathsf A^{\mathsf T} \\ {}+\mathsf B\mathsf V_{\mathrm R}\mathsf B^{\mathsf T} \\ {}+\mathsf A\mathsf V_{0\mathrm R}\mathsf B^{\mathsf T} \\ {}+\mathsf B\mathsf V_{0\mathrm R}^{\mathsf T}\mathsf A^{\mathsf T}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% A039 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Inherited Covariance-Area Contraction \newline \textit{Local linear signal contribution only}\par} & {\raggedright $\begin{gathered}[t]\sqrt{\det\mathsf V_{\mathrm{sig}}(t)} \\ =e^{-(\eta_q/M_q)t}\sqrt{\det\mathsf V_{\mathrm{sig}}(0)}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% O137 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Inherited and Complete Canonical Response \newline \textit{Constant local coefficients for exponential}\par} & {\raggedright $\begin{gathered}[t][\widehat q_{\mathrm{sig}},\widehat\pi_{q,\mathrm{sig}}] \\ =i\hbar\det\boldsymbol\Phi=i\hbar e^{-(\eta_q/M_q)t} \\ [\widehat q_{\mathrm{out}},\widehat\pi_{q,\mathrm{out}}]=i\hbar\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% A040 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Complete Canonical Pairing \newline \textit{Full retained/receiving Hamiltonian map}\par} & {\raggedright $\begin{gathered}[t]\mathsf A\mathsf J_2\mathsf A^{\mathsf T} \\ {}+\mathsf B\mathsf J_{\mathrm R}\mathsf B^{\mathsf T}=\mathsf J_2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% A041 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Finite-Window Record Retention \newline \textit{Inside basin; $\eta_q\geq\eta_{\min}>0$}\par} & {\raggedright $\begin{gathered}[t]E_q(t_c)-U(q_j) \\ {}+\frac1{4\eta_{\min}}\int_{t_c}^{t_{\mathrm{read}}}f_0(t)^2\,\mathrm dt \\ <\Delta U_{\mathrm{esc},j}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% A042 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Residual-Energy Readout Bound \newline \textit{Already selected record basin}\par} & {\raggedright $\begin{gathered}[t]P(\text{outside tolerance}\mid j) \\ \leq\min\!\left(1,\frac{\langle E_q\rangle_j-U(q_j)}{E_{\mathrm{tol},j}}\right)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% A043 | source: Appendices/app_deterministic_measurement_resolution.tex
+{\raggedright Position/Momentum Readout Matching \newline \textit{Separate ideal matched apparatuses; correspondence condition}\par} & {\raggedright $\begin{gathered}[t]\frac{\mathrm d\mathbb P_x}{\mathrm dx}=\rho_\psi(x) \\ \frac{\mathrm d\mathbb P_p}{\mathrm dp_{\mathrm w}}=|\widetilde\psi(p_{\mathrm w})|^2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}\par} \\
+
+% O138 | source: Appendices/app_photon_hamiltonian.tex
+{\raggedright Photon Real-Mode Hamiltonian \newline \textit{One consistently integrated mode}\par} & {\raggedright $\begin{gathered}[t]H_{\mathrm A}=\frac{\pi_{\mathrm A}^2}{2M_{\mathrm A}}+\frac12k_{\mathrm A}q_{\mathrm A}^2 \\ \pi_{\mathrm A}=M_{\mathrm A}\dot q_{\mathrm A},\quad k_{\mathrm A}=M_{\mathrm A}\omega_{\mathrm A}^2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}\par} \\
+
+% A044 | source: Appendices/app_photon_hamiltonian.tex
+{\raggedright Local Interference Energy and Flux \newline \textit{Homogeneous conservative 1D transverse mode}\par} & {\raggedright $\begin{gathered}[t]e_{\mathrm A}=\tfrac12\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}(\partial_tA)^2 \\ {}+\tfrac12K_{\mathrm{sh}}^{(\mathrm{micro},0)}(\partial_xA)^2 \\ j_{\mathrm A}=-K_{\mathrm{sh}}^{(\mathrm{micro},0)}\partial_tA\,\partial_xA \\ \partial_te_{\mathrm A}+\partial_xj_{\mathrm A}=0\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}\par} \\
+
+% A045 | source: Appendices/app_physical_wavefunction.tex; Appendices/app_photon_hamiltonian.tex
+{\raggedright Elementary Photon Modal Action \newline \textit{Whole elementary excitation}\par} & {\raggedright $\begin{gathered}[t]I_\gamma=E_\gamma/\omega_\gamma=\hbar \\ \oint\pi_q\,\mathrm dq=2\pi I_\gamma=h\end{gathered}$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}} \newline \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}\par} \\
+
+% O139 | source: Appendices/app_quantum_tunneling.tex
+{\raggedright Passive Rectangular-Barrier Transmission \newline \textit{$0<E<V_{\mathrm B}$; identical exterior channels}\par} & {\raggedright $\begin{gathered}[t]T_{\mathrm{pass}}=\left[1+\frac{V_{\mathrm B}^2\sinh^2(\kappa_{\mathrm B}L)}{4E(V_{\mathrm B}-E)}\right]^{-1} \\ \kappa_{\mathrm B}=\sqrt{2m(V_{\mathrm B}-E)}/\hbar\end{gathered}$\par} & -- & {\raggedright \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}\par} \\
+
+% A046 | source: Appendices/app_quantum_tunneling.tex
+{\raggedright Evanescent Barrier Scale \newline \textit{$0<E<V_{\mathrm B}$; $m=m_{\mathrm{env}}=m_i$}\par} & {\raggedright $\begin{gathered}[t]\kappa_{\mathrm B}=\frac{\sqrt{2m(V_{\mathrm B}-E)}}{\hbar} \\ k=\frac{\sqrt{2mE}}\hbar\end{gathered}$\par} & -- & {\raggedright \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}\par} \\
+
+% O140 | source: Appendices/app_graviton.tex
+{\raggedright Gravitational Strain \newline \textit{of a Photon}\par} & {\raggedright $\alpha_{\mathrm{G},\gamma}=2\pi(\ell_{\mathrm S}/\lambda)^2$\par} & -- & {\raggedright \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}\par} \\
+
+% O141 | source: Appendices/app_graviton.tex
+{\raggedright Graviton Energy \newline \textit{Strain Shadow}\par} & {\raggedright $E_{\mathrm{g}} = \frac{h^2 G}{c_{\mathrm{E}}^2 \lambda^3}$\par} & -- & {\raggedright \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}\par} \\
+
+% AW-CE-01 | Compatible scalar registry
+{\raggedright Compatible Reference Registry
+\newline \textit{Conditional scalar construction on the stated SC patch}\par}
+& {\raggedright $\begin{gathered}[t]
+    \mathbf e_{\mathrm R}=B\mathbf n,\qquad
+    \mathbf n\in\mathbb Z^{|V|} \\
+    FB=0,\qquad F\mathbf e_{\mathrm R}=0
+\end{gathered}$\par}
+& --
+& {\raggedright
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}
+\par} \\
+
+% AW-CE-02 | Registry and selector reference invariance
+{\raggedright Reference-Relabeling Invariance
+\newline \textit{Same physical reference; $c\in\mathbb Z$}\par}
+& {\raggedright $\begin{gathered}[t]
+    B(\mathbf n+c\mathbf 1)=B\mathbf n \\
+    B\boldsymbol{\nu}[\mathcal H_{\partial},\mathbf n+c\mathbf 1] \\
+    {}=B\boldsymbol{\nu}[\mathcal H_{\partial},\mathbf n]
+\end{gathered}$\par}
+& --
+& {\raggedright
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}
+\par} \\
+
+% AW-CE-03 | One law for first and repeated writes
+{\raggedright Stateful Registry Update
+\newline \textit{Proposed selector; first and repeated events}\par}
+& {\raggedright $\begin{gathered}[t]
+    \mathbf n_{j+1}
+    =\mathbf n_j+\boldsymbol{\nu}[\mathcal H_{\partial,j},\mathbf n_j] \\
+    \boldsymbol{\nu}\in\mathbb Z^{|V|}
+\end{gathered}$\par}
+& --
+& {\raggedright
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}
+\par} \\
+
+% AW-CE-04 | Compatible and nontrivial record change
+{\raggedright Compatible Record Increment
+\newline \textit{Nontrivial change requires $B\boldsymbol{\nu}\neq0$}\par}
+& {\raggedright $\begin{gathered}[t]
+    \Delta\mathbf e_{\mathrm R}=B\boldsymbol{\nu} \\
+    F\Delta\mathbf e_{\mathrm R}=0
+\end{gathered}$\par}
+& --
+& {\raggedright
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}
+\par} \\
+
+% AW-CE-05 | The stated negative-frequency harmonic convention
+% Uniform updates cancel on the patch's internal bonds.
+{\raggedright Common-Harmonic Winding Test
+\newline \textit{One period; nonzero phasors; uniform internal update}\par}
+& {\raggedright $\begin{gathered}[t]
+    w_v=\frac{1}{2\pi i}\oint\frac{\mathrm d\psi_v}{\psi_v}=-1 \\
+    \mathbf w=-\mathbf 1,\qquad
+    \Delta\mathbf e_{\mathrm R}=B\mathbf w=0
+\end{gathered}$\par}
+& --
+& {\raggedright
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}
+\par} \\
+
+% AW-CE-06 | Compact restatement of the connected-family theorem
+{\raggedright Integer-Selector Continuity Restriction
+\newline \textit{Fixed old registry and event boundary conditions}\par}
+& {\raggedright
+$\boldsymbol{\nu}=\text{constant}$ on each connected family
+of admissible interface histories whenever the integer-valued
+selector is continuous on that family.
+\par}
+& --
+& {\raggedright
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}
+\par} \\
+
+% AW-CE-07 | Conditional representation of post-event persistence
+{\raggedright Static Registry Retention
+\newline \textit{Candidate representation; fixed reference convention}\par}
+& {\raggedright
+$\mathbf n(t)=\mathbf n^{+}$
+\newline between further writing interactions.
+\par}
+& --
+& {\raggedright
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}
+\par} \\
+
+% AW-CE-08 | Required event-energy accounting
+{\raggedright Record-Writing Energy Balance
+\newline \textit{Required event ledger; no contribution counted twice}\par}
+& {\raggedright $\begin{aligned}[t]
+    &\Delta E_\gamma
+      +\Delta E_{\mathrm{AV}\setminus\gamma}
+      +\Delta E_{\mathrm{int}} \\
+    &\qquad+\Delta U_{\mathrm R}
+      =W_{\mathrm{ext}}+\mathcal E_{\partial}
+\end{aligned}$\par}
+& --
+& {\raggedright
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}
+\par} \\
+
+% O142 | source: Trilogy/PartI/01_PartI_Intro.tex
+{\raggedright Hard-Floor Constraint Limit \newline \textit{No finite-energy propagating wave}\par} & {\raggedright $\begin{gathered}[t]K_{\mathrm S}\to\infty,\quad\mu_{\mathrm S}\to0 \\ c_{\mathrm S}\to\infty\end{gathered}$\par} & \hyperref[sec:sgf_constitution]{\ref*{sec:sgf_constitution}} & {\raggedright Main-body construction\par} \\
+
+% O143 | source: Appendices/app_entanglement.tex
+{\raggedright Topological Budget Identity \newline \textit{Linear torsional-capacity comparison}\par} & {\raggedright $\alpha_{\mathrm{Q}} = 1 - \alpha_{\mathrm{G}}$\par} & -- & {\raggedright \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}\par} \\
+
+% A047 | source: Appendices/app_quantum_entanglement.tex
+{\raggedright Balanced Recorded Singlet Law \newline \textit{Balanced analyzer, threshold and paired-record closures}\par} & {\raggedright $\begin{gathered}[t]P_{\mathrm{opp}\mid\mathrm{rec}}=\cos^2(\theta_{\mathrm{AB}}/2) \\ P_{\mathrm{same}\mid\mathrm{rec}}=\sin^2(\theta_{\mathrm{AB}}/2) \\ E_{\mathrm{Bell}}=-\widehat{\mathbf n}_{\mathrm A}\!\cdot\widehat{\mathbf n}_{\mathrm B}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}\par} \\
+
+% A048 | source: Appendices/app_quantum_entanglement.tex
+{\raggedright CHSH Combination and Ideal Limit \newline \textit{Same balanced singlet law; unit analyzer axes}\par} & {\raggedright $\begin{gathered}[t]S_{\mathrm{CHSH}}=E_{\mathrm{Bell}}(\mathbf a,\mathbf b) \\ {}+E_{\mathrm{Bell}}(\mathbf a,\mathbf b^{\prime}) \\ {}+E_{\mathrm{Bell}}(\mathbf a^{\prime},\mathbf b) \\ {}-E_{\mathrm{Bell}}(\mathbf a^{\prime},\mathbf b^{\prime}) \\ |S_{\mathrm{CHSH}}|_{\max}=2\sqrt2\end{gathered}$\par} & -- & {\raggedright \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}\par} \\
+
+% A049 | source: Appendices/app_quantum_entanglement.tex
+{\raggedright Single-Axis Phase Visibility \newline \textit{One preserved axis; not a universal $\alpha_{\mathrm Q}$ law}\par} & {\raggedright $\begin{gathered}[t]\mathcal V_\varphi=|\langle e^{i\varphi}\rangle| \\ |S_{\mathrm{CHSH}}|_{\max}=2\sqrt{1+\mathcal V_\varphi^2}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}\par} \\
+
+% O144 | source: Appendices/app_photon_hamiltonian.tex
+{\raggedright Operative Local Tension \newline \textit{Baseline directional stiffness; N/m}\par} & {\raggedright $\begin{gathered}[t]\tau_{\mathrm{local}}=4k_{\mathrm{ct}}^{(\mathrm{modal})} \\ =hc_{\mathrm E}/r_{\mathrm D}^3\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}\par} \\
+
+% O145 | source: Appendices/app_photon_hamiltonian.tex
+{\raggedright Photon Mode Peak Displacement \newline \textit{Selected elementary mode; not a universal spatial width}\par} & {\raggedright $\begin{gathered}[t]\Delta x=\sqrt{\frac{2I_{\mathrm A}}{M_{\mathrm A}\omega_{\mathrm A}}} \\ I_{\mathrm A}=\hbar\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}\par} \\
+
+% O146 | source: Appendices/app_photonic_emission.tex
+{\raggedright Phase Crosstalk Budget Limit \newline \textit{Declared overlap/interaction estimate}\par} & {\raggedright $\Delta\varphi \leq \eta_{\varphi} \left(\frac{c_{\mathrm{E}}}{r^3}\right) A_{\mathrm{overlap}} T$\par} & -- & {\raggedright \hyperref[app:photonic_emission]{Appendix~\ref*{app:photonic_emission}}\par} \\
+
+% O147 | source: Appendices/app_quantum_tunneling.tex
+{\raggedright Coherent Reflection Cancellation \newline \textit{Reciprocal symmetric two-port}\par} & {\raggedright $\begin{gathered}[t]a_{\mathrm R}/a_{\mathrm L}=-r_{\mathrm B}/t_{\mathrm B} \\ b_{\mathrm L}=0\end{gathered}$\par} & -- & {\raggedright \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}\par} \\
+
+% A050 | source: Appendices/app_quantum_tunneling.tex
+{\raggedright Driven Rectangular-Barrier Input \newline \textit{Specified boundary-phase convention}\par} & {\raggedright $\begin{gathered}[t]\frac{a_{\mathrm R}}{a_{\mathrm L}}=i\frac{V_{\mathrm B}}{2\sqrt{E(V_{\mathrm B}-E)}} \\ \times\sinh(\kappa_{\mathrm B}L)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}\par} \\
+
+% A051 | source: Appendices/app_quantum_tunneling.tex
+{\raggedright Active Topological-Knot Transport \newline \textit{Reflection-canceled field and guidance closure}\par} & {\raggedright $\begin{gathered}[t]\dot x_K=\frac{\hbar k}{m}\bigl[\cosh^2(\kappa_{\mathrm B}x_K) \\ {}+\frac{k^2}{\kappa_{\mathrm B}^2}\sinh^2(\kappa_{\mathrm B}x_K)\bigr]^{-1} \\ 0\leq x_K\leq L\end{gathered}$\par} & -- & {\raggedright \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}\par} \\
+
+% A052 | source: Appendices/app_quantum_tunneling.tex
+{\raggedright Coherent Drive Power Requirement \newline \textit{Conservative symmetric barrier; matched ports}\par} & {\raggedright $\begin{gathered}[t]\left|a_{\mathrm R}/a_{\mathrm L}\right|^2 \\ =|r_{\mathrm B}/t_{\mathrm B}|^2=(1-T_{\mathrm{pass}})/T_{\mathrm{pass}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}\par} \\
+
+% O148 | source: Appendices/app_physical_wavefunction.tex
+{\raggedright Topological Winding Condition \newline \textit{Single-valued completed phase loop}\par} & {\raggedright $\begin{gathered}[t]\oint_{\mathcal C}\nabla\varphi\!\cdot\mathrm d\boldsymbol\ell=2\pi n \\ \oint_{\mathcal C}\mathbf p\!\cdot\mathrm d\boldsymbol\ell=nh\end{gathered}$\par} & -- & {\raggedright \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}\par} \\
 
 \bottomrule
 \end{longtable}
 
-\newpage % Forces the section and table to start cleanly on the next page
-
-\section*{Part III: Cosmic Architecture, Kinematics, and Thermodynamics}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two} (Continued): Grand Unification of the Fundamental Forces}
 
 \vspace{0.5cm}
 \noindent
-\renewcommand{\arraystretch}{1.6}
 \begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endfirsthead
-
-% This tells longtable what to print at the top if the table breaks to a new page
 \toprule
 \textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
 \midrule
 \endhead
 
-Active-Vacuum Cyclic Energy Transfer \newline \textit{CMB Deficit} & $\oint F \cdot \mathrm{d}x > 0$ & \hyperref[sec:24.5]{24.5} & Solid-State Mechanics \\
+% O149 | source: Appendices/app_conservation_action.tex
+{\raggedright Raw Structural Mass Moment \newline \textit{$\widehat J=J_i/\mathcal F_i$ invariant}\par} & {\raggedright $J_i = \rho_i r_i^4$\par} & -- & {\raggedright \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}}\par} \\
 
-Lattice Thermal \newline \textit{Diffusion} & $T \propto t^{-1/2}$ & - & \hyperref[app:lattice_annealing]{Appendix \ref*{app:lattice_annealing}} \\
+% O150 | source: Appendices/app_unifiedforces_validation.tex
+{\raggedright Strong-Force Confinement \newline \textit{Selected confinement-area model}\par} & {\raggedright $T_{\mathrm{s}} = 2\pi \rho_{\mathrm{eff}} c_{\mathrm{E}}^2 r_{\mathrm{N}}^2$\par} & -- & {\raggedright \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}\par} \\
 
-Photon Energy-Relaxation \newline \textit{Redshift Law} & $1+z_{\mathrm D}=e^{\frac{\Gamma_{\mathrm D}x}{c_{\mathrm E}}}$ & - & \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} \\
+% O151 | source: Appendices/app_geometric_alpha.tex; Appendices/app_origin_of_charge.tex
+{\raggedright Electromagnetism \newline \textit{Fine-Structure}\par} & {\raggedright $\alpha = \frac{K_{\mathrm{L}}}{\hbar c_{\mathrm{E}}}$\par} & -- & {\raggedright \hyperref[app:geometric_alpha]{Appendix~\ref*{app:geometric_alpha}} \newline \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}}\par} \\
 
-Relaxation-Only \newline \textit{Coordinate Relation} & $r = \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}}\ln(1+z_{\mathrm{D}})$ & - & \hyperref[app:time_dilation]{Appendix \ref*{app:time_dilation}} \\
+% A053 | source: Appendices/app_dynamic_alpha.tex
+{\raggedright FCC Routing Fine-Structure Ansatz \newline \textit{Declared dynamic routing closure}\par} & {\raggedright $\alpha=\frac{\sqrt{2\sqrt3/\pi}}{144-\frac{24\alpha}{\sqrt3}(1+\alpha+\alpha/14)}$\par} & -- & {\raggedright \hyperref[app:dynamic_alpha]{Appendix~\ref*{app:dynamic_alpha}}\par} \\
 
-Conditional \newline \textit{Luminosity Distance} & $d_{\mathrm{L}} = r(1+z_{\mathrm{kin}})^2\sqrt{1+z_{\mathrm{D}}}$ & - & \hyperref[app:time_dilation]{Appendix \ref*{app:time_dilation}} \\
+% O152 | source: Appendices/app_origin_of_charge.tex
+{\raggedright Macroscopic Coulomb Constant \newline \textit{Adopted SI reference baseline}\par} & {\raggedright $\begin{gathered}[t]k_{\mathrm e}=\mu_0c_{\mathrm E}^2/(4\pi) \\ \mu_0\simeq4\pi\times10^{-7}\,\mathrm{N/A^2}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}}\par} \\
 
-Lattice Impedance \newline \textit{Acceleration} & $a_{\mathrm{D}} = c_{\mathrm{E}} \cdot \Gamma_{\mathrm{D}} \approx 7.0964 \times 10^{-10} \text{ m/s}^2$ & - & \hyperref[app:cosmic_impedance]{Appendix \ref*{app:cosmic_impedance}} \\
+% O153 | source: Appendices/app_origin_of_charge.tex
+{\raggedright Elementary \newline \textit{Charge}\par} & {\raggedright $e = \sqrt{\frac{K_{\mathrm{L}}}{k_{\mathrm{e}}}}$\par} & -- & {\raggedright \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}}\par} \\
 
-Galactic Acceleration \newline \textit{Scale ($a_{\mathrm{gal}}$)} & $a_{\mathrm{gal}} \equiv \frac{a_{\mathrm{D}}}{2\pi} \approx 1.1294 \times 10^{-10} \text{ m/s}^2$ & - & \hyperref[app:cosmic_impedance]{Appendix \ref*{app:cosmic_impedance}} \\
+% A054 | source: Appendices/app_origin_of_charge.tex
+{\raggedright Electromagnetic Conversion Identities \newline \textit{Same electromagnetic SI normalization}\par} & {\raggedright $\begin{gathered}[t]K_{\mathrm L}=k_{\mathrm e}e^2=\alpha\hbar c_{\mathrm E} \\ \epsilon_0=(4\pi k_{\mathrm e})^{-1} \\ \mu_0\epsilon_0c_{\mathrm E}^2=1\end{gathered}$\par} & -- & {\raggedright \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}}\par} \\
 
-Macroscopic \newline \textit{MOND Equivalent} & $a_0 = \frac{a_{\mathrm{D}}}{2\pi}$ & \hyperref[sec:26.5]{26.5} & Geometric Projection \\
+% O154 | source: Appendices/app_unifiedforces_validation.tex
+{\raggedright Weak-Interaction Coupling Scale \newline \textit{Inverse-square energy-scale convention}\par} & {\raggedright $G_{\mathrm{F}} = (2\pi \rho(r_{\mathrm{w}}) c_{\mathrm{E}}^2 r_{\mathrm{w}}^3)^{-2}$\par} & -- & {\raggedright \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}\par} \\
 
-Photon Energy-Relaxation Length \newline \textit{Cosmic Damping Horizon} & $R_{\mathrm U}=\frac{c_{\mathrm E}}{\Gamma_{\mathrm D}}\approx4104.5\ \mathrm{Mpc}$ & \hyperref[sec:26.3.2]{26.3.2} & Photon Relaxation \\
+% O155 | source: Appendices/app_unifiedforces_validation.tex
+{\raggedright Density Form of Gravitational Loading \newline \textit{$M=\kappa\rho R^3$}\par} & {\raggedright $\alpha_{\mathrm G}=\kappa\rho G R^2/c_{\mathrm E}^2$\par} & -- & {\raggedright \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}\par} \\
 
-True Euclidean \newline \textit{Acoustic Ruler} & $r_{s(\text{TFT})} = R_{\mathrm{U}} \cdot \theta_* \approx 42.73 \text{ Mpc}$ & \hyperref[sec:26.3.2]{26.3.2} & Geometric Triang. \\
+% O156 | source: Appendices/app_unifiedforces_validation.tex
+{\raggedright Unified EM Torsional Projection \newline \textit{Nucleon normalization $J_{\mathrm N}=\widehat J$}\par} & {\raggedright $\alpha = \frac{K_{\mathrm{L}}}{c_{\mathrm{E}}^2 J_{\mathrm{N}}}$\par} & -- & {\raggedright \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}\par} \\
 
-Topological \newline \textit{Invariant Cycles} & $N = f \cdot \Delta t$ & - & \hyperref[app:time_dilation]{Appendix \ref*{app:time_dilation}} \\
+% O157 | source: Appendices/app_unifiedforces_validation.tex
+{\raggedright Unified Weak Torsional Projection \newline \textit{Selected torsional-volume model}\par} & {\raggedright $E_{\mathrm{weak}} = \frac{2\pi J_i c_{\mathrm{E}}^2}{r_{\mathrm{w}}}$\par} & -- & {\raggedright \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}\par} \\
 
-Observed SN \newline \textit{Time Dilation} & $\Delta t_{\mathrm{obs}} = \frac{N}{f_{\mathrm{obs}}} = \Delta t_{\mathrm{emit}} (1+z)$ & - & \hyperref[app:time_dilation]{Appendix \ref*{app:time_dilation}} \\
+% O158 | source: Appendices/app_unifiedforces_validation.tex
+{\raggedright Unified Strong Torsional Projection \newline \textit{Selected confinement-area model}\par} & {\raggedright $\sigma_{\mathrm{s}} = \frac{2\pi c_{\mathrm{E}}^2 J_i}{r_{\mathrm{N}}^2}$\par} & -- & {\raggedright \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}\par} \\
 
-Thermodynamic \newline \textit{Dimming (Energy)} & $E_{\mathrm{obs}} = \frac{E_{\mathrm{emit}}}{1+z}$ & - & \hyperref[app:time_dilation]{Appendix \ref*{app:time_dilation}} \\
-
-Kinematic \newline \textit{Power Drop} & $P_{\mathrm{obs}} = \frac{P_{\mathrm{emit}}}{(1+z)^2}$ & - & \hyperref[app:time_dilation]{Appendix \ref*{app:time_dilation}} \\
-
-Effective Gravitational \newline \textit{Impedance} & $\mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{(1-\alpha_{\mathrm{G}})^4}$ & \hyperref[sec:25.4]{25.4} & Part II Unity \\
-
-Cosmic Critical \newline \textit{Mass (Observed)} & $M_{\mathrm{U}} = \frac{c_{\mathrm{E}}^3}{G \Gamma_{\mathrm{D}}}$ & \hyperref[sec:27.1]{27.1} & Kinematic Limits \\
-
-TFT Kinematic \newline \textit{State Equation} & $\Gamma_{\mathrm{D}}^2 = \frac{4\pi G}{3} \rho_{\mathrm{c}}$ & \hyperref[sec:27.2]{27.2} & Geometric Projection \\
-
-Total Cosmic \newline \textit{Reservoir Mass} & $M_{\mathrm{Res}} = M_{\mathrm{U}} \times 9.7957 \times 10^{25} \approx 1.6707 \times 10^{79} \text{ kg}$ & \hyperref[sec:27.3]{27.3} & Volumetric Scaling \\
-
-Octahedral \newline \textit{Void Limit} & $\beta_{\mathrm{oct}} = \frac{\pi(\sqrt{2}-1)^3}{3\sqrt{2}} \approx 0.0526$ & - & \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix \ref*{app:cosmic_energy_budget_and_chronology}} \\
-
-Baryonic Mass \newline \textit{Capacity} & $\beta_{\mathrm{b}} \le \beta_{\mathrm{oct}} \approx 0.0526$ & - & \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix \ref*{app:cosmic_energy_budget_and_chronology}} \\
-
-Phase-Volume \newline \textit{Reference Tensor} & $\left\langle T_{\mu\nu}^{(0)} \right\rangle = \beta_{\mathrm{geo}} T_{\mu\nu}^{(\mathrm{D},0)} + \beta_{\mathrm{IC}} T_{\mu\nu}^{(\mathrm{IC},0)}$ & - & \hyperref[app:cosmic_energy_continuum_mechanics]{App. \ref*{app:cosmic_energy_continuum_mechanics}} \\
-
-Exact Capacity \newline \textit{Ledger} & $T_{\mu\nu}^{(0)} = T_{\mu\nu}^{(\mathrm{rem})} + \Delta T_{\mu\nu}^{(\tau)}$ & - & \hyperref[app:cosmic_energy_continuum_mechanics]{App. \ref*{app:cosmic_energy_continuum_mechanics}} \\
-
-Uniform Structural \newline \textit{Capacity Closure} & $T_{\hat{0}\hat{0}}^{(\mathrm{D},0)} = T_{\hat{0}\hat{0}}^{(\mathrm{IC},0)} = \tau_{\mathrm{G}}$ & - & \hyperref[app:cosmic_energy_continuum_mechanics]{App. \ref*{app:cosmic_energy_continuum_mechanics}} \\
-
-TFT Effective \newline \textit{Cosmological Constant} & $\Omega_{\Lambda,\mathrm{eff}}^{(\mathrm{TFT})} = \beta_{\mathrm{geo}} - \beta_{\mathrm{b}}$ & - & \hyperref[app:cosmic_energy_continuum_mechanics]{App. \ref*{app:cosmic_energy_continuum_mechanics}} \\
-
-TFT Effective \newline \textit{Dark Matter Fraction} & $\Omega_{\mathrm{DM}}^{(\mathrm{TFT},0)} = \beta_{\mathrm{IC}}$ & - & \hyperref[app:cosmic_energy_continuum_mechanics]{App. \ref*{app:cosmic_energy_continuum_mechanics}} \\
-
-Late-Time Equation \newline \textit{of State Diagnostic} & $w_{\mathrm{tot}} \simeq -\left( \beta_{\mathrm{geo}} - \beta_{\mathrm{b}} \right) \simeq -0.69048$ & - & \hyperref[app:cosmic_energy_continuum_mechanics]{App. \ref*{app:cosmic_energy_continuum_mechanics}} \\
-
-Scale-Invariant Continuum \newline \textit{Equation} & $E_{\mathrm{max}} = h \Gamma_{\mathrm{D}} N_{\mathrm{D}}$ & \hyperref[sec:28.1]{28.1} & Strain Unification \\
-
-Global Cosmic Energy \newline \textit{($E_{\text{Res}}$)} & $E_{\mathrm{Res}} = M_{\mathrm{Res}} c_{\mathrm{E}}^2 \approx 10^{96} \text{ J}$ & \hyperref[sec:28.2.1]{28.2.1} & Volumetric Scaling \\
-
-Local Yield Tension \newline \textit{($\tau_G$)} & $\tau_{\mathrm{G}} = \rho_{\mathrm{G}} c_{\mathrm{E}}^2 = \tau_{\mathrm{D,bulk}} \approx 10^{96} \text{ J/m}^3$ & \hyperref[sec:28.2.2]{28.2.2} & Phase Saturation \\
-
-Global-Local Energy \newline \textit{Equivalence} & $\frac{E_{\mathrm{Res}}}{1 \text{ m}^3} \approx \tau_{\mathrm{G}}$ & \hyperref[sec:28.2]{28.2} & Scale Identity \\
-
-Global Phase Avalanche \newline \textit{Equation} & $M_{\mathrm{p}}(t) = M_{\mathrm{D,G}} \cdot e^{\Gamma_{\mathrm{D}} t}$ & - & \hyperref[app:cosmic_energy_budget_and_chronology]{App. \ref*{app:cosmic_energy_budget_and_chronology}} \\
-
-Global Rupture \newline \textit{Trigger Mass ($M_{\text{trg}}$)} & $M_{\mathrm{trg}} = 0.0516 \cdot M_{\mathrm{Res}} \approx 8.6208 \times 10^{77} \text{ kg}$ & - & \hyperref[app:cosmic_energy_budget_and_chronology]{App. \ref*{app:cosmic_energy_budget_and_chronology}} \\
-
-Total Oscillation \newline \textit{Time ($T_{\text{cyc}}$)} & $T_{\mathrm{cyc}} = 177.15 \cdot \Gamma_{\mathrm{D}}^{-1} \approx 2.3715 \text{ Trillion yrs}$ & - & \hyperref[app:cosmic_energy_budget_and_chronology]{App. \ref*{app:cosmic_energy_budget_and_chronology}} \\
-
-Current Aggregate \newline \textit{State II Mass ($M_{\text{cur}}$)} & $M_{\mathrm{cur}} = M_{\mathrm{obs}} \cdot (9.7957 \times 10^{25}) \approx 9.7957 \times 10^{75} \text{ kg}$ & - & \hyperref[app:cosmic_energy_budget_and_chronology]{App. \ref*{app:cosmic_energy_budget_and_chronology}} \\
-
-Current Cosmic \newline \textit{Epoch ($t_{\text{cur}}$)} & $t_{\mathrm{cur}} = 172.67 \cdot \Gamma_{\mathrm{D}}^{-1} \approx 2.3116 \text{ Trillion yrs}$ & - & \hyperref[app:cosmic_energy_budget_and_chronology]{App. \ref*{app:cosmic_energy_budget_and_chronology}} \\
-
-Remaining Cosmic \newline \textit{Lifespan ($\Delta t$)} & $\Delta t = \frac{1}{\Gamma_{\mathrm{D}}} \ln\left(\frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}}\right) \approx 59.94 \text{ Billion yrs}$ & - & \hyperref[app:cosmic_energy_budget_and_chronology]{App. \ref*{app:cosmic_energy_budget_and_chronology}} \\
-
-Cosmological Damping \newline \textit{Specific Work Extract} & $W_{\mathrm{total}} = a_{\mathrm{D}} \cdot R_{\mathrm{U}} = c_{\mathrm{E}}^2$ & - & \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}} \\
-
-Non-Linear Redshift \newline \textit{Expansion} & $z \approx \Gamma_{\mathrm{D}} t + \frac{(\Gamma_{\mathrm{D}} t)^2}{2}$ & - & \hyperref[app:vacuumdamping_cosmicredshift]{Appendix \ref*{app:vacuumdamping_cosmicredshift}} \\
+% O159 | source: Appendices/app_unifiedforces_validation.tex
+{\raggedright Unified Gravity Torsional Projection \newline \textit{Raw structural moment, same geometry}\par} & {\raggedright $\alpha_{\mathrm{G}} = \frac{\kappa J_i G}{c_{\mathrm{E}}^2 r^2}$\par} & -- & {\raggedright \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}\par} \\
 
 \bottomrule
 \end{longtable}
+
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:two} (Continued): The Mechanical Foundations of the Hydrogen Atom}
+
+\vspace{0.5cm}
+\noindent
+\begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endhead
+
+% O160 | source: Appendices/app_fractal_architecture.tex
+{\raggedright Proton Mechanical Radius \newline \textit{Adopted mechanical radius}\par} & {\raggedright $r_{\mathrm{N}} \approx 0.88 \times 10^{-15} \text{ m}$\par} & -- & {\raggedright \hyperref[app:fractal_architecture]{Appendix~\ref*{app:fractal_architecture}}\par} \\
+
+% O161 | source: Appendices/app_unifiedforces_validation.tex
+{\raggedright Effective Nuclear Confinement \newline \textit{Adopted nucleon normalization}\par} & {\raggedright $\begin{gathered}[t]F_{\mathrm{strong}}=2\pi\rho_{\mathrm{eff}}c_{\mathrm E}^2r_{\mathrm N}^2 \\ \approx1.6\,\mathrm{GeV/fm}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}\par} \\
+
+% O162 | source: Appendices/app_fractal_architecture.tex
+{\raggedright Nucleon Structural \newline \textit{Mass Moment}\par} & {\raggedright $\begin{gathered}[t]J_{\mathrm N}=\rho_{\mathrm N}r_{\mathrm N}^4 \\ \approx3.51\times10^{-43}\,\mathrm{kg\,m}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:fractal_architecture]{Appendix~\ref*{app:fractal_architecture}}\par} \\
+
+% O163 | source: Appendices/app_unifiedforces_validation.tex
+{\raggedright Lattice Fine-Structure Constant \newline \textit{Same invariant as the EM action form}\par} & {\raggedright $\alpha = \frac{K_{\mathrm{L}}}{c_{\mathrm{E}}^2 J_{\mathrm{N}}} \approx \frac{1}{137}$\par} & -- & {\raggedright \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}\par} \\
+
+% O164 | source: Appendices/app_hydrogenic_shell.tex
+{\raggedright TFT Hydrogenic Shell Law \newline \textit{Hydrogenic phase-closure construction}\par} & {\raggedright $r_n = \frac{n^2 \hbar}{m_{\mathrm{e}} \alpha c_{\mathrm{E}}}$\par} & -- & {\raggedright \hyperref[app:hydrogenic_shell]{Appendix~\ref*{app:hydrogenic_shell}}\par} \\
+
+% O165 | source: Appendices/app_hydrogenic_shell.tex
+{\raggedright TFT Hydrogenic Energy Spectrum \newline \textit{Leading shell energy}\par} & {\raggedright $E_n = -\frac{m_{\mathrm{e}} \alpha^2 c_{\mathrm{E}}^2}{2n^2}$\par} & -- & {\raggedright \hyperref[app:hydrogenic_shell]{Appendix~\ref*{app:hydrogenic_shell}}\par} \\
+
+% O166 | source: Appendices/app_atomic_angular_modes.tex
+{\raggedright Angular Standing Mode Limit \newline \textit{Finite shell phase-action budget}\par} & {\raggedright $l=0,1,\ldots,n-1$\par} & -- & {\raggedright \hyperref[app:atomic_angular_modes]{Appendix~\ref*{app:atomic_angular_modes}}\par} \\
+
+% A055 | source: Appendices/app_atomic_angular_modes.tex
+{\raggedright Angular Standing Modes \newline \textit{Orbital shell sector; not intrinsic knot spin}\par} & {\raggedright $\begin{gathered}[t]L^2=l(l+1)\hbar^2,\quad L_z=m\hbar \\ |m|\leq l\end{gathered}$\par} & -- & {\raggedright \hyperref[app:atomic_angular_modes]{Appendix~\ref*{app:atomic_angular_modes}}\par} \\
+
+% O167 | source: Appendices/app_fine_structure.tex
+{\raggedright TFT Fine-Structure Splitting \newline \textit{\hyperref[app:atomic_angular_modes]{Appendix~\ref*{app:atomic_angular_modes}} indices; overlap factor retained}\par} & {\raggedright $\begin{gathered}[t]E_{n,L,J_{\mathrm{tot}}}^{\mathrm{TFT}}=-\frac{m_{\mathrm e}\alpha^2c_{\mathrm E}^2}{2n^2} \\ {}-\frac{m_{\mathrm e}\alpha^4c_{\mathrm E}^2}{8n^4}+\zeta_{\mathrm{SO}}\frac{m_{\mathrm e}\alpha^4c_{\mathrm E}^2}{2n^6} \\ \times[J_{\mathrm{tot}}(J_{\mathrm{tot}}+1) \\ {}-L(L+1)-\tfrac34]\end{gathered}$\par} & -- & {\raggedright \hyperref[app:fine_structure]{Appendix~\ref*{app:fine_structure}}\par} \\
+
+% O168 | source: Trilogy/PartII/11_Hydrogen_Atom.tex
+{\raggedright Bipolar Lattice Strain Force \newline \textit{Signed radial chiral force}\par} & {\raggedright $F_{\mathrm{lattice}} = \frac{K_{\mathrm{L}} (\chi_1)(\chi_2)}{r^2}$\par} & \hyperref[chap:hydrogen_atom]{Ch.~\ref*{chap:hydrogen_atom}} & {\raggedright Main-body construction\par} \\
+
+% O169 | source: Appendices/app_photonic_emission.tex
+{\raggedright Photonic Extrusion Energy \newline \textit{Emission-channel estimate}\par} & {\raggedright $\begin{gathered}[t]E_\gamma=\int\delta\tau\,\mathrm dV \\ \approx\tau_{\mathrm{bulk}}A_{\mathrm{chan}}\Delta r\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photonic_emission]{Appendix~\ref*{app:photonic_emission}}\par} \\
+
+% O170 | source: Trilogy/PartII/11_Hydrogen_Atom.tex
+{\raggedright Nucleon Resonance Threshold \newline \textit{Main-text nucleon resonance boundary}\par} & {\raggedright $\begin{gathered}[t]E_{\mathrm N}=hc_{\mathrm E}/r_{\mathrm N} \\ \approx1.41\,\mathrm{GeV}\end{gathered}$\par} & \hyperref[chap:hydrogen_atom]{Ch.~\ref*{chap:hydrogen_atom}} & {\raggedright Main-body construction\par} \\
+
+\bottomrule
+\end{longtable}
+
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<12\baselineskip\newpage\fi
+\section*{Part~\ref{part:three}: Cosmic Architecture, Kinematics, and Thermodynamics}
+
+\vspace{0.5cm}
+\noindent
+\begin{longtable}{@{} p{4.5cm} p{6cm} c p{4cm} @{}}
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Parameter} & \textbf{Mathematical Expression} & \textbf{Section} & \textbf{Derivation Ref.} \\
+\midrule
+\endhead
+
+% O171 | source: Appendices/app_photon_dispersion_relaxation.tex
+{\raggedright Cyclic Receiving Work \newline \textit{Activated dissipative response; not CMB equilibrium}\par} & {\raggedright $\begin{gathered}[t]\Delta E_{\mathrm{cycle}} \\ =\int_{\mathcal V_\gamma}\oint_{\mathrm{cycle}} \\ \sigma_{\mathrm T}\,\mathrm d\varepsilon_{\mathrm T}\,\mathrm dV>0\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}\par} \\
+
+% O172 | source: Appendices/app_lattice_annealing.tex
+{\raggedright Early Lattice Annealing \newline \textit{Bulk-cooling similarity closure}\par} & {\raggedright $T(t)\approx T_{\mathrm S}\sqrt{t_{\mathrm S}/t}$\par} & -- & {\raggedright \hyperref[app:lattice_annealing]{Appendix~\ref*{app:lattice_annealing}}\par} \\
+
+% A056 | source: Appendices/app_baryon_asymmetry.tex
+{\raggedright Chiral Nucleation Energies \newline \textit{Proposed torsional formation-energy bias}\par} & {\raggedright $\begin{gathered}[t]E_{\mathrm{matter}}=E_{\mathrm{base}}-E_{\mathrm{torsion}} \\ E_{\mathrm{antimatter}}=E_{\mathrm{base}}+E_{\mathrm{torsion}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:baryon_asymmetry]{Appendix~\ref*{app:baryon_asymmetry}}\par} \\
+
+% A057 | source: Appendices/app_baryon_asymmetry.tex
+{\raggedright Thermal Nucleation Bias \newline \textit{Boltzmann formation model}\par} & {\raggedright $\begin{gathered}[t]\frac{N_{\mathrm{matter}}}{N_{\mathrm{antimatter}}} \\ =\exp\!\left(\frac{2E_{\mathrm{torsion}}}{k_{\mathrm B}T}\right)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:baryon_asymmetry]{Appendix~\ref*{app:baryon_asymmetry}}\par} \\
+
+% A058 | source: Appendices/app_lattice_annealing.tex
+{\raggedright Annealing Reference Time \newline \textit{Adopted bulk and geometric mode closures}\par} & {\raggedright $\begin{gathered}[t]t_{\mathrm{bulk}}=t_{\mathrm S}(T_{\mathrm S}/T_{\mathrm a})^2 \\ t_{\mathrm a}=t_{\mathrm{bulk}}/\pi^2\approx3.86\times10^5\,\mathrm{yr}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:lattice_annealing]{Appendix~\ref*{app:lattice_annealing}}\par} \\
+
+% O074 | source: Appendices/app_photon_dispersion_relaxation.tex; Appendices/app_vacuumdamping_cosmicredshift.tex
+{\raggedright Coherent-Action-Preserving Relaxation \newline \textit{Surviving photon branch}\par} & {\raggedright $\begin{gathered}[t]I_\gamma=E_\gamma/\omega_\gamma,\quad \left.\dot I_\gamma\right|_{\mathrm{rel}}=0 \\ \left.\dot E_\gamma/E_\gamma\right|_{\mathrm{rel}} \\ =\left.\dot\omega_\gamma/\omega_\gamma\right|_{\mathrm{rel}}=-\Gamma_{\mathrm D}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} \newline \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}\par} \\
+
+% O075 | source: Appendices/app_time_dilation.tex
+{\raggedright Photon Energy Relaxation Shift \newline \textit{Low-redshift, constant-rate limit}\par} & {\raggedright $\begin{gathered}[t]z_{\mathrm D}\simeq\Gamma_{\mathrm D}r/c_{\mathrm E} \\ \Gamma_{\mathrm D}r/c_{\mathrm E}\ll1\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O076 | source: Appendices/app_vacuumdamping_cosmicredshift.tex
+{\raggedright Physical Photon Relaxation Rate \newline \textit{Conditional scale-transfer factorization}\par} & {\raggedright $\Gamma_{\mathrm D}=\Gamma_{\mathrm D}^{(0)}\mathcal F_{\mathrm R}$\par} & -- & {\raggedright \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}\par} \\
+
+% O077 | source: Appendices/app_vacuumdamping_cosmicredshift.tex
+{\raggedright Unit-Reference Relaxation Rate \newline \textit{$\mathcal F_{\mathrm R}=1$}\par} & {\raggedright $\Gamma_{\mathrm D}^{(0)}\simeq 2.3591\times10^{-18}\ \mathrm{s}^{-1}$\par} & -- & {\raggedright \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}\par} \\
+
+% O078 | source: Appendices/app_vacuumdamping_cosmicredshift.tex
+{\raggedright Observational Relaxation Calibration \newline \textit{Relaxation-dominated specialization}\par} & {\raggedright $\begin{gathered}[t]\Gamma_{\mathrm D}^{(\mathrm{cal})}\equiv H_0^{(\mathrm{obs})} \\ \simeq2.3671\times10^{-18}\,\mathrm{s^{-1}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}\par} \\
+
+% O173 | source: Appendices/app_time_dilation.tex
+{\raggedright Propagation-Relaxation Redshift \newline \textit{Rate and ray speed use the same clock}\par} & {\raggedright $\begin{gathered}[t]1+z_{\mathrm D}=\exp\!\left(\int\Gamma_{\mathrm D}\,\mathrm dt\right) \\ =\exp\!\left(\int\frac{\Gamma_{\mathrm D}}{v_{\mathrm{ray}}}\,\mathrm d\ell\right)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A059 | source: Appendices/app_vacuumdamping_cosmicredshift.tex
+{\raggedright Microscopic Overlap and Reference Clock \newline \textit{Physical receiving factor remains to be supplied}\par} & {\raggedright $\begin{gathered}[t]P_{\mathrm R}=\frac94(\ell_{\mathrm S}/r_{\mathrm D})^6 \\ t_{\mathrm{corr}}^{(0)}=4r_{\mathrm D}/c_{\mathrm E} \\ \Gamma_{\mathrm D}=P_{\mathrm R}\mathcal F_{\mathrm R}/t_{\mathrm{corr}}^{(0)}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}\par} \\
+
+% A060 | source: Appendices/app_vacuumdamping_cosmicredshift.tex
+{\raggedright Conservative Coherent Limit \newline \textit{Completed ideal sector without activated receiving response}\par} & {\raggedright $\mathcal F_{\mathrm R}=0\quad\Longrightarrow\quad\Gamma_{\mathrm D}=0$\par} & -- & {\raggedright \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}\par} \\
+
+% A061 | source: Appendices/app_photon_dispersion_relaxation.tex
+{\raggedright Finite-Wavelength Photon Transport \newline \textit{$c_{\mathrm P}$ is the local long-wave capacity}\par} & {\raggedright $\begin{gathered}[t]\mathbf v_{\mathrm g}=\nabla_{\mathbf k}\omega_{\mathrm c} \\ v_{\mathrm{ray}}=|\mathbf v_{\mathrm g}|\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}\par} \\
+
+% A062 | source: Appendices/app_photon_dispersion_relaxation.tex
+{\raggedright Dispersion-Suppressed Group Speed \newline \textit{Selected positive higher-gradient FCC closure}\par} & {\raggedright $\begin{gathered}[t]\frac{v_{\mathrm{g},\parallel}}{c_{\mathrm P}}=1-\frac{k^4d_{\mathrm{nn}}^4}{72} \\ \times\sum_{a=1}^6(\widehat{\mathbf k}\!\cdot\widehat{\mathbf n}_a)^6 \\ {}+O(k^6d_{\mathrm{nn}}^6)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}\par} \\
+
+% A063 | source: Appendices/app_photon_dispersion_relaxation.tex
+{\raggedright Frequency-Transfer Wave-Vector Condition \newline \textit{Required at fixed local conservative background}\par} & {\raggedright $\begin{gathered}[t]\mathbf v_{\mathrm g}\!\cdot\left.\dot{\mathbf k}\right|_{\mathrm{rel}} \\ =-\Gamma_{\mathrm D}\omega_{\mathrm c}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}\par} \\
+
+% A064 | source: Appendices/app_photon_dispersion_relaxation.tex; Appendices/app_matter_vnlw_photon_linear_waveequation.tex
+{\raggedright Attenuation Is Not Frequency Drift \newline \textit{Ordinary linear-loss comparator}\par} & {\raggedright $\begin{gathered}[t]\dot E=-\gamma_{\mathrm A}E \\ \not\Rightarrow\dot\omega=-\gamma_{\mathrm A}\omega\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} \newline \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}\par} \\
+
+% A065 | source: Appendices/app_photon_dispersion_relaxation.tex
+{\raggedright Energy-Dependent Propagation Delay \newline \textit{Constant rate; perturbative straight-path dispersion}\par} & {\raggedright $\begin{gathered}[t]\Delta t_n\simeq\frac{A_n}{n\Gamma_{\mathrm D}} \\ \times\left[\left(\frac{E_{\mathrm{h,obs}}}{E_{\max}}\right)^n-\left(\frac{E_{\mathrm{l,obs}}}{E_{\max}}\right)^n\right] \\ \times[(1+z_{\mathrm D})^n-1]\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}\par} \\
+
+% O174 | source: Appendices/app_time_dilation.tex
+{\raggedright Relaxation-Only Coordinate Relation \newline \textit{Constant rate, straight gravity-neutral path}\par} & {\raggedright $r = \frac{c_{\mathrm{E}}}{\Gamma_{\mathrm{D}}}\ln(1+z_{\mathrm{D}})$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A066 | source: Appendices/app_time_dilation.tex
+{\raggedright Kinematic Frequency Factor \newline \textit{Radial source motion; gravity-neutral local frame}\par} & {\raggedright $1+z_{\mathrm{kin}}=\sqrt{\frac{1+v_{\mathrm{ext}}/c_{\mathrm E}}{1-v_{\mathrm{ext}}/c_{\mathrm E}}}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A067 | source: Appendices/app_time_dilation.tex
+{\raggedright Gravitational Endpoint Factor \newline \textit{Static compatible emitter/observer clocks}\par} & {\raggedright $1+z_{\mathrm{grav}}=\frac{1-\alpha_{\mathrm G,o}}{1-\alpha_{\mathrm G,e}}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A068 | source: Appendices/app_time_dilation.tex
+{\raggedright Full Observed Redshift \newline \textit{Kinematics, endpoint loading, and propagation}\par} & {\raggedright $\begin{gathered}[t]1+z_{\mathrm{obs}}=(1+z_{\mathrm{kin}}) \\ \times(1+z_{\mathrm{grav}})(1+z_{\mathrm D})\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O175 | source: Appendices/app_time_dilation.tex
+{\raggedright Conditional Luminosity Distance \newline \textit{Radial, gravity-neutral, no lensing}\par} & {\raggedright $d_{\mathrm L}=r(1+z_{\mathrm{kin}})^2\sqrt{1+z_{\mathrm D}}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A069 | source: Appendices/app_time_dilation.tex
+{\raggedright Observed Flux \newline \textit{Radial, gravity-neutral, isotropic emitter; no lensing}\par} & {\raggedright $\begin{gathered}[t]F_{\mathrm{obs}}=\frac{L_{\mathrm{emit}}}{4\pi r^2} \\ \times\frac{1}{(1+z_{\mathrm{kin}})^4(1+z_{\mathrm D})}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A070 | source: Appendices/app_time_dilation.tex
+{\raggedright Angular Distance and Reciprocity \newline \textit{Same radial photometric specialization}\par} & {\raggedright $\begin{gathered}[t]d_{\mathrm A}=r \\ \frac{d_{\mathrm L}}{(1+z_{\mathrm{obs}})^2d_{\mathrm A}} \\ =(1+z_{\mathrm D})^{-3/2}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A071 | source: Appendices/app_time_dilation.tex
+{\raggedright Bolometric Surface Brightness \newline \textit{Same photometric branch, not a bandpass catalogue proxy}\par} & {\raggedright $\begin{gathered}[t]\frac{\mathrm{SB}_{\mathrm{obs}}}{\mathrm{SB}_{\mathrm{emit}}} \\ =\frac{1}{(1+z_{\mathrm{kin}})^4(1+z_{\mathrm D})} \\ =\frac{(1+z_{\mathrm D})^3}{(1+z_{\mathrm{obs}})^4}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O176 | source: Appendices/app_cosmic_impedance.tex
+{\raggedright Lattice Impedance Acceleration \newline \textit{Matched observed-reference pair}\par} & {\raggedright $\begin{gathered}[t]a_{\mathrm D}=c_{\mathrm E}\Gamma_{\mathrm D}=c_{\mathrm E}^2/R_{\mathrm U} \\ \approx7.0964\times10^{-10}\,\mathrm{m\,s^{-2}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}\par} \\
+
+% O177 | source: Appendices/app_cosmic_impedance.tex
+{\raggedright Galactic Acceleration Scale \newline \textit{Same observed-reference pair}\par} & {\raggedright $\begin{gathered}[t]a_{\mathrm{gal}}=a_{\mathrm D}/(2\pi) \\ \approx1.1294\times10^{-10}\,\mathrm{m\,s^{-2}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}\par} \\
+
+% O178 | source: Appendices/app_cosmic_impedance.tex
+{\raggedright Macroscopic MOND Equivalent \newline \textit{Galactic comparison normalization}\par} & {\raggedright $a_0=a_{\mathrm{gal}}=a_{\mathrm D}/(2\pi)$\par} & -- & {\raggedright \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}\par} \\
+
+% O179 | source: Appendices/app_vacuumdamping_cosmicredshift.tex
+{\raggedright Photon Energy-Relaxation Length Cosmic Damping Horizon \newline \textit{Observed-reference one-e-fold length}\par} & {\raggedright $\begin{gathered}[t]R_{\mathrm U}=c_{\mathrm E}/\Gamma_{\mathrm D} \\ \approx4104.5\,\mathrm{Mpc}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}\par} \\
+
+% O180 | source: Trilogy/PartIII/19_Cosmological_Anomalies.tex
+{\raggedright Effective Euclidean Acoustic Scale \newline \textit{Adopted angular projection}\par} & {\raggedright $\begin{gathered}[t]r_s^{(\mathrm{TFT})}=R_{\mathrm U}\theta_* \\ \approx42.73\,\mathrm{Mpc}\end{gathered}$\par} & \hyperref[sec:euclidean_acoustic_resolution]{\ref*{sec:euclidean_acoustic_resolution}} & {\raggedright Main-body construction\par} \\
+
+% O181 | source: Appendices/app_photon_dispersion_relaxation.tex; Appendices/app_time_dilation.tex
+{\raggedright Coherent Packet Cycle Count \newline \textit{Narrowband fixed-cycle comparison}\par} & {\raggedright $\begin{gathered}[t]N=\int_{t_-}^{t_+}f(t)\,\mathrm dt \\ \simeq f_c\Delta t_{\mathrm{pkt}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A072 | source: Appendices/app_photon_dispersion_relaxation.tex; Appendices/app_time_dilation.tex
+{\raggedright Fixed-Cycle Packet Dilation \newline \textit{Propagation component; preserved carrier cycle count}\par} & {\raggedright $\begin{gathered}[t]\Delta t_{\mathrm{pkt,obs}} \\ =(1+z_{\mathrm D})\Delta t_{\mathrm{pkt,emit}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} \newline \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O182 | source: Appendices/app_time_dilation.tex
+{\raggedright Independent Source-Event Timing \newline \textit{Stationary factorized endpoints}\par} & {\raggedright $\begin{gathered}[t]\Delta t_{\mathrm{obs}}=(1+z_{\mathrm{kin}}) \\ \times(1+z_{\mathrm{grav}})\Delta t_{\mathrm{p,e}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A073 | source: Appendices/app_time_dilation.tex
+{\raggedright Timing Residual for Photon Relaxation \newline \textit{Independent source-event clock; same factorized regime}\par} & {\raggedright $\begin{gathered}[t]1+z_{\mathrm D} \\ =\frac{1+z_{\mathrm{obs}}}{\Delta t_{\mathrm{obs}}/\Delta t_{\mathrm{p,e}}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A074 | source: Appendices/app_time_dilation.tex
+{\raggedright Clock--Brightness Consistency \newline \textit{Gravity-neutral radial/no-lensing photometric branch}\par} & {\raggedright $\begin{gathered}[t]\mathcal S=\Delta t_{\mathrm{obs}}/\Delta t_{\mathrm{p,e}} \\ \frac{\mathrm{SB}_{\mathrm{obs}}}{\mathrm{SB}_{\mathrm{emit}}} \\ =\frac1{(1+z_{\mathrm{obs}})\mathcal S^3}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A075 | source: Appendices/app_time_dilation.tex
+{\raggedright Clock--Brightness Exponents \newline \textit{Local bolometric dimming exponent}\par} & {\raggedright $\begin{gathered}[t]b=\frac{\mathrm d\ln\mathcal S}{\mathrm d\ln(1+z_{\mathrm{obs}})} \\ n_{\mathrm{SB}}=1+3b\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O183 | source: Appendices/app_time_dilation.tex
+{\raggedright Observed Photon Energy Ratio\par} & {\raggedright $E_{\mathrm{obs}}/E_{\mathrm{emit}}=(1+z_{\mathrm{obs}})^{-1}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O184 | source: Appendices/app_time_dilation.tex
+{\raggedright Kinematic Power Drop \newline \textit{Endpoint kinematics alone}\par} & {\raggedright $P_{\mathrm{obs}}/P_{\mathrm{emit}}=(1+z_{\mathrm{kin}})^{-2}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A076 | source: Appendices/app_time_dilation.tex
+{\raggedright Redshift-Gradient Budget \newline \textit{Stationary nested radial paths; achromatic long-wave law}\par} & {\raggedright $\begin{gathered}[t]\frac1{1+z_{\mathrm{obs}}}\frac{\mathrm dz_{\mathrm{obs}}}{\mathrm dr} \\ =\frac{\gamma^2}{c_{\mathrm E}}\frac{\mathrm dv_{\mathrm{ext}}}{\mathrm dr} \\ {}+\frac{1}{1-\alpha_{\mathrm G,e}}\frac{\mathrm d\alpha_{\mathrm G,e}}{\mathrm dr}+\frac{\Gamma_{\mathrm D}}{c_{\mathrm P}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A077 | source: Appendices/app_time_dilation.tex
+{\raggedright Low-Redshift Hubble-Slope Budget \newline \textit{Weak velocity/loading; not generally equal to photon rate}\par} & {\raggedright $\begin{gathered}[t]H_0^{(\mathrm{slope})}=c_{\mathrm E}\left.\frac{\mathrm dz_{\mathrm{obs}}}{\mathrm dr}\right|_0 \\ \simeq\left.\frac{\mathrm dv_{\mathrm{ext}}}{\mathrm dr}\right|_0 \\ {}+c_{\mathrm E}\left.\frac{\mathrm d\alpha_{\mathrm G,e}}{\mathrm dr}\right|_0+\Gamma_{\mathrm D}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% A078 | source: Appendices/app_time_dilation.tex
+{\raggedright Path-Averaged Rate Inference \newline \textit{Propagation time independently supplied}\par} & {\raggedright $\begin{gathered}[t]\overline\Gamma_{\mathrm D,\mathcal P}=\frac1{\Delta t_{\mathrm{prop}}} \\ \times\ln\!\frac{1+z_{\mathrm{obs}}}{(1+z_{\mathrm{kin}})(1+z_{\mathrm{grav}})}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+% O185 | source: Appendices/app_gravitational_endpoint_transfer.tex
+{\raggedright Effective Gravitational \newline \textit{Impedance}\par} & {\raggedright $\mu_{\mathrm{eff}} = \frac{\mu_{\mathrm{D}}}{(1-\alpha_{\mathrm{G}})^4}$\par} & -- & {\raggedright \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}\par} \\
+
+% O186 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Cosmic Critical Mass \newline \textit{Type-II scale normalization; not observed inventory}\par} & {\raggedright $\begin{gathered}[t]M_{\mathrm U}=c_{\mathrm E}^2R_{\mathrm U}/G \\ =c_{\mathrm E}^3/(G\Gamma_{\mathrm D})\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O187 | source: Trilogy/PartIII/15_Global_Kinematics.tex
+{\raggedright TFT Kinematic State Equation \newline \textit{Homogeneous spherical saturation closure}\par} & {\raggedright $\Gamma_{\mathrm D}^2=(4\pi G/3)\rho_c$\par} & \hyperref[chap:global_kinematics]{Ch.~\ref*{chap:global_kinematics}} & {\raggedright Main-body construction\par} \\
+
+% O188 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Total Cosmic Reservoir Mass \newline \textit{Adopted structural reservoir multiplier}\par} & {\raggedright $\begin{gathered}[t]M_{\mathrm{Res}}=M_{\mathrm U}(\rho_{\mathrm S}/\rho_{\mathrm{QG}}) \\ \approx1.6707\times10^{79}\,\mathrm{kg}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O189 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Octahedral Void Limit \newline \textit{Inscribed octahedral-site fraction}\par} & {\raggedright $\beta_{\mathrm{oct}} = \frac{\pi(\sqrt{2}-1)^3}{3\sqrt{2}} \approx 0.0526$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O190 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Baryonic Mass Capacity \newline \textit{Isotropic accommodation interpretation}\par} & {\raggedright $\beta_{\mathrm{b}} \le \beta_{\mathrm{oct}} \approx 0.0526$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O191 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Phase-Volume \newline \textit{Reference Tensor}\par} & {\raggedright $\begin{gathered}[t]\langle T_{\mu\nu}^{(0)}\rangle \\ =\beta_{\mathrm{geo}}T_{\mu\nu}^{(\mathrm D,0)} \\ {}+\beta_{\mathrm{IC}}T_{\mu\nu}^{(\mathrm{IC},0)}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
+
+% O192 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Exact Capacity Ledger \newline \textit{Reference = remaining + converted}\par} & {\raggedright $T_{\mu\nu}^{(0)} = T_{\mu\nu}^{(\mathrm{rem})} + \Delta T_{\mu\nu}^{(\tau)}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
+
+% O193 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Uniform Structural Capacity Closure \newline \textit{Equal reference energy densities only}\par} & {\raggedright $T_{\hat{0}\hat{0}}^{(\mathrm{D},0)} = T_{\hat{0}\hat{0}}^{(\mathrm{IC},0)} = \tau_{\mathrm{G}}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
+
+% O194 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Effective Cosmological Constant Fraction \newline \textit{Uniform structural-capacity normalization}\par} & {\raggedright $\Omega_{\Lambda,\mathrm{eff}}^{(\mathrm{TFT})} = \beta_{\mathrm{geo}} - \beta_{\mathrm{b}}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
+
+% O195 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Effective Dark-Matter Fraction \newline \textit{Unperturbed interstitial allocation}\par} & {\raggedright $\Omega_{\mathrm{DM}}^{(\mathrm{TFT},0)} = \beta_{\mathrm{IC}}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
+
+% O196 | source: Appendices/app_cosmic_energy_continuum_mechanics.tex
+{\raggedright Late-Time Equation of State Diagnostic \newline \textit{Specified late-time effective-tension closure}\par} & {\raggedright $\begin{gathered}[t]w_{\mathrm{tot}}\simeq-(\beta_{\mathrm{geo}}-\beta_b) \\ \simeq-0.69048\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}\par} \\
+
+% O197 | source: Appendices/app_vacuum_scale_strain_unification.tex
+{\raggedright Scale-Invariant Continuum Equation \newline \textit{Identity for $R_{\mathrm U}=c_{\mathrm E}/\Gamma_{\mathrm D}$}\par} & {\raggedright $E_{\mathrm{max}} = h \Gamma_{\mathrm{D}} N_{\mathrm{D}}$\par} & -- & {\raggedright \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}}\par} \\
+
+% O198 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Global Cosmic Energy \newline \textit{Adopted reservoir normalization}\par} & {\raggedright $\begin{gathered}[t]E_{\mathrm{Res}}=M_{\mathrm{Res}}c_{\mathrm E}^2 \\ \approx1.50\times10^{96}\,\mathrm J\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O199 | source: Appendices/app_fcc_constants.tex; Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Local Yield Tension \newline \textit{($\tau_G$)}\par} & {\raggedright $\begin{gathered}[t]\tau_{\mathrm G}=\rho_{\mathrm G}c_{\mathrm E}^2=\tau_{\mathrm{D,bulk}} \\ \approx2.1803\times10^{96}\,\mathrm{J\,m^{-3}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:fcc_constants]{Appendix~\ref*{app:fcc_constants}} \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O200 | source: Trilogy/PartIII/20_Thermodynamic_Cycle.tex
+{\raggedright Cross-Scale Equivalent Volume \newline \textit{Reference mass and local yield density}\par} & {\raggedright $\begin{gathered}[t]V_{\mathrm{eq}}\equiv\frac{E_{\mathrm{Res}}}{\tau_{\mathrm{D,bulk}}} \\ =\frac{M_{\mathrm{Res}}}{\rho_{\mathrm G}}\approx0.6886\,\mathrm{m^3}\end{gathered}$\par} & \hyperref[sec:global_local_energy_equivalence]{\ref*{sec:global_local_energy_equivalence}} & {\raggedright Main-body construction\par} \\
+
+% O201 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Global Phase Avalanche Equation \newline \textit{Constant net structural growth}\par} & {\raggedright $\begin{gathered}[t]\Gamma_{\mathrm{pc}}=\dot M_{\mathrm p}/M_{\mathrm p} \\ M_{\mathrm p}(t)=M_{\mathrm p}(0)e^{\Gamma_{\mathrm{pc}}t}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% A083 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Optical--Structural Rate Ratio \newline \textit{For $\Gamma_{\mathrm D}\ne0$; synchronization is additional}\par} & {\raggedright $\begin{gathered}[t]\mathcal C_{\mathrm{pcD}}=\Gamma_{\mathrm{pc}}/\Gamma_{\mathrm D} \\ \mathcal C_{\mathrm{pcD}}=1\Rightarrow\Gamma_{\mathrm{pc}}=\Gamma_{\mathrm D}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O202 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Global Rupture Trigger Mass \newline \textit{Live-boundary mass threshold}\par} & {\raggedright $\begin{gathered}[t]M_{\mathrm{trg}}=\beta_{\mathrm{rup}}M_{\mathrm{Res}} \\ \approx8.6208\times10^{77}\,\mathrm{kg}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% A079 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Percolation Rupture Fraction \newline \textit{Equal-capacity live-boundary mass projection}\par} & {\raggedright $\begin{gathered}[t]\beta_{\mathrm{rup}}=p_c\beta_{\mathrm{IC}}\approx0.0516 \\ p_c\approx0.199\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% A080 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Pre-Rupture Density Closure \newline \textit{Quasistatic effective structural capacity}\par} & {\raggedright $\begin{gathered}[t]\frac{M_{\mathrm{FCC}}(t)}{V(t)}=\frac{M_{\mathrm{Res}}}{V_{\mathrm{Res}}} \\ \frac{V(t)}{V_{\mathrm{Res}}}=1-\frac{M_{\mathrm p}(t)}{M_{\mathrm{Res}}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% A081 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Rupture Volume and Effective Radius \newline \textit{Not the physical SC-core filling fraction}\par} & {\raggedright $\begin{gathered}[t]V_{\mathrm{rup}}=(1-\beta_{\mathrm{rup}})V_{\mathrm{Res}} \\ \simeq0.9484V_{\mathrm{Res}} \\ R_{\mathrm{rup}}=R_{\mathrm{Res}}(1-\beta_{\mathrm{rup}})^{1/3}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% A082 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Rupture Reference Contraction \newline \textit{Adopted reservoir normalization}\par} & {\raggedright $\begin{gathered}[t]R_{\mathrm{rup}}\approx5.7361\times10^{34}\,\mathrm m \\ \Delta R=R_{\mathrm{Res}}-R_{\mathrm{rup}} \\ \approx1.0220\times10^{33}\,\mathrm m\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O203 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Structural Cycle Time \newline \textit{Constant phase-growth rate}\par} & {\raggedright $T_{\mathrm{cyc}}=\frac1{\Gamma_{\mathrm{pc}}}\ln\!\frac{M_{\mathrm{trg}}}{M_{\mathrm p}(0)}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O204 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Current Aggregate Boundary Mass \newline \textit{Adopted inventory and homogeneity extrapolation}\par} & {\raggedright $\begin{gathered}[t]M_{\mathrm{cur}}=M_{\mathrm{obs}}(9.7957\times10^{25}) \\ \approx9.7957\times10^{75}\,\mathrm{kg}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O205 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Current Structural Epoch \newline \textit{Same initialization and growth branch}\par} & {\raggedright $t_{\mathrm{cur}}=\frac1{\Gamma_{\mathrm{pc}}}\ln\!\frac{M_{\mathrm{cur}}}{M_{\mathrm p}(0)}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O206 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Remaining Structural Lifetime \newline \textit{Primordial normalization cancels}\par} & {\raggedright $\begin{gathered}[t]\Delta t=\frac1{\Gamma_{\mathrm{pc}}}\ln\!\frac{M_{\mathrm{trg}}}{M_{\mathrm{cur}}} \\ =T_{\mathrm{cyc}}-t_{\mathrm{cur}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% A084 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Synchronized Chronology Reference \newline \textit{Unit-reference rate; minimum seed; adopted inventory}\par} & {\raggedright $\begin{gathered}[t]\Gamma_{\mathrm{pc}}^{(0)}=\Gamma_{\mathrm D}^{(0)} \\ M_{\mathrm p}(0)=M_{\mathrm{D,G}} \\ T_{\mathrm{cyc}}^{(0)}\approx2.3795\times10^{12}\,\mathrm{yr} \\ t_{\mathrm{cur}}^{(0)}\approx2.3194\times10^{12}\,\mathrm{yr} \\ \Delta t^{(0)}\approx60.14\,\mathrm{Gyr}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% A085 | source: Appendices/app_cosmic_energy_budget_and_chronology.tex
+{\raggedright Kinematic Cycle Reach \newline \textit{Not an independent material horizon}\par} & {\raggedright $\begin{gathered}[t]L_{\max}=c_{\mathrm E}T_{\mathrm{cyc}} \\ =\frac{c_{\mathrm E}}{\Gamma_{\mathrm{pc}}}\ln\!\frac{M_{\mathrm{trg}}}{M_{\mathrm p}(0)}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}\par} \\
+
+% O207 | source: Appendices/app_vacuum_scale_strain_unification.tex
+{\raggedright Cosmological Damping Specific Work Extract \newline \textit{Specific work of the matched scale pair}\par} & {\raggedright $W_{\mathrm{total}} = a_{\mathrm{D}} \cdot R_{\mathrm{U}} = c_{\mathrm{E}}^2$\par} & -- & {\raggedright \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}}\par} \\
+
+% O208 | source: Appendices/app_vacuumdamping_cosmicredshift.tex
+{\raggedright Non-Linear Redshift Expansion \newline \textit{Constant-rate small-depth expansion}\par} & {\raggedright $\begin{gathered}[t]z_{\mathrm D}=\Gamma_{\mathrm D}t+\tfrac12(\Gamma_{\mathrm D}t)^2 \\ {}+O((\Gamma_{\mathrm D}t)^3)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}\par} \\
+
+% A086 | source: Appendices/app_cmb_thermal_completion.tex
+{\raggedright Planck Population \newline \textit{Zero chemical potential; thermal sector}\par} & {\raggedright $n_{\mathrm P}(\omega,T)=\frac1{e^{\hbar\omega/(k_{\mathrm B}T)}-1}$\par} & -- & {\raggedright \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}\par} \\
+
+% A087 | source: Appendices/app_cmb_thermal_completion.tex
+{\raggedright Number-Changing Thermal Balance \newline \textit{Thermal receiver, not an independent law on the same coherent population}\par} & {\raggedright $\begin{gathered}[t]\dot n=\Gamma_{\mathrm{em}}(1+n)-\Gamma_{\mathrm{abs}}n \\ \frac{\Gamma_{\mathrm{em}}}{\Gamma_{\mathrm{abs}}}=e^{-\hbar\omega/(k_{\mathrm B}T)}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}\par} \\
+
+% A088 | source: Appendices/app_cmb_thermal_completion.tex
+{\raggedright Gapless Receiving State Density \newline \textit{Independently specified 3D linear gapless branches}\par} & {\raggedright $\begin{gathered}[t]\frac{D_{\mathrm{AV}}(\Omega)}V=\frac{\Omega^2}{2\pi^2}\sum_jv_j^{-3} \\ u_{\mathrm{rec}}(T)=\frac{\pi^2k_{\mathrm B}^4}{30\hbar^3} \\ \times\left(\sum_jv_j^{-3}\right)T^4\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}\par} \\
+
+% A089 | source: Appendices/app_cmb_thermal_completion.tex
+{\raggedright Photon Thermal Energy Density \newline \textit{Two transverse thermal polarizations}\par} & {\raggedright $u_{\mathrm{CMB}}(T)=\frac{\pi^2k_{\mathrm B}^4}{15\hbar^3c_{\mathrm E}^3}T^4$\par} & -- & {\raggedright \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}\par} \\
+
+% A090 | source: Appendices/app_cmb_thermal_completion.tex
+{\raggedright Closed Fossil Equilibrium \newline \textit{Fixed volume; specified initial states and receiving branches}\par} & {\raggedright $\begin{gathered}[t]T_{\mathrm{eq}}^4 \\ =\frac{2c_{\mathrm E}^{-3}T_{\gamma,0}^4+\left(\sum_jv_j^{-3}\right)T_{\mathrm{rec},0}^4}{2c_{\mathrm E}^{-3}+\sum_jv_j^{-3}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}\par} \\
+
+% A091 | source: Appendices/app_cmb_thermal_completion.tex
+{\raggedright Closed Thermal-Transfer Kinetics \newline \textit{Net power density; no external work or third-sector exchange}\par} & {\raggedright $\begin{gathered}[t]C_V^{(\gamma)}(T_\gamma)\dot T_\gamma=-\mathcal P_{\gamma\mathrm{rec}} \\ C_V^{(\mathrm{rec})}(T_{\mathrm{rec}})\dot T_{\mathrm{rec}}=\mathcal P_{\gamma\mathrm{rec}}\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}\par} \\
+
+% A092 | source: Appendices/app_cmb_thermal_completion.tex
+{\raggedright Open Thermal Balance \newline \textit{Driven fixed point differs from closed fossil endpoint}\par} & {\raggedright $\begin{gathered}[t]C_V^{(\mathrm{th})}(T)\dot T=P_{\mathrm{in}}-P_{\mathrm{sink}} \\ P_{\mathrm{in}}(T_{\mathrm{fp}})=P_{\mathrm{sink}}(T_{\mathrm{fp}})\end{gathered}$\par} & -- & {\raggedright \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}\par} \\
+
+% A093 | source: Appendices/app_time_dilation.tex
+{\raggedright Number-Preserving Frequency Drift \newline \textit{Fixed volume; not a normalized Planck cooling law}\par} & {\raggedright $\begin{gathered}[t]\nu^{\prime}=a\nu,\quad\mathcal N^{\prime}_{\nu^{\prime}} \\ =a^{-3}\mathcal N_{\nu^{\prime}}(aT)\end{gathered}$\par} & -- & {\raggedright \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}\par} \\
+
+\bottomrule
+\end{longtable}
+
+\endgroup

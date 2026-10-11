@@ -1,429 +1,1252 @@
+% Complete replacement for Appendices/app_glossary.tex.
+% Based on TFT_Manuscript_10112026.zip and its matching main.pdf,
+% Version 2.0, compiled October 11, 2026. Uses existing manuscript labels only.
+% All displays are unnumbered; this glossary does not advance equation counters.
+
 \chapter*{Glossary of TFT Terminology}
+\phantomsection
 \addcontentsline{toc}{chapter}{\protect\numberline{}Glossary of TFT Terminology}
 \label{app:glossary}
 
-This appendix provides formal definitions for the specialized terminology and mechanical concepts unique to Tension Field Theory (TFT).
-
-\vspace{0.5cm}
+This glossary defines the principal terms used in Tension Field Theory (TFT).
+Definitions follow the manuscript's mechanical conventions and distinguish
+foundational postulates, results within specified constitutive closures,
+calibrated quantities, and proposed mechanisms. Earlier terminology is
+retained where a clarification is needed. For the extended symbol inventory
+and units, see the \hyperref[app:notation]{Table of Notation and Constants}.
 
 \begin{description}
-\setlength{\itemsep}{0.4cm}
+\setlength{\itemsep}{0.65\baselineskip}
+\setlength{\parsep}{0pt}
+\setlength{\emergencystretch}{1.5em}
 
-\item[Absolute Lattice Shear Coupling ($K_{\mathrm L}$):] The mechanical coupling coefficient relating the local action scale $\hbar c_{\mathrm E}$ of the Soft Floor surface state to the macroscopic electrostatic combination $k_{\mathrm e}e^2$. It provides the dimensional bridge between the lattice shear topology and the observed electromagnetic coupling scale.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Absolute Lattice Shear Coupling ($K_{\mathrm L}$).} The energy--length coupling used to express the electromagnetic sector as $K_{\mathrm L}=\alpha\hbar c_{\mathrm E}=k_{\mathrm e}e^2$. Its units are $\mathrm{J\,m}$, not those of a shear modulus. The static geometric estimate and the dynamic FCC-routing ansatz are distinct constructions.
+(See \hyperref[app:geometric_alpha]{Appendix~\ref*{app:geometric_alpha}}, \hyperref[app:dynamic_alpha]{Appendix~\ref*{app:dynamic_alpha}} and \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}}.)
+\end{minipage}
 
-\item[Acoustic Transparency:] The deterministic TFT mechanism proposed for quantum tunneling. It occurs when a coherent standing-wave bridge phase-locks with a geometric barrier so that the effective boundary impedance is suppressed, permitting transport of the localized topological state through the barrier.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Absolute Substrate Index ($N_{\mathrm S}$).} The dimensionless radial scale ratio $N_{\mathrm S}=R_{\mathrm{Res}}/\ell_{\mathrm S}$. It compares the Structural Reservoir with the substrate spacing; it is not a volume count of all substrate sites or the number of stored records.
+(See \hyperref[chap:part3_conclusion]{Chapter~\ref*{chap:part3_conclusion}}.)
+\end{minipage}
 
-\item[Active Vacuum (State I / Soft Floor):] The dynamically active, dual-phase vacuum formed by a Face--Centered Cubic (FCC) nodal scaffold and its connected Interstitial Condensate. The FCC scaffold supplies finite transverse restoring action and surface inertia, while the condensate supplies pressure response, conservative defect-induced added inertia, and the receiving degrees of freedom required for separately activated dissipative processes.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Absolute Vacuum.} The State-0 Hard Floor: the latent, phase-locked structural reference beneath the Active Vacuum. ``Absolute'' identifies its reference role and does not describe the finite-energy propagation capacity of the Soft Floor. See \emph{Hard Floor}.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
 
-\item[Bipolar Strain Field:] The locked structural strain configuration extending between a Torsional Anchor (nucleus) and a Resonant Standing-Wave Boundary (electron shell). Its macroscopic projection provides the TFT mechanical representation of electrostatic charge structure.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Achromatic Scale Relaxation.} The retained limit in which fractional frequency drift is approximately independent of photon frequency over the stated band. Path-based achromaticity concerns the combined integrand $\Gamma_{\mathrm D}/v_{\mathrm{ray}}$, not the rate alone when speed is dispersive. The required frequency dependence must follow from the same projected interaction and propagation model.
+(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} and \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
 
-\item[Capacity Surface ($r_{\mathrm{cap}}$):] The mechanical co-motion surface around a rotating TFT black hole at which the torsional drift speed of the Soft Floor equals the local propagation capacity $c_{\mathrm P}$. It serves as the TFT analogue of the Kerr ergosurface and is defined through local wave kinematics and torsional flow.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Acoustic Transparency.} Earlier terminology for the proposed mechanical interpretation of tunneling. The current construction distinguishes passive evanescent coupling, resonantly enhanced transmission, and externally driven coherent boundary control. None requires the physical barrier to disappear; localized-knot transport additionally uses the stated phase-action guidance closure.
+(See \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.)
+\end{minipage}
 
-\item[Catastrophic Decompression (The Big Rupture):] The macroscopic martensitic phase-reset event in which a globally connected State-II saturated structure loses containment and rapidly converts back toward the active FCC configuration, restoring interstitial freedom and initiating the present active cosmic phase.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Action and Complete-Cycle Quantization.} The mechanical action associated with an elementary completed excitation satisfies $\oint\pi_q\,dq=h=2\pi\hbar$, where $\pi_q$ is conjugate to the mode coordinate $q$. This is a displacement--momentum integral with units of $\mathrm{J\,s}$, not an energy increment assigned independently to each participating lattice site.
+(See \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}} and \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
 
-\item[Center-of-Mass Motion (Boundary Translation):] One of the four velocity channels of a live TFT black hole. It describes translation of the complete saturated FCC/SC phase domain through the surrounding Soft Floor, distinct from phase-front growth, tangential redistribution, and torsional boundary motion.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Action Intensity ($\rho_\psi$).} The squared magnitude of the action-normalized excitation field, $\rho_\psi=|\psi|^2$. In the continuum normalization, $[\rho_\psi]=\mathrm{m^{-3}}$ and $\hbar\rho_\psi$ is an action density. It is distinct from the structural mass density $\rho$ and from a measured particle probability distribution unless the field--detector correspondence is supplied.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
 
-\item[Chiral Nucleation:] The TFT mechanism proposed for baryon asymmetry in which a globally torsionally biased decompression state favors one handedness of topological defect formation over the opposite handedness, producing an asymmetric matter--antimatter nucleation probability.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Active Detector Record.} A retained, detector-supported binding configuration with a specified readout tolerance and lifetime. The record may coexist with internal vibration and receiving motion. It is not the same object as the persistent State-0 longitudinal record, and ordinary capture does not require FCC-to-SC saturation.
+(See \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.)
+\end{minipage}
 
-\item[CMB Noise Floor:] The statistically isotropic thermal electromagnetic background established by the present Fossil CMB. It is the ambient radiative baseline against which a progressively relaxed coherent photon excitation eventually loses distinct observational identity.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Active Space.} The spatial manifestation of unfolded substrate structure associated with phase variation. The foundational construction introduces the characteristic phase length $x_\phi=\Delta\phi/|\nabla\phi|$ where defined, and distinguishes latent coordinate separation from the strain-weighted propagation path $D_\tau$.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
 
-\item[Coherent-Photon Energy-Relaxation Rate ($\Gamma_{\mathrm D}$):] The fractional energy-relaxation rate of the coherent photon eigenbranch in the Active Vacuum, characterizing the phase-lagged dissipative response through which coherent photon energy is transferred into finite-energy FCC--Condensate receiving degrees of freedom; in the weak-loss regime, $\Gamma_{\mathrm D}\simeq\omega\tan\Delta\varphi$, and when the coherent modal action $E/\omega$ is preserved, the same rate governs the real-frequency relaxation, $\dot E_\gamma/E_\gamma=\dot\omega_\gamma/\omega_\gamma=-\Gamma_{\mathrm D}$, thereby generating the accumulated propagation-relaxation redshift; the observational reference scale is set by the low-redshift Hubble slope, while the microscopic scale-transfer construction provides the unit-reference value $\Gamma_{\mathrm D}^{(0)}\simeq2.36\times10^{-18}\,\mathrm{s^{-1}}$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Active Topological-Knot Transport.} The continuous motion assigned to a localized matter defect by the phase-action current of a coherently controlled barrier field. In the matched rectangular-barrier construction, reflection cancellation produces a forward current throughout the evanescent region. The trajectory follows only after the matter-field inertia and guidance closure are specified.
+(See \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.)
+\end{minipage}
 
-\item[Completed Coordinate Map ($u_i=\mathcal{C}_i y_i$):] The work-conjugate constitutive constraint derived from the active-capacity balance. It states that the completed displacement $u_i$ accepted by the active FCC contact state is the residual-capacity fraction $\mathcal{C}_i$ of the latent node--condensate reconfiguration $y_i$ presented to the endpoint.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Active Vacuum (State I / Soft Floor).} The dual-phase, elastodynamic sector comprising an FCC scaffold and connected Interstitial Condensate. The scaffold supplies contact stiffness and finite kinetic participation; the condensate supplies pressure constraint and localized relative-flow response. Dissipative receiving channels require their own coupling and spectrum. The gravitationally loaded active domain is $0\leq\alpha_{\mathrm G}<1$.
+(See \hyperref[part:one]{Part~\ref*{part:one}}, \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
 
-\item[Contact-Point Relative Displacement ($\Delta\mathbf{u}_{ij}^{\mathrm c}$):] The objective local deformation measure entering the nearest-neighbor FCC contact energy. It combines nodal translations, nodal microrotations, and internal phase differences so that the contact law remains frame-indifferent under rigid translation and uniform rotation.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Added Inertia.} The conservative inertial contribution generated by condensate flow induced by a localized defect. It is obtained from the reversible kinetic energy of the specified flow, rather than from dissipated power. Its value depends on boundary-mode geometry, participating volume, and outer boundary conditions; it need not be a universal scalar for every defect.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
 
-\item[Convergence Information Limit ($N_{\mathrm{QG}}$):] The geometric information capacity assigned to a fully saturated SC-core boundary. It represents the maximum number of substrate longitudinal-strain records available to the corresponding saturated configuration and is distinct from the actual matter-information footprint carried by the system.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Amplitude Attenuation.} Loss of amplitude from a selected incident mode. For a weak, fixed-frequency harmonic mode with energy-loss coefficient $\gamma_A$, amplitude decays as $e^{-\gamma_A t/2}$ and energy as $e^{-\gamma_A t}$. This does not by itself generate continuous evolution of the surviving carrier's real frequency.
+(See \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}} and \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.)
+\end{minipage}
 
-\item[Cosmic Critical Mass ($M_{\mathrm U}$):] The total mass assigned to the cosmological domain of characteristic radius $R_{\mathrm U}$,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Analyzer Response.} The finite mechanical response connecting the prepared pair to recorded analyzer outcomes. It includes orientation-dependent excitation, torque, received action, threshold crossing, and record formation. The Goalpost constraint supplies a shared relation; the detector dynamics and preparation determine the observed statistics.
+(See \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Angular Coherence.} Preservation of a propagating signal's directional structure and image-forming information. Directional scattering and angular diffusion are separate from mean frequency drift, spectral broadening, and polarization change. Conservation of photon number alone does not guarantee image sharpness.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Angular Standing Modes.} The angular strain patterns on a hydrogenic shell, represented by spherical harmonics with indices $l$ and $m$. The manuscript associates these indices with standing-precession order and projected azimuthal winding, while keeping orbital angular structure distinct from the localized knot's intrinsic spin topology.
+(See \hyperref[app:atomic_angular_modes]{Appendix~\ref*{app:atomic_angular_modes}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Areal Boundary Density ($\Sigma_{\mathrm{surf}}$).} The inertial mass per area carried by a live FCC/SC boundary, with units $\mathrm{kg\,m^{-2}}$. For a spherical boundary, $\Sigma_{\mathrm{surf}}=M/(4\pi R_{\mathrm{QG}}^2)$. Phase-front conversion, accretion, and tangential redistribution determine its evolution; it is not the volumetric density of the phase-locked interior.
+(See \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Baryonic Defect Conversion.} The structural-energy allocation in which localized baryonic defects draw a fraction $\beta_{\mathrm b}$ from the unperturbed nodal sector, leaving $\beta_{\Lambda,\mathrm{eff}}=\beta_{\mathrm{geo}}-\beta_{\mathrm b}$. Local condensate participation already included in the coupled baryonic state is not counted again as an independent energy reservoir.
+(See \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Baryonic Tully--Fisher Relation.} The asymptotic relation $v_\infty^4=G a_{\mathrm{gal}}M_{\mathrm b}$ obtained in the deep, coherent galactic regime when the baryonic exterior field has inverse-square form and the geometric projection approaches unity. The relevant acceleration is $a_{\mathrm{gal}}=a_{\mathrm D}/(2\pi)$, not $a_{\mathrm D}$ itself.
+(See \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Binding Basin.} A region of the detector's mechanical configuration space surrounding a stable minimum $q_j$, with $U'(q_j)=0$ and $U''(q_j)>0$. Capture requires entry into an accessible basin; retention requires sufficient energy export to prevent escape. Finite measurement resolution is a further condition on the residual motion and readout.
+(See \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Bipolar Strain Field.} The coupled strain configuration between the nuclear Torsional Anchor and the electron's time-averaged Resonant Standing-Wave Boundary. It supplies the manuscript's mechanical representation of the internal atomic field, opposite chiral loading, and external neutrality. The central anchor, localized electron, and extended shell field are distinct parts of this description.
+(See \hyperref[chap:hydrogen_atom]{Chapter~\ref*{chap:hydrogen_atom}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Bloch Eigenbranch.} A wave-number-dependent family of normal modes of the periodic FCC contact system, obtained from its stiffness and kinetic matrices. Translational, rotational, and phase participation must be determined by the selected eigenvectors and constraints. A mathematical branch is not automatically an independently identified photon, matter, or receiving channel.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Bound-Orbit Strain Correction.} The conservative coupling between radial gravitational strain and tangential transport of a massive bound defect. In the stated weak-field spherical reduction, $\Phi_{\mathrm{orb}}^{(\mathrm{red})}=-GM\ell_{\mathrm{orb}}^2/(c_{\mathrm E}^2r^3)$. It supplies the perihelion correction and remains distinct from galactic condensate loading and optical refraction.
+(See \hyperref[app:perihelion_orbital_strain]{Appendix~\ref*{app:perihelion_orbital_strain}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Breathing Mode.} A radial boundary-deformation ansatz for a localized defect supported by an FCC node. The support-scale estimate $f_m=c_{\mathrm E}/(4r_{\mathrm D})$ uses a doubled radial transit. It is not the general proper-time frequency of every massive particle and does not, by itself, derive spin-$1/2$.
+(See \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Canonical Momentum ($\pi_q$).} The momentum conjugate to a specified generalized coordinate, defined by $\pi_q=\partial L/\partial\dot q$. For a time-independent harmonic coordinate with kinetic energy $M_q\dot q^2/2$, it is $\pi_q=M_q\dot q$. A time-dependent coordinate constraint can add terms to this relation. The modal canonical momentum is not automatically a localized particle's translational momentum or the momentum density of the complete field.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}} and \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Capacity Surface ($r_{\mathrm{cap}}$).} The torsional co-motion surface where the magnitude of the azimuthal Soft-Floor drift equals the local propagation capacity $c_{\mathrm P}$. It is the rotating-model analogue of an ergosurface, not automatically the saturation boundary, photon orbit, or shadow edge.
+(See \hyperref[app:kerr_limit]{Appendix~\ref*{app:kerr_limit}} and \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Carrier-Projected Spectral Density.} The receiving spectrum weighted by the actual interaction matrix elements and projection onto the photon scale coordinate. It determines access to an energy-transfer channel. It is not the unweighted thermodynamic density of states and therefore does not independently determine thermal multiplicity or heat capacity.
+(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} and \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Catastrophic Decompression (The Big Rupture).} The proposed global phase-reset event in which a connected network of saturated State-II regions loses containment and converts toward the active FCC organization. Interstitial and dynamical freedom are restored. The rupture construction, its threshold, and its chronology depend on the stated macroscopic phase-conversion model.
+(See \hyperref[chap:the_big_rupture]{Chapter~\ref*{chap:the_big_rupture}} and \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Center-of-Mass Motion (Boundary Translation).} Translation of the complete black-hole phase domain through the surrounding Active Vacuum. It is one of four distinct boundary-motion channels, alongside normal phase-front growth, tangential redistribution, and torsional motion. An internally phase-locked core need not be a globally immobile object.
+(See \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Charge and Chiral Integer ($\chi$).} The signed handedness assigned to a persistent localized topological defect. The foundational convention uses $\chi=+1$ for right-handed and $\chi=-1$ for left-handed torsion, with $\chi=0$ for a neutral configuration. This discrete sign is distinct from the dimensional electromagnetic coupling scale $K_{\mathrm L}$.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Chiral Nucleation.} The proposed preferential formation of one defect handedness in a torsionally biased decompression state. The nucleation model compares handedness-dependent formation energies and thermal weights. Such a bias is not, by itself, a completed prediction of the cosmological baryon-to-photon abundance.
+(See \hyperref[app:baryon_asymmetry]{Appendix~\ref*{app:baryon_asymmetry}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{CHSH Correlation.} The four-setting combination of paired analyzer correlations used to test the entanglement construction. The balanced ideal model gives $E(\mathbf a,\mathbf b)=-\mathbf a\cdot\mathbf b$ and a maximal magnitude $2\sqrt{2}$. Gravitational coupling strength, angular ensemble coherence, and normalized recorded correlations are separate quantities.
+(See \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{CMB Noise Floor.} The ambient fossil-radiation background against which a weak coherent signal is observed. Entering the CMB energy band does not automatically absorb or thermalize a photon, erase its coherence, or terminate propagation. Any terminal assimilation condition requires an independently specified receiving interaction.
+(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} and \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Coherence Boundary.} The proposed microscopic structural-resolution boundary associated with the FCC node scale $r_{\mathrm D}$. It motivates the manuscript's short-wavelength cutoff discussion. The calibrated length scale and a long-wavelength dispersion expansion do not, by themselves, determine the full-band maximum photon energy or a nonlinear failure threshold.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Coherent Boundary Control.} External control of a barrier's scattering state by a second phase-coherent input. For the symmetric reciprocal two-port construction, incident-side reflection cancels when $a_{\mathrm R}/a_{\mathrm L}=-r_{\mathrm B}/t_{\mathrm B}$. Both the amplitude ratio and phase are fixed, and the outgoing energy includes the contribution supplied by the downstream driver.
+(See \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Coherent Photon Scale Coordinate.} The dimensionless scale $q$ and logarithmic coordinate $s=\ln q$ used to describe a self-similar photon family. In the retained long-wave construction, energy and frequency scale with $q$, while the packet size scales inversely. The law $\dot s=-\Gamma_{\mathrm D}$ describes motion through that family, not oscillation of a fixed Fourier mode.
+(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Coherent-Action Preservation.} The constitutive condition that the surviving coherent packet retains $I_\gamma=E_\gamma/\omega_\gamma$ during scale transfer. For the elementary photon, $I_\gamma=\hbar$. Combining this condition with fractional carrier-energy loss gives equal fractional real-frequency loss; ordinary fixed-mode attenuation alone does not supply this condition.
+(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Coherent-Photon Energy-Relaxation Rate ($\Gamma_{\mathrm D}$).} The fractional energy-transfer rate of the surviving coherent photon in the scale-relaxation construction. Under coherent-action preservation,
 \[
-    M_{\mathrm U}=\int_0^{R_{\mathrm U}}\mathrm{d}m.
+ \frac{\dot E_\gamma}{E_\gamma}
+ =\frac{\dot\omega_\gamma}{\omega_\gamma}
+ =-\Gamma_{\mathrm D}.
 \]
-In the Type-II saturation construction its distributed surface potential satisfies
+Its units are $\mathrm{s^{-1}}$. The physical receiving projection remains distinct from the unit-reference numerical evaluation and from detector-induced attenuation.
+(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} and \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Completed Coordinate Map ($u_i=\mathcal C_i y_i$).} The quasistatic, work-conjugate endpoint map between a presented node--condensate reconfiguration $y_i$ and the completed active contact displacement $u_i$, with $\mathcal C_i=1-\alpha_{\mathrm G}^{(i)}$. The word ``latent'' used for $y_i$ does not identify this active coordinate with independently writable State-0 memory.
+(See \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}} and \hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Condensate Entrainment.} The conservative coherent condition $\mathbf v_{\mathrm{IC}}=\dot{\mathbf u}$, so that $\mathbf v_{\mathrm{rel}}=0$. The scaffold and condensate move together; the condensate is not absolutely stationary. This kinematic equality does not independently establish an additional condensate kinetic density to be added to the scaffold mass matrix.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Constitutive Closure.} A specified relation completing the mechanical response of a retained sector, such as contact isotropy, endpoint work matching, or receiving resistance. A result derived within a closure inherits its regime and assumptions. Symmetry, conservation, and a chosen normalization do not automatically determine every required coefficient or physical interaction.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Contact-Point Relative Displacement ($\Delta\mathbf u_{ij}^{\mathrm c}$).} The objective displacement difference of the material contact points,
 \[
-    \Phi_{\tau,\mathrm{G,U}}(R_{\mathrm U})
-    =
-    -\frac{G}{R_{\mathrm U}}
-    \int_0^{R_{\mathrm U}}\mathrm{d}m
-    =
-    -\frac{GM_{\mathrm U}}{R_{\mathrm U}}
-    =
-    -c_{\mathrm E}^2.
+ \Delta\mathbf u_{ij}^{\mathrm c}
+ =\mathbf u_j-\mathbf u_i
+ -r_{\mathrm D}(\boldsymbol\vartheta_i+\boldsymbol\vartheta_j)
+       \times\hat{\mathbf n}_{ij}.
 \]
-$M_{\mathrm U}$ characterizes the $R_{\mathrm U}$ cosmological domain and remains conceptually distinct from the black-hole saturation mass $M_{\mathrm{Sat}}$.
+It combines translations and contact-frame microrotations. Internal scalar phase differences enter the bond action as separate variables; they are not an extra term in this displacement identity.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.)
+\end{minipage}
 
-\item[Cosmic Damping Horizon ($R_{\mathrm U}$):] The cosmological designation for the Photon Energy-Relaxation Length. It is the characteristic macroscopic distance over which the surviving coherent photon branch undergoes one exponential energy-relaxation e-fold. At $R_{\mathrm U}$ the coherent photon retains $1/e$ of its emitted energy and continues propagating with further relaxation beyond that scale.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Convergence Density ($\rho_{\mathrm{QG}}$).} The scale-transition density used to connect the quantum saturation and gravitational yield constructions. In the retained node-scale model it marks the trigger for loss of active interstitial freedom. It must be distinguished from operational nodal density, the separate gravitational yield density, and the final substrate density.
+(See \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}.)
+\end{minipage}
 
-\item[Cosmic Impedance ($a_{\mathrm D}$):] The macroscopic structural-impedance acceleration scale of the Active Vacuum,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Convergence Information Limit ($N_{\mathrm{QG}}$).} The dimensionless boundary-capacity normalization
 \[
-    a_{\mathrm D}
-    =
-    \frac{c_{\mathrm E}^2}{R_{\mathrm U}}
-    =
-    c_{\mathrm E}\Gamma_{\mathrm D},
+ N_{\mathrm{QG}}=8\pi^2
+       \left(\frac{R_{\mathrm{QG}}}{\ell_{\mathrm S}}\right)^2.
 \]
-for a matched $(R_{\mathrm U},\Gamma_{\mathrm D})$ pair. It establishes the horizon-scale impedance normalization from which the reduced galactic response scale $a_{\mathrm{gal}}=a_{\mathrm D}/(2\pi)$ is constructed.
+It belongs to the manuscript's SC boundary-ledger construction and is distinct from occupied active boundary slots, thermodynamic entropy, and the normalized footprint of a particular localized mass state.
+(See \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}.)
+\end{minipage}
 
-\item[Directional-Tension Redistribution:] The mechanical origin assigned to gravitational radiation in TFT. It is a propagating, self-equilibrated transverse-traceless redistribution of directional transfer capacity in the active Soft Floor rather than an ordinary affine volumetric deformation of the FCC scaffold.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Convergence Radius ($r_{\mathrm{QG}}$).} The microscopic radius associated with the convergence density in the cross-scale phase-transition construction. Lowercase $r_{\mathrm{QG}}$ is not the macroscopic black-hole radius $R_{\mathrm{QG}}$. Its use as a candidate thermal-interface scale does not itself supply a gapless receiving mode or its density of states.
+(See \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}} and \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.)
+\end{minipage}
 
-\item[Dynamic Covariant Conservation:] The on-shell requirement that the completed effective stress-energy tensor of the coupled TFT system satisfies
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Cosmic Critical Mass ($M_{\mathrm U}$).} The mass assigned to the spherical $R_{\mathrm U}$ domain when its surface potential reaches $GM_{\mathrm U}/R_{\mathrm U}=c_{\mathrm E}^2$, giving $M_{\mathrm U}=c_{\mathrm E}^2R_{\mathrm U}/G$. This is the Type-II capacity construction, conceptually distinct from the black-hole saturation mass and the total Structural Reservoir mass.
+(See \hyperref[chap:global_kinematics]{Chapter~\ref*{chap:global_kinematics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Cosmic Damping Horizon ($R_{\mathrm U}$).} The cosmological name for the Photon Energy-Relaxation Length. In the constant-rate, gravity-neutral reference branch it denotes one energy e-fold, not a material boundary, an automatic photon stopping surface, or the size of the entire Structural Reservoir. See \emph{Photon Energy-Relaxation Length}.
+(See \hyperref[chap:cosmic_redshift]{Chapter~\ref*{chap:cosmic_redshift}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Cosmic Impedance ($a_{\mathrm D}$).} The acceleration scale $a_{\mathrm D}=c_{\mathrm E}^2/R_{\mathrm U}=c_{\mathrm E}\Gamma_{\mathrm D}$ for a consistently matched relaxation-rate and length pair. The reduced circular-orbit response uses $a_{\mathrm{gal}}=a_{\mathrm D}/(2\pi)$. The relation does not independently determine the physical numerical value of $\Gamma_{\mathrm D}$.
+(See \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Cubic Contact Isotropy.} The specialization $\kappa_{\mathrm n}=\kappa_{\mathrm t}$ of the objective contact model that produces the selected isotropic leading long-wavelength response. FCC geometry fixes cubic symmetry, not exact elastic isotropy by itself. The coherent pressure constraint and the retained rotational response remain part of the reduction.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Dark Sector.} The TFT allocation of effects conventionally assigned to dark energy and dark matter to structural nodal tension and condensate response. FCC volume fractions describe geometry; interpreting them as energy fractions requires the structural-capacity closure. Galactic excess acceleration additionally requires the extended reactive condensate response, not the void fraction alone.
+(See \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}} and \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Decoherence.} Loss of observable coherent access or reduced ensemble correlation in a specified active system. It may involve receiving interactions, disrupted coupling, or averaging over differing frame orientations. It must not be identified automatically with energy dissipation in each trial or destruction of the persistent Hard-Floor record.
+(See \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Defect Amplitude ($r_{\mathrm{amp}}$).} The radial boundary-displacement scale used in the thin-layer particle calibration. It is distinct from the common support-node radius $r_{\mathrm D}$. The approximate linear mass--amplitude law requires a specified impedance projection, geometry factor, phase participation, and a sufficiently small ratio $r_{\mathrm{amp}}/r_{\mathrm D}$.
+(See \hyperref[app:particle_amplitude]{Appendix~\ref*{app:particle_amplitude}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Defect Impedance Coefficient ($K_{\mathrm D}^{(\mathrm{def})}$).} The thin-layer conservative loading coefficient
 \[
-    \nabla_\mu^{(\tau)}T_{\mathrm{TFT}}^{\mu\nu}=0,
+ K_{\mathrm D}^{(\mathrm{def})}
+ =4\pi r_{\mathrm D}^2\mu_{\mathrm D}
+   \iota_{\mathrm V}^{(\mathrm{def})}\mathcal G_{\mathrm{imp}},
 \]
-ensuring compatibility between the dual-phase material balance and the emergent gravitational tensor description.
+with units $\mathrm{kg\,m^{-1}}$. It converts radial defect amplitude into inertial loading after phase participation is included; despite its name, it is not a force--velocity damping impedance.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
 
-\item[Effective Photon Energy-Relaxation Rate ($\Gamma_{\mathrm{eff}}$):] The combined effective rate used when coherent-photon vacuum relaxation and localized defect-induced damping are simultaneously retained in the same comparator equation,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Deterministic Certainty.} The statement that complete mechanical initial data and governing interactions determine the subsequent excitation--detector evolution. It does not mean that a reduced observer knows those data, that measurement is nondisturbing, or that field widths satisfy $\Delta x\Delta p=0$. Definite dynamics and finite uncertainty can coexist.
+(See \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Directional-Tension Redistribution.} The collective, self-equilibrated redistribution of directional FCC transfer capacity used to represent gravitational radiation. Its transverse-traceless tensor patterns are distinguished from ordinary affine strain of the microscopic scaffold. The collective gradient action, its normalization, and its microscopic embedding are separate levels of the construction.
+(See \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Dwell Time ($T$ in the Phase-Crosstalk Construction).} The operational duration of overlap entering the proposed phase-crosstalk budget. Here $T$ has time units and is not temperature. Its effect is evaluated together with the mode radius, overlap area, and calibrated geometric efficiency; it is distinct from the photon energy-relaxation time $t_{\mathrm D}$.
+(See \hyperref[app:photonic_emission]{Appendix~\ref*{app:photonic_emission}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Dynamic Covariant Conservation.} The compatibility requirement $\nabla_\mu^{(\tau)}T_{\mathrm{TFT}}^{\mu\nu}=0$ for the completed effective tensor description. It concerns the total consistently coupled system. A selected phase or a reduced receiving channel can exchange energy and momentum, so its tensor need not be separately conserved.
+(See \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Dynamic Propagation Speed ($c_{\mathrm P}$).} The completed propagation speed of the selected active branch in its local loading state. In the locally uniform endpoint-transfer limit, $c_{\mathrm P}=c_{\mathrm E}(1-\alpha_{\mathrm G})^2$. This is the long-wave capacity; at finite wavelength the actual group velocity must be obtained from the selected dispersion relation.
+(See \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}} and \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Effective Matter-Field Inertia ($m_{\mathrm{env}}$).} The inertial coefficient determined by the curvature of the retained matter eigenbranch in its slow-envelope reduction. Identification with the localized defect's translational mass requires consistent energy, momentum, and mode matching. It is not interchangeable with the inertia of a photon mode or the rotating support of a spin configuration.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Effective Optical Metric ($g_{\mu\nu}^{(\tau)}$).} The operational tensor packaging TFT's strain-dependent paths and clocks. In the static isotropic construction,
 \[
-    \Gamma_{\mathrm{eff}}
-    =
-    \Gamma_{\mathrm D}
-    +
-    \Gamma(x).
+ ds_\tau^2=-(1-\alpha_{\mathrm G})^2c_{\mathrm E}^2dt^2
+ +(1-\alpha_{\mathrm G})^{-2}\delta_{ij}\,dx^i dx^j.
 \]
-It is a composite transport coefficient rather than an additional fundamental vacuum constant.
+It reproduces the selected optical propagation law; it is not introduced as fundamental spacetime geometry or as a complete strong-field material solution.
+(See \hyperref[chap:gravitational_field]{Chapter~\ref*{chap:gravitational_field}}.)
+\end{minipage}
 
-\item[Exact Capacity Ledger ($T_{\mu\nu}^{(0)}=T_{\mu\nu}^{(\mathrm{rem})}+\Delta T_{\mu\nu}^{(\tau)}$):] The mechanical accounting identity of the State-I tensor budget. It separates the reference structural-capacity tensor $T_{\mu\nu}^{(0)}$ into the remaining active capacity $T_{\mu\nu}^{(\mathrm{rem})}$ and the converted capacity $\Delta T_{\mu\nu}^{(\tau)}$ responsible for localized loading and induced gravitational strain.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Effective Photon Energy-Relaxation Rate ($\Gamma_{\mathrm{eff}}$).} Earlier combined-rate shorthand. The current construction separates detector-induced incident-band loss from coherent photon scale relaxation. A sum such as $\Gamma_{\mathrm D}+\Gamma(\mathbf x)$ is not a universal redshift rate: adding coefficients requires a common retained coordinate, observable, energy normalization, and independently justified combined evolution law.
+(See \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}} and \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.)
+\end{minipage}
 
-\item[Face--Centered Cubic (FCC) Lattice:] The TFT-selected close-packed geometry of the State-I Active Vacuum. Equal spherical nodes occupy the fraction
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Elastic Energy at an Interference Node.} The energy retained in contact gradients when overlapping coherent waves cancel local displacement or velocity. A stationary displacement node can have $E_{\mathrm{kin}}=0$ while $E_{\mathrm{el}}>0$. The statement refers to the full spatial mechanical energy, not only to the value of a single canceled amplitude.
+(See \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Electromagnetism (Transverse Shear and Chiral Coupling).} The interaction sector represented by transverse shear and the chiral loading of localized defects. Its dimensionless coupling is $\alpha=K_{\mathrm L}/(\hbar c_{\mathrm E})$. This identification must be distinguished from the separate static geometric estimate, dynamic routing ansatz, and SI normalization of charge and electromagnetic constants.
+(See \hyperref[app:origin_of_charge]{Appendix~\ref*{app:origin_of_charge}} and \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Energy ($E$).} The integrated volumetric tension of the specified physical state, $E=\int_{\mathcal V}\tau\,dV$, reducing to $E=\tau V$ for uniform tension. For a harmonic excitation, $E=I\omega$. Structural reference capacity, coherent excitation energy, receiving energy, and retained-record energy require consistent but distinct accounting.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Energy-Transfer Cross-Section ($\sigma$).} The power transferred into a specified target's receiving degrees of freedom divided by the incident energy flux per area. Its units are $\mathrm{m^2}$. It determines a dilute-target transport rate only after target density and relative incident transport speed are specified; it is not the positional width $\sigma_x$.
+(See \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Exact Capacity Ledger.} The State-I tensor identity
 \[
-    \beta_{\mathrm{geo}}
-    =
-    \frac{\pi}{3\sqrt{2}}
-    \approx0.74048,
+ T_{\mu\nu}^{(0)}
+ =T_{\mu\nu}^{(\mathrm{rem})}+\Delta T_{\mu\nu}^{(\tau)}.
 \]
-leaving the connected interstitial fraction $\beta_{\mathrm{IC}}\approx0.25952$. FCC is selected within the close-packed family through cubic symmetry, twelve-neighbor coordination, the retained contact-isotropy closure, and compatibility with the saturated phase.
+It partitions reference structural capacity into remaining capacity and converted loading. The converted tensor includes each coupled defect and its assigned local condensate participation once, while extended condensate response is retained separately.
+(See \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.)
+\end{minipage}
 
-\item[FCC Node Radius ($r_{\mathrm D}$):] The calibrated physical radius of an Active-Vacuum FCC node,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Face-Centered Cubic (FCC) Lattice.} The selected cubic close-packed scaffold of equal active-vacuum nodes, with twelve nearest neighbors. Its nodal fraction is $\beta_{\mathrm{geo}}=\pi/(3\sqrt2)$ and its interstitial fraction is $\beta_{\mathrm{IC}}=1-\beta_{\mathrm{geo}}$. The conventional cell contains four nodes; the primitive-cell volume is $4\sqrt2\,r_{\mathrm D}^3$.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{FCC Node Radius ($r_{\mathrm D}$).} The empirically calibrated active support-node radius, approximately $7.4504\times10^{-27}\,\mathrm m$. It sets the nearest-neighbor separation $d_{\mathrm{nn}}=2r_{\mathrm D}$ and conventional cubic edge $2\sqrt2\,r_{\mathrm D}$. It is not the amplitude of every supported particle or photon, nor an independently derived value free of calibration.
+(See \hyperref[app:vacuum_scale_strain_unification]{Appendix~\ref*{app:vacuum_scale_strain_unification}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Field--Detector Correspondence.} The additional mapping connecting mechanical excitation fields and localized defect preparations to measured records. Preservation of a field intensity law does not by itself derive every detector probability. Initial ensemble specification, guidance, receiving dynamics, and position or momentum readout must be matched within the stated measurement construction.
+(See \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Finite-Packet Cycle Dilation.} The increase in duration of one coherently relaxing packet when its cycle count and modal identity are preserved while its frequency decreases. It is distinct from the separation of independent source-emission events. The latter requires endpoint clock and motion effects and the appropriate propagation history.
+(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Force.} The work-conjugate mechanical response of a specified configuration. For a translational coordinate and potential energy $U$, $\mathbf F=-\nabla U$; for an internal coordinate, the corresponding generalized force follows from the appropriate derivative. Spatial gradients of tension require the correct volume or inertia normalization before being identified with force or acceleration.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Fossil CMB.} The interpretation of the cosmic microwave background as relic thermal radiation from the decompression and early annealing epoch, subsequently evolving within the Active Vacuum. Coherent propagation, thermal equilibration, and the present absolute temperature are separate problems. The conditional thermal endpoint requires a specified receiving spectrum, coupling, and primordial loading.
+(See \hyperref[app:lattice_annealing]{Appendix~\ref*{app:lattice_annealing}} and \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Fractal Architecture.} The cross-scale organization relating substrate, active-vacuum, and localized matter realizations through $J_i=\rho_i r_i^4$ and the topology-normalized invariant $\hat J$. The inverse-fourth-power relation is a scaling law across the specified structural realizations, not automatically the radial density profile of every macroscopic object.
+(See \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}} and \hyperref[app:fractal_architecture]{Appendix~\ref*{app:fractal_architecture}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Frequency Diffusion.} Stochastic broadening of a photon's frequency distribution around its mean drift. It is a second-moment transport effect, distinct from the first-moment scale relaxation governed by $\Gamma_{\mathrm D}$. A viable coherent-transfer mechanism must control the accumulated line broadening as well as reproduce the mean redshift.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Galactic Acceleration Scale ($a_{\mathrm{gal}}$).} The reduced orbital-response normalization $a_{\mathrm{gal}}=a_{\mathrm D}/(2\pi)$. In the unscreened coherent regime it enters $g_{\mathrm{obs}}=g_{\mathrm b,\Pi}+\sqrt{a_{\mathrm{gal}}g_{\mathrm b,\Pi}}$. Its relation to the cosmic impedance scale must be preserved in comparisons with rotation curves and the Baryonic Tully--Fisher relation.
+(See \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Gapless Receiving Branch.} A candidate receiving spectrum with excitations extending to arbitrarily low frequency in its specified ideal limit. A low-temperature thermal role additionally depends on dimensional support, state counting, coupling, and occupation. A stable bulk phase-conversion coordinate is not automatically gapless, and a localized interface mode is not automatically a three-dimensional thermal bath.
+(See \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Geometric Capacity ($S_{\mathrm{geo}}/k_{\mathrm B}$).} The dimensionless active-boundary slot count in the one-node-thick construction,
 \[
-    r_{\mathrm D}\simeq7.4504\times10^{-27}\ \mathrm{m}.
+ \frac{S_{\mathrm{geo}}}{k_{\mathrm B}}
+ =\frac{4\pi R_{\mathrm{QG}}^2}{r_{\mathrm D}^2}.
 \]
-It defines the characteristic active-vacuum structural scale and the microscopic resolution entering the nearest-neighbor spacing $d_{\mathrm{nn}}=2r_{\mathrm D}$ and the photon structural cutoff.
+The symbol $S_{\mathrm{geo}}$ includes the Boltzmann conversion factor and has entropy units. The slot count alone is not a thermodynamic entropy or a measure of occupied slots.
+(See \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}.)
+\end{minipage}
 
-\item[Fossil CMB:] The TFT interpretation of the Cosmic Microwave Background as relic thermal electromagnetic radiation originating from the catastrophic decompression and early annealing epoch and subsequently evolving through the Active Vacuum over cosmic time. Its present radiation field establishes the CMB Noise Floor.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Geometric Scale-Transfer Factor ($P_{\mathrm R}$).} The squared two-vertex geometric factor of the selected reference-mediated construction, $P_{\mathrm R}=(9/4)(\ell_{\mathrm S}/r_{\mathrm D})^6$. It measures projected coupling weakness. A nonzero geometric factor does not establish an irreversible receiving continuum or determine the independent correlation factor $\mathcal F_{\mathrm R}$.
+(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.)
+\end{minipage}
 
-\item[Geometric Capacity ($S_{\mathrm{geo}}$):] The maximum number of structural boundary slots available on a macroscopic saturated phase boundary for physical defect states. For a one-node-thick boundary construction, the geometric capacity scales with surface area as $R^2$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Global Phase Avalanche.} The aggregate conversion of State-I material into saturated State-II domains. The fractional rate is $\Gamma_{\mathrm{pc}}=\dot M_p/M_p$, where $M_p$ denotes the aggregate converted mass. Exponential growth follows for constant $\Gamma_{\mathrm{pc}}$. Equality with the photon rate $\Gamma_{\mathrm D}$ is an additional synchronization condition, not a definition.
+(See \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.)
+\end{minipage}
 
-\item[Global Phase Avalanche:] The aggregate conversion of active State-I vacuum into State-II saturated structure through the global black-hole network. Its instantaneous fractional conversion rate is
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Global Rupture Trigger ($M_{\mathrm{trg}}$).} The aggregate State-II mass assigned to the global connectivity threshold in the macroscopic rupture construction. It describes failure of a distributed network, not the saturation mass of one isolated black hole. Its evaluation inherits the adopted percolation fraction and the chosen structural mass budget.
+(See \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Globally Static, Locally Dynamic.} The architectural distinction between a non-expanding global structural background and evolving local matter, radiation, strain, and phase boundaries. It does not set every local velocity to zero or specify a cosmological velocity field. A distance--redshift prediction still requires the matter-flow, gravitational, and transport solutions.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Goalpost Topology.} The shared pair architecture $A\to g_A\leftrightarrow g_B\to B$: two active endpoints are linked to substrate anchors by Tension Columns, with a Residual Phase-Tether connecting the anchors. Ideal substrate compatibility and finite active-endpoint response play different roles in the entanglement construction.
+(See \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Gravitational Endpoint Transfer.} The reduced serial transfer rule in which source release and target acceptance multiply:
 \[
-    \Gamma_{\mathrm{pc}}
-    \equiv
-    \frac{\dot M_p}{M_p}.
+ \mathcal C_{ij}
+ =(1-\alpha_{\mathrm G}^{(i)})(1-\alpha_{\mathrm G}^{(j)}).
 \]
-For a stationary $\Gamma_{\mathrm{pc}}$, the converted mass evolves as $M_p(t)=M_p(0)e^{\Gamma_{\mathrm{pc}}t}$. The phase-conversion rate $\Gamma_{\mathrm{pc}}$ and the photon energy-relaxation rate $\Gamma_{\mathrm D}$ are independent quantities unless an explicit synchronization condition is imposed.
+For nearly uniform loading, $\mathcal C=(1-\alpha_{\mathrm G})^2$. It is a work-conjugate active-coordinate closure, not a probability, a State-0 writing law, or an equation valid beyond active saturation.
+(See \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.)
+\end{minipage}
 
-\item[Global Rupture Trigger ($M_{\mathrm{trg}}$):] The aggregate State-II mass threshold associated with the global percolation fraction $\beta_{\mathrm{rupture}}\approx0.0516$. At this threshold, the distributed network of saturated defects forms a spanning cluster across the structural reservoir and initiates Catastrophic Decompression.
-
-\item[Goalpost Topology:] The TFT structural model of quantum entanglement in which separated Soft-Floor states remain phase-correlated through vertical Tension Columns connected to a shared Residual Phase-Tether on the phase-locked Hard Floor.
-
-\item[Gravitational Saturation Radius ($R_{\mathrm{sat}}$):] The spatial boundary at which the active gravitational strain reaches
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Gravitational Redshift ($z_{\mathrm{grav}}$).} The conservative frequency comparison between differently loaded endpoint clocks. For stationary endpoints under the retained static clock law,
 \[
-    \alpha_{\mathrm G}=1,
+ 1+z_{\mathrm{grav}}
+ =\frac{1-\alpha_{\mathrm G,o}}{1-\alpha_{\mathrm G,e}}.
 \]
-exhausting the remaining State-I transfer capacity and initiating the FCC-to-SC phase transition. In the black-hole construction this saturation surface coincides with the phase-transition radius $R_{\mathrm{QG}}$.
+Equal endpoint loading gives no such frequency shift even when an intervening stationary field changes travel time. This contribution is distinct from propagation relaxation.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
 
-\item[Graviton (Dynamic Strain Cursor):] The TFT representation of the localized longitudinal substrate strain record associated with a changing Soft-Floor stress configuration. It functions as a dynamic structural cursor within the vertical topology rather than as an independent elementary exchange particle.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Gravitational Saturation Radius ($R_{\mathrm{sat}}$).} The radius at which the specified spherical loading reaches $\alpha_{\mathrm G}=1$. In the uniform-density reduction, $R_{\mathrm{sat}}=c_{\mathrm E}/\sqrt{(4\pi/3)\rho G}$. The spherical black-hole construction identifies the saturation boundary with $R_{\mathrm{QG}}=GM/c_{\mathrm E}^2$; rotational deformation requires a separate surface calculation.
+(See \hyperref[chap:gravitational_field]{Chapter~\ref*{chap:gravitational_field}} and \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}.)
+\end{minipage}
 
-\item[Hard Floor (State 0 / Latent Substrate):] The phase-locked Simple Cubic substrate at the irreducible structural scale $\ell_{\mathrm S}\sim10^{-35}\ \mathrm{m}$. It supplies the absolute structural reference, static longitudinal information record, and saturation boundary of TFT. In the singular constraint limit $\mu_{\mathrm S}\rightarrow0$, $K_{\mathrm S}\rightarrow\infty$, and $c_{\mathrm S}\rightarrow\infty$, longitudinal constraint equilibration becomes effectively zero-delay relative to Active-Vacuum dynamics.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Gravitational Waves.} Propagating collective transverse-traceless disturbances of directional tension in the active Soft Floor. The macroscopic tensor has two polarizations and a gradient-controlled restoring action. It is distinct from the static restorative field, from ordinary microscopic affine scaffold strain, and from the longitudinal substrate wake called the graviton in TFT.
+(See \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}.)
+\end{minipage}
 
-\item[Hydrodynamic Impedance:] The conservative kinetic reaction generated when a localized topological defect induces relative motion of the Interstitial Condensate. The reversible energy stored in this flow produces the defect's added inertial loading; dissipative resistance arises only when a separate phase-lagged response is present.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Graviton (Dynamic Strain Cursor).} The longitudinal strain wake associated with the vertical loading of an active excitation. The wake follows the current excitation as a structural cursor; it is not an independent free-traveling exchange particle. The retained configuration after passage is the record, and the interaction producing that retained configuration is a separate constitutive problem.
+(See \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}.)
+\end{minipage}
 
-\item[Incrementally Incompressible Coherent Branch:] The reduced Active-Vacuum mode in which the Interstitial Condensate is entrained with the FCC scaffold,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Graviton Record Writer.} The microscopic interaction required to connect an objective active-interface history to a persistent State-0 configuration. The current appendix supplies a conditional integer-registry representation and consistency tests, not a completed physical selector. Writing, reciprocal work and recoil, retention, and readout must follow from the same parent mechanics.
+(See \hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Hard Floor (State 0 / Latent Substrate).} The foundational phase-locked SC reference at spacing $\ell_{\mathrm S}\sim10^{-35}\,\mathrm m$. Its ideal limits are $K_{\mathrm S}\to\infty$, $\mu_{\mathrm S}\to0$, and $c_{\mathrm S}\to\infty$, with finite structural yield capacity. It supports the constitutional longitudinal record but is not an ordinary active oscillator, thermal bath, or untracked finite-inertia receiver.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Holographic Record.} The persistent longitudinal configuration assigned to the Hard Floor beneath evolving active states. In this usage, a structural record is distinct from the area-scaled capacity of a black-hole boundary. Persistence is constitutional; the physical writing interaction and distinguishable readout are not determined by the footprint normalization alone.
+(See \hyperref[app:graviton]{Appendix~\ref*{app:graviton}} and \hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Hubble-Scale Reference.} The empirical low-redshift distance--redshift slope used for comparison with the TFT transport and endpoint models. It is not automatically the microscopic photon rate $\Gamma_{\mathrm D}$. Identifying the two requires the stated relaxation-dominated specialization and a consistent distance and clock convention.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Hydrodynamic Impedance.} The mechanical response associated with defect-induced condensate motion. Its conservative reactive part stores and returns kinetic energy, producing added inertia. A separately specified resistive part performs net receiving work. Inertia, resistance, and the extended galaxy-scale condensate response must not be treated as one interchangeable coefficient.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}} and \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Hydrogenic Shell Law.} The shell-radius and energy relations obtained from the retained orbital phase-closure and central chiral-force model:
 \[
-    \mathbf{v}_{\mathrm{rel}}=\mathbf{0},
+ r_n=\frac{n^2\hbar}{m_{\mathrm e}\alpha c_{\mathrm E}},
+ \qquad
+ E_n=-\frac{m_{\mathrm e}\alpha^2c_{\mathrm E}^2}{2n^2}.
 \]
-while incremental volumetric fluctuations satisfy
+These expressions belong to the stated hydrogenic approximation; angular structure and spin--orbit corrections are developed separately.
+(See \hyperref[app:hydrogenic_shell]{Appendix~\ref*{app:hydrogenic_shell}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Incrementally Incompressible Coherent Branch.} The selected translational acoustic reduction with condensate entrainment and vanishing incremental volume change. In the long-wave limit, $\nabla\cdot\mathbf u=0$, leaving two finite-frequency transverse polarizations. This does not eliminate static longitudinal pressure, defect-induced relative flow, or finite background compaction toward a phase boundary.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Information and Thermodynamic Entropy.} Information denotes a retained structural configuration in the TFT record premise; thermodynamic entropy concerns the multiplicity of accessible dynamical states. A normalized record footprint, a geometric slot capacity, and an entropy are different objects. Multiplication by $k_{\mathrm B}$ supplies entropy units but does not establish a thermodynamic state-counting model.
+(See \hyperref[app:graviton]{Appendix~\ref*{app:graviton}} and \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Information Footprint ($N_\gamma$, $N_m$).} The branch-dependent normalization $N=E_{\mathrm{carrier}}/E_{\mathrm{record}}$, giving $N_\gamma=1/\alpha_{\mathrm G,\gamma}$ and $N_m=2\pi/\alpha_{\mathrm G,m}$ in the retained conventions. These dimensionless footprints use the carrier's own loading; they are not automatically integer counts of distinguishable bits or a count of every historical trace.
+(See \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Internal Phase.} The scalar phase variable of a specified contact or collective mode. Contact energy depends on relative internal phases, while the phase of the action-normalized excitation is constructed from mechanical mode quadratures. Neither is automatically identical to nodal microrotation or to an integer State-0 registry label.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Interstitial Condensate ($\beta_{\mathrm{IC}}$).} The connected fluid-like phase occupying the complementary FCC fraction $\beta_{\mathrm{IC}}=1-\pi/(3\sqrt2)\simeq0.25952$. It supplies coherent pressure response and mode-dependent relative flow around defects. The calibrated equivalent impedance density is not independently established as its intrinsic equilibrium material density.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Invariant Elastic Capacity ($c_{\mathrm E}$).} The gravity-neutral long-wavelength transverse propagation capacity of the active FCC carrier, with $c_{\mathrm E}^2=\tau_{\mathrm D}/\mu_{\mathrm D}$. Its square sets the specific-energy scale used in the kinematic budget. It is distinct from the loaded propagation speed $c_{\mathrm P}$ and the ideal substrate constraint speed $c_{\mathrm S}$.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Irreversible Carrier-Response Factor ($\mathcal F_{\mathrm R}$).} The dimensionless integrated correlation factor containing the scale-projected receiving spectrum, interaction denominators, registry participation, and temporal correlation. The conditional closure is $\Gamma_{\mathrm D}=P_{\mathrm R}\mathcal F_{\mathrm R}/t_{\mathrm{corr}}^{(0)}$. The conservative branch gives zero; the unit choice $\mathcal F_{\mathrm R}=1$ is a reference normalization, not a physical minimum.
+(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{ISCO Map ($r_{\mathrm{ISCO}}$).} The innermost stable circular-orbit radius obtained from the selected massive-particle Hamiltonian of the rotating exterior. It is a stability boundary for massive trajectories, not the photon-ring radius, optical shadow scale, or physical FCC/SC transition surface. Its spin dependence inherits the massive-particle closure.
+(See \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Isoenergetic Phase Continuity.} The equality $E_{\mathrm{QG}}=E_{\mathrm S}$ in the retained scale-transition normalization. It compares the assigned energies of the convergence and substrate endpoint configurations. Equality of endpoint energies is distinct from specification of the transition path, rate, stress distribution, and dynamic phase-conversion mechanism.
+(See \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Kepler Conjecture Limit ($\beta_{\mathrm{geo}}$).} The equal-sphere close-packing fraction $\pi/(3\sqrt2)\simeq0.74048$ used for the nodal sector. Both FCC and HCP attain this fraction. TFT's selection of FCC and its interpretation of a volume fraction as structural energy therefore require additional symmetry, mechanical, and energy-allocation assumptions.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Kinematic Budget ($c_{\mathrm E}^2$).} The fixed squared-speed capacity partitioned, in the retained localized-matter model, as $c_{\mathrm E}^2=v_{\mathrm{ext}}^2+v_{\mathrm{int}}^2$. Its units are $\mathrm{J\,kg^{-1}}$. The associated Lorentz factor is $\gamma=c_{\mathrm E}/v_{\mathrm{int}}$; external translation and internal resonance remain distinct mechanical contributions.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Kinematic Lattice Index ($N_{\mathrm D}$).} The radial scale ratio $N_{\mathrm D}=R_{\mathrm U}/(2r_{\mathrm D})$. The quoted value near $8.5\times10^{51}$ uses the observational reference length. It counts nearest-neighbor intervals along a radial scale, not all nodes in a volume, and is not a maximum distance beyond which propagation is forbidden.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Kinematic Occupancy ($S_{\mathrm{kin}}/k_{\mathrm B}$).} The dimensionless occupied-slot normalization $S_{\mathrm{kin}}/k_{\mathrm B}=R_{\mathrm{QG}}/r_{\mathrm D}$ used in the one-layer black-hole construction. It grows linearly with radius, whereas geometric capacity grows quadratically. The symbol $S_{\mathrm{kin}}$ itself includes $k_{\mathrm B}$ and is not a dimensionless count.
+(See \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Kinematic Redshift ($z_{\mathrm{kin}}$).} The frequency shift due to source--observer motion under a specified endpoint-frame convention. For radial recession at speed $v$ in the gravity-neutral reference,
 \[
-    \nabla\cdot\mathbf{u}=0.
+ 1+z_{\mathrm{kin}}
+ =\sqrt{\frac{1+v/c_{\mathrm E}}{1-v/c_{\mathrm E}}}.
 \]
-The retained translational acoustic sector then contains two finite-frequency transverse polarizations.
+It contains the relevant clock and path-separation effects and is distinct from gravitational endpoint shift and propagation relaxation.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
 
-\item[Interstitial Condensate (volume fraction $\beta_{\mathrm{IC}}$):] The connected fluid-like phase occupying the complementary FCC interstitial fraction
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Kinematic State Equation.} The relation $\Gamma_{\mathrm D}^2=(4\pi G/3)\rho_{\mathrm c}$ obtained by combining the homogeneous spherical capacity condition with $R_{\mathrm U}=c_{\mathrm E}/\Gamma_{\mathrm D}$. It is a state relation within that matched construction, not an independently derived cosmological expansion or phase-conversion evolution equation.
+(See \hyperref[chap:global_kinematics]{Chapter~\ref*{chap:global_kinematics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Lattice Annealing Time ($t_{\mathrm a}$).} The early thermal-relaxation time estimated using the adopted diffusive-cooling similarity law and geometric annealing-mode closure. The current reference calculation gives approximately $3.86\times10^5\,\mathrm{yr}$ at a temperature of order $3000\,\mathrm K$. These values inherit the cooling assumptions and do not determine subsequent fossil thermalization.
+(See \hyperref[app:lattice_annealing]{Appendix~\ref*{app:lattice_annealing}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Lense--Thirring Correspondence Normalization.} The weak-field matching condition fixing the leading exterior torsional-drag amplitude through $\omega_{\mathrm{drag}}=2G\mathcal J_{\mathrm{BH}}/(c_{\mathrm E}^2r^3)$. It normalizes the selected rotating exterior but does not independently determine its nonlinear strong-field boundary shape or complete ringdown spectrum.
+(See \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Live Phase Boundary.} The finite active FCC/SC interface surrounding a phase-locked black-hole domain. It carries phase-segregated inertial loading and supports growth, redistribution, torsion, deformation, and stress shedding. The internal loss of ordinary active motion does not remove these boundary degrees of freedom.
+(See \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Localized Relaxation Rate ($\Gamma_q$).} The fractional loss rate of coherent energy in a specified retained boundary mode. Near a stable harmonic minimum, with weak loss and negligible returned excitation, $\Gamma_q\simeq\eta_q/M_q$. Equality with an envelope-loss coefficient requires matching the coordinate, retained mode, and energy normalization.
+(See \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Longitudinal Constraint Equilibration.} The ideal zero-delay adjustment of compatibility through the phase-locked Hard Floor, represented by $c_{\mathrm S}\to\infty$. It is not an independently propagating finite-energy acoustic mode. Observable active-endpoint response still involves finite inertia, contact forces, and receiving dynamics.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Loss-Tangent Representation.} A reduced weak-loss description of work transferred out of a selected coherent mode. In the scale-relaxation representation, $\tan\delta_{\mathrm{eff}}\simeq\Gamma_{\mathrm D}/\omega$. This is not automatically the material loss tangent of a local amplitude-damping element; real-frequency transport still requires coherent-action preservation and a scale-transfer interaction.
+(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} and \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Luminosity and Angular-Diameter Distances.} Operational distance measures defined by flux--luminosity and transverse-size--angle comparisons. Their relation to coordinate path length must be calculated from the chosen emission, timing, ray-bundle, and photon-transport model. The manuscript's simple formulas apply to its radial, gravity-neutral, transparent, no-lensing reference branch.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Macroscopic Oscillator.} The proposed large-scale cycle linking active-vacuum evolution, localized saturation, global connectivity, and catastrophic decompression. Its phase-conversion clock is distinct from the optical relaxation clock unless synchronization is imposed. A structural cycle description is not, by itself, a prediction of a unique age or remaining lifetime.
+(See \hyperref[ch:macroscopic_oscillator]{Chapter~\ref*{ch:macroscopic_oscillator}} and \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Mass and Topological Loading ($M_{\mathrm{top}}$).} The scalar loading coefficient of a specified localized defect and its coupled condensate state. In the retained equivalence closure, $m_{\mathrm i}=m_{\mathrm g}=M_{\mathrm{top}}$, with $M_{\mathrm{top}}=\rho_{\mathrm{IC}}^{(\mathrm{imp})}V_{\mathrm{imp}}f_\phi(\Delta\phi)$. It is not an independent substance assigned to the support-node interior.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Mechanical Memory.} The dependence of the present receiving force on earlier motion, represented by a causal convolution kernel and a force fixed by receiver preparation. This is active dynamical memory. A finite conservative receiver can return energy; a local damping approximation requires a controlled interval with negligible significant return.
+(See \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Microrotation ($\boldsymbol\vartheta_i$).} The infinitesimal mechanical rotation of a node's local contact frame. Together with center translation it determines objective material-contact displacement, rolling, and twist. It is distinct from internal scalar phase and from the collective phase of an action-normalized excitation.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Microscopic Scaffold Shear Modulus ($K_{\mathrm{sh}}^{(\mathrm{micro},0)}$).} The unstrained primitive-cell tangent shear coefficient of the FCC scaffold. Under the selected isotropic coherent closure, $K_{\mathrm{sh}}^{(\mathrm{micro},0)}=\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}c_{\mathrm E}^2$ with $\rho_{\mathrm{sh}}^{(\mathrm{micro},0)}=\beta_{\mathrm{geo}}\rho_{\mathrm D}$. This pressure-dimensioned material coefficient is distinct from the surface contact tension $\tau_{\mathrm D}$ and the spectral collective gravitational-wave stiffness $K_{\mathrm{GW}}^{(\mathrm{eff})}(\omega)$.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Modal Action ($I$).} For a harmonic normal mode, $I=E/\omega=(2\pi)^{-1}\oint\pi_q\,dq$. The elementary photon has $I_\gamma=\hbar$, corresponding to complete-cycle action $h$. Multiple coefficients in one mode expansion share the total excitation normalization; each is not automatically a separate elementary quantum.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}} and \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Modal Hamiltonian.} The mechanical energy of a retained real harmonic mode,
 \[
-    \beta_{\mathrm{IC}}
-    =
-    1-\beta_{\mathrm{geo}}
-    \approx0.25952.
+ H_q=\frac{\pi_q^2}{2M_q}
+       +\frac12M_q\omega_q^2q^2.
 \]
-It is entrained with the scaffold in the conservative coherent branch, produces mode-dependent conservative added inertia around localized defects, and supports the extended reactive response associated with galactic impedance. Dissipative energy transfer belongs to separately defined phase-lagged response channels.
+The coordinate $q$ is a physical displacement and $\pi_q$ its conjugate momentum. Participating inertia, mode shape, and contact stiffness determine the coefficients; they are not fixed by energy normalization alone.
+(See \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}.)
+\end{minipage}
 
-\item[ISCO Map ($r_{\mathrm{ISCO}}(a_\ast)$):] The Innermost Stable Circular Orbit obtained from the massive-particle Soft-Floor Hamiltonian of the rotating TFT exterior. It supplies the observational mapping between the spin parameter $a_\ast$ and the inner stable-orbit radius.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Modal Participation Area ($A_{\mathrm{ct}}^{(\mathrm{modal})}$).} The effective area referring a specified mode's integrated scaffold inertia to the surface coefficient, $M_{\mathrm D}=\mu_{\mathrm D}A_{\mathrm{ct}}^{(\mathrm{modal})}$. In the retained normalization it equals $2\pi\ell_{\mathrm S}^2$. It is a mode-weighted projection, not the literal total exposed surface area of an FCC node.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}}.)
+\end{minipage}
 
-\item[Kepler Conjecture Limit ($\beta_{\mathrm{geo}}$):] The maximum equal-sphere packing fraction in three-dimensional Euclidean space,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Mode-Resolved Impedance Density ($\rho_{\mathrm{IC}}^{(\mathrm{imp})}$).} The equivalent volumetric added-inertia density of a specified defect-flow mode, $\rho_{\mathrm{IC}}^{(\mathrm{imp})}=\mu_{\mathrm D}\iota_{\mathrm V}^{(\mathrm{def})}$. The projection $\iota_{\mathrm V}^{(\mathrm{def})}$ has inverse-length units and is determined by the boundary-value problem. The empirical choice $1\,\mathrm{m^{-1}}$ is a calibration convention, not its universal microscopic value.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Motion (Sequential Discrete Reconfiguration).} Transport of a localized active state by directionally ordered release and reconstruction through the connected FCC network. The defect's topological identity is retained while its supporting configuration changes. This is distinct from assuming independent material particles slide through a mechanically unrelated empty background.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Node Interface Inertia ($\mu_{\mathrm D}$).} The baseline surface-inertia coefficient of the active transfer description, with units $\mathrm{kg\,m^{-2}}$ and $c_{\mathrm E}^2=\tau_{\mathrm D}/\mu_{\mathrm D}$. Its conversion to integrated mode inertia or equivalent volume density requires the appropriate area or inverse-length projection. These different dimensional representations must not be interchanged.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{No-Hair Quadrupole Closure ($Q_{\mathrm{TFT}}$).} The adopted rotating-boundary correspondence $Q_{\mathrm{TFT}}=-a_*^2MR_{\mathrm{QG}}^2$, with $a_*=c_{\mathrm E}\mathcal J_{\mathrm{BH}}/(GM^2)$. It specifies the relaxed leading quadrupole in the selected model. It is a closure condition, not a consequence of dimensional analysis or stress shedding alone.
+(See \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Nucleon Anchor.} The composite torsional reference structure used in the matter-scale and atomic constructions. The representative radius near $0.88\,\mathrm{fm}$ is an adopted structural calibration. Its relationship to an experimentally defined charge or stress radius requires the corresponding physical profile and response calculation.
+(See \hyperref[app:fractal_architecture]{Appendix~\ref*{app:fractal_architecture}} and \hyperref[chap:hydrogen_atom]{Chapter~\ref*{chap:hydrogen_atom}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Number-Changing Detailed Balance.} The balance of forward and reverse interactions that allows photon occupation to approach a Planck distribution with zero photon chemical potential. This thermal process is distinct from number-preserving coherent frequency drift. Its physical realization requires specified interaction rates and a consistent energy ledger with the receiving sector.
+(See \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Objective Interface History ($\mathcal H_\partial$).} The complete event history relevant to a proposed write interaction, including the photon mode, relative phase, contact displacement and rotation, Tension-Column loading, and participating boundary response. It must be determined together with the reciprocal active dynamics and the pre-existing record, rather than chosen independently as an arbitrary writing signal.
+(See \hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Observational Black-Hole Surface Map.} The collection of distinct surfaces and scales used to connect a solved rotating exterior to observations: the mass-defined radius, spin-deformed saturation boundary, torsional capacity surface, photon orbit, shadow impact scale, and massive-particle ISCO. They are not interchangeable definitions of one physical ``black-hole radius.''
+(See \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Observed Redshift ($z_{\mathrm{obs}}$).} The measured wavelength or frequency ratio for an identified transition. Under the stationary factorized TFT construction,
 \[
-    \beta_{\mathrm{geo}}
-    =
-    \frac{\pi}{3\sqrt{2}}
-    \approx0.74048,
+ 1+z_{\mathrm{obs}}
+ =(1+z_{\mathrm{kin}})(1+z_{\mathrm{grav}})(1+z_{\mathrm D}).
 \]
-achieved by both FCC and HCP close packing. TFT adopts the FCC branch and, under the uniform structural-capacity closure, interprets $\beta_{\mathrm{geo}}$ as the unperturbed nodal structural allocation of the Active Vacuum.
+This separates endpoint motion, endpoint gravitational loading, and propagation relaxation. A measured ratio alone does not determine distance, cosmic age, or the share assigned to each mechanism.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
 
-\item[Kinematic Budget ($c_{\mathrm E}^2$):] The invariant specific-energy capacity of the Active Vacuum,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Octahedral Void Limit ($\beta_{\mathrm{oct}}$).} The conventional-cell volume fraction occupied by the inscribed spheres in the FCC octahedral sites, approximately $0.0526$. The manuscript uses it as an isotropic accommodation scale for condensed defects. Its geometric value is distinct from an observed baryonic energy fraction and from the rupture fraction $\beta_{\mathrm{rupture}}$.
+(See \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Ohmic Receiving Response.} A receiving response whose carrier-projected retarded self-energy has a finite positive linear-in-frequency dissipative limit. For the scale coordinate, $\eta_{s\mathrm R}=\lim_{\Omega\to0}[-\operatorname{Im}\Sigma_s^{\mathrm R}(\Omega)/\Omega]>0$. This is the requirement used for the proposed Markovian scale-relaxation reduction; finite conservative modes alone do not supply asymptotic irreversible damping.
+(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Operational No-Signaling.} Independence of locally accessible recorded statistics from the remote analyzer setting. Balanced marginals in the ideal pair model are one requirement; trigger rates, missing records, timing, and detection efficiency must also satisfy the appropriate independence. Ideal substrate compatibility alone is not a complete operational proof.
+(See \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Parent Mechanical Action.} The common kinetic and interaction construction from which the retained modes, contact forces, and reduced coefficients are to be obtained. A tangent Hessian fixes local harmonic response but not every nonlinear transition, receiving interaction, or record selector. A constitutive completion must identify those ingredients within the same physical accounting.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}} and \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Phase Crosstalk.} The proposed phase exchange between otherwise independent photons whose substrate-referenced strain patterns transiently overlap. Its budget uses overlap area, mode size, operational dwell time, and a calibrated geometric efficiency. This temporary overlap is distinct from a prepared persistent Goalpost tether and from coherent photon energy relaxation.
+(See \hyperref[app:photonic_emission]{Appendix~\ref*{app:photonic_emission}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Phase Locking.} The suppression of relative phase evolution in the specified locked configuration. The homogeneous Hard-Floor reference has uniform, time-independent phase, conventionally set to zero. Choosing that phase origin does not determine entropy or stored energy, and phase locking of the interior does not forbid motion of a surrounding live boundary.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Phase Momentum.} The momentum field $\mathbf p=\nabla S=\hbar\nabla\varphi$ associated with the excitation's phase-action representation. For a plane wave it gives $\mathbf p=\hbar\mathbf k$. This field quantity, the distribution of spectral momenta, and the localized knot's translational momentum coincide only under the appropriate field--defect correspondence.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Phase Participation ($f_\phi$).} The nonnegative factor specifying how a localized phase configuration activates a defect's added-inertia response. The general mass law retains $f_\phi(\Delta\phi)$. Replacing it by $\sin\Delta\phi$ is a particular branch closure, used only on the stated nonnegative phase domain and not assumed universally.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Phase Segregation.} The displacement of active topological matter states toward the FCC/SC interface as a saturated region forms or grows. The manuscript assigns the phase-segregated inertial mass to the live boundary rather than to ordinary active motion inside the locked core. The detailed transport belongs to the phase-boundary dynamics.
+(See \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}} and \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Phase-Action Guidance.} The identification of the localized knot's velocity with the phase-action current of its matched matter field. In the conservative isotropic reduction, $\mathbf v_\psi=\nabla S/m_{\mathrm{env}}$ where $\rho_\psi>0$. Applying this field velocity to a physical defect requires the stated inertia and field--defect matching.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}} and \hyperref[app:quantum_tunneling]{Appendix~\ref*{app:quantum_tunneling}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Photon.} An untethered coherent transverse excitation of the Active Vacuum, with elementary modal action $I_\gamma=\hbar$ and energy $E_\gamma=\hbar\omega_\gamma=h\nu_\gamma$. It has no localized matter-like rest-mass knot, although its mechanical carrier has participating inertia. Its spatial mode, polarization, dispersion, and receiving interactions specify its physical evolution.
+(See \hyperref[app:photon_hamiltonian]{Appendix~\ref*{app:photon_hamiltonian}} and \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Photon Eigenbranch (Dispersion-Suppressed).} The selected reduced transverse FCC branch whose higher-gradient closure cancels the leading quadratic long-wave group-speed correction, leaving a quartic correction. It remains dispersive at finite wavelength. The cancellation and surviving correction belong to the specified action; full microscopic branch selection and nonlinear cutoff behavior are separate completion questions.
+(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Photon Energy-Relaxation Length ($R_{\mathrm U}$).} For a positive constant rate in the gravity-neutral, nondispersive reference branch,
 \[
-    [c_{\mathrm E}^2]
-    =
-    \mathrm{J\,kg^{-1}}
-    =
-    \mathrm{m^2\,s^{-2}}.
+ R_{\mathrm U}=\frac{c_{\mathrm E}}{\Gamma_{\mathrm D}},
+ \qquad
+ E_\gamma(R_{\mathrm U})/E_\gamma(0)=e^{-1}.
 \]
-The speed $c_{\mathrm E}$ is the gravity-neutral long-wavelength transverse propagation capacity of the active FCC carrier and supplies the invariant scale appearing in $E=mc_{\mathrm E}^2$ and the kinematic velocity budget.
+The observational reference gives about $1.2665\times10^{26}\,\mathrm m$. For variable loading or rate, the corresponding e-fold condition is the path integral $\int\Gamma_{\mathrm D}\,dt=1$.
+(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} and \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
 
-\item[Kinematic Lattice Index ($N_{\mathrm D}$):] The dimensionless number of nearest-neighbor FCC structural intervals spanning one Photon Energy-Relaxation Length,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Photon Energy-Relaxation Redshift Law.} The accumulated propagation contribution
 \[
-    N_{\mathrm D}
-    =
-    \frac{R_{\mathrm U}}{2r_{\mathrm D}}
-    \approx8.5\times10^{51}.
+ \ln(1+z_{\mathrm D})
+ =\int_{\mathcal P}\Gamma_{\mathrm D}\,dt
+ =\int_{\mathcal P}\frac{\Gamma_{\mathrm D}}{v_{\mathrm{ray}}}\,d\ell.
 \]
-It characterizes the UV--IR scale hierarchy of the Active Vacuum.
+Rate and ray speed must use the same time convention. For a constant rate and gravity-neutral nondispersive path, $1+z_{\mathrm D}=\exp(\Gamma_{\mathrm D}x/c_{\mathrm E})$.
+(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}} and \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
 
-\item[Kinematic Occupancy ($S_{\mathrm{kin}}$):] The number of phase-segregated topological defect states physically occupying the active boundary layer of a TFT black hole. In the retained one-node-thick boundary construction, this occupancy scales linearly with radius, $S_{\mathrm{kin}}\propto R$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Photon Energy-Relaxation Time ($t_{\mathrm D}$).} The temporal e-fold scale $t_{\mathrm D}=\Gamma_{\mathrm D}^{-1}$ for a positive constant coherent-photon relaxation rate. The reference length satisfies $R_{\mathrm U}=c_{\mathrm E}t_{\mathrm D}$. This scale is not automatically the cosmic age, the phase-avalanche timescale, or a photon's physical lifetime before absorption.
+(See \hyperref[chap:cosmic_redshift]{Chapter~\ref*{chap:cosmic_redshift}}.)
+\end{minipage}
 
-\item[Kinematic State Equation ($\Gamma_{\mathrm D}^2=\frac{4\pi G}{3}\rho_{\mathrm c}$):] The Type-II cosmological state relation obtained by combining a homogeneous spherical mass distribution with the matched relaxation scale $R_{\mathrm U}=c_{\mathrm E}/\Gamma_{\mathrm D}$ and the saturation condition $GM_{\mathrm U}/R_{\mathrm U}=c_{\mathrm E}^2$. It relates the critical-density scale to the corresponding relaxation-scale rate.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Photon Number.} The occupation count of electromagnetic excitations, distinct from the normalized Hard-Floor information footprint. The selected surviving-carrier scale-transfer channel preserves photon number, whereas emission, absorption, and number-changing thermalization need not. Number, energy per photon, source-event timing, and angular transport require separate terms in the observational ledger.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}} and \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.)
+\end{minipage}
 
-\item[Lattice Annealing Time ($t_{\mathrm a}$):] The TFT early-epoch thermal-relaxation timescale obtained from the adopted bulk-cooling similarity law and geometric annealing-mode closure. The current construction gives
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Photonic Extrusion.} The emission of a coherent transverse excitation during a reconfiguration of an atomic strain field. The channel construction represents the released energy by $E_\gamma\simeq\tau_{\mathrm{bulk}}A_{\mathrm{chan}}\Delta r$. A channel area inferred from a known transition energy is distinct from a microscopic prediction of transition rate or selection probability.
+(See \hyperref[app:photonic_emission]{Appendix~\ref*{app:photonic_emission}} and \hyperref[app:hydrogenic_shell]{Appendix~\ref*{app:hydrogenic_shell}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Physical Wavefunction ($\psi$).} The modal-action field of a selected active excitation, assembled from real mechanical displacement and momentum quadratures. In the continuum representation, $\psi=\sqrt{\rho_\psi}\,e^{iS/\hbar}$ and $\hbar\int|\psi|^2\,dV$ is the retained modal action. Its slow envelope is $\psi_{\mathrm{env}}$. Lowercase $\psi$ describes the excitation and is distinct from the density-normalized structural order parameter $\Psi$.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Polarization of the Coherent Carrier.} The orientation structure of the retained transverse FCC wave. In the selected incompressible coherent translational branch, the pressure constraint removes an independent finite-frequency longitudinal volumetric polarization and leaves two transverse polarizations. This mode count does not remove static longitudinal stress, localized condensate redistribution, or separately retained internal modes. Polarization transport and scrambling must be distinguished from scalar frequency relaxation.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}} and \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Primitive-Cell Kinetic Bookkeeping.} The requirement that each physical scaffold inertia appear once in the primitive-cell mass matrix. Six undirected nearest-neighbor bonds contribute to the cell potential, but do not represent six separate copies of the node mass. Eliminated flow or rotational participation must likewise not be counted again as independent inertia.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Proper Time and Coordinate Time.} Proper time tracks the internal phase cycles of a localized matter state; coordinate time parametrizes active evolution and propagation in the chosen reference. The matter rest-cycle scale is $h/E_0$. Under the retained static gravitational clock law, $dt_{\mathrm p}=(1-\alpha_{\mathrm G})dt$. Propagation delay and source-event clock dilation are distinct effects.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Quantum Damping Rate ($\Gamma$).} The local loss coefficient of a selected incident matter-field band. For dilute independent targets, $\Gamma_{\mathrm{beam}}=n_K\sigma v_{\mathrm{inc}}$; the specialization $v_{\mathrm{inc}}=c_{\mathrm P}$ gives $\Gamma=\sigma c_{\mathrm P}n_K$. The envelope term is $-i\hbar\Gamma/2$. Band depletion alone does not guarantee capture, settling, or a persistent record.
+(See \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Quantum Potential ($Q$).} The amplitude-gradient contribution to the phase-force equation,
 \[
-    t_{\mathrm a}\approx3.86\times10^5\ \mathrm{yr},
+ Q=-\frac{\hbar^2}{2m_{\mathrm{env}}}
+       \frac{\nabla^2\sqrt{\rho_\psi}}{\sqrt{\rho_\psi}},
+ \qquad \rho_\psi>0.
 \]
-with an annealing/transparency temperature of order $3000\ \mathrm K$.
+It has energy units and is obtained from the continuum field's gradient energy. It is not an additional independent force carrier or a claim that the underlying mechanical field is undefined before measurement.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
 
-\item[Lense--Thirring Correspondence Normalization:] The weak-field matching condition that fixes the leading amplitude of the torsional Soft-Floor exterior field so that
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Quantum Uncertainty.} The continuum relation between spatial and spectral-momentum widths of the action-normalized field. In the stated one-dimensional comparison, $\sigma_x^2\sigma_{p,\mathrm w}^2-\mathcal C_{xp}^2\geq\hbar^2/4$. Field spread, classical preparation spread, detector error, and measurement disturbance are distinct. Deterministic evolution does not remove this field identity.
+(See \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Radial Projection.} The extraction of a radial component through the tensor projector $\Pi_{\mu\nu}$ or its reduced scalar transmission factor $\Pi(R)$. The scalar factor is not itself a full nonspherical or strong-field solution. When the complete baryonic geometry is already included in the calculated field, it must not be counted again through an extra geometry factor.
+(See \hyperref[app:radial_projection]{Appendix~\ref*{app:radial_projection}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Receiving Spectrum and Receiving Impedance.} The modes and force--velocity response available to receive work from a retained active coordinate. The projected impedance $Z_{\mathrm{rec}}(\omega)$ has units $\mathrm{kg\,s^{-1}}$; its passive resistive part determines cycle-averaged outgoing work. Spectrum, coupling, preparation, and return times control whether a local damping approximation is justified.
+(See \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Record Registry ($\mathbf n$, $\mathbf e_{\mathrm R}$).} The conditional State-0 representation using integer site labels and compatible scalar bond differences $\mathbf e_{\mathrm R}=B\mathbf n$. A common offset in all labels leaves the record unchanged. These dimensionless differences do not themselves specify physical displacement, strain tensor, energy, dislocation charge, or experimentally distinguishable readout.
+(See \hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Record Update Selector ($\boldsymbol\nu$).} The proposed event-dependent map in $\mathbf n^+=\mathbf n^-+\boldsymbol\nu[\mathcal H_\partial,\mathbf n^-]$. A nontrivial registry change requires $B\boldsymbol\nu\neq0$. The selector must incorporate the actual interface history and pre-existing record; compatibility and integer-valued labels do not determine the physical branch-transition law.
+(See \hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Referred Inertia ($\mu_{\mathrm{eff}}$).} The inertia expressed in the completed active coordinate after the transfer constraint is applied. In the uniform pure-transfer reduction,
 \[
-    \omega_{\mathrm{drag}}(r)
-    =
-    \frac{2G\mathcal{J}_{\mathrm{BH}}}{c_{\mathrm E}^2r^3}
+ \mu_{\mathrm{eff}}=\frac{\mu_{\mathrm D}}{\mathcal C^2}
+ =\frac{\mu_{\mathrm D}}{(1-\alpha_{\mathrm G})^4}.
 \]
-is recovered at large radius.
+The divergence at active saturation marks failure of this coordinate description, not infinite intrinsic matter mass or a continuous continuation into State 0.
+(See \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.)
+\end{minipage}
 
-\item[Live Phase Boundary:] The active FCC/SC transition surface of a TFT black hole. It carries the dynamical degrees of freedom associated with phase-front growth, tangential mass redistribution, torsional angular-momentum storage, deformation, and stress-shedding ringdown.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Relative Condensate Flow ($\mathbf v_{\mathrm{rel}}$).} The condensate velocity relative to the scaffold, $\mathbf v_{\mathrm{rel}}=\mathbf v_{\mathrm{IC}}-\dot{\mathbf u}$. It vanishes in the conservative entrained carrier branch. A localized defect can activate nonzero relative flow, whose reversible kinetic energy produces added inertia; dissipation requires a separately specified nonconservative response.
+(See \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
 
-\item[Mode-Resolved Impedance Density ($\rho_{\mathrm{IC}}^{(\mathrm{imp})}$):] The equivalent volumetric added-inertia density sampled by a specified localized condensate relative-flow mode,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Residual Active Capacity.} The remaining endpoint surface-tension capacity $\tau_{\mathrm{av}}=\tau_{\mathrm D}-\tau_{\mathrm L}=\tau_{\mathrm D}(1-\alpha_{\mathrm G})$ in the adopted linear subtraction closure. Its single-endpoint factor is $1-\alpha_{\mathrm G}$, whereas a completed uniform two-endpoint transfer uses the square of that factor.
+(See \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Residual Phase-Tether.} The shared substrate relationship retained by two active endpoints after a common coherent preparation. Together with their vertical Tension Columns it forms the Goalpost. The ideal tether supplies compatibility, while physical torque, received work, and recorded responses belong to finite active endpoint and detector dynamics.
+(See \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Resonant Standing-Wave Boundary.} The time-averaged atomic shell field attributed to repeated coherent motion of a localized electron knot around its anchor. The shell is an extended strain configuration, not the instantaneous material distribution of the electron. Its radial phase closure and angular mode structure are treated separately.
+(See \hyperref[app:hydrogenic_shell]{Appendix~\ref*{app:hydrogenic_shell}} and \hyperref[app:atomic_angular_modes]{Appendix~\ref*{app:atomic_angular_modes}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Restorative Gravity.} The active-vacuum response to a source-induced tension-potential deficit. Its acceleration is $\mathbf g=-\nabla\Phi_\tau$. For the spherical exterior scalar construction, $\Phi_\tau=-GM/r$ and $\mathbf g=-GM\hat{\mathbf r}/r^2$. Galactic response and nonlinear rotating exteriors require their separate constitutive constructions.
+(See \hyperref[chap:restorative_gravity]{Chapter~\ref*{chap:restorative_gravity}} and \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Ringdown.} The damped relaxation of a perturbed live FCC/SC boundary after merger or loading. Mode frequencies, damping, and outgoing radiation must be obtained from the linearized coupled boundary--exterior problem. A dimensional frequency scale or a schematic oscillator equation is not a calculated physical mode spectrum.
+(See \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}} and \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Saturated Bridge Formation.} The proposed merger process in which the strained active region between neighboring black-hole phase domains reaches saturation and develops a connected SC bridge. The transition joins saturated domains through a new common boundary; it is not defined simply by reducing two center coordinates to the same point.
+(See \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Screening Function ($\Xi$).} The factor suppressing the extended condensate contribution at high acceleration and beyond a source-correlated coherence radius. It multiplies the induced term in $g_{\mathrm{obs}}=g_{\mathrm b,\Pi}+\Xi\sqrt{a_{\mathrm{gal}}g_{\mathrm b,\Pi}}$, not the directly transmitted baryonic field. Its parameterization and physical regime must be specified for a comparison with data.
+(See \hyperref[app:cosmic_impedance]{Appendix~\ref*{app:cosmic_impedance}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Shadow Impact Scale ($B_\gamma$).} The critical impact parameter obtained from the selected massless-ray Hamiltonian and capture structure. It is distinct from the coordinate radius of a photon orbit. Connecting a calculated ray-capture boundary to an observed bright emission ring requires the corresponding source and ray-tracing model.
+(See \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Simple Cubic (SC) Lattice.} The cubic, phase-locked reference topology assigned to the Hard Floor and to the saturated State-II organization. TFT's zero active interstitial freedom and unit structural occupancy are constitutive statements about that locked phase; they are not a claim that ordinary equal spheres in a simple-cubic packing fill all Euclidean volume.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Soft Floor Ignition Mass ($M_{\mathrm{D,G}}$).} Earlier terminology for the minimum stable node-scale black-hole boundary mass, $M_{\mathrm{D,G}}=c_{\mathrm E}^2r_{\mathrm D}/G\simeq10.033\,\mathrm{kg}$ in the adopted calibration. It must be distinguished from the smaller phase-transition trigger $m_{\mathrm{sat}}=m_{\mathrm S}$. Triggering a local transition and maintaining a stable boundary are different conditions.
+(See \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Source-Event Time Dilation.} The stretching of intervals between independently emitted source events. Under the stationary factorized construction, the event stretch is governed by endpoint kinematic and gravitational clock factors, not automatically by $1+z_{\mathrm D}$. Comparing event timing with spectral redshift constrains the relaxation contribution, subject to intrinsic-source and propagation assumptions.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Spacetime Gravitational Floor (SGF).} The complete TFT mechanical architecture: the persistent phase-locked Hard-Floor substrate together with the dual-phase Active Vacuum it supports. The two structural scales are $\ell_{\mathrm S}$ and $r_{\mathrm D}$; the two active constituents are the FCC scaffold and condensate. Dual scale and dual phase do not denote the same distinction.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Spanning Cluster.} A connected network of saturated domains extending across the domain used in the global percolation construction. Its formation is associated with the proposed rupture trigger. Connectivity, converted mass fraction, local boundary mechanics, and the time needed to reach that configuration are separate parts of the macroscopic model.
+(See \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Specific Tension Potential ($\Phi_\tau$).} The gravitational potential per unit inertial loading, related in the surface-tension representation by $\Phi_\tau=\tau_M/\mu_{\mathrm D}$. Its units are $\mathrm{m^2\,s^{-2}}$. With the unstrained reference at infinity, the spherical source gives $\Phi_\tau=-GM/r$; the negative sign represents a local deficit relative to that reference.
+(See \hyperref[chap:restorative_gravity]{Chapter~\ref*{chap:restorative_gravity}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Spectral Gravitational-Wave Stiffness ($K_{\mathrm{GW}}^{(\mathrm{eff})}$).} The pressure-equivalent response of a Fourier component of the collective tensor-gradient action. In the gravity-neutral normalization,
 \[
-    \rho_{\mathrm{IC}}^{(\mathrm{imp})}
-    =
-    \mu_{\mathrm D}\,\iota_{\mathrm V}^{(\mathrm{def})}.
+ K_{\mathrm{GW}}^{(\mathrm{eff})}(\omega)
+ =\frac{c_{\mathrm E}^2\omega^2}{16\pi G}.
 \]
-It links the localized inertial coefficient to the corresponding defect boundary-value problem.
+It is frequency dependent, not a universal local vacuum modulus. The corresponding equivalent inertia density is $K_{\mathrm{GW}}^{(\mathrm{eff})}/c_{\mathrm E}^2$, distinct from the microscopic scaffold density.
+(See \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}.)
+\end{minipage}
 
-\item[Node Interface Inertia ($\mu_{\mathrm D}$):] The baseline surface-inertia coefficient of the unstrained FCC transfer coordinate,
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Spin and Connected Return Topology.} The manuscript's distinction between the photon polarization pattern's $2\pi$ cycle and the tethered matter configuration's $4\pi$ connected return. Return topology, angular-momentum normalization, rotational participation, and translational mass are separate mechanical questions. The doubled support transit alone is not a complete spin derivation.
+(See \hyperref[chap:quantum_vacuum]{Chapter~\ref*{chap:quantum_vacuum}} and \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Spin-Deformed Saturation Boundary ($r_{\mathrm{sat}}$).} The angle-dependent physical FCC/SC transition surface of a rotating solution. Its deformation is calculated from the selected coupled strain and torsional closure. It must be distinguished from the spherical mass-defined scale $R_{\mathrm{QG}}$ and the different optical and orbital surfaces of the same exterior.
+(See \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{State 0 (Latent Reference).} The foundational equilibrium SC configuration beneath active and saturated regions. It supplies the fixed structural reference and the constitutional persistent-record sector. It is not produced anew every time an active oscillator is damped, and its state variables are not obtained by extending a singular active-coordinate map through saturation.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{State I (Active Phase).} The FCC--condensate organization with finite active deformation, phase freedom, and kinetic response. It contains coherent carrier motion as well as localized defects and separately activated receiving processes. In the gravitational endpoint construction, its domain is $0\leq\alpha_{\mathrm G}<1$. See \emph{Active Vacuum}.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{State II (Saturated Core).} The compressed phase-locked organization produced from State I when active reconfiguration capacity is exhausted. It shares SC locked character with State 0 but differs in origin and mechanical condition. The saturated interior lacks the ordinary active modes of State I, while its surrounding interface can remain dynamically live.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Strain-Induced Vacuum Refractive Index ($n_\tau$).} The optical index $n_\tau=c_{\mathrm E}/c_{\mathrm P}$. In the locally uniform endpoint-transfer reduction, $n_\tau=(1-\alpha_{\mathrm G})^{-2}$, with weak-field limit $1+2\alpha_{\mathrm G}$. The general field is $n_\tau(\mathbf x)$; use of a spherical expression requires the corresponding source and coordinate assumptions.
+(See \hyperref[chap:gravitational_field]{Chapter~\ref*{chap:gravitational_field}} and \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Strain-Weighted Path ($D_\tau$).} The scalar path functional measuring the integrated propagation penalty along a latent coordinate path. The foundational form weights $d\ell$ by $1+r_{\mathrm D}|\nabla\tau|/\tau_{\mathrm S}$; the gravitational optical construction uses $D_\tau[\mathcal P]=\int_{\mathcal P}n_\tau\,d\ell$. It is a path length, not itself a spacetime metric tensor.
+(See \hyperref[chap:gravitational_field]{Chapter~\ref*{chap:gravitational_field}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Stress Shedding.} Export of excess boundary deformation and kinetic energy into the surrounding active fields. It can relax compression, shear, torsional loading, and higher boundary modes. The boundary's reduced energy loss is accompanied by outgoing receiving or radiative energy, rather than destruction of the complete system's energy.
+(See \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Strong Force (Normal Bond Tension).} The unification model's one-dimensional normal-tension channel, represented by $T_s=2\pi J_i c_{\mathrm E}^2/r_{\mathrm N}^2$ for the selected geometry. $T_s$ is a force, equivalently energy per length. A numerical confinement comparison inherits the nucleon radius, density, and channel-area assumptions.
+(See \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Structural Gravitational Coupling ($\alpha_{\mathrm G}$).} The dimensionless local active loading fraction $\alpha_{\mathrm G}=\tau_{\mathrm L}/\tau_{\mathrm D}$. The spherical exterior convention gives $\alpha_{\mathrm G}=GM/(rc_{\mathrm E}^2)$. More general source configurations require their own loading solution; the spherical formula is not a definition valid for every geometry.
+(See \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Structural Mass Moment ($J_i$).} The raw structural quantity $J_i=\rho_i r_i^4$, with units $\mathrm{kg\,m}$. It is not a rotational moment of inertia, whose units are $\mathrm{kg\,m^2}$. Across different topologies, the conserved quantity is the normalized moment $\hat J=J_i/\mathcal F_i$ rather than an automatically identical raw $J_i$.
+(See \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Structural Order Parameter ($\Psi$).} The density-normalized representation $\Psi=\sqrt{\rho}\,e^{i\varphi}$ of a specified structural sector, with $|\Psi|^2=\rho$ and $[\Psi]=\mathrm{kg}^{1/2}\mathrm m^{-3/2}$. It does not by itself determine the energy of an excitation. The separately defined substrate site-density form $\Psi_{\mathrm S}^{(n)}=\sqrt{n_0}\,e^{i0}$, with $n_0=\ell_{\mathrm S}^{-3}$, has a different normalization and must not be substituted for $\Psi$ without conversion.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Structural Reservoir ($R_{\mathrm{Res}}$).} The much larger structural domain used in the cosmic phase-conversion budget, with a reference radius of order $10^{35}\,\mathrm m$. It is distinct from the optical relaxation length $R_{\mathrm U}$. Its size and mass follow the adopted phase-density and global-capacity construction, not a direct identification with an observed photon horizon.
+(See \hyperref[ch:macroscopic_oscillator]{Chapter~\ref*{ch:macroscopic_oscillator}} and \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Substrate Lattice Spacing ($\ell_{\mathrm S}$).} The irreducible SC reference spacing, normalized by $\ell_{\mathrm S}=\sqrt{\hbar G/c_{\mathrm E}^3}\simeq1.616\times10^{-35}\,\mathrm m$. The substrate-unit construction uses empirical constants; numerical equality with the conventional Planck length is a mechanical reinterpretation of that calibrated combination, not an independent prediction of all its inputs.
+(See \hyperref[app:substrate_units]{Appendix~\ref*{app:substrate_units}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Surface Contact Tension ($\tau_{\mathrm D}$).} The baseline surface restoring coefficient of the active FCC transfer description, with units $\mathrm{N\,m^{-1}}=\mathrm{J\,m^{-2}}$. It enters $c_{\mathrm E}^2=\tau_{\mathrm D}/\mu_{\mathrm D}$. A three-dimensional tangent shear modulus requires a mode-weighted area-to-volume projection and cannot be equated directly with this surface coefficient.
+(See \hyperref[app:fcc_microphysics]{Appendix~\ref*{app:fcc_microphysics}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Temperature of the Photon Population.} The temperature characterizing a specified thermal occupation distribution, not an intrinsic temperature assigned to one coherent photon. In the Planck state it determines both energy density and photon-number density. Deriving a present fossil temperature requires the initial populations, energy exchange, and thermalizing interactions, not only a propagation-relaxation rate.
+(See \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Tension Column.} The vertical structural connection between an active excitation and its corresponding Hard-Floor reference address. It supplies the loading relation used in gravity, record, and entanglement constructions. It is distinct from nearest-neighbor propagation through the FCC contact network and does not alone determine a persistent write operation.
+(See \hyperref[chap:vertical_topology]{Chapter~\ref*{chap:vertical_topology}} and \hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Tension Field ($\tau$).} The foundational mechanical field whose volumetric realization has energy-density units, $[\tau]=\mathrm{J\,m^{-3}}=\mathrm{Pa}$. TFT uses separate surface and mode-resolved coefficients for other projections. A common word, ``tension,'' does not make volumetric pressure, surface tension, integrated force, and total energy dimensionally interchangeable.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Tensor-Gradient Coefficient ($\mathcal T_{\mathrm{TT}}^{(0)}$).} The force-dimensioned restoring coefficient of the gravity-neutral collective tensor action, $\mathcal T_{\mathrm{TT}}^{(0)}=c_{\mathrm E}^4/(8\pi G)$. Its conjugate collective line inertia is $M_{\mathrm{TT}}^{(0)}=c_{\mathrm E}^2/(8\pi G)$. Neither is the microscopic FCC shear modulus or the spectral pressure-equivalent gravitational-wave stiffness.
+(See \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{TFT Effective Acoustic Scale ($r_{\mathrm s}^{(\mathrm{TFT})}$).} The proposed Euclidean projection $r_{\mathrm s}^{(\mathrm{TFT})}=R_{\mathrm U}\theta_*$ of the acoustic angular scale. Its reference value near $42.73\,\mathrm{Mpc}$ uses the chosen normalization of $R_{\mathrm U}$. A projection of an observed angle is distinct from an independently calculated acoustic generation and transport scale.
+(See \hyperref[chap:cosmological_anomalies]{Chapter~\ref*{chap:cosmological_anomalies}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Thermal Receiver.} The finite-energy sector that can absorb energy from and exchange energy with a photon population. Its thermal state counting, dimensional support, dispersion, gap, initial occupation, and number-changing coupling must be specified. A receiver capable of damping a selected mode does not automatically supply the thermal capacity required for a fossil-CMB endpoint.
+(See \hyperref[app:cmb_thermal_completion]{Appendix~\ref*{app:cmb_thermal_completion}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Thermodynamic Impedance Signature.} The proposed interpretation of fossil-radiation temperature structure as an imprint of the rupture-generated density network and active-vacuum impedance. The term identifies a physical interpretation to be developed through a thermal and propagation model; it is not by itself a quantitative prediction of the CMB anisotropy spectrum.
+(See \hyperref[chap:cosmological_anomalies]{Chapter~\ref*{chap:cosmological_anomalies}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Threshold Gate.} A local receiving configuration that undergoes a discrete transition after sufficient incident work or action has accumulated. Crossing a threshold can initiate a detector response, but does not alone establish capture, a stable readable record, or mutual exclusion between separated detectors. Those outcomes require the complete coupled receiving dynamics.
+(See \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}} and \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.)
+\end{minipage}
+
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Timing--Brightness Closure.} The bolometric relation obtained in the transparent, achromatic, radial, gravity-neutral, no-lensing reference branch,
 \[
-    [\mu_{\mathrm D}]
-    =
-    \mathrm{kg\,m^{-2}}.
+ \frac{SB_{\mathrm{obs}}}{SB_{\mathrm{emit}}}
+ =\frac{1}{(1+z_{\mathrm{kin}})^4(1+z_{\mathrm D})}
+ =\frac{(1+z_{\mathrm D})^3}{(1+z_{\mathrm{obs}})^4}.
 \]
-Together with the FCC surface-tension scale $\tau_{\mathrm D}$ it fixes the gravity-neutral transverse propagation capacity through
-\[
-    c_{\mathrm E}^2
-    =
-    \frac{\tau_{\mathrm D}}{\mu_{\mathrm D}}.
-\]
+It relates spectral redshift, source-event timing, and surface brightness within that branch. It is not directly a formula for an uncorrected bandpass flux or evolving source-population average.
+(See \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.)
+\end{minipage}
 
-\item[No-Hair Quadrupole Closure ($Q_{\mathrm{TFT}}$):] The boundary-relaxation closure requiring a rotating FCC/SC phase boundary to shed higher-order surface stress until its relaxed exterior is characterized by the retained mass and angular momentum. The leading quadrupole correspondence is
-\[
-    Q_{\mathrm{TFT}}
-    =
-    -a_\ast^2MR_{\mathrm{QG}}^2.
-\]
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Topological Invariant ($16\pi^3$).} The algebraic identity $N_{\mathrm M}N_{\mathrm{QG}}=16\pi^3$ obtained from the retained mass-footprint and saturated-boundary normalizations. The radius factors cancel. This identity concerns those assigned quantities; physical record retention and an evolution-level account of unitarity require the corresponding microscopic dynamics.
+(See \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}}.)
+\end{minipage}
 
-\item[Octahedral Void Limit ($\beta_{\mathrm{oct}}$):] The inscribed-spherical volume fraction associated with the FCC octahedral-site construction,
-\[
-    \beta_{\mathrm{oct}}
-    \approx0.0526.
-\]
-TFT interprets this geometric fraction as the upper isotropic accommodation scale for condensed macroscopic defect states within the FCC interstitial architecture.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Topological Percolation Limit ($\beta_{\mathrm{rupture}}$).} The global converted-fraction threshold, approximately $0.0516$ in the retained macroscopic construction, associated with formation of a spanning saturated network. Its value belongs to that boundary-energy and connectivity model. It is distinct from both the total FCC interstitial fraction and the octahedral inscribed-sphere fraction.
+(See \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.)
+\end{minipage}
 
-\item[Photon Energy-Relaxation Length ($R_{\mathrm U}$):] The characteristic one-$e$-fold propagation length associated with the Coherent-Photon Energy-Relaxation Rate,
-\[
-    R_{\mathrm U}
-    =
-    \frac{c_{\mathrm E}}{\Gamma_{\mathrm D}}.
-\]
-For constant $\Gamma_{\mathrm D}$ and gravity-neutral propagation,
-\[
-    \frac{E_{\mathrm{obs}}(R_{\mathrm U})}{E_{\mathrm{emit}}}
-    =
-    \frac{1}{e},
-\]
-so the coherent branch retains approximately $36.8\%$ of its emitted energy after one relaxation length. In its cosmological role, $R_{\mathrm U}$ is called the Cosmic Damping Horizon. Under the low-redshift observational reference specialization it is approximately $1.2665\times10^{26}\ \mathrm m\approx13.39\ \mathrm{Gly}$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Topological Phase Defect.} A localized, persistent, topologically nontrivial active configuration, potentially involving phase, torsion, radial deformation, or a mixed boundary mode. The defect is supported by the FCC network and its condensate response. It is not identical to the support node, and a particle-specific realization requires an actual nonlinear configuration and its stability analysis.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
 
-\item[Photon Energy-Relaxation Redshift Law:] The propagation law relating coherent photon energy relaxation to the redshift component $z_{\mathrm D}$:
-\[
-    1+z_{\mathrm D}
-    =
-    \exp\left(
-        \int\Gamma_{\mathrm D}\,\mathrm dt
-    \right)
-    =
-    \exp\left(
-        \int
-        \frac{\Gamma_{\mathrm D}}{v_{\mathrm{ray}}}
-        \,\mathrm d\ell
-    \right).
-\]
-For constant $\Gamma_{\mathrm D}$ and gravity-neutral radial propagation,
-\[
-    1+z_{\mathrm D}
-    =
-    e^{\Gamma_{\mathrm D}x/c_{\mathrm E}}.
-\]
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Topological Projection Operator ($\kappa$).} The geometry-dependent normalization used in the manuscript's scalar and tensor capacity relations: $4\pi/3$ for the specified volume projection, $4\pi$ for an areal projection, and $8\pi$ for the effective tensor normalization. It must be distinguished from a mode-dependent contact coefficient or the barrier's evanescent wave number $\kappa_{\mathrm B}$.
+(See \hyperref[app:8pi_origin]{Appendix~\ref*{app:8pi_origin}}.)
+\end{minipage}
 
-\item[Photon Energy-Relaxation Time ($t_{\mathrm D}$):] The characteristic temporal scale associated with coherent photon energy relaxation,
-\[
-    t_{\mathrm D}
-    =
-    \Gamma_{\mathrm D}^{-1}.
-\]
-It is related to the Photon Energy-Relaxation Length through
-\[
-    R_{\mathrm U}
-    =
-    c_{\mathrm E}t_{\mathrm D}.
-\]
-In the low-redshift observational reference specialization, $t_{\mathrm D}\approx13.39\ \mathrm{Gyr}$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Topological Winding Number.} An integer associated with phase change around a closed spatial path, $\oint\nabla\varphi\cdot d\boldsymbol\ell=2\pi n$, when that phase and loop are well defined. Spatial winding, an elementary temporal action cycle, and a tethered configuration's $4\pi$ return are distinct notions; one does not automatically define the others.
+(See \hyperref[app:physical_wavefunction]{Appendix~\ref*{app:physical_wavefunction}}.)
+\end{minipage}
 
-\item[Photonic Extrusion:] The TFT emission process in which a rapid reconfiguration of an atomic Bipolar Strain Field releases a discrete coherent transverse excitation into the FCC Active Vacuum. The emitted photon carries the released structural action away from the localized atomic state.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Topology-Normalized Scale-Invariant Mass Moment ($\hat J$).} The common normalization $\hat J=J_i/\mathcal F_i$, where $\mathcal F_i$ is the form factor of the specified structural topology. It enters $h=2\pi\hat Jc_{\mathrm E}$ and the cross-scale gravitational-coupling construction. The substrate and active-node normalizations use different geometric factors while preserving this normalized quantity.
+(See \hyperref[app:conservation_action]{Appendix~\ref*{app:conservation_action}} and \hyperref[app:fractal_architecture]{Appendix~\ref*{app:fractal_architecture}}.)
+\end{minipage}
 
-\item[Primitive-Cell Kinetic Bookkeeping:] The FCC microphysical accounting rule under which the six undirected nearest-neighbor bonds contribute generalized stiffness to the primitive-cell potential while the retained scaffold inertia is assigned only once through the primitive-cell mass matrix $\mathbf{M}_{\mathrm{cell}}^{(0)}$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Torsional Anchor.} The nuclear source of the central chiral strain field in the atomic construction. The proton is used as a nearly stationary positive-handedness anchor for the hydrogenic model. Its composite structure and adopted nucleon scale are distinct from the fundamental FCC support-node scale of an elementary localized defect.
+(See \hyperref[chap:hydrogen_atom]{Chapter~\ref*{chap:hydrogen_atom}} and \hyperref[app:hydrogenic_shell]{Appendix~\ref*{app:hydrogenic_shell}}.)
+\end{minipage}
 
-\item[Quantum Damping Rate ($\Gamma$):] The localized defect-induced damping rate governing nonconservative coupling between a coherently evolving quantum mode and a macroscopic matter sink, defined by
-\[
-    \Gamma(x)
-    =
-    \sigma c_{\mathrm P}n_K(x).
-\]
-It controls the progressive loss of coherent modal support that produces Wave Arrest and localization at a measurement boundary.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Torsional Boundary Motion.} The boundary and exterior shear response carrying axial angular momentum in a rotating black-hole model. It is not ordinary circulation of material through the phase-locked interior. The spin normalization uses the participating surface inertia, geometry, and torsional velocity of the retained configuration.
+(See \hyperref[app:live_black_hole_boundaries]{Appendix~\ref*{app:live_black_hole_boundaries}}.)
+\end{minipage}
 
-\item[Residual Phase-Tether:] A persistent longitudinal strain connection in the phase-locked Hard Floor that links the vertical Tension Columns of an entangled pair. In the singular substrate limit $c_{\mathrm S}\rightarrow\infty$, the tether supplies zero-delay constraint correlation while the finite-energy measurement dynamics remain localized to the active endpoints.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Torsional Capacity and Entanglement Coupling ($\alpha_{\mathrm Q}$).} The normalized active coupling action of the Goalpost comparison. Under the fixed-protocol linear torsional-capacity closure, $\alpha_{\mathrm Q}=1-\alpha_{\mathrm G}$. Changing inertia, imposed motion, duration, or receiving participation changes the comparison. This coupling ratio is not automatically an analyzer visibility or a universal gravitational Bell-correlation law.
+(See \hyperref[app:entanglement]{Appendix~\ref*{app:entanglement}}.)
+\end{minipage}
 
-\item[Restorative Gravity:] The mechanical gravitational response of the active vacuum to a localized structural loading. The source establishes a specific tension potential $\Phi_\tau$, and the resulting acceleration is
-\[
-    \mathbf g
-    =
-    -\nabla\Phi_\tau.
-\]
-For a spherical source this reduces to the inverse-square field $\,\mathbf g=-GM\hat{\mathbf r}/r^2$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Transfer Correlation Interval ($t_{\mathrm{corr}}^{(0)}$).} The reference two-leg interval $t_{\mathrm{corr}}^{(0)}=2d_{\mathrm{nn}}/c_{\mathrm E}=4r_{\mathrm D}/c_{\mathrm E}$ used in the microscopic scale-transfer normalization. The actual correlation duration is contained in the physical response factor and need not equal this geometric reference interval.
+(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.)
+\end{minipage}
 
-\item[Saturated Bridge Formation:] The TFT mechanical description of the merger stage in which the highly strained Soft Floor between two neighboring FCC/SC phase boundaries reaches local saturation and converts into a connected SC bridge, joining the previously separate saturated domains.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Transverse-Traceless Source Normalization ($\kappa_{\mathrm{TT}}$).} The retained $8\pi$ normalization connecting the weak-field static source to the collective tensor construction. ``Transverse-traceless'' means the tensor has no trace and no component along its propagation wave vector. The normalization is distinct from identifying an arbitrary microscopic transverse displacement with a collective spin-2 mode.
+(See \hyperref[app:kinematic_shear]{Appendix~\ref*{app:kinematic_shear}}.)
+\end{minipage}
 
-\item[Shadow Impact Scale ($B_\gamma$):] The critical impact parameter defining the observable optical shadow edge of a rotating TFT black hole. It is obtained from the massless-ray structure of the dragged, quadrupole-corrected Soft-Floor exterior.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{True Information Record ($N_{\mathrm M}$).} The mass-state footprint normalization $N_{\mathrm M}=2\pi(m_{\mathrm S}/M)^2$. With the spherical saturation-radius convention it is also $2\pi(\ell_{\mathrm S}/R_{\mathrm{QG}})^2$. It describes the assigned footprint of that state, not a demonstrated count of every stored event or a complete microscopic readout capacity.
+(See \hyperref[app:information_paradox]{Appendix~\ref*{app:information_paradox}} and \hyperref[app:graviton]{Appendix~\ref*{app:graviton}}.)
+\end{minipage}
 
-\item[Simple Cubic (SC) Lattice:] The phase-locked substrate topology assigned to State 0 and to the saturated State-II configuration. In TFT this state is defined by zero active interstitial freedom and unit normalized structural occupancy, producing phase locking and the absence of ordinary Active-Vacuum oscillatory degrees of freedom.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Type I, Type II, and Type III Capacity Limits.} The main text's macroscopic classification: Type I denotes localized gravitational saturation, Type II the cosmological capacity construction associated with $R_{\mathrm U}$, and Type III the microscopic kinematic-resolution limit. These ``Type'' labels are not the material phase labels State 0, State I, and State II.
+(See \hyperref[chap:part3_conclusion]{Chapter~\ref*{chap:part3_conclusion}}.)
+\end{minipage}
 
-\item[Soft Floor Ignition Mass ($M_{\mathrm{D,G}}$):] The minimum localized mass required to maintain a stable phase boundary at the FCC Node Radius,
-\[
-    M_{\mathrm{D,G}}
-    =
-    \frac{c_{\mathrm E}^2r_{\mathrm D}}{G}
-    \approx10.033\ \mathrm{kg}.
-\]
-At this mass and radius the local structural gravitational coupling reaches $\alpha_{\mathrm G}=1$ and the saturation radius equals $r_{\mathrm D}$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Uniform Structural-Capacity Closure.} The assumption that the unperturbed nodal and interstitial sectors have the same structural reference energy component per occupied volume. It permits FCC volume fractions to represent structural-energy allocations. It does not require equal operational densities, contact stiffnesses, kinetic participation, or spatial stresses in the two phases.
+(See \hyperref[app:cosmic_energy_continuum_mechanics]{Appendix~\ref*{app:cosmic_energy_continuum_mechanics}}.)
+\end{minipage}
 
-\item[Spacetime Gravitational Floor (SGF):] The complete TFT vacuum architecture comprising the phase-locked Hard Floor substrate and the dual-phase elastodynamic Active Vacuum supported above it. The SGF supplies the structural framework from which active space, time, matter, wave propagation, gravity, and phase saturation are constructed.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Unit-Reference Relaxation Rate ($\Gamma_{\mathrm D}^{(0)}$).} The numerical evaluation obtained by setting $\mathcal F_{\mathrm R}=1$ in the conditional scale-transfer formula, giving approximately $2.36\times10^{-18}\,\mathrm{s^{-1}}$ with the retained scale calibration. It is not an independently derived physical nonzero rate, a minimum allowed rate, or a general identification with the observed Hubble slope.
+(See \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.)
+\end{minipage}
 
-\item[Spanning Cluster:] The connected, system-spanning network of State-II saturated domains formed when the global defect population reaches the percolation threshold. Its formation links the distributed saturated regions into a macroscopic structural fault network associated with the onset of Catastrophic Decompression.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Universal Substrate Mass Potential ($m_{\mathrm S}$).} The mass-equivalent structural capacity $m_{\mathrm S}=\sqrt{\hbar c_{\mathrm E}/G}\simeq2.176\times10^{-8}\,\mathrm{kg}$. Its numerical equality with the conventional Planck mass follows the adopted substrate-unit normalization. It must not be substituted for an ordinary intrinsic Hard-Floor inertial response, which vanishes in the ideal constraint limit.
+(See \hyperref[app:substrate_units]{Appendix~\ref*{app:substrate_units}}.)
+\end{minipage}
 
-\item[Spin-Deformed Saturation Boundary ($r_{\mathrm{sat}}$):] The non-spherical FCC/SC transition surface of a rotating TFT black hole. Its leading deformation is represented by an axisymmetric quadrupolar response whose amplitude is governed by torsional loading and the spin parameter $a_\ast$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Viscous Non-Linear Wave Equation (VNLW).} Earlier terminology for the matter-and-receiving sector. The current treatment separates conservative field dynamics, projected receiving memory, and capture. Its weak, local, narrow-band envelope equation contains $-i\hbar\Gamma/2$ and is linear in the envelope for prescribed coefficients; nonlinear binding and the complete detector dynamics are separate mechanical ingredients.
+(See \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.)
+\end{minipage}
 
-\item[State II Phase (Saturated Core):] The compressed, phase-locked structural state produced when a locally loaded State-I FCC region reaches $\alpha_{\mathrm G}=1$ and loses its active interstitial and phase freedom. Although State II and the foundational State 0 both possess SC phase-locked character, State II is the saturated configuration generated dynamically from the Active Vacuum.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Void Exhaustion.} The loss of active interstitial and phase freedom used to characterize approach to the FCC-to-SC transition. It is a finite change of background organization, distinct from the incremental incompressibility imposed on small coherent waves. A tangent incompressibility constraint does not by itself give the nonlinear transition path or trigger kinetics.
+(See \hyperref[app:phase_transition]{Appendix~\ref*{app:phase_transition}}.)
+\end{minipage}
 
-\item[Strain-Induced Vacuum Refractive Index ($n_\tau$):] The dimensionless optical index produced by gravitational strain in the Active Vacuum,
-\begin{equation}
-    n_\tau
-    =
-    \frac{c_{\mathrm E}}{c_{\mathrm P}}
-    =
-    \frac{1}{(1-\alpha_{\mathrm G})^2}.
-\end{equation}
-In a general field it is written $n_\tau(\mathbf{x})$. For a static spherical source it reduces to $n_\tau(r)$, and in the weak-field limit $n_\tau\simeq1+2\alpha_{\mathrm G}$.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Volumetric Yield-Pressure Scale.} The finite structural stress-capacity scale, such as $\tau_{\mathrm S}=c_{\mathrm E}^4/(G\ell_{\mathrm S}^2)$ or $\tau_{\mathrm D,\mathrm{bulk}}=c_{\mathrm E}^4/(Gr_{\mathrm D}^2)$. It has pressure units. A yield capacity is not the incremental bulk modulus or the surface contact coefficient $\tau_{\mathrm D}$.
+(See \hyperref[part:one]{Part~\ref*{part:one}} and \hyperref[app:condensate_impedance]{Appendix~\ref*{app:condensate_impedance}}.)
+\end{minipage}
 
-\item[Stress Shedding:] The dissipative relaxation process by which a newly formed or distorted FCC/SC phase boundary exports excess shear, compression, torsional loading, and higher-order deformation into the surrounding Soft Floor until a dynamically relaxed boundary state is reached.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Wave Arrest.} The detector process in which receiving work removes sufficient excess motion for a localized defect to remain in an accessible binding configuration. It is not disappearance of a wave by observation and is not guaranteed by scalar amplitude decay alone. Internal dynamics and finite readout uncertainty may survive after translational capture.
+(See \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}} and \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.)
+\end{minipage}
 
-\item[Structural Gravitational Coupling ($\alpha_{\mathrm G}$):] The dimensionless gravitational loading fraction of the active Soft Floor,
-\[
-    \alpha_{\mathrm G}
-    =
-    \frac{GM}{rc_{\mathrm E}^2}.
-\]
-The active FCC phase occupies $0\leq\alpha_{\mathrm G}<1$; the limit $\alpha_{\mathrm G}\rightarrow1^{-}$ marks exhaustion of active transfer capacity and onset of the FCC-to-SC phase transition.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Wave-Vector Transport.} Evolution through the real dispersion family required when the surviving photon's frequency changes. In a uniform background, the relaxation contribution must satisfy $\nabla_{\mathbf k}\omega\cdot\dot{\mathbf k}_{\mathrm{rel}}=-\Gamma_{\mathrm D}\omega$. On the nondispersive branch, a direction-preserving specialization gives $\dot{\mathbf k}_{\mathrm{rel}}=-\Gamma_{\mathrm D}\mathbf k$. Recoil and complete energy--momentum balance belong to the same interaction.
+(See \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}} and \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.)
+\end{minipage}
 
-\item[Structural Mass Moment ($J_i$):] The raw density--radius structural moment
-\[
-    J_i
-    =
-    \rho_i r_i^4
-\]
-assigned to a particular TFT phase or topological state.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Weak Force (Torsional Slip).} The unification model's localized axial-torsion reconfiguration channel. The adopted dimensional relation uses $E_{\mathrm{weak}}=2\pi J_i c_{\mathrm E}^2/r_{\mathrm w}$ and $G_{\mathrm F}=E_{\mathrm{weak}}^{-2}$. $G_{\mathrm F}$ is a coupling with inverse-energy-squared units, not a decay rate; rates require the specified transition dynamics.
+(See \hyperref[app:unifiedforces_validation]{Appendix~\ref*{app:unifiedforces_validation}}.)
+\end{minipage}
 
-\item[Structural Reservoir ($R_{\mathrm{Res}}$):] The macroscopic structural scale of the complete TFT reservoir, of order $10^{35}\ \mathrm m$, extending far beyond the Photon Energy-Relaxation Length $R_{\mathrm U}$. It characterizes the full active structural domain involved in the long-term TFT phase cycle.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Work Conjugacy.} The pairing of a generalized force with the increment or velocity of its own mechanical coordinate. Coordinate changes must preserve virtual work and consistently transform inertia and momentum. Equal numerical coefficients or a common speed do not establish that two differently normalized coordinates share the same physical impedance.
+(See \hyperref[app:gravitational_endpoint_transfer]{Appendix~\ref*{app:gravitational_endpoint_transfer}} and \hyperref[app:matter_vnlw_photon_linear_waveequation]{Appendix~\ref*{app:matter_vnlw_photon_linear_waveequation}}.)
+\end{minipage}
 
-\item[Tension Column:] The longitudinal topological connection linking a dynamic Soft-Floor state to its corresponding static structural address on the Hard Floor. Tension Columns provide the vertical coupling used in TFT gravity, information storage, and entanglement constructions.
-
-\item[TFT Effective Acoustic Scale (Euclidean Acoustic Resolution; $r_{\mathrm s}^{(\mathrm{TFT})}$):] The Euclidean projection of the observed CMB acoustic angular scale through the characteristic TFT macroscopic distance,
-\[
-    r_{\mathrm s}^{(\mathrm{TFT})}
-    =
-    R_{\mathrm U}\theta_\ast.
-\]
-Using $\theta_\ast\simeq0.01041$ rad and the observationally normalized $R_{\mathrm U}$ gives
-\[
-    r_{\mathrm s}^{(\mathrm{TFT})}
-    \simeq42.73\ \mathrm{Mpc}.
-\]
-
-\item[Thermodynamic Impedance Signature:] The TFT interpretation of the observed CMB anisotropy field, including characteristic temperature contrasts of order $\pm30\,\mu\mathrm K$, as the thermodynamic imprint produced by Fossil CMB radiation interacting with the rupture-generated density network and the impedance structure of the Active Vacuum.
-
-\item[Timing--Brightness Closure:] The joint TFT relation connecting spectral redshift, source-event timing, and bolometric surface brightness. In the gravity-neutral, no-lensing radial reference branch,
-\[
-    \frac{SB_{\mathrm{obs}}}{SB_{\mathrm{emit}}}
-    =
-    \frac{1}
-    {(1+z_{\mathrm{kin}})^4(1+z_{\mathrm D})}
-    =
-    \frac{(1+z_{\mathrm D})^3}
-    {(1+z_{\mathrm{obs}})^4}.
-\]
-It provides a direct observational consistency test of the relative kinematic and propagation-relaxation contributions.
-
-\item[Topological Invariant ($16\pi^3$):] The dimensionless information-ledger invariant
-\[
-    N_{\mathrm M}N_{\mathrm{QG}}
-    =
-    16\pi^3
-    \approx496.06,
-\]
-linking the true information footprint of a localized mass state to the maximum information capacity of its saturated boundary representation.
-
-\item[Topology-Normalized Scale-Invariant Mass Moment ($\hat J$):] The topology-normalized structural invariant
-\[
-    \hat J
-    =
-    \frac{J_i}{\mathcal{F}_i},
-\]
-where $J_i=\rho_i r_i^4$ is the raw structural mass moment and $\mathcal{F}_i$ is the geometry-dependent form factor. It provides the common cross-scale normalization used in the TFT action and gravitational-coupling constructions.
-
-\item[Topological Percolation Limit ($\beta_{\mathrm{rupture}}$):] The global connectivity threshold
-\[
-    \beta_{\mathrm{rupture}}
-    \approx0.0516
-\]
-at which initially isolated State-II defects form a system-spanning structural cluster. In the TFT macroscopic cycle this threshold defines the onset of the global rupture configuration.
-
-\item[Topological Phase Defect:] A persistent, localized, topologically nontrivial configuration of the Active Vacuum. Massive matter states are represented as phase, torsional, radial, or mixed defects supported by the FCC contact network and conservatively loaded by the Interstitial Condensate.
-
-\item[Topological Winding Number:] The TFT winding classification assigned to localized phase defects. In the fermionic construction, the tethered topology is required to return to its original physical configuration only after a $4\pi$ rotation, providing the structural basis of the TFT spin-$1/2$ representation.
-
-\item[Torsional Boundary Motion:] The mechanical carrier of axial angular momentum in a rotating TFT black hole. Angular momentum is stored through torsional shear of the live FCC/SC boundary and the adjacent dragged Soft Floor rather than through ordinary fluid rotation of the phase-locked core.
-
-\item[Transverse-Traceless Source Normalization ($\kappa_{\mathrm{TT}}=8\pi$):] The scalar normalization connecting the localized mechanical source tensor to the collective transverse-traceless gravitational-wave response in the TFT continuum construction.
-
-\item[True Information Record ($N_{\mathrm M}$):] The dimensionless topological strain footprint imposed by a coherent localized mass state on the static Hard Floor information ledger. It represents the actual encoded structural record associated with the localized state.
-
-\item[Universal Substrate Mass Potential ($m_{\mathrm S}$):] The mass-equivalent latent structural capacity assigned to one fundamental substrate unit,
-\[
-    m_{\mathrm S}
-    \simeq2.176\times10^{-8}\ \mathrm{kg}.
-\]
-Under the adopted substrate normalization it is numerically equal to the conventional Planck mass while representing latent structural capacity rather than ordinary Active-Vacuum inertial loading.
-
-\item[Viscous Non-Linear Wave Equation (VNLW):] The deterministic TFT wave equation used for localized matter and condensate dynamics. Its nonconservative sector contains the localized defect-induced damping coefficient $\Gamma(x)$, represented through the corresponding $\hbar\Gamma$ term, to model Wave Arrest and detector-induced localization.
+\item[] \begin{minipage}[t]{\linewidth}
+\textbf{Zeroth Law of the Tension Field.} The foundational premise of a conserved, contiguous Tension Field from which observable structure and motion arise. Conservation concerns the complete physical content of the coupled system. Reduced coherent modes may lose energy only when the corresponding receiving, interaction, transport, or retained-energy contribution is accounted for elsewhere.
+(See \hyperref[part:one]{Part~\ref*{part:one}}.)
+\end{minipage}
 
 \end{description}

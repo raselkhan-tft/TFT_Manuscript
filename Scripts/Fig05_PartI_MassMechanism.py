@@ -173,7 +173,7 @@ ax.annotate("Internal Wave Signal",
             arrowprops=dict(arrowstyle="->", lw=0.9, color='black', connectionstyle="arc3,rad=0.2"),
             fontsize=11, ha='left', va='bottom', zorder=10)
 
-ax.annotate("Low Amplitude Pulsating", 
+ax.annotate("Low-Amplitude Pulsation", 
             xy=(center_right[0], center_right[1] - outer_r_tiny), 
             xytext=(center_right[0], 0.1),
             arrowprops=dict(arrowstyle="->", lw=0.9, color='black'),

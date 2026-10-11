@@ -404,7 +404,7 @@ $M_{\mathrm{cur}}$ & Current Aggregate State II Boundary Mass & $M_{\mathrm{obs}
 $M_{\mathrm{obs}}$ & {\raggedright Adopted black-hole boundary-mass inventory in the reference observable domain.\par} & {\raggedright $M_{\mathrm{cur}}=M_{\mathrm{obs}}(\rho_{\mathrm S}/\rho_{\mathrm{QG}})$ under the homogeneity extrapolation. \newline \hyperref[app:cosmic_energy_budget_and_chronology]{Appendix~\ref*{app:cosmic_energy_budget_and_chronology}}.\par} & {\raggedright Adopted inventory: $\approx10^{50}\,\mathrm{kg}$.\par} \\
 
 
-$\Gamma_{\mathrm D}$ & {\raggedright Physical coherent-photon energy/frequency scale-relaxation rate in the action-preserving branch.\par} & {\raggedright $\Gamma_{\mathrm D}=\Gamma_{\mathrm D}^{(0)}\mathcal F_{\mathrm R}$ in the AS factorization. \newline \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.\par} & {\raggedright Response-dependent ($\mathrm{s^{-1}}$); no universal physical value is supplied by the unit closure.\par} \\
+$\Gamma_{\mathrm D}$ & {\raggedright Physical coherent-photon energy/frequency scale-relaxation rate in the action-preserving branch.\par} & {\raggedright $\Gamma_{\mathrm D}=\Gamma_{\mathrm D}^{(0)}\mathcal F_{\mathrm R}$ in the AT factorization. \newline \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.\par} & {\raggedright Response-dependent ($\mathrm{s^{-1}}$); no universal physical value is supplied by the unit closure.\par} \\
 
 $\Gamma_{\mathrm D}^{(0)}$ & {\raggedright Unit-reference photon scale-relaxation rate for $\mathcal F_{\mathrm R}=1$.\par} & {\raggedright $\frac9{16}\frac{c_{\mathrm E}}{r_{\mathrm D}}\left(\frac{\ell_{\mathrm S}}{r_{\mathrm D}}\right)^6$. \newline \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}.\par} & {\raggedright $\approx2.3591\times10^{-18}\,\mathrm{s^{-1}}$; reference, not a physical minimum.\par} \\
 
@@ -493,7 +493,7 @@ $\omega_{\mathrm{drag}}$ & Torsional Soft-Floor Dragging Rate & $\frac{2G\mathca
 
 $v_{\phi}^{(\mathrm{SF})}$ & Tangential Soft-Floor Shear Speed & $r\sin\theta \, \omega_{\mathrm{drag}}(r)$ & Variable (m/s) \\
 
-$\tau_{\mathrm{tor}}$ & {\raggedright Exterior volumetric torsional stiffness in the retained rotating Soft-Floor constitutive closure.\par} & {\raggedright $\tau_{\mathrm{tor}}=\tau_{\mathrm{D,bulk}}$ in the matched closure of Appendix W. \newline \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.\par} & {\raggedright $\approx2.18\times10^{96}\,\mathrm{Pa}$ for that normalization; not continued into the SC core.\par} \\
+$\tau_{\mathrm{tor}}$ & {\raggedright Exterior volumetric torsional stiffness in the retained rotating Soft-Floor constitutive closure.\par} & {\raggedright $\tau_{\mathrm{tor}}=\tau_{\mathrm{D,bulk}}$ in the matched closure of \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}. \newline \hyperref[app:bh_rotating_kerr_clouser]{Appendix~\ref*{app:bh_rotating_kerr_clouser}}.\par} & {\raggedright $\approx2.18\times10^{96}\,\mathrm{Pa}$ for that normalization; not continued into the SC core.\par} \\
 
 $r_\perp$ & Cylindrical Distance from Spin Axis & $r\sin\theta$ & Variable (m) \\
 
@@ -581,7 +581,7 @@ $\widetilde\psi$ & {\raggedright Momentum-space representation of the normalized
 % ABN-03: F21
 $S$ & {\raggedright Signed mechanical phase action of the selected excitation field.\par} & {\raggedright $\psi=\sqrt{\rho_\psi}\,e^{iS/\hbar}$; $S'=\partial_xS$ is its phase momentum. \newline Equation~\eqref{eq:DMR_normalized_field}.\par} & {\raggedright Variable ($\mathrm{J\,s}$).\par} \\
 
-\begin{tabular}[c]{@{}c@{}}$\lambda$ \\ $\mathbf k$ \\ $\nu$\end{tabular} & {\raggedright Carrier wavelength, wave vector, angular frequency, and ordinary frequency in the selected wave branch.\par} & {\raggedright $|\mathbf k|=2\pi/\lambda$; $\omega=2\pi\nu$; dispersion fixes $\omega(\mathbf k)$. \newline \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.\par} & {\raggedright $\lambda$: $\mathrm m$; $\mathbf k$: $\mathrm{m^{-1}}$; $\omega$: $\mathrm{s^{-1}}$; $\nu$: $\mathrm{Hz}$.\par} \\
+\begin{tabular}[c]{@{}c@{}}$\lambda$ \\ $\mathbf k$ \\ $\omega$ \\ $\nu$\end{tabular} & {\raggedright Carrier wavelength, wave vector, angular frequency, and ordinary frequency in the selected wave branch.\par} & {\raggedright $|\mathbf k|=2\pi/\lambda$; $\omega=2\pi\nu$; dispersion fixes $\omega(\mathbf k)$. \newline \hyperref[app:photon_dispersion_relaxation]{Appendix~\ref*{app:photon_dispersion_relaxation}}.\par} & {\raggedright $\lambda$: $\mathrm m$; $\mathbf k$: $\mathrm{m^{-1}}$; $\omega$: $\mathrm{s^{-1}}$; $\nu$: $\mathrm{Hz}$.\par} \\
 
 
 % ABN-04: F58
@@ -686,6 +686,201 @@ $\mathcal V_\varphi$ & {\raggedright Angular coherence/visibility of the specifi
 
 \begin{tabular}[c]{@{}c@{}}$E_{\mathrm{Bell}}$ \\ $S_{\mathrm{CHSH}}$\end{tabular} & {\raggedright Normalized paired-outcome correlation and its four-setting CHSH combination.\par} & {\raggedright $E_{\mathrm{Bell}}=-\widehat{\mathbf n}_{\mathrm A}\cdot\widehat{\mathbf n}_{\mathrm B}$ under the balanced singlet closure. \newline \hyperref[app:quantum_entanglement]{Appendix~\ref*{app:quantum_entanglement}}.\par} & {\raggedright Dimensionless; ideal maximum $|S_{\mathrm{CHSH}}|=2\sqrt2$ in that construction.\par} \\
 
+% AW-N-01 | Integer reference-registry labels
+\begin{tabular}[c]{@{}c@{}}
+    $n_v$ \\
+    $\mathbf n$
+\end{tabular}
+& {\raggedright
+Proposed integer site-registry label and its array on the specified
+SC patch. Here $V$ is the site set, not a physical volume;
+$-$, $+$, and $j$ identify pre-write, post-write,
+and successive-event states.
+\par}
+& {\raggedright
+$\mathbf n\in\mathbb Z^{|V|}$, with common relabeling
+$\mathbf n\mapsto\mathbf n+c\mathbf 1$, $c\in\mathbb Z$.
+\newline
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.
+\par}
+& {\raggedright
+Dimensionless integers; no displacement or strain quantum is assigned.
+\par} \\
+
+% AW-N-02 | Registry difference and face-sum operators
+\begin{tabular}[c]{@{}c@{}}
+    $B$ \\
+    $F$
+\end{tabular}
+& {\raggedright
+Site-to-bond difference operator and oriented elementary-face sum
+operator of the SC registry model. These are not the
+receiving-response matrix $\mathsf B$ or a mechanical force.
+\par}
+& {\raggedright
+$(B\mathbf n)_b=n_w-n_v$ for $b=(v\to w)$; $FB=0$.
+The vector $\mathbf 1$ has one at every site.
+\newline
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.
+\par}
+& {\raggedright
+Dimensionless combinatorial operators; fixed by patch connectivity
+and orientation.
+\par} \\
+
+% AW-N-03 | Candidate bond registry and its event increment
+\begin{tabular}[c]{@{}c@{}}
+    $\mathbf e_{\mathrm R}$ \\
+    $\Delta\mathbf e_{\mathrm R}$
+\end{tabular}
+& {\raggedright
+Normalized candidate bond registry and its event increment.
+Scalar registry compatibility does not by itself define physical
+elastic strain, equilibrium, or stored energy.
+\par}
+& {\raggedright
+$\mathbf e_{\mathrm R}=B\mathbf n$;
+$\Delta\mathbf e_{\mathrm R}=B\boldsymbol{\nu}$;
+$F\mathbf e_{\mathrm R}=0$.
+\newline
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.
+\par}
+& {\raggedright
+Dimensionless integer bond arrays; dimensional strain embedding
+remains unspecified.
+\par} \\
+
+% AW-N-04 | Complete event-interface history
+\begin{tabular}[c]{@{}c@{}}
+    $\mathcal H_{\partial}$ \\
+    $\mathcal H_{\partial,j}$
+\end{tabular}
+& {\raggedright
+Complete objective interface history of one event or event $j$:
+active mode, relative phase, Tension-Column loading, contact motion,
+condensate response, and boundary response.
+\par}
+& {\raggedright
+History argument of
+$\boldsymbol{\nu}[\mathcal H_{\partial},\mathbf n^{-}]$;
+coupled to the reciprocal active response.
+\newline
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.
+\par}
+& {\raggedright
+Component-specific units; a history, not a scalar Hamiltonian,
+energy, or action.
+\par} \\
+
+% AW-N-05 | State-dependent candidate write selector
+$\boldsymbol{\nu}$
+& {\raggedright
+Proposed integer branch-change selector depending on the event
+history and existing registry. Its physical selection law is not
+specified by the compatibility construction.
+\par}
+& {\raggedright
+$\mathbf n^{+}=\mathbf n^{-}+\boldsymbol{\nu}$;
+a record change requires $B\boldsymbol{\nu}\neq0$.
+\newline
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.
+\par}
+& {\raggedright
+Dimensionless integer array; distinct from scalar optical
+frequency $\nu$.
+\par} \\
+
+% AW-N-06 | Temporal-winding diagnostic
+\begin{tabular}[c]{@{}c@{}}
+    $w_v$ \\
+    $\mathbf w$
+\end{tabular}
+& {\raggedright
+Temporal winding of a closed, nonvanishing interface phasor
+$\psi_v$ and its site array in the diagnostic write rule.
+Not a spatial vortex charge or receiving initial-state
+array $\mathbf w_0$.
+\par}
+& {\raggedright
+$\displaystyle
+w_v=\frac{1}{2\pi i}\oint\frac{\mathrm d\psi_v}{\psi_v}$.
+\newline
+For the stated harmonic period, $w_v=-1$.
+\newline
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.
+\par}
+& {\raggedright
+Dimensionless integers. The integral requires a closed phasor path
+avoiding zero.
+\par} \\
+
+% AW-N-07 | Active and interaction contributions to the event ledger
+\begin{tabular}[c]{@{}c@{}}
+    $E_{\mathrm{AV}\setminus\gamma}$ \\
+    $E_{\mathrm{int}}$
+\end{tabular}
+& {\raggedright
+Energy of the other active degrees of freedom, including recoil,
+and interaction energy not already assigned to another term in
+the writer's event ledger.
+\par}
+& {\raggedright
+Non-overlapping energy contributions in the specified event
+and accounting region.
+\newline
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.
+\par}
+& {\raggedright
+Configuration-dependent energies ($\mathrm J$);
+each contribution is assigned once.
+\par} \\
+
+% AW-N-08 | Energy of a physically realized retained configuration
+\begin{tabular}[c]{@{}c@{}}
+    $U_{\mathrm R}$ \\
+    $\Delta U_{\mathrm R}$
+\end{tabular}
+& {\raggedright
+Energy assigned to a physically realized retained configuration
+and its event change. No function $U_{\mathrm R}(\mathbf n)$ is
+postulated; the increment is not automatically the graviton
+footprint energy $E_{\mathrm g}$.
+\par}
+& {\raggedright
+If a physical $U_{\mathrm R}(\mathbf n)$ is supplied:
+\newline
+$\begin{aligned}[t]
+    \Delta U_{\mathrm R}&=U_{\mathrm R}(\mathbf n^{+}) \\
+    &\quad-U_{\mathrm R}(\mathbf n^{-}).
+\end{aligned}$
+\newline
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.
+\par}
+& {\raggedright
+Energy ($\mathrm J$); constitutive assignment and numerical value
+remain unspecified.
+\par} \\
+
+% AW-N-09 | External work and signed boundary-transported energy
+\begin{tabular}[c]{@{}c@{}}
+    $W_{\mathrm{ext}}$ \\
+    $\mathcal E_{\partial}$
+\end{tabular}
+& {\raggedright
+External work and signed net energy transported into the accounting
+region during the event. Boundary transport excludes work already
+counted in $W_{\mathrm{ext}}$.
+\par}
+& {\raggedright
+$W_{\mathrm{ext}}=\mathcal E_{\partial}=0$ for an isolated system
+containing all participating fields.
+\newline
+\hyperref[app:state0_record_writer]{Appendix~\ref*{app:state0_record_writer}}.
+\par}
+& {\raggedright
+Event energies ($\mathrm J$), not powers;
+positive net transport is inward.
+\par} \\
 
 \bottomrule
 \end{longtable}
@@ -720,7 +915,7 @@ $f_0$ & {\raggedright Generalized force fixed by the initial receiving positions
 \begin{tabular}[c]{@{}c@{}}$\varepsilon_a$ \\ $\varepsilon_{\mathrm{prep}}$\end{tabular} & {\raggedright Mean initial energy of shifted receiving oscillator $a$; common mean under the stated equal-energy preparation.\par} & {\raggedright $\langle\pi_a(0)^2\rangle=m_a\varepsilon_a$ for uniform phase; $\varepsilon_a=\varepsilon_{\mathrm{prep}}$ in the common-energy case. \newline Equation~\eqref{eq:DMR_force_covariance}.\par} & {\raggedright Preparation-dependent ($\mathrm J$).\par} \\
 
 % ABN-33: F12
-\begin{tabular}[c]{@{}c@{}}$T$ \\ $k_{\mathrm B}$\end{tabular} & {\raggedright Temperature of the specified receiving preparation and the Boltzmann energy--temperature conversion constant. In Appendix AF only, $T$ denotes dwell time instead.\par} & {\raggedright $\varepsilon_{\mathrm{prep}}=k_{\mathrm B}T$ in the thermal specialization. \newline \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.\par} & {\raggedright $T$: $\mathrm K$; $k_{\mathrm B}$: $\mathrm{J\,K^{-1}}$. The AF dwell-time $T$ is in $\mathrm s$.\par} \\
+\begin{tabular}[c]{@{}c@{}}$T$ \\ $k_{\mathrm B}$\end{tabular} & {\raggedright Temperature of the specified receiving preparation and the Boltzmann energy--temperature conversion constant. In \hyperref[app:photonic_emission]{Appendix~\ref*{app:photonic_emission}} only, $T$ denotes dwell time instead.\par} & {\raggedright $\varepsilon_{\mathrm{prep}}=k_{\mathrm B}T$ in the thermal specialization. \newline \hyperref[app:deterministic_measurement_resolution]{Appendix~\ref*{app:deterministic_measurement_resolution}}.\par} & {\raggedright $T$: $\mathrm K$; $k_{\mathrm B}$: $\mathrm{J\,K^{-1}}$. The dwell-time $T$ in \hyperref[app:photonic_emission]{Appendix~\ref*{app:photonic_emission}} is in $\mathrm s$.\par} \\
 
 % ABN-34: F09 F10
 \begin{tabular}[c]{@{}c@{}}$\Delta q$ \\ $\Delta\pi_q$\end{tabular} & {\raggedright Standard deviations of the retained mechanical preparation; distinct from the field widths $\sigma_x,\sigma_{p,\mathrm w}$.\par} & {\raggedright Diagonal entries of $\mathsf V$ are $(\Delta q)^2$ and $(\Delta\pi_q)^2$. \newline Equation~\eqref{eq:DMR_covariance_contraction}.\par} & {\raggedright Respectively $\mathrm m$ and $\mathrm{kg\,m\,s^{-1}}$.\par} \\
