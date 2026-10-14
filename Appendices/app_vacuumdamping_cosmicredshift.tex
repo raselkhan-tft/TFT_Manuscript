@@ -2543,74 +2543,196 @@ The present derivation does not establish the following stronger statements:
 \end{enumerate}
 
 
-\section{Falsification Conditions}
+\section{Scale-Transfer Predictions and Falsification}
+\label{sec:AT_predictions_falsification}
 
-The proposed microscopic closure is falsifiable.
+The microscopic origin of cosmic photon relaxation presents
+a decisive challenge to TFT. If the Active Vacuum gradually
+receives coherent energy from a propagating photon, that
+transfer must obey a definite mechanical law. Its magnitude,
+frequency dependence, and accumulated observational effects
+cannot be chosen independently.
 
-First, if a completed FCC--Condensate calculation yields
+The FCC--Condensate construction developed in this appendix
+provides a conditional scale-transfer mechanism whose
+physical consequences can be tested at both microscopic
+and astronomical scales.
+
+\subsection*{TFT Prediction: The Structural Relaxation Rate}
+
+Within the selected two-vertex overlap and correlation-time
+closure, the coherent relaxation rate takes the form
 \begin{equation}
-    \lim_{\Omega\rightarrow0}
-    \frac{
-        -\operatorname{Im}
-        \Sigma_s^{\mathrm R}(\Omega)
-    }{
-        \Omega
-    }
-    =
-    0,
-\end{equation}
-then the proposed constant Ohmic realization has
-\begin{equation}
-    \mathcal F_{\mathrm R}=0
-\end{equation}
-in the infrared and therefore
-\begin{equation}
-    \Gamma_{\mathrm D}=0
-\end{equation}
-for that realization.
-
-Second, if the microscopic reference coupling does not project onto the
-self-similar photon scale tangent with the overlap structure assumed in
-Equation~\eqref{eq:AQ_eta}, the sixth-power suppression must be revised.
-
-Third, if the observed fractional relaxation is strongly chromatic over a
-frequency range in which finite-wave-number corrections are negligible, the
-leading achromatic plateau closure is falsified.
-
-Fourth, measurable cumulative spectral diffusion, image blurring,
-polarization scrambling, photon destruction, or secondary-radiation
-production at rates comparable to $\Gamma_{\mathrm D}$ would contradict the
-proposed coherent scale-transfer mechanism.
-
-Fifth, an independent determination of $r_{\mathrm D}$ significantly different
-from the presently adopted value would modify $\Gamma_{\mathrm D}$ strongly
-through
-\begin{equation}
-    \Gamma_{\mathrm D}
-    \propto
-    r_{\mathrm D}^{-7}.
+\Gamma_{\mathrm D}
+=
+\frac{P_{\mathrm R}\mathcal F_{\mathrm R}}
+{t_{\mathrm{corr}}^{(0)}}
+=
+\frac{9}{16}\mathcal F_{\mathrm R}
+\frac{c_{\mathrm E}}{r_{\mathrm D}}
+\left(\frac{\ell_{\mathrm S}}{r_{\mathrm D}}\right)^6.
 \end{equation}
 
-Sixth, if the full observational analysis requires identifying
-$z_{\mathrm D}$ with the entire observed redshift but the resulting timing,
-BAO, CMB, or other theory-independent observables cannot be reproduced, then
-that \emph{cosmological identification} is falsified even if the microscopic
-rate itself remains viable.
+The sixth-power factor represents the suppression arising
+from the adopted microscopic coupling projection. It
+expresses how strongly the selected structural scales
+restrict energy transfer, but does not independently
+establish the magnitude of the irreversible response
+$\mathcal F_{\mathrm R}$.
 
-Seventh, if no complete spatial photon--receiver action can reproduce the
-required real-frequency transport, spatial ray equation, and mechanical
-recoil simultaneously, the corresponding microscopic implementation is
-falsified.
+For the completed ideal conservative branch,
+$\mathcal F_{\mathrm R}=0$ and consequently
+$\Gamma_{\mathrm D}=0$. The reference assignment
+$\mathcal F_{\mathrm R}=1$ supplies a useful normalization,
+not a derived physical relaxation rate. A nonzero response
+in the nonideal Active Vacuum must emerge from its actual
+microscopic receiving dynamics.
 
-Thus, failure of a complete cosmological interpretation does not
-automatically imply that
+At fixed $c_{\mathrm E}$, $\ell_{\mathrm S}$, and coupling
+prescription, the nonzero branch exhibits the scaling
 \begin{equation}
-    \Gamma_{\mathrm D}=0
+\Gamma_{\mathrm D}\propto
+\mathcal F_{\mathrm R}r_{\mathrm D}^{-7}.
 \end{equation}
-microscopically.
+Its corresponding differential sensitivity is
+\begin{equation}
+d\ln\Gamma_{\mathrm D}
+=
+d\ln\mathcal F_{\mathrm R}
+-
+7\,d\ln r_{\mathrm D}.
+\end{equation}
 
-The microphysical mechanism and its macroscopic cosmological role are distinct
-claims and must be tested separately.
+This steep structural dependence is a distinctive
+consequence of the selected projection. Its physical
+significance depends on independently determining both
+the nodal scale and the irreversible response, rather
+than adjusting either quantity to reproduce an observed
+cosmological rate.
+
+\subsection*{Microscopic Falsification Criteria}
+
+\begin{itemize}
+
+\item \textbf{The Irreversible Receiving Channel:}
+
+A persistent nonzero relaxation rate requires a genuine
+mechanical pathway through which coherent photon energy
+can enter other Active-Vacuum degrees of freedom.
+
+For the selected local-friction realization, the
+retarded scale response must possess a finite, positive
+Ohmic coefficient:
+\begin{equation}
+0<
+\eta_{s\mathrm R}
+=
+\lim_{\Omega\to0}
+\frac{-\operatorname{Im}\Sigma_s^{\mathrm R}(\Omega)}
+{\Omega}
+<\infty.
+\end{equation}
+
+Here $\Omega$ probes the scale-response dynamics and
+is not automatically the optical carrier frequency.
+
+\textit{Falsification:} If the completed microscopic
+response produces a vanishing Ohmic coefficient, the
+proposed finite nonzero infrared Ohmic realization
+fails. A divergent or intrinsically nonlocal response
+likewise invalidates the selected local-friction
+reduction, requiring a different constitutive law.
+
+Even a finite positive coefficient is not sufficient
+by itself. The same microscopic interaction must
+produce coherent frequency migration, preserve the
+assigned modal action to the retained accuracy,
+and account for spatial propagation, reciprocal
+energy transfer, and recoil.
+
+A demonstrated incompatibility among these requirements
+would reject that mechanical implementation.
+
+\item \textbf{The Sixth-Power Structural Projection:}
+
+The predicted overlap suppression must follow from
+the actual FCC--Condensate interaction, including
+its mode normalization and coupling vertices.
+
+\textit{Falsification:} If the independently derived
+microscopic vertex does not reproduce the sixth-power
+projection retained in
+Equation~\eqref{eq:AQ_eta}, the proposed overlap law
+and its associated relaxation-rate evaluation must
+be rejected or revised.
+
+A geometric normalization area alone cannot establish
+an irreversible transition probability or substitute
+for the required interaction dynamics.
+
+\item \textbf{Spectral, Directional, and Polarization Coherence:}
+
+A successful photon-relaxation mechanism must explain
+more than the mean loss of coherent energy. It must
+also preserve the observed precision of astronomical
+spectra, images, and polarization within the limits
+established by its microscopic response.
+
+\textit{Falsification:} If a completed relaxation
+kernel predicts spectral broadening, angular diffusion,
+polarization scrambling, photon destruction, or
+secondary radiation incompatible with independently
+measured limits, that coherent transport realization
+is falsified.
+
+The leading achromatic behavior must likewise survive
+comparison across the carrier-frequency range for
+which it is predicted. The relevant accumulated
+response depends on the complete path integrand
+$\Gamma_{\mathrm D}/v_{\mathrm{ray}}$, not on
+$\Gamma_{\mathrm D}$ alone.
+
+Zero mean angular drift does not guarantee negligible
+image blurring, and photon-number conservation does
+not independently establish polarization or
+directional coherence.
+
+\end{itemize}
+
+\subsection*{Cosmological Falsification Boundary}
+
+The ultimate observational test concerns the accumulated
+consequences of the microscopic mechanism. Once the
+physical relaxation rate and propagation history are
+independently determined, the same model must reproduce
+the corresponding spectral shift while remaining
+consistent with source-event timing, brightness, and
+ray geometry.
+
+These combined constraints are developed in
+\hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}.
+
+A cosmological realization that assigns substantial
+propagation relaxation but cannot reproduce the
+corresponding observational signatures is rejected
+within its stated transport regime.
+
+Such a failure would not establish that every
+microscopic relaxation channel vanishes. Conversely,
+the derivation of a nonzero microscopic rate would
+not demonstrate that relaxation accounts for the
+entire observed astronomical redshift.
+
+The distinction is essential: the microscopic
+mechanism must determine the rate, while
+astronomical observations determine whether its
+accumulated consequences are physically acceptable.
+
+\medskip
+\noindent\textbf{The Active Vacuum must determine
+how much coherent energy a photon transfers;
+the universe must then reveal whether that
+mechanical prediction is correct.}
 
 
 \section{Summary}

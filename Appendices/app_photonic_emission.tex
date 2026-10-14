@@ -70,12 +70,76 @@ This mechanical phase exchange is governed by the total volumetric action of the
     \item $\eta_{\varphi}$ is the dimensionless Geometric Coupling Efficiency ($0 < \eta_{\varphi} \ll 1$). It is an empirically calibrated constant that accounts for spatial mismatch, scattering losses, and the imperfect alignment of the transient strain fields during the crossing event.
 \end{itemize}
 
-\section{Scaling and Falsifiability}
-This mechanical framework provides direct scaling laws for experimental verification. Phase crosstalk between independent photons can be empirically enhanced by shrinking the mode radius, physically enlarging the bottleneck area, or increasing the propagation dwell time.
+\section{Phase-Crosstalk Predictions and Falsification}
+\label{sec:AG_predictions_falsification}
 
-\noindent\textbf{Falsification Criteria:} The TFT optical model is strictly falsifiable. The framework is disproven if:
-\begin{itemize}
-    \item Photonic phase correlations exhibit standard inverse-square distance-law decay while the minimal bottleneck area $A_{\mathrm{overlap}}$ remains rigidly fixed.
-    \item A measured phase correlation exceeds the hard geometric budget cap calculated from independently measured system parameters $r$, $A_{\mathrm{overlap}}$, and $T$.
-    \item Significant kinetic energy (a measurable change in frequency or color) is exchanged between crossing photons at small $A_{\mathrm{overlap}}$ without reaching the extreme energy thresholds required to physically disrupt the vacuum medium.
-\end{itemize}
+When two coherent photons cross within a sufficiently confined
+region, TFT proposes that their overlapping Active-Vacuum strain
+fields may exchange phase information without requiring a
+corresponding transfer of carrier energy. This fleeting
+mechanical interaction is described by the Shared Strain
+Bottleneck, whose geometry and interaction duration constrain
+the possible phase exchange.
+
+\subsection*{TFT Prediction: The Phase-Crosstalk Budget}
+
+Within the proposed phase-transfer model, the additional
+phase magnitude is bounded by
+\[
+0\leq|\Delta\varphi|
+\leq
+\eta_{\varphi}
+\frac{c_{\mathrm E}}{r^3}
+A_{\mathrm{overlap}}T.
+\]
+Here $\eta_{\varphi}$ represents the geometric coupling
+efficiency, $r$ the mode radius, $A_{\mathrm{overlap}}$
+the shared strain area, and $T$ the interaction dwell time.
+
+When the remaining variables are held fixed, the upper
+bound scales linearly with overlap area and dwell time,
+and inversely with the cube of the mode radius.
+These relations define an upper bound, not a compulsory
+phase shift. A smaller mode radius may also alter the
+overlap and coupling efficiency, whose physical responses
+must be considered together.
+
+\subsection*{Falsification Criteria}
+
+\noindent\textbf{The Phase-Budget Limit:}
+If a measured interaction-induced phase shift exceeds
+the maximum permitted budget, with the relevant geometry,
+interaction time, and coupling efficiency independently
+constrained, the proposed phase-crosstalk closure is
+falsified. An unrestricted coupling coefficient cannot
+be readjusted after each measurement to preserve the bound.
+
+Conversely, a null phase shift or an inverse-square
+distance dependence does not invalidate an upper-bound
+relation, provided the measured response remains within
+its allowed range. The present construction does not
+yet determine a universal numerical phase cap.
+
+\medskip
+\noindent\textbf{Phase Exchange versus Energy Transfer:}
+The proposed phase-only channel must also be distinguished
+from genuinely inelastic photon interactions. A measured
+frequency change does not automatically contradict TFT,
+since material coupling or other physical channels may
+transfer energy. However, if a completed microscopic
+phase-only interaction predicts negligible energy transfer
+under specified conditions, reproducible energy exchange
+attributable to that same interaction would falsify
+the phase-only realization.
+
+\medskip
+The significance of this test lies in separating the
+geometry that permits an interaction from the mechanics
+that determines its strength. The bottleneck constrains
+the available phase budget; the actual exchange must
+follow from a physical coupling law.
+
+\medskip
+\noindent\textbf{The overlap constrains the phase budget;
+the interaction determines the actual exchange, and
+observation decides whether the mechanism survives.}

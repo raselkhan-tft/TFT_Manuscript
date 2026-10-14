@@ -112,98 +112,55 @@ The synchronized macroscopic branch satisfies
 
 \textit{Mechanical Translation:} The cosmic chronology is not measured from a geometric genesis. It is measured by the growth of the State-II live-boundary network toward global percolation. Photon relaxation and phase growth are distinct channels; when their macroscopic rates synchronize, their exponential clocks become reciprocal projections of the same Active-Vacuum cycle.
 
-
-\section{Empirical Falsification Criteria}
+\section{TFT Predictions and Empirical Falsification}
 \label{sec:empirical_falsification}
 
-Tension Field Theory is testable because the separation of kinematic redshift, gravitational endpoint loading, and photon relaxation generates observable relations that must agree across independent measurements.
+Tension Field Theory describes a globally non-expanding but locally dynamic universe. Within its stationary transport construction, the observed cosmological redshift is the deterministic composite of three distinct mechanical contributions: source--observer kinematics, gravitational endpoint loading, and coherent photon scale relaxation through the Active Vacuum. 
+
+Because these mechanisms affect clocks, spectra, and brightness differently, their physical consequences must strictly converge across independent measurements. The same universe cannot demand one transport history for its light, another for its clocks, and a third for its brightness.
+
+\subsection*{Falsification Boundaries}
+
+The following relations apply within the stationary, factorized transport regime developed in \hyperref[app:time_dilation]{Appendix~\ref*{app:time_dilation}}. A confirmed contradiction within this regime rejects the particular TFT cosmological closure being tested, rather than automatically invalidating the foundational architecture of the theory.
 
 \begin{itemize}
-
-    \item
-    \textbf{Criterion 1: Spectral Shift vs. Source-Event Timing.}
-
-    The complete stationary redshift factor is
+    \item \textbf{Spectral Shift versus Source-Event Timing:} The complete stationary redshift factor is $(1+z_{\mathrm{obs}}) = (1+z_{\mathrm{kin}})(1+z_{\mathrm{grav}})(1+z_{\mathrm D})$. However, independent source-event intervals undergo only the kinematic and gravitational endpoint dilation: $\Delta t_{\mathrm{obs}}/\Delta t_{\mathrm{p,e}} = (1+z_{\mathrm{kin}})(1+z_{\mathrm{grav}})$. Consequently, the propagation-relaxation factor must satisfy:
     \begin{equation}
-        1+z_{\mathrm{obs}}
-        =
-        (1+z_{\mathrm{kin}})
-        (1+z_{\mathrm{grav}})
-        (1+z_{\mathrm D}),
+        1+z_{\mathrm D} = \frac{1+z_{\mathrm{obs}}}{\Delta t_{\mathrm{obs}}/\Delta t_{\mathrm{p,e}}}.
     \end{equation}
-    whereas the timing of independent source events obeys
+    This is the residual inferred from the two measurements; it is not an independent confirmation of a microscopic relaxation rate.
+    
+    \textit{Falsification:} In the selected passive relaxation channel, accumulated relaxation cannot be negative. If independently constrained timing and spectral measurements yield a ratio below unity (beyond combined uncertainties), the passive stationary factorization fails. Conversely, if source-event dilation accounts for the entire observed spectral factor, $z_{\mathrm D}$ must be consistent with zero over that path, excluding any substantial additional positive relaxation contribution.
+
+    \item \textbf{Timing--Brightness Closure:} In the transparent, homogeneous radial, gravity-neutral, and no-lensing photometric branch, the bolometric surface-brightness transformation is strictly tied to the relaxation factor permitted by source-event timing:
     \begin{equation}
-        \frac{
-            \Delta t_{\mathrm{obs}}
-        }{
-            \Delta t_{\mathrm{p,e}}
-        }
-        =
-        (1+z_{\mathrm{kin}})
-        (1+z_{\mathrm{grav}}).
+        \frac{\mathrm{SB}_{\mathrm{obs}}}{\mathrm{SB}_{\mathrm{emit}}} = \frac{(1+z_{\mathrm D})^3}{(1+z_{\mathrm{obs}})^4} = \frac{1}{(1+z_{\mathrm{obs}}) \left(\Delta t_{\mathrm{obs}}/\Delta t_{\mathrm{p,e}}\right)^3}.
     \end{equation}
+    \textit{Falsification:} Spectra, clocks, and brightness are three strict projections of one transport law. If a well-characterized source population violates this joint relation—after intrinsic evolution, selection, extinction, bandpass effects, and ray geometry are accounted for—the specified photometric branch is falsified.
 
-    Therefore,
+    \item \textbf{The Path-Integrated Relaxation Residual:} Coherent scale relaxation is a propagation effect, not a source clock. Once endpoint contributions are specified, its logarithmic depth must satisfy the path-additive relation:
     \begin{equation}
-        1+z_{\mathrm D}
-        =
-        \frac{
-            1+z_{\mathrm{obs}}
-        }{
-            \Delta t_{\mathrm{obs}}/
-            \Delta t_{\mathrm{p,e}}
-        }.
+        \ln(1+z_{\mathrm D}) = \int_{\mathrm{path}} \frac{\Gamma_{\mathrm D}}{v_{\mathrm{ray}}}\,d\ell.
     \end{equation}
-
-    A propagation-relaxation contribution must therefore appear as spectral shift not accompanied by the same additional dilation of independent source-event timing. A universal equality between source-event dilation and the full spectral factor would drive $z_{\mathrm D}$ toward zero for that observational regime.
-
-    \item
-    \textbf{Criterion 2: Timing--Brightness Closure.}
-
-    In the gravity-neutral, no-lensing photometric branch,
-    \begin{equation}
-        \frac{
-            \mathrm{SB}_{\mathrm{obs}}
-        }{
-            \mathrm{SB}_{\mathrm{emit}}
-        }
-        =
-        \frac{
-            (1+z_{\mathrm D})^3
-        }{
-            (1+z_{\mathrm{obs}})^4
-        }.
-    \end{equation}
-
-    The same $z_{\mathrm D}$ inferred from source timing must therefore reproduce the observed surface-brightness transformation. Spectral shift, timing, and brightness are not independent adjustable sectors; they are three projections of one transport law.
-
-    \item
-    \textbf{Criterion 3: The Path-Integrated Relaxation Residual.}
-
-    Once source--observer kinematics and gravitational endpoint loading are independently determined, the residual propagation term must satisfy
-    \begin{equation}
-        \ln(1+z_{\mathrm D})
-        =
-        \ln(1+z_{\mathrm{obs}})
-        -
-        \ln(1+z_{\mathrm{kin}})
-        -
-        \ln(1+z_{\mathrm{grav}})
-        =
-        \int_{\mathrm{path}}
-        \frac{
-            \Gamma_{\mathrm D}
-        }{
-            v_{\mathrm{ray}}
-        }
-        \,d\ell.
-    \end{equation}
-
-    The residual must be path additive and, on the selected coherent photon branch, essentially achromatic at ordinary photon energies. A residual incompatible with this path law would falsify the cosmological relaxation sector of TFT.
-
+    For the passive channel, $\Gamma_{\mathrm D}\geq0$ and $v_{\mathrm{ray}}>0$. On the selected leading achromatic branch, the complete ratio $\Gamma_{\mathrm D}/v_{\mathrm{ray}}$ must provide an approximately frequency-independent response over the applicable range.
+    
+    \textit{Falsification:} Once a common microscopic transport kernel and the relevant paths are fixed independently, a reproducible failure to explain the measured residuals across distances or frequency ranges rejects that relaxation realization. Assigning an unrestricted, arbitrary new $\Gamma_{\mathrm D}$ to each object abandons the shared prediction and falsifies the model.
 \end{itemize}
 
-These criteria force the theory to confront the same universe through clocks, spectra, brightness, and path geometry. Agreement must emerge across observables rather than from separate calibrations.
+\subsection*{Constitutive Requirements for Cosmological Closure}
+
+The preceding tests establish sharp observational constraints, but they do not independently derive the physical, nonzero rate $\Gamma_{\mathrm D}$. Three complementary mechanical problems must be finalized to complete the cosmological bridge:
+
+\begin{itemize}
+    \item \textbf{Microscopic Photon--Vacuum Interaction:} The physical rate $\Gamma_{\mathrm D}$ must emerge from a consistent microscopic account of photon frequency transfer, receiving modes, energy, recoil, and coherence (as investigated in \hyperref[app:vacuumdamping_cosmicredshift]{Appendix~\ref*{app:vacuumdamping_cosmicredshift}}).
+    
+    \item \textbf{Cosmic Matter Flow and Endpoint Loading:} The source--observer kinematic and gravitational fields must follow deterministically from TFT's macroscopic mechanics rather than being freely fitted to individual sources. Their completion is necessary to determine the full distance--redshift relation.
+    
+    \item \textbf{Fossil-CMB Thermal History:} The cosmic microwave background spectrum and temperature evolution require an explicit radiation--receiver interaction, thermalization mechanism, and energy balance; they cannot be inferred from kinematic photon relaxation alone.
+\end{itemize}
+
+\medskip
+\noindent\textbf{One mechanical history: its spectra, clocks, and brightness must tell the exact same story.}
 
 \section{The Phenomenological Translation of Observational Cosmology}
 
